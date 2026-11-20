@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Häppchen-Versuch (nur Messung)</title>
+<style>body{font:14px system-ui;margin:1rem;max-width:60rem}pre{background:#f4f4f4;padding:.5rem;overflow:auto;max-height:24rem}label{display:block;margin:.3rem 0}progress{width:100%}</style></head>
+<body>
+<h1>Häppchen-Versuch</h1>
+<p>Nur eine Messung, nicht Teil der App. Rechnet in einem Durchlauf: Anzahl, Mittelwerte, Varianzen, Gruppen-Häufigkeiten, Korrelationen, Regression. Es bleiben keine Zeilen im Speicher.</p>
+<label>Datei <input type="file" id="datei"></label>
+<label>oder Adresse <input id="url" size="50" value="http://127.0.0.1:5190/t2m.csv"></label>
+<label>Weg <select id="modus"><option value="stream">stream (File.stream oder fetch)</option><option value="slice">slice (File.slice)</option></select></label>
+<label>Stückgröße (Bytes, nur slice) <input id="stueck" value="16777216"></label>
+<label>Worker (nur Datei, Weg slice) <input id="anzahl" value="1" size="2"></label>
+<button id="los">Start</button> <button id="stopp">Abbrechen (Nachricht)</button> <button id="tot">Worker beenden (terminate)</button>
+<progress id="p" max="1" value="0"></progress>
+<div id="st">-</div>
+<pre id="aus"></pre>
+<script type="module">
+import { Rechner } from './kern.js';
+const $ = (i) => document.getElementById(i);
+/** Mehrere Worker, jeder mit einem Bereich der Datei; am Ende werden die Zustände in Dateireihenfolge zusammengeführt. */
+async function startMehrere(f, anzahl, stueck) {
+  const t0 = performance.now();
+  const kopf = new Uint8Array(await f.slice(0, 65536).arrayBuffer()); const kopfEnde = kopf.indexOf(10) + 1;
+  const kopfBytes = kopf.slice(0, kopfEnde);
+  const ws = [], zust = new Array(anzahl), bytes = new Array(anzahl).fill(0);
+  let fertig = 0;
+  for (let i = 0; i < anzahl; i++) {
+    const w = new Worker('./worker.js', { type: 'module' }); ws.push(w);
+    w.onmessage = (e) => {
+      const m = e.data;
+      if (m.art === 'fortschritt') { bytes[i] = m.bytes; const b = bytes.reduce((a, x) => a + x, 0); window.__letzt = { bytes: b, zeilen: 0, zeilenProSek: 0 }; $('p').value = b / f.size; $('st').textContent = `${(b / 1e6).toFixed(0)} MB mit ${anzahl} Workern`; }
+      if (m.art === 'fertig') {
+        zust[i] = m.zustand; fertig++;
+        if (fertig === anzahl) { const erg = Rechner.zusammen(zust); ws.forEach(x => x.terminate()); const sek = (performance.now() - t0) / 1000; window.__fertig = { art: 'fertig', erg, sek, bytes: f.size, spitzeMB: 0, worker: anzahl }; $('aus').textContent = JSON.stringify(window.__fertig, null, 1); }
+      }
+      if (m.art === 'fehler') $('aus').textContent = m.text;
+    };
+    const von = Math.floor(f.size * i / anzahl), bis = Math.floor(f.size * (i + 1) / anzahl);
+    w.postMessage({ art: 'start', modus: 'bereich', datei: f, von, bis, kopf: kopfBytes, gesamt: f.size, stueck });
+  }
+  window.__workers = ws;
+}
+let w = null;
+$('los').onclick = () => {
+  const f0 = $('datei').files[0], anz = Number($('anzahl').value) || 1;
+  window.__fertig = null;
+  if (f0 && anz > 1) { startMehrere(f0, anz, Number($('stueck').value)); return; }
+  w?.terminate(); w = new Worker('./worker.js', { type: 'module' });
+  const f = $('datei').files[0];
+  const gesamt = f ? f.size : 0;
+  w.onmessage = (e) => {
+    const m = e.data;
+    if (m.art === 'fortschritt' || m.art === 'abgebrochen') { if (gesamt) $('p').value = m.bytes / gesamt; $('st').textContent = `${m.art}: ${(m.bytes / 1e6).toFixed(0)} MB, ${m.zeilen.toLocaleString()} Zeilen, ${m.sek.toFixed(1)} s, ${Math.round(m.zeilenProSek).toLocaleString()} Zeilen/s, Heap im Worker ${m.heapMB.toFixed(0)} MB (Spitze ${m.spitzeMB.toFixed(0)})`; window.__letzt = m; }
+    if (m.art === 'fertig') { window.__fertig = m; $('aus').textContent = JSON.stringify(m, null, 1); }
+    if (m.art === 'fehler') $('aus').textContent = m.text;
+  };
+  window.__fertig = null;
+  w.postMessage({ art: 'start', modus: $('modus').value, datei: f || null, url: f ? null : $('url').value, gesamt, stueck: Number($('stueck').value) });
+};
+$('stopp').onclick = () => w?.postMessage({ art: 'abbruch' });
+$('tot').onclick = () => { w?.terminate(); w = null; $('st').textContent = 'Worker beendet'; };
+</script></body></html>

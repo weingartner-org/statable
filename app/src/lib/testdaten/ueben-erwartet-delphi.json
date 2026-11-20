@@ -1,0 +1,14 @@
+{
+  "herkunft": "scripts/ueben-erwartet-delphi.R (Basis-R, R 4.6.1)",
+  "a1Median": 4.5000000000,
+  "a1Iqr": 1.0000000000,
+  "a1AnteilProzent": 83.3333333333,
+  "a3Median": 2.0000000000,
+  "a3Iqr": 0.7500000000,
+  "a3AnteilProzent": 0.0000000000,
+  "runde2A1Iqr": 0.7500000000,
+  "runde2A1AnteilProzent": 100.0000000000,
+  "personenInW": 5,
+  "kendallW": 0.8597938144,
+  "p": 0.0017706832
+}

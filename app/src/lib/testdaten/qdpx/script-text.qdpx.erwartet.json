@@ -1,0 +1,83 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "script-text.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 110,
+   "name": "Interview <i>fett</i>",
+   "pruefung": "geprueft",
+   "sha256": "1d7ec875015e4bff508f6b2d1c8da65163b51ee69e209a15ddff09aeaeef1575",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Anna <b>Beispiel</b>"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview <i>fett</i>",
+   "person": "Anna <b>Beispiel</b>",
+   "text": "<script>alert(\"x\")</script>"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Interview <i>fett</i>",
+   "person": "Anna <b>Beispiel</b>",
+   "text": "Zweite Zeile ohne Markup"
+  }
+ ],
+ "meldungen": [],
+ "meldungenDetail": [],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "Statable Prüfdatei",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 1,
+  "faelle": 0,
+  "kodierende": 1,
+  "kodierungen": 2,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 2,
+  "variablen": 0
+ }
+}

@@ -1,0 +1,406 @@
+{
+  "format": "statable-qualitativ",
+  "version": 1,
+  "id": "p-matrix",
+  "name": "Prüfprojekt Fall-Code-Matrix (erfunden)",
+  "kodierende": [
+    {
+      "id": "p-a",
+      "name": "Kodiererin A"
+    },
+    {
+      "id": "p-b",
+      "name": "Kodierer B"
+    }
+  ],
+  "dokumente": [
+    {
+      "id": "d1",
+      "name": "Interview Anna 1",
+      "art": "text",
+      "text": "Ich fühle mich oft unter Zeitdruck. Das Geld reicht kaum. Die Belastung ist hoch.",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000,
+      "fall": "f1"
+    },
+    {
+      "id": "d2",
+      "name": "Interview Anna 2",
+      "art": "text",
+      "text": "Im zweiten Gespräch sagt Anna: Der Zeitdruck bleibt. Mit dem Geld geht es besser.",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000,
+      "fall": "f1"
+    },
+    {
+      "id": "d3",
+      "name": "Interview Ben",
+      "art": "text",
+      "text": "Ben arbeitet nebenbei.\r\nDie Belastung ist mal niedrig, mal mittel.\r\nVon Zeitdruck redet er nicht.",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000,
+      "fall": "f2"
+    },
+    {
+      "id": "d4",
+      "name": "Interview Cara",
+      "art": "text",
+      "text": "Cara hat 😀 keinen Stress. Das Geld ist kein Thema.",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000,
+      "fall": "f3"
+    },
+    {
+      "id": "d5",
+      "name": "Zusatztext ohne Fall",
+      "art": "text",
+      "text": "Dieser Text gehört zu keinem Fall. Das Geld ist ein Thema.",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    }
+  ],
+  "codes": [
+    {
+      "id": "c-zeit",
+      "name": "Zeitdruck",
+      "kodierbar": true,
+      "reihenfolge": 1
+    },
+    {
+      "id": "c-geld",
+      "name": "Geld",
+      "kodierbar": true,
+      "reihenfolge": 2
+    },
+    {
+      "id": "c-bel",
+      "name": "Belastung",
+      "kodierbar": false,
+      "reihenfolge": 3
+    },
+    {
+      "id": "c-bel-n",
+      "name": "niedrig",
+      "kodierbar": true,
+      "reihenfolge": 4,
+      "elternId": "c-bel"
+    },
+    {
+      "id": "c-bel-m",
+      "name": "mittel",
+      "kodierbar": true,
+      "reihenfolge": 5,
+      "elternId": "c-bel"
+    },
+    {
+      "id": "c-bel-h",
+      "name": "hoch",
+      "kodierbar": true,
+      "reihenfolge": 6,
+      "elternId": "c-bel"
+    }
+  ],
+  "segmente": [
+    {
+      "id": "s01",
+      "dokument": "d1",
+      "start": 19,
+      "ende": 34,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s02",
+      "dokument": "d1",
+      "start": 19,
+      "ende": 34,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s03",
+      "dokument": "d1",
+      "start": 36,
+      "ende": 57,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s04",
+      "dokument": "d1",
+      "start": 25,
+      "ende": 51,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s05",
+      "dokument": "d1",
+      "start": 58,
+      "ende": 81,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s06",
+      "dokument": "d1",
+      "start": 62,
+      "ende": 80,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s07",
+      "dokument": "d2",
+      "start": 31,
+      "ende": 52,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s08",
+      "dokument": "d2",
+      "start": 53,
+      "ende": 81,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s09",
+      "dokument": "d3",
+      "start": 42,
+      "ende": 53,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s10",
+      "dokument": "d3",
+      "start": 55,
+      "ende": 65,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s11",
+      "dokument": "d3",
+      "start": 68,
+      "ende": 97,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s12",
+      "dokument": "d3",
+      "start": 13,
+      "ende": 37,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s13",
+      "dokument": "d4",
+      "start": 11,
+      "ende": 24,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s14",
+      "dokument": "d4",
+      "start": 26,
+      "ende": 50,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s15",
+      "dokument": "d5",
+      "start": 35,
+      "ende": 58,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s16",
+      "dokument": "d5",
+      "start": 35,
+      "ende": 58,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    }
+  ],
+  "kodierungen": [
+    {
+      "id": "k01",
+      "segment": "s01",
+      "code": "c-zeit",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k02",
+      "segment": "s02",
+      "code": "c-zeit",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k03",
+      "segment": "s03",
+      "code": "c-geld",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k04",
+      "segment": "s04",
+      "code": "c-zeit",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k05",
+      "segment": "s04",
+      "code": "c-geld",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k06",
+      "segment": "s05",
+      "code": "c-bel-h",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k07",
+      "segment": "s06",
+      "code": "c-bel-h",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k08",
+      "segment": "s07",
+      "code": "c-zeit",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k09",
+      "segment": "s08",
+      "code": "c-geld",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k10",
+      "segment": "s09",
+      "code": "c-bel-n",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k11",
+      "segment": "s10",
+      "code": "c-bel-m",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k12",
+      "segment": "s11",
+      "code": "c-zeit",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k13",
+      "segment": "s12",
+      "code": "c-geld",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k14",
+      "segment": "s13",
+      "code": "c-bel-n",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k15",
+      "segment": "s14",
+      "code": "c-geld",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k16",
+      "segment": "s15",
+      "code": "c-geld",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k17",
+      "segment": "s16",
+      "code": "c-geld",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    }
+  ],
+  "memos": [],
+  "faelle": [
+    {
+      "id": "f1",
+      "name": "Anna",
+      "werte": {
+        "Studienfach": "Soziologie",
+        "Semester": 3
+      }
+    },
+    {
+      "id": "f2",
+      "name": "Ben",
+      "werte": {
+        "Studienfach": "Psychologie",
+        "Semester": 5
+      }
+    },
+    {
+      "id": "f3",
+      "name": "Cara",
+      "werte": {
+        "Studienfach": "Pädagogik",
+        "Semester": 1
+      }
+    },
+    {
+      "id": "f4",
+      "name": "Dora (kein Dokument)",
+      "werte": {
+        "Studienfach": "Politik",
+        "Semester": 7
+      }
+    }
+  ],
+  "variablen": [
+    {
+      "id": "v-fach",
+      "name": "Studienfach",
+      "typ": "text"
+    },
+    {
+      "id": "v-sem",
+      "name": "Semester",
+      "typ": "ganzzahl"
+    }
+  ],
+  "protokoll": [],
+  "herkunft": {
+    "art": "neu",
+    "zeit": 1700000000000
+  }
+}

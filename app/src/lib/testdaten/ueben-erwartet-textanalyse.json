@@ -1,0 +1,11 @@
+{
+  "herkunft": "scripts/ueben-erwartet-textanalyse.R (Basis-R, R 4.6.1)",
+  "woerterA": 21,
+  "woerterB": 15,
+  "g2Muede": 4.3119720059,
+  "pMuede": 0.0378450670,
+  "pMuedeProzent": 3.7845067016,
+  "g2Die": 0.0057372837,
+  "anteilDieA": 14.2857142857,
+  "anteilDieB": 13.3333333333
+}

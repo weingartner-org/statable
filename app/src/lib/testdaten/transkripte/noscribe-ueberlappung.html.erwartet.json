@@ -1,0 +1,32 @@
+{
+  "quelle": "noscribe",
+  "beitraege": [
+    {
+      "sprecher": "S00",
+      "zeitMs": 0,
+      "bisMs": 3000,
+      "text": "Ich denke, das passt"
+    },
+    {
+      "sprecher": "S01",
+      "zeitMs": 3000,
+      "bisMs": 4000,
+      "text": "Ja genau"
+    },
+    {
+      "sprecher": "S00",
+      "zeitMs": 4000,
+      "bisMs": 6000,
+      "text": "und wir bleiben dabei."
+    },
+    {
+      "sprecher": "S01",
+      "zeitMs": 7000,
+      "bisMs": 8000,
+      "text": "Gut."
+    }
+  ],
+  "meldungsArten": [
+    "ueberlappung"
+  ]
+}

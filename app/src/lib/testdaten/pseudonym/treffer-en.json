@@ -1,0 +1,955 @@
+[
+ {
+  "satz": "I talked to Anna yesterday.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ]
+ },
+ {
+  "satz": "The annals are long.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [],
+  "warum": "Anna steht nur als Wortteil"
+ },
+ {
+  "satz": "Anna Berger arrived late, Anna stayed.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   },
+   {
+    "text": "Anna Berger",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna Berger",
+    "art": "person"
+   },
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ]
+ },
+ {
+  "satz": "Mother came at eight.",
+  "namen": [],
+  "regeln": [
+   "email",
+   "telefon",
+   "datum",
+   "plz",
+   "adresse",
+   "url",
+   "iban"
+  ],
+  "erwartet": [],
+  "warum": "Hauptwort am Satzanfang, keine automatische Namenserkennung"
+ },
+ {
+  "satz": "Mother came at eight.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [
+   "email",
+   "telefon",
+   "datum",
+   "plz",
+   "adresse",
+   "url",
+   "iban"
+  ],
+  "erwartet": [],
+  "warum": "kein Name der Liste"
+ },
+ {
+  "satz": "ANNA and anna are here.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "ANNA",
+    "art": "person"
+   },
+   {
+    "text": "anna",
+    "art": "person"
+   }
+  ]
+ },
+ {
+  "satz": "Anna's mother works there.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "warum": "Apostroph ist Wortgrenze; Genitiv-s gibt es nur im Deutschen; Fund ist Anna"
+ },
+ {
+  "satz": "I live in London.",
+  "namen": [
+   {
+    "text": "London",
+    "art": "ort"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "London",
+    "art": "ort"
+   }
+  ]
+ },
+ {
+  "satz": "She works at Acme Ltd.",
+  "namen": [
+   {
+    "text": "Acme Ltd",
+    "art": "organisation"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Acme Ltd",
+    "art": "organisation"
+   }
+  ],
+  "warum": "Punkt am Satzende gehört nicht zum Namen"
+ },
+ {
+  "satz": "We met in St. Albans.",
+  "namen": [
+   {
+    "text": "St. Albans",
+    "art": "ort"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "St. Albans",
+    "art": "ort"
+   }
+  ]
+ },
+ {
+  "satz": "Visit us at 221 Baker Street.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "221 Baker Street",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "He lives at 10 Downing St in London.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "10 Downing St",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "We met at 5 Elm Road today.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "5 Elm Road",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "She lives at 42 Oak Avenue.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "42 Oak Avenue",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "Park at 9 Park Ave near the shop.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "9 Park Ave",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "She lives at 7 Mill Lane now.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "7 Mill Lane",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "Baker Street is busy.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [],
+  "warum": "keine Hausnummer"
+ },
+ {
+  "satz": "There are 221 streets here.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [],
+  "warum": "streets ist keine Straßenart"
+ },
+ {
+  "satz": "On April 3, 2024 it rained.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "April 3, 2024",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "On 3 April 2024 it rained.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "3 April 2024",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "On 15 March 2023 we began.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "15 March 2023",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "On December 25, 2020 we met.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "December 25, 2020",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "On 3.4.2024 it rained.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "3.4.2024",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "On 03.04.24 it rained.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "03.04.24",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "On 2024-04-03 it rained.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "2024-04-03",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "It happened in 2019.",
+  "namen": [],
+  "regeln": [
+   "datum",
+   "plz"
+  ],
+  "erwartet": [],
+  "warum": "Jahreszahl allein"
+ },
+ {
+  "satz": "At 12.30 we left.",
+  "namen": [],
+  "regeln": [
+   "email",
+   "telefon",
+   "datum",
+   "plz",
+   "adresse",
+   "url",
+   "iban"
+  ],
+  "erwartet": [],
+  "warum": "Uhrzeit ist kein Datum"
+ },
+ {
+  "satz": "In April we left.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [],
+  "warum": "Monatsname allein"
+ },
+ {
+  "satz": "On April 3, 2024 April left.",
+  "namen": [
+   {
+    "text": "April",
+    "art": "person"
+   }
+  ],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "April 3, 2024",
+    "art": "datum"
+   },
+   {
+    "text": "April",
+    "art": "person"
+   }
+  ],
+  "warum": "Name im Datum: Datum ist länger"
+ },
+ {
+  "satz": "On 03.04.2024 at 10:00 we began.",
+  "namen": [],
+  "regeln": [
+   "datum",
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "03.04.2024",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "10001 New York is large.",
+  "namen": [],
+  "regeln": [
+   "plz"
+  ],
+  "erwartet": [
+   {
+    "text": "10001",
+    "art": "plz"
+   }
+  ]
+ },
+ {
+  "satz": "See page 1010.",
+  "namen": [],
+  "regeln": [
+   "plz"
+  ],
+  "erwartet": [],
+  "warum": "kein großgeschriebenes Wort dahinter"
+ },
+ {
+  "satz": "He wrote 123456 New York.",
+  "namen": [],
+  "regeln": [
+   "plz"
+  ],
+  "erwartet": [],
+  "warum": "sechs Ziffern"
+ },
+ {
+  "satz": "Write to anna.berger@uni.ac.uk.",
+  "namen": [],
+  "regeln": [
+   "email"
+  ],
+  "erwartet": [
+   {
+    "text": "anna.berger@uni.ac.uk",
+    "art": "email"
+   }
+  ],
+  "warum": "Punkt am Satzende gehört nicht dazu"
+ },
+ {
+  "satz": "Write to anna.berger@uni.ac.uk now.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   },
+   {
+    "text": "Berger",
+    "art": "person"
+   }
+  ],
+  "regeln": [
+   "email"
+  ],
+  "erwartet": [
+   {
+    "text": "anna.berger@uni.ac.uk",
+    "art": "email"
+   }
+  ],
+  "warum": "E-Mail ist länger als die Namen darin"
+ },
+ {
+  "satz": "Mail (anna@example.com) please.",
+  "namen": [],
+  "regeln": [
+   "email"
+  ],
+  "erwartet": [
+   {
+    "text": "anna@example.com",
+    "art": "email"
+   }
+  ]
+ },
+ {
+  "satz": "Mail: anna@example.com",
+  "namen": [
+   {
+    "text": "anna@example.com",
+    "art": "person"
+   }
+  ],
+  "regeln": [
+   "email"
+  ],
+  "erwartet": [
+   {
+    "text": "anna@example.com",
+    "art": "person"
+   }
+  ],
+  "warum": "gleiche Länge: Namen vor Regeln"
+ },
+ {
+  "satz": "Anna Maria Lena came.",
+  "namen": [
+   {
+    "text": "Anna Maria",
+    "art": "person"
+   },
+   {
+    "text": "Maria Lena",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna Maria",
+    "art": "person"
+   }
+  ],
+  "warum": "gleiche Länge: der frühere"
+ },
+ {
+  "satz": "Anna Maria Berger came.",
+  "namen": [
+   {
+    "text": "Anna Maria",
+    "art": "person"
+   },
+   {
+    "text": "Maria Berger",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Maria Berger",
+    "art": "person"
+   }
+  ],
+  "warum": "der längere"
+ },
+ {
+  "satz": "See https://example.org/page.",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "https://example.org/page",
+    "art": "url"
+   }
+  ]
+ },
+ {
+  "satz": "This (see https://example.org/page) is true.",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "https://example.org/page",
+    "art": "url"
+   }
+  ],
+  "warum": "schließende Klammer gehört nicht dazu"
+ },
+ {
+  "satz": "Also at www.statable.eu, too.",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "www.statable.eu",
+    "art": "url"
+   }
+  ]
+ },
+ {
+  "satz": "Call +44 20 7946 0958 now.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "+44 20 7946 0958",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Call 020 7946 0958 now.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "020 7946 0958",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Call +1 202-555-0143 now.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "+1 202-555-0143",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Call +43 664 1234567.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "+43 664 1234567",
+    "art": "telefon"
+   }
+  ],
+  "warum": "Punkt am Satzende nicht dabei"
+ },
+ {
+  "satz": "Call 0123 45 now.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [],
+  "warum": "nur 6 Ziffern"
+ },
+ {
+  "satz": "Number 1234567 is plain.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [],
+  "warum": "beginnt weder mit + noch mit 0"
+ },
+ {
+  "satz": "IBAN GB82 WEST 1234 5698 7654 32 is fake.",
+  "namen": [],
+  "regeln": [
+   "iban"
+  ],
+  "erwartet": [
+   {
+    "text": "GB82 WEST 1234 5698 7654 32",
+    "art": "iban"
+   }
+  ]
+ },
+ {
+  "satz": "IBAN GB82WEST12345698765432 is fake.",
+  "namen": [],
+  "regeln": [
+   "iban"
+  ],
+  "erwartet": [
+   {
+    "text": "GB82WEST12345698765432",
+    "art": "iban"
+   }
+  ]
+ },
+ {
+  "satz": "IBAN FR14 2004 1010 0505 0001 3M02 606 is fake.",
+  "namen": [],
+  "regeln": [
+   "iban"
+  ],
+  "erwartet": [
+   {
+    "text": "FR14 2004 1010 0505 0001 3M02 606",
+    "art": "iban"
+   }
+  ],
+  "warum": "Buchstaben im Kontoteil"
+ },
+ {
+  "satz": "IBAN GB83 WEST 1234 5698 7654 32 is wrong.",
+  "namen": [],
+  "regeln": [
+   "iban"
+  ],
+  "erwartet": [],
+  "warum": "Prüfziffer falsch"
+ },
+ {
+  "satz": "Anna Berger (+44 20 7946 0958) lives at 221 Baker Street, London.",
+  "namen": [
+   {
+    "text": "Anna Berger",
+    "art": "person"
+   },
+   {
+    "text": "London",
+    "art": "ort"
+   }
+  ],
+  "regeln": [
+   "telefon",
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "Anna Berger",
+    "art": "person"
+   },
+   {
+    "text": "+44 20 7946 0958",
+    "art": "telefon"
+   },
+   {
+    "text": "221 Baker Street",
+    "art": "adresse"
+   },
+   {
+    "text": "London",
+    "art": "ort"
+   }
+  ]
+ },
+ {
+  "satz": "Anna-Lena came late.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [],
+  "warum": "Bindestrich verbindet: kein Treffer"
+ },
+ {
+  "satz": "Thomas' car is red.",
+  "namen": [
+   {
+    "text": "Thomas",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Thomas",
+    "art": "person"
+   }
+  ]
+ },
+ {
+  "satz": "Thomas came late.",
+  "namen": [
+   {
+    "text": "Thomas",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Thomas",
+    "art": "person"
+   }
+  ]
+ },
+ {
+  "satz": "See https://en.wikipedia.org/wiki/Anna_(name) today.",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "https://en.wikipedia.org/wiki/Anna_(name)",
+    "art": "url"
+   }
+  ],
+  "warum": "ausgeglichene Klammer gehört dazu"
+ },
+ {
+  "satz": "Is it https://example.org/x? Yes, https://example.org/y!",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "https://example.org/x",
+    "art": "url"
+   },
+   {
+    "text": "https://example.org/y",
+    "art": "url"
+   }
+  ]
+ },
+ {
+  "satz": "Call (202) 555-0143 now.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "(202) 555-0143",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Call 202-555-0143 now.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "202-555-0143",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Call 202.555.0143 now.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "202.555.0143",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Call 202 555 0143 now.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "202 555 0143",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "It cost 123 456 789 dollars.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [],
+  "warum": "3-3-3 ist keine US-Nummer"
+ },
+ {
+  "satz": "He lives at the Place 3.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [],
+  "warum": "kein Straßenwort"
+ },
+ {
+  "satz": "😀 Anna 😀 wrote.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "warum": "Emoji vor dem Treffer"
+ },
+ {
+  "satz": "This sentence has no hints.",
+  "namen": [],
+  "regeln": [],
+  "erwartet": []
+ },
+ {
+  "satz": "Mail anna@example.com to Lukas.",
+  "namen": [
+   {
+    "text": "Lukas",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Lukas",
+    "art": "person"
+   }
+  ],
+  "warum": "ohne Regel email keine Adresse"
+ }
+]

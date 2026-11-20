@@ -1,0 +1,1535 @@
+{
+  "_info": {
+    "stand": "2026-10-09",
+    "zweck": "Statable glossary (Italian, tu). Explanations and messages translated from the English template; muster/original/art unchanged.",
+    "regeln": [
+      "Messages: the first matching rule wins.",
+      "Explanations address no one directly; messages use tu. The fields 'du' and 'sie' hold the same text.",
+      "Numbers in Italian: decimal comma, no leading zero for p, r and alpha (,005).",
+      "pruefen: true = have a statistics expert check it before use."
+    ]
+  },
+  "erklaer": {
+    "bayes": {
+      "titel": "Fattore di Bayes (BF₁₀)",
+      "kurz": "I dati indicano più una differenza o il contrario? Il fattore di Bayes (BF₁₀) confronta le due possibilità. BF₁₀ = 8 significa: i dati sarebbero circa 8 volte più probabili se esiste una differenza.",
+      "beispiel": "Durata di conservazione del pane di due panetterie: BF₁₀ = 6, quindi i dati sono 6 volte più probabili con una differenza. BF₁₀ = 0,25 significherebbe: 4 volte più probabili senza una differenza (1 / 0,25 = 4).",
+      "vorsicht": "Il fattore di Bayes non dice quanto sia probabile una differenza e dipende da un’ipotesi scelta in anticipo. Un valore vicino a 1 significa solo che nessuna delle due parti è sostenuta; etichette come «moderato» sono regole empiriche.",
+      "pruefen": true,
+      "fachwoerter": "valore p (quanto spesso comparirebbe una differenza almeno così grande se davvero non ce ne fosse nessuna), H₀ e H₁ (le ipotesi «nessuna differenza» e «una differenza»), distribuzione a priori (l’ipotesi sulle differenze possibili scelta in anticipo), BF₀₁ (il confronto inverso, BF₀₁ = 1 / BF₁₀)."
+    },
+    "p-wert": {
+      "titel": "Valore p",
+      "kurz": "Una differenza è reale o solo casuale? Non lo si può mai sapere con certezza. Il valore p aiuta così: supponi che davvero non ci sia nessuna differenza. Quanto spesso comparirebbe comunque una differenza almeno così grande?",
+      "beispiel": "Due varietà di pomodoro, p = ,03: se le varietà fossero davvero uguali, una differenza come questa comparirebbe in circa 3 prove su 100.",
+      "vorsicht": "p non è la probabilità che il risultato sia dovuto al caso. E p non dice nemmeno quanto sia grande o importante la differenza: a questo serve la dimensione dell’effetto. Vale solo se sono rispettati anche gli altri assunti del calcolo, per esempio la scelta casuale e l’indipendenza.",
+      "pruefen": true
+    },
+    "signifikanz": {
+      "titel": "Statisticamente significativo",
+      "kurz": "Che cosa significa «statisticamente significativo»? Il valore p sta sotto un limite fissato in anticipo, di solito ,05. I dati si accordano allora male con l’ipotesi «nessuna differenza».",
+      "beispiel": "p = ,03 è sotto ,05: significativo. p = ,07 sta sopra: non significativo.",
+      "vorsicht": "Significativo non vuol dire importante né dimostrato. Non significativo non vuol dire nessuna differenza. Il limite di ,05 è un’abitudine. Con moltissimi casi anche un effetto piccolo diventa significativo. E inoltre: la differenza tra «significativo» e «non significativo» non è di per sé significativa.",
+      "pruefen": true
+    },
+    "effektstaerke": {
+      "titel": "Dimensione dell’effetto",
+      "kurz": "Quanto è grande una differenza o una relazione? Lo dice la dimensione dell’effetto. Più persone rendono più piccolo il valore p; la dimensione dell’effetto non cambia solo per questo.",
+      "beispiel": "d di Cohen = 0,5: due gruppi distano mezza deviazione standard (la distanza tipica dei valori dalla media).",
+      "vorsicht": "Le parole piccolo, medio, grande (d = 0,2; 0,5; 0,8) sono un’abitudine che risale a Cohen. Che cosa conti come molto dipende dalla disciplina e dalla domanda.",
+      "pruefen": true
+    },
+    "konfidenzintervall": {
+      "titel": "Intervallo di confidenza (IC)",
+      "kurz": "Quanto è preciso un risultato? L’intervallo di confidenza (IC) è un intervallo attorno al valore misurato. Mostra quali valori veri si accordano bene con i dati. Stretto significa preciso, ampio impreciso.",
+      "beispiel": "Un nuovo tragitto fa risparmiare in media 4 minuti, IC al 95% [1,2; 6,8]: un risparmio vero di 2 o di 6 minuti si accorda bene con i dati.",
+      "vorsicht": "«95%» descrive il metodo: su molte ripetizioni, circa 95 intervalli su 100 di questo tipo conterrebbero il valore vero. Se questo lo contenga non si sa. Se l’intervallo al 95% contiene 0, anche «nessuna differenza» si accorda con i dati, e il test a due code al livello ,05 non è significativo.",
+      "pruefen": true
+    },
+    "normalverteilung": {
+      "titel": "Distribuzione normale",
+      "kurz": "Come sono distribuiti i valori? In una distribuzione normale la maggior parte dei valori sta al centro e diventa più rara, in modo regolare, verso entrambi i lati. Ne risulta una forma a campana.",
+      "beispiel": "Il peso dei pacchi di pasta da 500 g varia a campana attorno a 500 g. I tempi di attesa a un servizio telefonico no: molti sono brevi, pochi molto lunghi.",
+      "vorsicht": "Per confrontare le medie contano più una lunga coda su un lato (asimmetria) e i valori anomali che un numero fisso di persone. Con molte persone la forma conta meno; con pochissime si può appena giudicare.",
+      "pruefen": true,
+      "fachwoerter": "test di Welch (un test t che non richiede dispersione uguale nei gruppi), asimmetria (una lunga coda su un lato), valore anomalo (un valore lontano dagli altri)."
+    },
+    "mittelwert": {
+      "titel": "Media (M)",
+      "kurz": "Qual è il valore tipico? La media è la media aritmetica: si sommano tutti i valori e si divide per quanti sono.",
+      "beispiel": "Cinque tempi di attesa a uno sportello: 8, 12, 9, 15 e 11 minuti. In tutto 55, diviso 5 dà 11 minuti.",
+      "vorsicht": "Pochi valori molto alti o molto bassi trascinano con sé la media. Con 60 invece di 11 minuti sarebbe 20,8; la mediana, il valore centrale della serie ordinata, salirebbe solo da 11 a 12.",
+      "pruefen": false
+    },
+    "standardabweichung": {
+      "titel": "Deviazione standard (SD)",
+      "kurz": "Quanto sono diversi i valori? La deviazione standard (SD) dice quanto i valori stanno tipicamente lontani dalla media. Piccola significa che i valori sono vicini tra loro.",
+      "beispiel": "Sonno: media 7 ore, SD 1 ora. Con una distribuzione a campana, circa due terzi dormono tra 6 e 8 ore.",
+      "vorsicht": "La SD descrive quanto le persone sono diverse tra loro. Quanto sia precisa la media lo dicono l’errore standard e l’intervallo di confidenza.",
+      "pruefen": false
+    },
+    "freiheitsgrade": {
+      "titel": "Gradi di libertà (df)",
+      "kurz": "Che cosa significa il numero tra parentesi, per esempio t(18)? Sono i gradi di libertà (df), un numero che dipende soprattutto da quante persone ci sono. Il software ne ha bisogno per il valore p.",
+      "beispiel": "20 persone in due gruppi: 20 meno 2 dà 18 gradi di libertà, quindi t(18). Con gruppi di dispersione disuguale (test di Welch) il numero è spesso un decimale, come t(14,3).",
+      "vorsicht": "Di solito è tutto ciò che serve sapere sui gradi di libertà. Vanno però in ogni report, perché altri possano controllare il risultato.",
+      "pruefen": false
+    },
+    "korrelation": {
+      "titel": "Correlazione (r)",
+      "kurz": "Due cose sono in relazione? La correlazione r lo mostra con un numero da −1 a +1. Positiva: più dell’una va con più dell’altra. Negativa: con meno. Vicina a 0: nessuna relazione rettilinea.",
+      "beispiel": "Sonno e concentrazione: r = ,30. Chi dorme di più tende a concentrarsi meglio.",
+      "vorsicht": "Una relazione non è una causa. r vede solo relazioni rettilinee, quindi guarda anche il grafico a dispersione.",
+      "pruefen": true
+    },
+    "korrelationsmatrix": {
+      "titel": "Matrice di correlazione",
+      "kurz": "Quali tra più colonne di numeri vanno insieme? La matrice di correlazione mostra tutte le coppie in una volta. La correzione di Holm rende più severi i valori p, perché con molte coppie una spicca facilmente per caso.",
+      "beispiel": "Cinque colonne danno 10 coppie. La più vistosa ha p = ,012; dopo la correzione di Holm diventa ,012 per 10 = ,12 - non più sotto ,05.",
+      "vorsicht": "Chi verifica molte coppie trova anche colpi di fortuna; chi cerca soltanto dovrebbe usare i valori di Holm. Una relazione non è una causa.",
+      "pruefen": true,
+      "fachwoerter": "r di Pearson (il legame tra due colonne di numeri, per relazioni rettilinee), rs di Spearman (la stessa idea con i ranghi invece dei valori), n (numero di casi per coppia), intervallo di confidenza al 95% (un intervallo che si accorda bene con la vera relazione, dati i dati)."
+    },
+    "regression": {
+      "titel": "Regressione",
+      "kurz": "Un valore si può prevedere da altri? La regressione disegna la retta che meglio si adatta ai dati. Mostra quanto cambia la previsione quando cambia un altro valore.",
+      "beispiel": "Prezzo di un appartamento dalla superficie: un m² in più va con 2.400 € in più in media.",
+      "vorsicht": "Una previsione non è una causa. Per il test usuale, a essere distribuiti in modo normale dovrebbero essere i residui (le distanze dalla retta), non i valori grezzi.",
+      "pruefen": true
+    },
+    "chi-quadrat": {
+      "titel": "Test chi-quadrato (χ²)",
+      "kurz": "Qualcosa ricorre più spesso in alcuni gruppi? Il test chi-quadrato (χ²) confronta i casi contati di una tabella di contingenza con i numeri attesi se non ci fosse nessuna relazione.",
+      "beispiel": "100 persone per gruppo: il 60% di chi si alza presto beve caffè, il 40% di chi si alza tardi. χ²(1) = 8,0, p = ,005.",
+      "vorsicht": "χ² non dice quanto sia forte la relazione: con il doppio delle persone e le stesse quote, raddoppia. La V di Cramér mostra la forza.",
+      "pruefen": true,
+      "fachwoerter": "test esatto di Fisher (più accurato di χ² per tabelle 2 × 2 con poche persone), conteggio atteso (quanti casi conterrebbe una cella se non ci fosse nessuna relazione)."
+    },
+    "streuung": {
+      "titel": "Dispersione",
+      "kurz": "Quanto sono diversi i valori? La dispersione è il termine generale. Le misure sono il campo di variazione (valore più grande meno il più piccolo), la deviazione standard e lo scarto interquartile (l’ampiezza della metà centrale dei valori).",
+      "beispiel": "Durata di 40 viaggi: da 12 a 51 minuti, campo di variazione 51 − 12 = 39, deviazione standard 8,5, scarto interquartile 10.",
+      "vorsicht": "Il campo di variazione dipende da soli due valori. Un singolo valore anomalo lo ingrandisce molto.",
+      "pruefen": false
+    },
+    "stichprobe": {
+      "titel": "Campione",
+      "kurz": "Chi ha davvero partecipato? È il campione. Serve a dire qualcosa su un gruppo più grande, la popolazione.",
+      "beispiel": "Una biblioteca intervista 150 visitatori di un martedì per dire qualcosa su tutti gli utenti dell’anno. Se vale dipende da come sono stati scelti questi 150.",
+      "vorsicht": "Molte persone non compensano una selezione unilaterale. Chiedere solo ai visitatori del martedì mattina descrive soprattutto quei visitatori.",
+      "pruefen": false
+    },
+    "voraussetzung": {
+      "titel": "Assunti",
+      "kurz": "Un metodo si può usare con questi dati? Ogni metodo poggia su presupposti, i requisiti, per esempio «ogni persona appartiene a un solo gruppo». Se non si adattano, il risultato può trarre in inganno.",
+      "beispiel": "Prima di confrontare due gruppi di clienti: sono davvero due gruppi separati? I valori sono numeri? Ci sono singoli valori molto vistosi?",
+      "vorsicht": "Una nota non è un divieto, ma un motivo per guardare più da vicino. Alcuni presupposti nessun software può verificarli, per esempio se le persone abbiano risposto in modo indipendente l’una dall’altra, cioè senza accordarsi prima - dipende da come sono stati raccolti i dati.",
+      "pruefen": true
+    },
+    "ausreisser": {
+      "titel": "Valore anomalo",
+      "kurz": "Un valore sta in modo vistoso lontano da tutti gli altri? Allora è un valore anomalo (outlier). Può essere un errore di battitura, un errore di misura - oppure una risposta autentica e insolita.",
+      "beispiel": "Dieci tempi di consegna in giorni: nove tra 2 e 4 (somma 27), uno di 31. Senza il 31 la media è 27 / 9 = 3,0 giorni, con esso 58 / 10 = 5,8.",
+      "vorsicht": "Non eliminare mai in silenzio i valori anomali: prima controlla l’originale, mostra il calcolo con e senza di esso e motiva la decisione. Nella regressione un punto lontano tira la retta verso di sé, anche se spicca appena. In un box plot i valori insoliti compaiono come punti fuori dai baffi (le linee della scatola). Questo non ne fa ancora degli errori.",
+      "pruefen": true,
+      "statable": "Per una regressione, il blocco «Verifica della regressione: collinearità e casi anomali» sotto il risultato elenca i casi con residuo, leva o distanza di Cook elevati, con il loro numero di riga nei dati. Guarda lì, non eliminare mai in silenzio. I singoli valori di una colonna vengono segnalati dal controllo dei dati all’apertura."
+    },
+    "reliabilitaet": {
+      "titel": "Attendibilità della scala (alfa di Cronbach)",
+      "kurz": "Più domande misurano insieme in modo attendibile? L’alfa di Cronbach mostra quanto sono collegate le risposte alle domande di una scala. Il valore sta di solito tra 0 e 1.",
+      "beispiel": "Cinque domande sulla soddisfazione lavorativa: α = ,82.",
+      "vorsicht": "Un alfa alto non prova che tutte le domande misurino la stessa cosa, e più domande lo alzano da sole. Si cita spesso ,70 come minimo; è un’abitudine.",
+      "pruefen": true,
+      "fachwoerter": "consistenza interna (quanto sono collegate le risposte alle domande di una scala), unidimensionalità (tutte le domande misurano la stessa caratteristica), analisi fattoriale (mostra se le domande misurano una o più caratteristiche), correlazione item-totale (quanto bene una domanda si adatta alle altre), inversione (girare una domanda formulata al contrario perché vada nella stessa direzione)."
+    },
+    "faktorenanalyse": {
+      "titel": "Analisi fattoriale",
+      "kurz": "Quali domande stanno insieme? L’analisi fattoriale cerca gruppi di domande a cui si risponde in modo simile. La saturazione (da −1 a 1) mostra quanto una domanda appartiene a un gruppo.",
+      "beispiel": "Nove domande sulla vita in città formano tre gruppi: traffico, sicurezza, tempo libero.",
+      "vorsicht": "Il calcolo trova soltanto gruppi. Che cosa significhino lo decidono le persone. Si conteggiano spesso saturazioni da ,30 o ,50 in su; non c’è un limite fisso.",
+      "pruefen": true,
+      "fachwoerter": "analisi delle componenti principali (il predefinito, come in SPSS: riunisce le domande in componenti), analisi dei fattori principali (cerca caratteristiche comuni dietro le domande), Promax (una rotazione che lascia i fattori collegati tra loro)."
+    },
+    "koeffizient-b": {
+      "titel": "Coefficiente di regressione B e costante",
+      "kurz": "Di quanto cambia la previsione quando un predittore sale di 1 e gli altri restano uguali? Lo dice B, nelle unità dei dati. Per questo B cambia quando nel modello entrano altri predittori. La costante è la previsione quando tutti i predittori sono 0.",
+      "beispiel": "Prezzo di un appartamento in migliaia di €: B = 2,4 per la superficie. Un m² in più va con 2.400 € in più in media, sullo stesso piano.",
+      "vorsicht": "B cambia con l’unità (euro o migliaia di euro). Solo con la stessa unità il B si può confrontare tra studi; con scale o unità diverse resta solo il beta, che però dipende dalla dispersione del campione. La costante spesso non significa nulla se 0 non compare mai (0 m²).",
+      "pruefen": true,
+      "fachwoerter": "beta (B espresso in deviazioni standard, così le scale diventano confrontabili), predittore (un valore usato per prevedere)."
+    },
+    "beta": {
+      "titel": "Coefficiente standardizzato beta (β)",
+      "kurz": "B senza unità: beta converte tutto in deviazioni standard (la distanza tipica dei valori dalla media). Così grandezze con unità diverse si possono affiancare all’interno di uno studio. Con un solo predittore, beta è uguale a r.",
+      "beispiel": "Prezzo di un appartamento: superficie β = ,62. Se la superficie sale di una deviazione standard, il prezzo sale in media di 0,62 deviazioni standard.",
+      "vorsicht": "Beta dipende da quanto sono diversi i casi in un campione, quindi non si può semplicemente confrontare tra studi. Se due studi hanno scale o unità diverse, solo il beta può essere affiancato a quello dell’altro studio, il B no - ma anche il beta dipende dalla dispersione del campione. Se un beta più grande significhi «più importante» è discusso.",
+      "pruefen": true
+    },
+    "standardfehler": {
+      "titel": "Errore standard",
+      "kurz": "Quanto è precisa una stima? Con altre persone uscirebbe un valore un po’ diverso. L’errore standard dice di quanto il valore varia tipicamente in questo modo. Più piccolo significa più preciso.",
+      "beispiel": "1,5 punti in più per ora di allenamento (B = 1,5), errore standard 0,5. B diviso per l’errore standard dà t = 3,0, che porta a p (Sig.).",
+      "vorsicht": "Più persone lo rendono più piccolo, anche se la relazione resta la stessa. L’«errore standard della stima» nel riepilogo del modello è un’altra cosa: la distanza tipica dei valori dalla retta. Con quattro volte più persone si dimezza all’incirca. La deviazione standard (la distanza tipica dei singoli valori dalla media) resta più o meno uguale.",
+      "pruefen": true,
+      "fachwoerter": "campione (le persone che sono state davvero studiate), t (B diviso per l’errore standard), Sig. (come SPSS chiama il valore p corrispondente)."
+    },
+    "r-quadrat": {
+      "titel": "R² (R quadro) e R² corretto",
+      "kurz": "Quanta parte delle differenze spiega un modello? R² è una quota da 0 a 1. R² corretto toglie un poco, perché ogni grandezza aggiunta può alzare R² anche se non contribuisce a nulla. Con un solo predittore, R² è il quadrato della correlazione r. r di per sé non è una quota.",
+      "beispiel": "R² = ,40: superficie e posizione spiegano il 40% delle differenze di prezzo in questi dati.",
+      "vorsicht": "«Spiega» va inteso in senso aritmetico, non come causa. Un R² più alto da solo non rende migliore un modello.",
+      "pruefen": true,
+      "fachwoerter": "varianza (quanto i valori si disperdono attorno alla loro media), statisticamente significativo (il valore p sta sotto il limite scelto, di solito ,05), predittore (un valore usato per prevedere)."
+    },
+    "eigenwert-rotation": {
+      "titel": "Autovalore, analisi parallela, saturazione e rotazione",
+      "kurz": "Quanti gruppi di domande ci sono? L’autovalore mostra quanta parte delle differenze coglie un gruppo. L’analisi parallela mantiene solo i gruppi sopra il valore dei dati casuali; la rotazione rende più chiara l’assegnazione delle domande.",
+      "beispiel": "Otto domande sul quartiere: due gruppi stanno sopra il valore casuale, con autovalori 3,1 e 1,6. Insieme 4,7 su 8, cioè il 59%. La domanda 6 ha una saturazione di ,81 sul gruppo 1 (forte appartenenza) e ,05 sul gruppo 2.",
+      "vorsicht": "Nessuna regola è una prova: «autovalore sopra 1» indica spesso troppi gruppi, l’analisi parallela può indicarne troppo pochi quando il primo gruppo è molto grande, le persone sono poche e i gruppi sono fortemente collegati. Il numero si decide insieme allo scree plot (un grafico degli autovalori) e al contenuto delle domande.",
+      "pruefen": true,
+      "fachwoerter": "componente (uno dei gruppi che il calcolo forma), criterio di Kaiser (mantiene le componenti con un autovalore sopra 1), Varimax (una rotazione che mantiene le componenti indipendenti), Promax (una rotazione che lascia i fattori collegati tra loro)."
+    },
+    "trennschaerfe": {
+      "titel": "Correlazione item-totale corretta e alfa se l’item è eliminato",
+      "kurz": "Una domanda si adatta alle altre domande di una scala? La discriminazione dell’item (correlazione item-totale) è la correlazione della domanda con la somma delle altre domande. Alta significa: chi risponde alto qui tende a rispondere alto anche altrove. Alfa se l’item è eliminato è l’alfa della scala senza questa domanda. Se sale, la domanda sta abbassando l’alfa.",
+      "beispiel": "Correlazione item-totale ,55: si adatta bene. Correlazione −,40: la domanda va in senso opposto; forse non è stata invertita.",
+      "vorsicht": "Valori da ,40 a ,70 circa si dicono spesso buoni; è un’abitudine. Un’alta correlazione item-totale non prova che tutte le domande misurino la stessa cosa. Anche il contenuto decide se eliminare una domanda.",
+      "pruefen": true,
+      "fachwoerter": "alfa di Cronbach (quanto sono collegate le risposte di una scala), item (una singola domanda della scala), inversione (girare una domanda formulata al contrario perché vada nella stessa direzione)."
+    },
+    "rangkorrelation": {
+      "titel": "Correlazione per ranghi (rs, τb)",
+      "kurz": "Due graduatorie vanno insieme? La correlazione per ranghi (rs di Spearman, τb di Kendall) confronta non i numeri ma le loro posizioni nei ranghi, ed è adatta quando conta solo l’ordine. Sta tra −1 e +1.",
+      "beispiel": "Soddisfazione (livelli da 1 a 5) e visite al mese in 60 persone: rs = −,22. Chi viene più spesso tende a essere un po’ meno soddisfatto. La relazione è debole.",
+      "vorsicht": "Una relazione non è una causa. La correlazione per ranghi coglie ogni relazione che continua a salire o a scendere, comprese quelle curve; un grafico a dispersione mostra la forma.",
+      "pruefen": true
+    },
+    "kappa": {
+      "titel": "Kappa di Cohen (κ)",
+      "kurz": "Quanto concordano due valutatori una volta tolto l’andare a caso? Il kappa di Cohen (κ) toglie l’accordo che darebbe il solo caso. 0 significa non meglio del caso; 1 significa accordo perfetto.",
+      "beispiel": "Due medici ordinano 50 foto della pelle come «sospette» o «non sospette». Concordano su 40 (80%); tolto il caso, κ = ,60 (intervallo al 95% da ,38 a ,82).",
+      "vorsicht": "κ è basso nonostante un alto accordo quando una categoria è molto rara o molto comune. Etichette come «moderato» o «sostanziale» (Landis e Koch 1977) sono regole empiriche, non limiti.",
+      "pruefen": true
+    },
+    "krippendorff-alpha": {
+      "titel": "Alfa di Krippendorff (α)",
+      "kurz": "Più persone concordano nell’ordinare, anche se non tutti hanno valutato ogni caso? L’alfa di Krippendorff (α) lo misura con un solo numero. Si citano spesso: da ,800 affidabile, da ,667 per conclusioni provvisorie.",
+      "beispiel": "Tre persone ordinano 60 commenti di clienti in «elogio», «critica» o «domanda»: α = ,71. È sopra ,667 ma sotto ,800: basta per conclusioni provvisorie, non per conclusioni affidabili.",
+      "vorsicht": "I limiti ,800 e ,667 sono proposte di Krippendorff, non leggi di natura. Con pochi casi l’intervallo è ampio.",
+      "pruefen": true
+    },
+    "icc": {
+      "titel": "Correlazione intraclasse (ICC)",
+      "kurz": "Quanta parte delle differenze tra le valutazioni deriva dai casi valutati anziché dai valutatori? L’ICC (correlazione intraclasse) lo mostra: 0 significa nessun accordo, 1 accordo perfetto.",
+      "beispiel": "Tre giudici assegnano a 10 torte da 0 a 100 punti: ICC(2,1) = ,82 (intervallo al 95% da ,43 a ,95) per una singola valutazione, ICC(2,3) = ,93 (da ,70 a ,98) per la media delle tre valutazioni. Con sole 10 torte il primo intervallo è ancora ampio.",
+      "vorsicht": "Esistono varianti (singola valutazione o media; accordo pieno, oppure è ammessa una differenza fissa tra i valutatori); quella adatta si sceglie in anticipo. Con pochi casi l’ICC è impreciso, e risulta basso quando i casi differiscono appena - anche con un buon accordo.",
+      "pruefen": true,
+      "fachwoerter": "intervallo di confidenza (un intervallo che si accorda bene con il vero ICC, dati i dati), ICC di accordo assoluto (2,·) (i valori devono essere uguali), ICC di consistenza (3,·) (è ammessa una differenza fissa tra i valutatori), singola e media (una valutazione o la media di tutte le valutazioni)."
+    },
+    "bland-altman": {
+      "titel": "Grafico di Bland-Altman",
+      "kurz": "Quanto distano due metodi di misura sugli stessi casi? Il grafico di Bland-Altman mostra la differenza di ogni caso rispetto alla sua media. Il bias è la differenza media; i limiti racchiudono circa il 95% di tutte le differenze.",
+      "beispiel": "Due termometri clinici in 12 persone: bias = 0,16 °C (IC al 95% da 0,05 a 0,27), limiti di concordanza da −0,18 a 0,50 °C. Il secondo legge in media più alto (l’intervallo del bias non include 0); in un singolo caso legge fino a 0,5 °C in più.",
+      "vorsicht": "Se l’intervallo sia abbastanza piccolo lo decide la disciplina, non la statistica. Con pochi casi i limiti sono imprecisi, e se le differenze dipendono dalla media, i limiti non valgono ugualmente bene dappertutto.",
+      "pruefen": true,
+      "fachwoerter": "ICC (correlazione intraclasse: mette in rapporto gli scostamenti con le differenze tra i casi), deviazione standard (SD, la dispersione tipica; i limiti sono bias ± 1,96 SD)."
+    },
+    "sensitivitaet": {
+      "titel": "Sensibilità",
+      "kurz": "Quante delle persone davvero interessate trova un test? La sensibilità è la quota dei veri positivi che il test chiama positivi. Come verità si assume il miglior controllo di confronto disponibile.",
+      "beispiel": "Su 40 persone con una diagnosi confermata, il test rapido ne individua 34: sensibilità = 34 / 40 = 85% (IC al 95% da 71 a 93%).",
+      "vorsicht": "Se il test viene impostato più severo o più mite, sensibilità e specificità cambiano in direzioni opposte. Con poche persone interessate l’intervallo è ampio.",
+      "pruefen": true,
+      "fachwoerter": "standard di riferimento (il miglior controllo disponibile, il cui risultato vale come verità), veri positivi (persone interessate che il test individua)."
+    },
+    "spezifitaet": {
+      "titel": "Specificità",
+      "kurz": "Quante delle persone non interessate riconosce correttamente un test? La specificità è la quota dei veri negativi che il test chiama negativi. Alta significa pochi falsi allarmi.",
+      "beispiel": "Su 120 persone senza la diagnosi, 108 restano senza segnalazioni: specificità = 108 / 120 = 90% (IC al 95% da 83 a 94%).",
+      "vorsicht": "Il controllo di confronto è trattato come la verità; se è esso stesso incerto, sensibilità e specificità sono imprecise. Per condizioni rare un risultato positivo dice spesso meno del previsto nonostante un’alta specificità (vedi i valori predittivi).",
+      "pruefen": true,
+      "fachwoerter": "standard di riferimento (il miglior controllo disponibile, il cui risultato vale come verità), veri negativi (persone non interessate che il test lascia passare correttamente)."
+    },
+    "vorhersagewert": {
+      "titel": "Valori predittivi (VPP, VPN)",
+      "kurz": "Quanto è probabile che qualcuno sia davvero interessato quando il test è positivo? Il valore predittivo positivo (VPP) lo dice: la quota dei test positivi che sono davvero interessati. Quello negativo (VPN) riguarda i test negativi.",
+      "beispiel": "Un test con sensibilità del 90% e specificità del 90%. Su 1.000 persone, 100 sono interessate: 90 vengono individuate, ma risultano positive anche 90 delle 900 persone sane. VPP = 90 / 180 = 50%. Se ne fossero interessate 500, il VPP sarebbe 450 / 500 = 90%.",
+      "vorsicht": "Entrambi i valori cambiano con la frequenza della condizione, anche a parità di sensibilità e specificità, e valgono solo per gruppi con una prevalenza simile. Se persone interessate e non interessate sono state cercate separatamente (studio caso-controllo), non si possono interpretare.",
+      "pruefen": true,
+      "fachwoerter": "rapporti di verosimiglianza (LR+ = sensibilità / (1 − specificità), LR− = (1 − sensibilità) / specificità: quanto un risultato è più frequente nelle persone interessate che in quelle non interessate; non dipendono dalla prevalenza)."
+    },
+    "gepaarte-messung": {
+      "titel": "Misura appaiata (dz, dav)",
+      "kurz": "Qualcosa è cambiato per le stesse persone? In una misura appaiata, «prima» e «dopo» provengono dalle stesse persone. dz e dav sono due misure di quanto sia grande il cambiamento. Il test t appaiato lavora con le differenze di ogni persona. Così le differenze tra le persone scompaiono, e il valore p spesso diventa più piccolo.",
+      "beispiel": "Flessioni di 10 persone prima e dopo sei settimane di allenamento: 2,9 in più in media. dz = 2,9 / 1,37 = 2,12; dav = 2,9 / 3,94 = 0,74. dz è molto più grande perché prima e dopo sono fortemente collegati (r = ,98).",
+      "vorsicht": "dz divide il cambiamento medio per la dispersione dei cambiamenti, dav per la dispersione media di prima e dopo; solo dav è confrontabile con il d dei confronti tra gruppi. Senza un gruppo di confronto la misura non mostra che cosa abbia causato il cambiamento; le etichette di Cohen (0,2 / 0,5 / 0,8) sono un’abitudine e valgono per dav, non per dz.",
+      "pruefen": true,
+      "fachwoerter": "deviazione standard (la dispersione tipica dei valori attorno alla loro media), potenza (la probabilità di trovare una differenza che c’è davvero; dz serve a calcolarla)."
+    },
+    "logistische-regression": {
+      "titel": "Regressione logistica",
+      "kurz": "Da che cosa dipende se qualcosa accade o no? La regressione logistica prevede un esito sì/no da altri valori. Un test del modello verifica se prevede meglio di un modello senza quei valori.",
+      "beispiel": "Dimissioni (sì/no) da stipendio, età e tempo di percorrenza in 300 persone, il 36% si dimette: test del modello χ²(3) = 14,2, p = ,003; R² di Nagelkerke = ,06. Il 68% è classificato correttamente; senza il modello sarebbe il 64% (tanti appartengono al gruppo più grande).",
+      "vorsicht": "L’R² di Nagelkerke non è una quota di differenze spiegate come nella regressione lineare. Un alto tasso di classificazioni corrette vale poco se un gruppo è comunque molto più grande, e di solito vale solo per i dati su cui il modello è stato adattato.",
+      "pruefen": true,
+      "fachwoerter": "odds (probabilità divisa per la probabilità del contrario: 75% sono odds di 3 a 1), predittore (un valore usato per prevedere), pseudo-R² (l’R² di Nagelkerke sta al posto dell’R² della regressione lineare ma non è una quota di differenze spiegate).",
+      "statable": "Calcola la regressione (colonna di destinazione con due valori) e apri sotto il risultato il blocco «Verifica della regressione logistica: casi anomali, adattamento, linearità del logit, blocchi». Mostra il VIF, i casi anomali (leva, distanza di Cook, residuo di devianza, DFBETA), il test di Hosmer-Lemeshow, il test di Box-Tidwell e il χ² del blocco per un secondo blocco di predittori."
+    },
+    "odds-ratio": {
+      "titel": "Odds ratio (OR)",
+      "kurz": "Di quale fattore cambia la probabilità di un evento quando un valore sale di 1? È l’odds ratio (OR). 1 significa nessuna relazione; sopra 1 la probabilità sale; sotto 1 scende.",
+      "beispiel": "Probabilità che un pacco arrivi in ritardo, per 100 km di distanza: OR = 1,35, intervallo al 95% [1,12; 1,63]. Con 100 km in più la probabilità sale a 1,35 volte, cioè di circa il 35%. L’intervallo non include 1.",
+      "vorsicht": "«Probabilità» qui significa il rapporto tra «accade» e «non accade» (3 a 1 piuttosto che 75%); un OR non è quindi «x volte più probabile» - vale solo per eventi rari. Se 1 sta nell’intervallo, una relazione non è dimostrata.",
+      "pruefen": true,
+      "fachwoerter": "odds (probabilità divisa per la probabilità del contrario), predittore (un valore usato per prevedere), Wald (il metodo usuale per l’intervallo dell’OR)."
+    },
+    "eta-quadrat": {
+      "titel": "Eta quadro (η²) e omega quadro (ω²)",
+      "kurz": "Quanta parte delle differenze nel valore misurato va con il gruppo? η² (eta quadro) è questa quota, da 0 a 1. ω² è la stessa idea, calcolata con più cautela, e un po’ più piccola.",
+      "beispiel": "Tre fertilizzanti, 20 piante ciascuno: η² = ,25 e ω² = ,22. Il fertilizzante va con circa un quarto delle differenze di resa.",
+      "vorsicht": "Le etichette ,01 / ,06 / ,14 secondo Cohen sono un’abitudine per i confronti tra gruppi; con persone misurate più volte o gruppi non assegnati, una variante (η² parziale) risulta molto più grande, quindi Statable lì usa η² generalizzato (ηG²). Il confronto tra gruppi (analisi della varianza) mostra solo che almeno due gruppi differiscono, non quali.",
+      "pruefen": true,
+      "fachwoerter": "popolazione (tutti coloro a cui si riferisce l’affermazione; il campione ne è solo una parte), intervallo di confidenza (un intervallo plausibile per η² nella popolazione), misure ripetute (le stesse persone misurate più volte), η² parziale (ηp²: l’effetto rispetto a effetto più il suo errore), statisticamente significativo (il valore p sta sotto il limite scelto; se il test non è significativo, il limite inferiore dell’intervallo è 0)."
+    },
+    "paarvergleich": {
+      "titel": "Confronti a coppie (post hoc: Tukey, Games-Howell, Bonferroni)",
+      "kurz": "Quali gruppi differiscono quando sono più di due? I confronti a coppie verificano ogni coppia e rendono più severi i valori p, perché molti confronti «trovano» facilmente qualcosa per caso. Sono comuni Tukey, Games-Howell e Bonferroni.",
+      "beispiel": "Tre varietà danno 3 coppie. Con Bonferroni ogni p è moltiplicato per 3: ,020 diventa ,060 - non più sotto ,05.",
+      "vorsicht": "Una coppia non significativa non vuol dire «uguale», ma solo «non dimostrata». Con molti gruppi le coppie diventano numerose, e ogni singola è più difficile da dimostrare.",
+      "pruefen": true,
+      "fachwoerter": "analisi della varianza (confronta le medie di tre o più gruppi), post hoc (a posteriori, dopo l’analisi della varianza), Games-Howell (il predefinito in Statable, non richiede dispersione uguale), Tukey (presuppone dispersione uguale), Bonferroni (severo e semplice: ogni p per il numero di coppie)."
+    },
+    "welch-anova": {
+      "titel": "ANOVA di Welch",
+      "kurz": "Come si confrontano più gruppi con dispersione disuguale? L’analisi della varianza classica richiede dispersione uguale. L’analisi della varianza di Welch no: pesa ogni gruppo secondo la sua dispersione.",
+      "beispiel": "Tempi di consegna di quattro magazzini con dispersione molto diversa: F di Welch (3; 41,8) = 5,4, p = ,003. I magazzini differiscono, senza presupporre dispersione uguale.",
+      "vorsicht": "Anche l’analisi di Welch mostra solo che almeno due gruppi differiscono. I confronti a coppie mostrano quali (Games-Howell si adatta).",
+      "pruefen": true,
+      "fachwoerter": "gradi di libertà (df: i numeri tra parentesi accanto a F; stabiliscono con quale distribuzione il test confronta), dispersione (quanto distano tra loro i valori di un gruppo)."
+    },
+    "rangtest": {
+      "titel": "Test per ranghi (senza distribuzione normale)",
+      "kurz": "Che cosa fare quando le medie si adattano male a causa di valori anomali o di asimmetria? I test per ranghi mettono tutti i valori in ordine e lavorano con le posizioni nei ranghi. Non richiedono una distribuzione normale e reagiscono appena ai singoli valori anomali.",
+      "beispiel": "Tempi di attesa in minuti, 6 misure ciascuno: servizio A 4, 5, 6, 7, 9, 13; servizio B 8, 10, 11, 12, 15, 40. Test di Mann-Whitney (due gruppi) U = 5, p = ,041 (esatto): B tende a essere più alto. Il valore anomalo 40 conta appena.",
+      "vorsicht": "Un test per ranghi mostra se un gruppo tende ad avere valori più alti - non verifica le sole mediane. Può scattare anche per una diversa dispersione o forma.",
+      "pruefen": true,
+      "fachwoerter": "Kruskal-Wallis (test per ranghi per tre o più gruppi), Wilcoxon (test per ranghi per due misure delle stesse persone), test di Dunn con correzione di Holm (mostra dopo Kruskal-Wallis quali coppie differiscono), stimatore di Hodges-Lehmann (HL: la mediana di tutte le differenze tra una persona di ciascun gruppo) con il suo intervallo di confidenza al 95% (un intervallo plausibile per esso), dimensione dell’effetto (quanto è grande la differenza: r = |z| / √N, per Kruskal-Wallis ε² = H / (n − 1)), correlazione rank-biseriale (la quota di coppie in cui un gruppo è più alto, per 2, meno 1), legami (valori uguali)."
+    },
+    "sphaerizitaet": {
+      "titel": "Sfericità (test di Mauchly)",
+      "kurz": "Le stesse persone sono misurate più volte: le differenze tra due qualsiasi momenti variano con la stessa forza? È la sfericità. Se è violata, il risultato è significativo troppo spesso.",
+      "beispiel": "Tempo di reazione di 20 persone in tre giorni: test di Mauchly W = ,75, p = ,075; ε (Greenhouse-Geisser) = ,80 (1 significherebbe: rispettata). Il test non mostra una violazione, ma ε è chiaramente sotto 1 - quindi si applica una correzione.",
+      "vorsicht": "Il test di Mauchly verifica la sfericità (p sopra ,05 non parla contro di essa), ma è debole con poche persone e segnala anche piccoli scostamenti con molte. Per questo Statable mostra sempre la correzione di Greenhouse-Geisser, non solo quando p è sotto ,05.",
+      "pruefen": true,
+      "fachwoerter": "misure ripetute (le stesse persone misurate più volte), analisi della varianza (confronta le medie), gradi di libertà (df: i numeri tra parentesi accanto a F), valore p (quanto spesso comparirebbe un risultato almeno così grande se il presupposto vale), W (la statistica del test di Mauchly).",
+      "statable": "Sotto il risultato dell’analisi a misure ripetute scegli la correzione per la sfericità (Greenhouse-Geisser come predefinita, Huynh-Feldt o nessuna). Con un fattore a misure ripetute il test di Mauchly è nella tabella; con due fattori ogni effetto ha un proprio ε."
+    },
+    "greenhouse-geisser": {
+      "titel": "Correzione di Greenhouse-Geisser e di Huynh-Feldt (ε)",
+      "kurz": "Che cosa fare quando la sfericità è violata? La correzione rende il risultato più cauto: p diventa più grande. Quanto lo stabilisce ε (epsilon): 1 significa rispettata, più piccolo significa violata più fortemente.",
+      "beispiel": "Con ε = ,80, F(2; 38) = 6,2, p = ,005 diventa F(1,60; 30,40) = 6,2, p = ,009: i due numeri tra parentesi, 2 e 38, sono moltiplicati per ,80 e danno 1,60 e 30,40.",
+      "vorsicht": "Greenhouse-Geisser è la stima più severa, Huynh-Feldt quella un po’ più generosa. I numeri tra parentesi non sono più interi; è usuale, e con ε vicino a 1 la correzione cambia appena qualcosa.",
+      "pruefen": true,
+      "fachwoerter": "gradi di libertà (df: i numeri tra parentesi accanto a F), analisi della varianza (confronta le medie), sfericità (tutte le differenze tra due qualsiasi momenti variano allo stesso modo).",
+      "statable": "Sotto il risultato dell’analisi a misure ripetute scegli la correzione: Greenhouse-Geisser (predefinita), Huynh-Feldt o nessuna. I gradi di libertà e p vengono mostrati subito corretti con ε; con due fattori a misure ripetute ogni effetto ha un proprio ε."
+    },
+    "mediation": {
+      "titel": "Mediazione (effetto indiretto)",
+      "kurz": "Un effetto passa attraverso un passaggio intermedio? Per esempio: il rumore influisce sul sonno, e il sonno sull’umore. La mediazione calcola quanto sia grande questo percorso indiretto.",
+      "beispiel": "Percorso indiretto attraverso il sonno 0,20, intervallo al 95% [0,11; 0,30]: lo 0 non è dentro.",
+      "vorsicht": "Una singola indagine non mostra una causa: l’ordine è un’ipotesi. Conta l’intervallo del percorso indiretto, non se i singoli passaggi siano significativi.",
+      "pruefen": true,
+      "fachwoerter": "mediatore (la variabile M attraverso cui passa un effetto), percorsi a (X → M), b (M → Y), c′ (X → Y direttamente) e c (X → Y in totale; c = c′ + a·b), bootstrap (estrarre di nuovo 5000 volte dalle persone esistenti), intervallo di confidenza (un intervallo che si accorda bene con il valore vero, dati i dati)."
+    },
+    "moderation": {
+      "titel": "Moderazione (interazione, pendenze semplici)",
+      "kurz": "Una relazione è uguale per tutti? La moderazione verifica se dipende da una terza grandezza.",
+      "beispiel": "Più esercizio aiuta molto i principianti e quasi per niente chi è esperto: l’esperienza modera la relazione.",
+      "vorsicht": "La moderazione non è mediazione: il moderatore cambia la forza della relazione; non è un passaggio intermedio. Neanche la moderazione da sola mostra una causa.",
+      "pruefen": true,
+      "fachwoerter": "moderatore (la terza variabile W da cui dipende la relazione), centratura (spostare i valori attorno alla loro media), regressione (previsione con il prodotto X·W come termine di interazione), statisticamente significativo (il valore p sta sotto il limite scelto), pendenze semplici (la pendenza di X a W basso, medio e alto), ΔR² (il guadagno di varianza spiegata dovuto all’interazione), Johnson-Neyman (indica i punti di W da cui la pendenza diventa significativa)."
+    },
+    "nap": {
+      "titel": "NAP (non sovrapposizione di tutte le coppie)",
+      "kurz": "Un comportamento è migliorato grazie a un intervento? NAP confronta ogni valore prima (A) con ognuno durante l’intervento (B) e dà la quota di coppie in cui B è migliore; un pareggio conta metà.",
+      "beispiel": "Minuti in cui un bambino sta seduto a tavola: linea di base 3, 4, 4, 5; intervento 6, 5, 7, 8, 7. Su 20 coppie, B è migliore in 19 e uguale in 1: NAP = (19 + 0,5) / 20 = ,975.",
+      "vorsicht": "NAP ignora ogni tendenza prima dell’intervento e non mostra di quanto B sia migliore; le etichette debole, medio e forte (Parker e Vannest) sono una regola empirica. Un test su di esso presuppone misure indipendenti, che nelle serie temporali spesso mancano.",
+      "pruefen": true,
+      "fachwoerter": "AUC (area sotto la curva ROC: la stessa probabilità, NAP le è uguale), Mann-Whitney (test per ranghi per due gruppi, qui dà il valore p), valore p (quanto spesso comparirebbe un risultato almeno così grande se non c’è differenza), intervallo di confidenza secondo Newcombe (un intervallo che mostra quanto è incerto il valore con poche misure)."
+    },
+    "pnd": {
+      "titel": "PND (percentuale di dati non sovrapposti)",
+      "kurz": "Quanti valori della fase di intervento (B) superano il miglior valore prima (A)? È il PND: la quota di valori B sopra il miglior valore A (Scruggs et al. 1987).",
+      "beispiel": "Con gli stessi dati (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): il miglior valore A è 5. Quattro valori B su cinque stanno sopra (6, 7, 8, 7), PND = 4 / 5 = 80%. Se «più basso = meglio», conta il valore A più basso.",
+      "vorsicht": "PND dipende da un solo valore prima dell’intervento: un valore anomalo lì lo rende inutile, e con più misure prima cala, anche se nient’altro è diverso. NAP è più adatto; PND c’è per il confronto con lavori più vecchi.",
+      "pruefen": true
+    },
+    "tau-u": {
+      "titel": "Tau-U e Tau corretto per la baseline",
+      "kurz": "Quanto bene si può mostrare un miglioramento quando i valori si muovono già in una direzione prima dell’intervento? Tau-U confronta prima e dopo come NAP e può eliminare quella tendenza.",
+      "beispiel": "Con gli stessi dati (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): Tau-U senza eliminare la tendenza = (19 − 0) / 20 = ,95. Già prima dell’intervento 5 delle 6 coppie salgono: con la tendenza eliminata, Tau-U = (19 − 5) / 20 = ,70.",
+      "vorsicht": "L’eliminazione della tendenza presuppone che la tendenza precedente continui semplicemente dopo - un’ipotesi forte con una lunga fase di intervento. Con meno di 3 misure prima non si può verificare alcuna tendenza, e i valori p presuppongono misure indipendenti.",
+      "pruefen": true,
+      "fachwoerter": "Kendall (la tau di Kendall: una relazione calcolata dagli ordini per ranghi, la base di entrambe le misure), Tau-BC (tau corretta per la linea di base: elimina una tendenza in A solo se è significativa), Theil-Sen (una retta di tendenza robusta dalla pendenza mediana di tutte le coppie di punti)."
+    },
+    "einzelfall": {
+      "titel": "Analisi a caso singolo (disegno A-B)",
+      "kurz": "Un intervento ha funzionato per una singola persona? Una persona (o poche) è misurata ripetutamente nel tempo: prima senza l’intervento (fase A), poi con esso (fase B). Si confrontano le due fasi.",
+      "beispiel": "Un bambino sta seduto a tavola in media 4 minuti su quattro misure della linea di base (3, 4, 4, 5), e in media 6,6 minuti su cinque misure con l’intervento (6, 5, 7, 8, 7).",
+      "vorsicht": "Un disegno A-B da solo non prova una causa: la persona può anche svilupparsi da sola, o altri eventi possono avere un ruolo. Le repliche sono più convincenti (A-B-A-B, più persone con inizi sfalsati).",
+      "pruefen": true,
+      "fachwoerter": "mediana (il valore centrale), NAP (la quota di coppie A-B in cui B è migliore), tau e Tau-U (misure basate sulla tau di Kendall che possono tener conto di una tendenza nella linea di base), PND (la quota di valori B sopra il miglior valore A), baseline multipla (più persone con inizio sfalsato dell’intervento)."
+    },
+    "kaplan-meier": {
+      "titel": "Kaplan-Meier (tempo all’evento)",
+      "kurz": "Quanti sono ancora senza l’evento dopo un certo tempo? La curva di Kaplan-Meier lo mostra per ogni momento e scende a ogni evento. Usa anche le persone osservate solo per una parte del tempo.",
+      "beispiel": "10 dipendenti, tempo fino alle dimissioni in mesi: 5 si dimettono (dopo 3, 5, 5, 8 e 12 mesi), per 5 l’osservazione termina senza dimissioni (dopo 6, 9, 10, 14 e 15 mesi). Dopo 8 mesi, 9/10 · 7/9 · 5/6 = 58% non si è ancora dimesso.",
+      "vorsicht": "Il metodo presuppone che l’uscita dall’osservazione non abbia a che fare con il rischio. All’estremità destra restano di solito poche persone; lì la curva è incerta.",
+      "pruefen": true,
+      "fachwoerter": "censurato (osservato solo fino a un certo punto, fino ad allora l’evento non si è verificato), curva a gradini (scende di un gradino a ogni evento), a rischio (ancora osservato e senza evento)."
+    },
+    "zensierung": {
+      "titel": "Censura",
+      "kurz": "Che cosa vale per le persone in cui non era successo nulla fino alla fine dell’osservazione? Si chiamano censurate: si sa solo che l’evento non si è verificato prima.",
+      "beispiel": "Una dipendente che è ancora in azienda quando lo studio termina dopo 14 mesi è censurata al momento 14. Nel grafico compare come un piccolo tacchetto sulla curva.",
+      "vorsicht": "Non togliere le persone censurate e non contarle come eventi: entrambe le cose distorcono la curva. Il metodo presuppone che le persone censurate abbiano lo stesso rischio successivo degli altri.",
+      "pruefen": true,
+      "fachwoerter": "Kaplan-Meier (il metodo che usa anche le persone censurate), a rischio (ancora osservato e senza evento), censura non informativa (l’uscita non ha a che fare con il rischio)."
+    },
+    "ueberlebensfunktion": {
+      "titel": "Funzione di sopravvivenza S(t)",
+      "kurz": "Quanti non hanno ancora vissuto l’evento al momento t? Lo mostra la funzione di sopravvivenza S(t); parte da 1 (tutti) e scende agli eventi. «Sopravvivenza» qui significa solo «ancora nessun evento».",
+      "beispiel": "S(8) = ,58, intervallo al 95% [,34; 1,00]: dopo 8 mesi circa il 58% dei dipendenti non si è ancora dimesso. Con 10 persone l’intervallo è molto ampio.",
+      "vorsicht": "L’intervallo è calcolato (come in R survfit) in modo da non scendere mai sotto 0; il limite superiore è tagliato a 1. Con poche persone ancora osservate è molto ampio.",
+      "pruefen": true,
+      "fachwoerter": "intervallo di confidenza (un intervallo che si accorda bene con la vera quota, dati i dati), errore standard (secondo Greenwood: quanto il valore varierebbe da campione a campione), scala logaritmica (l’intervallo è calcolato su valori logaritmici)."
+    },
+    "median-ueberlebenszeit": {
+      "titel": "Tempo mediano all’evento",
+      "kurz": "Quando la metà ha vissuto l’evento? È il tempo mediano: il punto in cui la curva scende al 50%. Se non scende mai così in basso, la mediana è «non raggiunta».",
+      "beispiel": "Mediana = 12 mesi, intervallo al 95% [5; non raggiunta]: il limite inferiore è 5, verso l’alto l’intervallo è aperto.",
+      "vorsicht": "La mediana qui è meglio della media, che dati asimmetrici e persone senza un evento alla fine distorcono. Se la curva sta esattamente al 50% per un tratto, Statable, come R, prende il punto medio; con pochi eventi la mediana è molto incerta.",
+      "pruefen": true
+    },
+    "log-rank": {
+      "titel": "Test log-rank",
+      "kurz": "Le curve di più gruppi differiscono? Il test log-rank confronta, a ogni momento di evento, quanti eventi ha avuto ogni gruppo e quanti se ne attenderebbero se tutti i gruppi fossero uguali.",
+      "beispiel": "Due squadre, tempo fino alle dimissioni: χ²(1) = 5,1, p = ,024. Le curve differiscono.",
+      "vorsicht": "Il test è più forte quando le curve non cambiano mai lato; se si incrociano, può non cogliere una differenza reale. Non dice nulla sulla dimensione della differenza; per questo servono mediane e quote in momenti fissi.",
+      "pruefen": true,
+      "fachwoerter": "Mantel-Cox (un altro nome del test), Cox (da non confondere con la regressione di Cox), Holm (corregge i valori p per più coppie), gradi di libertà (df: qui gruppi meno 1)."
+    },
+    "anzahl-unter-risiko": {
+      "titel": "Numero a rischio",
+      "kurz": "Quante persone sostengono la curva in un dato punto? Il numero a rischio è quanti sono ancora osservati e non hanno avuto l’evento al momento t. Si trova spesso sotto il grafico.",
+      "beispiel": "Al mese 10 sono ancora a rischio 4 delle 10 persone: lì la curva poggia su 4 persone.",
+      "vorsicht": "Dove sono ancora a rischio solo pochi, la curva salta fortemente a ogni evento e l’intervallo è ampio. Questi punti non vanno interpretati troppo.",
+      "pruefen": true,
+      "fachwoerter": "censura (persone osservate solo fino a un certo punto che poi escono; abbassano il numero come fanno gli eventi)."
+    },
+    "bootstrap": {
+      "titel": "Bootstrap (intervallo percentile)",
+      "kurz": "Quanto è incerta una cifra senza una formula semplice? Il bootstrap estrae di nuovo 5.000 volte dalle persone disponibili e ricalcola ogni volta la cifra. Il 95% centrale dei risultati forma l’intervallo.",
+      "beispiel": "Mediana (valore centrale) del tempo di attesa di 12 persone: 11,5 minuti. Delle 5.000 nuove mediane, il 2,5% sta sotto 7,5 e il 2,5% sopra 16,5: intervallo bootstrap al 95% [7,5; 16,5].",
+      "vorsicht": "Con poche persone (sotto circa 50) l’intervallo è impreciso e spesso troppo stretto. Con un valore iniziale fisso per i numeri casuali gli stessi dati danno sempre lo stesso intervallo; un altro valore iniziale sposta i limiti solo di poco.",
+      "pruefen": true,
+      "fachwoerter": "intervallo di confidenza (un intervallo che si accorda bene con il valore vero, dati i dati), percentile (i limiti al 2,5% e al 97,5% dei risultati ordinati), estrazione con reinserimento (la stessa persona può comparire più volte), seed (fissa i numeri casuali)."
+    },
+    "omega": {
+      "titel": "Omega di McDonald (ω)",
+      "kurz": "Più domande misurano insieme una sola cosa in modo attendibile, anche se non contribuiscono in modo uguale? L’omega (ω) lo misura come l’alfa di Cronbach, ma usa il contributo effettivo di ogni domanda. L’alfa presuppone lo stesso per tutte.",
+      "beispiel": "Cinque domande con contributi (saturazioni) di ,5 / ,6 / ,7 / ,7 / ,8: ω = ,80. L’alfa, che presuppone contributi uguali, è un po’ più basso: ,79.",
+      "vorsicht": "L’omega presuppone che le domande misurino una sola cosa; altrimenti non ha senso interpretarlo (allora aiuta l’analisi fattoriale). I valori di riferimento (spesso ,70) sono solo provvisori, e anche l’omega vale per questo gruppo di persone, non per il questionario in sé. L’alfa coglie esattamente l’attendibilità solo se le domande misurano una sola cosa, contribuiscono in egual misura e hanno errori non correlati.",
+      "pruefen": true
+    },
+    "cfa": {
+      "titel": "Analisi fattoriale confermativa (AFC)",
+      "kurz": "Un raggruppamento delle domande stabilito in anticipo si adatta ai dati? L’analisi fattoriale confermativa (CFA) fissa prima quali domande appartengono a quale gruppo (fattore) e verifica quanto bene si adatta.",
+      "beispiel": "Nove domande, tre gruppi di tre domande ciascuno (traffico, sicurezza, tempo libero): CFI = ,92, RMSEA = ,07, due misure di adattamento. Mancano di poco i valori di riferimento usuali: CFI sotto ,95, RMSEA sopra ,06.",
+      "vorsicht": "Un buon adattamento non mostra che i gruppi misurino la cosa giusta, e un altro modello può adattarsi altrettanto bene. Se il raggruppamento viene corretto solo dopo aver guardato gli stessi dati, il test non è più indipendente.",
+      "pruefen": true,
+      "fachwoerter": "indici di adattamento (misure di quanto bene il modello si adatta, qui CFI e RMSEA), analisi fattoriale esplorativa (cerca nei dati gruppi di domande), saturazioni standardizzate (quanto fortemente una domanda appartiene al suo fattore)."
+    },
+    "fit-indizes": {
+      "titel": "Indici di bontà dell’adattamento (CFI, TLI, RMSEA, SRMR)",
+      "kurz": "Il modello si adatta ai dati? Gli indici di adattamento lo esprimono in numeri. Per CFI e TLI più alto è meglio, per RMSEA e SRMR più basso. L’intervallo al 90% dell’RMSEA mostra con che precisione è stimato.",
+      "beispiel": "CFI = ,96, TLI = ,95, RMSEA = ,05, SRMR = ,04: secondo i valori di riferimento usuali l’adattamento è nella fascia buona.",
+      "vorsicht": "I valori di riferimento (CFI e TLI da ,95, RMSEA fino a ,06, SRMR fino a ,08; Hu e Bentler 1999) sono regole dell’esperienza, non test; ,90 è spesso ancora detto accettabile per CFI e TLI, e con modelli piccoli o poche persone sono inaffidabili. Il test χ² diventa significativo con grandi campioni anche per piccoli scostamenti.",
+      "pruefen": true
+    },
+    "mehrebenen": {
+      "titel": "Modello multilivello (modello misto)",
+      "kurz": "E se le persone sono annidate in gruppi, come i bambini nelle classi? Le persone di un gruppo sono spesso simili. Il modello multilivello dà a ogni gruppo un livello proprio, separando le differenze tra i gruppi da quelle all’interno.",
+      "beispiel": "Soddisfazione di 500 dipendenti di 25 aziende: il 12% della dispersione sta tra le aziende. Un’ora di formazione in più al mese va con 0,8 punti in più di soddisfazione (p < ,001), anche tenendo conto dell’azienda.",
+      "vorsicht": "Richiede più gruppi con più casi ciascuno; con meno di 10 gruppi le stime a livello di gruppo sono molto incerte. Un modello multilivello mostra relazioni, non cause.",
+      "pruefen": true,
+      "statable": "Nel risultato, sotto «Per specialisti», puoi centrare sulla media generale o sulla media del gruppo (effetto entro i gruppi contro effetto tra i gruppi), scegliere una pendenza casuale (random slope) e aggiungere un’interazione, anche tra i livelli. Più sotto, «Confronta i modelli» confronta modello nullo, effetti fissi, interazioni e pendenza casuale con ML (AIC, BIC, −2LL, test del rapporto di verosimiglianza). Se i dati sono di tipo persona per momento di misura, Statable offre la via «tempo con una pendenza casuale per persona» (modello di crescita)."
+    },
+    "icc-mehrebenen": {
+      "titel": "ICC nel modello multilivello (quota dei gruppi)",
+      "kurz": "Quanto differiscono i gruppi? L’ICC è la quota della dispersione totale che sta tra i gruppi. ICC = ,12 significa: il 12% delle differenze va con il gruppo.",
+      "beispiel": "ICC = ,12 con 20 casi per gruppo: l’effetto del disegno è 1 + (20 − 1) · ,12 = 3,28. L’incertezza di una media (errore standard) è allora circa 1,8 volte (√3,28) più grande di quanto indichi un calcolo che ignora i gruppi.",
+      "vorsicht": "Da non confondere con l’ICC per l’accordo tra valutatori: qui è la quota dei gruppi nella dispersione. Da ,05 piccolo, da ,10 medio, da ,15 grande (Hox) è solo una regola empirica.",
+      "pruefen": true,
+      "fachwoerter": "correlazione intraclasse (ICC: la quota della dispersione totale che sta tra i gruppi), varianza (quanto i valori si disperdono), modello nullo (il modello senza colonne esplicative, in cui si calcola l’ICC)."
+    },
+    "meta-effekt": {
+      "titel": "Effetto complessivo (metanalisi)",
+      "kurz": "Quanto è grande un effetto tra più studi insieme? L’effetto combinato è la media ponderata di tutti gli studi: gli studi più precisi contano di più. Se gli effetti veri variano tra gli studi, l’intervallo diventa più ampio.",
+      "beispiel": "Tre studi: 0,40 (errore standard, cioè imprecisione, 0,10), 0,20 (0,05) e 0,30 (0,10). Peso = 1 / errore standard²: 100, 400, 100. Media ponderata = (40 + 80 + 30) / 600 = 0,25 - come con un solo effetto vero comune.",
+      "vorsicht": "La media ha senso solo se gli studi misurano la stessa cosa. Se gli studi differiscono molto, guarda anche l’intervallo di predizione.",
+      "pruefen": true,
+      "fachwoerter": "eterogeneità (quanto fortemente gli studi differiscono tra loro), intervallo di confidenza (un intervallo che si accorda bene con la media degli effetti veri, dati i dati), modello a effetti casuali (ammette che gli effetti veri varino tra gli studi, τ²), errore standard (una misura di quanto uno studio sia impreciso)."
+    },
+    "i-quadrat": {
+      "titel": "I² e Q (eterogeneità)",
+      "kurz": "Gli studi differiscono più di quanto farebbe attendere il caso? I² dice, in percentuale, quanta parte delle differenze tra i risultati deriva da differenze reali tra gli studi. Il test Q pone la stessa domanda.",
+      "beispiel": "Dodici studi: Q(11) = 42,0, p < ,001; I² = (42,0 − 11) / 42,0 = 74%. Etichette spesso citate: 25%, 50%, 75% (Higgins et al. 2003).",
+      "vorsicht": "I² è una quota, non una misura di quanto siano grandi le differenze: con studi molto precisi I² diventa grande anche se gli effetti stanno vicini. Con pochi studi I² è molto impreciso, e un valore piccolo non prova che gli studi siano uguali; quanto si disperdano gli effetti veri lo mostrano τ e l’intervallo di predizione.",
+      "pruefen": true,
+      "fachwoerter": "τ (la dispersione degli effetti veri tra gli studi), intervallo di previsione (l’intervallo in cui dovrebbe cadere l’effetto di un nuovo studio), Q (un test che dice se i risultati variano più di quanto produrrebbe il caso)."
+    },
+    "tau-quadrat": {
+      "titel": "τ² (variazione tra gli studi)",
+      "kurz": "Quanto sono diversi gli effetti veri degli studi? τ² (tau quadro) misura questa dispersione; la sua radice quadrata τ è nell’unità dell’effetto. A differenza di I², ignora quanto gli studi siano precisi.",
+      "beispiel": "τ² = 0,04, quindi τ = 0,20: con un effetto medio di 0,30, gli effetti veri degli studi si disperdono tipicamente di circa 0,20 attorno a esso.",
+      "vorsicht": "Con meno di circa cinque studi, τ² è molto incerto e il suo intervallo molto ampio.",
+      "pruefen": true,
+      "fachwoerter": "deviazione standard (τ è la radice quadrata di τ²), varianza (quanto si disperdono gli effetti veri), REML (il metodo usato per stimare τ²)."
+    },
+    "praediktionsintervall": {
+      "titel": "Intervallo di previsione (metanalisi)",
+      "kurz": "Dove è probabile che stia l’effetto di un nuovo studio comparabile? L’intervallo di predizione lo mostra. È più ampio dell’intervallo di confidenza della media, perché include anche le differenze tra gli studi.",
+      "beispiel": "Combinato 0,20, IC al 95% [0,12; 0,28], intervallo di predizione [−0,05; 0,45]: un nuovo studio potrebbe trovare anche un effetto vicino a 0.",
+      "vorsicht": "Con pochi studi l’intervallo è molto incerto.",
+      "pruefen": true
+    },
+    "forest-plot": {
+      "titel": "Forest plot",
+      "kurz": "Che aspetto hanno i risultati di tutti gli studi? Il forest plot mostra ogni studio come un quadrato (effetto) con una linea (intervallo al 95%). Il rombo è la media; la linea tratteggiata significa nessun effetto.",
+      "beispiel": "Rombo a 0,20 con le punte a 0,12 e 0,28, linea tratteggiata a 0 (a 1 per i rapporti): il rombo sta interamente a destra - la media differisce da «nessun effetto».",
+      "vorsicht": "Controlla se un singolo grande studio determina il risultato (quadrato grande) e se gli intervalli si sovrappongono.",
+      "pruefen": true,
+      "fachwoerter": "intervallo di predizione (l’intervallo in cui probabilmente starebbe l’effetto vero di un nuovo studio), effetto combinato (la media di tutti gli studi, il rombo)."
+    },
+    "funnel-plot": {
+      "titel": "Funnel plot e test di Egger",
+      "kurz": "Mancano degli studi? Il funnel plot mostra ogni studio per effetto e precisione: quelli precisi si raccolgono in alto, quelli imprecisi si allargano sotto. Un lato mancante lo rende asimmetrico; il test di Egger lo verifica.",
+      "beispiel": "Test di Egger p = ,03 con 14 studi: l’imbuto è vistosamente asimmetrico - gli studi piccoli mostrano in media effetti più grandi.",
+      "vorsicht": "Sotto 10 studi il test ha poca potenza (Sterne et al. 2011). L’imbuto può essere asimmetrico anche perché studi piccoli e grandi differiscono davvero.",
+      "pruefen": true,
+      "fachwoerter": "errore standard (una misura di quanto uno studio sia impreciso), asimmetria (l’imbuto è vuoto su un lato), regressione (il test di Egger prevede l’effetto dall’errore standard)."
+    },
+    "mehrfachantworten-set": {
+      "titel": "Insieme di risposte multiple",
+      "kurz": "E se per una domanda si potevano segnare più opzioni? Un insieme di risposte multiple riunisce le colonne delle singole opzioni in un’unica domanda. Statable conta, per ogni opzione, quante persone l’hanno indicata.",
+      "beispiel": "«Come arrivi al lavoro?» con le opzioni bicicletta, autobus, auto: tre colonne (segnata = 1, altrimenti 0), un insieme. In SPSS si chiama MRSETS.",
+      "vorsicht": "Le crocette della stessa persona sono collegate. Per questo non esiste un test chi-quadrato ordinario per risposte multiple.",
+      "pruefen": true
+    },
+    "prozent-der-faelle": {
+      "titel": "Percentuale dei casi",
+      "kurz": "Quante persone hanno indicato un’opzione? La percentuale dei casi è il numero di menzioni diviso il numero di casi validi. Poiché ogni persona può indicare più opzioni, i valori sommano a più del 100%.",
+      "beispiel": "18 persone su 40 vengono in bicicletta: 18 / 40 = 45% dei casi.",
+      "vorsicht": "I casi validi sono quelli con almeno una crocetta (come in SPSS). Chi non ha segnato nulla non è nella base, a meno che sia attivato «conta i casi senza crocetta».",
+      "pruefen": true
+    },
+    "prozent-der-antworten": {
+      "titel": "Percentuale delle risposte",
+      "kurz": "Come sono distribuite tutte le crocette? La percentuale delle risposte è il numero di menzioni di un’opzione diviso la somma di tutte le menzioni. Questi valori sommano al 100%.",
+      "beispiel": "La bicicletta è stata indicata 18 volte, le menzioni in tutto erano 60: 18 / 60 = 30% delle risposte.",
+      "vorsicht": "Il valore dice come sono distribuite le menzioni, non quante persone scelgano un’opzione. A questo serve la percentuale dei casi.",
+      "pruefen": true
+    },
+    "shapiro-wilk": {
+      "titel": "Test di Shapiro-Wilk",
+      "kurz": "I valori sembrano venire da una distribuzione normale? Il test di Shapiro-Wilk lo verifica. Se p è più piccolo di ,05, la distribuzione si discosta visibilmente; altrimenti il test non parla contro di essa.",
+      "beispiel": "Tempi di reazione di 25 persone: W = ,73 (1 sarebbe una corrispondenza perfetta), p < ,001. La distribuzione è asimmetrica; la mediana descrive meglio il centro.",
+      "vorsicht": "Con molte persone il test segnala anche piccoli scostamenti, con poche non coglie quelli grandi. Un risultato non significativo non prova una distribuzione normale; il grafico Q-Q lo completa.",
+      "pruefen": true
+    },
+    "qq-diagramm": {
+      "titel": "Grafico Q-Q",
+      "kurz": "I valori seguono una distribuzione normale? Il grafico Q-Q mette ogni valore misurato come un punto rispetto al valore che darebbe una distribuzione normale. Se i punti stanno vicino alla retta, si adatta.",
+      "beispiel": "Per l’altezza di 100 adulti i punti stanno quasi sulla retta. Per i tempi di attesa a un servizio telefonico si piegano verso l’alto all’estremità superiore: pochi tempi molto lunghi.",
+      "vorsicht": "Le curve mostrano asimmetria, singoli punti lontani alle estremità mostrano valori anomali. Con pochi valori i punti oscillano a caso attorno alla retta; il test di Shapiro-Wilk riassume lo scostamento in un numero ma non sostituisce il guardare.",
+      "pruefen": true
+    },
+    "partialkorrelation": {
+      "titel": "Correlazione parziale",
+      "kurz": "Due numeri vanno ancora insieme quando un terzo resta uguale? La correlazione parziale mostra la relazione tra due numeri dopo che la parte dovuta a uno o più altri numeri è stata tolta da entrambi.",
+      "beispiel": "Vendite di gelati e scottature solari sono fortemente collegate (r = ,62). Tolta la temperatura (r = ,80 e ,75 con i due), resta appena qualcosa: pr = ,05.",
+      "vorsicht": "Si toglie solo la parte rettilinea di ciò che è stato misurato e scelto. Se il terzo numero sia la causa di entrambi lo decide la materia, non il calcolo: togliere un effetto comune di entrambi i numeri può addirittura creare una relazione spuria.",
+      "pruefen": true
+    },
+    "roc-auc": {
+      "titel": "Curva ROC e area sotto la curva (AUC)",
+      "kurz": "Quanto bene un valore misurato separa persone interessate da non interessate? La curva ROC lo mostra per ogni possibile soglia, e la sua area (AUC) lo riassume: ,50 significa caso, 1 separazione perfetta.",
+      "beispiel": "AUC = ,85: se si estraggono una persona interessata e una non interessata, quella interessata ha il valore più vistoso nell’85% dei casi. Alla soglia di 20 punti il test individua l’80% degli interessati e il 78% degli altri; l’indice di Youden ,80 + ,78 − 1 = ,58 serve a scegliere la soglia.",
+      "vorsicht": "La soglia è scelta proprio su questi dati e di solito funziona peggio in dati nuovi. L’indice di Youden non sa quale errore pesi di più.",
+      "pruefen": true,
+      "fachwoerter": "sensibilità (la quota di persone interessate che il test individua), specificità (la quota di persone non interessate che il test lascia passare correttamente), soglia (da questo punteggio in poi qualcuno risulta segnalato), indice di Youden (J = sensibilità + specificità − 1)."
+    },
+    "hazard-ratio": {
+      "titel": "Hazard ratio (HR)",
+      "kurz": "Quanto più velocemente o lentamente si verifica un evento in un gruppo? L’hazard ratio (HR) confronta il rischio dei gruppi che l’evento accada nel momento successivo. 1 significa nessuna differenza.",
+      "beispiel": "Tempo fino al primo infortunio sul lavoro, con formazione contro senza: HR = 0,70, intervallo al 95% [0,52; 0,94]. Con la formazione il rischio di un infortunio nel momento successivo è 0,70 volte quello senza, in ogni momento. L’intervallo non include 1.",
+      "vorsicht": "Un HR non è un rapporto di rischio: HR = 1,8 non significa che l’evento sia 1,8 volte più probabile. Può cambiare nel tempo; un singolo valore è allora solo una media.",
+      "pruefen": true,
+      "fachwoerter": "hazard (il rischio di avere l’evento nel momento successivo), rischi proporzionali (il rapporto resta lo stesso nel tempo), regressione di Cox (il metodo che stima l’HR), Wald (il metodo usuale per l’intervallo)."
+    },
+    "proportionale-hazards": {
+      "titel": "Rischi proporzionali",
+      "kurz": "La differenza tra due gruppi resta la stessa nel tempo? L’hazard ratio (HR) presuppone che il rapporto di rischio sia sempre lo stesso. Un test (cox.zph) lo verifica; un p sotto ,05 parla contro.",
+      "beispiel": "p = ,031 per il gruppo: il rapporto non è costante. Se le curve si incrociano nel grafico, è un segno chiaro.",
+      "vorsicht": "Con molte persone il test reagisce anche a piccoli scostamenti, con poche non coglie quelli grandi.",
+      "pruefen": true
+    },
+    "risikodifferenz": {
+      "titel": "Differenza di rischio (RD)",
+      "kurz": "Di quanto è più alto il rischio in un gruppo? La differenza di rischio (RD) è il rischio di un gruppo meno quello dell’altro, come proporzione o in punti percentuali. 0 significa nessuna differenza.",
+      "beispiel": "Infortuni sul lavoro in un anno: 36 su 400 con formazione (9%), 60 su 400 senza (15%). RD = ,09 − ,15 = −,060, intervallo al 95% [−,105; −,015]: 6 punti percentuali in meno con la formazione.",
+      "vorsicht": "La differenza di rischio descrive una differenza; non prova una causa, e in uno studio caso-controllo (persone interessate e non interessate cercate separatamente) non si può interpretare. Statable calcola l’intervallo secondo Newcombe, che con numeri piccoli è più sicuro del metodo più semplice.",
+      "pruefen": true,
+      "fachwoerter": "intervallo di Wald (una semplice approssimazione dell’intervallo, meno sicura con numeri piccoli), intervallo di Newcombe (il metodo che usa Statable)."
+    },
+    "relatives-risiko": {
+      "titel": "Rischio relativo (RR)",
+      "kurz": "Quante volte più grande è il rischio in un gruppo? Il rischio relativo (RR) è il rischio di un gruppo diviso quello dell’altro. 1 significa nessuna differenza; 0,5 significa la metà.",
+      "beispiel": "Gli stessi infortuni sul lavoro: RR = 0,09 / 0,15 = 0,60, intervallo al 95% [0,41; 0,89]. Con la formazione il rischio è 0,60 volte quello senza. L’intervallo non include 1.",
+      "vorsicht": "Se un gruppo non ha alcun evento, l’intervallo dell’RR non si può calcolare; Statable non corregge in silenzio. Vale per gruppi seguiti nel tempo e per esperimenti, non per studi caso-controllo.",
+      "pruefen": true
+    },
+    "nnt": {
+      "titel": "NNT (numero necessario da trattare)",
+      "kurz": "In quante persone bisogna intervenire perché si verifichi un evento in meno? L’NNT (number needed to treat) è 1 diviso la differenza di rischio. NNTB significa un beneficio aggiuntivo, NNTH un danno aggiuntivo.",
+      "beispiel": "Con RD = −,06, NNTB = 1 / ,06 = 16,7 (intervallo al 95% NNTB da 9,5 a 67,0): per circa 17 persone formate si verifica un infortunio in meno.",
+      "vorsicht": "L’intervallo dell’NNT passa per l’infinito quando la differenza di rischio può anche essere 0 (per esempio NNTH 25 a ∞ a NNTB 10) - non leggerlo mai come un intervallo con numeri negativi. Se un evento sia desiderato lo deve indicare la persona.",
+      "pruefen": true
+    },
+    "typical-error": {
+      "titel": "Typical error (TE)",
+      "kurz": "Di quanto si discosta tipicamente una singola misura alla ripetizione? Lo dice l’errore tipico (TE), nell’unità della misura. Si calcola da due misure delle stesse persone.",
+      "beispiel": "Altezza del salto di 8 persone in due giorni: le differenze tra i giorni hanno una deviazione standard di 2,1 cm. TE = 2,1 / √2 = 1,5 cm: un singolo salto si discosta tipicamente di 1,5 cm.",
+      "vorsicht": "Il TE vale solo se tra le misure non è cambiato nulla. È uguale all’errore standard di misura da misure ripetute, non a quello che deriva da come stanno insieme le domande di una scala.",
+      "pruefen": true,
+      "fachwoerter": "attendibilità (quanto è affidabile una misura quando viene ripetuta), deviazione standard (SD) delle differenze (la dispersione tipica delle differenze tra le due misure), errore standard di misura (l’errore tipico di una singola misura)."
+    },
+    "lilliefors": {
+      "titel": "Test di Lilliefors",
+      "kurz": "I valori si adattano a una distribuzione normale? Il test di Lilliefors lo verifica, anche quando media e dispersione sono prima stimate dai dati. Un p sotto ,05 significa che la distribuzione si discosta dalla normale.",
+      "beispiel": "Tempo di permanenza di 30 visitatori in minuti: D = ,17, p = ,033 (versione di Lilliefors del test di Kolmogorov-Smirnov). La distribuzione si discosta da una distribuzione normale.",
+      "vorsicht": "Un p sopra ,05 non significa che i dati siano distribuiti in modo normale, ma solo che il test non parla contro. Con poche persone non coglie grandi scostamenti; il grafico Q-Q mostra di più.",
+      "pruefen": true,
+      "fachwoerter": "deviazione standard (la dispersione tipica dei valori attorno alla loro media), test di Kolmogorov-Smirnov (confronta la distribuzione dei dati con una distribuzione normale)."
+    },
+    "chi-quadrat-anpassung": {
+      "titel": "Test χ² della bontà di adattamento",
+      "kurz": "La distribuzione tra le categorie si adatta a una attesa? Il test di adattamento χ² verifica se le frequenze contate si adattano a proporzioni date, per esempio quote uguali. Un p sotto ,05 significa: si discostano dall’aspettativa.",
+      "beispiel": "Un dado, 120 lanci, 20 attesi per faccia. Osservati: 14, 22, 18, 25, 19, 22. χ²(5, N = 120) = 74 / 20 = 3,7, p = ,593: le frequenze non parlano contro un dado equo.",
+      "vorsicht": "Se in una categoria se ne attende meno di 1, o meno di 5 in più di un quinto delle categorie, p è incerto (un’abitudine secondo Cochran 1954). Un risultato non significativo non conferma l’aspettativa.",
+      "pruefen": true
+    },
+    "ladung": {
+      "titel": "Saturazione (saturazione fattoriale)",
+      "kurz": "Quanto una domanda (item) appartiene a un fattore o a una componente, cioè a un gruppo di domande? La saturazione lo mostra: con una rotazione ortogonale è la correlazione (da −1 a 1) tra i due. Il segno meno indica solo la direzione, stabilita da come è orientata la componente. Per la forza conta il valore assoluto.",
+      "beispiel": "Domanda A: ,70 sulla componente 1, ,10 sulla componente 2: appartiene alla componente 1. Domanda B: −,65 sulla componente 1: appartiene anch’essa, solo in direzione opposta.",
+      "vorsicht": "La soglia (spesso da ,30 a ,50) è un’abitudine. Se la supera due volte, si parla di saturazione incrociata: controlla in base al contenuto. Le celle vuote della tabella sono piccole saturazioni che sono state nascoste."
+    },
+    "eigenwert": {
+      "titel": "Autovalore e criterio di Kaiser",
+      "kurz": "Quanta parte delle differenze nelle risposte coglie una componente (un gruppo di domande)? L’autovalore lo mostra. Diviso per il numero di domande, dà la quota di varianza della componente. Cumulato significa: più componenti sommate.",
+      "beispiel": "Con 6 domande: la componente 1 ha 2,4 (40%), la componente 2 ha 1,2 (20%). Cumulato 3,6 su 6, cioè 60%.",
+      "vorsicht": "Il criterio di Kaiser tiene le componenti con un autovalore superiore a 1. Nelle simulazioni spesso ne indica troppe e non dovrebbe decidere da solo. L’analisi parallela lo integra.",
+      "fachwoerter": "varianza (quanto si disperdono le risposte), analisi parallela (confronta gli autovalori con quelli di dati casuali)."
+    },
+    "kommunalitaet": {
+      "titel": "Comunalità (h²)",
+      "kurz": "Quanta parte di una domanda spiegano insieme le componenti (fattori)? Questa è la comunalità (h²): la quota delle differenze nelle risposte a questa domanda che tutte le componenti colgono insieme. Per componenti non correlate è la somma delle saturazioni al quadrato.",
+      "beispiel": "Una domanda satura ,6 e ,5 su due componenti: h² = ,36 + ,25 = ,61, cioè circa 61%.",
+      "vorsicht": "Un valore basso può significare molto errore casuale, che i fattori comuni non spiegano mai, oppure che la domanda non si adatta alle altre per contenuto."
+    },
+    "rotation": {
+      "titel": "Rotazione (ortogonale e obliqua)",
+      "kurz": "Come diventa più chiara l’assegnazione delle domande? Con la rotazione: gli assi della soluzione vengono ruotati finché ogni domanda satura soprattutto su un fattore. Molte posizioni si adattano ugualmente bene alle correlazioni. La rotazione ne sceglie una con struttura chiara.",
+      "beispiel": "Ortogonale (ad angolo retto, per es. Varimax): i fattori restano non correlati. Obliqua (inclinata, per es. Promax): i fattori possono essere in relazione.",
+      "vorsicht": "La rotazione ortogonale cambia le saturazioni, non le comunalità (quanta parte di una domanda spiegano insieme i fattori). L’obliqua non forza una relazione: con fattori non correlati il quadro assomiglia a quello ortogonale."
+    },
+    "explorative-faktorenanalyse": {
+      "titel": "Analisi fattoriale esplorativa (AFE)",
+      "kurz": "Ci sono tratti comuni dietro le domande, e quali? L’analisi fattoriale esplorativa li cerca senza una struttura fissata in anticipo. Presuppone una causa comune. Questo deve avere senso prima di tutto per il contenuto, prima di ogni statistica.",
+      "beispiel": "Dieci domande sul benessere danno due gruppi. Se ci siano due tratti lo decide la conoscenza dell’argomento.",
+      "vorsicht": "Una struttura trovata negli stessi dati si adatta naturalmente bene ad essi. Si può confermare solo su dati nuovi.",
+      "fachwoerter": "confermativa (verifica una struttura fissata in anticipo)."
+    },
+    "bartlett-test": {
+      "titel": "Test di Bartlett (idoneità all’analisi fattoriale)",
+      "kurz": "Le domande sono in relazione tra loro? Il test di sfericità di Bartlett verifica se tutte le correlazioni sono zero (matrice identità: zero tranne la diagonale). Significativo significa solo: non tutte sono zero.",
+      "beispiel": "Con 30 persone una relazione media può passare inosservata. Con 5000 persone anche relazioni molto piccole diventano significative.",
+      "vorsicht": "La statistica dipende molto dalla numerosità campionaria. Con molti casi è quasi sempre significativa e allora dice poco sull’idoneità. Da non confondere con il test di sfericità di Mauchly per le misure ripetute.",
+      "fachwoerter": "significativo (il valore p sta sotto il limite scelto, di solito ,05), statistica test (il numero che un test calcola dai dati)."
+    },
+    "hauptkomponenten": {
+      "titel": "Analisi delle componenti principali (ACP) e analisi fattoriale",
+      "kurz": "Sto solo condensando domande, o cerco un tratto comune? L’analisi delle componenti principali (ACP) ripartisce la varianza totale. L’analisi fattoriale spiega solo la parte condivisa. Mette da parte il resto di ogni domanda (la sua particolarità più l’errore di misura) come parte unica.",
+      "beispiel": "Con poche domande per fattore, le saturazioni dell’ACP sono di solito più alte di quelle dell’analisi fattoriale, perché includono quel resto.",
+      "vorsicht": "Spesso simili, non sempre: le differenze si vedono soprattutto con comunalità basse.",
+      "fachwoerter": "varianza (quanto si disperdono le risposte), unicità (la parte di una domanda che i fattori non spiegano)."
+    },
+    "fallzahl-faktorenanalyse": {
+      "titel": "Numerosità campionaria per l’analisi fattoriale",
+      "kurz": "Di quante persone ha bisogno un’analisi fattoriale? Dipende meno dal numero di domande che da due cose: quanto sono alte le comunalità (quanta parte di una domanda spiegano i fattori) e quante domande definiscono chiaramente ogni fattore. Quanto più alte sono entrambe, tanto più piccolo può essere il campione.",
+      "beispiel": "Comunalità alte, quattro domande forti per fattore: possono bastare poche persone. Comunalità basse, due domande deboli per fattore: anche molte possono essere troppo poche.",
+      "vorsicht": "Rapporti fissi come «dieci persone per domanda» non tengono conto di questo."
+    },
+    "umpolen": {
+      "titel": "Inversione della codifica",
+      "kurz": "L’inversione della codifica fa parte dell’analisi di attendibilità? Sì: per l’alfa di Cronbach e il punteggio della scala tutte le domande di una scala devono contare nella stessa direzione. Per questo una domanda invertita viene ricodificata in modo che «alto» voglia dire sempre la stessa cosa. Su una scala da 1 a 5, un 1 diventa un 5.",
+      "beispiel": "«Sono spesso stanco/a» accanto a «Ho molta energia»: senza inversione della codifica si annullano in parte nella somma. L’alfa (quanto sono legate le domande) cala e può persino scendere sotto zero.",
+      "vorsicht": "Per l’analisi fattoriale l’inversione non serve: una domanda invertita ha allora una saturazione negativa, e una saturazione negativa conta quanto una positiva. La formulazione mostra se una domanda va nella direzione opposta."
+    },
+    "eingeschraenkte-streuung": {
+      "titel": "Campo di variazione ristretto (restrizione di campo)",
+      "kurz": "Perché una relazione è più piccola quando tutti si somigliano? Campo di variazione ristretto: con una fascia stretta di un tratto, la correlazione cala, anche a parità di relazione. Questo abbassa anche le saturazioni.",
+      "beispiel": "Età e altezza sono strettamente legate nei bambini da 2 a 16 anni. Solo tra i bambini di 10 e 11 anni la correlazione è molto più piccola.",
+      "vorsicht": "Una r piccola in un gruppo uniforme non significa che la relazione sia piccola ovunque. Anche l’attendibilità (la quota di differenze reali tra tutte le differenze) è più bassa lì, perché le differenze reali sono poche."
+    },
+    "inter-item-korrelation": {
+      "titel": "Correlazione media tra item",
+      "kurz": "Quanto sono legate in media le domande di una scala? La correlazione media tra item lo mostra (item = domanda): la correlazione media di ogni coppia. Non dipende dal numero di domande. Anche l’alfa sale con più domande.",
+      "beispiel": "Due scale con alfa ,80: 4 domande con una correlazione media di ,50, oppure 12 domande con solo ,25.",
+      "vorsicht": "Un alfa alto dovuto a molte domande non prova una scala unitaria. Una scala breve con un alfa basso misura in modo impreciso, anche se la causa è la sua brevità.",
+      "fachwoerter": "alfa (quanto sono fortemente legate le risposte di una scala)."
+    },
+    "eindimensionalitaet": {
+      "titel": "Unidimensionalità",
+      "kurz": "Tutte le domande misurano un solo tratto? Questa è l’unidimensionalità. Un’analisi fattoriale può verificarla. L’alfa non la mostra: misura quanto sono collegate le domande, non quanti tratti ci sono dietro.",
+      "beispiel": "Due gruppi di 5 domande, correlazione ,60 all’interno, 0 tra i gruppi. Alfa dei dieci: circa ,78, anche se vengono misurati due tratti.",
+      "vorsicht": "Se due gruppi hanno un autovalore superiore a 1, questo fa pensare a due tratti, ma non lo prova.",
+      "fachwoerter": "alfa (quanto sono fortemente legate le risposte di una scala), autovalore (quanta dispersione coglie una componente)."
+    },
+    "reliabilitaet-wege": {
+      "titel": "Modi per stimare l’attendibilità (alfa, test-retest, metà)",
+      "kurz": "Perché metodi diversi danno attendibilità diverse per la stessa scala? L’alfa, il test-retest (misurare due volte) e le due metà (confrontare due metà) sono modi diversi di stimare la stessa attendibilità. Ciascuno presuppone qualcosa di diverso.",
+      "beispiel": "L’alfa presuppone, tra l’altro, che tutte le domande misurino un solo tratto. Il test-retest presuppone che il tratto non cambi e che la memoria non aiuti.",
+      "vorsicht": "Solo quando gli assunti sono rispettati i numeri dovrebbero concordare. Le differenze indicano violazioni o caso."
+    },
+    "validitaet": {
+      "titel": "Validità",
+      "kurz": "La scala misura davvero ciò che deve misurare? Questa è la validità. L’attendibilità è necessaria per essa, ma non basta: un metro a nastro misura la lunghezza in modo attendibile, ma non il peso.",
+      "beispiel": "Un alfa alto mostra che le domande sono legate, non se colgano ciò che si intende. Servono prove dal contenuto, dal confronto con un criterio esterno (criterio) e sul tratto previsto (costrutto).",
+      "vorsicht": "Domande quasi identiche fanno salire l’alfa, ma coprono una fascia stretta. La validità appartiene all’interpretazione dei punteggi, non al test in sé."
+    },
+    "antwortstufen": {
+      "titel": "Opzioni di risposta",
+      "kurz": "Perché conta il numero di opzioni di risposta? Le opzioni di risposta sono i gradini che offre una domanda, per es. da 1 a 4. L’alfa calcolato da correlazioni di Pearson presuppone valori molto graduati. Con pochi gradini le relazioni risultano troppo piccole e l’attendibilità è sottostimata.",
+      "beispiel": "Lo stesso atteggiamento su 3 o su 7 gradini: con 3 le differenze fini si perdono, quindi calano le correlazioni e l’alfa.",
+      "vorsicht": "Da quanti gradini in poi basti non è stabilito (spesso da cinque a sette). Più gradini non è automaticamente meglio.",
+      "fachwoerter": "correlazione di Pearson (la misura abituale della relazione tra due grandezze molto graduate)."
+    },
+    "messfehler": {
+      "titel": "Errore di misura",
+      "kurz": "Perché misurare in modo impreciso distorce l’analisi? L’errore di misura è uno scostamento casuale dal valore vero. In una variabile esplicativa (predittore) indebolisce l’effetto di quella variabile (attenuazione). Un errore casuale nella variabile dipendente non distorce B in questo modo.",
+      "beispiel": "Un mediatore (una variabile attraverso cui passa un’influenza) è misurato in modo impreciso. Una parte dell’influenza lo aggira e passa al percorso diretto: effetto del mediatore troppo piccolo, effetto diretto troppo grande.",
+      "vorsicht": "Questo non dice nulla sul percorso che l’influenza segue davvero."
+    },
+    "abhaengige-groesse": {
+      "titel": "Variabile dipendente",
+      "kurz": "Che cosa si prevede, e a partire da che cosa? La variabile dipendente (y) è quella prevista. La variabile indipendente (x) è ciò da cui si prevede. «Regressione di y su x» significa: y è previsto da x.",
+      "beispiel": "I costi di riscaldamento sono previsti dalla temperatura esterna. I costi di riscaldamento sono la variabile dipendente.",
+      "vorsicht": "«Dipendente» significa solo: prevista, non: causata da x. Se si scambiano i ruoli, si ottiene un’altra retta."
+    },
+    "kleinste-quadrate": {
+      "titel": "Minimi quadrati (metodo dei minimi quadrati)",
+      "kurz": "Come si colloca la retta migliore tra dei punti? I minimi quadrati scelgono la retta con la somma più piccola degli scostamenti al quadrato. Si misurano nella direzione di y: osservato meno previsto. Questi sono i residui.",
+      "beispiel": "Punto a y = 10, la retta prevede 8: scostamento 2, al quadrato 4.",
+      "vorsicht": "Non si misura la distanza più breve dalla retta. Elevando al quadrato, gli scostamenti grandi pesano di più."
+    },
+    "standardfehler-schaetzer": {
+      "titel": "Errore standard della stima",
+      "kurz": "A che distanza dalla previsione stanno tipicamente le osservazioni? L’errore standard della stima lo dice. Ha l’unità della variabile dipendente. Più piccolo significa una previsione più precisa.",
+      "beispiel": "Tempo di consegna in giorni, valore 2: il tempo reale differisce tipicamente di circa 2 giorni.",
+      "vorsicht": "«Tipicamente» non è un massimo. Da non confondere con l’errore standard di un B, che descrive con quanta precisione è stimato B."
+    },
+    "kollinearitaet": {
+      "titel": "Collinearità (tolleranza, VIF)",
+      "kurz": "Due predittori misurano quasi la stessa cosa? Allora c’è collinearità: si sovrappongono. La tolleranza è la quota della dispersione di un predittore che gli altri non spiegano. Il VIF è 1 diviso per la tolleranza. Più grande è il VIF, più grande è l’errore standard del suo B. La stima resta non distorta.",
+      "beispiel": "Superficie e stanze: una tolleranza di ,15 significa che la superficie lascia inspiegato solo il 15% della dispersione delle stanze.",
+      "vorsicht": "L’intero modello può essere significativo anche se nessun B lo è. I limiti del VIF (5 o 10) sono un’abitudine.",
+      "fachwoerter": "errore standard (quanto varia tipicamente un valore stimato), significativo (il valore p sta sotto il limite scelto, di solito ,05).",
+      "statable": "Calcola la regressione e apri sotto il risultato il blocco «Verifica della regressione: collinearità e casi anomali». Mostra tolleranza, VIF e contributo specifico (sr²) per ogni predittore."
+    },
+    "dummy-variable": {
+      "titel": "Variabile dummy (variabile 0/1)",
+      "kurz": "Come si inserisce un gruppo in una regressione? Come variabile dummy: 0 per il gruppo di riferimento, 1 per l’altro. Allora la costante è la media di riferimento e B la differenza tra le medie. Con q gruppi servono q - 1 variabili dummy.",
+      "beispiel": "Concime A (0), B (1): costante 5,0, B = 1,2. Media di B: 6,2.",
+      "vorsicht": "Il segno di B dipende dal riferimento. Il test di B coincide con il test t per campioni indipendenti con dispersioni uguali."
+    },
+    "residuen": {
+      "titel": "Residui",
+      "kurz": "A che distanza dalla previsione sta un punto? Questo è il suo residuo: osservato meno previsto. La normalità si richiede a questi errori, non ai valori grezzi. I residui si controllano con un istogramma o un grafico Q-Q.",
+      "beispiel": "Osservato 70 kg, previsto 66: residuo +4.",
+      "vorsicht": "I valori grezzi di più gruppi si mescolano e possono sembrare asimmetrici anche se i residui vanno bene.",
+      "fachwoerter": "grafico Q-Q (grafico: se i punti stanno vicino alla retta, i valori si accordano con una distribuzione normale)."
+    },
+    "heteroskedastizitaet": {
+      "titel": "Eteroschedasticità (dispersione disuguale degli errori)",
+      "kurz": "Gli scostamenti si disperdono ovunque allo stesso modo? Se no, c’è eteroschedasticità. Nel grafico dei residui spesso si vede come un imbuto. La pendenza resta non distorta ma meno precisa, e gli errori standard abituali sono sbagliati. Gli errori standard robusti tengono conto della dispersione disuguale.",
+      "beispiel": "Previsto 1000: scostamenti di circa ±100. A 5000: ±600.",
+      "vorsicht": "Una pendenza è distorta da non linearità, variabili omesse o errore di misura in x, non da questo.",
+      "fachwoerter": "grafico dei residui (un’immagine degli scostamenti dalla previsione), pendenza (B: variazione per unità), errore standard (quanto varia tipicamente una stima), non distorto (giusto in media)."
+    },
+    "hebelwert": {
+      "titel": "Leva (leverage)",
+      "kurz": "Con quanta forza un singolo punto può tirare la retta? La leva cresce con la distanza del suo valore x dalla media di x. Un punto molto lontano tira la retta verso di sé.",
+      "beispiel": "Dieci persone si allenano da 20 a 30 ore, una 90: leva alta.",
+      "vorsicht": "Il suo residuo (la distanza dalla retta) può essere piccolo proprio perché ha tirato la retta verso di sé. Perciò confronta la retta con e senza il punto."
+    },
+    "f-test": {
+      "titel": "Test F (analisi della varianza e regressione)",
+      "kurz": "C’è una qualche differenza o un qualche effetto? Il test F verifica nel complesso. Regressione: tutti i B sono zero insieme? Analisi della varianza: tutte le medie dei gruppi sono uguali? Nell’analisi della varianza, F è la dispersione (media dei quadrati) tra i gruppi divisa per quella all’interno.",
+      "beispiel": "Tre metodi di insegnamento: tra 6,0, all’interno 2,0. F = 3,0.",
+      "vorsicht": "Un F significativo significa: almeno due medie differiscono. Quali, lo mostrano solo i confronti a coppie.",
+      "fachwoerter": "media dei quadrati (somma degli scostamenti al quadrato divisa per i gradi di libertà, una misura di dispersione), ipotesi nulla (l’assunzione «nessuna differenza» che il test esamina)."
+    },
+    "schrittweise-regression": {
+      "titel": "Regressione stepwise (selezione automatica)",
+      "kurz": "Come sceglie un programma i predittori da solo? La regressione stepwise aggiunge o toglie predittori secondo un criterio statistico, come il valore p. Si cita spesso: ingresso a ,05, uscita a ,10.",
+      "beispiel": "Su 20 possibili predittori dell’affitto ne restano quattro.",
+      "vorsicht": "La scelta non conosce né la teoria né le cause e dipende da questi dati. Resta aperto se i predittori abbiano senso o siano cause."
+    },
+    "extrapolation": {
+      "titel": "Estrapolazione (previsione fuori dai dati)",
+      "kurz": "La previsione vale lontano dai valori osservati? Prevedere là è estrapolare. Non è molto affidabile: l’intervallo di confidenza della previsione si allarga quanto più x è lontano dalla media di x, e la retta non deve per forza valere là.",
+      "beispiel": "Piante misurate nelle settimane da 1 a 8, 5 cm a settimana. La settimana 80 darebbe 400 cm.",
+      "vorsicht": "Un R² alto non cambia questo."
+    },
+    "zusammenhang-ursache": {
+      "titel": "Associazione e causa (correlazione, causalità)",
+      "kurz": "Una relazione mostra che una cosa provoca l’altra? Non di per sé. B mostra: in media più x va con più o meno y, a parità di valori degli altri predittori nel modello. Questa è un’associazione. La causalità non ne segue; anche una causa comune può produrre entrambe.",
+      "beispiel": "Più vendite di gelati, più scottature: entrambe seguono il sole.",
+      "vorsicht": "I dati per aree mostrano una relazione tra aree, non per le singole persone al loro interno."
+    },
+    "lineares-modell": {
+      "titel": "Modello lineare (lineare nei parametri)",
+      "kurz": "La regressione lineare può descrivere solo rette? No. «Lineare» si riferisce ai parametri (i B): ogni B moltiplica soltanto un predittore, tutto si somma. Con un termine quadratico (x e x² come predittori) il modello adatta una curva.",
+      "beispiel": "Resa = 2 + 3x - 0,2x²: una curva, ma un modello lineare.",
+      "vorsicht": "x² è solo un predittore in più. Il suo test (Sig.) mostra se serve, perché R² sale a ogni aggiunta."
+    },
+    "scheinregression": {
+      "titel": "Regressione spuria (tendenza nelle serie temporali)",
+      "kurz": "Un R² alto tra due serie temporali mostra una relazione vera? Non necessariamente. Se entrambe salgono nel tempo (tendenza), il risultato è una regressione spuria. Segnali d’allarme: un R² molto alto e residui simili (autocorrelazione), Durbin-Watson vicino a 0.",
+      "beispiel": "Le biciclette nella città A e le importazioni di caffè del paese B salgono ogni anno: R² = ,95.",
+      "vorsicht": "Con le variazioni da un anno all’altro, R² cala nettamente se era solo tendenza.",
+      "fachwoerter": "Durbin-Watson (valore del test per l’autocorrelazione: vicino a 2 nessuna, vicino a 0 positiva, vicino a 4 negativa)."
+    },
+    "prognoseguete": {
+      "titel": "Accuratezza della previsione (MAE, MAPE, MASE)",
+      "kurz": "Quanto bene centra una previsione? MAE: errore assoluto medio. MAPE: errore percentuale medio, divide per il valore osservato, infinito a zero. MASE: divide per l’errore della previsione ingenua (ultimo valore) nel periodo di adattamento. Sotto 1 meglio, sopra 1 peggio di quella.",
+      "beispiel": "MASE 0,8: l’80% dell’errore ingenuo.",
+      "vorsicht": "Per conteggi rari con zeri, MAPE è inutilizzabile."
+    },
+    "preisindex": {
+      "titel": "Indice dei prezzi (Laspeyres, effetto base)",
+      "kurz": "Di quanto è diventata più cara la stessa spesa? L’indice di Laspeyres tiene fisse le quantità del periodo base, così cambiano solo i prezzi. Effetto base: la variazione rispetto a un anno fa può calare anche se l’indice sale, se un anno fa era salito di più.",
+      "beispiel": "10 pani, 20 l di latte. Base: 2 e 1, valore 40. Ora 2,4 e 1,2: valore 48. Indice 1,20.",
+      "vorsicht": "Le quantità fisse non colgono il passaggio degli acquirenti a beni più economici."
+    },
+    "anscombe-quartett": {
+      "titel": "Quartetto di Anscombe (stessi numeri, dati diversi)",
+      "kurz": "Basta un numero per descrivere dei dati? No. Quartetto di Anscombe: quattro insiemi di dati con quasi la stessa r, le stesse medie e la stessa retta, ma nuvole di punti diverse (retta, arco, valore anomalo, un solo punto fissa tutto). Perciò guarda il grafico a dispersione.",
+      "beispiel": "r = ,80 si adatta a una nuvola attorno a una retta e a punti su una curva.",
+      "vorsicht": "r misura solo la parte rettilinea. Un solo punto può abbassare molto r: controllalo, non eliminarlo."
+    },
+    "kovarianz": {
+      "titel": "Covarianza (e correlazione r)",
+      "kurz": "Quanto salgono o scendono insieme due valori? La covarianza lo misura senza standardizzare, quindi il suo valore dipende dalla scala. La correlazione r è la covarianza divisa per il prodotto delle deviazioni standard e resta uguale quando cambiano le unità.",
+      "beispiel": "Altezza e peso: covarianza 60 con l’altezza in cm, 0,6 in metri. r uguale.",
+      "vorsicht": "Covarianza 0 significa solo: nessuna relazione rettilinea, non indipendenza.",
+      "fachwoerter": "deviazione standard (la distanza tipica dei valori dalla media)."
+    },
+    "punktbiseriale-korrelation": {
+      "titel": "Correlazione biseriale puntuale (gruppo e misura)",
+      "kurz": "Un gruppo (0/1) è legato a una misura? La correlazione biseriale puntuale è la correlazione di Pearson di una variabile 0/1 con un numero. Il suo test è il test t per campioni indipendenti (varianze uguali): stesso p, stessa dimensione di t.",
+      "beispiel": "A = 0, B = 1, r = +,30: B ha in media valori più alti. Scambiando: -,30.",
+      "vorsicht": "Il segno segue la codifica. La correlazione biseriale è un’altra cosa."
+    },
+    "fisher-z": {
+      "titel": "Z di Fisher (trasformazione Z di Fisher)",
+      "kurz": "Perché l’intervallo è asimmetrico attorno a r? r può essere al massimo 1, quindi con r alta c’è meno spazio sopra. La Z di Fisher rende la distribuzione di r approssimativamente normale. L’intervallo viene costruito in Z e riconvertito, perciò è asimmetrico.",
+      "beispiel": "r = ,90, n = 30: intervallo da circa ,80 a ,95.",
+      "vorsicht": "L’intervallo non è mai la probabilità del valore vero. La Z di Fisher non è la standardizzazione z."
+    },
+    "fehlerarten": {
+      "titel": "Errori di tipo I e di tipo II (α, β)",
+      "kurz": "Un test può sbagliare? Sì, in due modi. Errore di tipo I: nessuna differenza, eppure «significativo». Errore di tipo II: esiste una differenza, ma sfugge. Il livello α (spesso ,05) è la frequenza del primo errore quando non c’è nulla.",
+      "beispiel": "200 test senza differenza reale, α = ,05: circa 10 risultano significativi per errore.",
+      "vorsicht": "α non dice se un singolo risultato sia sbagliato. Un errore di tipo II ha probabilità β = 1 meno la potenza.",
+      "fachwoerter": "potenza (la probabilità di trovare una differenza che c’è), livello (il limite per p scelto in anticipo)."
+    },
+    "einseitig-zweiseitig": {
+      "titel": "Test a una coda e a due code",
+      "kurz": "Conta una direzione, o entrambe? Il test a due code chiede: c’è una differenza, in una direzione o nell’altra? Il test a una coda chiede solo: A è più grande di B? Gli stessi dati possono essere significativi a una coda e non a due code. Nel dubbio, si testa a due code.",
+      "beispiel": "Nuovo metodo di insegnamento: p a due code = ,08, p a una coda = ,04.",
+      "vorsicht": "La direzione va fissata prima di guardare i dati. Sceglierla dopo dimezza p senza nuova informazione."
+    },
+    "mehrfaches-testen": {
+      "titel": "Test multipli (inflazione di α, Bonferroni)",
+      "kurz": "Quanto spesso ti inganna il caso su molti test? Al livello ,05 ogni test dà un falso allarme il 5% delle volte quando non c’è nulla di reale. Su m test indipendenti, la probabilità di almeno uno è 1 - ,95 elevato a m (inflazione di α). Bonferroni divide il livello per m.",
+      "beispiel": "10 test, nulla di reale: circa il 40% di probabilità di un risultato.",
+      "vorsicht": "Circa m volte ,05 di probabilità di risultati. Cercare dà solo ipotesi."
+    },
+    "effekt-ueberschaetzung": {
+      "titel": "Effetti sovrastimati (maledizione del vincitore)",
+      "kurz": "Un effetto significativo è grande come misurato? Spesso no. Se contano solo i risultati significativi, le stime sono distorte verso l’alto: un piccolo studio diventa significativo solo con una stima fortunatamente grande. È la maledizione del vincitore (winner’s curse).",
+      "beispiel": "Differenza vera di entità media. Di molti piccoli studi compaiono solo quelli significativi; la loro media sta sopra.",
+      "vorsicht": "Più piccolo è lo studio, più forte è la distorsione. Le repliche perciò trovano spesso effetti più piccoli, non necessariamente zero.",
+      "fachwoerter": "significativo (il valore p sta sotto il limite scelto, di solito ,05)."
+    },
+    "falsch-positive-befunde": {
+      "titel": "Risultati falsi positivi (errore di tipo I, gradi di libertà del ricercatore)",
+      "kurz": "Quanti risultati significativi sono falsi allarmi? Dipende dal livello, dalla potenza e dalla quota di effetti reali. Con potenza bassa la quota di falsi sale. Più falsi allarmi nascono anche quando si testa dopo ogni nuovo caso e ci si ferma alla significatività, o quando si provano molte analisi e si riporta solo quella riuscita (gradi di libertà del ricercatore).",
+      "beispiel": "1000 effetti testati, 100 reali, potenza ,5, livello ,05: 50 risultati veri e 45 falsi.",
+      "vorsicht": "Il livello ,05 vale solo per un campione e un’analisi pianificati in anticipo. La frequenza sale anche senza intenzione di ingannare.",
+      "fachwoerter": "potenza (la probabilità di trovare un effetto reale), livello (il limite per p fissato in anticipo), significativo (p sta sotto questo limite)."
+    },
+    "fehlerbalken": {
+      "titel": "Barre di errore (errore standard, intervallo di confidenza)",
+      "kurz": "Che cosa mostrano le barre sulle medie? Non è fissato: deviazione standard (dispersione dei singoli valori), errore standard (precisione della media) o intervallo di confidenza. «± numero» non dice quale. Un errore standard per lato è largo circa la metà dell’intervallo al 95% e corrisponde a circa il 68%.",
+      "beispiel": "Intervalli al 95% che si sovrappongono, eppure p = ,04.",
+      "vorsicht": "La sovrapposizione non decide; decide il test della differenza. Se gli intervalli al 95% non hanno nessun tratto in comune, gruppi indipendenti differiscono in modo significativo al livello ,05. Per misure appaiate conta l’intervallo delle differenze di ogni persona, non gli intervalli delle due medie."
+    },
+    "levene-test": {
+      "titel": "Test di Levene (dispersione uguale)",
+      "kurz": "I gruppi si disperdono allo stesso modo? (test di Levene) Verifica se la varianza, la dispersione dei valori, è la stessa nei gruppi. Un p piccolo indica una dispersione disuguale.",
+      "beispiel": "Due gruppi di 8 persone ciascuno, Levene p = ,40: nessun segno di dispersione disuguale.",
+      "vorsicht": "Non significativo non significa che la dispersione sia uguale. Con gruppi piccoli il test rileva male le differenze. Non prova l’uguaglianza."
+    },
+    "gepoolter-t-test": {
+      "titel": "Dispersione combinata o test di Welch (si presuppone dispersione uguale?)",
+      "kurz": "I due gruppi si disperdono allo stesso modo? Il test t con dispersione combinata (pooled) lo presuppone. Il test di Welch non combina e corregge i gradi di libertà. Con due gruppi, F dell’analisi della varianza è il quadrato di t, con lo stesso p.",
+      "beispiel": "10 persone con dispersione 8, 40 con dispersione 3: la combinazione riflette soprattutto il gruppo grande con la dispersione piccola.",
+      "vorsicht": "Se il gruppo più piccolo si disperde di più, il test con dispersione combinata mostra significatività troppo spesso. Welch lo corregge.",
+      "fachwoerter": "gradi di libertà (un numero che fissa la distribuzione di riferimento di t)."
+    },
+    "zentraler-grenzwertsatz": {
+      "titel": "Teorema del limite centrale",
+      "kurz": "I valori devono essere distribuiti normalmente? Non sempre. Il teorema del limite centrale dice: le medie di molte osservazioni sono approssimativamente normali, anche quando i singoli valori sono asimmetrici. Vale per le medie, non per i singoli valori.",
+      "beispiel": "I redditi sono asimmetrici. Le medie di 200 persone ciascuna sono quasi simmetriche.",
+      "vorsicht": "Quante bastino dipende dalla forma: con valori molto asimmetrici, 10 non bastano. Con gruppi grandi, i test t sono di solito utilizzabili senza valori distribuiti normalmente."
+    },
+    "pseudoreplikation": {
+      "titel": "Pseudoreplicazione (misure dipendenti)",
+      "kurz": "Ogni valore conta come informazione separata? No, se i valori sono collegati. Pseudoreplicazione: valori dipendenti vengono trattati come indipendenti, per esempio misure ripetute di una persona o bambini di una stessa classe. L’errore standard diventa troppo piccolo; la significatività compare troppo spesso.",
+      "beispiel": "20 piante, 5 foglie misurate su ciascuna: sono 20 unità indipendenti, non 100.",
+      "vorsicht": "Più righe non sono più informazione. Rimedio: una media per unità, oppure un modello che tenga conto del raggruppamento.",
+      "fachwoerter": "errore standard (quanto varia tipicamente una stima), significativo (il valore p sta sotto il limite scelto, di solito ,05)."
+    },
+    "simpson-paradox": {
+      "titel": "Paradosso di Simpson (unire i gruppi)",
+      "kurz": "Una relazione può capovolgersi unendo i gruppi? Sì. Il quadro complessivo può nascondere o invertire ciò che mostra ogni gruppo (paradosso di Simpson, anche per la correlazione r). Motivo: i gruppi differiscono nelle misure o nella composizione.",
+      "beispiel": "A aiuta più di B nei casi lievi e nei casi gravi. Ma A va quasi solo ai casi gravi. Nel complesso A sembra peggiore.",
+      "vorsicht": "Allora il totale non si può leggere direttamente. Quale vista valga dipende dalla situazione."
+    },
+    "erwartete-haeufigkeit": {
+      "titel": "Frequenza attesa (chi-quadrato, tabella di contingenza)",
+      "kurz": "Quanti casi per cella ci si aspetterebbe se le variabili non fossero in relazione? Totale di riga per totale di colonna diviso per il totale generale. Il test chi-quadrato le confronta con le frequenze osservate. Quale cella spicca lo mostra solo il confronto cella per cella.",
+      "beispiel": "Riga 60, colonna 50, totale 200: attesa 60 · 50 / 200 = 15.",
+      "vorsicht": "Si cita spesso: tutte almeno 5, un’abitudine. Con valori più piccoli in una tabella 2x2, si usa il test esatto di Fisher.",
+      "fachwoerter": "tabella di contingenza (tabella di due variabili), residuo standardizzato (scarto tra osservato e atteso, scalato per essere confrontabile)."
+    },
+    "zeilenprozent": {
+      "titel": "Percentuale di riga (quota all’interno della riga)",
+      "kurz": "Quale quota all’interno di un gruppo? In una tabella di contingenza, la percentuale di riga è il conteggio della cella diviso per il totale di riga, per 100. Il totale di riga è il riferimento. «Che percentuale degli A ha B?» prende come riferimento il totale di A. La percentuale di colonna usa il totale di colonna.",
+      "beispiel": "80 proprietari di cani, 20 dei quali anche con un gatto: 20 / 80 = 25%.",
+      "vorsicht": "Percentuale di riga e di colonna sono numeri diversi. Prima chiediti: quota di che cosa?",
+      "fachwoerter": "tabella di contingenza (tabella di due variabili)."
+    },
+    "likelihood-ratio": {
+      "titel": "Rapporto di verosimiglianza (LR)",
+      "kurz": "Quanto cambia un risultato del test la stima? Il LR positivo è la sensibilità divisa per (1 meno la specificità): tante volte più spesso un risultato positivo compare nei malati che nei sani. Sopra 1 favorisce la malattia. Odds dopo il test = odds prima del test per LR.",
+      "beispiel": "Prima del test ,20, quindi odds ,25. Un LR di 4 dà odds 1, che è ,50.",
+      "vorsicht": "Il LR non è una probabilità. Per tornare a p: odds diviso per (1 più odds).",
+      "fachwoerter": "sensibilità (la quota di malati che il test rileva), specificità (la quota di sani che dichiara correttamente sani), odds (p diviso per 1 meno p)."
+    },
+    "regelkarte": {
+      "titel": "Carta di controllo (Shewhart, CUSUM, EWMA)",
+      "kurz": "Il processo è cambiato? Una carta di controllo riporta in ordine le medie di gruppi, con una linea centrale e dei limiti, spesso ±3 errori standard. Un punto fuori è un segnale: probabilmente agisce qualcosa in più del caso. La fase 1 stima i limiti da dati passati, la fase 2 poi sorveglia in continuo. CUSUM ed EWMA combinano più gruppi e rilevano prima piccoli spostamenti duraturi.",
+      "beispiel": "Stabile: circa 3 punti su 1000 fuori. Più punti in breve tempo sono un segnale chiaro.",
+      "vorsicht": "Se un processo stabile resta entro i limiti, la variazione è caso: regolarlo allora aumenta la dispersione. Limiti ricavati da pochi gruppi sono imprecisi.",
+      "fachwoerter": "errore standard (dispersione delle medie dei gruppi), stabile (la distribuzione resta la stessa nel tempo)."
+    },
+    "prozessfaehigkeit": {
+      "titel": "Capacità del processo (Cp, Cpk)",
+      "kurz": "Il processo rispetta la specifica? Cp confronta l’intervallo ammesso con la dispersione e ignora dove sta la media. Cpk misura la distanza della media dal limite più vicino, al massimo grande come Cp. Entrambi presuppongono un processo stabile e normale.",
+      "beispiel": "Cp = 1, centrato: circa lo 0,27% fuori; spostato, di più.",
+      "vorsicht": "Cp = 1 significa solo: non meno dello 0,27% fuori. Con segnali sulla carta di controllo l’indice dice poco; prima vanno eliminati."
+    },
+    "messsystem": {
+      "titel": "Sistema di misura (ripetibilità, riproducibilità)",
+      "kurz": "Quanta dispersione viene dalla misura stessa? Ripetibilità: dispersione dello strumento sulla stessa unità, con lo stesso operatore e lo stesso allestimento. Riproducibilità: dispersione tra operatori, allestimenti o periodi. La dispersione totale si divide in processo e sistema di misura. Quota di misura = 1 meno quota del processo. Il rapporto segnale-rumore mostra quanto bene si distinguono i pezzi: si cita spesso 5 o più come buono, sotto 2 come inutile.",
+      "beispiel": "Il processo è l’80% della dispersione: sistema di misura 20%.",
+      "vorsicht": "Gli autori attribuiscono i termini in modo diverso, quindi va indicata la definizione usata. I limiti sono convenzioni."
+    },
+    "versuchsplanung": {
+      "titel": "Disegno degli esperimenti (interazione, punto centrale)",
+      "kurz": "Come si pianificano esperimenti che insegnano molto? Interazione: l’effetto di un fattore dipende dal livello di un altro. Cambiare un fattore alla volta non permette di stimarla; tutte le combinazioni la trovano. Un punto centrale ripetuto mostra la curvatura e stima la dispersione.",
+      "beispiel": "Il concime agisce con forza al sole, appena all’ombra.",
+      "vorsicht": "Un risultato a un livello non vale automaticamente per tutti. Con curvatura due livelli non bastano; il disegno può essere esteso.",
+      "fachwoerter": "fattore (una grandezza che si fissa di proposito), livello (un valore fissato di essa), continuo (ogni valore intermedio è possibile)."
+    }
+  },
+  "meldung": [
+    {
+      "id": "engine-absturz",
+      "art": "absturz",
+      "muster": "^Statable: PSPP crashed",
+      "original": "Statable: PSPP crashed and was restarted. RuntimeError: Aborted(Assertion failed: proc.n_cells < CRS_N_CELLS, at: ../../pspp-2.1.1/src/language/commands/crosstabs.c,494,cmd_crosstabs)",
+      "titel": "Il programma statistico si è bloccato",
+      "text": {
+        "du": "Dipende da PSPP, non dai tuoi dati. Statable lo ha riavviato e ha ricaricato i dati com’erano prima di questo calcolo.",
+        "sie": "Dipende da PSPP, non dai tuoi dati. Statable lo ha riavviato e ha ricaricato i dati com’erano prima di questo calcolo."
+      },
+      "tun": {
+        "du": "Calcola di nuovo con meno opzioni. Se avevi impostato WEIGHT, FILTER o SPLIT FILE, impostali di nuovo.",
+        "sie": "Calcola di nuovo con meno opzioni. Se avevi impostato WEIGHT, FILTER o SPLIT FILE, impostali di nuovo."
+      }
+    },
+    {
+      "id": "nonpar-corr-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "NONPAR CORR is not yet implemented",
+      "original": "NONPAR CORR: NONPAR CORR is not yet implemented.",
+      "titel": "Il motore non può eseguire questo comando",
+      "text": {
+        "du": "PSPP non può calcolare NONPAR CORR (Spearman, Kendall).",
+        "sie": "PSPP non può calcolare NONPAR CORR (Spearman, Kendall)."
+      },
+      "tun": {
+        "du": "Statable lo calcola nella domanda «Due cose sono in relazione?». I tuoi dati non sono cambiati.",
+        "sie": "Statable lo calcola nella domanda «Due cose sono in relazione?». I tuoi dati non sono cambiati."
+      }
+    },
+    {
+      "id": "glm-with-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "GLM: [^\\n]*\\n[^\\n]*\\|[^\\n]*\\b[Ww][Ii][Tt][Hh]\\b",
+      "original": "GLM: Syntax error expecting MISSING, INTERCEPT, CRITERIA, METHOD, or DESIGN.\n   1 | GLM y BY g WITH x /DESIGN=x g.",
+      "titel": "Il motore non può eseguire questo comando",
+      "text": {
+        "du": "PSPP non può calcolare GLM con WITH (analisi della covarianza).",
+        "sie": "PSPP non può calcolare GLM con WITH (analisi della covarianza)."
+      },
+      "tun": {
+        "du": "Statable lo calcola nella domanda «I gruppi differiscono?» sotto «Altre opzioni» con una variabile di controllo. I tuoi dati non sono cambiati.",
+        "sie": "Statable lo calcola nella domanda «I gruppi differiscono?» sotto «Altre opzioni» con una variabile di controllo. I tuoi dati non sono cambiati."
+      }
+    },
+    {
+      "id": "befehl-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "Unknown command `([^']+)'",
+      "original": "Unknown command `FREQENCIES'.",
+      "titel": "Statable non conosce questo comando",
+      "text": {
+        "du": "«{1}» non è un comando noto.",
+        "sie": "«{1}» non è un comando noto."
+      },
+      "tun": {
+        "du": "Controlla l’ortografia. Simili: {vorschlag}.",
+        "sie": "Controlla l’ortografia. Simili: {vorschlag}."
+      }
+    },
+    {
+      "id": "spalte-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "(\\S+) is not a variable name",
+      "original": "DESCRIPTIVES: konzentration is not a variable name.",
+      "titel": "Questa colonna non esiste",
+      "text": {
+        "du": "I tuoi dati non hanno alcuna colonna «{1}».",
+        "sie": "I tuoi dati non hanno alcuna colonna «{1}»."
+      },
+      "tun": {
+        "du": "Una simile: {vorschlag}. Puoi vedere tutti i nomi in «Colonne».",
+        "sie": "Una simile: {vorschlag}. Puoi vedere tutti i nomi in «Colonne»."
+      }
+    },
+    {
+      "id": "text-statt-zahl",
+      "art": "hinweis",
+      "muster": "(\\S+) is not a numeric variable\\.\\s+It will not be included",
+      "original": "DESCRIPTIVES: geschlecht is not a numeric variable.  It will not be included in the variable list.",
+      "titel": "Una colonna è stata esclusa",
+      "text": {
+        "du": "«{1}» contiene gruppi o testo, non numeri. Per questo Statable l’ha esclusa qui. Il resto è stato calcolato.",
+        "sie": "«{1}» contiene gruppi o testo, non numeri. Per questo Statable l’ha esclusa qui. Il resto è stato calcolato."
+      },
+      "tun": {
+        "du": "Per i gruppi sono adatti le frequenze o un confronto tra gruppi.",
+        "sie": "Per i gruppi sono adatti le frequenze o un confronto tra gruppi."
+      }
+    },
+    {
+      "id": "gruppen-fehlen",
+      "art": "nicht-verstanden",
+      "muster": "When applying GROUPS to a string variable, two values must be specified",
+      "original": "T-TEST: When applying GROUPS to a string variable, two values must be specified.",
+      "titel": "Quali due gruppi?",
+      "text": {
+        "du": "Mancano i nomi dei due gruppi per il confronto.",
+        "sie": "Mancano i nomi dei due gruppi per il confronto."
+      },
+      "tun": {
+        "du": "Scrivili tra parentesi dopo la colonna, ad esempio telefono('sì' 'no').",
+        "sie": "Scrivili tra parentesi dopo la colonna, ad esempio telefono('sì' 'no')."
+      }
+    },
+    {
+      "id": "wert-zu-lang",
+      "art": "nicht-verstanden",
+      "muster": "This (\\d+)-byte string is too long for variable (\\S+) with width (\\d+)",
+      "original": "T-TEST: This 10-byte string is too long for variable handy with width 4.",
+      "titel": "Questo valore non può esistere nella colonna",
+      "text": {
+        "du": "Il valore è più lungo di quanto la colonna «{2}» possa contenere. Un valore simile lì non compare.",
+        "sie": "Il valore è più lungo di quanto la colonna «{2}» possa contenere. Un valore simile lì non compare."
+      },
+      "tun": {
+        "du": "Controlla in «Colonne» quali valori ci sono in «{2}».",
+        "sie": "Controlla in «Colonne» quali valori ci sono in «{2}»."
+      }
+    },
+    {
+      "id": "anfuehrung-offen",
+      "art": "nicht-verstanden",
+      "muster": "Unterminated string constant",
+      "original": "VARIABLE LABELS: Unterminated string constant.",
+      "titel": "Un apice è ancora aperto",
+      "text": {
+        "du": "Un testo è iniziato con ' ma non è stato chiuso.",
+        "sie": "Un testo è iniziato con ' ma non è stato chiuso."
+      },
+      "tun": {
+        "du": "Aggiungi un altro ' alla fine del testo.",
+        "sie": "Aggiungi un altro ' alla fine del testo."
+      }
+    },
+    {
+      "id": "text-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting string",
+      "original": "VARIABLE LABELS: Syntax error expecting string.",
+      "titel": "Qui manca un testo",
+      "text": {
+        "du": "A questo punto il comando si aspetta un testo tra virgolette.",
+        "sie": "A questo punto il comando si aspetta un testo tra virgolette."
+      },
+      "tun": {
+        "du": "Il testo va tra virgolette, per esempio 'sì'. Etichetta: VARIABLE LABELS conc 'Concentrazione'. Gruppi da testo: T-TEST GROUPS=gruppo('A' 'B').",
+        "sie": "Il testo va tra virgolette, per esempio 'sì'. Etichetta: VARIABLE LABELS conc 'Concentrazione'. Gruppi da testo: T-TEST GROUPS=gruppo('A' 'B')."
+      }
+    },
+    {
+      "id": "funktion-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "No function or vector named (\\S+)",
+      "original": "COMPUTE: No function or vector named wurzel.",
+      "titel": "Questa funzione non esiste",
+      "text": {
+        "du": "«{1}» non è una funzione nota.",
+        "sie": "«{1}» non è una funzione nota."
+      },
+      "tun": {
+        "du": "Le funzioni hanno nomi inglesi, ad esempio SQRT per la radice quadrata, MEAN per la media.",
+        "sie": "Le funzioni hanno nomi inglesi, ad esempio SQRT per la radice quadrata, MEAN per la media."
+      }
+    },
+    {
+      "id": "rechnen-mit-text",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must be numeric",
+      "original": "COMPUTE: Both operands of + must be numeric.",
+      "titel": "Il testo non si può usare in un calcolo",
+      "text": {
+        "du": "Un lato di «{1}» è una colonna con testo.",
+        "sie": "Un lato di «{1}» è una colonna con testo."
+      },
+      "tun": {
+        "du": "Puoi trasformare i gruppi in numeri in «Colonne» - come nuova colonna, l’originale resta.",
+        "sie": "Puoi trasformare i gruppi in numeri in «Colonne» - come nuova colonna, l’originale resta."
+      }
+    },
+    {
+      "id": "text-mit-zahl-vergleichen",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must have the same type",
+      "original": "SELECT IF: Both operands of = must have the same type.",
+      "titel": "Un testo viene confrontato con un numero",
+      "text": {
+        "du": "La colonna contiene testo, ma viene confrontata con un numero.",
+        "sie": "La colonna contiene testo, ma viene confrontata con un numero."
+      },
+      "tun": {
+        "du": "Metti il valore tra virgolette, ad esempio genere = 'femmina'.",
+        "sie": "Metti il valore tra virgolette, ad esempio genere = 'femmina'."
+      }
+    },
+    {
+      "id": "spalte-gibt-es-schon",
+      "art": "nicht-verstanden",
+      "muster": "There is already a variable named (\\S+)",
+      "original": "NUMERIC: There is already a variable named konz2.",
+      "titel": "Questo nome è già in uso",
+      "text": {
+        "du": "Esiste già una colonna «{1}». Statable non sovrascrive nulla.",
+        "sie": "Esiste già una colonna «{1}». Statable non sovrascrive nulla."
+      },
+      "tun": {
+        "du": "Scegli un altro nome, ad esempio {1}_nuovo.",
+        "sie": "Scegli un altro nome, ad esempio {1}_nuovo."
+      }
+    },
+    {
+      "id": "umbenennen-doppelt",
+      "art": "nicht-verstanden",
+      "muster": "Renaming would duplicate variable name (\\S+)",
+      "original": "RENAME VARIABLES: Renaming would duplicate variable name nr.",
+      "titel": "Questo nome è già in uso",
+      "text": {
+        "du": "Dopo la ridenominazione due colonne avrebbero il nome «{1}».",
+        "sie": "Dopo la ridenominazione due colonne avrebbero il nome «{1}»."
+      },
+      "tun": {
+        "du": "Scegli un nome che non esista ancora.",
+        "sie": "Scegli un nome che non esista ancora."
+      }
+    },
+    {
+      "id": "datei-nicht-gefunden",
+      "art": "datei",
+      "muster": "An error occurred while opening `([^']+)': No such file",
+      "original": "An error occurred while opening `/gibt-es-nicht.sav': No such file or directory.",
+      "titel": "Il file non è stato trovato",
+      "text": {
+        "du": "«{datei}» non si trova più dove era.",
+        "sie": "«{datei}» non si trova più dove era."
+      },
+      "tun": {
+        "du": "Aprilo di nuovo con «Apri file».",
+        "sie": "Aprilo di nuovo con «Apri file»."
+      }
+    },
+    {
+      "id": "datendatei-nicht-gefunden",
+      "art": "datei",
+      "muster": "Could not open `([^']+)' for reading as a data file",
+      "original": "Could not open `/fehlt.csv' for reading as a data file: No such file or directory.",
+      "titel": "Il file non è stato trovato",
+      "text": {
+        "du": "Non è stato possibile aprire «{datei}».",
+        "sie": "Non è stato possibile aprire «{datei}»."
+      },
+      "tun": {
+        "du": "Aprilo di nuovo con «Apri file».",
+        "sie": "Aprilo di nuovo con «Apri file»."
+      }
+    },
+    {
+      "id": "keine-spss-datei",
+      "art": "datei",
+      "muster": "`([^']+)' is not a system or portable file",
+      "original": "GET: `/kaputt.sav' is not a system or portable file.",
+      "titel": "Questo file non può essere letto",
+      "text": {
+        "du": "«{datei}» termina con .sav ma al suo interno non è un file SPSS. Gli altri tuoi dati non sono toccati.",
+        "sie": "«{datei}» termina con .sav ma al suo interno non è un file SPSS. Gli altri tuoi dati non sono toccati."
+      },
+      "tun": {
+        "du": "Forse è un file Excel o CSV? Allora salvalo di nuovo come .sav, .xlsx o .csv nel tuo programma.",
+        "sie": "Forse è un file Excel o CSV? Allora salvalo di nuovo come .sav, .xlsx o .csv nel tuo programma."
+      }
+    },
+    {
+      "id": "speichern-unmoeglich",
+      "art": "datei",
+      "muster": "Error opening `([^']+)' for writing",
+      "original": "Error opening `/gibt/es/nicht/x.sav' for writing as a system file: No such file or directory.",
+      "titel": "Il file non ha potuto essere salvato",
+      "text": {
+        "du": "Statable non può scrivere nella posizione scelta. I tuoi dati non sono persi: qui sono ancora aperti.",
+        "sie": "Statable non può scrivere nella posizione scelta. I tuoi dati non sono persi: qui sono ancora aperti."
+      },
+      "tun": {
+        "du": "Scegli un’altra cartella, ad esempio «Download».",
+        "sie": "Scegli un’altra cartella, ad esempio «Download»."
+      }
+    },
+    {
+      "id": "name-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting identifier",
+      "original": "COMPUTE: Syntax error expecting identifier.",
+      "titel": "Qui manca un nome",
+      "text": {
+        "du": "A questo punto il comando si aspetta un nome. I nomi iniziano con una lettera.",
+        "sie": "A questo punto il comando si aspetta un nome. I nomi iniziano con una lettera."
+      },
+      "tun": {
+        "du": "Esempio: nuova1 invece di 1nuova.",
+        "sie": "Esempio: nuova1 invece di 1nuova."
+      }
+    },
+    {
+      "id": "by-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `BY'",
+      "original": "CROSSTABS: Syntax error expecting `BY'.",
+      "titel": "Qui manca la parola BY",
+      "text": {
+        "du": "Tra le due colonne manca BY. Le separa, come in «questa colonna per quella colonna».",
+        "sie": "Tra le due colonne manca BY. Le separa, come in «questa colonna per quella colonna»."
+      },
+      "tun": {
+        "du": "Con CROSSTABS: /TABLES=genere BY telefono. Con ONEWAY e GLM, BY sta tra il numero e il gruppo: ONEWAY punteggio BY gruppo.",
+        "sie": "Con CROSSTABS: /TABLES=genere BY telefono. Con ONEWAY e GLM, BY sta tra il numero e il gruppo: ONEWAY punteggio BY gruppo."
+      }
+    },
+    {
+      "id": "spalte-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting variable name",
+      "original": "ONEWAY: Syntax error expecting variable name.",
+      "titel": "Qui manca una colonna",
+      "text": {
+        "du": "A questo punto il comando si aspetta il nome di una colonna.",
+        "sie": "A questo punto il comando si aspetta il nome di una colonna."
+      },
+      "tun": {
+        "du": "Suggerimento: nella finestra dei comandi Statable propone le colonne adatte mentre scrivi.",
+        "sie": "Suggerimento: nella finestra dei comandi Statable propone le colonne adatte mentre scrivi."
+      }
+    },
+    {
+      "id": "klammer-auf-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\('",
+      "original": "NPAR TESTS: Syntax error expecting `('.",
+      "titel": "Qui manca una parentesi",
+      "text": {
+        "du": "A questo punto manca «(».",
+        "sie": "A questo punto manca «(»."
+      },
+      "tun": {
+        "du": "Esempio: /MANN-WHITNEY = conc BY telefono (0 1).",
+        "sie": "Esempio: /MANN-WHITNEY = conc BY telefono (0 1)."
+      }
+    },
+    {
+      "id": "klammer-zu-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\)'",
+      "original": "COMPUTE: Syntax error expecting `)'.",
+      "titel": "Una parentesi è ancora aperta",
+      "text": {
+        "du": "Ci sono più «(» che «)».",
+        "sie": "Ci sono più «(» che «)»."
+      },
+      "tun": {
+        "du": "Metti la «)» mancante al posto giusto.",
+        "sie": "Metti la «)» mancante al posto giusto."
+      }
+    },
+    {
+      "id": "gleich-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `='",
+      "original": "COMPUTE: Syntax error expecting `='.",
+      "titel": "Qui manca il segno di uguale",
+      "text": {
+        "du": "Il comando ha bisogno di un «=» tra il nome e il calcolo.",
+        "sie": "Il comando ha bisogno di un «=» tra il nome e il calcolo."
+      },
+      "tun": {
+        "du": "Esempio: COMPUTE nuova = conc * 2.",
+        "sie": "Esempio: COMPUTE nuova = conc * 2."
+      }
+    },
+    {
+      "id": "rechnung-unklar",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error parsing expression",
+      "original": "COMPUTE: Syntax error parsing expression.",
+      "titel": "Il calcolo è incompleto",
+      "text": {
+        "du": "Dopo il «=» manca qualcosa, oppure un carattere non va bene.",
+        "sie": "Dopo il «=» manca qualcosa, oppure un carattere non va bene."
+      },
+      "tun": {
+        "du": "Il segno indica il punto.",
+        "sie": "Il segno indica il punto."
+      }
+    },
+    {
+      "id": "noch-keine-daten",
+      "art": "daten",
+      "muster": "is allowed only after the active dataset has been defined",
+      "original": "DESCRIPTIVES: DESCRIPTIVES is allowed only after the active dataset has been defined.",
+      "titel": "Non è ancora aperto nessun dato",
+      "text": {
+        "du": "Per calcolare, Statable ha prima bisogno di dati.",
+        "sie": "Per calcolare, Statable ha prima bisogno di dati."
+      },
+      "tun": {
+        "du": "Apri un file o prova i dati di esempio.",
+        "sie": "Apri un file o prova i dati di esempio."
+      }
+    },
+    {
+      "id": "text-in-zahlenspalte",
+      "art": "daten",
+      "muster": "Data for variable (\\S+) is not valid as format F: Field contents are not numeric",
+      "original": "Data for variable a is not valid as format F: Field contents are not numeric.",
+      "titel": "C’è testo in una colonna di numeri",
+      "text": {
+        "du": "In «{1}» in un punto c’è una parola al posto di un numero. Quella cella resta vuota; tutto il resto è stato letto.",
+        "sie": "In «{1}» in un punto c’è una parola al posto di un numero. Quella cella resta vuota; tutto il resto è stato letto."
+      },
+      "tun": {
+        "du": "Il controllo dei dati ti mostra la cella. Se i dati contengono una virgola decimale (70,5), DATA LIST FREE legge la virgola come separatore e i valori si spostano: SET DECIMAL=COMMA. e DATA LIST LIST(';') risolvono il problema.",
+        "sie": "Il controllo dei dati ti mostra la cella. Se i dati contengono una virgola decimale (70,5), DATA LIST FREE legge la virgola come separatore e i valori si spostano: SET DECIMAL=COMMA. e DATA LIST LIST(';') risolvono il problema."
+      }
+    },
+    {
+      "id": "beschriftung-passt-nicht",
+      "art": "daten",
+      "muster": "VALUE LABELS: Data is not valid as format F",
+      "original": "VALUE LABELS: Data is not valid as format F: Field contents are not numeric.",
+      "titel": "Questa etichetta non va bene",
+      "text": {
+        "du": "In una colonna di numeri, ogni etichetta di gruppo ha bisogno di un numero, ad esempio 1 = 'sì'.",
+        "sie": "In una colonna di numeri, ogni etichetta di gruppo ha bisogno di un numero, ad esempio 1 = 'sì'."
+      },
+      "tun": {
+        "du": "Il modo più semplice per impostare le etichette è in «Colonne».",
+        "sie": "Il modo più semplice per impostare le etichette è in «Colonne»."
+      }
+    },
+    {
+      "id": "keine-angabe-zu-lang",
+      "art": "hinweis",
+      "muster": "Truncating missing value to maximum acceptable length \\((\\d+) bytes\\)",
+      "original": "MISSING VALUES: Truncating missing value to maximum acceptable length (8 bytes).",
+      "titel": "Il valore per «nessuna risposta» è stato accorciato",
+      "text": {
+        "du": "Il valore è più lungo di quanto consentito ({1} caratteri) ed è stato troncato.",
+        "sie": "Il valore è più lungo di quanto consentito ({1} caratteri) ed è stato troncato."
+      },
+      "tun": {
+        "du": "Controlla in «Colonne» se «nessuna risposta» viene ancora riconosciuta correttamente.",
+        "sie": "Controlla in «Colonne» se «nessuna risposta» viene ancora riconosciuta correttamente."
+      }
+    },
+    {
+      "id": "zu-viele-keine-angabe",
+      "art": "nicht-verstanden",
+      "muster": "Too many numeric missing values",
+      "original": "MISSING VALUES: Too many numeric missing values.  At most three individual values or one value and one range are allowed.",
+      "titel": "Al massimo tre valori per «nessuna risposta»",
+      "text": {
+        "du": "Una colonna può avere al massimo tre valori per «nessuna risposta», oppure un valore e un intervallo.",
+        "sie": "Una colonna può avere al massimo tre valori per «nessuna risposta», oppure un valore e un intervallo."
+      },
+      "tun": {
+        "du": "Esempio: da 96 a 99 come intervallo.",
+        "sie": "Esempio: da 96 a 99 come intervallo."
+      }
+    },
+    {
+      "id": "gewicht-text",
+      "art": "nicht-verstanden",
+      "muster": "The weighting variable must be numeric",
+      "original": "WEIGHT: The weighting variable must be numeric.",
+      "titel": "La ponderazione funziona solo con i numeri",
+      "text": {
+        "du": "La colonna scelta contiene testo.",
+        "sie": "La colonna scelta contiene testo."
+      },
+      "tun": {
+        "du": "Scegli una colonna con numeri.",
+        "sie": "Scegli una colonna con numeri."
+      }
+    },
+    {
+      "id": "alle-spalten-loeschen",
+      "art": "hinweis",
+      "muster": "may not be used to delete all variables",
+      "original": "DELETE VARIABLES: DELETE VARIABLES may not be used to delete all variables from the active dataset dictionary.  Use NEW FILE instead.",
+      "titel": "Non è possibile rimuovere tutte le colonne insieme",
+      "text": {
+        "du": "Almeno una colonna deve restare. Non è stato eliminato nulla.",
+        "sie": "Almeno una colonna deve restare. Non è stato eliminato nulla."
+      },
+      "tun": {
+        "du": "Per ripartire da zero: «Crea un nuovo studio».",
+        "sie": "Per ripartire da zero: «Crea un nuovo studio»."
+      }
+    },
+    {
+      "id": "dateityp-unbekannt",
+      "art": "datei",
+      "muster": "GET DATA: Syntax error expecting TXT",
+      "original": "GET DATA: Syntax error expecting TXT, PSQL, GNM, or ODS.",
+      "titel": "Il comando non può leggere questo formato di file",
+      "text": {
+        "du": "Il modo più semplice per aprire i file Excel è «Apri file».",
+        "sie": "Il modo più semplice per aprire i file Excel è «Apri file»."
+      },
+      "tun": {
+        "du": "Trascina il file nella finestra.",
+        "sie": "Trascina il file nella finestra."
+      }
+    },
+    {
+      "id": "auswahl-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting one of the following: (.+)\\.",
+      "original": "FREQUENCIES: Syntax error expecting one of the following: STATISTICS, PERCENTILES, FORMAT, NTILES, ALGORITHM, HISTOGRAM, PIECHART, BARCHART, MISSING, ORDER.",
+      "titel": "Questa parola qui non va bene",
+      "text": {
+        "du": "A questo punto è possibile solo una di queste parole: {1}.",
+        "sie": "A questo punto è possibile solo una di queste parole: {1}."
+      },
+      "tun": {
+        "du": "Scegline una.",
+        "sie": "Scegline una."
+      }
+    },
+    {
+      "id": "auswahl-oder",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting ((?:\\S+, )+\\S+,? or \\S+)\\.",
+      "original": "EXAMINE: Syntax error expecting BOXPLOT, NPPLOT, HISTOGRAM, SPREADLEVEL, NONE, or ALL.",
+      "titel": "Questa parola qui non va bene",
+      "text": {
+        "du": "Possibili qui: {1}.",
+        "sie": "Possibili qui: {1}."
+      },
+      "tun": {
+        "du": "Scegline una.",
+        "sie": "Scegline una."
+      }
+    }
+  ],
+  "rueckfall": {
+    "titel": "Non ha funzionato",
+    "text": {
+      "du": "Statable non ha eseguito il comando. Nei tuoi dati non è cambiato nulla.",
+      "sie": "Statable non ha eseguito il comando. Nei tuoi dati non è cambiato nulla."
+    },
+    "tun": {
+      "du": "In «Dettagli» trovi il messaggio originale di PSPP. Con esso puoi cercare nell’aiuto o inviarlo con «Segnala».",
+      "sie": "In «Dettagli» trovi il messaggio originale di PSPP. Con esso puoi cercare nell’aiuto o inviarlo con «Segnala»."
+    }
+  }
+}

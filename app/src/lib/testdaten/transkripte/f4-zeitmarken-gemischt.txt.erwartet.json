@@ -1,0 +1,32 @@
+{
+  "quelle": "f4",
+  "beitraege": [
+    {
+      "sprecher": "I",
+      "zeitMs": 0,
+      "bisMs": 3200,
+      "text": "Guten Morgen, wollen wir die Semesterplanung besprechen?"
+    },
+    {
+      "sprecher": "B",
+      "zeitMs": 3200,
+      "bisMs": 7100,
+      "text": "Gern, aber ich brauche noch die Raumliste."
+    },
+    {
+      "sprecher": "I",
+      "zeitMs": 7100,
+      "bisMs": 14200,
+      "text": "Außerdem muss der Übungstermin am Freitag verschoben werden."
+    },
+    {
+      "sprecher": "B",
+      "zeitMs": 14200,
+      "bisMs": 18400,
+      "text": "Danke, dann schicke ich die Liste bis Mittwoch."
+    }
+  ],
+  "meldungsArten": [
+    "zeitmarken-gemischt"
+  ]
+}

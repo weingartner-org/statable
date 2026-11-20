@@ -1,0 +1,73 @@
+{
+  "text": "Interviewerin: Schreiben Sie mir bitte Ihre E-Mail-Adresse auf? (lacht)\n\nBefragte A: Klar, geht's auch später? Es sind 3,5 Stunden Fahrt [Lärm] bis dahin. 😀 Danke!\n\nBefragte A (zweite Kennung): Ich war (unv. #00:01:02-3#) damals dabei, ähm, ja. #00:00:20-0#\n\nInterviewerin: Mhm. (...) Und dann?\n\nBefragte A: Dann kam der Zug – ein Zug mit 12 Wagen und E-Mail-Service (nur im Prospekt).\n\nInterviewerin: Gut.",
+  "sprecher": [
+    {
+      "id": "I",
+      "name": "Interviewerin"
+    },
+    {
+      "id": "B1",
+      "name": "Befragte A"
+    },
+    {
+      "id": "B2",
+      "name": "Befragte A (zweite Kennung)"
+    }
+  ],
+  "abschnitte": [
+    {
+      "start": 0,
+      "ende": 71,
+      "sprecher": "I",
+      "zeitMs": 0,
+      "bisMs": 6000
+    },
+    {
+      "start": 73,
+      "ende": 163,
+      "sprecher": "B1",
+      "zeitMs": 6000,
+      "bisMs": 15000
+    },
+    {
+      "start": 165,
+      "ende": 257,
+      "sprecher": "B2",
+      "zeitMs": 15000
+    },
+    {
+      "start": 259,
+      "ende": 294,
+      "sprecher": "I",
+      "zeitMs": 21000,
+      "bisMs": 24000
+    },
+    {
+      "start": 296,
+      "ende": 385,
+      "sprecher": "B1",
+      "zeitMs": 24000,
+      "bisMs": 40000
+    },
+    {
+      "start": 387,
+      "ende": 406,
+      "sprecher": "I",
+      "zeitMs": 40000
+    }
+  ],
+  "zuordnung": {
+    "I": {
+      "name": "Interviewerin",
+      "rolle": "interview"
+    },
+    "B1": {
+      "name": "Befragte A",
+      "rolle": "befragt"
+    },
+    "B2": {
+      "name": "Befragte A",
+      "rolle": "befragt"
+    }
+  }
+}

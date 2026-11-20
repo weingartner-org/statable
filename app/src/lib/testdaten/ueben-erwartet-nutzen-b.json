@@ -1,0 +1,39 @@
+{
+  "quelle": "R 4.x, scripts/ueben-erwartet-nutzen-b.R",
+  "aufgaben": {
+    "nb-imputation": {
+      "mittel": 8,
+      "sd-vorher": 2.89827534923789,
+      "sd-nachher": 2.44948974278318,
+      "verlust": 15.4845745271484
+    },
+    "nb-robust": {
+      "mittel": 12.2,
+      "median": 8.5,
+      "getrimmt": 8.66666666666667,
+      "winsor": 8.8
+    },
+    "nb-matching": {
+      "vorher": 1,
+      "nachher": 0.15,
+      "abnahme": 85
+    },
+    "nb-kalibrierung": {
+      "steigung": 2,
+      "achse": 1.2,
+      "konzentration": 7
+    },
+    "nb-referenz": {
+      "rang-unten": 1.5,
+      "unten": 3.3,
+      "rang-oben": 58.5,
+      "oben": 7
+    },
+    "nb-korrespondenz": {
+      "jung-bus": 50,
+      "alt-bus": 20,
+      "durchschnitt-bus": 30,
+      "abweichung": 20
+    }
+  }
+}

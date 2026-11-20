@@ -1,0 +1,31 @@
+{
+  "quelle": "vtt",
+  "beitraege": [
+    {
+      "zeitMs": 0,
+      "bisMs": 2500,
+      "text": "Guten Morgen."
+    },
+    {
+      "zeitMs": 2600,
+      "bisMs": 5000,
+      "text": "Wollen wir die Semesterplanung besprechen?"
+    },
+    {
+      "zeitMs": 8000,
+      "bisMs": 10000,
+      "text": "Gern, aber ich brauche noch die Raumliste."
+    },
+    {
+      "zeitMs": 10500,
+      "bisMs": 13000,
+      "text": "Außerdem muss der Übungstermin verschoben werden."
+    },
+    {
+      "zeitMs": 15000,
+      "bisMs": 17000,
+      "text": "Ich schicke die Liste bis Mittwoch."
+    }
+  ],
+  "meldungsArten": []
+}

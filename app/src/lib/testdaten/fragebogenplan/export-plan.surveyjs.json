@@ -1,0 +1,391 @@
+{
+  "title": {
+    "default": "Student survey",
+    "de": "Studierendenbefragung",
+    "en": "Student survey"
+  },
+  "description": {
+    "default": "Thank you for taking part.",
+    "de": "Danke, dass Sie mitmachen.",
+    "en": "Thank you for taking part."
+  },
+  "completedHtml": {
+    "default": "Thank you very much!",
+    "de": "Vielen Dank!",
+    "en": "Thank you very much!"
+  },
+  "locale": "de",
+  "showProgressBar": "top",
+  "progressBarType": "pages",
+  "showPrevButton": true,
+  "pages": [
+    {
+      "name": "s_person",
+      "title": {
+        "default": "About you",
+        "de": "Zur Person",
+        "en": "About you"
+      },
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "einw",
+          "title": {
+            "default": "I agree to take part.",
+            "de": "Ich stimme der Teilnahme zu.",
+            "en": "I agree to take part."
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": 1,
+              "text": {
+                "default": "I agree to take part.",
+                "de": "Ich stimme der Teilnahme zu.",
+                "en": "I agree to take part."
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "alter",
+          "title": {
+            "default": "How old are you?",
+            "de": "Wie alt sind Sie?",
+            "en": "How old are you?"
+          },
+          "description": {
+            "default": "Please give whole years.",
+            "de": "Bitte in ganzen Jahren.",
+            "en": "Please give whole years."
+          },
+          "isRequired": true,
+          "inputType": "number",
+          "min": 16,
+          "max": 99,
+          "step": 1
+        },
+        {
+          "type": "text",
+          "name": "geb",
+          "title": {
+            "default": "When were you born?",
+            "de": "Wann sind Sie geboren?",
+            "en": "When were you born?"
+          },
+          "inputType": "date"
+        },
+        {
+          "type": "radiogroup",
+          "name": "studium",
+          "title": {
+            "default": "Are you enrolled?",
+            "de": "Sind Sie eingeschrieben?",
+            "en": "Are you enrolled?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": 1,
+              "text": {
+                "default": "Yes",
+                "de": "Ja",
+                "en": "Yes"
+              }
+            },
+            {
+              "value": 2,
+              "text": {
+                "default": "No",
+                "de": "Nein",
+                "en": "No"
+              }
+            },
+            {
+              "value": -9,
+              "text": {
+                "default": "No answer",
+                "de": "Keine Angabe",
+                "en": "No answer"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "s_medien",
+      "title": {
+        "default": "Media use",
+        "de": "Mediennutzung",
+        "en": "Media use"
+      },
+      "visibleIf": "{studium} = 1",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "medien",
+          "title": {
+            "default": "Which media do you use?",
+            "de": "Welche Medien nutzen Sie?",
+            "en": "Which media do you use?"
+          },
+          "choices": [
+            {
+              "value": 1,
+              "text": {
+                "default": "Newspaper",
+                "de": "Zeitung",
+                "en": "Newspaper"
+              }
+            },
+            {
+              "value": 2,
+              "text": {
+                "default": "Radio",
+                "de": "Radio",
+                "en": "Radio"
+              }
+            },
+            {
+              "value": 3,
+              "text": {
+                "default": "Internet",
+                "de": "Internet",
+                "en": "Internet"
+              }
+            },
+            {
+              "value": -8,
+              "text": {
+                "default": "don't know",
+                "de": "weiß nicht",
+                "en": "don't know"
+              }
+            }
+          ],
+          "showNoneItem": true,
+          "noneText": {
+            "default": "None of these",
+            "de": "Nichts davon",
+            "en": "None of these"
+          },
+          "showOtherItem": true,
+          "otherText": {
+            "default": "Other, please specify:",
+            "de": "Anderes, und zwar:",
+            "en": "Other, please specify:"
+          }
+        },
+        {
+          "type": "radiogroup",
+          "name": "tv_nutzung",
+          "title": {
+            "default": "Do you watch TV online?",
+            "de": "Sehen Sie online fern?",
+            "en": "Do you watch TV online?"
+          },
+          "choices": [
+            {
+              "value": 1,
+              "text": {
+                "default": "Yes",
+                "de": "Ja",
+                "en": "Yes"
+              }
+            },
+            {
+              "value": 2,
+              "text": {
+                "default": "No",
+                "de": "Nein",
+                "en": "No"
+              }
+            },
+            {
+              "value": -9,
+              "text": {
+                "default": "No answer",
+                "de": "Keine Angabe",
+                "en": "No answer"
+              }
+            }
+          ],
+          "visibleIf": "{medien} contains 3"
+        },
+        {
+          "type": "text",
+          "name": "stunden",
+          "title": {
+            "default": "How many hours per day?",
+            "de": "Wie viele Stunden täglich?",
+            "en": "How many hours per day?"
+          },
+          "inputType": "number",
+          "min": 0,
+          "max": 12,
+          "step": 1,
+          "visibleIf": "{studium} = 1 and {alter} notempty"
+        },
+        {
+          "type": "ranking",
+          "name": "rang",
+          "title": {
+            "default": "Rank by importance.",
+            "de": "Ordnen Sie nach Wichtigkeit.",
+            "en": "Rank by importance."
+          },
+          "choices": [
+            {
+              "value": 1,
+              "text": {
+                "default": "Price",
+                "de": "Preis",
+                "en": "Price"
+              }
+            },
+            {
+              "value": 2,
+              "text": {
+                "default": "Quality",
+                "de": "Qualität",
+                "en": "Quality"
+              }
+            },
+            {
+              "value": 3,
+              "text": {
+                "default": "Service",
+                "de": "Service",
+                "en": "Service"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "s_haltung",
+      "title": {
+        "default": "Attitudes",
+        "de": "Haltungen",
+        "en": "Attitudes"
+      },
+      "elements": [
+        {
+          "type": "matrix",
+          "name": "zust",
+          "title": {
+            "default": "How far do you agree?",
+            "de": "Wie sehr stimmen Sie zu?",
+            "en": "How far do you agree?"
+          },
+          "columns": [
+            {
+              "value": 1,
+              "text": {
+                "default": "strongly disagree",
+                "de": "stimme gar nicht zu",
+                "en": "strongly disagree"
+              }
+            },
+            {
+              "value": 2,
+              "text": {
+                "default": "tend to disagree",
+                "de": "stimme eher nicht zu",
+                "en": "tend to disagree"
+              }
+            },
+            {
+              "value": 3,
+              "text": {
+                "default": "neither agree nor disagree",
+                "de": "teils/teils",
+                "en": "neither agree nor disagree"
+              }
+            },
+            {
+              "value": 4,
+              "text": {
+                "default": "tend to agree",
+                "de": "stimme eher zu",
+                "en": "tend to agree"
+              }
+            },
+            {
+              "value": 5,
+              "text": {
+                "default": "strongly agree",
+                "de": "stimme voll zu",
+                "en": "strongly agree"
+              }
+            },
+            {
+              "value": -8,
+              "text": {
+                "default": "don't know",
+                "de": "weiß nicht",
+                "en": "don't know"
+              }
+            }
+          ],
+          "rows": [
+            {
+              "value": "z1",
+              "text": {
+                "default": "I like learning.",
+                "de": "Ich lerne gern.",
+                "en": "I like learning."
+              }
+            },
+            {
+              "value": "z2",
+              "text": {
+                "default": "I am often tired.",
+                "de": "Ich bin oft müde.",
+                "en": "I am often tired."
+              }
+            },
+            {
+              "value": "z3",
+              "text": {
+                "default": "Exams are fair.",
+                "de": "Prüfungen sind fair.",
+                "en": "Exams are fair."
+              }
+            }
+          ],
+          "isRequired": true,
+          "eachRowRequired": true,
+          "visibleIf": "{alter} >= 18"
+        },
+        {
+          "type": "comment",
+          "name": "kommentar",
+          "title": {
+            "default": "Anything else?",
+            "de": "Was möchten Sie noch sagen?",
+            "en": "Anything else?"
+          }
+        },
+        {
+          "type": "image",
+          "name": "h_bild",
+          "title": {
+            "default": "This is the canteen.",
+            "de": "Das ist die Mensa.",
+            "en": "This is the canteen."
+          },
+          "imageLink": "mensa.png",
+          "altText": {
+            "default": "Photo of the canteen with tables",
+            "de": "Foto der Mensa mit Tischen",
+            "en": "Photo of the canteen with tables"
+          }
+        }
+      ]
+    }
+  ]
+}

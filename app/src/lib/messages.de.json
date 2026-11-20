@@ -1,0 +1,1541 @@
+{
+  "_info": {
+    "stand": "2026-10-07",
+    "zweck": "Entwurf des Wortverzeichnisses für Statable. Erklärtexte und Meldungen von Hand geschrieben.",
+    "regeln": [
+      "Meldungen: die erste passende Regel gewinnt - darum stehen allgemeine Muster (auswahl-*) am Ende.",
+      "Erklärtexte sprechen niemanden an (kein du, kein Sie) - dann gelten sie für beide Anreden.",
+      "Wo eine Anrede nötig ist, stehen zwei Fassungen: du und sie.",
+      "Nie 'Fehler', 'falsch', 'ungültig' im Titel. Statt dessen sagen, was passiert ist und was hilft.",
+      "Statable spricht nicht als Person ('ich'). Es sagt, was es getan hat.",
+      "Zahlen deutsch: Dezimalkomma, p-Werte ohne führende Null (,005), Minus als −.",
+      "pruefen: true = vor dem Einsatz von einer Statistik-Fachperson abnehmen lassen."
+    ]
+  },
+  "erklaer": {
+    "bayes": {
+      "titel": "Bayes-Faktor (BF₁₀)",
+      "kurz": "Sprechen die Daten eher für einen Unterschied oder eher dagegen? Der Bayes-Faktor (BF₁₀) vergleicht beide Möglichkeiten. BF₁₀ = 8 heißt: Die Daten wären etwa 8-mal wahrscheinlicher, wenn es einen Unterschied gibt.",
+      "beispiel": "Haltbarkeit von Brot aus zwei Bäckereien: BF₁₀ = 6, die Daten sind also 6-mal wahrscheinlicher bei einem Unterschied. BF₁₀ = 0,25 hieße: 4-mal wahrscheinlicher ohne Unterschied (1 / 0,25 = 4).",
+      "vorsicht": "Der Bayes-Faktor sagt nicht, wie wahrscheinlich ein Unterschied ist, und hängt von einer vorab gewählten Annahme ab. Ein Wert nahe 1 heißt nur: keine Seite ist belegt; Stufen wie „moderat“ sind Faustregeln.",
+      "fachwoerter": "p-Wert (wie oft ein mindestens so großer Unterschied vorkäme, wenn es in Wahrheit keinen gibt), H₀ und H₁ (die Annahmen „kein Unterschied“ und „Unterschied“), Prior (die vorab gewählte Annahme über mögliche Unterschiede), BF₀₁ (der umgekehrte Vergleich, BF₀₁ = 1 / BF₁₀).",
+      "pruefen": true
+    },
+    "p-wert": {
+      "titel": "p-Wert",
+      "kurz": "Ist ein Unterschied echt oder nur Zufall? Sicher wissen kann man das nie. Der p-Wert hilft so: Angenommen, es gibt in Wahrheit keinen Unterschied. Wie oft käme dann trotzdem ein mindestens so großer heraus?",
+      "beispiel": "Zwei Tomatensorten, p = ,03: Wären die Sorten in Wahrheit gleich, käme so ein Unterschied in etwa 3 von 100 Versuchen vor.",
+      "vorsicht": "p ist nicht die Wahrscheinlichkeit, dass das Ergebnis Zufall ist. p sagt auch nicht, wie groß oder wichtig der Unterschied ist: Dafür gibt es die Effektstärke. Er gilt nur, wenn auch die übrigen Annahmen der Rechnung stimmen, etwa Zufallsauswahl und Unabhängigkeit.",
+      "pruefen": true
+    },
+    "signifikanz": {
+      "titel": "Signifikant",
+      "kurz": "Was heißt „signifikant“? Der p-Wert liegt unter einer vorher festgelegten Grenze, meist ,05. Die Daten passen dann schlecht zur Annahme „kein Unterschied“. Bei sehr vielen Fällen wird schon ein kleiner Effekt signifikant. Und: Der Unterschied zwischen „signifikant“ und „nicht signifikant“ ist nicht von selbst signifikant.",
+      "beispiel": "p = ,03 liegt unter ,05: signifikant. p = ,07 liegt darüber: nicht signifikant.",
+      "vorsicht": "Signifikant heißt nicht wichtig und nicht bewiesen. Nicht signifikant heißt nicht: kein Unterschied. Die Grenze ,05 ist eine Gewohnheit.",
+      "pruefen": true
+    },
+    "effektstaerke": {
+      "titel": "Effektstärke",
+      "kurz": "Wie groß ist ein Unterschied oder Zusammenhang? Das sagt die Effektstärke. Mehr Personen machen den p-Wert kleiner, die Effektstärke ändert sich dadurch nicht von selbst.",
+      "beispiel": "Cohens d = 0,5: Zwei Gruppen liegen eine halbe Standardabweichung (typischer Abstand der Werte vom Mittelwert) auseinander.",
+      "vorsicht": "Die Wörter klein, mittel, groß (d = 0,2; 0,5; 0,8) sind eine Gewohnheit nach Cohen. Was viel ist, hängt vom Fach und von der Frage ab.",
+      "pruefen": true
+    },
+    "konfidenzintervall": {
+      "titel": "Konfidenzintervall (KI)",
+      "statable": "Zum Ausprobieren: Auf der Startseite „Rechner öffnen“ wählen (oder Strg+K und „Rechner und Regler“), dann bei „Ausprobieren: Was verändert das Ergebnis?“ auf „Öffnen“ klicken und „Intervall: Zahl der Personen“ wählen. Die Regler „Zahl der Personen (n)“ und „Streuung (Standardabweichung)“ verändern die Breite des Intervalls; Zahlen und Balkenbild ändern sich sofort. Für eigene Daten steht das Konfidenzintervall in den Ergebnissen der Auswertungen.",
+      "kurz": "Wie genau ist ein Ergebnis? Das Konfidenzintervall (KI) ist ein Bereich um den gemessenen Wert. Er zeigt, welche wahren Werte gut zu den Daten passen. Schmal heißt genau, breit heißt ungenau.",
+      "beispiel": "Ein neuer Arbeitsweg spart im Mittel 4 Minuten, 95 %-KI [1,2; 6,8]: Eine wahre Ersparnis von 2 oder 6 Minuten passt gut zu den Daten.",
+      "vorsicht": "„95 %“ beschreibt die Methode: Bei vielen Wiederholungen träfen etwa 95 von 100 solcher Bereiche den wahren Wert. Ob dieser eine Bereich trifft, weiß man nicht. Liegt die 0 im 95-%-Bereich, passt auch „kein Unterschied“ zu den Daten, und der zweiseitige Test zum Niveau ,05 ist nicht signifikant.",
+      "pruefen": true
+    },
+    "normalverteilung": {
+      "titel": "Normalverteilung",
+      "kurz": "Wie verteilen sich die Werte? Bei einer Normalverteilung liegen die meisten in der Mitte und werden zu beiden Seiten hin gleichmäßig seltener. Das ergibt eine Glockenform.",
+      "beispiel": "Das Gewicht abgepackter 500-g-Nudelpackungen streut glockenförmig um 500 g. Wartezeiten an einer Hotline tun das nicht: Viele sind kurz, wenige sehr lang.",
+      "vorsicht": "Für den Vergleich von Mittelwerten stören ein langer Ausläufer auf einer Seite (Schiefe) und Ausreißer mehr als eine feste Personenzahl. Bei vielen Personen ist die Form weniger wichtig, bei sehr wenigen kaum zu beurteilen.",
+      "fachwoerter": "Test nach Welch (ein t-Test, der gleich große Streuung der Gruppen nicht verlangt), Schiefe (ein langer Ausläufer auf einer Seite), Ausreißer (ein Wert weit abseits der anderen).",
+      "pruefen": true
+    },
+    "mittelwert": {
+      "titel": "Mittelwert (M)",
+      "kurz": "Was ist der typische Wert? Der Mittelwert ist der Durchschnitt: alle Werte zusammenzählen und durch ihre Anzahl teilen.",
+      "beispiel": "Fünf Wartezeiten am Schalter: 8, 12, 9, 15 und 11 Minuten. Zusammen 55, geteilt durch 5 ergibt 11 Minuten.",
+      "vorsicht": "Einzelne sehr hohe oder sehr niedrige Werte ziehen den Mittelwert mit. Mit 60 statt 11 Minuten wäre er 20,8; der Median, der mittlere Wert der geordneten Reihe, stiege nur von 11 auf 12.",
+      "pruefen": false
+    },
+    "standardabweichung": {
+      "titel": "Standardabweichung (SD)",
+      "kurz": "Wie verschieden sind die Werte? Die Standardabweichung (SD) sagt, wie weit die Werte typischerweise vom Mittelwert entfernt liegen. Klein heißt: Die Werte liegen eng beieinander.",
+      "beispiel": "Schlafdauer: Mittelwert 7 Stunden, SD 1 Stunde. Bei glockenförmiger Verteilung schlafen etwa zwei Drittel zwischen 6 und 8 Stunden.",
+      "vorsicht": "Die SD beschreibt, wie verschieden die Personen sind. Wie genau der Mittelwert ist, sagen der Standardfehler und das Konfidenzintervall.",
+      "pruefen": false
+    },
+    "freiheitsgrade": {
+      "titel": "Freiheitsgrade (df)",
+      "kurz": "Was bedeutet die Zahl in Klammern, zum Beispiel t(18)? Das sind die Freiheitsgrade (df): eine Zahl, die vor allem von der Personenzahl abhängt. Der Rechner braucht sie, um den p-Wert zu berechnen.",
+      "beispiel": "20 Personen in zwei Gruppen: 20 minus 2 ergibt 18 Freiheitsgrade, also t(18). Bei Gruppen mit ungleicher Streuung (Welch-Test) ist die Zahl oft eine Kommazahl, etwa t(14,3).",
+      "vorsicht": "Mehr muss man über Freiheitsgrade meist nicht wissen. Sie gehören aber in jeden Bericht, damit andere das Ergebnis nachprüfen können.",
+      "pruefen": false
+    },
+    "korrelation": {
+      "titel": "Korrelation (r)",
+      "kurz": "Hängen zwei Dinge zusammen? Die Korrelation r zeigt es als Zahl von −1 bis +1. Positiv heißt: Mehr vom einen geht mit mehr vom anderen einher. Negativ: mit weniger. Nahe 0: kein geradliniger Zusammenhang.",
+      "beispiel": "Schlaf und Konzentration: r = ,30. Wer mehr schläft, konzentriert sich tendenziell besser.",
+      "vorsicht": "Ein Zusammenhang ist keine Ursache. r sieht nur geradlinige Zusammenhänge: Darum auch das Streudiagramm ansehen.",
+      "pruefen": true
+    },
+    "korrelationsmatrix": {
+      "titel": "Korrelationsmatrix",
+      "kurz": "Welche von mehreren Zahlenspalten hängen miteinander zusammen? Die Korrelationsmatrix zeigt alle Paare auf einmal. Die Holm-Korrektur macht die p-Werte strenger, weil bei vielen Paaren leicht eines zufällig auffällt.",
+      "beispiel": "Fünf Spalten ergeben 10 Paare. Das auffälligste hat p = ,012; nach der Holm-Korrektur wird daraus ,012 mal 10 = ,12 - nicht mehr unter ,05.",
+      "vorsicht": "Wer viele Paare prüft, findet zufällig auch Treffer; wer nur sucht, nimmt die Holm-Werte. Ein Zusammenhang ist keine Ursache.",
+      "fachwoerter": "r nach Pearson (Zusammenhang zweier Zahlenspalten, misst geradlinige Zusammenhänge), rs nach Spearman (derselbe Gedanke mit Rangplätzen statt Werten), n (Zahl der Fälle je Paar), 95 %-Konfidenzintervall (Bereich, der nach den Daten gut zum wahren Zusammenhang passt).",
+      "pruefen": true
+    },
+    "regression": {
+      "titel": "Regression",
+      "kurz": "Lässt sich ein Wert aus anderen Werten vorhersagen? Die Regression zieht die Gerade, die am besten zu den Daten passt. Sie zeigt, wie stark sich die Vorhersage ändert, wenn sich ein anderer Wert ändert.",
+      "beispiel": "Wohnungspreis aus der Fläche: Ein m² mehr gehört im Schnitt zu 2400 € mehr.",
+      "vorsicht": "Eine Vorhersage ist keine Ursache. Für die übliche Prüfung sollen die Reste (die Abstände zur Geraden) normalverteilt sein, nicht die Rohwerte.",
+      "pruefen": true
+    },
+    "chi-quadrat": {
+      "titel": "Chi-Quadrat-Test (χ²)",
+      "kurz": "Kommt etwas in Gruppen unterschiedlich oft vor? Der χ²-Test (Chi-Quadrat) vergleicht die gezählten Fälle einer Kreuztabelle mit den Zahlen, die man ohne Zusammenhang erwarten würde.",
+      "beispiel": "Je 100 Personen: Frühaufsteher trinken zu 60 % Kaffee, Langschläfer zu 40 %. χ²(1) = 8,0, p = ,005.",
+      "vorsicht": "χ² sagt nicht, wie stark der Zusammenhang ist: Bei doppelt so vielen Personen und gleichen Anteilen verdoppelt es sich. Die Stärke zeigt Cramérs V.",
+      "fachwoerter": "exakter Test nach Fisher (rechnet bei 2 × 2 Feldern und wenigen Personen genauer als χ²), erwartete Anzahl (so viele Fälle je Feld, wie ohne Zusammenhang zu erwarten wären).",
+      "pruefen": true
+    },
+    "streuung": {
+      "titel": "Streuung",
+      "kurz": "Wie unterschiedlich sind die Werte? Streuung ist der Oberbegriff dafür. Maße sind die Spannweite (größter minus kleinster Wert), die Standardabweichung und der Interquartilsabstand (Breite der mittleren Hälfte der Werte).",
+      "beispiel": "Fahrzeit von 40 Fahrten: 12 bis 51 Minuten, Spannweite 51 − 12 = 39, Standardabweichung 8,5, Interquartilsabstand 10.",
+      "vorsicht": "Die Spannweite hängt nur an zwei Werten. Ein einziger Ausreißer macht sie viel größer.",
+      "pruefen": false
+    },
+    "stichprobe": {
+      "titel": "Stichprobe",
+      "kurz": "Wer hat tatsächlich mitgemacht? Das ist die Stichprobe. Mit ihr will man etwas über eine größere Gruppe sagen, die Grundgesamtheit.",
+      "beispiel": "Eine Bibliothek befragt an einem Dienstag 150 Besuchende, um etwas über alle Nutzenden im Jahr zu sagen. Ob das trägt, hängt davon ab, wie diese 150 ausgewählt wurden.",
+      "vorsicht": "Viele Personen gleichen eine einseitige Auswahl nicht aus. Wer nur Besuchende am Dienstagmorgen fragt, beschreibt vor allem diese.",
+      "pruefen": false
+    },
+    "voraussetzung": {
+      "titel": "Voraussetzung",
+      "kurz": "Darf ein Verfahren bei diesen Daten benutzt werden? Jedes Verfahren rechnet mit Annahmen, den Voraussetzungen, zum Beispiel „jede Person gehört zu genau einer Gruppe“. Passen sie nicht, kann das Ergebnis in die Irre führen.",
+      "beispiel": "Vor dem Vergleich zweier Kundengruppen: Sind es wirklich zwei getrennte Gruppen? Sind die Werte Zahlen? Gibt es sehr auffällige Einzelwerte?",
+      "vorsicht": "Ein Hinweis ist kein Verbot, sondern ein Grund, genauer hinzusehen. Manche Annahmen kann keine Software prüfen, etwa ob die Personen unabhängig voneinander geantwortet haben, also ohne sich abzusprechen - das ergibt sich aus der Erhebung.",
+      "pruefen": true
+    },
+    "ausreisser": {
+      "titel": "Ausreißer",
+      "kurz": "Liegt ein Wert auffällig weit weg von allen anderen? Dann ist er ein Ausreißer. Er kann ein Tippfehler sein, ein Messfehler - oder eine echte, ungewöhnliche Antwort. Im Boxplot stehen auffällige Werte als Punkte außerhalb der Whisker (der Striche an der Box). Das macht sie noch nicht zu Fehlern.",
+      "beispiel": "Zehn Lieferzeiten in Tagen: neunmal zwischen 2 und 4 (Summe 27), einmal 31. Ohne die 31 ist der Mittelwert 27 / 9 = 3,0 Tage, mit ihr 58 / 10 = 5,8.",
+      "vorsicht": "Ausreißer nie still löschen: erst im Original nachsehen, die Rechnung mit und ohne ihn zeigen und die Entscheidung begründen. In der Regression zieht ein Punkt weit außen die Gerade zu sich, auch wenn er kaum auffällt.",
+      "pruefen": true,
+      "statable": "Bei einer Regression zeigt der Block „Regression prüfen: Kollinearität und auffällige Fälle“ unter dem Ergebnis die Fälle mit großem Residuum, Hebelwert oder Cooks Distanz samt Zeilennummer in den Daten. Dort nachsehen, nie still löschen. Einzelne Werte einer Spalte meldet der Daten-Check beim Öffnen."
+    },
+    "reliabilitaet": {
+      "titel": "Zuverlässigkeit einer Skala (Cronbachs Alpha)",
+      "statable": "Zum Ausprobieren: Auf der Startseite „Rechner öffnen“ wählen (oder Strg+K und „Rechner und Regler“), dann bei „Ausprobieren: Was verändert das Ergebnis?“ auf „Öffnen“ klicken und „Alpha: Zahl der Fragen“ wählen. Die Regler „Zahl der Fragen“ und „Mittlerer Zusammenhang der Fragen (r)“ zeigen, dass Alpha schon durch mehr Fragen steigt; das Ergebnis steht als „α = …“ daneben.",
+      "kurz": "Messen mehrere Fragen zusammen verlässlich? Cronbachs Alpha zeigt, wie stark die Antworten auf die Fragen einer Skala zusammenhängen. Der Wert liegt meist zwischen 0 und 1.",
+      "beispiel": "Fünf Fragen zur Arbeitszufriedenheit: α = ,82.",
+      "vorsicht": "Ein hohes Alpha beweist nicht, dass alle Fragen dieselbe Sache messen, und mehr Fragen erhöhen es von selbst. ,70 wird oft als Untergrenze genannt, das ist eine Gewohnheit. Bei mehreren Unterskalen rechnet man Alpha für jede einzeln; der Wert hängt auch von den Befragten ab.",
+      "fachwoerter": "interne Konsistenz (wie stark die Antworten auf die Fragen einer Skala zusammenhängen), Eindimensionalität (alle Fragen messen dasselbe Merkmal), Faktorenanalyse (zeigt, ob die Fragen ein oder mehrere Merkmale messen), Trennschärfe (wie gut eine Frage zu den übrigen passt), umpolen (eine umgekehrt gestellte Frage in die gleiche Richtung drehen).",
+      "pruefen": true
+    },
+    "faktorenanalyse": {
+      "titel": "Faktorenanalyse",
+      "kurz": "Welche Fragen gehören zusammen? Die Faktorenanalyse sucht Gruppen von Fragen, die ähnlich beantwortet werden. Die Ladung (von −1 bis 1) zeigt, wie stark eine Frage zu einer Gruppe gehört.",
+      "beispiel": "Neun Fragen zum Leben in der Stadt bilden drei Gruppen: Verkehr, Sicherheit, Freizeit.",
+      "vorsicht": "Die Rechnung findet nur Gruppen. Was sie bedeuten, entscheiden Menschen. Ladungen ab ,30 bis ,50 werden oft dazugezählt, eine feste Grenze gibt es nicht.",
+      "fachwoerter": "Hauptkomponentenanalyse (Standard wie in SPSS: fasst die Fragen zu Komponenten zusammen), Hauptachsen-Faktorenanalyse (sucht gemeinsame Merkmale hinter den Fragen), Promax (Drehung, bei der die Faktoren zusammenhängen dürfen).",
+      "pruefen": true
+    },
+    "koeffizient-b": {
+      "titel": "Regressionskoeffizient B und Konstante",
+      "kurz": "Um wie viel ändert sich die Vorhersage, wenn eine Vorhersagegröße um 1 steigt und die übrigen gleich bleiben? Das sagt B, in den Einheiten der Daten. Darum ändert sich B, wenn weitere Größen ins Modell kommen. Die Konstante ist die Vorhersage, wenn alle Vorhersagegrößen 0 sind.",
+      "beispiel": "Wohnungspreis in 1000 €: B = 2,4 für die Fläche. Ein m² mehr gehört bei gleichem Stockwerk im Schnitt zu 2400 € mehr.",
+      "vorsicht": "B ändert sich mit der Einheit (Euro oder 1000 Euro). Nur bei gleicher Einheit lässt sich B zwischen Studien vergleichen; bei verschiedenen Skalen oder Einheiten bleibt nur Beta, das aber von der Streuung der Stichprobe abhängt. Die Konstante bedeutet oft nichts, wenn 0 gar nicht vorkommt (0 m²).",
+      "fachwoerter": "Beta (B in Standardabweichungen gerechnet, damit Skalen vergleichbar werden), Vorhersagegröße (Prädiktor: ein Wert, aus dem vorhergesagt wird).",
+      "pruefen": true
+    },
+    "beta": {
+      "titel": "Standardisierter Koeffizient Beta (β)",
+      "kurz": "B ohne Maßeinheiten: Beta rechnet alles in Standardabweichungen um (typischer Abstand der Werte vom Mittelwert). So stehen Größen mit verschiedenen Einheiten innerhalb einer Studie nebeneinander. Bei nur einer Vorhersagegröße ist Beta gleich r.",
+      "beispiel": "Wohnungspreis: Fläche β = ,62. Steigt die Fläche um eine Standardabweichung, steigt der Preis im Schnitt um 0,62 Standardabweichungen.",
+      "vorsicht": "Beta hängt davon ab, wie verschieden die Fälle einer Stichprobe sind. Haben zwei Studien verschiedene Skalen oder Einheiten, kann nur Beta nebeneinander stehen, B nicht - doch auch Beta hängt von der Streuung der Stichprobe ab. Ob ein größeres Beta „wichtiger“ heißt, ist umstritten.",
+      "pruefen": true
+    },
+    "standardfehler": {
+      "titel": "Standardfehler",
+      "kurz": "Wie genau ist ein geschätzter Wert? Mit anderen Personen käme ein etwas anderer Wert heraus. Der Standardfehler sagt, wie stark der Wert dabei typischerweise schwankt. Kleiner heißt genauer. Viermal so viele Personen halbieren ihn etwa. Die Standardabweichung (typischer Abstand der Einzelwerte vom Mittelwert) bleibt dabei ungefähr gleich.",
+      "beispiel": "Je Stunde Training 1,5 Punkte mehr (B = 1,5), Standardfehler 0,5. B geteilt durch den Standardfehler ergibt t = 3,0, daraus folgt p (Sig.).",
+      "vorsicht": "Mehr Personen machen ihn kleiner, auch wenn der Zusammenhang gleich bleibt. Der „Standardfehler des Schätzers“ in der Modellübersicht ist etwas anderes: die typische Abweichung der Werte von der Geraden.",
+      "fachwoerter": "Stichprobe (die Personen, die tatsächlich untersucht wurden), t (B geteilt durch den Standardfehler), Sig. (so heißt der zugehörige p-Wert in SPSS).",
+      "pruefen": true
+    },
+    "r-quadrat": {
+      "titel": "R² (R-Quadrat) und korrigiertes R²",
+      "kurz": "Wie viel der Unterschiede erklärt ein Modell? R² ist ein Anteil von 0 bis 1. Das korrigierte R² zieht etwas ab, weil jede weitere Größe R² erhöhen kann, selbst wenn sie nichts beiträgt. Bei nur einer Vorhersagegröße ist R² das Quadrat der Korrelation r. r selbst ist kein Anteil.",
+      "beispiel": "R² = ,40: Fläche und Lage erklären 40 % der Preisunterschiede in diesen Daten.",
+      "vorsicht": "„Erklärt“ ist rechnerisch gemeint, nicht als Ursache. Ein höheres R² allein macht ein Modell nicht besser.",
+      "fachwoerter": "Varianz (wie stark die Werte um ihren Mittelwert streuen), signifikant (der p-Wert liegt unter der festgelegten Grenze, meist ,05), Vorhersagegröße (Prädiktor: ein Wert, aus dem vorhergesagt wird).",
+      "pruefen": true
+    },
+    "eigenwert-rotation": {
+      "titel": "Eigenwert, Parallelanalyse, Ladung und Rotation",
+      "kurz": "Wie viele Gruppen von Fragen gibt es? Der Eigenwert zeigt, wie viel der Unterschiede eine Gruppe erfasst. Die Parallelanalyse behält nur Gruppen über dem Zufallswert, die Rotation macht die Zuordnung der Fragen klarer.",
+      "beispiel": "Acht Fragen zum Wohnumfeld: Zwei Gruppen liegen über dem Zufallswert, mit Eigenwerten 3,1 und 1,6. Zusammen 4,7 von 8, also 59 %. Frage 6 hat die Ladung ,81 auf Gruppe 1 (starke Zugehörigkeit) und ,05 auf Gruppe 2.",
+      "vorsicht": "Keine Regel ist ein Beweis: „Eigenwert über 1“ nennt oft zu viele Gruppen, die Parallelanalyse kann bei einer sehr großen ersten Gruppe, wenigen Personen und stark zusammenhängenden Gruppen zu wenige nennen. Die Zahl wird zusammen mit dem Scree-Plot (Diagramm der Eigenwerte) und dem Inhalt der Fragen entschieden.",
+      "fachwoerter": "Komponente (eine der Gruppen, die die Rechnung bildet), Kaiser-Kriterium (behält Komponenten mit Eigenwert über 1), Varimax (Drehung, bei der die Komponenten unabhängig bleiben), Promax (Drehung, bei der die Faktoren zusammenhängen dürfen).",
+      "pruefen": true
+    },
+    "trennschaerfe": {
+      "titel": "Korrigierte Item-Skala-Korrelation und Alpha, wenn Item gelöscht",
+      "kurz": "Passt eine Frage zu den übrigen Fragen einer Skala? Die Trennschärfe ist die Korrelation der Frage mit der Summe der anderen Fragen. Hoch heißt: Wer hier hoch antwortet, antwortet auch sonst eher hoch. Alpha, wenn Item gelöscht, ist das Alpha der Skala ohne diese Frage. Steigt es dann, zieht die Frage Alpha herunter.",
+      "beispiel": "Trennschärfe ,55: passt gut. Trennschärfe −,40: Die Frage läuft gegenläufig, vielleicht wurde sie nicht umgepolt.",
+      "vorsicht": "Oft gelten etwa ,40 bis ,70 als gut und unter etwa ,30 als Warnzeichen, das sind Gewohnheiten. Eine hohe Trennschärfe beweist nicht, dass alle Fragen dieselbe Sache messen. Über das Streichen entscheidet auch der Inhalt; danach rechnet man die Faktorenanalyse neu.",
+      "fachwoerter": "Cronbachs Alpha (Maß dafür, wie stark die Antworten einer Skala zusammenhängen), Item (eine einzelne Frage der Skala), umpolen (eine umgekehrt gestellte Frage in die gleiche Richtung drehen).",
+      "pruefen": true
+    },
+    "rangkorrelation": {
+      "titel": "Rangkorrelation (rs, τb)",
+      "kurz": "Hängen zwei Rangfolgen zusammen? Die Rangkorrelation (rs nach Spearman, τb nach Kendall) vergleicht nicht die Zahlen, sondern ihre Rangplätze, und passt, wenn nur die Reihenfolge zählt. Sie liegt zwischen −1 und +1.",
+      "beispiel": "Zufriedenheit (Stufen 1 bis 5) und Besuche pro Monat bei 60 Personen: rs = −,22. Wer häufiger kommt, ist tendenziell etwas weniger zufrieden. Der Zusammenhang ist schwach.",
+      "vorsicht": "Ein Zusammenhang ist keine Ursache. Die Rangkorrelation erfasst jeden Zusammenhang, der durchgehend steigt oder fällt, auch gekrümmte; ein Streudiagramm zeigt die Form.",
+      "pruefen": true
+    },
+    "kappa": {
+      "titel": "Cohens Kappa (κ)",
+      "kurz": "Wie gut stimmen zwei Beurteilende überein, wenn man das Raten abzieht? Cohens Kappa (κ) rechnet die Übereinstimmung heraus, die zufällig ohnehin käme. 0 heißt: nicht besser als Zufall; 1: vollständige Übereinstimmung.",
+      "beispiel": "Zwei Ärztinnen ordnen 50 Hautfotos als „auffällig“ oder „unauffällig“ ein. Bei 40 stimmen sie überein (80 %); nach Abzug des Zufalls κ = ,60 (95 %-Intervall ,38 bis ,82).",
+      "vorsicht": "κ fällt trotz hoher Übereinstimmung niedrig aus, wenn eine Kategorie sehr selten oder sehr häufig ist. Bezeichnungen wie „mäßig“ oder „beachtlich“ (Landis und Koch 1977) sind Faustregeln, keine Grenzen.",
+      "pruefen": true
+    },
+    "krippendorff-alpha": {
+      "titel": "Krippendorffs Alpha (α)",
+      "kurz": "Stimmen mehrere Personen beim Einordnen überein, auch wenn nicht jede jeden Fall bewertet hat? Krippendorffs Alpha (α) misst das in einer Zahl. Oft genannt: ab ,800 verlässlich, ab ,667 für vorläufige Schlüsse.",
+      "beispiel": "Drei Personen ordnen 60 Kundenkommentare in „Lob“, „Kritik“ oder „Frage“ ein: α = ,71. Das liegt über ,667, aber unter ,800: für vorläufige Schlüsse genug, für verlässliche nicht.",
+      "vorsicht": "Die Grenzen ,800 und ,667 sind Vorschläge von Krippendorff, keine Naturgesetze. Bei wenigen Fällen ist das Intervall breit.",
+      "pruefen": true
+    },
+    "icc": {
+      "titel": "Intraklassen-Korrelation (ICC)",
+      "kurz": "Wie viel der Unterschiede zwischen Urteilen liegt an den beurteilten Fällen und nicht an den Beurteilenden? Das zeigt der ICC (Intraklassen-Korrelation): 0 heißt keine Übereinstimmung, 1 vollständige.",
+      "beispiel": "Drei Prüferinnen bewerten 10 Torten mit 0 bis 100 Punkten: ICC(2,1) = ,82 (95 %-Intervall ,43 bis ,95) für ein einzelnes Urteil, ICC(2,3) = ,93 (,70 bis ,98) für den Mittelwert der drei Urteile. Mit nur 10 Torten ist das erste Intervall noch breit.",
+      "vorsicht": "Es gibt Varianten (Einzelurteil oder Mittelwert; volle Übereinstimmung, oder ein fester Abstand zwischen den Beurteilenden ist erlaubt); man wählt sie vorher. Bei wenigen Fällen ist der ICC ungenau, und er fällt niedrig aus, wenn die Fälle sich kaum unterscheiden - auch bei guter Übereinstimmung.",
+      "fachwoerter": "Konfidenzintervall (Bereich, der nach den Daten gut zum wahren ICC passt), absolute Übereinstimmung ICC(2,·) (die Werte sollen gleich sein), Konsistenz ICC(3,·) (ein fester Abstand zwischen den Beurteilenden ist erlaubt), Einzel und Mittelwert (ein einzelnes Urteil oder der Mittelwert aller Urteile).",
+      "pruefen": true
+    },
+    "bland-altman": {
+      "titel": "Bland-Altman-Diagramm",
+      "kurz": "Wie weit liegen zwei Messverfahren bei denselben Fällen auseinander? Das Bland-Altman-Diagramm trägt je Fall die Differenz beider Werte gegen ihren Mittelwert auf. Bias ist die mittlere Differenz; die Grenzen umfassen etwa 95 % aller Differenzen.",
+      "beispiel": "Zwei Fieberthermometer bei 12 Personen: Bias = 0,16 °C (95 %-KI 0,05 bis 0,27), Übereinstimmungsgrenzen −0,18 bis 0,50 °C. Das zweite misst im Mittel höher (das Intervall des Bias schließt 0 nicht ein); im Einzelfall liegt es bis zu 0,5 °C höher.",
+      "vorsicht": "Ob die Spanne klein genug ist, entscheidet das Fach, nicht die Statistik. Bei wenigen Fällen sind die Grenzen ungenau, und hängen die Differenzen vom Mittelwert ab, gelten sie nicht überall gleich gut.",
+      "fachwoerter": "ICC (Intraklassen-Korrelation: setzt die Abweichungen ins Verhältnis zu den Unterschieden zwischen den Fällen), Standardabweichung (SD, typische Streuung; die Grenzen sind Bias ± 1,96 SD).",
+      "pruefen": true
+    },
+    "sensitivitaet": {
+      "titel": "Sensitivität",
+      "kurz": "Wie viele der wirklich Betroffenen findet ein Test? Die Sensitivität ist der Anteil der tatsächlich Positiven, die der Test als positiv erkennt. Als Wahrheit gilt dabei die beste verfügbare Vergleichsprüfung.",
+      "beispiel": "Von 40 Personen mit bestätigter Diagnose erkennt der Schnelltest 34: Sensitivität = 34 / 40 = 85 % (95 %-KI 71 bis 93 %).",
+      "vorsicht": "Stellt man den Test strenger oder milder ein, ändern sich Sensitivität und Spezifität gegenläufig. Mit wenigen Betroffenen ist das Intervall breit.",
+      "fachwoerter": "Referenzstandard (die beste verfügbare Prüfung, deren Ergebnis als Wahrheit gilt), richtig Positive (Betroffene, die der Test erkennt).",
+      "pruefen": true
+    },
+    "spezifitaet": {
+      "titel": "Spezifität",
+      "kurz": "Wie viele der nicht Betroffenen erkennt ein Test richtig? Die Spezifität ist der Anteil der tatsächlich Negativen, die der Test als negativ erkennt. Hoch heißt: wenige Fehlalarme.",
+      "beispiel": "Von 120 Personen ohne Diagnose bleiben 108 unauffällig: Spezifität = 108 / 120 = 90 % (95 %-KI 83 bis 94 %).",
+      "vorsicht": "Die Vergleichsprüfung gilt als Wahrheit; ist sie selbst unsicher, sind Sensitivität und Spezifität ungenau. Bei seltenen Merkmalen sagt ein positives Ergebnis trotz hoher Spezifität oft weniger als gedacht (siehe Vorhersagewerte).",
+      "fachwoerter": "Referenzstandard (die beste verfügbare Prüfung, deren Ergebnis als Wahrheit gilt), richtig Negative (Nichtbetroffene, die der Test als unauffällig erkennt).",
+      "pruefen": true
+    },
+    "vorhersagewert": {
+      "titel": "Vorhersagewerte (PPV, NPV)",
+      "statable": "Zum Ausprobieren: Auf der Startseite „Rechner öffnen“ wählen (oder Strg+K und „Rechner und Regler“), dann bei „Ausprobieren: Was verändert das Ergebnis?“ auf „Öffnen“ klicken und „Vorhersagewert: seltene Krankheit“ wählen. Die Regler „Sensitivität“, „Spezifität“ und „Häufigkeit der Krankheit“ verändern die Vierfeldertafel für 1000 Personen; sie zeigt, wie viele positive Ergebnisse richtig und wie viele falsch sind.",
+      "kurz": "Wie wahrscheinlich ist jemand wirklich betroffen, wenn der Test anschlägt? Das sagt der positive Vorhersagewert (PPV): der Anteil der positiv Getesteten, die tatsächlich betroffen sind. Der negative (NPV) gilt für negativ Getestete.",
+      "beispiel": "Ein Test mit 90 % Sensitivität und 90 % Spezifität. Von 1000 Personen sind 100 betroffen: 90 werden erkannt, aber auch 90 der 900 Gesunden schlagen an. PPV = 90 / 180 = 50 %. Wären 500 betroffen, läge PPV bei 450 / 500 = 90 %.",
+      "vorsicht": "Beide Werte ändern sich mit der Häufigkeit des Merkmals, auch bei gleicher Sensitivität und Spezifität, und gelten nur für Gruppen mit ähnlicher Häufigkeit. Wurden Betroffene und Nichtbetroffene getrennt gesucht (Fall-Kontroll-Studie), sind sie nicht zu deuten.",
+      "fachwoerter": "Likelihood-Quotienten (LR+ = Sensitivität / (1 − Spezifität), LR− = (1 − Sensitivität) / Spezifität: wie viel häufiger ein Ergebnis bei Betroffenen als bei Nichtbetroffenen vorkommt; sie hängen nicht von der Häufigkeit ab).",
+      "pruefen": true
+    },
+    "gepaarte-messung": {
+      "titel": "Gepaarte Messung (dz, dav)",
+      "kurz": "Hat sich bei denselben Personen etwas verändert? Bei einer gepaarten Messung stammen „vorher“ und „nachher“ von denselben Personen. dz und dav sind zwei Maße für die Größe der Veränderung. Der gepaarte t-Test rechnet mit den Unterschieden je Person. So fallen die Unterschiede zwischen den Personen heraus, und der p-Wert wird oft kleiner.",
+      "beispiel": "Liegestütze von 10 Personen vor und nach sechs Wochen Training: im Schnitt 2,9 mehr. dz = 2,9 / 1,37 = 2,12; dav = 2,9 / 3,94 = 0,74. dz fällt viel größer aus, weil vorher und nachher stark zusammenhängen (r = ,98).",
+      "vorsicht": "dz teilt die mittlere Veränderung durch die Streuung der Veränderungen, dav durch die mittlere Streuung von vorher und nachher; nur dav ist mit d aus Gruppenvergleichen vergleichbar. Ohne Vergleichsgruppe zeigt die Messung nicht, wodurch die Veränderung kam; Cohens Marken (0,2 / 0,5 / 0,8) sind Gewohnheit und gelten für dav, nicht für dz.",
+      "fachwoerter": "Standardabweichung (typische Streuung der Werte um ihren Mittelwert), Teststärke (die Chance, einen vorhandenen Unterschied zu finden; dz dient dazu, sie zu berechnen).",
+      "pruefen": true
+    },
+    "logistische-regression": {
+      "titel": "Logistische Regression",
+      "kurz": "Wovon hängt es ab, ob etwas eintritt oder nicht? Die logistische Regression sagt ein Ja-nein-Ergebnis aus anderen Werten vorher. Ein Modelltest prüft, ob sie besser vorhersagt als ein Modell ohne diese Werte.",
+      "beispiel": "Kündigung (ja/nein) aus Gehalt, Alter und Pendelzeit bei 300 Personen, 36 % kündigen: Modelltest χ²(3) = 14,2, p = ,003; Nagelkerkes R² = ,06. 68 % werden richtig zugeordnet; ohne Modell wären es 64 % (so viele gehören zur größeren Gruppe).",
+      "vorsicht": "Nagelkerkes R² ist kein Anteil erklärter Unterschiede wie bei der linearen Regression. Eine hohe Trefferquote ist wenig wert, wenn eine Gruppe ohnehin viel größer ist, und gilt meist nur für die Daten, mit denen das Modell angepasst wurde.",
+      "fachwoerter": "Odds (Chance: Wahrscheinlichkeit geteilt durch Gegenwahrscheinlichkeit, 75 % sind Odds von 3 zu 1), Prädiktor (Vorhersagegröße: ein Wert, aus dem vorhergesagt wird), Pseudo-R² (Nagelkerkes R², ersetzt das R² der linearen Regression, ist aber kein Anteil erklärter Unterschiede).",
+      "statable": "Regression rechnen (Zielspalte mit zwei Werten) und unter dem Ergebnis den Block „Logistische Regression prüfen: auffällige Fälle, Passung, Linearität des Logits, Blöcke“ aufklappen. Er zeigt den VIF, auffällige Fälle (Hebelwert, Cooks Distanz, Devianzresiduum, DFBETA), den Hosmer-Lemeshow-Test, den Box-Tidwell-Test und das Block-χ² für einen zweiten Block von Vorhersagegrößen.",
+      "pruefen": true
+    },
+    "odds-ratio": {
+      "titel": "Odds Ratio (OR)",
+      "kurz": "Um welchen Faktor ändert sich die Chance für ein Ereignis, wenn ein Wert um 1 steigt? Das sagt das Odds Ratio (OR). 1 heißt: kein Zusammenhang; über 1: die Chance steigt; unter 1: sie sinkt.",
+      "beispiel": "Chance, dass ein Paket zu spät ankommt, je 100 km Entfernung: OR = 1,35, 95 %-Intervall [1,12; 1,63]. Mit 100 km mehr steigt die Chance auf das 1,35-Fache, also um etwa 35 %. Das Intervall schließt 1 nicht ein.",
+      "vorsicht": "„Chance“ meint hier das Verhältnis von „tritt ein“ zu „tritt nicht ein“ (3 zu 1 statt 75 %); darum ist ein OR nicht „x-mal wahrscheinlicher“ - das stimmt nur bei seltenen Ereignissen. Liegt 1 im Intervall, ist ein Zusammenhang nicht belegt.",
+      "fachwoerter": "Odds (Chance: Wahrscheinlichkeit geteilt durch Gegenwahrscheinlichkeit), Prädiktor (Vorhersagegröße: ein Wert, aus dem vorhergesagt wird), Wald (das übliche Verfahren für das Intervall des OR).",
+      "pruefen": true
+    },
+    "eta-quadrat": {
+      "titel": "Eta-Quadrat (η²) und Omega-Quadrat (ω²)",
+      "kurz": "Wie viel der Unterschiede im Messwert hängt mit der Gruppe zusammen? η² (Eta-Quadrat) ist dieser Anteil, von 0 bis 1. ω² ist derselbe Gedanke, vorsichtiger gerechnet, und fällt etwas kleiner aus.",
+      "beispiel": "Drei Düngersorten, je 20 Pflanzen: η² = ,25 und ω² = ,22. Die Sorte hängt mit etwa einem Viertel der Ertragsunterschiede zusammen.",
+      "vorsicht": "Die Marken ,01 / ,06 / ,14 nach Cohen sind eine Gewohnheit für Gruppenvergleiche; bei mehrmals gemessenen Personen oder nicht zugeteilten Gruppen fällt eine Variante (partielles η²) viel größer aus, darum nutzt Statable dort das verallgemeinerte η² (ηG²). Der Gruppenvergleich (Varianzanalyse) zeigt nur, dass sich mindestens zwei Gruppen unterscheiden, nicht welche.",
+      "fachwoerter": "Grundgesamtheit (alle, über die man etwas sagen will; die Stichprobe ist nur ein Teil davon), Konfidenzintervall (plausibler Bereich für η² in der Grundgesamtheit), Messwiederholung (dieselben Personen werden mehrmals gemessen), partielles η² (ηp²: Effekt im Verhältnis zu Effekt plus zugehörigem Fehler), signifikant (der p-Wert liegt unter der festgelegten Grenze; ist der Test nicht signifikant, liegt die untere Grenze des Intervalls bei 0).",
+      "pruefen": true
+    },
+    "paarvergleich": {
+      "titel": "Paarvergleiche (Post-hoc: Tukey, Games-Howell, Bonferroni)",
+      "kurz": "Welche Gruppen unterscheiden sich, wenn es mehr als zwei sind? Paarvergleiche prüfen jedes Paar einzeln und machen die p-Werte strenger, weil viele Vergleiche leicht zufällig etwas „finden“. Üblich sind Tukey, Games-Howell und Bonferroni.",
+      "beispiel": "Drei Sorten ergeben 3 Paare. Bei Bonferroni wird jedes p mit 3 multipliziert: Aus ,020 wird ,060 - nicht mehr unter ,05.",
+      "vorsicht": "Ein nicht signifikantes Paar heißt nicht „gleich“, nur „nicht belegt“. Mit vielen Gruppen werden die Paare zahlreich, und jedes einzelne ist schwerer nachzuweisen.",
+      "fachwoerter": "Varianzanalyse (vergleicht die Mittelwerte von drei und mehr Gruppen), Post-hoc (nachträglich, nach der Varianzanalyse), Games-Howell (Standard in Statable, braucht keine gleich große Streuung), Tukey (setzt gleich große Streuung voraus), Bonferroni (streng und einfach: jedes p mal die Zahl der Paare).",
+      "pruefen": true
+    },
+    "welch-anova": {
+      "titel": "Welch-Varianzanalyse",
+      "kurz": "Wie vergleicht man mehrere Gruppen, die unterschiedlich stark streuen? Die klassische Varianzanalyse verlangt gleiche Streuung. Die Welch-Varianzanalyse verlangt das nicht: Sie gewichtet jede Gruppe nach ihrer Streuung.",
+      "beispiel": "Lieferzeiten von vier Lagern mit sehr verschiedener Streuung: Welch-F(3; 41,8) = 5,4, p = ,003. Die Lager unterscheiden sich, ohne dass gleiche Streuung vorausgesetzt wird.",
+      "vorsicht": "Auch die Welch-Analyse zeigt nur, dass sich mindestens zwei Gruppen unterscheiden. Welche, zeigen die Paarvergleiche (Games-Howell passt dazu).",
+      "fachwoerter": "Freiheitsgrade (df: die Zahlen in der Klammer neben F, sie legen fest, mit welcher Verteilung der Test vergleicht), Streuung (wie weit die Werte einer Gruppe auseinanderliegen).",
+      "pruefen": true
+    },
+    "rangtest": {
+      "titel": "Rangtest (ohne Normalverteilung)",
+      "kurz": "Was tun, wenn Mittelwerte wegen Ausreißern oder Schiefe schlecht passen? Rangtests ordnen alle Werte der Größe nach und rechnen mit den Rangplätzen. Sie brauchen keine Normalverteilung und reagieren kaum auf einzelne Ausreißer.",
+      "beispiel": "Wartezeiten in Minuten, je 6 Messungen: Dienst A 4, 5, 6, 7, 9, 13; Dienst B 8, 10, 11, 12, 15, 40. Mann-Whitney-Test (zwei Gruppen) U = 5, p = ,041 (exakt): B liegt tendenziell höher. Der Ausreißer 40 stört kaum.",
+      "vorsicht": "Ein Rangtest zeigt, ob eine Gruppe tendenziell höhere Werte hat - er prüft nicht allein die Mediane. Auch andere Streuung oder Form kann ihn auslösen.",
+      "fachwoerter": "Kruskal-Wallis (Rangtest für drei und mehr Gruppen), Wilcoxon (Rangtest für zwei Messungen derselben Personen), Dunn-Test mit Holm-Anpassung (zeigt nach Kruskal-Wallis, welche Paare sich unterscheiden), Hodges-Lehmann-Schätzer (HL: der Median aller Differenzen zwischen je einer Person aus jeder Gruppe) mit 95 %-Konfidenzintervall (plausibler Bereich dafür), Effektstärke (wie groß der Unterschied ist: r = |z| / √N, bei Kruskal-Wallis ε² = H / (n − 1)), Rang-biseriale Korrelation (Anteil der Paare, in denen die eine Gruppe höher liegt, mal 2, minus 1), Bindungen (gleiche Werte).",
+      "pruefen": true
+    },
+    "sphaerizitaet": {
+      "titel": "Sphärizität (Mauchly-Test)",
+      "kurz": "Dieselben Personen werden mehrmals gemessen: Schwanken die Unterschiede zwischen je zwei Zeitpunkten gleich stark? Das ist die Sphärizität. Ist sie verletzt, fällt das Ergebnis zu oft signifikant aus.",
+      "beispiel": "Reaktionszeit von 20 Personen an drei Tagen: Mauchly-Test W = ,75, p = ,075; ε (Greenhouse-Geisser) = ,80 (1 hieße: erfüllt). Der Test zeigt keine Verletzung an, aber ε liegt klar unter 1 - darum wird korrigiert.",
+      "vorsicht": "Der Mauchly-Test prüft die Sphärizität (p über ,05 spricht nicht dagegen), ist aber bei wenigen Personen schwach und schlägt bei vielen schon bei kleinen Abweichungen an. Darum zeigt Statable die Greenhouse-Geisser-Korrektur immer, nicht nur bei p unter ,05.",
+      "fachwoerter": "Messwiederholung (dieselben Personen werden mehrmals gemessen), Varianzanalyse (vergleicht Mittelwerte), Freiheitsgrade (df: die Zahlen in der Klammer neben F), p-Wert (wie oft ein mindestens so großes Ergebnis vorkäme, wenn die Annahme stimmt), W (die Prüfgröße des Mauchly-Tests).",
+      "pruefen": true,
+      "statable": "Unter dem Ergebnis der Messwiederholung die Korrektur für die Sphärizität wählen (Greenhouse-Geisser als Standard, Huynh-Feldt oder keine). Mit einem Messwiederholungsfaktor steht der Mauchly-Test in der Tabelle; bei zwei Faktoren hat jeder Effekt sein eigenes ε."
+    },
+    "greenhouse-geisser": {
+      "titel": "Greenhouse-Geisser- und Huynh-Feldt-Korrektur (ε)",
+      "kurz": "Was tun, wenn die Sphärizität verletzt ist? Die Korrektur macht das Ergebnis vorsichtiger: p wird größer. Wie stark, bestimmt ε (Epsilon): 1 heißt erfüllt, kleiner heißt stärker verletzt.",
+      "beispiel": "Mit ε = ,80 wird F(2, 38) = 6,2, p = ,005 zu F(1,60; 30,40) = 6,2, p = ,009: Die beiden Zahlen in Klammern, 2 und 38, werden mit ,80 malgenommen und ergeben 1,60 und 30,40.",
+      "vorsicht": "Greenhouse-Geisser ist die strengere, Huynh-Feldt die etwas großzügigere Schätzung. Die Zahlen in Klammern werden dadurch keine ganzen Zahlen, das ist so üblich; bei ε nahe 1 ändert die Korrektur kaum etwas.",
+      "fachwoerter": "Freiheitsgrade (df: die Zahlen in der Klammer neben F), Varianzanalyse (vergleicht Mittelwerte), Sphärizität (gleich starke Streuung aller Differenzen zwischen je zwei Zeitpunkten).",
+      "pruefen": true,
+      "statable": "Unter dem Ergebnis der Messwiederholung die Korrektur wählen: Greenhouse-Geisser (Standard), Huynh-Feldt oder keine. Freiheitsgrade und p stehen sofort mit ε korrigiert; bei zwei Messwiederholungsfaktoren hat jeder Effekt sein eigenes ε."
+    },
+    "mediation": {
+      "titel": "Mediation (indirekter Effekt)",
+      "kurz": "Läuft eine Wirkung über einen Zwischenschritt? Zum Beispiel: Lärm wirkt auf den Schlaf, der Schlaf auf die Laune. Die Mediation rechnet aus, wie groß dieser indirekte Weg ist.",
+      "beispiel": "Indirekter Weg über den Schlaf 0,20, 95 %-Intervall [0,11; 0,30]: Die 0 liegt nicht darin.",
+      "vorsicht": "Aus einer einzigen Befragung folgt keine Ursache: Die Reihenfolge ist eine Annahme. Entscheidend ist das Intervall des indirekten Wegs, nicht ob die einzelnen Schritte signifikant sind.",
+      "fachwoerter": "Mediator (die Größe M, über die eine Wirkung läuft), Pfade a (X → M), b (M → Y), c′ (X → Y direkt) und c (X → Y gesamt; c = c′ + a·b), Bootstrap (5000-mal neu aus den vorhandenen Personen ziehen), Konfidenzintervall (Bereich, der nach den Daten gut zum wahren Wert passt).",
+      "pruefen": true
+    },
+    "moderation": {
+      "titel": "Moderation (Wechselwirkung, einfache Steigungen)",
+      "kurz": "Gilt ein Zusammenhang für alle gleich? Die Moderation prüft, ob er von einer dritten Größe abhängt.",
+      "beispiel": "Mehr Übung hilft Anfängern stark, Erfahrenen kaum: Die Erfahrung moderiert den Zusammenhang.",
+      "vorsicht": "Moderation ist nicht Mediation: Der Moderator verändert die Stärke des Zusammenhangs, er ist kein Zwischenschritt. Auch eine Moderation belegt allein keine Ursache.",
+      "fachwoerter": "Moderator (die dritte Größe W, von der der Zusammenhang abhängt), Zentrierung (Werte um ihren Mittelwert verschieben), Regression (Vorhersage mit dem Produkt X·W als Wechselwirkungsterm), signifikant (der p-Wert liegt unter der festgelegten Grenze), einfache Steigungen (simple slopes: die Steigung von X bei niedrigem, mittlerem und hohem W), ΔR² (Zuwachs an erklärter Streuung durch die Wechselwirkung), Johnson-Neyman (nennt die Stellen von W, ab denen die Steigung signifikant wird).",
+      "pruefen": true
+    },
+    "nap": {
+      "titel": "NAP (Nonoverlap of All Pairs)",
+      "kurz": "Hat sich ein Verhalten durch eine Förderung verbessert? NAP vergleicht jeden Wert vor der Förderung (A) mit jedem währenddessen (B) und nennt den Anteil der Paare mit besserem B-Wert; Gleichstand zählt halb.",
+      "beispiel": "Minuten, die ein Kind am Tisch sitzt: Ausgangslage 3, 4, 4, 5; Förderphase 6, 5, 7, 8, 7. Von 20 Paaren ist B in 19 besser, in 1 gleich: NAP = (19 + 0,5) / 20 = ,975.",
+      "vorsicht": "NAP berücksichtigt keinen Trend vor der Förderung und zeigt nicht, um wie viel B besser ist; die Einordnung in schwach, mittel und stark (Parker und Vannest) ist eine Faustregel. Ein Test dazu setzt unabhängige Messungen voraus, die bei Zeitreihen oft fehlen.",
+      "fachwoerter": "AUC (Fläche unter der ROC-Kurve: dieselbe Wahrscheinlichkeit, NAP entspricht ihr), Mann-Whitney (Rangtest für zwei Gruppen, liefert hier den p-Wert), p-Wert (wie oft ein mindestens so großes Ergebnis vorkäme, wenn es keinen Unterschied gibt), Konfidenzintervall nach Newcombe (Bereich, der bei wenigen Messungen zeigt, wie unsicher der Wert ist).",
+      "pruefen": true
+    },
+    "pnd": {
+      "titel": "PND (Anteil nicht überlappender Daten)",
+      "kurz": "Wie viele Werte der Förderphase (B) sind besser als der beste Wert davor (A)? Das ist der PND: der Anteil der B-Werte über dem besten A-Wert (Scruggs et al. 1987).",
+      "beispiel": "Mit denselben Daten (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): Der beste A-Wert ist 5. Vier von fünf B-Werten liegen darüber (6, 7, 8, 7), PND = 4 / 5 = 80 %. Gilt „niedriger = besser“, zählt der niedrigste A-Wert.",
+      "vorsicht": "PND hängt an einem einzigen Wert vor der Förderung: Ein Ausreißer dort macht es unbrauchbar, und mit mehr Messungen davor sinkt es, auch wenn sonst nichts anders ist. Besser eignet sich NAP; PND steht zum Vergleich mit älteren Arbeiten da.",
+      "pruefen": true
+    },
+    "tau-u": {
+      "titel": "Tau-U und baseline-korrigiertes Tau",
+      "kurz": "Wie gut lässt sich eine Besserung nachweisen, wenn sich die Werte schon vor der Förderung in eine Richtung entwickeln? Tau-U vergleicht vorher und nachher wie NAP und kann diesen Trend herausrechnen.",
+      "beispiel": "Mit denselben Daten (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): Tau-U ohne Trendabzug = (19 − 0) / 20 = ,95. Schon vor der Förderung steigen 5 der 6 Paare: Mit Trendabzug ist Tau-U = (19 − 5) / 20 = ,70.",
+      "vorsicht": "Der Trendabzug nimmt an, dass sich der Trend von vorher danach so fortsetzen würde - bei langer Förderphase eine starke Annahme. Mit weniger als 3 Messungen vorher lässt sich kein Trend prüfen, und die p-Werte setzen unabhängige Messungen voraus.",
+      "fachwoerter": "Kendall (Kendalls Tau: Zusammenhang, der aus Rangordnungen berechnet wird, Grundlage beider Kennwerte), Tau-BC (baseline-korrigiertes Tau: zieht einen Trend in A erst ab, wenn er signifikant ist), Theil-Sen (robuste Trendgerade aus den mittleren Steigungen aller Punktpaare).",
+      "pruefen": true
+    },
+    "einzelfall": {
+      "titel": "Einzelfallanalyse (A-B-Design)",
+      "kurz": "Hat eine Förderung bei einer einzelnen Person gewirkt? Eine Person (oder wenige) wird über längere Zeit immer wieder gemessen: erst ohne Förderung (Phase A), dann mit (Phase B). Verglichen werden die beiden Phasen.",
+      "beispiel": "Ein Kind sitzt in vier Messungen der Ausgangslage im Schnitt 4 Minuten am Tisch (3, 4, 4, 5), in fünf Messungen mit Förderung im Schnitt 6,6 Minuten (6, 5, 7, 8, 7).",
+      "vorsicht": "Ein A-B-Design allein belegt keine Ursache: Die Person kann sich auch von selbst entwickeln, oder andere Ereignisse spielen mit. Belastbarer sind Wiederholungen (A-B-A-B, mehrere Personen mit versetztem Beginn).",
+      "fachwoerter": "Median (der mittlere Wert), NAP (Anteil der A-B-Paare, in denen B besser ist), Tau und Tau-U (Kennwerte nach Kendalls Tau, die einen Trend der Ausgangslage berücksichtigen können), PND (Anteil der B-Werte über dem besten A-Wert), multiple baseline (mehrere Personen mit versetztem Beginn der Förderung).",
+      "pruefen": true
+    },
+    "kaplan-meier": {
+      "titel": "Kaplan-Meier (Zeit bis zum Ereignis)",
+      "kurz": "Wie viele sind nach einer bestimmten Zeit noch ohne das Ereignis? Die Kaplan-Meier-Kurve zeigt das für jeden Zeitpunkt und fällt bei jedem Ereignis. Sie nutzt auch Personen, die nur zeitweise beobachtet wurden.",
+      "beispiel": "10 Beschäftigte, Zeit bis zur Kündigung in Monaten: 5 kündigen (nach 3, 5, 5, 8 und 12 Monaten), bei 5 endet die Beobachtung ohne Kündigung (nach 6, 9, 10, 14 und 15 Monaten). Nach 8 Monaten haben noch 9/10 · 7/9 · 5/6 = 58 % nicht gekündigt.",
+      "vorsicht": "Die Methode nimmt an, dass das Ausscheiden aus der Beobachtung nichts mit dem Risiko zu tun hat. Am rechten Ende sind meist nur noch wenige Personen übrig; dort ist die Kurve unsicher.",
+      "fachwoerter": "zensiert (nur bis zu einem Zeitpunkt beobachtet, das Ereignis ist bis dahin nicht eingetreten), Stufenkurve (fällt bei jedem Ereignis ein Stück), unter Risiko (noch beobachtet und ohne Ereignis).",
+      "pruefen": true
+    },
+    "zensierung": {
+      "titel": "Zensierung",
+      "kurz": "Was gilt für Personen, bei denen bis zum Ende der Beobachtung nichts passiert ist? Sie heißen zensiert: Man weiß nur, dass das Ereignis nicht vorher eintrat.",
+      "beispiel": "Eine Beschäftigte, die bei Studienende nach 14 Monaten noch im Betrieb ist, wird mit der Zeit 14 zensiert. Im Diagramm erscheint sie als kleiner Strich auf der Kurve.",
+      "vorsicht": "Zensierte nicht weglassen und nicht als Ereignis zählen: Beides verzerrt die Kurve. Die Methode setzt voraus, dass Zensierte dasselbe weitere Risiko haben wie die übrigen.",
+      "fachwoerter": "Kaplan-Meier (das Verfahren, das auch zensierte Personen nutzt), unter Risiko (noch beobachtet und ohne Ereignis), nicht informative Zensierung (das Ausscheiden hat nichts mit dem Risiko zu tun).",
+      "pruefen": true
+    },
+    "ueberlebensfunktion": {
+      "titel": "Überlebensfunktion S(t)",
+      "kurz": "Wie viele haben das Ereignis bis zur Zeit t noch nicht erlebt? Das zeigt die Überlebensfunktion S(t); sie beginnt bei 1 (alle) und sinkt bei Ereignissen. „Überleben“ heißt hier nur „noch kein Ereignis“.",
+      "beispiel": "S(8) = ,58, 95 %-Intervall [,34; 1,00]: Nach 8 Monaten haben schätzungsweise 58 % der Beschäftigten noch nicht gekündigt. Bei 10 Personen ist das Intervall sehr breit.",
+      "vorsicht": "Das Intervall wird so berechnet (wie in R survfit), dass es nie unter 0 fällt; die obere Grenze wird bei 1 abgeschnitten. Bei wenigen Personen, die noch beobachtet werden, ist es sehr breit.",
+      "fachwoerter": "Konfidenzintervall (Bereich, der nach den Daten gut zum wahren Anteil passt), Standardfehler (nach Greenwood: wie stark der Wert von Stichprobe zu Stichprobe schwanken würde), Log-Skala (das Intervall wird auf logarithmierten Werten berechnet).",
+      "pruefen": true
+    },
+    "median-ueberlebenszeit": {
+      "titel": "Mediane Zeit bis zum Ereignis",
+      "kurz": "Wann hat die Hälfte das Ereignis erlebt? Das ist die mediane Zeit: der Zeitpunkt, an dem die Kurve auf 50 % fällt. Fällt sie nie so tief, ist der Median „nicht erreicht“.",
+      "beispiel": "Median = 12 Monate, 95 %-Intervall [5; nicht erreicht]: Die untere Grenze ist 5, nach oben ist das Intervall offen.",
+      "vorsicht": "Der Median ist hier besser als der Mittelwert, den schiefe Daten und Personen ohne Ereignis bis zum Ende verzerren. Liegt die Kurve eine Strecke genau bei 50 %, nimmt Statable wie R die Mitte; bei wenigen Ereignissen ist der Median sehr unsicher.",
+      "pruefen": true
+    },
+    "log-rank": {
+      "titel": "Log-Rank-Test",
+      "kurz": "Unterscheiden sich die Kurven mehrerer Gruppen? Der Log-Rank-Test vergleicht an jedem Ereigniszeitpunkt, wie viele Ereignisse es je Gruppe gab und wie viele zu erwarten wären, wenn alle Gruppen gleich wären.",
+      "beispiel": "Zwei Teams, Zeit bis zur Kündigung: χ²(1) = 5,1, p = ,024. Die Kurven unterscheiden sich.",
+      "vorsicht": "Der Test ist am stärksten, wenn die Kurven nie die Seite wechseln; schneiden sie sich, kann er einen echten Unterschied übersehen. Er sagt nichts über die Größe des Unterschieds; dafür dienen Mediane und Anteile zu festen Zeitpunkten.",
+      "fachwoerter": "Mantel-Cox (anderer Name des Tests), Cox (nicht zu verwechseln mit der Cox-Regression), Holm (Anpassung der p-Werte bei mehreren Paaren), Freiheitsgrade (df: hier Gruppen minus 1).",
+      "pruefen": true
+    },
+    "anzahl-unter-risiko": {
+      "titel": "Anzahl unter Risiko",
+      "kurz": "Wie viele Personen stützen die Kurve an einer Stelle? Die Anzahl unter Risiko nennt für eine Zeit t, wie viele noch beobachtet werden und das Ereignis noch nicht hatten. Sie steht oft unter dem Diagramm.",
+      "beispiel": "Zur Zeit 10 Monate sind noch 4 der 10 Personen unter Risiko: Dort beruht die Kurve auf 4 Personen.",
+      "vorsicht": "Wo nur noch wenige unter Risiko sind, springt die Kurve bei jedem Ereignis stark, und das Intervall ist breit. Solche Stellen nicht überdeuten.",
+      "fachwoerter": "Zensierung (Personen, die nur bis zu einem Zeitpunkt beobachtet werden und danach ausscheiden; sie senken die Zahl ebenso wie Ereignisse).",
+      "pruefen": true
+    },
+    "bootstrap": {
+      "titel": "Bootstrap (Perzentil-Intervall)",
+      "kurz": "Wie unsicher ist eine Kennzahl, für die es keine einfache Formel gibt? Der Bootstrap zieht 5000-mal neu aus den vorhandenen Personen und rechnet die Kennzahl jedes Mal neu. Die mittleren 95 % bilden das Intervall.",
+      "beispiel": "Median (mittlerer Wert) der Wartezeit von 12 Personen: 11,5 Minuten. Von den 5000 neuen Medianen liegen 2,5 % unter 7,5 und 2,5 % über 16,5: 95 %-Bootstrap-Intervall [7,5; 16,5].",
+      "vorsicht": "Bei wenigen Personen (unter etwa 50) ist das Intervall ungenau und oft zu schmal. Mit festem Startwert der Zufallszahlen ergeben dieselben Daten immer dasselbe Intervall; ein anderer Startwert verschiebt die Grenzen nur wenig.",
+      "fachwoerter": "Konfidenzintervall (Bereich, der nach den Daten gut zum wahren Wert passt), Perzentil (die Grenzen bei 2,5 % und 97,5 % der geordneten Ergebnisse), Ziehen mit Zurücklegen (dieselbe Person kann mehrfach vorkommen), Startwert (legt die Zufallszahlen fest).",
+      "pruefen": true
+    },
+    "omega": {
+      "titel": "McDonalds Omega (ω)",
+      "kurz": "Messen mehrere Fragen zusammen verlässlich eine Sache, auch wenn nicht jede gleich stark beiträgt? Omega (ω) misst das wie Cronbachs Alpha, rechnet aber mit dem tatsächlichen Beitrag jeder Frage. Alpha nimmt für alle denselben an.",
+      "beispiel": "Fünf Fragen mit Beiträgen (Ladungen) von ,5 / ,6 / ,7 / ,7 / ,8: ω = ,80. Alpha, das gleiche Beiträge annimmt, liegt mit ,79 etwas darunter.",
+      "vorsicht": "Omega setzt voraus, dass die Fragen eine einzige Sache messen; sonst ist es nicht sinnvoll zu deuten (dann hilft die Faktorenanalyse). Richtwerte (oft ,70) sind nur vorläufig, und auch Omega gilt für diese Personengruppe, nicht für den Fragebogen an sich. Alpha trifft die Reliabilität nur genau, wenn die Fragen eine Sache messen, gleich stark beitragen und ihre Fehler unkorreliert sind.",
+      "pruefen": true
+    },
+    "cfa": {
+      "titel": "Konfirmatorische Faktorenanalyse (CFA)",
+      "kurz": "Passt eine vorgegebene Einteilung der Fragen in Gruppen zu den Daten? Die konfirmatorische Faktorenanalyse (CFA) legt vorher fest, welche Fragen zu welcher Gruppe (Faktor) gehören, und prüft, wie gut das passt.",
+      "beispiel": "Neun Fragen, drei Gruppen zu je drei Fragen (Verkehr, Sicherheit, Freizeit): CFI = ,92, RMSEA = ,07, zwei Maße für die Passung. Sie erreichen die üblichen Richtwerte knapp nicht: CFI unter ,95, RMSEA über ,06.",
+      "vorsicht": "Eine gute Passung zeigt nicht, dass die Gruppen das Richtige messen, und ein anderes Modell kann ebenso gut passen. Wird die Einteilung erst nach einem Blick auf dieselben Daten angepasst, ist die Prüfung nicht mehr unabhängig.",
+      "fachwoerter": "Fit-Indizes (Maße für die Passung des Modells, hier CFI und RMSEA), explorative Faktorenanalyse (sucht Gruppen von Fragen in den Daten), standardisierte Ladungen (wie stark eine Frage zu ihrem Faktor gehört).",
+      "pruefen": true
+    },
+    "fit-indizes": {
+      "titel": "Fit-Indizes (CFI, TLI, RMSEA, SRMR)",
+      "kurz": "Passt das Modell zu den Daten? Fit-Indizes fassen das in Zahlen. Bei CFI und TLI ist höher besser, bei RMSEA und SRMR niedriger. Das 90-%-Intervall des RMSEA zeigt, wie genau er geschätzt ist.",
+      "beispiel": "CFI = ,96, TLI = ,95, RMSEA = ,05, SRMR = ,04: Nach den üblichen Richtwerten liegt die Passung im guten Bereich.",
+      "vorsicht": "Die Richtwerte (CFI und TLI ab ,95, RMSEA bis ,06, SRMR bis ,08; Hu und Bentler 1999) sind Erfahrungsregeln, keine Tests; ,90 gilt bei CFI und TLI oft noch als annehmbar, und bei kleinen Modellen oder wenigen Personen sind sie unzuverlässig. Der χ²-Test wird bei großen Stichproben schon bei kleinen Abweichungen signifikant.",
+      "pruefen": true
+    },
+    "mehrebenen": {
+      "titel": "Mehrebenenmodell (gemischtes Modell)",
+      "kurz": "Was, wenn Personen in Gruppen stecken, etwa Kinder in Klassen? Personen derselben Gruppe ähneln sich oft. Das Mehrebenenmodell gibt jeder Gruppe ein eigenes Niveau und trennt so die Unterschiede zwischen den Gruppen von denen innerhalb.",
+      "beispiel": "Zufriedenheit von 500 Beschäftigten aus 25 Betrieben: 12 % der Streuung liegen zwischen den Betrieben. Eine Stunde Weiterbildung mehr im Monat geht mit 0,8 Punkten mehr Zufriedenheit einher (p < ,001), auch wenn der Betrieb berücksichtigt ist.",
+      "vorsicht": "Es braucht mehrere Gruppen mit je mehreren Fällen; mit unter 10 Gruppen sind die Schätzungen auf Gruppen-Ebene sehr unsicher. Ein Mehrebenenmodell zeigt Zusammenhänge, keine Ursachen.",
+      "statable": "Im Ergebnis unter „Für Fachleute“ lässt sich am Gesamt- oder Gruppenmittel zentrieren (Effekt innerhalb gegen Effekt zwischen den Gruppen), eine zufällige Steigung wählen und eine Wechselwirkung hinzufügen, auch über die Ebenen. Darunter vergleicht „Modelle vergleichen“ Nullmodell, feste Effekte, Wechselwirkungen und zufällige Steigung mit ML (AIC, BIC, −2LL, Likelihood-Quotienten-Test). Sind die Daten Person mal Zeitpunkt, bietet Statable den Weg „Zeit mit zufälliger Steigung je Person“ (Wachstumsmodell).",
+      "pruefen": true
+    },
+    "icc-mehrebenen": {
+      "titel": "ICC im Mehrebenenmodell (Anteil der Gruppen)",
+      "kurz": "Wie sehr unterscheiden sich die Gruppen? Der ICC ist der Anteil der gesamten Streuung, der zwischen den Gruppen liegt. ICC = ,12 heißt: 12 % der Unterschiede hängen mit der Gruppe zusammen.",
+      "beispiel": "ICC = ,12 bei 20 Fällen je Gruppe: Der Designeffekt ist 1 + (20 − 1) · ,12 = 3,28. Die Unsicherheit eines Mittelwerts (Standardfehler) ist dann etwa 1,8-mal (√3,28) so groß, wie eine Rechnung ohne die Gruppen angibt.",
+      "vorsicht": "Nicht zu verwechseln mit dem ICC der Übereinstimmung von Beurteilenden: Hier geht es um den Anteil der Gruppen an der Streuung. Ab ,05 klein, ab ,10 mittel, ab ,15 groß (Hox) ist nur eine Faustregel.",
+      "fachwoerter": "Intraklassen-Korrelation (ICC: Anteil der gesamten Streuung, der zwischen den Gruppen liegt), Varianz (wie stark die Werte streuen), Nullmodell (das Modell ohne Erklärungsspalten, in dem der ICC gerechnet wird).",
+      "pruefen": true
+    },
+    "meta-effekt": {
+      "titel": "Gepoolter Effekt (Meta-Analyse)",
+      "kurz": "Wie groß ist ein Effekt über mehrere Studien zusammen? Der gepoolte Effekt ist der gewichtete Durchschnitt aller Studien: Genauere Studien zählen mehr. Streuen die wahren Effekte zwischen den Studien, wird das Intervall breiter.",
+      "beispiel": "Drei Studien: 0,40 (Standardfehler, also Ungenauigkeit, 0,10), 0,20 (0,05) und 0,30 (0,10). Gewicht = 1 / Standardfehler²: 100, 400, 100. Gewichteter Durchschnitt = (40 + 80 + 30) / 600 = 0,25 - wie bei einem gemeinsamen wahren Effekt.",
+      "vorsicht": "Der Durchschnitt ist nur sinnvoll, wenn die Studien dasselbe messen. Unterscheiden sich die Studien stark, zusätzlich das Prädiktionsintervall ansehen.",
+      "fachwoerter": "Heterogenität (wie stark die Studien voneinander abweichen), Konfidenzintervall (Bereich, der nach den Daten gut zum Durchschnitt der wahren Effekte passt), Random-Effects-Modell (lässt zu, dass die wahren Effekte zwischen den Studien streuen, τ²), Standardfehler (Maß für die Ungenauigkeit einer Studie).",
+      "pruefen": true
+    },
+    "i-quadrat": {
+      "titel": "I² und Q (Heterogenität)",
+      "kurz": "Unterscheiden sich die Studien mehr, als der Zufall erwarten lässt? I² gibt in Prozent an, welcher Teil der Unterschiede zwischen den Ergebnissen auf echte Unterschiede der Studien zurückgeht. Der Test Q prüft dieselbe Frage.",
+      "beispiel": "Zwölf Studien: Q(11) = 42,0, p < ,001; I² = (42,0 − 11) / 42,0 = 74 %. Oft zitierte Marken: 25 %, 50 %, 75 % (Higgins u. a. 2003).",
+      "vorsicht": "I² ist ein Anteil, kein Maß für die Größe der Unterschiede: Bei sehr genauen Studien wird I² groß, auch wenn die Effekte nah beieinanderliegen. Bei wenigen Studien ist I² sehr ungenau, und ein kleiner Wert beweist nicht, dass die Studien gleich sind; wie weit die wahren Effekte streuen, zeigen τ und das Prädiktionsintervall.",
+      "pruefen": true,
+      "fachwoerter": "τ (Streuung der wahren Effekte zwischen den Studien), Prädiktionsintervall (Bereich, in dem der Effekt einer neuen Studie liegen dürfte), Q (Test, ob die Ergebnisse stärker streuen als durch Zufall)."
+    },
+    "tau-quadrat": {
+      "titel": "τ² (Streuung zwischen den Studien)",
+      "kurz": "Wie unterschiedlich sind die wahren Effekte der Studien? τ² (Tau-Quadrat) misst diese Streuung; die Wurzel τ steht in der Einheit des Effekts. Anders als I² hängt es nicht von der Genauigkeit der Studien ab.",
+      "beispiel": "τ² = 0,04, also τ = 0,20: Bei einem Durchschnittseffekt von 0,30 streuen die wahren Effekte der Studien typischerweise um etwa 0,20 um ihn herum.",
+      "vorsicht": "Mit weniger als etwa fünf Studien ist τ² sehr unsicher, das Intervall sehr breit.",
+      "fachwoerter": "Standardabweichung (τ ist die Wurzel aus τ²), Varianz (wie stark die wahren Effekte streuen), REML (das Schätzverfahren für τ²).",
+      "pruefen": true
+    },
+    "praediktionsintervall": {
+      "titel": "Prädiktionsintervall (Meta-Analyse)",
+      "kurz": "Wo dürfte der Effekt einer neuen, vergleichbaren Studie liegen? Das zeigt das Prädiktionsintervall. Es ist breiter als das Konfidenzintervall des Durchschnitts, weil es auch die Unterschiede zwischen den Studien einrechnet.",
+      "beispiel": "Gepoolt 0,20, 95 %-KI [0,12; 0,28], Prädiktionsintervall [−0,05; 0,45]: Eine neue Studie könnte auch einen Effekt nahe 0 finden.",
+      "vorsicht": "Bei wenigen Studien ist das Intervall sehr unsicher.",
+      "pruefen": true
+    },
+    "forest-plot": {
+      "titel": "Forest-Plot",
+      "kurz": "Wie sehen die Ergebnisse aller Studien aus? Der Forest-Plot zeigt jede Studie als Quadrat (Effekt) mit Linie (95 %-Intervall); größere zählen mehr. Die Raute ist der Durchschnitt aller Studien, die gestrichelte Linie bedeutet „kein Effekt“.",
+      "beispiel": "Raute bei 0,20 mit Spitzen bei 0,12 und 0,28, gestrichelte Linie bei 0 (bei Verhältnissen bei 1): Die Raute liegt ganz rechts davon - der Durchschnitt weicht von „kein Effekt“ ab.",
+      "vorsicht": "Zu prüfen ist, ob eine einzelne große Studie das Ergebnis bestimmt (großes Quadrat) und ob die Intervalle sich überlappen.",
+      "fachwoerter": "Prädiktionsintervall (Bereich, in dem der wahre Effekt einer neuen Studie liegen dürfte), gepoolter Effekt (Durchschnitt aller Studien, die Raute).",
+      "pruefen": true
+    },
+    "funnel-plot": {
+      "titel": "Funnel-Plot und Egger-Test",
+      "kurz": "Fehlen Studien? Der Funnel-Plot (Trichterdiagramm) zeigt jede Studie nach Effekt und Genauigkeit: Genaue liegen oben eng beisammen, ungenaue streuen unten breiter. Fehlt eine Seite, ist der Trichter schief; der Egger-Test prüft das.",
+      "beispiel": "Egger-Test p = ,03 bei 14 Studien: Der Trichter ist auffällig schief - kleine Studien zeigen im Mittel größere Effekte.",
+      "vorsicht": "Unter 10 Studien hat der Test wenig Aussagekraft (Sterne u. a. 2011). Schief kann der Trichter auch sein, weil sich kleine und große Studien wirklich unterscheiden.",
+      "fachwoerter": "Standardfehler (Maß für die Ungenauigkeit einer Studie), Asymmetrie (der Trichter ist auf einer Seite leer), Regression (der Egger-Test sagt den Effekt aus dem Standardfehler vorher).",
+      "pruefen": true
+    },
+    "mehrfachantworten-set": {
+      "titel": "Mehrfachantworten-Set",
+      "kurz": "Was, wenn bei einer Frage mehreres angekreuzt werden durfte? Ein Mehrfachantworten-Set fasst die Spalten der einzelnen Optionen zu einer Frage zusammen. Statable zählt je Option, wie viele Personen sie genannt haben.",
+      "beispiel": "„Wie kommen Sie zur Arbeit?“ mit den Optionen Rad, Bus, Auto: drei Spalten (angekreuzt = 1, sonst 0), ein Set. In SPSS heißt das MRSETS.",
+      "vorsicht": "Die Ankreuzungen derselben Person hängen zusammen. Darum gibt es für Mehrfachantworten keinen gewöhnlichen Chi-Quadrat-Test.",
+      "pruefen": true
+    },
+    "prozent-der-faelle": {
+      "titel": "Prozent der Fälle",
+      "kurz": "Wie viele Personen haben eine Option genannt? Prozent der Fälle ist die Zahl der Nennungen geteilt durch die Zahl der gültigen Fälle. Weil jede Person mehrere Optionen nennen kann, ergeben die Werte zusammen mehr als 100 %.",
+      "beispiel": "18 von 40 Personen kommen mit dem Rad: 18 / 40 = 45 % der Fälle.",
+      "vorsicht": "Gültig sind Fälle mit mindestens einer Ankreuzung (wie in SPSS). Wer nichts angekreuzt hat, steht nicht in der Basis, außer „Fälle ohne Ankreuzung mitzählen“ ist eingeschaltet.",
+      "pruefen": true
+    },
+    "prozent-der-antworten": {
+      "titel": "Prozent der Antworten",
+      "kurz": "Wie verteilen sich alle Ankreuzungen? Prozent der Antworten ist die Zahl der Nennungen einer Option geteilt durch die Summe aller Nennungen. Diese Werte ergeben zusammen 100 %.",
+      "beispiel": "Rad wurde 18-mal genannt, insgesamt gab es 60 Nennungen: 18 / 60 = 30 % der Antworten.",
+      "vorsicht": "Der Wert sagt, wie sich die Nennungen verteilen, nicht, wie viele Personen eine Option wählen. Dafür gibt es die Prozent der Fälle.",
+      "pruefen": true
+    },
+    "shapiro-wilk": {
+      "titel": "Shapiro-Wilk-Test",
+      "kurz": "Sehen die Werte aus, als stammten sie aus einer Normalverteilung? Der Shapiro-Wilk-Test prüft das. Ist p kleiner als ,05, weicht die Verteilung erkennbar ab; sonst spricht der Test nicht dagegen.",
+      "beispiel": "Reaktionszeiten von 25 Personen: W = ,73 (1 wäre perfekte Übereinstimmung), p < ,001. Die Verteilung ist schief, der Median beschreibt die Mitte besser.",
+      "vorsicht": "Bei vielen Personen wird der Test schon bei kleinen Abweichungen auffällig, bei wenigen übersieht er große. Ein unauffälliges Ergebnis beweist keine Normalverteilung; das Q-Q-Diagramm ergänzt ihn.",
+      "pruefen": true
+    },
+    "qq-diagramm": {
+      "titel": "Q-Q-Diagramm",
+      "kurz": "Folgen die Werte einer Normalverteilung? Das Q-Q-Diagramm legt jeden Messwert als Punkt gegen den Wert, den man bei einer Normalverteilung erwarten würde. Liegen die Punkte nahe an der Geraden, passt es.",
+      "beispiel": "Bei Körpergrößen von 100 Erwachsenen liegen die Punkte fast auf der Geraden. Bei Wartezeiten an einer Hotline biegen sie am oberen Ende nach oben ab: wenige sehr lange Wartezeiten.",
+      "vorsicht": "Bögen zeigen eine schiefe Verteilung, einzelne Punkte weit abseits an den Enden Ausreißer. Bei wenigen Werten schwanken die Punkte zufällig um die Gerade; der Shapiro-Wilk-Test fasst die Abweichung in einer Zahl zusammen, ersetzt den Blick aber nicht.",
+      "pruefen": true
+    },
+    "partialkorrelation": {
+      "titel": "Partialkorrelation",
+      "kurz": "Hängen zwei Zahlen auch dann zusammen, wenn eine dritte gleich bleibt? Die Partialkorrelation zeigt den Zusammenhang zweier Zahlen, nachdem der Anteil einer oder mehrerer weiterer Zahlen aus beiden herausgerechnet wurde.",
+      "beispiel": "Eisverkäufe und Sonnenbrände hängen stark zusammen (r = ,62). Wird die Temperatur herausgerechnet (r = ,80 und ,75 zu den beiden), bleibt kaum etwas: pr = ,05.",
+      "vorsicht": "Herausgerechnet wird nur der geradlinige Anteil dessen, was gemessen und gewählt wurde. Ob die dritte Zahl die Ursache beider ist, entscheidet die Sachlage, nicht die Rechnung: Wird eine gemeinsame Wirkung beider Zahlen herausgerechnet, kann sogar ein Scheinzusammenhang entstehen.",
+      "pruefen": true
+    },
+    "roc-auc": {
+      "titel": "ROC-Kurve und Fläche unter der Kurve (AUC)",
+      "kurz": "Wie gut trennt ein Messwert Betroffene von Nichtbetroffenen? Die ROC-Kurve zeigt das für jede mögliche Schwelle, ihre Fläche (AUC) fasst es zusammen: ,50 heißt Zufall, 1 vollständige Trennung.",
+      "beispiel": "AUC = ,85: Zieht man je eine betroffene und eine nicht betroffene Person, hat die betroffene in 85 % der Fälle den auffälligeren Wert. Bei der Schwelle 20 Punkte erkennt der Test 80 % der Betroffenen und 78 % der übrigen; der Youden-Index ,80 + ,78 − 1 = ,58 dient zur Wahl der Schwelle.",
+      "vorsicht": "Die Schwelle ist an genau diesen Daten gewählt und schneidet in neuen Daten meist schlechter ab. Welcher Fehler schwerer wiegt, kennt der Youden-Index nicht.",
+      "fachwoerter": "Sensitivität (Anteil der Betroffenen, die der Test erkennt), Spezifität (Anteil der Nichtbetroffenen, die der Test als unauffällig erkennt), Schwellenwert (ab dieser Punktzahl gilt jemand als auffällig), Youden-Index (J = Sensitivität + Spezifität − 1).",
+      "pruefen": true
+    },
+    "hazard-ratio": {
+      "titel": "Hazard Ratio (HR)",
+      "kurz": "Wie viel schneller oder langsamer tritt ein Ereignis in einer Gruppe auf? Die Hazard Ratio (HR) vergleicht das Risiko der Gruppen, im nächsten Moment das Ereignis zu erleben. 1 heißt: kein Unterschied.",
+      "beispiel": "Zeit bis zum ersten Arbeitsunfall, mit Schulung gegen ohne: HR = 0,70, 95 %-Intervall [0,52; 0,94]. Mit Schulung ist das Risiko eines Unfalls im nächsten Moment zu jedem Zeitpunkt das 0,70-Fache. Das Intervall schließt 1 nicht ein.",
+      "vorsicht": "Eine HR ist kein Risikoverhältnis: HR = 1,8 heißt nicht, dass das Ereignis 1,8-mal so wahrscheinlich ist. Sie kann sich über die Zeit ändern; ein einziger Wert ist dann nur ein Durchschnitt.",
+      "fachwoerter": "Hazard (das Risiko, im nächsten Moment das Ereignis zu erleben), Hazards proportional (das Verhältnis bleibt über die Zeit gleich), Cox-Regression (das Verfahren, das die HR schätzt), Wald (das übliche Verfahren für das Intervall).",
+      "pruefen": true
+    },
+    "proportionale-hazards": {
+      "titel": "Proportionale Hazards",
+      "kurz": "Bleibt der Unterschied zwischen zwei Gruppen über die Zeit gleich? Die Hazard Ratio (HR) setzt voraus, dass das Verhältnis der Risiken immer dasselbe ist. Ein Test (cox.zph) prüft das; p unter ,05 spricht dagegen.",
+      "beispiel": "p = ,031 für die Gruppe: Das Verhältnis ist nicht konstant. Schneiden sich im Diagramm die Kurven, ist das ein deutliches Zeichen.",
+      "vorsicht": "Bei vielen Personen schlägt der Test schon bei kleinen Abweichungen an, bei wenigen übersieht er große.",
+      "pruefen": true
+    },
+    "risikodifferenz": {
+      "titel": "Risikodifferenz (RD)",
+      "kurz": "Um wie viel höher ist das Risiko in einer Gruppe? Die Risikodifferenz (RD) ist das Risiko der einen Gruppe minus das der anderen, als Anteil oder in Prozentpunkten. 0 heißt: kein Unterschied.",
+      "beispiel": "Arbeitsunfälle in einem Jahr: 36 von 400 mit Schulung (9 %), 60 von 400 ohne (15 %). RD = ,09 − ,15 = −,060, 95 %-Intervall [−,105; −,015]: 6 Prozentpunkte weniger bei Schulung.",
+      "vorsicht": "Die Risikodifferenz beschreibt einen Unterschied, sie belegt keine Ursache; bei einer Fall-Kontroll-Studie (Betroffene und Nichtbetroffene getrennt gesucht) ist sie nicht zu deuten. Statable rechnet das Intervall nach Newcombe, das bei kleinen Zahlen sicherer ist als das einfachere Verfahren.",
+      "fachwoerter": "Wald-Intervall (einfache Näherung für das Intervall, bei kleinen Zahlen weniger sicher), Intervall nach Newcombe (das Verfahren, das Statable nutzt).",
+      "pruefen": true
+    },
+    "relatives-risiko": {
+      "titel": "Relatives Risiko (RR)",
+      "kurz": "Wie viel mal so groß ist das Risiko in einer Gruppe? Das relative Risiko (RR) ist das Risiko der einen Gruppe geteilt durch das der anderen. 1 heißt: kein Unterschied; 0,5: halb so groß.",
+      "beispiel": "Dieselben Arbeitsunfälle: RR = 0,09 / 0,15 = 0,60, 95 %-Intervall [0,41; 0,89]. Mit Schulung ist das Risiko das 0,60-Fache. Das Intervall schließt 1 nicht ein.",
+      "vorsicht": "Gibt es in einer Gruppe kein einziges Ereignis, lässt sich das Intervall des RR nicht berechnen; Statable korrigiert nicht still. Es gilt für Gruppen, die man über die Zeit verfolgt, und für Experimente, nicht für Fall-Kontroll-Studien.",
+      "pruefen": true
+    },
+    "nnt": {
+      "titel": "NNT (Number needed to treat)",
+      "kurz": "Bei wie vielen Personen muss man eingreifen, damit ein Ereignis weniger eintritt? Die NNT (Number needed to treat) ist 1 geteilt durch die Risikodifferenz. NNTB steht für zusätzlichen Nutzen, NNTH für zusätzlichen Schaden.",
+      "beispiel": "Bei RD = −,06 ist NNTB = 1 / ,06 = 16,7 (95 %-Intervall NNTB 9,5 bis 67,0): Auf etwa 17 geschulte Personen kommt ein Unfall weniger.",
+      "vorsicht": "Das Intervall der NNT geht durch unendlich, wenn die Risikodifferenz auch 0 sein kann (zum Beispiel NNTH 25 bis ∞ bis NNTB 10) - nie als Intervall mit negativen Zahlen lesen. Ob ein Ereignis erwünscht ist, muss die Person angeben.",
+      "pruefen": true
+    },
+    "typical-error": {
+      "titel": "Typical Error (TE)",
+      "kurz": "Wie stark weicht eine einzelne Messung bei Wiederholung typischerweise ab? Das sagt der Typical Error (TE), in der Einheit der Messung. Man berechnet ihn aus zwei Messungen derselben Personen.",
+      "beispiel": "Sprunghöhe von 8 Personen an zwei Tagen: Die Unterschiede zwischen den Tagen haben eine Standardabweichung von 2,1 cm. TE = 2,1 / √2 = 1,5 cm: Ein einzelner Sprung weicht typischerweise um 1,5 cm ab.",
+      "vorsicht": "Der TE gilt nur, wenn sich zwischen den Messungen nichts verändert hat. Er entspricht dem Standardmessfehler aus Wiederholungsmessungen, nicht dem aus dem Zusammenhang der Fragen einer Skala.",
+      "fachwoerter": "Reliabilität (wie verlässlich eine Messung bei Wiederholung ist), Standardabweichung (SD) der Differenzen (typische Streuung der Unterschiede zwischen den zwei Messungen), Standardmessfehler (der typische Fehler einer einzelnen Messung).",
+      "pruefen": true
+    },
+    "lilliefors": {
+      "titel": "Lilliefors-Test",
+      "kurz": "Passen die Werte zu einer Normalverteilung? Der Lilliefors-Test prüft das, auch wenn Mittelwert und Streuung erst aus den Daten geschätzt werden. p unter ,05 heißt: Die Verteilung weicht von der Normalverteilung ab.",
+      "beispiel": "Verweildauer von 30 Besuchenden in Minuten: D = ,17, p = ,033 (Lilliefors-Variante des Kolmogorov-Smirnov-Tests). Die Verteilung weicht von einer Normalverteilung ab.",
+      "vorsicht": "p über ,05 heißt nicht, dass die Daten normalverteilt sind, nur dass der Test nicht dagegen spricht. Bei wenigen Personen übersieht er große Abweichungen; das Q-Q-Diagramm zeigt mehr.",
+      "fachwoerter": "Standardabweichung (typische Streuung der Werte um ihren Mittelwert), Kolmogorov-Smirnov-Test (vergleicht die Verteilung der Daten mit einer Normalverteilung).",
+      "pruefen": true
+    },
+    "chi-quadrat-anpassung": {
+      "titel": "χ²-Anpassungstest",
+      "kurz": "Passt die Verteilung auf Kategorien zu einer erwarteten? Der χ²-Anpassungstest prüft, ob gezählte Häufigkeiten zu vorgegebenen Anteilen passen, zum Beispiel zu gleichen Anteilen. p unter ,05 heißt: Sie weichen von der Erwartung ab.",
+      "beispiel": "Ein Würfel, 120 Würfe, erwartet je Zahl 20. Beobachtet: 14, 22, 18, 25, 19, 22. χ²(5, N = 120) = 74 / 20 = 3,7, p = ,593: Die Häufigkeiten sprechen nicht gegen einen fairen Würfel.",
+      "vorsicht": "Wird in einer Kategorie weniger als 1 oder in mehr als einem Fünftel der Kategorien weniger als 5 erwartet, ist p unsicher (eine Gewohnheit nach Cochran 1954). Ein nicht signifikantes Ergebnis belegt die Erwartung nicht.",
+      "pruefen": true
+    },
+    "ladung": {
+      "titel": "Ladung (Faktorladung)",
+      "kurz": "Wie stark gehört eine Frage (Item) zu einem Faktor oder einer Komponente, also einer Gruppe von Fragen? Das zeigt die Ladung: bei rechtwinkliger Rotation die Korrelation (−1 bis 1) zwischen beiden. Das Minus zeigt nur die Richtung, bestimmt von der Ausrichtung der Komponente. Für die Stärke zählt der Betrag.",
+      "beispiel": "Frage A: ,70 auf Komponente 1, ,10 auf Komponente 2: gehört zu Komponente 1. Frage B: −,65 auf Komponente 1: gehört auch dazu, nur gegenläufig.",
+      "vorsicht": "Die Grenze (oft ,30 bis ,50) ist Gewohnheit. Zweimal darüber heißt Doppelladung: inhaltlich prüfen; üblich ist die Zuordnung zur größeren Ladung, manche Regeln zählen jede Ladung über der Grenze (die Aufgabe sagt, welche). Leere Felder in der Tabelle sind ausgeblendete kleine Ladungen."
+    },
+    "eigenwert": {
+      "titel": "Eigenwert und Kaiser-Kriterium",
+      "kurz": "Wie viel der Unterschiede in den Antworten erfasst eine Komponente (Gruppe von Fragen)? Das zeigt der Eigenwert. Geteilt durch die Zahl der Fragen ergibt er ihren Anteil an der Varianz. Kumuliert heißt: mehrere Komponenten zusammengezählt.",
+      "beispiel": "Bei 6 Fragen: Komponente 1 hat 2,4 (40 %), Komponente 2 hat 1,2 (20 %). Kumuliert 3,6 von 6, also 60 %.",
+      "vorsicht": "Das Kaiser-Kriterium behält Komponenten mit einem Eigenwert über 1. Es nennt in Simulationen oft zu viele und sollte nicht allein entscheiden. Die Parallelanalyse ergänzt es.",
+      "fachwoerter": "Varianz (Maß dafür, wie stark die Antworten streuen), Parallelanalyse (vergleicht die Eigenwerte mit denen von Zufallsdaten)."
+    },
+    "kommunalitaet": {
+      "titel": "Kommunalität (h²)",
+      "kurz": "Wie viel einer Frage erklären die Komponenten (Faktoren) zusammen? Das ist die Kommunalität (h²): der Anteil der Unterschiede in den Antworten auf diese Frage, den alle Komponenten gemeinsam erfassen. Bei unkorrelierten Komponenten ist sie die Summe der quadrierten Ladungen.",
+      "beispiel": "Eine Frage lädt ,6 und ,5 auf zwei Komponenten: h² = ,36 + ,25 = ,61, also etwa 61 %.",
+      "vorsicht": "Niedrig kann heißen: viel Zufallsfehler, den gemeinsame Faktoren nie erklären, oder die Frage passt inhaltlich nicht zu den anderen."
+    },
+    "rotation": {
+      "titel": "Rotation (orthogonal und oblique)",
+      "kurz": "Wie wird die Zuordnung der Fragen klarer? Durch die Rotation: Die Achsen der Lösung werden gedreht, bis jede Frage vor allem auf einem Faktor lädt. Viele Lagen passen gleich gut zu den Korrelationen. Die Rotation wählt eine mit klarer Struktur.",
+      "beispiel": "Orthogonal (rechtwinklig, etwa Varimax): Die Faktoren bleiben unkorreliert. Oblique (schiefwinklig, etwa Promax): Die Faktoren dürfen zusammenhängen.",
+      "vorsicht": "Beim orthogonalen Drehen ändern sich die Ladungen, nicht die Kommunalitäten (wie viel einer Frage die Faktoren zusammen erklären). Schiefwinklig erzwingt keinen Zusammenhang: Bei unkorrelierten Faktoren ähnelt das Bild dem orthogonalen."
+    },
+    "explorative-faktorenanalyse": {
+      "titel": "Explorative Faktorenanalyse (EFA)",
+      "kurz": "Stecken hinter den Fragen gemeinsame Merkmale, und welche? Die explorative (erkundende) Faktorenanalyse sucht sie ohne vorab festgelegte Struktur. Sie unterstellt eine gemeinsame Ursache. Das muss vorher fachlich Sinn ergeben, noch vor jeder Kennzahl.",
+      "beispiel": "Zehn Fragen zum Wohlbefinden ergeben zwei Gruppen. Ob es zwei Merkmale gibt, entscheidet Fachwissen.",
+      "vorsicht": "Eine an denselben Daten gefundene Struktur passt zu ihnen naturgemäß gut. Bestätigen lässt sie sich nur an neuen Daten.",
+      "fachwoerter": "konfirmatorisch (prüft eine vorab festgelegte Struktur)."
+    },
+    "bartlett-test": {
+      "titel": "Bartlett-Test (Eignung für die Faktorenanalyse)",
+      "kurz": "Hängen die Fragen überhaupt zusammen? Der Bartlett-Test auf Sphärizität prüft, ob alle Korrelationen null sind (Einheitsmatrix: null überall außer in der Diagonale). Signifikant heißt nur: Nicht alle sind null.",
+      "beispiel": "Bei 30 Personen kann ein mittlerer Zusammenhang unentdeckt bleiben. Bei 5000 Personen werden schon sehr kleine Zusammenhänge signifikant.",
+      "vorsicht": "Die Prüfgröße hängt stark von der Fallzahl ab. Bei vielen Fällen ist der Test fast immer signifikant und sagt dann wenig über die Eignung der Daten. Nicht verwechseln mit dem Mauchly-Test auf Sphärizität bei Messwiederholung.",
+      "fachwoerter": "signifikant (der p-Wert liegt unter der festgelegten Grenze, meist ,05), Prüfgröße (die Zahl, die ein Test aus den Daten errechnet)."
+    },
+    "hauptkomponenten": {
+      "titel": "Hauptkomponentenanalyse (PCA) und Faktorenanalyse",
+      "kurz": "Werden Fragen nur zusammengefasst, oder wird ein gemeinsames Merkmal gesucht? Die Hauptkomponentenanalyse (PCA) zerlegt die gesamte Varianz. Die Faktorenanalyse erklärt nur die gemeinsame. Den Rest jeder Frage (Eigenheit plus Messfehler) trennt sie als eigenen Anteil ab.",
+      "beispiel": "Bei wenigen Fragen je Faktor sind PCA-Ladungen meist höher als Faktorladungen, weil sie den Rest enthalten.",
+      "vorsicht": "Oft ähnlich, nicht immer: Unterschiede zeigen sich vor allem bei niedrigen Kommunalitäten.",
+      "fachwoerter": "Varianz (Maß dafür, wie stark die Antworten streuen), Uniqueness (eigener Anteil: der Teil einer Frage, den die Faktoren nicht erklären)."
+    },
+    "fallzahl-faktorenanalyse": {
+      "titel": "Fallzahl bei der Faktorenanalyse",
+      "kurz": "Wie viele Personen braucht eine Faktorenanalyse? Das hängt weniger von der Fragenzahl ab als von zwei Dingen: Wie hoch sind die Kommunalitäten (wie viel einer Frage die Faktoren erklären), und wie viele Fragen bestimmen jeden Faktor deutlich? Je höher beides, desto kleiner darf die Stichprobe sein.",
+      "beispiel": "Hohe Kommunalitäten, vier starke Fragen je Faktor: wenige Personen können genügen. Niedrige Kommunalitäten, zwei schwache Fragen je Faktor: auch viele können zu wenig sein.",
+      "vorsicht": "Feste Verhältnisse wie „zehn Personen je Frage“ erfassen das nicht."
+    },
+    "umpolen": {
+      "titel": "Umpolen (Reverse-Coding)",
+      "kurz": "Gehört Umpolen zur Reliabilitätsanalyse? Ja: Für Cronbachs Alpha und den Skalenwert müssen alle Fragen einer Skala in dieselbe Richtung zählen. Eine umgekehrt gestellte Frage wird darum so umkodiert, dass „hoch“ immer dasselbe heißt. Auf einer Skala von 1 bis 5 wird aus 1 eine 5.",
+      "beispiel": "„Ich bin oft müde“ neben „Ich habe viel Energie“: Ohne Umpolen heben sich beide in der Summe teilweise auf. Alpha (Maß für den Zusammenhang der Fragen) fällt und kann sogar unter null liegen.",
+      "vorsicht": "Für die Faktorenanalyse ist Umpolen nicht nötig: Eine gegenläufige Frage lädt dann negativ, und eine negative Ladung zählt genauso wie eine positive. Ob eine Frage gegenläufig gemeint ist, zeigt der Wortlaut."
+    },
+    "eingeschraenkte-streuung": {
+      "titel": "Eingeschränkte Streuung (Einschränkung der Spannweite)",
+      "kurz": "Warum fällt ein Zusammenhang kleiner aus, wenn alle Personen sich ähneln? Eingeschränkte Streuung (Einschränkung der Spannweite): Bei einem engen Ausschnitt eines Merkmals sinkt die Korrelation, auch bei demselben Zusammenhang. Das drückt auch Ladungen.",
+      "beispiel": "Alter und Körpergröße hängen bei Kindern von 2 bis 16 eng zusammen. Nur bei 10- bis 11-Jährigen ist die Korrelation viel kleiner.",
+      "vorsicht": "Ein kleines r in einer einheitlichen Gruppe heißt nicht, dass der Zusammenhang überall klein ist. Auch die Reliabilität (Anteil echter Unterschiede an allen Unterschieden) ist dort kleiner, weil es wenig echte Unterschiede gibt."
+    },
+    "inter-item-korrelation": {
+      "titel": "Mittlere Inter-Item-Korrelation",
+      "kurz": "Wie eng hängen die Fragen einer Skala im Mittel zusammen? Das zeigt die mittlere Inter-Item-Korrelation (Item = Frage): der Durchschnitt der Korrelationen je zweier Fragen. Sie hängt nicht von der Fragenzahl ab. Alpha steigt auch mit mehr Fragen.",
+      "beispiel": "Zwei Skalen mit Alpha ,80: 4 Fragen mit mittlerer Korrelation ,50, oder 12 Fragen mit nur ,25.",
+      "vorsicht": "Ein hohes Alpha durch viele Fragen belegt keine einheitliche Skala. Eine kurze Skala mit niedrigem Alpha misst ungenau, auch wenn die Kürze der Grund ist.",
+      "fachwoerter": "Alpha (Maß dafür, wie stark die Antworten einer Skala zusammenhängen)."
+    },
+    "eindimensionalitaet": {
+      "titel": "Eindimensionalität",
+      "kurz": "Messen alle Fragen ein einziges Merkmal? Das heißt Eindimensionalität. Eine Faktorenanalyse kann das prüfen. Alpha zeigt es nicht: Es misst, wie verbunden die Fragen sind, nicht, wie viele Merkmale dahinterstecken.",
+      "beispiel": "Zwei Gruppen zu je 5 Fragen, Korrelation innen ,60, zwischen den Gruppen 0. Alpha der zehn Fragen: etwa ,78, obwohl zwei Merkmale gemessen werden.",
+      "vorsicht": "Haben zwei Gruppen einen Eigenwert über 1, ist das ein Hinweis auf zwei Merkmale, kein Beweis.",
+      "fachwoerter": "Alpha (Maß dafür, wie stark die Antworten einer Skala zusammenhängen), Eigenwert (wie viel Streuung eine Komponente erfasst)."
+    },
+    "reliabilitaet-wege": {
+      "titel": "Wege zur Reliabilität (Alpha, Retest, Halbierung)",
+      "kurz": "Warum geben verschiedene Verfahren für dieselbe Skala verschiedene Reliabilitäten (Zuverlässigkeiten)? Alpha, Retest (zweimal messen) und Halbierung (zwei Skalenhälften vergleichen) sind verschiedene Wege, dieselbe Reliabilität zu schätzen. Jeder setzt anderes voraus.",
+      "beispiel": "Alpha setzt unter anderem voraus, dass alle Fragen ein Merkmal messen. Retest setzt voraus, dass sich das Merkmal nicht ändert und keine Erinnerung hilft.",
+      "vorsicht": "Nur bei erfüllten Voraussetzungen sollten die Zahlen übereinstimmen. Abweichungen deuten auf Verletzungen oder Zufall."
+    },
+    "validitaet": {
+      "titel": "Validität (Gültigkeit)",
+      "kurz": "Misst die Skala wirklich, was sie messen soll? Das ist die Validität (Gültigkeit). Reliabilität (Zuverlässigkeit) ist dafür nötig, aber nicht genug: Ein Maßband misst zuverlässig Länge, aber kein Gewicht.",
+      "beispiel": "Ein hohes Alpha zeigt, dass die Fragen zusammenhängen. Ob sie das Gemeinte erfassen, zeigt es nicht. Das braucht Belege aus dem Inhalt, aus dem Vergleich mit einem Außenmaßstab (Kriterium) und zum gemeinten Merkmal (Konstrukt).",
+      "vorsicht": "Fast gleiche Fragen treiben Alpha nach oben, decken aber nur einen engen Ausschnitt ab. Validität gehört zur Deutung der Werte, nicht zum Test an sich."
+    },
+    "antwortstufen": {
+      "titel": "Antwortstufen",
+      "kurz": "Warum zählt die Zahl der Antwortmöglichkeiten? Antwortstufen sind die Auswahlstufen einer Frage, etwa 1 bis 4. Alpha aus Pearson-Korrelationen setzt fein abgestufte Werte voraus. Bei wenigen Stufen fallen die Zusammenhänge zu klein aus, die Reliabilität wird unterschätzt.",
+      "beispiel": "Dieselbe Einstellung auf 3 oder 7 Stufen: Bei 3 gehen feine Unterschiede verloren, Korrelationen und Alpha sinken.",
+      "vorsicht": "Ab wie vielen Stufen es genügt, ist uneinheitlich (oft fünf bis sieben). Mehr Stufen sind nicht automatisch besser.",
+      "fachwoerter": "Pearson-Korrelation (Standardmaß für den Zusammenhang zweier fein gestufter Größen)."
+    },
+    "messfehler": {
+      "titel": "Messfehler",
+      "kurz": "Warum verfälscht ungenaues Messen die Auswertung? Messfehler sind zufällige Abweichungen vom wahren Wert. Steckt er in einer erklärenden Größe (Prädiktor), wird deren Effekt abgeschwächt (Attenuation). Zufällige Fehler in der Zielgröße verzerren B nicht auf diese Weise.",
+      "beispiel": "Ein Mediator (Variable, über die ein Einfluss läuft) ist ungenau gemessen. Ein Teil des Einflusses läuft an ihm vorbei und fällt dem direkten Weg zu: Mediatoreffekt zu klein, direkter zu groß.",
+      "vorsicht": "Das sagt nichts darüber, auf welchem Weg der Einfluss wirklich läuft."
+    },
+    "abhaengige-groesse": {
+      "titel": "Abhängige Größe (abhängige Variable)",
+      "kurz": "Was wird vorhergesagt, und woraus? Die abhängige Größe (y) wird vorhergesagt. Die unabhängige Größe (x) ist das, woraus man vorhersagt. „Regression von y auf x“ heißt: y wird aus x vorhergesagt.",
+      "beispiel": "Heizkosten werden aus der Außentemperatur vorhergesagt. Heizkosten sind die abhängige Größe.",
+      "vorsicht": "„Abhängig“ heißt nur: wird vorhergesagt, nicht: von x verursacht. Wer die Rollen vertauscht, erhält eine andere Gerade."
+    },
+    "kleinste-quadrate": {
+      "titel": "Kleinste Quadrate (Methode der kleinsten Quadrate)",
+      "kurz": "Wie legt man die beste Gerade durch Punkte? Die Methode der kleinsten Quadrate wählt die Gerade, bei der die Summe der quadrierten Abweichungen am kleinsten ist. Gemessen wird in y-Richtung: beobachtet minus vorhergesagt. Das sind die Residuen.",
+      "beispiel": "Punkt bei y = 10, Gerade sagt 8: Abweichung 2, quadriert 4.",
+      "vorsicht": "Gemessen wird nicht der kürzeste Abstand zur Geraden. Quadrieren lässt große Abweichungen stärker zählen."
+    },
+    "standardfehler-schaetzer": {
+      "titel": "Standardfehler des Schätzers (Standardschätzfehler)",
+      "kurz": "Wie weit liegen Beobachtungen typischerweise von der Vorhersage? Das sagt der Standardfehler des Schätzers. Er hat die Einheit der abhängigen Größe. Kleiner heißt genauere Vorhersage.",
+      "beispiel": "Lieferzeit in Tagen, Wert 2: Die tatsächliche Zeit weicht typischerweise um etwa 2 Tage ab.",
+      "vorsicht": "„Typisch“ ist kein Höchstwert. Nicht mit dem Standardfehler eines B verwechseln: Der beschreibt, wie genau B geschätzt ist."
+    },
+    "kollinearitaet": {
+      "titel": "Kollinearität (Toleranz, VIF)",
+      "kurz": "Messen zwei Vorhersagegrößen fast dasselbe? Dann liegt Kollinearität vor: Sie überschneiden sich. Die Toleranz ist der Anteil der Streuung einer Größe, den die anderen nicht erklären. VIF ist 1 geteilt durch die Toleranz. Je größer der VIF, desto größer der Standardfehler ihres B. Die Schätzung bleibt unverzerrt.",
+      "beispiel": "Fläche und Zimmerzahl: Toleranz ,15 heißt, nur 15 % der Streuung der Zimmerzahl erklärt die Fläche nicht.",
+      "vorsicht": "Das Gesamtmodell kann signifikant sein, obwohl kein B es ist. Grenzen wie VIF 5 oder 10 sind Gewohnheit.",
+      "fachwoerter": "Standardfehler (wie stark ein geschätzter Wert typischerweise schwankt), signifikant (der p-Wert liegt unter der festgelegten Grenze, meist ,05).",
+      "statable": "Regression rechnen und unter dem Ergebnis den Block „Regression prüfen: Kollinearität und auffällige Fälle“ aufklappen. Er zeigt Toleranz, VIF und den eigenen Beitrag (sr²) je Vorhersagegröße."
+    },
+    "dummy-variable": {
+      "titel": "Dummy-Variable (0/1-Größe)",
+      "kurz": "Wie bringt man eine Gruppe in eine Regression? Als Dummy-Variable: 0 für die Referenzgruppe, 1 für die andere. Dann ist die Konstante der Mittelwert der Referenz, B der Unterschied der Mittelwerte. Bei q Gruppen braucht man q - 1 Dummies.",
+      "beispiel": "Dünger A (0), B (1): Konstante 5,0, B = 1,2. Mittel B: 6,2.",
+      "vorsicht": "Das Vorzeichen von B hängt von der Referenz ab. Der Test von B entspricht dem t-Test für unabhängige Stichproben mit gleichen Streuungen."
+    },
+    "residuen": {
+      "titel": "Residuen (Reste)",
+      "kurz": "Wie weit liegt ein Punkt von der Vorhersage? Das ist sein Residuum: beobachtet minus vorhergesagt. Die Normalverteilung wird von diesen Fehlern verlangt, nicht von den Rohwerten. Man prüft sie mit Histogramm oder Q-Q-Plot der Residuen.",
+      "beispiel": "Beobachtet 70 kg, vorhergesagt 66: Residuum +4.",
+      "vorsicht": "Rohwerte mehrerer Gruppen mischen sich und können schief wirken, obwohl die Residuen passen.",
+      "fachwoerter": "Q-Q-Plot (Grafik: Liegen die Punkte nahe der Linie, passen die Werte zur Normalverteilung)."
+    },
+    "heteroskedastizitaet": {
+      "titel": "Heteroskedastizität, auch Heteroskedastie (ungleiche Streuung der Fehler)",
+      "kurz": "Streuen die Abweichungen überall gleich stark? Wenn nicht, heißt das Heteroskedastizität. Im Residuenplot zeigt sie sich oft als Trichter. Die Steigung bleibt unverzerrt, wird aber ungenauer, und die üblichen Standardfehler stimmen nicht. Robuste Standardfehler rechnen die ungleiche Streuung ein.",
+      "beispiel": "Vorhergesagt 1000 €: Abweichungen um ±100. Bei 5000 €: ±600.",
+      "vorsicht": "Verzerrt wird eine Steigung durch Nichtlinearität, fehlende Variablen oder Messfehler in x, nicht dadurch.",
+      "fachwoerter": "Residuenplot (Bild der Abweichungen von der Vorhersage), Steigung (B: Änderung je Einheit), Standardfehler (wie stark ein geschätzter Wert typischerweise schwankt), unverzerrt (im Mittel richtig)."
+    },
+    "hebelwert": {
+      "titel": "Hebelwert (Leverage)",
+      "kurz": "Wie stark kann ein einzelner Punkt die Gerade ziehen? Der Hebelwert wächst mit dem Abstand des x-Werts vom Mittelwert von x. Ein Punkt weit außen zieht die Gerade zu sich.",
+      "beispiel": "Zehn Personen trainieren 20 bis 30 Stunden, eine 90: großer Hebel.",
+      "vorsicht": "Sein Residuum (Abstand zur Geraden) kann klein sein, gerade weil er die Gerade zu sich zog. Darum die Gerade mit und ohne den Punkt vergleichen."
+    },
+    "f-test": {
+      "titel": "F-Test (Varianzanalyse und Regression)",
+      "kurz": "Gibt es überhaupt einen Unterschied oder Einfluss? Der F-Test prüft es im Ganzen. Regression: Sind alle B zugleich null? Varianzanalyse: Sind alle Gruppenmittel gleich? F ist in der Varianzanalyse die Streuung (mittleres Quadrat) zwischen den Gruppen geteilt durch die innerhalb.",
+      "beispiel": "Drei Lehrmethoden: zwischen 6,0, innerhalb 2,0. F = 3,0.",
+      "vorsicht": "Signifikantes F heißt: Mindestens zwei Mittel unterscheiden sich. Welche, zeigen erst Paarvergleiche.",
+      "fachwoerter": "mittleres Quadrat (Summe der quadrierten Abweichungen geteilt durch die Freiheitsgrade, ein Maß für Streuung), Nullhypothese (die Annahme „kein Unterschied“, die der Test prüft)."
+    },
+    "schrittweise-regression": {
+      "titel": "Schrittweise Regression (automatische Auswahl)",
+      "kurz": "Wie wählt ein Programm selbst die Vorhersagegrößen? Die schrittweise Regression nimmt Größen nach einem statistischen Kriterium auf oder wirft sie hinaus, etwa nach dem p-Wert. Oft genannt: Aufnahme bei ,05, Ausschluss bei ,10.",
+      "beispiel": "Aus 20 möglichen Größen für den Mietpreis bleiben vier.",
+      "vorsicht": "Die Auswahl kennt weder Theorie noch Ursachen und hängt an diesen Daten. Ob die Größen sinnvoll oder ursächlich sind, bleibt offen."
+    },
+    "extrapolation": {
+      "titel": "Extrapolation (Vorhersage außerhalb der Daten)",
+      "kurz": "Gilt die Vorhersage auch weit außerhalb der beobachteten Werte? Dorthin vorherzusagen heißt Extrapolation. Sie ist wenig belastbar: Das Konfidenzintervall der Vorhersage wird breiter, je weiter x vom Mittelwert von x entfernt ist, und die Gerade muss dort nicht mehr gelten.",
+      "beispiel": "Pflanzen in Woche 1 bis 8 gemessen, 5 cm je Woche. Woche 80 ergäbe 400 cm.",
+      "vorsicht": "Auch ein hohes R² ändert das nicht."
+    },
+    "zusammenhang-ursache": {
+      "titel": "Zusammenhang und Ursache (Assoziation, Kausalität)",
+      "kurz": "Zeigt ein Zusammenhang, dass das eine das andere bewirkt? Von selbst nicht. B zeigt: Im Schnitt gehört mehr von x zu mehr oder weniger von y, bei gleichen Werten der anderen Größen im Modell. Das ist eine Assoziation. Kausalität folgt daraus nicht, auch eine gemeinsame Ursache kann beides erzeugen.",
+      "beispiel": "Mehr Eisverkauf, mehr Sonnenbrand: Beide folgen dem Sonnenschein.",
+      "vorsicht": "Daten für Gebiete zeigen einen Zusammenhang zwischen Gebieten, nicht für einzelne Menschen darin."
+    },
+    "lineares-modell": {
+      "titel": "Lineares Modell (linear in den Parametern)",
+      "kurz": "Kann eine lineare Regression nur Geraden? Nein. „Linear“ meint die Parameter (die B): Jedes B steht nur als Faktor vor einer Größe, alles wird addiert. Mit einem quadratischen Term (x und x² als Größen) passt das Modell eine Kurve.",
+      "beispiel": "Ertrag = 2 + 3x - 0,2x²: Kurve, aber lineares Modell.",
+      "vorsicht": "x² ist nur eine weitere Größe. Ob sie nötig ist, zeigt ihr Test (Sig.), denn R² steigt mit jedem Zusatz."
+    },
+    "scheinregression": {
+      "titel": "Scheinregression (Trend in Zeitreihen)",
+      "kurz": "Zeigt ein hohes R² zwischen zwei Zeitreihen einen echten Zusammenhang? Nicht unbedingt. Steigen beide mit der Zeit (Trend), entsteht Scheinregression. Warnzeichen: sehr hohes R² und einander ähnliche Residuen (Autokorrelation), Durbin-Watson nahe 0.",
+      "beispiel": "Fahrräder in Stadt A und Kaffeeimport von Land B steigen jährlich: R² = ,95.",
+      "vorsicht": "Rechnet man mit den Änderungen von Jahr zu Jahr, sinkt R² deutlich, wenn es nur Trend war.",
+      "fachwoerter": "Durbin-Watson (Prüfwert für Autokorrelation: nahe 2 keine, nahe 0 positive, nahe 4 negative)."
+    },
+    "prognoseguete": {
+      "titel": "Prognosegüte (MAE, MAPE, MASE)",
+      "kurz": "Wie gut trifft eine Prognose? MAE: mittlerer absoluter Fehler. MAPE: mittlerer Prozentfehler, teilt durch den beobachteten Wert, bei null unendlich. MASE: teilt durch den Fehler der naiven Prognose (letzter Wert) im Anpassungszeitraum. Unter 1 besser, über 1 schlechter als diese.",
+      "beispiel": "MASE 0,8: 80 % des naiven Fehlers.",
+      "vorsicht": "Bei seltenen Zählwerten mit Nullen ist MAPE unbrauchbar."
+    },
+    "preisindex": {
+      "titel": "Preisindex (Laspeyres, Basiseffekt)",
+      "kurz": "Wie viel teurer ist derselbe Einkauf geworden? Der Laspeyres-Index hält die Mengen der Basisperiode fest, nur Preise ändern sich. Basiseffekt: Die Änderung zum Vorjahr kann sinken, obwohl der Index steigt, wenn er im Vorjahr stärker stieg.",
+      "beispiel": "10 Brote, 20 l Milch. Basis: 2 und 1, Wert 40. Jetzt 2,4 und 1,2: Wert 48. Index 1,20.",
+      "vorsicht": "Feste Mengen erfassen nicht, dass Käufer auf Billigeres ausweichen."
+    },
+    "anscombe-quartett": {
+      "titel": "Anscombe-Quartett (gleiche Kennzahlen, andere Daten)",
+      "kurz": "Reicht eine Kennzahl, um Daten zu beschreiben? Nein. Das Anscombe-Quartett: vier Datensätze mit fast gleichem r, gleichen Mittelwerten und gleicher Geraden, aber anderer Punktwolke (Gerade, Bogen, Ausreißer, ein Punkt legt alles fest). Darum das Streudiagramm ansehen.",
+      "beispiel": "r = ,80 passt zu einer Wolke um eine Gerade und zu Punkten auf einer Kurve.",
+      "vorsicht": "r misst nur den geradlinigen Anteil. Ein einzelner Punkt kann r stark senken: prüfen, nicht löschen."
+    },
+    "kovarianz": {
+      "titel": "Kovarianz (und Korrelation r)",
+      "kurz": "Wie stark gehen zwei Werte gemeinsam hoch oder runter? Die Kovarianz misst es nicht standardisiert, ihr Wert hängt vom Maßstab ab. Die Korrelation r ist die Kovarianz geteilt durch das Produkt der Standardabweichungen und bleibt bei Umrechnung der Einheiten gleich.",
+      "beispiel": "Größe und Gewicht: Kovarianz 60 mit Größe in cm, 0,6 in Metern. r gleich.",
+      "vorsicht": "Kovarianz 0 heißt nur: kein geradliniger Zusammenhang, nicht Unabhängigkeit.",
+      "fachwoerter": "Standardabweichung (typischer Abstand der Werte vom Mittelwert)."
+    },
+    "punktbiseriale-korrelation": {
+      "titel": "Punktbiseriale Korrelation (Gruppe und Messwert)",
+      "kurz": "Hängt eine Gruppe (0/1) mit einem Messwert zusammen? Die punktbiseriale Korrelation ist die Pearson-Korrelation einer 0/1-Größe mit einer Zahl. Getestet wird sie wie mit dem t-Test für unabhängige Stichproben (gleiche Streuungen): gleiches p, gleicher t-Betrag.",
+      "beispiel": "A = 0, B = 1, r = +,30: B hat im Schnitt höhere Werte. Vertauscht: -,30.",
+      "vorsicht": "Das Vorzeichen folgt der Kodierung. Die biseriale Korrelation ist etwas anderes."
+    },
+    "fisher-z": {
+      "titel": "Fisher-Z (Fisher-Z-Transformation)",
+      "kurz": "Warum ist das Intervall um r schief? r kann höchstens 1 werden, bei hohem r ist oben weniger Platz. Fisher-Z macht die Verteilung von r annähernd normal. Das Intervall wird in Z gebildet und zurückgerechnet, daher asymmetrisch. Auch zum Mitteln von Korrelationen.",
+      "beispiel": "r = ,90, n = 30: Intervall etwa ,80 bis ,95.",
+      "vorsicht": "Das Intervall ist nie die Wahrscheinlichkeit für den wahren Wert. Fisher-Z ist keine z-Standardisierung."
+    },
+    "fehlerarten": {
+      "titel": "Fehler 1. und 2. Art (α, β)",
+      "kurz": "Kann ein Test sich irren? Ja, zweifach. Fehler 1. Art: kein Unterschied, aber „signifikant“. Fehler 2. Art: Unterschied vorhanden, aber übersehen. Das Niveau α (oft ,05) ist die Rate des ersten Fehlers, wenn es keinen Unterschied gibt.",
+      "beispiel": "200 Tests ohne echten Unterschied, α = ,05: etwa 10 fälschlich signifikant.",
+      "vorsicht": "α sagt nicht, ob ein einzelner Befund falsch ist. Der Fehler 2. Art hat die Wahrscheinlichkeit β = 1 minus Teststärke.",
+      "fachwoerter": "Teststärke (die Chance, einen vorhandenen Unterschied zu finden), Niveau (die vorher festgelegte Grenze für p)."
+    },
+    "einseitig-zweiseitig": {
+      "titel": "Einseitiger und zweiseitiger Test",
+      "kurz": "Zählt nur eine Richtung oder beide? Zweiseitig fragt: Gibt es einen Unterschied, egal wohin? Einseitig fragt nur: Ist A größer als B? Dieselben Daten können einseitig signifikant sein, zweiseitig nicht. Im Zweifel testet man zweiseitig.",
+      "beispiel": "Neue Lernmethode: zweiseitig p = ,08, einseitig p = ,04.",
+      "vorsicht": "Die Richtung muss vor dem Blick auf die Daten feststehen. Wer sie danach wählt, halbiert p ohne neue Information."
+    },
+    "mehrfaches-testen": {
+      "titel": "Mehrfaches Testen (Alphafehler-Kumulierung, Bonferroni)",
+      "kurz": "Wie oft täuscht der Zufall bei vielen Tests? Jeder Test mit Niveau ,05 gibt ohne echten Unterschied in 5 Prozent falschen Alarm. Bei m unabhängigen Tests liegt die Chance auf mindestens einen Alarm bei 1 - ,95 hoch m (Alphafehler-Kumulierung). Bonferroni teilt das Niveau durch m.",
+      "beispiel": "10 Tests, nirgends ein Unterschied: etwa 40 Prozent Chance auf einen Treffer.",
+      "vorsicht": "Erwartet werden etwa m mal ,05 Zufallstreffer. Wer viele Zusammenhänge absucht, findet höchstens Hypothesen für neue Daten."
+    },
+    "effekt-ueberschaetzung": {
+      "titel": "Überschätzte Effekte (Fluch des Gewinners)",
+      "kurz": "Ist ein signifikanter Effekt so groß wie gemessen? Oft nicht. Zählen nur signifikante Ergebnisse, sind die Schätzungen nach oben verzerrt: Eine kleine Studie wird nur bei zufällig großer Schätzung signifikant. Das heißt Fluch des Gewinners (winner’s curse).",
+      "beispiel": "Wahrer Unterschied mittelgroß. Von vielen kleinen Studien erscheinen nur die signifikanten, ihr Durchschnitt liegt darüber.",
+      "vorsicht": "Je kleiner die Studie, desto stärker die Verzerrung. Wiederholungen finden deshalb oft kleinere Effekte, nicht unbedingt null.",
+      "fachwoerter": "signifikant (der p-Wert liegt unter der festgelegten Grenze, meist ,05)."
+    },
+    "falsch-positive-befunde": {
+      "titel": "Falsch positive Befunde (Fehler 1. Art, Forscherfreiheitsgrade)",
+      "kurz": "Wie viele signifikante Befunde sind falscher Alarm? Das hängt von Niveau, Teststärke und dem Anteil echter Effekte ab. Bei geringer Teststärke steigt der falsche Anteil. Mehr Fehlalarme entstehen auch, wenn man nach jedem neuen Fall prüft und bei Signifikanz aufhört, oder viele Auswertungswege probiert und nur den erfolgreichen meldet (Forscherfreiheitsgrade).",
+      "beispiel": "1000 geprüfte Effekte, 100 echt, Teststärke ,5, Niveau ,05: 50 echte und 45 falsche Treffer.",
+      "vorsicht": "Das Niveau ,05 gilt nur bei vorab geplanter Stichprobe und Auswertung. Die Rate steigt auch ohne Täuschungsabsicht.",
+      "fachwoerter": "Teststärke (die Chance, einen echten Effekt zu finden), Niveau (die vorher festgelegte Grenze für p), signifikant (p liegt unter dieser Grenze)."
+    },
+    "fehlerbalken": {
+      "titel": "Fehlerbalken (Standardfehler, Konfidenzintervall)",
+      "kurz": "Was zeigen die Striche an den Mittelwerten? Das ist nicht festgelegt: Standardabweichung (Streuung der Einzelwerte), Standardfehler (Genauigkeit des Mittelwerts) oder Konfidenzintervall. „± Zahl“ verrät es nicht. Ein Standardfehler nach beiden Seiten ist etwa halb so breit wie das 95-Prozent-Intervall und entspricht etwa 68 Prozent.",
+      "beispiel": "Überlappende 95-Prozent-Intervalle, trotzdem p = ,04.",
+      "vorsicht": "Überlappung entscheidet nicht, der Test des Unterschieds entscheidet. Ohne gemeinsamen Bereich der 95-Prozent-Intervalle ist er bei unabhängigen Gruppen zum Niveau ,05 signifikant. Bei gepaarten Messungen zählt das Intervall der Unterschiede je Person, nicht die Intervalle der beiden Mittelwerte."
+    },
+    "levene-test": {
+      "titel": "Levene-Test (gleiche Streuung)",
+      "kurz": "Streuen die Gruppen gleich stark? (Levene-Test) Er prüft, ob die Varianz, also die Streuung der Werte, in den Gruppen gleich ist. Ein kleines p deutet auf ungleiche Streuung.",
+      "beispiel": "Zwei Gruppen mit je 8 Personen, Levene p = ,40: kein Hinweis auf ungleiche Streuung.",
+      "vorsicht": "Nicht signifikant heißt nicht: Streuung gleich. Bei kleinen Gruppen erkennt der Test Unterschiede schlecht. Er beweist keine Gleichheit."
+    },
+    "gepoolter-t-test": {
+      "titel": "Gepoolte Streuung oder Welch-Test (gleiche Streuung angenommen?)",
+      "kurz": "Streuen beide Gruppen gleich? Der t-Test mit gepoolter (zusammengelegter) Streuung setzt das voraus. Der Welch-Test legt nicht zusammen und passt die Freiheitsgrade an. Bei zwei Gruppen ist F der Varianzanalyse das Quadrat von t, mit gleichem p.",
+      "beispiel": "10 Personen mit Streuung 8, 40 mit Streuung 3: Gepoolt zählt vor allem die große Gruppe mit der kleinen Streuung.",
+      "vorsicht": "Streut die kleinere Gruppe stärker, zeigt der gepoolte Test zu oft Signifikanz an. Welch korrigiert das.",
+      "fachwoerter": "Freiheitsgrade (eine Zahl, die die Vergleichsverteilung von t festlegt)."
+    },
+    "zentraler-grenzwertsatz": {
+      "titel": "Zentraler Grenzwertsatz",
+      "kurz": "Müssen die Werte normalverteilt sein? Nicht immer. Der zentrale Grenzwertsatz sagt: Mittelwerte aus vielen Beobachtungen sind näherungsweise normalverteilt, auch wenn die Einzelwerte schief sind. Er gilt für Mittelwerte, nicht für Einzelwerte.",
+      "beispiel": "Einkommen sind schief. Mittelwerte aus je 200 Personen liegen fast symmetrisch.",
+      "vorsicht": "Wie viele genügen, hängt von der Form ab: Bei stark schiefen Werten reichen 10 nicht. Bei großen Gruppen sind t-Tests meist auch ohne normalverteilte Werte brauchbar."
+    },
+    "pseudoreplikation": {
+      "titel": "Pseudoreplikation (abhängige Messungen)",
+      "kurz": "Zählt jeder Messwert als eigene Information? Nein, wenn Werte zusammengehören. Pseudoreplikation heißt: Abhängige Werte werden wie unabhängige behandelt, etwa mehrere Messungen derselben Person oder Kinder einer Klasse. Der Standardfehler wird zu klein, der Test zeigt zu oft Signifikanz an.",
+      "beispiel": "20 Pflanzen, je 5 Blätter gemessen: Das sind 20 unabhängige Einheiten, nicht 100.",
+      "vorsicht": "Mehr Zeilen sind nicht mehr Information. Abhilfe: ein Mittelwert je Einheit oder ein Modell, das die Zusammengehörigkeit berücksichtigt.",
+      "fachwoerter": "Standardfehler (wie stark ein geschätzter Wert typischerweise schwankt), signifikant (der p-Wert liegt unter der festgelegten Grenze, meist ,05)."
+    },
+    "simpson-paradox": {
+      "titel": "Simpson-Paradox (Gruppen zusammenwerfen)",
+      "kurz": "Kann ein Zusammenhang kippen, wenn man Gruppen zusammenwirft? Ja. Das Gesamtbild kann einen Zusammenhang verdecken oder umkehren, den jede Gruppe zeigt (Simpson-Paradox, auch bei der Korrelation r). Grund: Die Gruppen unterscheiden sich in den Merkmalen oder in ihrer Zusammensetzung.",
+      "beispiel": "A hilft bei leichten und schweren Fällen mehr als B. A bekommen aber fast nur schwere Fälle. Insgesamt wirkt A schlechter.",
+      "vorsicht": "Das Gesamtergebnis ist dann nicht direkt deutbar. Welche Sicht gilt, entscheidet die Sachlage."
+    },
+    "erwartete-haeufigkeit": {
+      "titel": "Erwartete Häufigkeit (Chi-Quadrat, Kreuztabelle)",
+      "kurz": "Wie viele Fälle pro Zelle wären zu erwarten, wenn die Merkmale nichts miteinander zu tun hätten? Zeilensumme mal Spaltensumme durch Gesamtzahl. Der Chi-Quadrat-Test vergleicht sie mit den beobachteten. Welche Zelle auffällt, zeigt erst der Vergleich je Zelle.",
+      "beispiel": "Zeile 60, Spalte 50, gesamt 200: erwartet 60 · 50 / 200 = 15.",
+      "vorsicht": "Oft genannt: alle mindestens 5, eine Gewohnheit. Bei kleineren Werten in einer 2x2-Tabelle nimmt man den exakten Test nach Fisher.",
+      "fachwoerter": "Kreuztabelle (Tabelle zweier Merkmale), standardisiertes Residuum (Abstand zwischen beobachtet und erwartet, auf vergleichbare Größe gebracht)."
+    },
+    "zeilenprozent": {
+      "titel": "Zeilenprozent (Anteil in der Zeile)",
+      "kurz": "Welcher Anteil innerhalb einer Gruppe? In einer Kreuztabelle gilt für Zeilenprozent: Zellwert durch Zeilensumme, mal 100. Die Zeilensumme ist die Bezugsgröße. „Wie viel Prozent der A haben B?“ nimmt die Summe der A als Bezug. Spaltenprozent nimmt die Spaltensumme.",
+      "beispiel": "80 Hundehalter, 20 davon auch mit Katze: 20 / 80 = 25 Prozent.",
+      "vorsicht": "Zeilen- und Spaltenprozent sind verschiedene Zahlen. Zuerst klären: Anteil woran?",
+      "fachwoerter": "Kreuztabelle (Tabelle zweier Merkmale)."
+    },
+    "likelihood-ratio": {
+      "titel": "Likelihood-Ratio (LR)",
+      "kurz": "Wie stark verändert ein Testergebnis die Einschätzung? Das positive LR ist Sensitivität durch (1 minus Spezifität): So viel mal häufiger kommt ein positives Ergebnis bei Kranken vor als bei Gesunden. Über 1 spricht für die Krankheit. Nachtest-Odds = Vortest-Odds mal LR.",
+      "beispiel": "Vortest ,20, also Odds ,25. LR 4 ergibt Odds 1, das sind ,50.",
+      "vorsicht": "LR ist keine Wahrscheinlichkeit. Zurück zu p: Odds durch (1 plus Odds).",
+      "fachwoerter": "Sensitivität (Anteil der Kranken, die der Test erkennt), Spezifität (Anteil der Gesunden, die er richtig als gesund meldet), Odds (p geteilt durch 1 minus p)."
+    },
+    "regelkarte": {
+      "titel": "Regelkarte (Shewhart, CUSUM, EWMA)",
+      "kurz": "Hat sich der Prozess verändert? Eine Regelkarte zeigt Gruppenmittelwerte der Reihe nach, mit Mittellinie und Grenzen, oft ±3 Standardfehler. Ein Punkt außerhalb ist ein Signal: Wahrscheinlich wirkt mehr als Zufall. Phase 1 schätzt Grenzen rückblickend, Phase 2 überwacht danach laufend. CUSUM und EWMA fassen mehrere Gruppen zusammen und finden kleine, anhaltende Verschiebungen früher.",
+      "beispiel": "Stabil: etwa 3 von 1000 Punkten außerhalb. Mehrere in kurzer Folge sind ein klares Signal.",
+      "vorsicht": "Liegt ein stabiler Prozess innerhalb der Grenzen, ist die Schwankung Zufall: Nachstellen vergrößert dann die Streuung. Grenzen aus wenigen Gruppen sind ungenau.",
+      "fachwoerter": "Standardfehler (Streuung der Gruppenmittelwerte), stabil (die Verteilung bleibt über die Zeit gleich)."
+    },
+    "prozessfaehigkeit": {
+      "titel": "Prozessfähigkeit (Cp, Cpk)",
+      "kurz": "Hält der Prozess die Vorgabe ein? Cp vergleicht die erlaubte Spanne mit der Streuung und ignoriert die Lage des Mittelwerts. Cpk misst den Abstand des Mittelwerts zur näheren Grenze, höchstens so groß wie Cp. Beide setzen einen stabilen, normalverteilten Prozess voraus.",
+      "beispiel": "Cp = 1, zentriert: etwa 0,27 Prozent außerhalb; verschoben, mehr.",
+      "vorsicht": "Cp = 1 heißt nur: nicht weniger als 0,27 Prozent außerhalb. Bei Signalen der Regelkarte sagt der Index wenig; erst die Signale klären."
+    },
+    "messsystem": {
+      "titel": "Messsystem (Wiederholbarkeit, Reproduzierbarkeit)",
+      "kurz": "Wie viel Streuung kommt vom Messen selbst? Wiederholbarkeit: Streuung des Geräts bei derselben Einheit, demselben Prüfer, demselben Aufbau. Reproduzierbarkeit: Streuung zwischen Prüfern, Aufbauten oder Zeiträumen. Die Gesamtstreuung teilt sich in Prozess und Messsystem. Anteil Messsystem = 1 minus Anteil Prozess. Das Signal-Rausch-Verhältnis zeigt, wie gut Teile unterscheidbar sind: oft genannt ab 5 gut, unter 2 nutzlos.",
+      "beispiel": "Prozess 80 Prozent der Streuung: Messsystem 20 Prozent.",
+      "vorsicht": "Autoren ordnen die Begriffe verschieden zu, die benutzte Definition muss feststehen. Die Grenzen sind Konventionen."
+    },
+    "versuchsplanung": {
+      "titel": "Versuchsplanung (Wechselwirkung, Mittelpunkt)",
+      "kurz": "Wie plant man Versuche, die viel zeigen? Wechselwirkung: Die Wirkung eines Faktors hängt von der Stufe eines anderen ab. Ändert man nur einen Faktor je Versuch, lässt sie sich nicht schätzen; alle Kombinationen finden sie. Ein mehrfach gemessener Mittelpunkt zeigt Krümmung und schätzt die Streuung.",
+      "beispiel": "Dünger wirkt in der Sonne stark, im Schatten kaum.",
+      "vorsicht": "Ein Befund bei einer Stufe gilt nicht automatisch für alle. Bei Krümmung reichen zwei Stufen nicht; der Plan lässt sich erweitern.",
+      "fachwoerter": "Faktor (eine Größe, die man bewusst einstellt), Stufe (ein eingestellter Wert davon), stetig (jeder Wert dazwischen ist möglich)."
+    }
+  },
+  "meldung": [
+    {
+      "id": "engine-absturz",
+      "art": "absturz",
+      "muster": "^Statable: PSPP crashed",
+      "original": "Statable: PSPP crashed and was restarted. RuntimeError: Aborted(Assertion failed: proc.n_cells < CRS_N_CELLS, at: ../../pspp-2.1.1/src/language/commands/crosstabs.c,494,cmd_crosstabs)",
+      "titel": "Das Statistik-Programm ist abgestürzt",
+      "text": {
+        "du": "Das liegt an PSPP, nicht an deinen Daten. Statable hat es neu gestartet und die Daten wieder geladen - so, wie sie vor dieser Rechnung waren.",
+        "sie": "Das liegt an PSPP, nicht an Ihren Daten. Statable hat es neu gestartet und die Daten wieder geladen - so, wie sie vor dieser Rechnung waren."
+      },
+      "tun": {
+        "du": "Rechne noch einmal mit weniger Angaben. Hattest du WEIGHT, FILTER oder SPLIT FILE gesetzt, setze sie neu.",
+        "sie": "Rechnen Sie noch einmal mit weniger Angaben. Hatten Sie WEIGHT, FILTER oder SPLIT FILE gesetzt, setzen Sie sie neu."
+      }
+    },
+    {
+      "id": "nonpar-corr-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "NONPAR CORR is not yet implemented",
+      "original": "NONPAR CORR: NONPAR CORR is not yet implemented.",
+      "titel": "Diesen Befehl kann die Engine nicht",
+      "text": {
+        "du": "NONPAR CORR (Spearman, Kendall) kann PSPP nicht rechnen.",
+        "sie": "NONPAR CORR (Spearman, Kendall) kann PSPP nicht rechnen."
+      },
+      "tun": {
+        "du": "Statable rechnet es in der Frage „Hängen zwei Dinge zusammen?“. An den Daten hat sich nichts geändert.",
+        "sie": "Statable rechnet es in der Frage „Hängen zwei Dinge zusammen?“. An den Daten hat sich nichts geändert."
+      }
+    },
+    {
+      "id": "glm-with-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "GLM: [^\\n]*\\n[^\\n]*\\|[^\\n]*\\b[Ww][Ii][Tt][Hh]\\b",
+      "original": "GLM: Syntax error expecting MISSING, INTERCEPT, CRITERIA, METHOD, or DESIGN.\n   1 | GLM y BY g WITH x /DESIGN=x g.",
+      "titel": "Diesen Befehl kann die Engine nicht",
+      "text": {
+        "du": "GLM mit WITH (Kovarianzanalyse) kann PSPP nicht rechnen.",
+        "sie": "GLM mit WITH (Kovarianzanalyse) kann PSPP nicht rechnen."
+      },
+      "tun": {
+        "du": "Statable rechnet es in der Frage „Unterscheiden sich Gruppen?“ unter „Weitere Wege“ mit einer Kontrollvariable. An den Daten hat sich nichts geändert.",
+        "sie": "Statable rechnet es in der Frage „Unterscheiden sich Gruppen?“ unter „Weitere Wege“ mit einer Kontrollvariable. An den Daten hat sich nichts geändert."
+      }
+    },
+    {
+      "id": "befehl-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "Unknown command `([^']+)'",
+      "original": "Unknown command `FREQENCIES'.",
+      "titel": "Diesen Befehl kennt Statable nicht",
+      "text": {
+        "du": "„{1}“ ist kein bekannter Befehl.",
+        "sie": "„{1}“ ist kein bekannter Befehl."
+      },
+      "tun": {
+        "du": "Prüfe die Schreibweise. Ähnlich ist: {vorschlag}.",
+        "sie": "Prüfen Sie die Schreibweise. Ähnlich ist: {vorschlag}."
+      }
+    },
+    {
+      "id": "spalte-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "(\\S+) is not a variable name",
+      "original": "DESCRIPTIVES: konzentration is not a variable name.",
+      "titel": "Diese Spalte gibt es nicht",
+      "text": {
+        "du": "Eine Spalte „{1}“ gibt es in deinen Daten nicht.",
+        "sie": "Eine Spalte „{1}“ gibt es in Ihren Daten nicht."
+      },
+      "tun": {
+        "du": "Ähnlich heißt: {vorschlag}. Alle Namen siehst du unter „Spalten“.",
+        "sie": "Ähnlich heißt: {vorschlag}. Alle Namen sehen Sie unter „Spalten“."
+      }
+    },
+    {
+      "id": "text-statt-zahl",
+      "art": "hinweis",
+      "muster": "(\\S+) is not a numeric variable\\.\\s+It will not be included",
+      "original": "DESCRIPTIVES: geschlecht is not a numeric variable.  It will not be included in the variable list.",
+      "titel": "Eine Spalte wurde ausgelassen",
+      "text": {
+        "du": "„{1}“ enthält Gruppen oder Text, keine Zahlen. Darum hat Statable sie hier ausgelassen. Der Rest wurde gerechnet.",
+        "sie": "„{1}“ enthält Gruppen oder Text, keine Zahlen. Darum hat Statable sie hier ausgelassen. Der Rest wurde gerechnet."
+      },
+      "tun": {
+        "du": "Für Gruppen passen Häufigkeiten oder ein Gruppenvergleich.",
+        "sie": "Für Gruppen passen Häufigkeiten oder ein Gruppenvergleich."
+      }
+    },
+    {
+      "id": "gruppen-fehlen",
+      "art": "nicht-verstanden",
+      "muster": "When applying GROUPS to a string variable, two values must be specified",
+      "original": "T-TEST: When applying GROUPS to a string variable, two values must be specified.",
+      "titel": "Welche zwei Gruppen?",
+      "text": {
+        "du": "Für den Vergleich fehlen die Namen der zwei Gruppen.",
+        "sie": "Für den Vergleich fehlen die Namen der zwei Gruppen."
+      },
+      "tun": {
+        "du": "Schreib sie in Klammern dahinter, zum Beispiel handy('ja' 'nein').",
+        "sie": "Schreiben Sie sie in Klammern dahinter, zum Beispiel handy('ja' 'nein')."
+      }
+    },
+    {
+      "id": "wert-zu-lang",
+      "art": "nicht-verstanden",
+      "muster": "This (\\d+)-byte string is too long for variable (\\S+) with width (\\d+)",
+      "original": "T-TEST: This 10-byte string is too long for variable handy with width 4.",
+      "titel": "Diesen Wert kann es in der Spalte nicht geben",
+      "text": {
+        "du": "Der Wert ist länger, als die Spalte „{2}“ Platz hat. So ein Wert kommt dort nicht vor.",
+        "sie": "Der Wert ist länger, als die Spalte „{2}“ Platz hat. So ein Wert kommt dort nicht vor."
+      },
+      "tun": {
+        "du": "Schau unter „Spalten“ nach, welche Werte in „{2}“ stehen.",
+        "sie": "Sehen Sie unter „Spalten“ nach, welche Werte in „{2}“ stehen."
+      }
+    },
+    {
+      "id": "anfuehrung-offen",
+      "art": "nicht-verstanden",
+      "muster": "Unterminated string constant",
+      "original": "VARIABLE LABELS: Unterminated string constant.",
+      "titel": "Ein Anführungszeichen ist noch offen",
+      "text": {
+        "du": "Ein Text wurde mit ' begonnen, aber nicht beendet.",
+        "sie": "Ein Text wurde mit ' begonnen, aber nicht beendet."
+      },
+      "tun": {
+        "du": "Setz am Ende des Textes noch ein ' .",
+        "sie": "Setzen Sie am Ende des Textes noch ein ' ."
+      }
+    },
+    {
+      "id": "text-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting string",
+      "original": "VARIABLE LABELS: Syntax error expecting string.",
+      "titel": "Hier fehlt ein Text",
+      "text": {
+        "du": "An dieser Stelle erwartet der Befehl einen Text in Anführungszeichen.",
+        "sie": "An dieser Stelle erwartet der Befehl einen Text in Anführungszeichen."
+      },
+      "tun": {
+        "du": "Texte stehen in Anführungszeichen, zum Beispiel 'ja'. Beschriftung: VARIABLE LABELS konz 'Konzentration'. Gruppen aus Text: T-TEST GROUPS=gruppe('A' 'B').",
+        "sie": "Texte stehen in Anführungszeichen, zum Beispiel 'ja'. Beschriftung: VARIABLE LABELS konz 'Konzentration'. Gruppen aus Text: T-TEST GROUPS=gruppe('A' 'B')."
+      }
+    },
+    {
+      "id": "funktion-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "No function or vector named (\\S+)",
+      "original": "COMPUTE: No function or vector named wurzel.",
+      "titel": "Diese Rechenfunktion gibt es nicht",
+      "text": {
+        "du": "„{1}“ ist keine bekannte Funktion.",
+        "sie": "„{1}“ ist keine bekannte Funktion."
+      },
+      "tun": {
+        "du": "Die Funktionen haben englische Namen, zum Beispiel SQRT für die Wurzel, MEAN für den Mittelwert.",
+        "sie": "Die Funktionen haben englische Namen, zum Beispiel SQRT für die Wurzel, MEAN für den Mittelwert."
+      }
+    },
+    {
+      "id": "rechnen-mit-text",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must be numeric",
+      "original": "COMPUTE: Both operands of + must be numeric.",
+      "titel": "Mit Text kann man nicht rechnen",
+      "text": {
+        "du": "Auf einer Seite von „{1}“ steht eine Spalte mit Text.",
+        "sie": "Auf einer Seite von „{1}“ steht eine Spalte mit Text."
+      },
+      "tun": {
+        "du": "Gruppen kannst du unter „Spalten“ in Zahlen umwandeln - als neue Spalte, das Original bleibt.",
+        "sie": "Gruppen können Sie unter „Spalten“ in Zahlen umwandeln - als neue Spalte, das Original bleibt."
+      }
+    },
+    {
+      "id": "text-mit-zahl-vergleichen",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must have the same type",
+      "original": "SELECT IF: Both operands of = must have the same type.",
+      "titel": "Hier wird Text mit einer Zahl verglichen",
+      "text": {
+        "du": "Die Spalte enthält Text, verglichen wird aber mit einer Zahl.",
+        "sie": "Die Spalte enthält Text, verglichen wird aber mit einer Zahl."
+      },
+      "tun": {
+        "du": "Setz den Wert in Anführungszeichen, zum Beispiel geschlecht = 'weiblich'.",
+        "sie": "Setzen Sie den Wert in Anführungszeichen, zum Beispiel geschlecht = 'weiblich'."
+      }
+    },
+    {
+      "id": "spalte-gibt-es-schon",
+      "art": "nicht-verstanden",
+      "muster": "There is already a variable named (\\S+)",
+      "original": "NUMERIC: There is already a variable named konz2.",
+      "titel": "Diesen Namen gibt es schon",
+      "text": {
+        "du": "Eine Spalte „{1}“ gibt es bereits. Statable überschreibt nichts.",
+        "sie": "Eine Spalte „{1}“ gibt es bereits. Statable überschreibt nichts."
+      },
+      "tun": {
+        "du": "Wähle einen anderen Namen, zum Beispiel {1}_neu.",
+        "sie": "Wählen Sie einen anderen Namen, zum Beispiel {1}_neu."
+      }
+    },
+    {
+      "id": "umbenennen-doppelt",
+      "art": "nicht-verstanden",
+      "muster": "Renaming would duplicate variable name (\\S+)",
+      "original": "RENAME VARIABLES: Renaming would duplicate variable name nr.",
+      "titel": "Diesen Namen gibt es schon",
+      "text": {
+        "du": "Nach dem Umbenennen hätten zwei Spalten den Namen „{1}“.",
+        "sie": "Nach dem Umbenennen hätten zwei Spalten den Namen „{1}“."
+      },
+      "tun": {
+        "du": "Wähle einen Namen, den es noch nicht gibt.",
+        "sie": "Wählen Sie einen Namen, den es noch nicht gibt."
+      }
+    },
+    {
+      "id": "datei-nicht-gefunden",
+      "art": "datei",
+      "muster": "An error occurred while opening `([^']+)': No such file",
+      "original": "An error occurred while opening `/gibt-es-nicht.sav': No such file or directory.",
+      "titel": "Die Datei wurde nicht gefunden",
+      "text": {
+        "du": "„{datei}“ ist nicht mehr da, wo sie war.",
+        "sie": "„{datei}“ ist nicht mehr da, wo sie war."
+      },
+      "tun": {
+        "du": "Öffne sie noch einmal über „Datei öffnen“.",
+        "sie": "Öffnen Sie sie noch einmal über „Datei öffnen“."
+      }
+    },
+    {
+      "id": "datendatei-nicht-gefunden",
+      "art": "datei",
+      "muster": "Could not open `([^']+)' for reading as a data file",
+      "original": "Could not open `/fehlt.csv' for reading as a data file: No such file or directory.",
+      "titel": "Die Datei wurde nicht gefunden",
+      "text": {
+        "du": "„{datei}“ konnte nicht geöffnet werden.",
+        "sie": "„{datei}“ konnte nicht geöffnet werden."
+      },
+      "tun": {
+        "du": "Öffne sie noch einmal über „Datei öffnen“.",
+        "sie": "Öffnen Sie sie noch einmal über „Datei öffnen“."
+      }
+    },
+    {
+      "id": "keine-spss-datei",
+      "art": "datei",
+      "muster": "`([^']+)' is not a system or portable file",
+      "original": "GET: `/kaputt.sav' is not a system or portable file.",
+      "titel": "Diese Datei lässt sich nicht lesen",
+      "text": {
+        "du": "„{datei}“ endet auf .sav, ist innen aber keine SPSS-Datei. Deine anderen Daten sind nicht betroffen.",
+        "sie": "„{datei}“ endet auf .sav, ist innen aber keine SPSS-Datei. Ihre anderen Daten sind nicht betroffen."
+      },
+      "tun": {
+        "du": "Ist es vielleicht eine Excel- oder CSV-Datei? Dann speichere sie in deinem Programm noch einmal als .sav, .xlsx oder .csv.",
+        "sie": "Ist es vielleicht eine Excel- oder CSV-Datei? Dann speichern Sie sie in Ihrem Programm noch einmal als .sav, .xlsx oder .csv."
+      }
+    },
+    {
+      "id": "speichern-unmoeglich",
+      "art": "datei",
+      "muster": "Error opening `([^']+)' for writing",
+      "original": "Error opening `/gibt/es/nicht/x.sav' for writing as a system file: No such file or directory.",
+      "titel": "Die Datei konnte nicht gespeichert werden",
+      "text": {
+        "du": "Am gewählten Ort kann Statable nicht schreiben. Deine Daten sind nicht verloren - sie sind weiter hier geöffnet.",
+        "sie": "Am gewählten Ort kann Statable nicht schreiben. Ihre Daten sind nicht verloren - sie sind weiter hier geöffnet."
+      },
+      "tun": {
+        "du": "Wähle einen anderen Ordner, zum Beispiel „Downloads“.",
+        "sie": "Wählen Sie einen anderen Ordner, zum Beispiel „Downloads“."
+      }
+    },
+    {
+      "id": "name-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting identifier",
+      "original": "COMPUTE: Syntax error expecting identifier.",
+      "titel": "Hier fehlt ein Name",
+      "text": {
+        "du": "An dieser Stelle erwartet der Befehl einen Namen. Namen beginnen mit einem Buchstaben.",
+        "sie": "An dieser Stelle erwartet der Befehl einen Namen. Namen beginnen mit einem Buchstaben."
+      },
+      "tun": {
+        "du": "Beispiel: neu1 statt 1neu.",
+        "sie": "Beispiel: neu1 statt 1neu."
+      }
+    },
+    {
+      "id": "by-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `BY'",
+      "original": "CROSSTABS: Syntax error expecting `BY'.",
+      "titel": "Hier fehlt das Wort BY",
+      "text": {
+        "du": "Zwischen den beiden Spalten fehlt BY (Englisch für „nach“).",
+        "sie": "Zwischen den beiden Spalten fehlt BY (Englisch für „nach“)."
+      },
+      "tun": {
+        "du": "Bei CROSSTABS: /TABLES=geschlecht BY handy. Bei ONEWAY und GLM steht BY zwischen Zahl und Gruppe: ONEWAY punkte BY gruppe.",
+        "sie": "Bei CROSSTABS: /TABLES=geschlecht BY handy. Bei ONEWAY und GLM steht BY zwischen Zahl und Gruppe: ONEWAY punkte BY gruppe."
+      }
+    },
+    {
+      "id": "spalte-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting variable name",
+      "original": "ONEWAY: Syntax error expecting variable name.",
+      "titel": "Hier fehlt eine Spalte",
+      "text": {
+        "du": "An dieser Stelle erwartet der Befehl den Namen einer Spalte.",
+        "sie": "An dieser Stelle erwartet der Befehl den Namen einer Spalte."
+      },
+      "tun": {
+        "du": "Tipp: Im Befehlsfenster schlägt Statable beim Tippen passende Spalten vor.",
+        "sie": "Tipp: Im Befehlsfenster schlägt Statable beim Tippen passende Spalten vor."
+      }
+    },
+    {
+      "id": "klammer-auf-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\('",
+      "original": "NPAR TESTS: Syntax error expecting `('.",
+      "titel": "Hier fehlt eine Klammer",
+      "text": {
+        "du": "An dieser Stelle fehlt „(“.",
+        "sie": "An dieser Stelle fehlt „(“."
+      },
+      "tun": {
+        "du": "Beispiel: /MANN-WHITNEY = konz BY handy (0 1).",
+        "sie": "Beispiel: /MANN-WHITNEY = konz BY handy (0 1)."
+      }
+    },
+    {
+      "id": "klammer-zu-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\)'",
+      "original": "COMPUTE: Syntax error expecting `)'.",
+      "titel": "Eine Klammer ist noch offen",
+      "text": {
+        "du": "Es gibt mehr „(“ als „)“.",
+        "sie": "Es gibt mehr „(“ als „)“."
+      },
+      "tun": {
+        "du": "Setz die fehlende „)“ an die richtige Stelle.",
+        "sie": "Setzen Sie die fehlende „)“ an die richtige Stelle."
+      }
+    },
+    {
+      "id": "gleich-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `='",
+      "original": "COMPUTE: Syntax error expecting `='.",
+      "titel": "Hier fehlt ein Gleichheitszeichen",
+      "text": {
+        "du": "Der Befehl braucht ein „=“ zwischen Name und Rechnung.",
+        "sie": "Der Befehl braucht ein „=“ zwischen Name und Rechnung."
+      },
+      "tun": {
+        "du": "Beispiel: COMPUTE neu = konz * 2.",
+        "sie": "Beispiel: COMPUTE neu = konz * 2."
+      }
+    },
+    {
+      "id": "rechnung-unklar",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error parsing expression",
+      "original": "COMPUTE: Syntax error parsing expression.",
+      "titel": "Die Rechnung ist unvollständig",
+      "text": {
+        "du": "Nach dem „=“ fehlt etwas, oder ein Zeichen passt nicht.",
+        "sie": "Nach dem „=“ fehlt etwas, oder ein Zeichen passt nicht."
+      },
+      "tun": {
+        "du": "Die Markierung zeigt die Stelle.",
+        "sie": "Die Markierung zeigt die Stelle."
+      }
+    },
+    {
+      "id": "noch-keine-daten",
+      "art": "daten",
+      "muster": "is allowed only after the active dataset has been defined",
+      "original": "DESCRIPTIVES: DESCRIPTIVES is allowed only after the active dataset has been defined.",
+      "titel": "Es sind noch keine Daten geöffnet",
+      "text": {
+        "du": "Zum Rechnen braucht Statable zuerst Daten.",
+        "sie": "Zum Rechnen braucht Statable zuerst Daten."
+      },
+      "tun": {
+        "du": "Öffne eine Datei oder probier die Beispieldaten aus.",
+        "sie": "Öffnen Sie eine Datei oder probieren Sie die Beispieldaten aus."
+      }
+    },
+    {
+      "id": "text-in-zahlenspalte",
+      "art": "daten",
+      "muster": "Data for variable (\\S+) is not valid as format F: Field contents are not numeric",
+      "original": "Data for variable a is not valid as format F: Field contents are not numeric.",
+      "titel": "In einer Zahlen-Spalte steht Text",
+      "text": {
+        "du": "In „{1}“ steht an einer Stelle ein Wort statt einer Zahl. Diese Zelle bleibt leer, alles andere wurde gelesen.",
+        "sie": "In „{1}“ steht an einer Stelle ein Wort statt einer Zahl. Diese Zelle bleibt leer, alles andere wurde gelesen."
+      },
+      "tun": {
+        "du": "Der Daten-Check zeigt dir die Zelle. Steht in den Daten ein Dezimalkomma (70,5), liest DATA LIST FREE das Komma als Trennzeichen und die Werte verschieben sich: SET DECIMAL=COMMA. und DATA LIST LIST(';') lösen das.",
+        "sie": "Der Daten-Check zeigt Ihnen die Zelle. Steht in den Daten ein Dezimalkomma (70,5), liest DATA LIST FREE das Komma als Trennzeichen und die Werte verschieben sich: SET DECIMAL=COMMA. und DATA LIST LIST(';') lösen das."
+      }
+    },
+    {
+      "id": "beschriftung-passt-nicht",
+      "art": "daten",
+      "muster": "VALUE LABELS: Data is not valid as format F",
+      "original": "VALUE LABELS: Data is not valid as format F: Field contents are not numeric.",
+      "titel": "Diese Beschriftung passt nicht",
+      "text": {
+        "du": "In einer Zahlen-Spalte braucht jede Gruppen-Beschriftung eine Zahl, zum Beispiel 1 = 'ja'.",
+        "sie": "In einer Zahlen-Spalte braucht jede Gruppen-Beschriftung eine Zahl, zum Beispiel 1 = 'ja'."
+      },
+      "tun": {
+        "du": "Beschriftungen gehen am einfachsten unter „Spalten“.",
+        "sie": "Beschriftungen gehen am einfachsten unter „Spalten“."
+      }
+    },
+    {
+      "id": "keine-angabe-zu-lang",
+      "art": "hinweis",
+      "muster": "Truncating missing value to maximum acceptable length \\((\\d+) bytes\\)",
+      "original": "MISSING VALUES: Truncating missing value to maximum acceptable length (8 bytes).",
+      "titel": "Der Wert für „keine Angabe“ wurde gekürzt",
+      "text": {
+        "du": "Der Wert ist länger als erlaubt ({1} Zeichen) und wurde abgeschnitten.",
+        "sie": "Der Wert ist länger als erlaubt ({1} Zeichen) und wurde abgeschnitten."
+      },
+      "tun": {
+        "du": "Prüf unter „Spalten“, ob „keine Angabe“ noch richtig erkannt wird.",
+        "sie": "Prüfen Sie unter „Spalten“, ob „keine Angabe“ noch richtig erkannt wird."
+      }
+    },
+    {
+      "id": "zu-viele-keine-angabe",
+      "art": "nicht-verstanden",
+      "muster": "Too many numeric missing values",
+      "original": "MISSING VALUES: Too many numeric missing values.  At most three individual values or one value and one range are allowed.",
+      "titel": "Höchstens drei Werte für „keine Angabe“",
+      "text": {
+        "du": "Eine Spalte kann höchstens drei Werte für „keine Angabe“ haben, oder einen Wert und einen Bereich.",
+        "sie": "Eine Spalte kann höchstens drei Werte für „keine Angabe“ haben, oder einen Wert und einen Bereich."
+      },
+      "tun": {
+        "du": "Beispiel: 96 bis 99 als Bereich.",
+        "sie": "Beispiel: 96 bis 99 als Bereich."
+      }
+    },
+    {
+      "id": "gewicht-text",
+      "art": "nicht-verstanden",
+      "muster": "The weighting variable must be numeric",
+      "original": "WEIGHT: The weighting variable must be numeric.",
+      "titel": "Gewichten geht nur mit Zahlen",
+      "text": {
+        "du": "Die gewählte Spalte enthält Text.",
+        "sie": "Die gewählte Spalte enthält Text."
+      },
+      "tun": {
+        "du": "Wähle eine Spalte mit Zahlen.",
+        "sie": "Wählen Sie eine Spalte mit Zahlen."
+      }
+    },
+    {
+      "id": "alle-spalten-loeschen",
+      "art": "hinweis",
+      "muster": "may not be used to delete all variables",
+      "original": "DELETE VARIABLES: DELETE VARIABLES may not be used to delete all variables from the active dataset dictionary.  Use NEW FILE instead.",
+      "titel": "Alle Spalten auf einmal entfernen geht nicht",
+      "text": {
+        "du": "Mindestens eine Spalte muss bleiben. Nichts wurde gelöscht.",
+        "sie": "Mindestens eine Spalte muss bleiben. Nichts wurde gelöscht."
+      },
+      "tun": {
+        "du": "Für einen leeren Anfang: „Neue Studie anlegen“.",
+        "sie": "Für einen leeren Anfang: „Neue Studie anlegen“."
+      }
+    },
+    {
+      "id": "dateityp-unbekannt",
+      "art": "datei",
+      "muster": "GET DATA: Syntax error expecting TXT",
+      "original": "GET DATA: Syntax error expecting TXT, PSQL, GNM, or ODS.",
+      "titel": "Dieses Dateiformat kann der Befehl nicht lesen",
+      "text": {
+        "du": "Excel-Dateien öffnest du am einfachsten über „Datei öffnen“.",
+        "sie": "Excel-Dateien öffnen Sie am einfachsten über „Datei öffnen“."
+      },
+      "tun": {
+        "du": "Ziehe die Datei in das Fenster.",
+        "sie": "Ziehen Sie die Datei in das Fenster."
+      }
+    },
+    {
+      "id": "auswahl-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting one of the following: (.+)\\.",
+      "original": "FREQUENCIES: Syntax error expecting one of the following: STATISTICS, PERCENTILES, FORMAT, NTILES, ALGORITHM, HISTOGRAM, PIECHART, BARCHART, MISSING, ORDER.",
+      "titel": "Dieses Wort passt hier nicht",
+      "text": {
+        "du": "An dieser Stelle ist nur eines dieser Wörter möglich: {1}.",
+        "sie": "An dieser Stelle ist nur eines dieser Wörter möglich: {1}."
+      },
+      "tun": {
+        "du": "Wähle eines davon.",
+        "sie": "Wählen Sie eines davon."
+      }
+    },
+    {
+      "id": "auswahl-oder",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting ((?:\\S+, )+\\S+,? or \\S+)\\.",
+      "original": "EXAMINE: Syntax error expecting BOXPLOT, NPPLOT, HISTOGRAM, SPREADLEVEL, NONE, or ALL.",
+      "titel": "Dieses Wort passt hier nicht",
+      "text": {
+        "du": "Möglich ist hier: {1}.",
+        "sie": "Möglich ist hier: {1}."
+      },
+      "tun": {
+        "du": "Wähle eines davon.",
+        "sie": "Wählen Sie eines davon."
+      }
+    }
+  ],
+  "rueckfall": {
+    "titel": "Das hat nicht geklappt",
+    "text": {
+      "du": "Statable hat den Befehl nicht ausgeführt. An deinen Daten hat sich nichts geändert.",
+      "sie": "Statable hat den Befehl nicht ausgeführt. An Ihren Daten hat sich nichts geändert."
+    },
+    "tun": {
+      "du": "Unter „Details“ steht die Originalmeldung von PSPP. Mit ihr findest du in der Hilfe oder über „Melden“ weiter.",
+      "sie": "Unter „Details“ steht die Originalmeldung von PSPP. Mit ihr finden Sie in der Hilfe oder über „Melden“ weiter."
+    }
+  }
+}

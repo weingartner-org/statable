@@ -1,0 +1,94 @@
+{
+  "format": "statable-fragebogen",
+  "version": 1,
+  "id": "6f0c9a52-3b1e-4d8a-9c47-2a5e1b7d0c33",
+  "revision": 3,
+  "titel": { "de": "Studierendenbefragung", "en": "Student survey" },
+  "sprachen": ["de", "en"],
+  "einleitung": { "de": "Danke, dass Sie mitmachen.", "en": "Thank you for taking part." },
+  "abschluss": { "de": "Vielen Dank!", "en": "Thank you very much!" },
+  "einstellungen": { "fortschritt": true, "zurueck": true, "pretest": false, "fehlendFilter": "code" },
+  "antwortlisten": [
+    {
+      "id": "ja_nein", "name": "ja_nein", "geordnet": false,
+      "optionen": [
+        { "id": "ja_nein:1", "wert": 1, "text": { "de": "Ja", "en": "Yes" } },
+        { "id": "ja_nein:2", "wert": 2, "text": { "de": "Nein", "en": "No" } },
+        { "id": "ja_nein:-9", "wert": -9, "text": { "de": "Keine Angabe", "en": "No answer" }, "fehlend": "keineAngabe" }
+      ]
+    },
+    {
+      "id": "zustimmung", "name": "zustimmung", "geordnet": true,
+      "optionen": [
+        { "id": "zustimmung:1", "wert": 1, "text": { "de": "stimme gar nicht zu", "en": "strongly disagree" } },
+        { "id": "zustimmung:2", "wert": 2, "text": { "de": "stimme eher nicht zu", "en": "tend to disagree" } },
+        { "id": "zustimmung:3", "wert": 3, "text": { "de": "teils/teils", "en": "neither agree nor disagree" } },
+        { "id": "zustimmung:4", "wert": 4, "text": { "de": "stimme eher zu", "en": "tend to agree" } },
+        { "id": "zustimmung:5", "wert": 5, "text": { "de": "stimme voll zu", "en": "strongly agree" } },
+        { "id": "zustimmung:-8", "wert": -8, "text": { "de": "weiß nicht", "en": "don't know" }, "fehlend": "weissNicht" }
+      ]
+    },
+    {
+      "id": "medien", "name": "medien", "geordnet": false,
+      "optionen": [
+        { "id": "medien:1", "wert": 1, "text": { "de": "Zeitung", "en": "Newspaper" } },
+        { "id": "medien:2", "wert": 2, "text": { "de": "Radio", "en": "Radio" } },
+        { "id": "medien:3", "wert": 3, "text": { "de": "Internet", "en": "Internet" } },
+        { "id": "medien:4", "wert": 4, "text": { "de": "Nichts davon", "en": "None of these" }, "ausschliessend": true },
+        { "id": "medien:-8", "wert": -8, "text": { "de": "weiß nicht", "en": "don't know" }, "fehlend": "weissNicht" }
+      ]
+    },
+    {
+      "id": "wichtig", "name": "wichtig", "geordnet": false,
+      "optionen": [
+        { "id": "wichtig:1", "wert": 1, "text": { "de": "Preis", "en": "Price" } },
+        { "id": "wichtig:2", "wert": 2, "text": { "de": "Qualität", "en": "Quality" } },
+        { "id": "wichtig:3", "wert": 3, "text": { "de": "Service", "en": "Service" } }
+      ]
+    }
+  ],
+  "skalen": [
+    { "id": "lernen", "name": "lernen", "items": ["z1", "z2", "z3"], "bildung": "mittelwert", "mindestens": 2 }
+  ],
+  "elemente": [
+    {
+      "art": "seite", "id": "seite:s_person", "name": "s_person", "titel": { "de": "Zur Person", "en": "About you" },
+      "elemente": [
+        { "art": "frage", "id": "einw", "name": "einw", "typ": "einwilligung", "text": { "de": "Ich stimme der Teilnahme zu.", "en": "I agree to take part." }, "pflicht": { "an": true }, "kodebuch": { "niveau": "nominal" } },
+        { "art": "frage", "id": "alter", "name": "alter", "typ": "zahl", "text": { "de": "Wie alt sind Sie?", "en": "How old are you?" }, "hilfe": { "de": "Bitte in ganzen Jahren.", "en": "Please give whole years." }, "pflicht": { "an": true }, "zahl": { "min": 16, "max": 99, "ganz": true }, "kodebuch": { "niveau": "skala" } },
+        { "art": "frage", "id": "geb", "name": "geb", "typ": "datum", "text": { "de": "Wann sind Sie geboren?", "en": "When were you born?" }, "kodebuch": { "niveau": "skala" } },
+        { "art": "frage", "id": "studium", "name": "studium", "typ": "einfach", "text": { "de": "Sind Sie eingeschrieben?", "en": "Are you enrolled?" }, "liste": "ja_nein", "pflicht": { "an": true }, "kodebuch": { "niveau": "nominal" } }
+      ]
+    },
+    {
+      "art": "seite", "id": "seite:s_medien", "name": "s_medien", "titel": { "de": "Mediennutzung", "en": "Media use" },
+      "wennGezeigt": { "frage": "studium", "ist": "=", "wert": 1 },
+      "elemente": [
+        { "art": "frage", "id": "medien", "name": "medien", "typ": "mehrfach", "text": { "de": "Welche Medien nutzen Sie?", "en": "Which media do you use?" }, "liste": "medien", "anders": { "an": true, "text": { "de": "Anderes, und zwar:", "en": "Other, please specify:" } }, "kodebuch": { "niveau": "nominal" } },
+        { "art": "frage", "id": "tv_nutzung", "name": "tv_nutzung", "typ": "einfach", "text": { "de": "Sehen Sie online fern?", "en": "Do you watch TV online?" }, "liste": "ja_nein", "wennGezeigt": { "frage": "medien", "gewaehlt": 3 }, "kodebuch": { "niveau": "nominal" } },
+        { "art": "frage", "id": "stunden", "name": "stunden", "typ": "regler", "text": { "de": "Wie viele Stunden täglich?", "en": "How many hours per day?" }, "zahl": { "min": 0, "max": 12, "schritt": 1, "ganz": true }, "wennGezeigt": { "und": [{ "frage": "studium", "ist": "=", "wert": 1 }, { "frage": "alter", "beantwortet": true }] }, "kodebuch": { "niveau": "skala" } },
+        { "art": "frage", "id": "rang", "name": "rang", "typ": "rangfolge", "text": { "de": "Ordnen Sie nach Wichtigkeit.", "en": "Rank by importance." }, "liste": "wichtig", "kodebuch": { "niveau": "ordinal" } }
+      ]
+    },
+    {
+      "art": "seite", "id": "seite:s_haltung", "name": "s_haltung", "titel": { "de": "Haltungen", "en": "Attitudes" },
+      "elemente": [
+        {
+          "art": "block", "id": "zust", "name": "zust", "text": { "de": "Wie sehr stimmen Sie zu?", "en": "How far do you agree?" }, "liste": "zustimmung",
+          "items": [
+            { "id": "z1", "name": "z1", "text": { "de": "Ich lerne gern.", "en": "I like learning." } },
+            { "id": "z2", "name": "z2", "text": { "de": "Ich bin oft müde.", "en": "I am often tired." }, "umgepolt": true },
+            { "id": "z3", "name": "z3", "text": { "de": "Prüfungen sind fair.", "en": "Exams are fair." } }
+          ],
+          "pflicht": { "an": true },
+          "wennGezeigt": { "frage": "alter", "ist": "≥", "wert": 18 },
+          "kodebuch": { "niveau": "ordinal" }
+        },
+        { "art": "frage", "id": "kommentar", "name": "kommentar", "typ": "text", "text": { "de": "Was möchten Sie noch sagen?", "en": "Anything else?" }, "text_": { "mehrzeilig": true }, "kodebuch": { "niveau": "nominal" } },
+        { "art": "hinweis", "id": "h_bild", "name": "h_bild", "text": { "de": "Das ist die Mensa.", "en": "This is the canteen." }, "bild": { "datei": "mensa.png", "alt": { "de": "Foto der Mensa mit Tischen", "en": "Photo of the canteen with tables" } } }
+      ]
+    }
+  ],
+  "herkunft": { "art": "neu", "zeit": 1700000000000 },
+  "geaendert": 1700000000000
+}

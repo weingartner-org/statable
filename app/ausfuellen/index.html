@@ -1,0 +1,25 @@
+<!doctype html>
+<!--
+  Feste Ausfüllseite für Links (Stufe 3C): `https://statable.eu/ausfuellen/#<Plan>`. Der Plan steht hinter dem `#` und geht nie an einen Server;
+  das Skript (src/ausfuellen/seite.ts) liest ihn dort. Wird mit Statable gebaut (Vite-Mehrseiten-Eintrag), lokal unter /ausfuellen/ erreichbar.
+-->
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Statable - Fragebogen ausfüllen</title>
+  <link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+</head>
+<body>
+  <div id="wurzel"></div>
+  <noscript>
+    <main style="font:1rem/1.5 system-ui,sans-serif;max-width:40rem;margin:0 auto;padding:1rem">
+      <p lang="de">Dieser Fragebogen braucht JavaScript. Bitte schalten Sie JavaScript in Ihrem Browser ein oder öffnen Sie den Link in einem anderen Browser (Chrome, Edge, Firefox oder Safari).</p>
+      <p lang="en">This questionnaire needs JavaScript. Please turn on JavaScript in your browser or open the link in another browser (Chrome, Edge, Firefox or Safari).</p>
+    </main>
+  </noscript>
+  <script type="module" src="../src/ausfuellen/seite.ts"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": null,
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": " zeitdruck ",
+   "pfad": "Belastung/ zeitdruck "
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Belastung/Hilfe"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Selbstwirksamkeit",
+   "pfad": "Selbstwirksamkeit"
+  }
+ ],
+ "datei": "zusammen-b.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": "Fall 1",
+   "laenge": 393,
+   "name": "Interview 1",
+   "pruefung": "geprueft",
+   "sha256": "0821f3089b5764ca900cb0c43f5f9d40cb7069edaff00995786a39d661009d16",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 159,
+   "name": "Interview 2",
+   "pruefung": "geprueft",
+   "sha256": "eebe3834fcc01c15c7849baa93f9669e4bd3fc93b7d948bf523e3e86c3856542",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 126,
+   "name": "Interview 3",
+   "pruefung": "geprueft",
+   "sha256": "7957a7b243d969af6c6d2809b814153dc2e6ff8076d5ccffd2ef5f5cdbe45e76",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": "Fall 3",
+   "laenge": 70,
+   "name": "Interview 4",
+   "pruefung": "geprueft",
+   "sha256": "2bde8f1555df5e02811f52bcfac1cddf657713594511e8c8a5702ce50e8a1c63",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 59,
+   "name": "Interview_5 (Kopie)",
+   "pruefung": "geprueft",
+   "sha256": "665cf78e29918128a251c7b36d7f8b65f92e1a44dd8de45c27d059892ee055b9",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [
+  {
+   "dokumente": [
+    "Interview 1"
+   ],
+   "name": "Fall 1",
+   "werte": {
+    "Alter": 31
+   }
+  },
+  {
+   "dokumente": [
+    "Interview 4"
+   ],
+   "name": "Fall 3",
+   "werte": {
+    "Alter": 22
+   }
+  }
+ ],
+ "fehler": null,
+ "kodierende": [
+  "Berta Beispiel",
+  "Anna Beispiel",
+  "Carla Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/ zeitdruck ",
+   "dokument": "Interview 1",
+   "person": "Berta Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  },
+  {
+   "code": "Belastung/Hilfe",
+   "dokument": "Interview 1",
+   "person": "Berta Beispiel",
+   "text": "Meine Lerngruppe hilft mir sehr"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "spreche mit meiner Schwester"
+  },
+  {
+   "code": "Belastung/Lärm",
+   "dokument": "Interview 2",
+   "person": "Berta Beispiel",
+   "text": "Der Lärm im Großraumbüro"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Interview 2",
+   "person": "Anna Beispiel",
+   "text": "Mein Chef hilft mir"
+  },
+  {
+   "code": "Belastung/Lärm",
+   "dokument": "Interview 3",
+   "person": "Berta Beispiel",
+   "text": "Die Lage in der Wohnung ist laut"
+  },
+  {
+   "code": "Belastung/ zeitdruck ",
+   "dokument": "Interview 4",
+   "person": "Berta Beispiel",
+   "text": "der Zeitdruck wächst jede Woche"
+  },
+  {
+   "code": "Selbstwirksamkeit",
+   "dokument": "Interview 4",
+   "person": "Berta Beispiel",
+   "text": "der Zeitdruck wächst jede Woche"
+  },
+  {
+   "code": "Belastung/Lärm",
+   "dokument": "Interview_5 (Kopie)",
+   "person": "Carla Beispiel",
+   "text": "die Wege sind weit"
+  }
+ ],
+ "meldungen": [],
+ "meldungenDetail": [],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "Statable Prüfdatei",
+ "variablen": [
+  {
+   "name": "Alter",
+   "typ": "ganzzahl"
+  }
+ ],
+ "zaehlung": {
+  "codes": 6,
+  "dokumente": 5,
+  "faelle": 2,
+  "kodierende": 3,
+  "kodierungen": 9,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 8,
+  "variablen": 1
+ }
+}

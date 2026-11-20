@@ -1,0 +1,96 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "bom-nicht-gezaehlt.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": true,
+   "fall": null,
+   "laenge": 393,
+   "name": "Interview 1",
+   "pruefung": "geprueft",
+   "sha256": "0821f3089b5764ca900cb0c43f5f9d40cb7069edaff00995786a39d661009d16",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Anna Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/Lärm",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Der Lärm im Wohnheim stört"
+  },
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Meine Lerngruppe hilft mir sehr"
+  }
+ ],
+ "meldungen": [
+  "bom-entfernt"
+ ],
+ "meldungenDetail": [
+  {
+   "art": "bom-entfernt",
+   "dokument": "Interview 1"
+  }
+ ],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "Statable Prüfdatei",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 1,
+  "faelle": 0,
+  "kodierende": 1,
+  "kodierungen": 3,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 3,
+  "variablen": 0
+ }
+}

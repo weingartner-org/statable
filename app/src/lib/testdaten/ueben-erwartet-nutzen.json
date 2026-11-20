@@ -1,0 +1,32 @@
+{
+  "quelle": "scripts/ueben-erwartet-nutzen.R",
+  "aufgaben": {
+    "irt-wahrscheinlichkeit": {
+      "rasch-leicht": 0.731058578630005,
+      "rasch-gleich": 0.5,
+      "rasch-schwer": 0.268941421369995,
+      "zwei-pl": 0.880797077977882
+    },
+    "omega-ladungen": {
+      "summe-ladung": 2.6,
+      "rest-summe": 2.26,
+      "omega": 0.749445676274945
+    },
+    "invarianz-cfi": {
+      "abfall-metrisch": 0.004,
+      "abfall-skalar": 0.0269999999999999,
+      "stufen-erfuellt": 1,
+      "vielfaches": 2.69999999999999
+    },
+    "pfad-indirekt": {
+      "indirekt": -0.2,
+      "gesamt": -0.5,
+      "anteil": 40
+    },
+    "spearman-brown": {
+      "zaehler": 1.2,
+      "nenner": 1.6,
+      "rho": 0.75
+    }
+  }
+}

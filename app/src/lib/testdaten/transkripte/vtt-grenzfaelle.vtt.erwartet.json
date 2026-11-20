@@ -1,0 +1,23 @@
+{
+  "quelle": "vtt",
+  "beitraege": [
+    {
+      "zeitMs": 65000,
+      "bisMs": 68500,
+      "text": "Wir brauchen Raum & Zeit für die Planung."
+    },
+    {
+      "zeitMs": 72000,
+      "bisMs": 74000,
+      "text": "Dann los <bitte>!"
+    },
+    {
+      "zeitMs": 79500,
+      "bisMs": 81000,
+      "text": "Fertig."
+    }
+  ],
+  "meldungsArten": [
+    "leer"
+  ]
+}

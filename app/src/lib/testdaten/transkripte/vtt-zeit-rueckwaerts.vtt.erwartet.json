@@ -1,0 +1,20 @@
+{
+  "quelle": "teams",
+  "beitraege": [
+    {
+      "sprecher": "Erika Muster",
+      "zeitMs": 10000,
+      "bisMs": 12000,
+      "text": "Das kommt zuerst in der Datei."
+    },
+    {
+      "sprecher": "Max Beispiel",
+      "zeitMs": 5000,
+      "bisMs": 7000,
+      "text": "Das hat die frühere Zeit."
+    }
+  ],
+  "meldungsArten": [
+    "zeit-rueckwaerts"
+  ]
+}

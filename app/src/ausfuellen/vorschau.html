@@ -1,0 +1,45 @@
+<!doctype html>
+<!--
+  Eigenständige Testseite der Fragetypen-Bibliothek (Paket 2B): ein Beispielplan mit allen Fragetypen, zwei Sprachen, Filter, Block, Pflicht.
+  Für axe und NVDA in der Abnahme (Prüfplan A1-A14). Kein Teil der App.
+  Öffnen (in app/):
+    npx vite --port 4310            danach  http://127.0.0.1:4310/src/ausfuellen/vorschau.html        (eine Seite nach der anderen)
+                                            http://127.0.0.1:4310/src/ausfuellen/vorschau.html#alle    (alle Seiten untereinander, für axe)
+    node e2e/probe/2b-axe-vorschau.mjs   startet selbst einen Server und prüft axe bei 1280 und 320 Pixel.
+  Mit „vite build“ wird diese Seite NICHT gebaut (sie ist kein Eingang der App).
+-->
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Statable - Vorschau der Fragetypen</title>
+  <style>
+    body { margin: 0; font: 1rem/1.5 system-ui, sans-serif; color: #1a1a1a; background: #fff; }
+    main { max-width: 52rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.75rem; margin: 0 0 .5rem; }
+    .steuerung { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; align-items: center; margin: 0 0 1rem; padding: .5rem 0; border-bottom: 1px solid #595959; }
+    .steuerung button, .steuerung label { min-height: 2.75rem; display: inline-flex; align-items: center; gap: .5rem; font: inherit; }
+    .steuerung button { padding: .25rem 1rem; color: #1a1a1a; background: #fff; border: 2px solid #595959; border-radius: .375rem; cursor: pointer; }
+    .steuerung button[aria-pressed=true] { background: #0a4fa8; color: #fff; border-color: #0a4fa8; }
+    .steuerung input { width: 1.5rem; height: 1.5rem; }
+    .steuerung :focus-visible { outline: 3px solid #0a4fa8; outline-offset: 2px; }
+    #ende { padding: 1rem; border: 2px solid #595959; }
+    @media (forced-colors: active) { .steuerung button[aria-pressed=true] { border-color: Highlight; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 id="titel">Vorschau der Fragetypen</h1>
+    <div class="steuerung" role="group" aria-label="Einstellungen der Vorschau">
+      <span id="sprachwahl">
+        <button type="button" lang="de" data-sprache="de" aria-pressed="true">Deutsch</button>
+        <button type="button" lang="en" data-sprache="en" aria-pressed="false">English</button>
+      </span>
+      <label><input type="checkbox" id="eng"> Schmale Darstellung (eng)</label>
+      <label><input type="checkbox" id="pretest"> Pretest-Kommentare</label>
+    </div>
+    <div id="bibliothek"></div>
+  </main>
+  <script type="module" src="./vorschau.ts"></script>
+</body>
+</html>

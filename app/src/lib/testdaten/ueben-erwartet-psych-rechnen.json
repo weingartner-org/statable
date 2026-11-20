@@ -1,0 +1,58 @@
+{
+  "quelle": "R 4.x, scripts/ueben-erwartet-psych-rechnen.R",
+  "aufgaben": {
+    "ps-mittel-sd": {
+      "mittel": 12.5,
+      "sd": 2.44948974278318,
+      "se": 0.866025403784438
+    },
+    "ps-t-gepaart": {
+      "mittel-diff": 3,
+      "sd-diff": 1.8516401995451,
+      "t": 4.58257569495584
+    },
+    "ps-cohen-d": {
+      "diff": 2,
+      "sd-pool": 1.22474487139159,
+      "d": 1.63299316185545
+    },
+    "ps-r": {
+      "sxx": 28,
+      "syy": 1050,
+      "sxy": 120,
+      "r": 0.699854212223765
+    },
+    "ps-alpha": {
+      "var-fragen": 3.6,
+      "var-summe": 9.5,
+      "alpha": 0.931578947368421
+    },
+    "ps-chi2": {
+      "erwartet": 25,
+      "chi2": 5.33333333333333,
+      "phi": 0.258198889747161
+    },
+    "ps-rci": {
+      "sem": 2.4,
+      "s-diff": 3.39411254969543,
+      "rci": -2.35702260395516
+    },
+    "ps-z-t": {
+      "z-a": 1.5,
+      "t-a": 65,
+      "z-b": -0.75,
+      "t-b": 42.5
+    },
+    "ps-eta2": {
+      "ss-zwischen": 32,
+      "ss-innerhalb": 18,
+      "eta2": 0.64,
+      "f": 8
+    },
+    "ps-spearman-brown": {
+      "r-hh": 0.867227382716513,
+      "sb-voll": 0.928893171494559,
+      "sb-dreifach": 0.97511821390011
+    }
+  }
+}

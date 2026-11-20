@@ -1,0 +1,1209 @@
+[
+ {
+  "satz": "Ich habe mit Anna gesprochen.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ]
+ },
+ {
+  "satz": "Die Annahme war falsch.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [],
+  "warum": "Anna steht nur als Wortteil in Annahme"
+ },
+ {
+  "satz": "Annabelle ging früh heim.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [],
+  "warum": "Wortteil, kein ganzes Wort"
+ },
+ {
+  "satz": "Marianna ging früh heim.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [],
+  "warum": "Wortteil am Wortende"
+ },
+ {
+  "satz": "Annas Mutter arbeitet dort.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "warum": "Genitiv-s gehört nicht zum Fund, nur der Name"
+ },
+ {
+  "satz": "Anna Berger kam spät, Anna blieb.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   },
+   {
+    "text": "Anna Berger",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna Berger",
+    "art": "person"
+   },
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "warum": "mehrteiliger Name zählt als ein Fund"
+ },
+ {
+  "satz": "Anna Bergers Haus steht dort.",
+  "namen": [
+   {
+    "text": "Anna Berger",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna Berger",
+    "art": "person"
+   }
+  ],
+  "warum": "Genitiv-s gehört nicht zum Fund"
+ },
+ {
+  "satz": "Mutter kam um acht.",
+  "namen": [],
+  "regeln": [
+   "email",
+   "telefon",
+   "datum",
+   "plz",
+   "adresse",
+   "url",
+   "iban"
+  ],
+  "erwartet": [],
+  "warum": "Hauptwort am Satzanfang, keine automatische Namenserkennung"
+ },
+ {
+  "satz": "Mutter kam um acht.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [
+   "email",
+   "telefon",
+   "datum",
+   "plz",
+   "adresse",
+   "url",
+   "iban"
+  ],
+  "erwartet": [],
+  "warum": "Hauptwort am Satzanfang ist kein Name der Liste"
+ },
+ {
+  "satz": "ANNA und anna sind da.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "ANNA",
+    "art": "person"
+   },
+   {
+    "text": "anna",
+    "art": "person"
+   }
+  ],
+  "warum": "Groß-/Kleinschreibung egal, Text bleibt wie im Satz"
+ },
+ {
+  "satz": "Frau Özdemir sagt nein.",
+  "namen": [
+   {
+    "text": "Özdemir",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Özdemir",
+    "art": "person"
+   }
+  ]
+ },
+ {
+  "satz": "Jürgens Auto ist rot.",
+  "namen": [
+   {
+    "text": "Jürgen",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Jürgen",
+    "art": "person"
+   }
+  ],
+  "warum": "Genitiv-s gehört nicht zum Fund"
+ },
+ {
+  "satz": "Lukas sagt hallo.",
+  "namen": [
+   {
+    "text": "Lukas",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Lukas",
+    "art": "person"
+   }
+  ]
+ },
+ {
+  "satz": "Wir leben in St. Pölten.",
+  "namen": [
+   {
+    "text": "St. Pölten",
+    "art": "ort"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "St. Pölten",
+    "art": "ort"
+   }
+  ],
+  "warum": "Punkt im Namen ist kein Sonderzeichen"
+ },
+ {
+  "satz": "Sie arbeitet bei der Caritas.",
+  "namen": [
+   {
+    "text": "Caritas",
+    "art": "organisation"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Caritas",
+    "art": "organisation"
+   }
+  ]
+ },
+ {
+  "satz": "Ich fahre nach WIEN.",
+  "namen": [
+   {
+    "text": "Wien",
+    "art": "ort"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "WIEN",
+    "art": "ort"
+   }
+  ]
+ },
+ {
+  "satz": "Ich wohne in 1010 Wien.",
+  "namen": [],
+  "regeln": [
+   "plz"
+  ],
+  "erwartet": [
+   {
+    "text": "1010",
+    "art": "plz"
+   }
+  ],
+  "warum": "PLZ ist nur die Ziffernfolge"
+ },
+ {
+  "satz": "Ich wohne in 1010 Wien.",
+  "namen": [
+   {
+    "text": "Wien",
+    "art": "ort"
+   }
+  ],
+  "regeln": [
+   "plz"
+  ],
+  "erwartet": [
+   {
+    "text": "1010",
+    "art": "plz"
+   },
+   {
+    "text": "Wien",
+    "art": "ort"
+   }
+  ]
+ },
+ {
+  "satz": "Das steht auf Seite 1010.",
+  "namen": [],
+  "regeln": [
+   "email",
+   "telefon",
+   "datum",
+   "plz",
+   "adresse",
+   "url",
+   "iban"
+  ],
+  "erwartet": [],
+  "warum": "Ziffern ohne großgeschriebenes Wort dahinter"
+ },
+ {
+  "satz": "Siehe Seite 1010 im Buch.",
+  "namen": [],
+  "regeln": [
+   "plz"
+  ],
+  "erwartet": [],
+  "warum": "Wort dahinter ist kleingeschrieben"
+ },
+ {
+  "satz": "80331 München ist groß.",
+  "namen": [],
+  "regeln": [
+   "plz"
+  ],
+  "erwartet": [
+   {
+    "text": "80331",
+    "art": "plz"
+   }
+  ]
+ },
+ {
+  "satz": "Er schrieb 123456 Wien.",
+  "namen": [],
+  "regeln": [
+   "plz"
+  ],
+  "erwartet": [],
+  "warum": "sechs Ziffern sind keine PLZ"
+ },
+ {
+  "satz": "Es kamen 2020 Menschen.",
+  "namen": [],
+  "regeln": [
+   "plz"
+  ],
+  "erwartet": [
+   {
+    "text": "2020",
+    "art": "plz"
+   }
+  ],
+  "warum": "bekannte Schwäche der Regel, darum ist plz in der Voreinstellung aus"
+ },
+ {
+  "satz": "Wir treffen uns um 12.30 Uhr.",
+  "namen": [],
+  "regeln": [
+   "email",
+   "telefon",
+   "datum",
+   "plz",
+   "adresse",
+   "url",
+   "iban"
+  ],
+  "erwartet": [],
+  "warum": "Uhrzeit ist kein Datum, keine Telefonnummer"
+ },
+ {
+  "satz": "Das war 2019 und 2020.",
+  "namen": [],
+  "regeln": [
+   "datum",
+   "plz"
+  ],
+  "erwartet": [],
+  "warum": "Jahreszahl allein ist kein Datum"
+ },
+ {
+  "satz": "Am 3.4.2024 war es kalt.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "3.4.2024",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "Am 03.04.24 war es kalt.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "03.04.24",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "Am 2024-04-03 war es kalt.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "2024-04-03",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "Am 3. April 2024 war es kalt.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "3. April 2024",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "Am 3 April 2024 war es kalt.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "3 April 2024",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "Am April 3, 2024 war es kalt.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "April 3, 2024",
+    "art": "datum"
+   }
+  ],
+  "warum": "englische Schreibweise auch im deutschen Satz"
+ },
+ {
+  "satz": "Am 15. März 2023 begann es.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "15. März 2023",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "Am 31.12.1999 war Silvester.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "31.12.1999",
+    "art": "datum"
+   }
+  ]
+ },
+ {
+  "satz": "Kapitel 3.4.2 beschreibt das.",
+  "namen": [],
+  "regeln": [
+   "datum",
+   "telefon"
+  ],
+  "erwartet": [],
+  "warum": "Jahr hat nur eine Ziffer"
+ },
+ {
+  "satz": "Im April war es kalt.",
+  "namen": [],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [],
+  "warum": "Monatsname allein ist kein Datum"
+ },
+ {
+  "satz": "Am 3. April 2024 sprach April.",
+  "namen": [
+   {
+    "text": "April",
+    "art": "person"
+   }
+  ],
+  "regeln": [
+   "datum"
+  ],
+  "erwartet": [
+   {
+    "text": "3. April 2024",
+    "art": "datum"
+   },
+   {
+    "text": "April",
+    "art": "person"
+   }
+  ],
+  "warum": "Name im Datum: Datum ist länger und gewinnt"
+ },
+ {
+  "satz": "Am 03.04.2024 um 10:00 begann es.",
+  "namen": [],
+  "regeln": [
+   "datum",
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "03.04.2024",
+    "art": "datum"
+   }
+  ],
+  "warum": "Datum mit führender 0 ist keine Telefonnummer"
+ },
+ {
+  "satz": "Schreiben Sie an anna.berger@uni.at.",
+  "namen": [],
+  "regeln": [
+   "email"
+  ],
+  "erwartet": [
+   {
+    "text": "anna.berger@uni.at",
+    "art": "email"
+   }
+  ],
+  "warum": "Punkt am Satzende gehört nicht zur Adresse"
+ },
+ {
+  "satz": "Schreib an anna.berger@uni.at jetzt.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   },
+   {
+    "text": "Berger",
+    "art": "person"
+   }
+  ],
+  "regeln": [
+   "email"
+  ],
+  "erwartet": [
+   {
+    "text": "anna.berger@uni.at",
+    "art": "email"
+   }
+  ],
+  "warum": "Namen in der E-Mail-Adresse: die längere E-Mail gewinnt"
+ },
+ {
+  "satz": "Mail: anna@uni.at",
+  "namen": [
+   {
+    "text": "anna@uni.at",
+    "art": "person"
+   }
+  ],
+  "regeln": [
+   "email"
+  ],
+  "erwartet": [
+   {
+    "text": "anna@uni.at",
+    "art": "person"
+   }
+  ],
+  "warum": "gleiche Stelle, gleiche Länge: Namen vor Regeln"
+ },
+ {
+  "satz": "Anna Maria Lena kam.",
+  "namen": [
+   {
+    "text": "Anna Maria",
+    "art": "person"
+   },
+   {
+    "text": "Maria Lena",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna Maria",
+    "art": "person"
+   }
+  ],
+  "warum": "Überlappung, gleiche Länge: der frühere gewinnt"
+ },
+ {
+  "satz": "Anna Maria Berger kam.",
+  "namen": [
+   {
+    "text": "Anna Maria",
+    "art": "person"
+   },
+   {
+    "text": "Maria Berger",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Maria Berger",
+    "art": "person"
+   }
+  ],
+  "warum": "Überlappung: der längere gewinnt"
+ },
+ {
+  "satz": "Siehe https://example.org/seite.",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "https://example.org/seite",
+    "art": "url"
+   }
+  ]
+ },
+ {
+  "satz": "Das (siehe https://example.org/seite) stimmt.",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "https://example.org/seite",
+    "art": "url"
+   }
+  ],
+  "warum": "schließende Klammer gehört nicht zur Adresse"
+ },
+ {
+  "satz": "Mehr unter www.statable.eu, dort.",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "www.statable.eu",
+    "art": "url"
+   }
+  ]
+ },
+ {
+  "satz": "Rufen Sie +43 1 5812345 an.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "+43 1 5812345",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Rufen Sie 0664 1234567 an.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "0664 1234567",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Büro: 01/5812345.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "01/5812345",
+    "art": "telefon"
+   }
+  ],
+  "warum": "Schrägstrich erlaubt, Punkt am Ende nicht"
+ },
+ {
+  "satz": "Fax 0043-1-5812345 bitte.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "0043-1-5812345",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Zu kurz: 0123 45.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [],
+  "warum": "nur 6 Ziffern"
+ },
+ {
+  "satz": "Die Zahl 1234567 ist keine Nummer.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [],
+  "warum": "beginnt weder mit + noch mit 0"
+ },
+ {
+  "satz": "Konto AT61 1904 3002 3457 3201 bitte.",
+  "namen": [],
+  "regeln": [
+   "iban"
+  ],
+  "erwartet": [
+   {
+    "text": "AT61 1904 3002 3457 3201",
+    "art": "iban"
+   }
+  ]
+ },
+ {
+  "satz": "IBAN: DE89370400440532013000.",
+  "namen": [],
+  "regeln": [
+   "iban"
+  ],
+  "erwartet": [
+   {
+    "text": "DE89370400440532013000",
+    "art": "iban"
+   }
+  ],
+  "warum": "ohne Leerzeichen, Punkt am Ende nicht dabei"
+ },
+ {
+  "satz": "Konto DE89 3704 0044 0532 0130 00 bitte.",
+  "namen": [],
+  "regeln": [
+   "iban",
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "DE89 3704 0044 0532 0130 00",
+    "art": "iban"
+   }
+  ],
+  "warum": "Teil der IBAN sähe wie Telefonnummer aus; die IBAN ist länger"
+ },
+ {
+  "satz": "Konto AT62 1904 3002 3457 3201 bitte.",
+  "namen": [],
+  "regeln": [
+   "iban"
+  ],
+  "erwartet": [],
+  "warum": "Prüfziffer falsch (mod 97 ergibt nicht 1)"
+ },
+ {
+  "satz": "Konto DE89 3704 0044 0532 0130 0 bitte.",
+  "namen": [],
+  "regeln": [
+   "iban"
+  ],
+  "erwartet": [],
+  "warum": "zu kurz, Prüfsumme stimmt nicht"
+ },
+ {
+  "satz": "Ich wohne in der Hauptstraße 12.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "Hauptstraße 12",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "Büro Mariahilfer Straße 3 im Zentrum.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "Mariahilfer Straße 3",
+    "art": "adresse"
+   }
+  ],
+  "warum": "zweiteiliger Straßenname"
+ },
+ {
+  "satz": "Am Kirchenweg 7 ist es ruhig.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "Kirchenweg 7",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "Wir trafen uns am Rathausplatz 1.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "Rathausplatz 1",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "Die Hauptstraße ist laut.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [],
+  "warum": "keine Hausnummer"
+ },
+ {
+  "satz": "Anna Berger (0664 1234567) wohnt in der Hauptstraße 12, 1010 Wien.",
+  "namen": [
+   {
+    "text": "Anna Berger",
+    "art": "person"
+   },
+   {
+    "text": "Wien",
+    "art": "ort"
+   }
+  ],
+  "regeln": [
+   "telefon",
+   "adresse",
+   "plz"
+  ],
+  "erwartet": [
+   {
+    "text": "Anna Berger",
+    "art": "person"
+   },
+   {
+    "text": "0664 1234567",
+    "art": "telefon"
+   },
+   {
+    "text": "Hauptstraße 12",
+    "art": "adresse"
+   },
+   {
+    "text": "1010",
+    "art": "plz"
+   },
+   {
+    "text": "Wien",
+    "art": "ort"
+   }
+  ]
+ },
+ {
+  "satz": "Dies ist ein Satz ohne Hinweise.",
+  "namen": [],
+  "regeln": [],
+  "erwartet": []
+ },
+ {
+  "satz": "Mail anna@uni.at geht an Lukas.",
+  "namen": [
+   {
+    "text": "Lukas",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Lukas",
+    "art": "person"
+   }
+  ],
+  "warum": "ohne Regel email wird die Adresse nicht gefunden"
+ },
+ {
+  "satz": "Anna-Lena kam spät.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [],
+  "warum": "Bindestrich verbindet: kein Treffer für Anna"
+ },
+ {
+  "satz": "Thomas kam spät.",
+  "namen": [
+   {
+    "text": "Thomas",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Thomas",
+    "art": "person"
+   }
+  ],
+  "warum": "Name auf s passt genau; kein Abziehen eines s"
+ },
+ {
+  "satz": "Thomas' Auto ist rot.",
+  "namen": [
+   {
+    "text": "Thomas",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Thomas",
+    "art": "person"
+   }
+  ],
+  "warum": "Genitiv mit Apostroph: Fund ist Thomas"
+ },
+ {
+  "satz": "Hauptplatz 3 ist laut.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "Hauptplatz 3",
+    "art": "adresse"
+   }
+  ],
+  "warum": "mindestens zwei Buchstaben vor der Endung"
+ },
+ {
+  "satz": "Sie wurde Dritte, Platz 3.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [],
+  "warum": "Platz allein ist keine Adresse"
+ },
+ {
+  "satz": "Er wohnt am Weg 2.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [],
+  "warum": "Weg allein ist keine Adresse"
+ },
+ {
+  "satz": "Er wohnt im Hochweg 2.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "Hochweg 2",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "Er wohnt in der Gartengasse 4.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "Gartengasse 4",
+    "art": "adresse"
+   }
+  ]
+ },
+ {
+  "satz": "Siehe https://de.wikipedia.org/wiki/Anna_(Name) heute.",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "https://de.wikipedia.org/wiki/Anna_(Name)",
+    "art": "url"
+   }
+  ],
+  "warum": "ausgeglichene Klammer gehört zur Adresse"
+ },
+ {
+  "satz": "Ist es https://example.org/x? Ja, https://example.org/y!",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "https://example.org/x",
+    "art": "url"
+   },
+   {
+    "text": "https://example.org/y",
+    "art": "url"
+   }
+  ],
+  "warum": "Satzzeichen am Ende gehören nicht dazu"
+ },
+ {
+  "satz": "Links: https://example.org/a, https://example.org/b; fertig.",
+  "namen": [],
+  "regeln": [
+   "url"
+  ],
+  "erwartet": [
+   {
+    "text": "https://example.org/a",
+    "art": "url"
+   },
+   {
+    "text": "https://example.org/b",
+    "art": "url"
+   }
+  ],
+  "warum": ", und ; am Ende gehören nicht dazu"
+ },
+ {
+  "satz": "Rufen Sie (202) 555-0143 an.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "(202) 555-0143",
+    "art": "telefon"
+   }
+  ],
+  "warum": "US-Form mit Klammer"
+ },
+ {
+  "satz": "Rufen Sie 202-555-0143 an.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "202-555-0143",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Rufen Sie 202.555.0143 an.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "202.555.0143",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Rufen Sie 202 555 0143 an.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [
+   {
+    "text": "202 555 0143",
+    "art": "telefon"
+   }
+  ]
+ },
+ {
+  "satz": "Es waren 123 456 789 Euro.",
+  "namen": [],
+  "regeln": [
+   "telefon"
+  ],
+  "erwartet": [],
+  "warum": "3-3-3 ist keine US-Nummer"
+ },
+ {
+  "satz": "😀 Anna 😀 schrieb.",
+  "namen": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "regeln": [],
+  "erwartet": [
+   {
+    "text": "Anna",
+    "art": "person"
+   }
+  ],
+  "warum": "Emoji vor dem Treffer, Positionen in Codepoints"
+ },
+ {
+  "satz": "Der Platz 3 im Rennen ging an sie.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [],
+  "warum": "Artikel (Der, Die, Das, Ein …) zählen nicht als großgeschriebenes Wort davor (Opus 09.11.)"
+ },
+ {
+  "satz": "Am Ende stand die Straße 5 leer.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [],
+  "warum": "kleines Wort davor, Straße allein ohne zwei Buchstaben davor (Opus 09.11.)"
+ },
+ {
+  "satz": "Sie wohnt jetzt in der Neubaugasse 12.",
+  "namen": [],
+  "regeln": [
+   "adresse"
+  ],
+  "erwartet": [
+   {
+    "text": "Neubaugasse 12",
+    "art": "adresse"
+   }
+  ],
+  "warum": "Gegenprobe (Opus 09.11.)"
+ }
+]

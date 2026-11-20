@@ -1,0 +1,339 @@
+{
+ "begriffe": {
+  "bayes": [
+   "p-Wert"
+  ],
+  "normalverteilung": [
+   "Welch"
+  ],
+  "korrelationsmatrix": [
+   "Konfidenzintervall",
+   "Pearson",
+   "Spearman"
+  ],
+  "chi-quadrat": [
+   "Fisher"
+  ],
+  "reliabilitaet": [
+   "Faktorenanalyse",
+   "Trennschärfe"
+  ],
+  "faktorenanalyse": [
+   "Promax"
+  ],
+  "koeffizient-b": [
+   "Beta"
+  ],
+  "standardfehler": [
+   "Stichprobe"
+  ],
+  "r-quadrat": [
+   "Varianz",
+   "signifikant"
+  ],
+  "eigenwert-rotation": [
+   "Kaiser",
+   "Komponente",
+   "Promax",
+   "Varimax"
+  ],
+  "trennschaerfe": [
+   "Cronbachs"
+  ],
+  "icc": [
+   "Konfidenzintervall"
+  ],
+  "bland-altman": [
+   "ICC"
+  ],
+  "sensitivitaet": [
+   "Referenzstandard"
+  ],
+  "spezifitaet": [
+   "Referenzstandard"
+  ],
+  "vorhersagewert": [
+   "Likelihood"
+  ],
+  "gepaarte-messung": [
+   "Standardabweichung",
+   "Teststärke"
+  ],
+  "logistische-regression": [
+   "Odds",
+   "Prädiktor"
+  ],
+  "odds-ratio": [
+   "Prädiktor",
+   "Wald"
+  ],
+  "eta-quadrat": [
+   "Grundgesamtheit",
+   "Konfidenzintervall",
+   "Messwiederholung",
+   "signifikant"
+  ],
+  "paarvergleich": [
+   "Varianzanalyse"
+  ],
+  "welch-anova": [
+   "Freiheitsgrade"
+  ],
+  "rangtest": [
+   "Effektstärke",
+   "Holm",
+   "Konfidenzintervall",
+   "Kruskal",
+   "Wilcoxon"
+  ],
+  "sphaerizitaet": [
+   "Freiheitsgrade",
+   "Messwiederholung",
+   "Varianzanalyse",
+   "p-Wert"
+  ],
+  "greenhouse-geisser": [
+   "Freiheitsgrade",
+   "Varianzanalyse"
+  ],
+  "mediation": [
+   "Bootstrap",
+   "Konfidenzintervall",
+   "Mediator"
+  ],
+  "moderation": [
+   "Regression",
+   "Zentrierung",
+   "signifikant"
+  ],
+  "nap": [
+   "AUC",
+   "Konfidenzintervall",
+   "Mann-Whitney",
+   "p-Wert"
+  ],
+  "tau-u": [
+   "Kendall"
+  ],
+  "einzelfall": [
+   "Median",
+   "NAP",
+   "PND",
+   "Tau",
+   "Tau-U"
+  ],
+  "kaplan-meier": [
+   "zensiert"
+  ],
+  "zensierung": [
+   "Kaplan",
+   "Kaplan-Meier",
+   "Meier"
+  ],
+  "ueberlebensfunktion": [
+   "Konfidenzintervall",
+   "Standardfehler"
+  ],
+  "log-rank": [
+   "Cox",
+   "Holm"
+  ],
+  "anzahl-unter-risiko": [
+   "Zensierung"
+  ],
+  "bootstrap": [
+   "Konfidenzintervall"
+  ],
+  "cfa": [
+   "Fit-Indizes"
+  ],
+  "icc-mehrebenen": [
+   "Intraklassen-Korrelation",
+   "Varianz"
+  ],
+  "meta-effekt": [
+   "Heterogenität",
+   "Konfidenzintervall",
+   "Random"
+  ],
+  "tau-quadrat": [
+   "Standardabweichung",
+   "Varianz"
+  ],
+  "forest-plot": [
+   "Prädiktionsintervall"
+  ],
+  "funnel-plot": [
+   "Standardfehler"
+  ],
+  "roc-auc": [
+   "Sensitivität",
+   "Spezifität"
+  ],
+  "hazard-ratio": [
+   "Cox",
+   "Hazards",
+   "Wald"
+  ],
+  "risikodifferenz": [
+   "Wald"
+  ],
+  "typical-error": [
+   "Reliabilität"
+  ],
+  "lilliefors": [
+   "Standardabweichung"
+  ]
+ },
+ "artikel": {
+  "normwerte": [
+   "Standardabweichung"
+  ],
+  "frage-gruppen": [
+   "Bonferroni",
+   "Games-Howell",
+   "Tukey"
+  ],
+  "friedman-test": [
+   "Ausreißer"
+  ],
+  "frage-praepost": [
+   "Freiheitsgrade",
+   "Kovariate"
+  ],
+  "frage-vorhersage": [
+   "Ausreißer"
+  ],
+  "frage-verteilung": [
+   "Konfidenzintervall"
+  ],
+  "zusammenhangsmasse": [
+   "Varianz"
+  ],
+  "frage-faktor": [
+   "Standardfehler",
+   "p-Wert"
+  ],
+  "frage-messwiederholung": [
+   "Konfidenzintervall",
+   "Normalverteilung"
+  ],
+  "frage-moderation": [
+   "Effektstärke",
+   "Kovariaten",
+   "Standardfehler"
+  ],
+  "frage-diskriminanz": [
+   "Diskriminanzanalyse",
+   "Trefferquote",
+   "Leave-one-out"
+  ],
+  "frage-loglinear": [
+   "loglineare",
+   "Haupteffekten",
+   "Wechselwirkungen"
+  ],
+  "frage-manova": [
+   "MANOVA",
+   "Varianzanalyse",
+   "Pillai"
+  ],
+  "frage-armut": [
+   "Armutsgefährdungsquote",
+   "Gini-Koeffizient",
+   "Standardfehler",
+   "Median"
+  ],
+  "frage-cluster": [
+   "Clusteranalyse",
+   "Ward",
+   "Dendrogramm",
+   "k-Means",
+   "Silhouette"
+  ],
+  "frage-zeitreihen": [
+   "Zeitreihe",
+   "Autokorrelation",
+   "Trend",
+   "Saison"
+  ],
+  "gewichtete-regression": [
+   "Regression",
+   "Präzisionsgewichte"
+  ],
+  "indexzahlen": [
+   "Indexzahlen",
+   "Laspeyres",
+   "Paasche"
+  ],
+  "karte": [
+   "Karte",
+   "Quantile",
+   "GeoJSON"
+  ],
+  "eurostat-oeffnen": [
+   "Eurostat"
+  ],
+  "fallkontrolle-abgleich": [
+   "Matching",
+   "Kontrollen",
+   "Toleranz"
+  ],
+  "klassifikation": [
+   "ÖNACE",
+   "ISCO",
+   "Klassifikation"
+  ],
+  "nichtlineare-regression": [
+   "Michaelis-Menten",
+   "Regression",
+   "Wald"
+  ],
+  "plausibilitaet": [
+   "Plausibilität",
+   "Regeln"
+  ],
+  "probit-regression": [
+   "Probit",
+   "Normalverteilung",
+   "Odds Ratio",
+   "logistische Regression"
+  ],
+  "saisonbereinigung-r": [
+   "Saisonbereinigung",
+   "X-13",
+   "SEATS"
+  ],
+  "umfrage-stichprobenplan": [
+   "Klumpen",
+   "Schichten",
+   "Stichprobenplan",
+   "Standardfehler"
+  ],
+  "vorlage-protokoll": [
+   "Protokoll",
+   "Vorlage",
+   "Prüfsumme"
+  ],
+  "zeitreihe-granger": [
+   "Granger-Test",
+   "Verzögerungen"
+  ],
+  "zeitreihe-kreuzkorrelation": [
+   "Kreuzkorrelation",
+   "Korrelation",
+   "Autokorrelation"
+  ],
+  "zeitreihe-massnahme": [
+   "Maßnahme",
+   "Stufe",
+   "Impuls",
+   "ARIMA"
+  ],
+  "zeitreihe-prognose": [
+   "Prognose",
+   "ARIMA",
+   "Glättung"
+  ]
+ }
+}

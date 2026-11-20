@@ -1,0 +1,1 @@
+{"within_b":[0.1101,0.3101],"within_se":[0.0119,0.0174],"within_secl":[0.0152,0.0526],"random_b":[0.1098,0.3081],"pooled_b":[0.1156,0.2307],"pooled_se":[0.0058,0.0255],"pooled_secl":[0.0159,0.085],"pooled_verhaeltnis":2.7,"between_b":[0.135,0.032],"f":49.18,"f_df1":9,"f_df2":188,"hausman_chi2":2.33,"hausman_df":2,"hausman_p":0.312}

@@ -1,0 +1,120 @@
+{
+  "format": "statable-qualitativ",
+  "version": 1,
+  "id": "p-doppelt",
+  "name": "Prüfprojekt doppelte Kodierung (erfunden)",
+  "kodierende": [
+    {
+      "id": "p-a",
+      "name": "Kodiererin A"
+    },
+    {
+      "id": "p-b",
+      "name": "Kodierer B"
+    }
+  ],
+  "dokumente": [
+    {
+      "id": "d-doppelt",
+      "name": "Doppelt",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000,
+      "fall": "f1"
+    }
+  ],
+  "codes": [
+    {
+      "id": "c1",
+      "name": "Eins",
+      "kodierbar": true,
+      "reihenfolge": 1
+    },
+    {
+      "id": "c2",
+      "name": "Zwei",
+      "kodierbar": true,
+      "reihenfolge": 2
+    }
+  ],
+  "segmente": [
+    {
+      "id": "s01",
+      "dokument": "d-doppelt",
+      "start": 0,
+      "ende": 25,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s02",
+      "dokument": "d-doppelt",
+      "start": 0,
+      "ende": 25,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s03",
+      "dokument": "d-doppelt",
+      "start": 30,
+      "ende": 50,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    }
+  ],
+  "kodierungen": [
+    {
+      "id": "k01",
+      "segment": "s01",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k02",
+      "segment": "s01",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k03",
+      "segment": "s02",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k04",
+      "segment": "s03",
+      "code": "c2",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k05",
+      "segment": "s03",
+      "code": "c2",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    }
+  ],
+  "memos": [],
+  "faelle": [
+    {
+      "id": "f1",
+      "name": "Fall 1",
+      "werte": {
+        "Alter": 30
+      }
+    }
+  ],
+  "variablen": [],
+  "protokoll": [],
+  "herkunft": {
+    "art": "neu",
+    "zeit": 1700000000000
+  }
+}

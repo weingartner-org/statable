@@ -1,0 +1,4 @@
+start;end;besuch/mahlzeiten/fruehstueck;besuch/mahlzeiten/mittagessen;besuch/mahlzeiten/abendessen;besuch/zufrieden;besuch/verkehr;alter;_id;_uuid;_submission_time;_validation_status;_index
+2026-10-21T09:01:00.000+02:00;2026-10-21T09:02:30.000+02:00;True;True;False;4;bus;29;2001;00000000-0000-4000-8000-000000000110;2026-10-21T07:02:30;Approved;1
+2026-10-21T09:03:00.000+02:00;2026-10-21T09:04:30.000+02:00;False;True;False;3;rad;41;2003;00000000-0000-4000-8000-000000000130;2026-10-21T07:04:30;Approved;3
+2026-10-21T09:05:00.000+02:00;2026-10-21T09:06:30.000+02:00;False;False;False;2;bahn;56;2005;00000000-0000-4000-8000-000000000150;2026-10-21T07:06:30;Approved;5

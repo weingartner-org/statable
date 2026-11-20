@@ -1,0 +1,46 @@
+{
+ "format": "statable-karten-at",
+ "version": 1,
+ "quelle": {
+  "anbieter": "Bundesamt für Eich- und Vermessungswesen (BEV), Verwaltungsgrenzen (VGD)",
+  "datensatz": "Verwaltungsgrenzen (VGD) BEV Stichtag 01.04.2026",
+  "stichtag": "2026-04-01",
+  "adresse": "https://data.bev.gv.at/download/Verwaltungsgrenzen/shp/20260401/VGD_Oesterreich_gst_20260402.zip",
+  "metadaten": "https://data.bev.gv.at/geonetwork/srv/api/records/2d7b8f24-deb9-42eb-82f2-c7c1c7ff7075/formatters/xml",
+  "katalog": "https://www.data.gv.at/katalog/datasets/bev-datenthema-verwaltungseinheiten",
+  "sha256": "62c51557b1deb3ca1007aa0cde71480572bc23d431b020441a57a4fa24d62063",
+  "abgerufen": "2026-11-01"
+ },
+ "lizenz": "Creative Commons Namensnennung 4.0 International (CC BY 4.0)",
+ "lizenzAdresse": "https://creativecommons.org/licenses/by/4.0/deed.de",
+ "namensnennung": "Datenquelle: Bundesamt für Eich- und Vermessungswesen (BEV) - Verwaltungsgrenzen, Stichtag 01.04.2026",
+ "bearbeitung": "Katastralgemeinden zu Gemeinden und Bezirken zusammengefasst, nach WGS 84 umgerechnet, vereinfacht (mapshaper 0.7.101, Visvalingam)",
+ "bezirke": {
+  "datei": "karten/at/bezirke.json",
+  "name": "Politische Bezirke",
+  "gebiete": 94,
+  "bytes": 257071,
+  "gz": 61255,
+  "sha256": "0055052660558c7f1efbde946fcd5ba788d83f242e4bd13a8cef47462c22232d",
+  "eigenschaften": [
+   "BKZ",
+   "BKZ_B",
+   "NAME"
+  ]
+ },
+ "gemeinden": {
+  "datei": "karten/at/gemeinden.json",
+  "name": "Gemeinden",
+  "gebiete": 2092,
+  "bytes": 2058083,
+  "gz": 399699,
+  "sha256": "dd06b2adc89e31ad33ef2a4b99a1a8b2964b85ec65a748c27d3aaa9565d56f3f",
+  "eigenschaften": [
+   "GKZ",
+   "GKZ_G",
+   "NAME",
+   "BKZ",
+   "BEZIRK"
+  ]
+ }
+}

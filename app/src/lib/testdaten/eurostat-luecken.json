@@ -1,0 +1,24 @@
+{
+  "version": "2.0",
+  "class": "dataset",
+  "label": "Handfall: zwei Länder, drei Jahre, dünn besetzt",
+  "source": "ESTAT",
+  "updated": "2026-10-30T11:00:00+0100",
+  "id": ["freq", "geo", "time"],
+  "size": [1, 2, 3],
+  "dimension": {
+    "freq": { "label": "Häufigkeit", "category": { "index": { "A": 0 }, "label": { "A": "Jährlich" } } },
+    "geo": { "label": "Land", "category": { "index": { "AT": 1, "DE": 0 }, "label": { "AT": "Österreich", "DE": "Deutschland" } } },
+    "time": { "label": "Zeit", "category": { "index": { "2021": 0, "2022": 1, "2023": 2 }, "label": { "2021": "2021", "2022": "2022", "2023": "2023" } } }
+  },
+  "value": { "0": 10.5, "2": 11, "3": 0, "5": 7.25 },
+  "status": { "1": ":", "2": "p", "4": "c" },
+  "erwartet": [
+    { "freq": "A", "geo": "DE", "time": "2021", "wert": 10.5, "status": "" },
+    { "freq": "A", "geo": "DE", "time": "2022", "wert": null, "status": ":" },
+    { "freq": "A", "geo": "DE", "time": "2023", "wert": 11, "status": "p" },
+    { "freq": "A", "geo": "AT", "time": "2021", "wert": 0, "status": "" },
+    { "freq": "A", "geo": "AT", "time": "2022", "wert": null, "status": "c" },
+    { "freq": "A", "geo": "AT", "time": "2023", "wert": 7.25, "status": "" }
+  ]
+}

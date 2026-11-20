@@ -1,0 +1,169 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "faelle-variablen.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": "Fall A",
+   "laenge": 393,
+   "name": "Interview 1",
+   "pruefung": "geprueft",
+   "sha256": "0821f3089b5764ca900cb0c43f5f9d40cb7069edaff00995786a39d661009d16",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": "Fall B",
+   "laenge": 393,
+   "name": "Interview 2",
+   "pruefung": "geprueft",
+   "sha256": "0821f3089b5764ca900cb0c43f5f9d40cb7069edaff00995786a39d661009d16",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": "Interview 3",
+   "laenge": 393,
+   "name": "Interview 3",
+   "pruefung": "geprueft",
+   "sha256": "0821f3089b5764ca900cb0c43f5f9d40cb7069edaff00995786a39d661009d16",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [
+  {
+   "dokumente": [
+    "Interview 1"
+   ],
+   "name": "Fall A",
+   "werte": {
+    "Geburtstag": "2001-04-03",
+    "Interviewzeit": "2026-11-02T14:30:00Z",
+    "Note": 1.7,
+    "Semester": 3,
+    "Studienfach": "Pädagogik",
+    "erwerbstätig": true
+   }
+  },
+  {
+   "dokumente": [
+    "Interview 2"
+   ],
+   "name": "Fall B",
+   "werte": {
+    "Semester": 7,
+    "Studienfach": "Psychologie",
+    "erwerbstätig": false
+   }
+  },
+  {
+   "dokumente": [
+    "Interview 3"
+   ],
+   "name": "Interview 3",
+   "werte": {
+    "Semester": 5
+   }
+  }
+ ],
+ "fehler": null,
+ "kodierende": [
+  "Anna Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  },
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview 2",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  },
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview 3",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  }
+ ],
+ "meldungen": [],
+ "meldungenDetail": [],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "Statable Prüfdatei",
+ "variablen": [
+  {
+   "name": "Studienfach",
+   "typ": "text"
+  },
+  {
+   "name": "erwerbstätig",
+   "typ": "ja/nein"
+  },
+  {
+   "name": "Semester",
+   "typ": "ganzzahl"
+  },
+  {
+   "name": "Note",
+   "typ": "zahl"
+  },
+  {
+   "name": "Geburtstag",
+   "typ": "datum"
+  },
+  {
+   "name": "Interviewzeit",
+   "typ": "datumzeit"
+  }
+ ],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 3,
+  "faelle": 3,
+  "kodierende": 1,
+  "kodierungen": 3,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 3,
+  "variablen": 6
+ }
+}

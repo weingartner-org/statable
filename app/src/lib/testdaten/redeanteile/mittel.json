@@ -1,0 +1,225 @@
+{
+  "text": "Interviewerin: Guten Tag und danke, dass Sie sich Zeit nehmen. Wir sprechen heute über Ihren Alltag im Homeoffice.\n\nBefragte: Gern. Ich arbeite seit zwei Jahren überwiegend von zu Hause aus, drei Tage in der Woche.\n\nInterviewerin: Wie sieht ein typischer Tag aus?\n\nBefragte: Ich stehe früh auf, trinke Kaffee und beantworte zuerst die Nachrichten vom Vortag. Danach beginnen meist die Besprechungen, die ich am Bildschirm führe.\n\nInterviewerin: Und die Pausen?\n\nBefragte: Die muss ich mir bewusst nehmen. Früher hat mich der Weg zur Arbeit automatisch unterbrochen, jetzt sitze ich oft vier Stunden am Stück.\n\nInterviewerin: Was hat sich dadurch verändert?\n\nBefragte: Ich bewege mich weniger und bin abends müder, obwohl ich nicht mehr gearbeitet habe.\n\nInterviewerin: Wie reagiert Ihr Team?\n\nBefragte: Wir haben feste Zeiten für den Austausch, jeden Morgen zehn Minuten. Das hilft sehr.\n\nInterviewerin: Gibt es Dinge, die schwerer geworden sind?\n\nBefragte: Spontane Fragen. Im Büro geht man kurz zum Schreibtisch nebenan. Jetzt schreibt man eine Nachricht und wartet.\n\nInterviewerin: Verstehe.\n\nBefragte: Dafür sind die Gespräche konzentrierter, weil weniger Lärm herrscht.\n\nInterviewerin: Wie ist es mit der Familie?\n\nBefragte: Meine Kinder sind morgens in der Schule, das passt. In den Ferien wird es schwierig, dann brauche ich Absprachen mit meinem Partner und manchmal Hilfe von den Großeltern.\n\nInterviewerin: Wünschen Sie sich Änderungen?\n\nBefragte: Einen besseren Stuhl, ehrlich gesagt, und mehr Treffen im Büro, damit man sich nicht aus den Augen verliert.\n\nInterviewerin: Wie viele Treffen wären ideal?\n\nBefragte: Einmal pro Woche, möglichst am selben Tag für alle.\n\nInterviewerin: Das klingt machbar.\n\nBefragte: Ja, der Arbeitgeber hat es auch schon angedeutet.\n\nInterviewerin: Zum Schluss: Würden Sie anderen das Arbeiten von zu Hause empfehlen?\n\nBefragte: Ja, wenn sie sich Regeln geben. Feste Zeiten, einen eigenen Platz und Pausen. Ohne das verschwimmt Arbeit und Freizeit sehr schnell.\n\nInterviewerin: Vielen Dank für das Gespräch.\n\nBefragte: Sehr gern.\n\nInterviewerin: Möchten Sie noch etwas ergänzen?\n\nBefragte: Nur, dass ich die Ruhe am Morgen nicht mehr missen möchte.\n\nInterviewerin: Dann beenden wir hier die Aufnahme.\n\nBefragte: In Ordnung.",
+  "sprecher": [
+    {
+      "id": "S1",
+      "name": "Interviewerin"
+    },
+    {
+      "id": "S2",
+      "name": "Befragte"
+    }
+  ],
+  "abschnitte": [
+    {
+      "start": 0,
+      "ende": 114,
+      "sprecher": "S1",
+      "zeitMs": 0,
+      "bisMs": 7000
+    },
+    {
+      "start": 116,
+      "ende": 214,
+      "sprecher": "S2",
+      "zeitMs": 7000,
+      "bisMs": 16000
+    },
+    {
+      "start": 216,
+      "ende": 263,
+      "sprecher": "S1",
+      "zeitMs": 16000,
+      "bisMs": 19000
+    },
+    {
+      "start": 265,
+      "ende": 428,
+      "sprecher": "S2",
+      "zeitMs": 19000,
+      "bisMs": 40000
+    },
+    {
+      "start": 430,
+      "ende": 460,
+      "sprecher": "S1",
+      "zeitMs": 41200,
+      "bisMs": 43200
+    },
+    {
+      "start": 462,
+      "ende": 608,
+      "sprecher": "S2",
+      "zeitMs": 43200,
+      "bisMs": 62200
+    },
+    {
+      "start": 610,
+      "ende": 656,
+      "sprecher": "S1",
+      "zeitMs": 62200,
+      "bisMs": 65200
+    },
+    {
+      "start": 658,
+      "ende": 752,
+      "sprecher": "S2",
+      "zeitMs": 65200,
+      "bisMs": 76200
+    },
+    {
+      "start": 754,
+      "ende": 791,
+      "sprecher": "S1",
+      "zeitMs": 76200,
+      "bisMs": 78700
+    },
+    {
+      "start": 793,
+      "ende": 887,
+      "sprecher": "S2",
+      "zeitMs": 78700,
+      "bisMs": 88700
+    },
+    {
+      "start": 889,
+      "ende": 946,
+      "sprecher": "S1",
+      "zeitMs": 88700,
+      "bisMs": 92200
+    },
+    {
+      "start": 948,
+      "ende": 1068,
+      "sprecher": "S2",
+      "zeitMs": 93400,
+      "bisMs": 107400
+    },
+    {
+      "start": 1070,
+      "ende": 1094,
+      "sprecher": "S1",
+      "zeitMs": 107400,
+      "bisMs": 108900
+    },
+    {
+      "start": 1096,
+      "ende": 1174,
+      "sprecher": "S2",
+      "zeitMs": 108900,
+      "bisMs": 115900
+    },
+    {
+      "start": 1176,
+      "ende": 1218,
+      "sprecher": "S1",
+      "zeitMs": 115900,
+      "bisMs": 118400
+    },
+    {
+      "start": 1220,
+      "ende": 1400,
+      "sprecher": "S2",
+      "zeitMs": 118400,
+      "bisMs": 138400
+    },
+    {
+      "start": 1402,
+      "ende": 1446,
+      "sprecher": "S1",
+      "zeitMs": 138400,
+      "bisMs": 140900
+    },
+    {
+      "start": 1448,
+      "ende": 1566,
+      "sprecher": "S2",
+      "zeitMs": 140900,
+      "bisMs": 153900
+    },
+    {
+      "start": 1568,
+      "ende": 1613,
+      "sprecher": "S1",
+      "zeitMs": 155100,
+      "bisMs": 158100
+    },
+    {
+      "start": 1615,
+      "ende": 1676,
+      "sprecher": "S2",
+      "zeitMs": 158100,
+      "bisMs": 164100
+    },
+    {
+      "start": 1678,
+      "ende": 1712,
+      "sprecher": "S1",
+      "zeitMs": 164100,
+      "bisMs": 166100
+    },
+    {
+      "start": 1714,
+      "ende": 1773,
+      "sprecher": "S2",
+      "zeitMs": 166100,
+      "bisMs": 171100
+    },
+    {
+      "start": 1775,
+      "ende": 1858,
+      "sprecher": "S1",
+      "zeitMs": 171100,
+      "bisMs": 177100
+    },
+    {
+      "start": 1860,
+      "ende": 2002,
+      "sprecher": "S2",
+      "zeitMs": 177100,
+      "bisMs": 194100
+    },
+    {
+      "start": 2004,
+      "ende": 2048,
+      "sprecher": "S1",
+      "zeitMs": 194100,
+      "bisMs": 196600
+    },
+    {
+      "start": 2050,
+      "ende": 2070,
+      "sprecher": "S2",
+      "zeitMs": 197800,
+      "bisMs": 199300
+    },
+    {
+      "start": 2072,
+      "ende": 2119,
+      "sprecher": "S1",
+      "zeitMs": 199300,
+      "bisMs": 202300
+    },
+    {
+      "start": 2121,
+      "ende": 2189,
+      "sprecher": "S2",
+      "zeitMs": 202300,
+      "bisMs": 209300
+    },
+    {
+      "start": 2191,
+      "ende": 2241,
+      "sprecher": "S1",
+      "zeitMs": 209300,
+      "bisMs": 212800
+    },
+    {
+      "start": 2243,
+      "ende": 2264,
+      "sprecher": "S2",
+      "zeitMs": 212800,
+      "bisMs": 213800
+    }
+  ]
+}

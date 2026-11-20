@@ -1,0 +1,127 @@
+{
+ "codes": [
+  {
+   "definition": "Parent code for emotions",
+   "farbe": "#ff0000",
+   "kodierbar": true,
+   "name": "Emotions",
+   "pfad": "Emotions"
+  },
+  {
+   "definition": null,
+   "farbe": "#00ff00",
+   "kodierbar": true,
+   "name": "Joy",
+   "pfad": "Emotions/Joy"
+  },
+  {
+   "definition": null,
+   "farbe": "#0000ff",
+   "kodierbar": true,
+   "name": "Frustration",
+   "pfad": "Emotions/Frustration"
+  },
+  {
+   "definition": null,
+   "farbe": "#ff9800",
+   "kodierbar": true,
+   "name": "Cost",
+   "pfad": "Cost"
+  }
+ ],
+ "datei": "qualia-sample-import.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 102,
+   "name": "interview.txt",
+   "pruefung": "ungeprueft",
+   "sha256": "87ee4321ad57f0e59114617e356555d3519f3701bf1a3296938e4e66f6a8bb4d",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Unbekannt"
+ ],
+ "kodierendeUnbekanntAnzahl": 3,
+ "kodierungen": [
+  {
+   "code": "Cost",
+   "dokument": "interview.txt",
+   "person": "Unbekannt",
+   "text": " but then I started feeling frustra"
+  },
+  {
+   "code": "Emotions/Frustration",
+   "dokument": "interview.txt",
+   "person": "Unbekannt",
+   "text": " but then I started feeling frustra"
+  },
+  {
+   "code": "Emotions/Joy",
+   "dokument": "interview.txt",
+   "person": "Unbekannt",
+   "text": "I felt really happy toda"
+  }
+ ],
+ "meldungen": [
+  "kodierende-unbekannt",
+  "nicht-gelesen",
+  "positionen-ungeprueft"
+ ],
+ "meldungenDetail": [
+  {
+   "art": "positionen-ungeprueft",
+   "dokument": "interview.txt"
+  }
+ ],
+ "memos": [
+  {
+   "bezug": [
+    {
+     "art": "segment",
+     "ziel": {
+      "dokument": "interview.txt",
+      "text": "I felt really happy toda"
+     }
+    }
+   ],
+   "text": "Strong positive affect expressed by participant",
+   "titel": "Memo: Interview"
+  },
+  {
+   "bezug": [
+    {
+     "art": "segment",
+     "ziel": {
+      "dokument": "interview.txt",
+      "text": "I felt really happy toda"
+     }
+    }
+   ],
+   "text": "[Magnitude: High]",
+   "titel": "Magnitude"
+  }
+ ],
+ "mengen": [],
+ "nichtGelesen": {
+  "Link": 2
+ },
+ "programm": "Qualia Test Suite",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 1,
+  "faelle": 0,
+  "kodierende": 1,
+  "kodierungen": 3,
+  "memos": 2,
+  "mengen": 0,
+  "segmente": 2,
+  "variablen": 0
+ }
+}

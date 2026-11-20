@@ -1,0 +1,1535 @@
+{
+  "_info": {
+    "stand": "2026-10-09",
+    "zweck": "Statable glossary (Hungarian, te). Explanations and messages translated from the English template; muster/original/art unchanged.",
+    "regeln": [
+      "Messages: the first matching rule wins.",
+      "Explanations address no one directly; messages use te (no pronoun). The fields 'du' and 'sie' hold the same text.",
+      "Numbers in Hungarian: decimal comma, no leading zero for p, r and alpha (,005).",
+      "pruefen: true = have a statistics expert check it before use."
+    ]
+  },
+  "erklaer": {
+    "bayes": {
+      "titel": "Bayes-faktor (BF₁₀)",
+      "kurz": "Az adatok inkább egy különbségre utalnak, vagy inkább ellene szólnak? A Bayes-faktor (BF₁₀) a kettőt hasonlítja össze. BF₁₀ = 8 azt jelenti: az adatok körülbelül 8-szor valószínűbbek, ha van különbség.",
+      "beispiel": "Két pékség kenyerének eltarthatósága: BF₁₀ = 6, tehát az adatok 6-szor valószínűbbek különbség esetén. BF₁₀ = 0,25 azt jelentené: 4-szer valószínűbbek különbség nélkül (1 / 0,25 = 4).",
+      "vorsicht": "A Bayes-faktor nem mondja meg, mennyire valószínű egy különbség, és előre választott feltevéstől függ. Az 1 körüli érték csak azt jelenti, hogy egyik oldalt sem támasztják alá; az olyan címkék, mint a „mérsékelt”, ökölszabályok.",
+      "fachwoerter": "p-érték (milyen gyakran fordulna elő legalább ekkora különbség, ha valójában nincs), H₀ és H₁ (a „nincs különbség” és a „van különbség” feltevés), prior (a lehetséges különbségekre előre választott feltevés), BF₀₁ (a fordított összehasonlítás, BF₀₁ = 1 / BF₁₀).",
+      "pruefen": true
+    },
+    "p-wert": {
+      "titel": "p-érték",
+      "kurz": "Valódi egy különbség, vagy csak véletlen? Biztosan soha nem tudhatod. A p-érték így segít: tegyük fel, hogy valójában nincs különbség. Milyen gyakran jönne ki mégis legalább ekkora különbség?",
+      "beispiel": "Két paradicsomfajta, p = ,03: ha a fajták valójában egyenlők lennének, ilyen különbség kb. 100 kísérletből 3-ban jelenne meg.",
+      "vorsicht": "A p nem annak a valószínűsége, hogy az eredmény véletlen. A p azt sem mondja meg, mekkora vagy mennyire fontos a különbség: erre való a hatásnagyság. Csak akkor érvényes, ha a számítás többi feltétele is teljesül, például a véletlen kiválasztás és a függetlenség.",
+      "pruefen": true
+    },
+    "signifikanz": {
+      "titel": "Statisztikailag szignifikáns",
+      "kurz": "Mit jelent a „szignifikáns”? A p-érték egy előre megadott határ alatt van, általában ,05 alatt. Az adatok ekkor rosszul illenek a „nincs különbség” feltevéshez.",
+      "beispiel": "A p = ,03 ,05 alatt van: szignifikáns. A p = ,07 fölötte van: nem szignifikáns.",
+      "vorsicht": "A szignifikáns nem jelent fontosat vagy bizonyítottat. A nem szignifikáns nem jelenti, hogy nincs különbség. A ,05-ös határ szokás. Nagyon sok esetnél már egy kis hatás is szignifikáns lesz. És: a „szignifikáns” és a „nem szignifikáns” közötti különbség maga sem lesz magától szignifikáns.",
+      "pruefen": true
+    },
+    "effektstaerke": {
+      "titel": "Hatásnagyság",
+      "kurz": "Mekkora egy különbség vagy összefüggés? A hatásnagyság megmondja. Több személy kisebbé teszi a p-értéket; a hatásnagyság emiatt nem változik.",
+      "beispiel": "Cohen-féle d = 0,5: két csoport fél szórásnyira van egymástól (a szórás az értékek átlagtól mért tipikus távolsága).",
+      "vorsicht": "A kicsi, közepes, nagy szavak (d = 0,2, 0,5, 0,8) Cohenre visszamenő szokás. Hogy mi számít soknak, az a szakterülettől és a kérdéstől függ.",
+      "pruefen": true
+    },
+    "konfidenzintervall": {
+      "titel": "Konfidenciaintervallum (KI)",
+      "kurz": "Mennyire pontos egy eredmény? A konfidenciaintervallum (KI) a mért érték körüli tartomány. Megmutatja, mely valódi értékek illenek jól az adatokhoz. A szűk pontosat, a széles pontatlant jelent.",
+      "beispiel": "Egy új ingázási útvonal átlagosan 4 percet takarít meg, 95%-os KI [1,2; 6,8]: 2 vagy 6 perc valódi megtakarítás is jól illik az adatokhoz.",
+      "vorsicht": "A „95%” a módszert írja le: sok ismétlésnél az ilyen tartományok kb. 100-ból 95-ben tartalmaznák a valódi értéket. Hogy ez a tartalmazza-e, nem ismert. Ha a tartomány tartalmazza a 0-t, a „nincs különbség” is illik az adatokhoz, és a ,05-ös szinten végzett kétoldalas próba nem szignifikáns.",
+      "pruefen": true
+    },
+    "normalverteilung": {
+      "titel": "Normális eloszlás",
+      "kurz": "Hogyan oszlanak el az értékek? Normális eloszlásnál a legtöbb érték középen van, és mindkét oldal felé egyenletesen ritkul. Ebből harang alak keletkezik.",
+      "beispiel": "A csomagolt 500 g-os tésztazacskók súlya harang alakban ingadozik 500 g körül. A forródrót várakozási ideje nem: sok rövid, néhány nagyon hosszú.",
+      "vorsicht": "Az átlagok összehasonlításánál az egyik oldali hosszú farok (ferdeség) és a kiugró értékek többet számítanak, mint egy rögzített személyszám. Sok személynél az alak kevésbé számít; nagyon kevésnél alig lehet megítélni.",
+      "fachwoerter": "Welch-féle t-próba (olyan t-próba, amely nem követel egyenlő szóródást a csoportokban), ferdeség (az egyik oldali hosszú farok), kiugró érték (a többitől messze eső érték).",
+      "pruefen": true
+    },
+    "mittelwert": {
+      "titel": "Átlag (M)",
+      "kurz": "Mi a tipikus érték? Az átlag a számtani közép: összeadjuk az összes értéket, és elosztjuk az értékek számával.",
+      "beispiel": "Öt várakozási idő egy pultnál: 8, 12, 9, 15 és 11 perc. Együtt 55, osztva 5-tel 11 perc.",
+      "vorsicht": "Néhány nagyon magas vagy nagyon alacsony érték magával húzza az átlagot. 11 helyett 60 perccel 20,8 lenne; a medián, a rendezett sorozat középső értéke, csak 11-ről 12-re nőne.",
+      "pruefen": false
+    },
+    "standardabweichung": {
+      "titel": "Szórás (SD)",
+      "kurz": "Mennyire különböznek az értékek? A szórás (SD) megmondja, mennyire esnek az értékek tipikusan az átlagtól. A kicsi azt jelenti, hogy az értékek közel vannak egymáshoz.",
+      "beispiel": "Alvás: átlag 7 óra, SD 1 óra. Harang alakú eloszlásnál a személyek kb. kétharmada 6 és 8 óra között alszik.",
+      "vorsicht": "Az SD azt írja le, mennyire különböznek az emberek. Hogy az átlag mennyire pontos, azt a standard hiba és a konfidenciaintervallum adja.",
+      "pruefen": false
+    },
+    "freiheitsgrade": {
+      "titel": "Szabadságfok (df)",
+      "kurz": "Mit jelent a zárójelben lévő szám, például a t(18)-ban? Ez a szabadságfok (df), egy szám, amely főleg attól függ, hány személy van. A szoftvernek a p-értékhez kell.",
+      "beispiel": "20 személy két csoportban: 20 mínusz 2 az 18 szabadságfok, tehát t(18). Egyenlőtlen szóródású csoportoknál (Welch-féle t-próba) a szám gyakran tizedes tört, például t(14,3).",
+      "vorsicht": "Általában ennyit kell tudni a szabadságfokról. Minden jelentésben ott a helye, hogy mások ellenőrizhessék az eredményt.",
+      "pruefen": false
+    },
+    "korrelation": {
+      "titel": "Korreláció (r)",
+      "kurz": "Összefügg két dolog? Az r korreláció ezt egy −1 és +1 közötti számmal mutatja. Pozitív: az egyikből több a másikból is többet jelent. Negatív: kevesebbet. 0 körül: nincs egyenes vonalú összefüggés.",
+      "beispiel": "Alvás és koncentráció: r = ,30. Akik többet alszanak, hajlamosak jobban koncentrálni.",
+      "vorsicht": "Az összefüggés nem ok. Az r csak az egyenes vonalú összefüggéseket látja, ezért nézd meg a pontdiagramot is.",
+      "pruefen": true
+    },
+    "korrelationsmatrix": {
+      "titel": "Korrelációs mátrix",
+      "kurz": "Több számoszlop közül melyek tartoznak össze? A korrelációs mátrix az összes párt egyszerre mutatja. A Holm-korrekció szigorúbbá teszi a p-értékeket, mert sok párnál könnyen kiemelkedik egy véletlenül.",
+      "beispiel": "Öt oszlop 10 párt ad. A legfeltűnőbbnél p = ,012; a Holm-korrekció után ez ,012 szorozva 10-zel = ,12 - már nem ,05 alatt.",
+      "vorsicht": "Aki sok párt próbál, véletlen találatokat is talál; aki csak keres, használja a Holm-értékeket. Az összefüggés nem ok.",
+      "fachwoerter": "Pearson szerinti r (két számoszlop közötti kapcsolat, egyenes vonalú összefüggésekhez), Spearman szerinti rs (ugyanaz a gondolat értékek helyett rangokkal), n (az esetek száma páronként), 95%-os konfidenciaintervallum (olyan tartomány, amely az adatok alapján jól illik a valódi összefüggéshez).",
+      "pruefen": true
+    },
+    "regression": {
+      "titel": "Regresszió",
+      "kurz": "Megjósolható egy érték másokból? A regresszió megrajzolja az egyenest, amely a legjobban illik az adatokhoz. Megmutatja, mennyit változik a jósolt érték, ha egy másik érték változik.",
+      "beispiel": "Lakásár a alapterületből: egy további m² átlagosan 2400 € többlettel jár.",
+      "vorsicht": "Az előrejelzés nem ok. A szokásos próbához a reziduumoknak (az egyenestől mért távolságoknak) kell normális eloszlásúnak lenniük, nem a nyers értékeknek.",
+      "pruefen": true
+    },
+    "chi-quadrat": {
+      "titel": "Khí-négyzet-próba (χ²)",
+      "kurz": "Gyakrabban fordul elő valami egyes csoportokban? A khí-négyzet-próba (χ²) egy kereszttábla megszámolt eseteit hasonlítja ahhoz a számhoz, amelyet összefüggés nélkül várnánk.",
+      "beispiel": "Egyenként 100 személy: a korán kelők 60%-a, a későn kelők 40%-a iszik kávét. χ²(1) = 8,0, p = ,005.",
+      "vorsicht": "A χ² nem mondja meg, mennyire erős az összefüggés: kétszer annyi személlyel és ugyanazokkal az arányokkal megduplázódik. Az erősséget a Cramér-féle V mutatja.",
+      "fachwoerter": "Fisher-féle egzakt próba (kevés személy esetén pontosabb a χ²-nél a 2 × 2-es táblázatoknál), várható gyakoriság (hány esetet tartalmazna egy cella összefüggés nélkül).",
+      "pruefen": true
+    },
+    "streuung": {
+      "titel": "Szóródás",
+      "kurz": "Mennyire különböznek az értékek? A szóródás a gyűjtőfogalom. Mértékei a terjedelem (a legnagyobb mínusz a legkisebb érték), a szórás és az interkvartilis terjedelem (az értékek középső felének szélessége).",
+      "beispiel": "40 utazás menetideje: 12-től 51 percig, terjedelem 51 − 12 = 39, szórás 8,5, interkvartilis terjedelem 10.",
+      "vorsicht": "A terjedelem csak két értéktől függ. Egyetlen kiugró érték sokkal nagyobbá teszi.",
+      "pruefen": false
+    },
+    "stichprobe": {
+      "titel": "Minta",
+      "kurz": "Ki vett részt ténylegesen? Ez a minta. Arra használják, hogy egy nagyobb csoportról, a sokaságról mondjanak valamit.",
+      "beispiel": "Egy könyvtár kedden 150 látogatót kérdez meg, hogy mondjon valamit az év összes használójáról. Hogy ez megáll-e, az attól függ, hogyan választották ki ezt a 150 főt.",
+      "vorsicht": "Sok személy nem teszi jóvá az egyoldalú kiválasztást. Ha csak keddi délelőtti látogatókat kérdeznek, az főleg ezeket a látogatókat írja le.",
+      "pruefen": false
+    },
+    "voraussetzung": {
+      "titel": "Feltétel",
+      "kurz": "Szabad-e egy módszert használni ezekkel az adatokkal? Minden módszer feltevéseken, követelményeken alapul, például „minden személy pontosan egy csoportba tartozik”. Ha nem illenek, az eredmény félrevezethet.",
+      "beispiel": "Két ügyfélcsoport összehasonlítása előtt: valóban két különálló csoport? Számok az értékek? Vannak nagyon feltűnő egyedi értékek?",
+      "vorsicht": "Egy megjegyzés nem tiltás, hanem ok arra, hogy közelebbről megnézzük. Néhány feltevést semmilyen szoftver nem tud ellenőrizni, például hogy a személyek egymástól függetlenül válaszoltak-e, vagyis előzetes megegyezés nélkül - ez az adatgyűjtés módjából következik.",
+      "pruefen": true
+    },
+    "ausreisser": {
+      "titel": "Kiugró érték",
+      "kurz": "Egy érték feltűnően messze van az összes többitől? Akkor kiugró érték. Lehet elírás, mérési hiba - vagy valódi, szokatlan válasz.",
+      "beispiel": "Tíz szállítási idő napokban: kilenc 2 és 4 között (összeg 27), egy 31. A 31 nélkül az átlag 27 / 9 = 3,0 nap, vele 58 / 10 = 5,8.",
+      "vorsicht": "Soha ne töröld csendben a kiugró értékeket: előbb ellenőrizd az eredetit, mutasd meg a számítást vele és nélküle, és indokold a döntést. Regresszióban egy messze eső pont magához húzza az egyenest, még ha alig is tűnik fel. Dobozdiagramon (boxplot) a szokatlan értékek a bajuszokon (a doboz melletti vonalakon) kívüli pontokként jelennek meg. Ettől még nem hibák.",
+      "pruefen": true,
+      "statable": "Regressziónál az eredmény alatti „A regresszió ellenőrzése: kollinearitás és feltűnő esetek” blokk felsorolja a nagy reziduumú, nagy hatóerejű vagy nagy Cook-távolságú eseteket, az adatokban szereplő sorszámukkal. Itt nézz utána, soha ne törölj csendben. Egy oszlop egyes értékeit a megnyitáskor az adatellenőrzés jelzi."
+    },
+    "reliabilitaet": {
+      "titel": "Skála megbízhatósága (Cronbach-alfa)",
+      "kurz": "Megbízhatóan mérnek-e együtt több kérdést? A Cronbach-alfa megmutatja, mennyire erősen függnek össze egy skála kérdéseire adott válaszok. Az érték általában 0 és 1 között van.",
+      "beispiel": "Öt kérdés a munkahelyi elégedettségről: α = ,82.",
+      "vorsicht": "A magas alfa nem bizonyítja, hogy minden kérdés ugyanazt méri, és több kérdés magától is növeli. Minimumként gyakran a ,70-et nevezik meg; ez szokás.",
+      "fachwoerter": "belső konzisztencia (mennyire erősen függnek össze egy skála kérdéseire adott válaszok), egydimenziósság (minden kérdés ugyanazt a tulajdonságot méri), faktorelemzés (megmutatja, hogy a kérdések egy vagy több tulajdonságot mérnek-e), tétel-totál korreláció (mennyire illik egy kérdés a többihez), megfordítás (egy fordítva megfogalmazott kérdés megfordítása, hogy ugyanabba az irányba mutasson).",
+      "pruefen": true
+    },
+    "faktorenanalyse": {
+      "titel": "Faktorelemzés",
+      "kurz": "Mely kérdések tartoznak össze? A faktorelemzés olyan kérdéscsoportokat keres, amelyekre hasonlóan válaszolnak. A faktorsúly (−1-től 1-ig) megmutatja, mennyire erősen tartozik egy kérdés egy csoporthoz.",
+      "beispiel": "Kilenc kérdés a városi életről három csoportot alkot: közlekedés, biztonság, szabadidő.",
+      "vorsicht": "A számítás csak csoportokat talál. Hogy mit jelentenek, azt emberek döntik el. A ,30-tól ,50-ig terjedő faktorsúlyoktól gyakran számítanak be; rögzített határ nincs.",
+      "fachwoerter": "főkomponens-elemzés (az alapértelmezés, mint az SPSS-ben: a kérdéseket komponensekké foglalja össze), főtengely-faktorelemzés (a kérdések mögötti közös tulajdonságokat keresi), promax (olyan rotáció, amely megengedi, hogy a faktorok összefüggjenek).",
+      "pruefen": true
+    },
+    "koeffizient-b": {
+      "titel": "B regressziós együttható és konstans",
+      "kurz": "Mennyit változik az előrejelzés, ha egy prediktor 1-gyel nő, a többi pedig ugyanaz marad? A B megmondja, az adatok egységeiben. Ezért változik a B, ha további prediktorok kerülnek a modellbe. A konstans az előrejelzés, ha az összes prediktor értéke 0.",
+      "beispiel": "Lakásár ezer euróban: a alapterületre B = 2,4. Egy további m² átlagosan 2400 € többlettel jár, ugyanazon az emeleten.",
+      "vorsicht": "A B a mértékegységgel változik (euró vagy ezer euró). Csak azonos mértékegységnél hasonlítható össze a B a vizsgálatok között; eltérő skáláknál vagy mértékegységeknél csak a béta marad, ami viszont a minta szóródásától függ. A konstansnak gyakran nincs értelme, ha a 0 soha nem fordul elő (0 m²).",
+      "fachwoerter": "béta (a szórásokban kifejezett B, így a skálák összehasonlíthatóvá válnak), prediktor (olyan érték, amelyet az előrejelzéshez használnak).",
+      "pruefen": true
+    },
+    "beta": {
+      "titel": "Standardizált béta (β)",
+      "kurz": "A mértékegység nélküli B: a béta mindent szórásokra vált át (az értékek átlagtól mért tipikus távolsága). Ez egy vizsgálaton belül egymás mellé teszi a különböző egységű mennyiségeket. Egyetlen prediktor esetén a béta egyenlő az r-rel.",
+      "beispiel": "Lakásár: alapterület β = ,62. Ha az alapterület egy szórással nő, az ár átlagosan 0,62 szórással nő.",
+      "vorsicht": "A béta attól függ, mennyire különböznek az esetek egy mintában, ezért vizsgálatok között nem hasonlítható össze egyszerűen. Ha két vizsgálat skálája vagy mértékegysége eltér, csak a béta állítható egymás mellé, a B nem - de a béta is a minta szóródásától függ. Hogy egy nagyobb béta „fontosabbat” jelent-e, az vitatott.",
+      "pruefen": true
+    },
+    "standardfehler": {
+      "titel": "Standard hiba",
+      "kurz": "Mennyire pontos egy becslés? Más személyekkel kissé más érték jönne ki. A standard hiba megmondja, mennyit ingadozik így az érték tipikusan. A kisebb pontosabbat jelent.",
+      "beispiel": "1,5 ponttal több edzésóránként (B = 1,5), standard hiba 0,5. A B osztva a standard hibával t = 3,0-t ad, ami a p-hez (Sig.) vezet.",
+      "vorsicht": "Több személlyel kisebb lesz, akkor is, ha az összefüggés ugyanaz marad. A modellösszefoglalóban a „becslés standard hibája” más: az értékek tipikus távolsága az egyenestől. Négyszer annyi személy körülbelül felezi. A szórás (az egyes értékek átlagtól mért tipikus távolsága) nagyjából ugyanaz marad.",
+      "fachwoerter": "minta (a ténylegesen vizsgált személyek), t (a B osztva a standard hibával), Sig. (így hívja az SPSS a hozzá tartozó p-értéket).",
+      "pruefen": true
+    },
+    "r-quadrat": {
+      "titel": "R² és korrigált R²",
+      "kurz": "A különbségek mekkora részét magyarázza egy modell? Az R² egy arány 0-tól 1-ig. A korrigált R² levon belőle egy keveset, mert bármely hozzáadott mennyiség növelheti az R²-t, még ha semmit sem tesz hozzá. Egyetlen prediktor esetén az R² az r korreláció négyzete. Maga az r nem arány.",
+      "beispiel": "R² = ,40: az alapterület és a fekvés a lakásár-különbségek 40%-át magyarázza ezekben az adatokban.",
+      "vorsicht": "A „magyaráz” számtani értelemben értendő, nem okként. Egy magasabb R² önmagában nem tesz jobbá egy modellt.",
+      "fachwoerter": "variancia (mennyire szóródnak az értékek az átlaguk körül), szignifikáns (a p-érték a választott határ alatt van, általában ,05 alatt), prediktor (olyan érték, amelyet az előrejelzéshez használnak).",
+      "pruefen": true
+    },
+    "eigenwert-rotation": {
+      "titel": "Sajátérték, párhuzamos elemzés, faktorsúly és rotáció",
+      "kurz": "Hány kérdéscsoport van? A sajátérték megmutatja, mennyit ragad meg egy csoport a különbségekből. A párhuzamos elemzés csak a véletlen adatok értéke fölötti csoportokat tartja meg; a rotáció világosabbá teszi a kérdések besorolását.",
+      "beispiel": "Nyolc kérdés a lakókörnyezetről: két csoport van a véletlen érték fölött, 3,1 és 1,6 sajátértékkel. Együtt 4,7 a 8-ból, tehát 59%. A 6. kérdés faktorsúlya az 1. csoporton ,81 (erős hovatartozás), a 2. csoporton ,05.",
+      "vorsicht": "Egyik szabály sem bizonyíték: az „1 fölötti sajátérték” gyakran túl sok csoportot nevez meg, a párhuzamos elemzés túl keveset, ha az első csoport nagyon nagy, kevés a személy, és a csoportok erősen összefüggenek. A számot a scree-diagrammal (a sajátértékek diagramja) és a kérdések tartalmával együtt döntik el.",
+      "fachwoerter": "komponens (a számítás által képzett csoportok egyike), Kaiser-kritérium (az 1 fölötti sajátértékű komponenseket tartja meg), varimax (olyan rotáció, amely függetlenül tartja a komponenseket), promax (olyan rotáció, amely megengedi, hogy a faktorok összefüggjenek).",
+      "pruefen": true
+    },
+    "trennschaerfe": {
+      "titel": "Korrigált tétel-totál korreláció és Cronbach-alfa a tétel törlése esetén",
+      "kurz": "Illik-e egy kérdés egy skála többi kérdéséhez? A tétel-totál korreláció a kérdés korrelációja a többi kérdés összegével. A magas azt jelenti: akik itt magasan válaszolnak, máshol is hajlamosak magasan válaszolni. A Cronbach-alfa a tétel törlése esetén a skála alfája e kérdés nélkül. Ha ekkor nő, a kérdés lehúzza az alfát.",
+      "beispiel": ",55 tétel-totál korreláció: jól illik. −,40 tétel-totál korreláció: a kérdés fordítva működik; talán nem fordították meg.",
+      "vorsicht": "A kb. ,40-től ,70-ig terjedő értékeket gyakran jónak nevezik; ez szokás. A magas tétel-totál korreláció nem bizonyítja, hogy minden kérdés ugyanazt méri. Egy kérdés elhagyásáról a tartalom is dönt.",
+      "fachwoerter": "Cronbach-alfa (mennyire erősen függnek össze egy skála válaszai), tétel (a skála egyetlen kérdése), megfordítás (egy fordítva megfogalmazott kérdés megfordítása, hogy ugyanabba az irányba mutasson).",
+      "pruefen": true
+    },
+    "rangkorrelation": {
+      "titel": "Rangkorreláció (rs, τb)",
+      "kurz": "Együtt járnak-e két rangsor? A rangkorreláció (rs Spearman szerint, τb Kendall szerint) nem a számokat, hanem a rangsorbeli helyüket hasonlítja össze, és akkor illik, ha csak a sorrend számít. −1 és +1 között van.",
+      "beispiel": "Elégedettség (1-től 5-ig terjedő szintek) és havi látogatások 60 személynél: rs = −,22. Akik gyakrabban járnak, hajlamosak kissé kevésbé elégedettek lenni. Az összefüggés gyenge.",
+      "vorsicht": "Az összefüggés nem ok. A rangkorreláció minden olyan összefüggést megragad, amely folyamatosan nő vagy folyamatosan csökken, a görbéket is; az alakot a pontdiagram mutatja.",
+      "pruefen": true
+    },
+    "kappa": {
+      "titel": "Cohen-féle kappa (κ)",
+      "kurz": "Mennyire egyezik két értékelő, ha a találgatást levonjuk? A Cohen-féle kappa (κ) kiveszi azt az egyezést, amelyet a puszta véletlen adna. A 0 azt jelenti, hogy nem jobb a véletlennél; az 1 tökéletes egyezést.",
+      "beispiel": "Két orvos 50 bőrfényképet „feltűnő” vagy „nem feltűnő” csoportba sorol. 40-ben egyeznek (80%); a véletlen levonása után κ = ,60 (95%-os intervallum ,38-tól ,82-ig).",
+      "vorsicht": "A κ magas egyezés mellett is alacsony, ha egy kategória nagyon ritka vagy nagyon gyakori. Az olyan címkék, mint a „mérsékelt” vagy a „jelentős” (Landis és Koch 1977), ökölszabályok, nem határok.",
+      "pruefen": true
+    },
+    "krippendorff-alpha": {
+      "titel": "Krippendorff-féle alfa (α)",
+      "kurz": "Egyeznek-e többen a besorolásban, még ha nem is mindenki értékelt minden esetet? A Krippendorff-féle alfa (α) ezt egyetlen számmal méri. Gyakran említett értékek: ,800-tól megbízható, ,667-től előzetes következtetésekhez.",
+      "beispiel": "Három személy 60 ügyfélmegjegyzést sorol a „dicséret”, „kritika” vagy „kérdés” csoportba: α = ,71. Ez ,667 fölött, de ,800 alatt van: elég előzetes következtetésekhez, nem megbízhatóakhoz.",
+      "vorsicht": "A ,800 és ,667 határok Krippendorff javaslatai, nem természeti törvények. Kevés esetnél az intervallum széles.",
+      "pruefen": true
+    },
+    "icc": {
+      "titel": "Intraklassz korreláció (ICC)",
+      "kurz": "Az értékelések közötti különbségek mekkora része ered az értékelt esetekből, nem az értékelőkből? Az ICC (intraklassz korreláció) ezt mutatja: a 0 nem jelent egyezést, az 1 tökéletes egyezést.",
+      "beispiel": "Három bíró 10 tortát pontoz 0-tól 100 pontig: ICC(2,1) = ,82 (95%-os intervallum ,43-tól ,95-ig) egyetlen értékelésre, ICC(2,3) = ,93 (,70-től ,98-ig) a három értékelés átlagára. Csak 10 tortával az első intervallum még széles.",
+      "vorsicht": "Vannak változatai (egyetlen értékelés vagy átlag; teljes egyezés, vagy megengedett az értékelők közötti állandó eltolódás); az illőt előre választják. Kevés esetnél az ICC pontatlan, és alacsonyra jön ki, ha az esetek alig különböznek - jó egyezésnél is.",
+      "fachwoerter": "konfidenciaintervallum (olyan tartomány, amely az adatok alapján jól illik a valódi ICC-hez), abszolút egyezés ICC(2,·) (az értékeknek egyenlőknek kell lenniük), konzisztencia ICC(3,·) (megengedett az értékelők közötti állandó eltolódás), egyes és átlag (egy értékelés vagy az összes értékelés átlaga).",
+      "pruefen": true
+    },
+    "bland-altman": {
+      "titel": "Bland-Altman-diagram",
+      "kurz": "Mennyire térnek el egymástól két mérési módszer ugyanazokon az eseteken? A Bland–Altman-diagram minden eset különbségét az átlagával szemben mutatja. A torzítás az átlagos különbség; a határok az összes különbség kb. 95%-át fogják közre.",
+      "beispiel": "Két klinikai lázmérő 12 személynél: torzítás = 0,16 °C (95%-os KI 0,05-től 0,27-ig), egyezési határok −0,18-tól 0,50 °C-ig. A második átlagosan magasabbat mutat (a torzítás intervalluma nem tartalmazza a 0-t); egyetlen esetben akár 0,5 °C-kal magasabbat.",
+      "vorsicht": "Hogy a tartomány elég kicsi-e, azt a szakterület dönti el, nem a statisztika. Kevés esetnél a határok pontatlanok, és ha a különbségek az átlagtól függenek, a határok nem érvényesek mindenhol egyformán.",
+      "fachwoerter": "ICC (intraklassz korreláció: a különbségeket az esetek közötti különbségekhez viszonyítja), szórás (SD, a tipikus szóródás; a határok torzítás ± 1,96 SD).",
+      "pruefen": true
+    },
+    "sensitivitaet": {
+      "titel": "Szenzitivitás",
+      "kurz": "A valóban érintett személyek közül hányat talál meg egy teszt? A szenzitivitás a valóban pozitívak azon aránya, akiket a teszt pozitívnak mond. Igazságnak a legjobb elérhető összehasonlító ellenőrzést tekintjük.",
+      "beispiel": "Megerősített diagnózisú 40 személyből a gyorsteszt 34-et mutat ki: szenzitivitás = 34 / 40 = 85% (95%-os KI 71-től 93%-ig).",
+      "vorsicht": "Ha a tesztet szigorúbbra vagy enyhébbre állítják, a szenzitivitás és a specificitás ellentétes irányban változik. Kevés érintett személynél az intervallum széles.",
+      "fachwoerter": "referenciastandard (a legjobb elérhető ellenőrzés, amelynek eredménye igazságnak számít), igaz pozitívak (az érintett személyek, akiket a teszt kimutat).",
+      "pruefen": true
+    },
+    "spezifitaet": {
+      "titel": "Specificitás",
+      "kurz": "A nem érintett személyek közül hányat ismer fel helyesen egy teszt? A specificitás a valóban negatívak azon aránya, akiket a teszt negatívnak mond. A magas kevés téves riasztást jelent.",
+      "beispiel": "A diagnózis nélküli 120 személyből 108 feltűnésmentes marad: specificitás = 108 / 120 = 90% (95%-os KI 83-tól 94%-ig).",
+      "vorsicht": "Az összehasonlító ellenőrzést igazságnak tekintik; ha maga is bizonytalan, a szenzitivitás és a specificitás pontatlan. Ritka állapotoknál a pozitív eredmény a magas specificitás ellenére gyakran kevesebbet mond a vártnál (lásd a prediktív értékeket).",
+      "fachwoerter": "referenciastandard (a legjobb elérhető ellenőrzés, amelynek eredménye igazságnak számít), igaz negatívak (a nem érintett személyek, akiket a teszt helyesen átenged).",
+      "pruefen": true
+    },
+    "vorhersagewert": {
+      "titel": "Prediktív értékek (PPV, NPV)",
+      "kurz": "Mennyire valószínű, hogy valaki valóban érintett, ha a teszt pozitív? A pozitív prediktív érték (PPV) ezt mondja meg: a pozitív tesztek azon aránya, amelyek valóban érintettek. A negatív (NPV) a negatív teszteket fedi.",
+      "beispiel": "Egy teszt 90% szenzitivitással és 90% specificitással. 1000 személyből 100 érintett: 90-et kimutat, de a 900 egészséges közül 90 is pozitív lesz. PPV = 90 / 180 = 50%. Ha 500 lenne érintett, a PPV 450 / 500 = 90% lenne.",
+      "vorsicht": "Mindkét érték azzal változik, mennyire gyakori az állapot, egyenlő szenzitivitás és specificitás mellett is, és csak hasonló prevalenciájú csoportokra érvényes. Ha az érintett és a nem érintett személyeket külön keresték (eset-kontroll vizsgálat), nem értelmezhetők.",
+      "fachwoerter": "likelihood-arányok (LR+ = szenzitivitás / (1 − specificitás), LR− = (1 − szenzitivitás) / specificitás: mennyivel gyakoribb egy eredmény az érintett, mint a nem érintett személyeknél; nem függnek a prevalenciától).",
+      "pruefen": true
+    },
+    "gepaarte-messung": {
+      "titel": "Páros mérés (dz, dav)",
+      "kurz": "Megváltozott valami ugyanazoknál a személyeknél? Páros mérésnél az „előtte” és az „utána” ugyanazoktól a személyektől származik. A dz és a dav a változás nagyságának két mértéke. A páros t-próba a személyenkénti különbségekkel számol. Így kiesnek a személyek közötti különbségek, és a p-érték gyakran kisebb lesz.",
+      "beispiel": "10 személy fekvőtámaszai hat hét edzés előtt és után: átlagosan 2,9-cel több. dz = 2,9 / 1,37 = 2,12; dav = 2,9 / 3,94 = 0,74. A dz sokkal nagyobb, mert az előtte és az utána erősen összefügg (r = ,98).",
+      "vorsicht": "A dz az átlagos változást a változások szóródásával osztja, a dav az előtte és az utána átlagos szóródásával; csak a dav összehasonlítható a csoportösszehasonlítások d-jével. Összehasonlító csoport nélkül a mérés nem mutatja, mi okozta a változást; Cohen címkéi (0,2 / 0,5 / 0,8) szokás, és a dav-ra vonatkoznak, nem a dz-re.",
+      "fachwoerter": "szórás (az értékek tipikus szóródása az átlaguk körül), statisztikai erő (power: egy valóban meglévő különbség megtalálásának esélye; a kiszámításához a dz-t használják).",
+      "pruefen": true
+    },
+    "logistische-regression": {
+      "titel": "Logisztikus regresszió",
+      "kurz": "Mitől függ, hogy valami megtörténik-e vagy sem? A logisztikus regresszió egy igen/nem kimenetet jósol meg más értékekből. Egy modellpróba ellenőrzi, hogy jobban jósol-e, mint egy olyan modell, amelyben nincsenek ezek az értékek.",
+      "beispiel": "Lemondás (igen/nem) a fizetésből, az életkorból és az ingázási időből 300 személynél, 36% mond le: modellpróba χ²(3) = 14,2, p = ,003; Nagelkerke-féle R² = ,06. 68%-ot helyesen soroltak be; a modell nélkül 64% lenne (ennyien tartoznak a nagyobb csoportba).",
+      "vorsicht": "A Nagelkerke-féle R² nem a megmagyarázott különbségek hányada, mint a lineáris regresszióban. A magas találati arány keveset ér, ha az egyik csoport amúgy is sokkal nagyobb, és általában csak arra az adatra érvényes, amelyre a modellt illesztették.",
+      "fachwoerter": "esély (odds) (a valószínűség osztva az ellentétes esemény valószínűségével: a 75% 3 az 1-hez esélyt jelent), prediktor (olyan érték, amelyet az előrejelzéshez használnak), pszeudo-R² (a Nagelkerke-féle R² a lineáris regresszió R²-ét helyettesíti, de nem a megmagyarázott különbségek hányada).",
+      "pruefen": true,
+      "statable": "Számold ki a regressziót (kétértékű célszlop), és az eredmény alatt nyisd meg „A logisztikus regresszió ellenőrzése: feltűnő esetek, illeszkedés, a logit linearitása, blokkok” blokkot. Megmutatja a VIF-et, a feltűnő eseteket (hatóerő, Cook-távolság, devianciareziduum, DFBETA), a Hosmer-Lemeshow-próbát, a Box-Tidwell-próbát és a blokk-χ²-t a prediktorok második blokkjához."
+    },
+    "odds-ratio": {
+      "titel": "Esélyhányados (OR)",
+      "kurz": "Hányszorosára változik egy esemény esélye, ha egy érték 1-gyel nő? Ez az esélyhányados (OR). Az 1 nem jelent összefüggést; 1 fölött az esély nő; 1 alatt csökken.",
+      "beispiel": "Annak esélye, hogy egy csomag későn érkezik, 100 km távolságonként: OR = 1,35, 95%-os intervallum [1,12; 1,63]. 100 km-rel több esetén az esély 1,35-szörösére nő, vagyis kb. 35%-kal. Az intervallum nem tartalmazza az 1-et.",
+      "vorsicht": "Az „esély” itt a „megtörténik” és a „nem történik meg” hányadosát jelenti (3 az 1-hez, nem 75%); az OR tehát nem „x-szer valószínűbb” - ez csak ritka eseményekre igaz. Ha az 1 az intervallumon belül van, összefüggés nem mutatható ki.",
+      "fachwoerter": "esély (odds) (a valószínűség osztva az ellentétes esemény valószínűségével), prediktor (olyan érték, amelyet az előrejelzéshez használnak), Wald (az OR intervallumának szokásos módszere).",
+      "pruefen": true
+    },
+    "eta-quadrat": {
+      "titel": "Éta-négyzet (η²) és omega-négyzet (ω²)",
+      "kurz": "A mért érték különbségeinek mekkora része jár együtt a csoporttal? Az η² (éta-négyzet) ez az arány, 0-tól 1-ig. Az ω² ugyanez a gondolat, óvatosabban számolva, és valamivel kisebb.",
+      "beispiel": "Három trágya, mindegyikből 20 növény: η² = ,25 és ω² = ,22. A trágya a terméskülönbségek kb. negyedével jár együtt.",
+      "vorsicht": "A Cohen szerinti ,01 / ,06 / ,14 címkék a csoportösszehasonlítások szokása; többször mért személyeknél vagy nem beosztott csoportoknál egy változat (parciális η²) sokkal nagyobbra jön ki, ezért a Statable ott általánosított η²-et (ηG²) használ. A csoportösszehasonlítás (varianciaanalízis) csak azt mutatja, hogy legalább két csoport különbözik, nem azt, hogy melyek.",
+      "fachwoerter": "sokaság (mindenki, akire az állítás vonatkozik; a minta csak egy része), konfidenciaintervallum (az η² hihető tartománya a sokaságban), ismételt mérések (ugyanazok a személyek többször mérve), parciális η² (ηp²: a hatás a hatás és a hibája arányában), szignifikáns (a p-érték a választott határ alatt van; ha a próba nem szignifikáns, az intervallum alsó határa 0).",
+      "pruefen": true
+    },
+    "paarvergleich": {
+      "titel": "Páronkénti összehasonlítások (post hoc: Tukey, Games-Howell, Bonferroni)",
+      "kurz": "Mely csoportok különböznek, ha kettőnél több van? A páronkénti összehasonlítások minden párt próbálnak, és szigorúbbá teszik a p-értékeket, mert sok összehasonlítás könnyen „talál” valamit véletlenül. Gyakoriak a Tukey, a Games–Howell és a Bonferroni.",
+      "beispiel": "Három fajta 3 párt ad. A Bonferroni szerint minden p-t megszoroznak 3-mal: a ,020 ,060 lesz - már nem ,05 alatt.",
+      "vorsicht": "Egy nem szignifikáns pár nem azt jelenti, hogy „egyenlő”, csak azt, hogy „nem kimutatott”. Sok csoportnál a párok száma megnő, és mindegyiket nehezebb kimutatni.",
+      "fachwoerter": "varianciaanalízis (három vagy több csoport átlagát hasonlítja össze), post hoc (utólag, a varianciaanalízis után), Games–Howell (a Statable alapértelmezése, nem igényel egyenlő szóródást), Tukey (egyenlő szóródást feltételez), Bonferroni (szigorú és egyszerű: minden p szorozva a párok számával).",
+      "pruefen": true
+    },
+    "welch-anova": {
+      "titel": "Welch-féle varianciaanalízis",
+      "kurz": "Hogyan hasonlítsunk össze több, egyenlőtlenül szóródó csoportot? A klasszikus varianciaanalízis egyenlő szóródást követel. A Welch-féle varianciaanalízis nem: minden csoportot a szóródása szerint súlyoz.",
+      "beispiel": "Négy raktár szállítási ideje nagyon eltérő szóródással: Welch-féle F(3; 41,8) = 5,4, p = ,003. A raktárak különböznek, egyenlő szóródás feltételezése nélkül.",
+      "vorsicht": "A Welch-féle varianciaanalízis is csak azt mutatja, hogy legalább két csoport különbözik. A páronkénti összehasonlítások mutatják meg, melyek (ehhez a Games–Howell illik).",
+      "fachwoerter": "szabadságfok (df: az F melletti zárójelben lévő számok; megszabják, melyik eloszláshoz hasonlít a próba), szóródás (mennyire esnek távol egymástól egy csoport értékei).",
+      "pruefen": true
+    },
+    "rangtest": {
+      "titel": "Rangpróba (normális eloszlás nélkül)",
+      "kurz": "Mit tegyünk, ha az átlagok kiugró értékek vagy ferdeség miatt rosszul illenek? A rangpróbák rendbe teszik az összes értéket, és rangsorbeli helyekkel dolgoznak. Nem igényelnek normális eloszlást, és alig reagálnak egyes kiugró értékekre.",
+      "beispiel": "Várakozási idők percben, egyenként 6 mérés: A szolgáltatás 4, 5, 6, 7, 9, 13; B szolgáltatás 8, 10, 11, 12, 15, 40. Mann–Whitney-próba (két csoport) U = 5, p = ,041 (egzakt): a B hajlamos magasabb lenni. A 40-es kiugró érték alig számít.",
+      "vorsicht": "A rangpróba azt mutatja, hogy az egyik csoportnak hajlamosan magasabbak az értékei - nem csak a mediánokat próbálja. Eltérő szóródás vagy alak is kiválthatja.",
+      "fachwoerter": "Kruskal–Wallis (rangpróba három vagy több csoportra), Wilcoxon (rangpróba ugyanazon személyek két mérésére), Dunn-próba Holm-korrekcióval (a Kruskal–Wallis után megmutatja, mely párok különböznek), Hodges–Lehmann-becslő (HL: az egyes csoportokból egy-egy személy közötti összes különbség mediánja) a 95%-os konfidenciaintervallumával (hihető tartomány hozzá), hatásnagyság (mekkora a különbség: r = |z| / √N, a Kruskal–Wallisnál ε² = H / (n − 1)), biszeriális rangkorreláció (azon párok aránya, amelyekben az egyik csoport magasabb, szorozva 2-vel, mínusz 1), rangkötések (egyenlő értékek).",
+      "pruefen": true
+    },
+    "sphaerizitaet": {
+      "titel": "Szfericitás (Mauchly-próba)",
+      "kurz": "Ugyanazokat a személyeket többször mérik: egyformán erősen szórnak-e a bármely két időpont közötti különbségek? Ez a szfericitás. Ha sérül, az eredmény túl gyakran szignifikáns.",
+      "beispiel": "20 személy reakcióideje három napon: Mauchly-próba W = ,75, p = ,075; ε (Greenhouse–Geisser) = ,80 (az 1 teljesülést jelentene). A próba nem mutat sérülést, de az ε egyértelműen 1 alatt van - ezért korrekciót alkalmaznak.",
+      "vorsicht": "A Mauchly-próba a szfericitást ellenőrzi (a ,05 fölötti p nem szól ellene), de kevés személynél gyenge, sok személynél már a kis eltéréseket is jelzi. Ezért a Statable mindig mutatja a Greenhouse–Geisser-korrekciót, nem csak ha a p ,05 alatt van.",
+      "fachwoerter": "ismételt mérések (ugyanazok a személyek többször mérve), varianciaanalízis (az átlagokat hasonlítja össze), szabadságfok (df: az F melletti zárójelben lévő számok), p-érték (milyen gyakran fordulna elő legalább ekkora eredmény, ha a feltevés érvényes), W (a Mauchly-próba próbastatisztikája).",
+      "pruefen": true,
+      "statable": "Az ismételt méréses elemzés eredménye alatt válaszd ki a szfericitás korrekcióját (alapbeállításként Greenhouse-Geisser, Huynh-Feldt vagy nincs). Egy ismételt méréses faktornál a Mauchly-próba a táblázatban szerepel; két faktornál minden hatásnak saját ε-ja van."
+    },
+    "greenhouse-geisser": {
+      "titel": "Greenhouse-Geisser- és Huynh-Feldt-korrekció (ε)",
+      "kurz": "Mit tegyünk, ha a szfericitás sérül? A korrekció óvatosabbá teszi az eredményt: a p nagyobb lesz. Mennyivel, azt az ε (epszilon) szabja meg: az 1 teljesülést jelent, a kisebb erősebb sérülést.",
+      "beispiel": "ε = ,80 mellett az F(2; 38) = 6,2, p = ,005 F(1,60; 30,40) = 6,2, p = ,009 lesz: a zárójelben lévő két számot, a 2-t és a 38-at, megszorozzák ,80-nal, és 1,60 és 30,40 jön ki.",
+      "vorsicht": "A Greenhouse–Geisser a szigorúbb, a Huynh–Feldt a valamivel nagyvonalúbb becslés. A zárójelben lévő számok már nem egész számok; ez szokásos, és az 1-hez közeli ε-nál a korrekció alig változtat valamit.",
+      "fachwoerter": "szabadságfok (df: az F melletti zárójelben lévő számok), varianciaanalízis (az átlagokat hasonlítja össze), szfericitás (a bármely két időpont közötti összes különbség egyformán szór).",
+      "pruefen": true,
+      "statable": "Az ismételt méréses elemzés eredménye alatt válaszd ki a korrekciót: Greenhouse-Geisser (alapbeállítás), Huynh-Feldt vagy nincs. A szabadságfokok és a p azonnal ε-nal korrigálva jelennek meg; két ismételt méréses faktornál minden hatásnak saját ε-ja van."
+    },
+    "mediation": {
+      "titel": "Mediáció (közvetett hatás)",
+      "kurz": "Egy köztes lépésen át érvényesül egy hatás? Például: a zaj hat az alvásra, az alvás pedig a hangulatra. A mediáció kiszámolja, mekkora ez a közvetett út.",
+      "beispiel": "A közvetett út az alváson át 0,20, 95%-os intervallum [0,11; 0,30]: a 0 nincs benne.",
+      "vorsicht": "Egyetlen felmérés nem mutat okot: a sorrend feltevés. A közvetett út intervalluma számít, nem az, hogy az egyes lépések szignifikánsak-e.",
+      "fachwoerter": "mediátor (az M változó, amelyen át a hatás fut), a (X → M), b (M → Y), c′ (X → Y közvetlenül) és c (X → Y összesen; c = c′ + a·b) utak, bootstrap (a meglévő személyekből 5000-szer újra húzni), konfidenciaintervallum (olyan tartomány, amely az adatok alapján jól illik a valódi értékhez).",
+      "pruefen": true
+    },
+    "moderation": {
+      "titel": "Moderáció (kölcsönhatás, egyszerű meredekségek)",
+      "kurz": "Ugyanaz-e egy összefüggés mindenkinél? A moderáció azt próbálja, hogy függ-e egy harmadik mennyiségtől.",
+      "beispiel": "A több gyakorlás sokat segít a kezdőknek, a tapasztaltaknak alig: a tapasztalat moderálja az összefüggést.",
+      "vorsicht": "A moderáció nem mediáció: a moderátor az összefüggés erősségét változtatja; nem köztes lépés. A moderáció önmagában sem mutat okot.",
+      "fachwoerter": "moderátor (a W harmadik változó, amelytől az összefüggés függ), centrálás (az értékek eltolása az átlaguk körül), regresszió (előrejelzés az X·W szorzattal mint kölcsönhatási taggal), szignifikáns (a p-érték a választott határ alatt van), egyszerű meredekségek (az X meredeksége alacsony, közepes és magas W-nél), ΔR² (a kölcsönhatás okozta nyereség a megmagyarázott varianciában), Johnson–Neyman (megnevezi a W azon pontjait, amelyektől a meredekség szignifikánssá válik).",
+      "pruefen": true
+    },
+    "nap": {
+      "titel": "NAP (az összes pár nem átfedése)",
+      "kurz": "Javult-e egy viselkedés egy beavatkozás hatására? A NAP minden előtte (A) lévő értéket minden beavatkozás alatti (B) értékkel összehasonlít, és megadja azon párok arányát, ahol a B jobb; a döntetlen fél pontot ér.",
+      "beispiel": "Percek, ameddig egy gyerek az asztalnál ül: alapvonal 3, 4, 4, 5; beavatkozás 6, 5, 7, 8, 7. A 20 párból a B 19-ben jobb és 1-ben egyenlő: NAP = (19 + 0,5) / 20 = ,975.",
+      "vorsicht": "A NAP figyelmen kívül hagyja a beavatkozás előtti trendet, és nem mutatja, mennyivel jobb a B; a gyenge, közepes és erős címkék (Parker és Vannest) ökölszabályok. A próba független méréseket feltételez, ami az idősorokból gyakran hiányzik.",
+      "fachwoerter": "AUC (az ROC-görbe alatti terület: ugyanaz a valószínűség, a NAP megegyezik vele), Mann–Whitney (rangpróba két csoportra, itt ez adja a p-értéket), p-érték (milyen gyakran fordulna elő legalább ekkora eredmény, ha nincs különbség), Newcombe szerinti konfidenciaintervallum (olyan tartomány, amely megmutatja, mennyire bizonytalan az érték kevés mérésnél).",
+      "pruefen": true
+    },
+    "pnd": {
+      "titel": "PND (a nem átfedő adatok százaléka)",
+      "kurz": "A beavatkozási fázis (B) hány értéke előzi meg az előtte (A) lévő legjobb értéket? Ez a PND: a legjobb A-értéknél jobb B-értékek aránya (Scruggs és mások 1987).",
+      "beispiel": "Ugyanazokkal az adatokkal (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): a legjobb A-érték 5. A B-értékek közül négy fölötte van (6, 7, 8, 7), PND = 4 / 5 = 80%. Ha az „alacsonyabb = jobb”, a legalacsonyabb A-érték számít.",
+      "vorsicht": "A PND egyetlen, a beavatkozás előtti értéktől függ: egy kiugró érték ott használhatatlanná teszi, és a beavatkozás előtti több méréssel csökken, még ha egyébként semmi sem más. A NAP jobban illik; a PND a régebbi munkákkal való összehasonlításra szolgál.",
+      "pruefen": true
+    },
+    "tau-u": {
+      "titel": "Tau-U és alapvonallal korrigált Tau",
+      "kurz": "Mennyire lehet kimutatni javulást, ha az értékek már a beavatkozás előtt is egy irányba mozognak? A Tau-U a NAP-hoz hasonlóan hasonlítja az előtte és az utána értékeket, és ki tudja venni ezt a trendet.",
+      "beispiel": "Ugyanazokkal az adatokkal (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): a Tau-U trend kivétele nélkül = (19 − 0) / 20 = ,95. Már a beavatkozás előtt a 6 párból 5 emelkedik: a trend kivételével a Tau-U = (19 − 5) / 20 = ,70.",
+      "vorsicht": "A trend kivétele azt feltételezi, hogy a korábbi trend utána egyszerűen folytatódna - hosszú beavatkozási fázisnál erős feltevés. A beavatkozás előtti 3-nál kevesebb mérésnél nem lehet trendet próbálni, és a p-értékek független méréseket feltételeznek.",
+      "fachwoerter": "Kendall (a Kendall-féle tau: rangsorokból számolt összefüggés, mindkét mérték alapja), Tau-BC (alapvonalra korrigált tau: csak akkor veszi ki a trendet az A-ban, ha szignifikáns), Theil–Sen (robusztus trendvonal a pontpárok mediánmeredekségéből).",
+      "pruefen": true
+    },
+    "einzelfall": {
+      "titel": "Egyedi esetes elemzés (A-B terv)",
+      "kurz": "Hatott-e a beavatkozás egy személynél? Egy személyt (vagy keveset) ismételten mérnek az idő során: először beavatkozás nélkül (A fázis), aztán azzal (B fázis). A két fázist összehasonlítják.",
+      "beispiel": "Egy gyerek négy alapvonal-mérésen át (3, 4, 4, 5) átlagosan 4 percig ül az asztalnál, és a beavatkozással végzett öt mérésen át (6, 5, 7, 8, 7) átlagosan 6,6 percig.",
+      "vorsicht": "Egy A-B terv önmagában nem bizonyít okot: a személy fejlődhet magától is, vagy más események is szerepet játszhatnak. A megismétlések meggyőzőbbek (A-B-A-B, több személy eltolt kezdéssel).",
+      "fachwoerter": "medián (a középső érték), NAP (az A-B párok azon aránya, amelyekben a B jobb), tau és Tau-U (a Kendall-féle tau-n alapuló mértékek, amelyek figyelembe tudják venni az alapvonalbeli trendet), PND (a legjobb A-értéknél magasabb B-értékek aránya), többszörös alapvonal (több személy, a beavatkozás eltolt kezdetével).",
+      "pruefen": true
+    },
+    "kaplan-meier": {
+      "titel": "Kaplan-Meier-becslés (eseményig eltelt idő)",
+      "kurz": "Hányan vannak még esemény nélkül egy adott idő után? A Kaplan–Meier-görbe ezt minden időpontra megmutatja, és minden eseménynél esik. Azokat a személyeket is felhasználja, akiket csak az idő egy részében figyeltek meg.",
+      "beispiel": "10 alkalmazott, lemondásig eltelt idő hónapokban: 5 mond le (3, 5, 5, 8 és 12 hónap után), 5-nél a megfigyelés lemondás nélkül ér véget (6, 9, 10, 14 és 15 hónap után). 8 hónap után 9/10 · 7/9 · 5/6 = 58% nem mondott még le.",
+      "vorsicht": "A módszer feltételezi, hogy a megfigyelésből való kilépésnek semmi köze a kockázathoz. A jobb szélen általában már csak kevés személy maradt; ott a görbe bizonytalan.",
+      "fachwoerter": "cenzorált (csak egy ideig megfigyelt, addig az esemény nem következett be), lépcsős görbe (minden eseménynél egy lépcsőt esik), kockázatnak kitett (még megfigyelt és esemény nélküli).",
+      "pruefen": true
+    },
+    "zensierung": {
+      "titel": "Cenzorálás",
+      "kurz": "Mi érvényes azokra a személyekre, akiknél a megfigyelés végéig nem történt semmi? Cenzoráltaknak hívják őket: csak azt tudjuk, hogy az esemény korábban nem következett be.",
+      "beispiel": "Egy alkalmazott, aki még a cégnél van, amikor a vizsgálat 14 hónap után véget ér, a 14. időpontban cenzorált. Az ábrán kis jelként jelenik meg a görbén.",
+      "vorsicht": "Ne hagyd el a cenzorált személyeket, és ne számold eseménynek őket: mindkettő torzítja a görbét. A módszer feltételezi, hogy a cenzorált személyek további kockázata ugyanakkora, mint a többieké.",
+      "fachwoerter": "Kaplan–Meier (a módszer, amely a cenzorált személyeket is felhasználja), kockázatnak kitett (még megfigyelt és esemény nélküli), nem informatív cenzorálás (a kiesésnek semmi köze a kockázathoz).",
+      "pruefen": true
+    },
+    "ueberlebensfunktion": {
+      "titel": "Túlélési függvény S(t)",
+      "kurz": "Hányan nem éltek még át eseményt a t időpontig? Ezt mutatja a túlélési függvény S(t); 1-nél kezdődik (mindenki), és az eseményeknél esik. A „túlélés” itt csak azt jelenti: „még nincs esemény”.",
+      "beispiel": "S(8) = ,58, 95%-os intervallum [,34; 1,00]: 8 hónap után a becslés szerint az alkalmazottak 58%-a nem mondott még le. 10 személlyel az intervallum nagyon széles.",
+      "vorsicht": "Az intervallumot (mint az R survfit-ben) úgy számolják, hogy soha nem esik 0 alá; a felső határ 1-nél le van vágva. Kevés még megfigyelt személynél nagyon széles.",
+      "fachwoerter": "konfidenciaintervallum (olyan tartomány, amely az adatok alapján jól illik a valódi arányhoz), standard hiba (Greenwood szerint: mennyit ingadozna az érték mintáról mintára), logaritmikus skála (az intervallumot logaritmizált értékeken számolják).",
+      "pruefen": true
+    },
+    "median-ueberlebenszeit": {
+      "titel": "Medián idő az eseményig",
+      "kurz": "Mikor élte át az esemény a felét? Ez a medián idő: az a pont, ahol a görbe 50%-ra esik. Ha soha nem esik ilyen alacsonyra, a medián „nem érte el”.",
+      "beispiel": "Medián = 12 hónap, 95%-os intervallum [5; nem érte el]: az alsó határ 5, felfelé az intervallum nyitott.",
+      "vorsicht": "A medián itt jobb, mint az átlag, amelyet a ferde adatok és a végéig esemény nélküli személyek eltorzítanak. Ha a görbe egy szakaszon pontosan 50%-on van, a Statable, mint az R, a felezőpontot veszi; kevés eseménynél a medián nagyon bizonytalan.",
+      "pruefen": true
+    },
+    "log-rank": {
+      "titel": "Log-rank próba",
+      "kurz": "Különböznek-e több csoport görbéi? A log-rank próba minden eseményidőpontnál összehasonlítja, hány eseménye volt az egyes csoportoknak, és hánynak kellene lennie, ha minden csoport egyforma lenne.",
+      "beispiel": "Két csapat, lemondásig eltelt idő: χ²(1) = 5,1, p = ,024. A görbék különböznek.",
+      "vorsicht": "A próba akkor a legerősebb, ha a görbék soha nem cserélnek oldalt; ha keresztezik egymást, elmulaszthat egy valódi különbséget. A különbség nagyságáról semmit nem mond; erre a mediánok és a rögzített időpontokban mért arányok valók.",
+      "fachwoerter": "Mantel–Cox (a próba másik neve), Cox (ne tévesszük össze a Cox-regresszióval), Holm (több párra korrigálja a p-értékeket), szabadságfok (df: itt a csoportok száma mínusz 1).",
+      "pruefen": true
+    },
+    "anzahl-unter-risiko": {
+      "titel": "Kockázatnak kitettek száma",
+      "kurz": "Hány személy támasztja alá a görbét egy adott ponton? A kockázatnak kitettek száma azt mutatja, hányan vannak még megfigyelve, és nem volt még eseményük a t időpontban. Gyakran az ábra alatt áll.",
+      "beispiel": "A 10. hónapban a 10 személyből még 4 van kockázatnak kitéve: ott a görbe 4 személyen nyugszik.",
+      "vorsicht": "Ahol már csak kevesen vannak kockázatnak kitéve, a görbe minden eseménynél erősen ugrik, és az intervallum széles. Az ilyen helyeket nem szabad túlértelmezni.",
+      "fachwoerter": "cenzorálás (csak egy ideig megfigyelt személyek, akik utána kiesnek; az eseményekhez hasonlóan csökkentik a számot).",
+      "pruefen": true
+    },
+    "bootstrap": {
+      "titel": "Bootstrap (percentilis intervallum)",
+      "kurz": "Mennyire bizonytalan egy olyan érték, amelyre nincs egyszerű képlet? A bootstrap 5000-szer újra húz a rendelkezésre álló személyek közül, és minden alkalommal újraszámolja az értéket. Az eredmények középső 95%-a adja az intervallumot.",
+      "beispiel": "12 személy várakozási idejének mediánja (középső értéke): 11,5 perc. Az 5000 új medián közül 2,5% van 7,5 alatt és 2,5% 16,5 fölött: 95%-os bootstrap-intervallum [7,5; 16,5].",
+      "vorsicht": "Kevés személynél (kb. 50 alatt) az intervallum pontatlan és gyakran túl szűk. A véletlen számok rögzített kezdőértékével ugyanazok az adatok mindig ugyanazt az intervallumot adják; más kezdőérték csak kissé tolja el a határokat.",
+      "fachwoerter": "konfidenciaintervallum (olyan tartomány, amely az adatok alapján jól illik a valódi értékhez), percentilis (a határok a rendezett eredmények 2,5%-ánál és 97,5%-ánál), visszatevéses húzás (ugyanaz a személy többször is szerepelhet), kezdőérték (rögzíti a véletlen számokat).",
+      "pruefen": true
+    },
+    "omega": {
+      "titel": "McDonald-féle omega (ω)",
+      "kurz": "Megbízhatóan mér-e több kérdés együtt egy dolgot, még ha nem járulnak hozzá egyformán? Az omega (ω) ezt a Cronbach-alfához hasonlóan méri, de az egyes kérdések tényleges hozzájárulását használja. Az alfa mindenkinél ugyanazt feltételezi.",
+      "beispiel": "Öt kérdés ,5 / ,6 / ,7 / ,7 / ,8 hozzájárulással (faktorsúllyal): ω = ,80. Az alfa, amely egyenlő hozzájárulást feltételez, valamivel alacsonyabb, ,79.",
+      "vorsicht": "Az omega azt feltételezi, hogy a kérdések egyetlen dolgot mérnek; különben nincs értelme értelmezni (ilyenkor a faktorelemzés segít). A viszonyítási értékek (gyakran ,70) csak ideiglenesek, és az omega is erre a személycsoportra érvényes, nem magára a kérdőívre. Az alfa csak akkor adja meg pontosan a reliabilitást, ha a kérdések egy dolgot mérnek, egyformán járulnak hozzá, és a hibáik korrelálatlanok.",
+      "pruefen": true
+    },
+    "cfa": {
+      "titel": "Megerősítő faktorelemzés (CFA)",
+      "kurz": "Illik-e az adatokhoz a kérdések előre meghatározott csoportokba sorolása? A megerősítő faktorelemzés (CFA) előre rögzíti, mely kérdések melyik csoportba (faktorba) tartoznak, és próbálja, mennyire illik.",
+      "beispiel": "Kilenc kérdés, három, egyenként három kérdésből álló csoport (közlekedés, biztonság, szabadidő): CFI = ,92, RMSEA = ,07, az illeszkedés két mértéke. Éppen elkerülik a szokásos viszonyítási értékeket: a CFI ,95 alatt, az RMSEA ,06 fölött van.",
+      "vorsicht": "A jó illeszkedés nem mutatja, hogy a csoportok a helyes dolgot mérik, és egy másik modell ugyanilyen jól illeszkedhet. Ha a besorolást csak ugyanazon adatok megnézése után módosítják, a próba már nem független.",
+      "fachwoerter": "illeszkedési mutatók (azt mérik, mennyire illeszkedik a modell, itt a CFI és az RMSEA), feltáró faktorelemzés (kérdéscsoportokat keres az adatokban), standardizált faktorsúlyok (mennyire erősen tartozik egy kérdés a faktorához).",
+      "pruefen": true
+    },
+    "fit-indizes": {
+      "titel": "Illeszkedési mutatók (CFI, TLI, RMSEA, SRMR)",
+      "kurz": "Illeszkedik-e a modell az adatokhoz? Az illeszkedési mutatók ezt számokba öntik. A CFI és a TLI esetén a magasabb a jobb, az RMSEA és az SRMR esetén az alacsonyabb. Az RMSEA 90%-os intervalluma megmutatja, mennyire pontosan becsült.",
+      "beispiel": "CFI = ,96, TLI = ,95, RMSEA = ,05, SRMR = ,04: a szokásos viszonyítási értékek szerint az illeszkedés a jó tartományban van.",
+      "vorsicht": "A viszonyítási értékek (CFI és TLI ,95-től, RMSEA ,06-ig, SRMR ,08-ig; Hu és Bentler 1999) tapasztalati szabályok, nem próbák; a ,90-et a CFI-nél és a TLI-nél gyakran még elfogadhatónak nevezik, kis modelleknél vagy kevés személynél pedig megbízhatatlanok. A χ²-próba nagy mintáknál kis eltéréseknél is szignifikánssá válik.",
+      "pruefen": true
+    },
+    "mehrebenen": {
+      "titel": "Többszintű modell (vegyes hatású modell)",
+      "kurz": "Mi van, ha a személyek csoportokba vannak ágyazva, például gyerekek osztályokba? A csoportban lévő személyek gyakran hasonlóak. A többszintű modell minden csoportnak saját szintet ad, és szétválasztja a csoportok közötti különbségeket a csoporton belüliektől.",
+      "beispiel": "500 alkalmazott elégedettsége 25 cégből: a szóródás 12%-a a cégek között van. Havi egy további képzési óra 0,8 ponttal nagyobb elégedettséggel jár (p < ,001), akkor is, ha a céget figyelembe vesszük.",
+      "vorsicht": "Több csoport kell hozzá, mindegyikben több esettel; 10-nél kevesebb csoportnál a csoportszintű becslések nagyon bizonytalanok. A többszintű modell összefüggéseket mutat, nem okokat.",
+      "pruefen": true,
+      "statable": "Az eredményben a „Szakembereknek” alatt centrálhatsz a nagyátlagra vagy a csoportátlagra (a csoporton belüli és a csoportok közötti hatás), választhatsz véletlen meredekséget, és hozzáadhatsz kölcsönhatást, a szintek között is. Lejjebb az „A modellek összehasonlítása” ML-lel hasonlítja össze a nullmodellt, a fix hatásokat, a kölcsönhatásokat és a véletlen meredekséget (AIC, BIC, −2LL, likelihood-arány próba). Ha az adatok személy × időpont szerkezetűek, a Statable felkínálja az „idő véletlen meredekséggel személyenként” utat (növekedési modell)."
+    },
+    "icc-mehrebenen": {
+      "titel": "ICC a többszintű modellben (a csoportok részesedése)",
+      "kurz": "Mennyire különböznek a csoportok? Az ICC a teljes szóródásnak a csoportok között lévő hányada. ICC = ,12 azt jelenti: a különbségek 12%-a a csoporttal jár együtt.",
+      "beispiel": "ICC = ,12, csoportonként 20 esettel: a tervezési hatás 1 + (20 − 1) · ,12 = 3,28. Egy átlag bizonytalansága (standard hiba) ekkor kb. 1,8-szor (√3,28) akkora, mint amit a csoportokat figyelmen kívül hagyó számítás közöl.",
+      "vorsicht": "Nem tévesztendő össze az értékelők egyezésére vonatkozó ICC-vel: itt a csoportok hányada a szóródásban. A ,05-től kicsi, ,10-től közepes, ,15-től nagy (Hox) csak ökölszabály.",
+      "fachwoerter": "intraklassz korreláció (ICC: a teljes szóródásnak a csoportok között lévő hányada), variancia (mennyire szóródnak az értékek), nullmodell (a magyarázó oszlopok nélküli modell, amelyben az ICC-t számolják).",
+      "pruefen": true
+    },
+    "meta-effekt": {
+      "titel": "Összevont hatás (metaanalízis)",
+      "kurz": "Mekkora egy hatás több vizsgálat együttes eredményében? Az összevont hatás az összes vizsgálat súlyozott átlaga: a pontosabb vizsgálatok többet számítanak. Ha a valódi hatások vizsgálatonként változnak, az intervallum szélesebb lesz.",
+      "beispiel": "Három vizsgálat: 0,40 (standard hiba, vagyis pontatlanság, 0,10), 0,20 (0,05) és 0,30 (0,10). Súly = 1 / standard hiba²: 100, 400, 100. Súlyozott átlag = (40 + 80 + 30) / 600 = 0,25 - mint egy közös valódi hatásnál.",
+      "vorsicht": "Az átlagnak csak akkor van értelme, ha a vizsgálatok ugyanazt mérik. Ha a vizsgálatok erősen különböznek, nézd meg az előrejelzési intervallumot is.",
+      "fachwoerter": "heterogenitás (mennyire különböznek egymástól a vizsgálatok), konfidenciaintervallum (olyan tartomány, amely az adatok alapján jól illik a valódi hatások átlagához), véletlen hatású modell (megengedi, hogy a valódi hatások vizsgálatonként változzanak, τ²), standard hiba (azt méri, mennyire pontatlan egy vizsgálat).",
+      "pruefen": true
+    },
+    "i-quadrat": {
+      "titel": "I² és Q (heterogenitás)",
+      "kurz": "Jobban különböznek-e a vizsgálatok, mint amennyit a véletlen alapján várnánk? Az I² százalékban megmondja, hogy az eredmények közötti különbségek mekkora része ered a vizsgálatok közötti valódi különbségekből. A Q-próba ugyanezt kérdezi.",
+      "beispiel": "Tizenkét vizsgálat: Q(11) = 42,0, p < ,001; I² = (42,0 − 11) / 42,0 = 74%. Gyakran idézett címkék: 25%, 50%, 75% (Higgins és mások 2003).",
+      "vorsicht": "Az I² arány, nem a különbségek nagyságának mértéke: nagyon pontos vizsgálatoknál az I² akkor is nagy lesz, ha a hatások közel vannak egymáshoz. Kevés vizsgálatnál az I² nagyon pontatlan, és egy kis érték nem bizonyítja, hogy a vizsgálatok egyenlők; hogy a valódi hatások mennyire szóródnak, azt a τ és az előrejelzési intervallum mutatja.",
+      "pruefen": true,
+      "fachwoerter": "τ (a valódi hatások szóródása a vizsgálatok között), előrejelzési intervallum (az a tartomány, amelyben egy új vizsgálat hatása valószínűleg van), Q (próba arra, hogy az eredmények jobban eltérnek-e egymástól, mint amennyit a véletlen adna)."
+    },
+    "tau-quadrat": {
+      "titel": "τ² (a tanulmányok közötti szóródás)",
+      "kurz": "Mennyire különböznek a vizsgálatok valódi hatásai? A τ² (tau-négyzet) ezt a szóródást méri; a négyzetgyöke, a τ, a hatás egységében van. Az I²-től eltérően figyelmen kívül hagyja, mennyire pontosak a vizsgálatok.",
+      "beispiel": "τ² = 0,04, tehát τ = 0,20: 0,30-as átlagos hatásnál a vizsgálatok valódi hatásai tipikusan kb. 0,20-cal szóródnak körülötte.",
+      "vorsicht": "Kb. öt vizsgálat alatt a τ² nagyon bizonytalan, és az intervalluma nagyon széles.",
+      "fachwoerter": "szórás (a τ a τ² négyzetgyöke), variancia (mennyire szóródnak a valódi hatások), REML (a τ² becslésére használt módszer).",
+      "pruefen": true
+    },
+    "praediktionsintervall": {
+      "titel": "Előrejelzési intervallum (metaanalízis)",
+      "kurz": "Hol van valószínűleg egy új, összehasonlítható vizsgálat hatása? Az előrejelzési intervallum ezt mutatja. Szélesebb, mint az átlag konfidenciaintervalluma, mert a vizsgálatok közötti különbségeket is tartalmazza.",
+      "beispiel": "Összevont 0,20, 95%-os KI [0,12; 0,28], előrejelzési intervallum [−0,05; 0,45]: egy új vizsgálat a 0 közeli hatást is találhat.",
+      "vorsicht": "Kevés vizsgálatnál az intervallum nagyon bizonytalan.",
+      "pruefen": true
+    },
+    "forest-plot": {
+      "titel": "Erdődiagram",
+      "kurz": "Hogyan néznek ki az összes vizsgálat eredményei? Az erdődiagram minden vizsgálatot négyzetként (hatás) vonallal (95%-os intervallum) mutat. A rombusz az átlag; a szaggatott vonal a hatás hiányát jelenti.",
+      "beispiel": "A rombusz 0,20-nál, csúcsai 0,12-nél és 0,28-nál, a szaggatott vonal 0-nál (hányadosoknál 1-nél): a rombusz teljesen jobbra van tőle - az átlag eltér a „nincs hatás”-tól.",
+      "vorsicht": "Ellenőrizd, hogy egyetlen nagy vizsgálat határozza-e meg az eredményt (nagy négyzet), és átfedik-e egymást az intervallumok.",
+      "fachwoerter": "előrejelzési intervallum (az a tartomány, amelyben egy új vizsgálat valódi hatása valószínűleg lesz), összevont hatás (az összes vizsgálat átlaga, a rombusz).",
+      "pruefen": true
+    },
+    "funnel-plot": {
+      "titel": "Tölcsérdiagram és Egger-próba",
+      "kurz": "Hiányoznak vizsgálatok? A tölcsérdiagram minden vizsgálatot hatás és pontosság szerint mutat: a pontosak felül tömörülnek, a pontatlanok lent szélesebben szóródnak. Egy hiányzó oldal ferdévé teszi; az Egger-próba ezt ellenőrzi.",
+      "beispiel": "Az Egger-próba p = ,03, 14 vizsgálattal: a tölcsér feltűnően ferde - a kis vizsgálatok átlagosan nagyobb hatást mutatnak.",
+      "vorsicht": "10 vizsgálat alatt a próbának kicsi az ereje (Sterne és mások 2011). A tölcsér azért is lehet ferde, mert a kis és a nagy vizsgálatok valóban különböznek.",
+      "fachwoerter": "standard hiba (azt méri, mennyire pontatlan egy vizsgálat), aszimmetria (a tölcsér az egyik oldalon üres), regresszió (az Egger-próba a standard hibából jósolja a hatást).",
+      "pruefen": true
+    },
+    "mehrfachantworten-set": {
+      "titel": "Többes válaszkészlet",
+      "kurz": "Mi van, ha egy kérdésnél több lehetőséget is meg lehetett jelölni? A többes válaszkészlet az egyes lehetőségek oszlopait egyetlen kérdéssé vonja össze. A Statable minden lehetőségre megszámolja, hányan nevezték meg.",
+      "beispiel": "„Hogyan jutsz el a munkahelyedre?” biciklivel, busszal, autóval: három oszlop (megjelölve = 1, különben 0), egy készlet. Az SPSS-ben ezt MRSETS-nek hívják.",
+      "vorsicht": "Ugyanazon személy jelölései összefüggenek. Ezért többes válaszokra nincs szokásos khí-négyzet-próba.",
+      "pruefen": true
+    },
+    "prozent-der-faelle": {
+      "titel": "Az esetek százaléka",
+      "kurz": "Hányan neveztek meg egy lehetőséget? Az esetek százaléka az említések száma osztva az érvényes esetek számával. Mivel minden személy több lehetőséget is megnevezhet, az értékek 100%-nál többet adnak ki.",
+      "beispiel": "40 személyből 18 biciklivel jön: 18 / 40 = az esetek 45%-a.",
+      "vorsicht": "Érvényes esetek azok, amelyeknek legalább egy jelölése van (mint az SPSS-ben). Aki semmit nem jelölt, nincs az alapban, hacsak nincs bekapcsolva a „jelölés nélküli esetek számolása”.",
+      "pruefen": true
+    },
+    "prozent-der-antworten": {
+      "titel": "A válaszok százaléka",
+      "kurz": "Hogyan oszlanak el az összes jelölések? A válaszok százaléka egy lehetőség említéseinek száma osztva az összes említés összegével. Ezek az értékek 100%-ot adnak ki.",
+      "beispiel": "A biciklit 18-szor nevezték meg, összesen 60 említés volt: 18 / 60 = a válaszok 30%-a.",
+      "vorsicht": "Az érték azt mondja meg, hogyan oszlanak el az említések, nem azt, hányan választanak egy lehetőséget. Erre való az esetek százaléka.",
+      "pruefen": true
+    },
+    "shapiro-wilk": {
+      "titel": "Shapiro-Wilk-próba",
+      "kurz": "Úgy néznek-e ki az értékek, mintha normális eloszlásból származnának? A Shapiro–Wilk-próba ezt ellenőrzi. Ha a p kisebb ,05-nél, az eloszlás láthatóan eltér; különben a próba nem szól ellene.",
+      "beispiel": "25 személy reakcióideje: W = ,73 (az 1 tökéletes egyezés lenne), p < ,001. Az eloszlás ferde; a medián jobban írja le a középpontot.",
+      "vorsicht": "Sok személynél a próba a kis eltéréseket is jelzi, kevésnél a nagyokat is elmulasztja. Egy nem szignifikáns eredmény nem bizonyítja a normális eloszlást; a Q-Q diagram kiegészíti.",
+      "pruefen": true
+    },
+    "qq-diagramm": {
+      "titel": "Q-Q diagram",
+      "kurz": "Követik-e az értékek a normális eloszlást? A Q-Q diagram minden mért értéket pontként tesz azon érték ellenében, amelyet egy normális eloszlás adna. Ha a pontok közel vannak az egyeneshez, illik.",
+      "beispiel": "100 felnőtt testmagasságánál a pontok majdnem az egyenesen vannak. Egy forródrót várakozási idejénél a felső végen felfelé hajlanak: néhány nagyon hosszú várakozás.",
+      "vorsicht": "A görbék ferdeséget mutatnak, a végeken messze eső egyes pontok kiugró értékeket. Kevés értéknél a pontok véletlenszerűen ingadoznak az egyenes körül; a Shapiro–Wilk-próba egyetlen számban összegzi az eltérést, de nem helyettesíti a megnézést.",
+      "pruefen": true
+    },
+    "partialkorrelation": {
+      "titel": "Parciális korreláció",
+      "kurz": "Összetartozik-e még két szám, ha egy harmadik változatlan marad? A parciális korreláció a két szám közötti összefüggést mutatja azután, hogy mindkettőből kivették az egy vagy több további számnak tulajdonítható részt.",
+      "beispiel": "A fagylalteladások és a leégések erősen összefüggenek (r = ,62). A hőmérséklet kiszűrésével (r = ,80 és ,75 a kettővel) alig marad valami: pr = ,05.",
+      "vorsicht": "Csak a megmért és kiválasztott dolog egyenes vonalú része kerül eltávolításra. Hogy a harmadik szám mindkettő oka-e, azt a tárgy dönti el, nem a számítás: két szám közös hatásának eltávolítása akár látszólagos összefüggést is létrehozhat.",
+      "pruefen": true
+    },
+    "roc-auc": {
+      "titel": "ROC-görbe és a görbe alatti terület (AUC)",
+      "kurz": "Mennyire jól választja el egy mért érték az érintett személyeket a nem érintettektől? Az ROC-görbe ezt minden lehetséges küszöbértékre megmutatja, és a területe (AUC) összegzi: a ,50 a véletlent, az 1 tökéletes elválasztást jelent.",
+      "beispiel": "AUC = ,85: ha húzol egy érintett és egy nem érintett személyt, az érintettnek az esetek 85%-ában feltűnőbb az értéke. A 20 pontos küszöbértéknél a teszt az érintettek 80%-át és a többiek 78%-át mutatja ki; a Youden-index ,80 + ,78 − 1 = ,58 szolgál a küszöbérték kiválasztására.",
+      "vorsicht": "A küszöbértéket pontosan ezen az adaton választják, és új adatokon általában gyengébben teljesít. A Youden-index nem tudja, melyik hiba nyom többet.",
+      "fachwoerter": "szenzitivitás (az érintett személyek azon aránya, akiket a teszt kimutat), specificitás (a nem érintett személyek azon aránya, akiket a teszt helyesen átenged), küszöbérték (ettől a pontszámtól számít valaki feltűnőnek), Youden-index (J = szenzitivitás + specificitás − 1).",
+      "pruefen": true
+    },
+    "hazard-ratio": {
+      "titel": "Hazárdarány (HR)",
+      "kurz": "Mennyivel gyorsabban vagy lassabban következik be egy esemény az egyik csoportban? A hazárdarány (HR) a csoportok kockázatát hasonlítja össze, hogy az esemény a következő pillanatban bekövetkezik. Az 1 nem jelent különbséget.",
+      "beispiel": "Az első munkahelyi balesetig eltelt idő, képzéssel és anélkül: HR = 0,70, 95%-os intervallum [0,52; 0,94]. Képzéssel a baleset kockázata a következő pillanatban bármely időpontban 0,70-szer akkora. Az intervallum nem tartalmazza az 1-et.",
+      "vorsicht": "A HR nem kockázati hányados: a HR = 1,8 nem jelenti, hogy az esemény 1,8-szor valószínűbb. Változhat az idő során; egyetlen érték ekkor csak átlag.",
+      "fachwoerter": "hazárd (az esemény bekövetkezésének kockázata a következő pillanatban), arányos kockázat (a hányados az idő során ugyanaz marad), Cox-regresszió (a módszer, amely a HR-t becsüli), Wald (az intervallum szokásos módszere).",
+      "pruefen": true
+    },
+    "proportionale-hazards": {
+      "titel": "Arányos kockázat",
+      "kurz": "Ugyanaz marad-e két csoport közötti különbség az idő során? A hazárdarány (HR) azt feltételezi, hogy a kockázati hányados mindig ugyanaz. Egy próba (cox.zph) ellenőrzi ezt; a ,05 alatti p ellene szól.",
+      "beispiel": "p = ,031 a csoportra: a hányados nem állandó. Ha a görbék keresztezik egymást az ábrán, az egyértelmű jel.",
+      "vorsicht": "Sok személynél a próba a kis eltérésekre is reagál, kevésnél a nagyokat is elmulasztja.",
+      "pruefen": true
+    },
+    "risikodifferenz": {
+      "titel": "Kockázatkülönbség (RD)",
+      "kurz": "Mennyivel magasabb a kockázat az egyik csoportban? A kockázatkülönbség (RD) az egyik csoport kockázata mínusz a másiké, arányként vagy százalékpontban. A 0 nem jelent különbséget.",
+      "beispiel": "Munkahelyi balesetek egy évben: képzéssel 400-ból 36 (9%), nélküle 400-ból 60 (15%). RD = ,09 − ,15 = −,060, 95%-os intervallum [−,105; −,015]: képzéssel 6 százalékponttal kevesebb.",
+      "vorsicht": "A kockázatkülönbség egy különbséget ír le; nem bizonyít okot, és eset-kontroll vizsgálatban (az érintett és a nem érintett személyeket külön keresték) nem értelmezhető. A Statable az intervallumot Newcombe szerint számolja, ami kis számoknál biztonságosabb az egyszerűbb módszernél.",
+      "fachwoerter": "Wald-intervallum (egyszerű közelítés az intervallumhoz, kis számoknál kevésbé biztonságos), Newcombe-intervallum (a Statable által használt módszer).",
+      "pruefen": true
+    },
+    "relatives-risiko": {
+      "titel": "Relatív kockázat (RR)",
+      "kurz": "Hányszor akkora a kockázat az egyik csoportban? A relatív kockázat (RR) az egyik csoport kockázata osztva a másikéval. Az 1 nem jelent különbséget; a 0,5 felét jelenti.",
+      "beispiel": "Ugyanazok a munkahelyi balesetek: RR = 0,09 / 0,15 = 0,60, 95%-os intervallum [0,41; 0,89]. Képzéssel a kockázat 0,60-szer akkora. Az intervallum nem tartalmazza az 1-et.",
+      "vorsicht": "Ha az egyik csoportban egyáltalán nincs esemény, az RR intervalluma nem számolható; a Statable nem korrigál csendben. Az idő során követett csoportokra és kísérletekre érvényes, eset-kontroll vizsgálatokra nem.",
+      "pruefen": true
+    },
+    "nnt": {
+      "titel": "NNT (kezelendő betegek száma)",
+      "kurz": "Hány személynél kell beavatkozni ahhoz, hogy eggyel kevesebb esemény történjen? Az NNT (kezelendő betegek száma) az 1 osztva a kockázatkülönbséggel. Az NNTB további hasznot, az NNTH további kárt jelent.",
+      "beispiel": "RD = −,06 mellett NNTB = 1 / ,06 = 16,7 (95%-os intervallum NNTB 9,5-től 67,0-ig): kb. 17 képzett személynél eggyel kevesebb baleset történik.",
+      "vorsicht": "Az NNT intervalluma a végtelenen át fut, ha a kockázatkülönbség 0 is lehet (például NNTH 25-től ∞-en át NNTB 10-ig) - soha ne olvasd negatív számokat tartalmazó intervallumként. Hogy egy esemény kívánatos-e, azt a személynek kell megadnia.",
+      "pruefen": true
+    },
+    "typical-error": {
+      "titel": "Typical error (TE)",
+      "kurz": "Mennyivel tér el tipikusan egyetlen mérés ismétléskor? Ezt mondja meg a typical error (TE), a mérés egységében. Ugyanazon személyek két méréséből számolják.",
+      "beispiel": "8 személy ugrásmagassága két napon: a napok közötti különbségek szórása 2,1 cm. TE = 2,1 / √2 = 1,5 cm: egyetlen ugrás tipikusan 1,5 cm-rel tér el.",
+      "vorsicht": "A TE csak akkor érvényes, ha a mérések között semmi sem változott. Megegyezik az ismételt mérésekből számolt mérési standard hibával, nem azzal, amelyik egy skála kérdéseinek összefüggéséből jön.",
+      "fachwoerter": "reliabilitás (mennyire megbízható egy mérés ismétléskor), a különbségek szórása (SD) (a két mérés közötti különbségek tipikus szóródása), mérési standard hiba (egyetlen mérés tipikus hibája).",
+      "pruefen": true
+    },
+    "lilliefors": {
+      "titel": "Lilliefors-próba",
+      "kurz": "Illenek-e az értékek egy normális eloszláshoz? A Lilliefors-próba ezt ellenőrzi akkor is, ha az átlagot és a szóródást előbb az adatokból becslik. A ,05 alatti p azt jelenti, hogy az eloszlás eltér a normálistól.",
+      "beispiel": "30 látogató tartózkodási ideje percben: D = ,17, p = ,033 (a Kolmogorov–Szmirnov-próba Lilliefors-féle változata). Az eloszlás eltér a normális eloszlástól.",
+      "vorsicht": "A ,05 fölötti p nem jelenti, hogy az adatok normális eloszlásúak, csak azt, hogy a próba nem szól ellene. Kevés személynél a nagy eltéréseket is elmulasztja; a Q-Q diagram többet mutat.",
+      "fachwoerter": "szórás (az értékek tipikus szóródása az átlaguk körül), Kolmogorov–Szmirnov-próba (az adatok eloszlását hasonlítja egy normális eloszláshoz).",
+      "pruefen": true
+    },
+    "chi-quadrat-anpassung": {
+      "titel": "χ² illeszkedési teszt",
+      "kurz": "Illik-e a kategóriák közötti eloszlás egy várthoz? A χ² illeszkedési próba azt ellenőrzi, hogy a megszámolt gyakoriságok illenek-e megadott arányokhoz, például egyenlő hányadokhoz. A ,05 alatti p azt jelenti: eltérnek a várakozástól.",
+      "beispiel": "Egy kocka, 120 dobás, oldalanként 20 várt. Megfigyelt: 14, 22, 18, 25, 19, 22. χ²(5, N = 120) = 74 / 20 = 3,7, p = ,593: a gyakoriságok nem szólnak egy szabályos kocka ellen.",
+      "vorsicht": "Ha egy kategóriában 1-nél kevesebb a várt, vagy a kategóriák több mint ötödében 5-nél kevesebb, a p bizonytalan (Cochran 1954 szerinti szokás). Egy nem szignifikáns eredmény nem erősíti meg a várakozást.",
+      "pruefen": true
+    },
+    "ladung": {
+      "titel": "Faktorsúly (faktortöltés)",
+      "kurz": "Mennyire erősen tartozik egy kérdés (tétel) egy faktorhoz vagy komponenshez, vagyis egy kérdéscsoporthoz? A faktorsúly megmutatja: derékszögű rotációnál a kettő közötti korreláció (−1-től 1-ig). A mínuszjel csak az irányt mutatja, amelyet a komponens tájolása szab meg. Az erősséget az abszolút nagyság adja.",
+      "beispiel": "„A” kérdés: ,70 az 1. komponensen, ,10 a 2. komponensen: az 1. komponenshez tartozik. „B” kérdés: −,65 az 1. komponensen: szintén odatartozik, csak ellenkező irányban.",
+      "vorsicht": "A határ (gyakran ,30-tól ,50-ig) szokás. Ha két helyen is e fölött van, keresztsúlynak (cross-loading) hívják: tartalmilag ellenőrizd. A táblázat üres celláiban kis faktorsúlyok vannak, amelyeket elrejtettek."
+    },
+    "eigenwert": {
+      "titel": "Sajátérték és Kaiser-kritérium",
+      "kurz": "A válaszok különbségeinek mekkora részét ragadja meg egy komponens (egy kérdéscsoport)? A sajátérték megmutatja. A kérdések számával osztva megkapjuk a komponens részesedését a varianciából. A kumulatív azt jelenti, hogy több komponenst adunk össze.",
+      "beispiel": "6 kérdésnél: az 1. komponens 2,4 (40%), a 2. komponens 1,2 (20%). Kumulatívan 3,6 a 6-ból, tehát 60%.",
+      "vorsicht": "A Kaiser-kritérium az 1 fölötti sajátértékű komponenseket tartja meg. Szimulációkban gyakran túl sokat nevez meg, és nem szabad egyedül döntenie. A párhuzamos elemzés kiegészíti.",
+      "fachwoerter": "variancia (mennyire szóródnak a válaszok), párhuzamos elemzés (a sajátértékeket véletlen adatok sajátértékeivel hasonlítja össze)."
+    },
+    "kommunalitaet": {
+      "titel": "Kommunalitás (h²)",
+      "kurz": "Egy kérdés mekkora részét magyarázzák együtt a komponensek (faktorok)? Ez a kommunalitás (h²): az ennek a kérdésnek a válaszaiban lévő különbségek azon része, amelyet az összes komponens együtt megragad. Korrelálatlan komponenseknél a faktorsúlyok négyzetének összege.",
+      "beispiel": "Egy kérdés faktorsúlya ,6 és ,5 két komponensen: h² = ,36 + ,25 = ,61, tehát kb. 61%.",
+      "vorsicht": "Az alacsony érték sok véletlen hibát jelenthet, amelyet a közös faktorok sosem magyaráznak, vagy azt, hogy a kérdés tartalmilag nem illik a többihez."
+    },
+    "rotation": {
+      "titel": "Rotáció (ortogonális és ferde)",
+      "kurz": "Hogyan lesz világosabb a kérdések besorolása? Rotációval: a megoldás tengelyeit addig forgatjuk, amíg minden kérdés főleg egy faktoron nem töltődik. Sok helyzet egyformán jól illik a korrelációkhoz. A rotáció egyet választ, világos szerkezettel.",
+      "beispiel": "Ortogonális (derékszögű, pl. varimax): a faktorok korrelálatlanok maradnak. Ferde (oblique, pl. promax): a faktorok összefügghetnek.",
+      "vorsicht": "Az ortogonális rotáció a faktorsúlyokat változtatja meg, a kommunalitásokat nem (azt, hogy egy kérdés mekkora részét magyarázzák együtt a faktorok). A ferde nem kényszerít összefüggést: korrelálatlan faktoroknál a kép az ortogonálishoz hasonlít."
+    },
+    "explorative-faktorenanalyse": {
+      "titel": "Feltáró faktorelemzés (EFA)",
+      "kurz": "Vannak-e közös tulajdonságok a kérdések mögött, és melyek? A feltáró faktorelemzés ezeket keresi előre rögzített szerkezet nélkül. Közös okot feltételez. Ennek előbb tartalmilag kell értelmesnek lennie, bármilyen statisztika előtt.",
+      "beispiel": "Tíz jóllétre vonatkozó kérdés két csoportot ad. Hogy két tulajdonság van-e, azt a szakmai tudás dönti el.",
+      "vorsicht": "Az ugyanazon adatokban talált szerkezet természetesen jól illik hozzájuk. Csak új adatokon erősíthető meg.",
+      "fachwoerter": "megerősítő (előre rögzített szerkezetet próbál)."
+    },
+    "bartlett-test": {
+      "titel": "Bartlett-féle szfericitás-próba (alkalmasság faktorelemzésre)",
+      "kurz": "Összefüggenek-e egyáltalán a kérdések? A Bartlett-féle szfericitás-próba azt ellenőrzi, hogy minden korreláció nulla-e (egységmátrix: nulla az átló kivételével). A szignifikáns csak azt jelenti: nem mind nulla.",
+      "beispiel": "30 személynél egy közepes összefüggés észrevétlen maradhat. 5000 személynél már nagyon kis összefüggések is szignifikánssá válnak.",
+      "vorsicht": "A statisztika erősen függ a minta nagyságától. Sok esetnél szinte mindig szignifikáns, és akkor keveset mond az alkalmasságról. Ne tévesszd össze a Mauchly-féle szfericitás-próbával ismételt méréseknél.",
+      "fachwoerter": "szignifikáns (a p-érték a választott határ alatt van, általában ,05), próbastatisztika (a szám, amelyet egy próba az adatokból kiszámít)."
+    },
+    "hauptkomponenten": {
+      "titel": "Főkomponens-elemzés (PCA) és faktorelemzés",
+      "kurz": "Csak sűrítem a kérdéseket, vagy közös tulajdonságot keresek? A főkomponens-elemzés (PCA) a teljes varianciát osztja fel. A faktorelemzés csak a közös részt magyarázza. Minden kérdés maradékát (saját sajátosságát és a mérési hibát) egyedi részként félreteszi.",
+      "beispiel": "Faktoronként kevés kérdésnél a PCA faktorsúlyai általában magasabbak a faktorelemzés faktorsúlyainál, mert a maradékot is tartalmazzák.",
+      "vorsicht": "Gyakran hasonlóak, de nem mindig: a különbségek főleg alacsony kommunalitásoknál látszanak.",
+      "fachwoerter": "variancia (mennyire szóródnak a válaszok), egyediség (egy kérdésnek az a része, amelyet a faktorok nem magyaráznak)."
+    },
+    "fallzahl-faktorenanalyse": {
+      "titel": "Mintanagyság faktorelemzéshez",
+      "kurz": "Hány személy kell egy faktorelemzéshez? Ez kevésbé függ a kérdések számától, mint két másik dologtól: mennyire magasak a kommunalitások (egy kérdés mekkora részét magyarázzák a faktorok), és hány kérdés határozza meg világosan az egyes faktorokat? Minél magasabb mindkettő, annál kisebb lehet a minta.",
+      "beispiel": "Magas kommunalitások, faktoronként négy erős kérdés: kevés személy is elég lehet. Alacsony kommunalitások, faktoronként két gyenge kérdés: még sok is kevés lehet.",
+      "vorsicht": "A rögzített arányok, például a „tíz személy kérdésenként”, ezt elnézik."
+    },
+    "umpolen": {
+      "titel": "Megfordítás (reverse coding)",
+      "kurz": "A megfordítás a reliabilitáselemzéshez tartozik? Igen: a Cronbach-alfához és a skálapontszámhoz egy skála minden kérdésének ugyanabba az irányba kell számítania. Ezért egy fordítva megfogalmazott kérdést újrakódolunk, hogy a „magas” mindig ugyanazt jelentse. 1-től 5-ig terjedő skálán az 1-ből 5 lesz.",
+      "beispiel": "„Gyakran vagyok fáradt” a „Bőven van energiám” mellett: megfordítás nélkül az összegben részben kioltják egymást. Az alfa (mennyire függnek össze a kérdések) csökken, és akár nulla alá is eshet.",
+      "vorsicht": "A faktorelemzéshez a megfordítás nem szükséges: a fordított kérdésnek ekkor negatív a faktorsúlya, és a negatív faktorsúly ugyanannyit számít, mint a pozitív. A megfogalmazás mutatja meg, hogy egy kérdés ellenkező irányba mutat-e."
+    },
+    "eingeschraenkte-streuung": {
+      "titel": "Korlátozott terjedelem (range restriction)",
+      "kurz": "Miért kisebb egy összefüggés, ha mindenki hasonló? Korlátozott terjedelem: ha egy tulajdonságnak csak szűk szeletét nézzük, a korreláció csökken, még ugyanazon összefüggés mellett is. Ez a faktorsúlyokat is csökkenti.",
+      "beispiel": "A kor és a testmagasság szoros összefüggésben áll 2 és 16 év közötti gyerekeknél. Csak a 10-11 évesek között a korreláció sokkal kisebb.",
+      "vorsicht": "Egy egységes csoportban a kis r nem jelenti azt, hogy az összefüggés mindenhol kicsi. A reliabilitás (a valódi különbségek aránya az összes különbség között) ott szintén alacsonyabb, mert kevés a valódi különbség."
+    },
+    "inter-item-korrelation": {
+      "titel": "Átlagos tételek közötti korreláció (inter-item)",
+      "kurz": "Átlagosan mennyire szorosan függnek össze egy skála kérdései? Az átlagos tételek közötti korreláció megmutatja (tétel = kérdés): az egyes párok átlagos korrelációja. Nem függ a kérdések számától. Az alfa több kérdéssel is nő.",
+      "beispiel": "Két skála, alfa ,80: 4 kérdés ,50-es átlagos korrelációval, vagy 12 kérdés mindössze ,25-tel.",
+      "vorsicht": "A sok kérdésből származó magas alfa nem bizonyít egységes skálát. A rövid, alacsony alfájú skála pontatlanul mér, még ha a rövidsége az oka.",
+      "fachwoerter": "alfa (mennyire erősen függnek össze egy skála kérdéseire adott válaszok)."
+    },
+    "eindimensionalitaet": {
+      "titel": "Egydimenziósság",
+      "kurz": "Minden kérdés egyetlen tulajdonságot mér? Ez az egydimenziósság. Egy faktorelemzés ellenőrizheti. Az alfa nem mutatja: azt méri, mennyire kapcsolódnak a kérdések, nem azt, hány tulajdonság áll mögöttük.",
+      "beispiel": "Két 5 kérdéses csoport, ,60 a csoportokon belül, 0 közöttük. A tíz alfája: kb. ,78, noha két tulajdonságot mérünk.",
+      "vorsicht": "Ha két csoportnak 1 fölötti sajátértéke van, az két tulajdonságra utal, de nem bizonyítja.",
+      "fachwoerter": "alfa (mennyire erősen függnek össze egy skála kérdéseire adott válaszok), sajátérték (mekkora szóródást ragad meg egy komponens)."
+    },
+    "reliabilitaet-wege": {
+      "titel": "A reliabilitás becslésének módjai (alfa, reteszt, felezés)",
+      "kurz": "Miért ad különböző módszer különböző reliabilitást ugyanarra a skálára? Az alfa, a reteszt (kétszer mérni) és a split-half (két fél összehasonlítása) ugyanannak a reliabilitásnak a becslésére szolgáló különböző módok. Mindegyik mást feltételez.",
+      "beispiel": "Az alfa többek között azt feltételezi, hogy minden kérdés egy tulajdonságot mér. A reteszt azt feltételezi, hogy a tulajdonság nem változik, és az emlékezet nem segít.",
+      "vorsicht": "Csak ha a feltételek teljesülnek, kell a számoknak egyezniük. A különbségek a feltételek megsértésére vagy a véletlenre utalnak."
+    },
+    "validitaet": {
+      "titel": "Validitás",
+      "kurz": "Valóban azt méri a skála, amit mérnie kell? Ez a validitás. A reliabilitás szükséges hozzá, de nem elég: a mérőszalag megbízhatóan mér hosszt, de nem súlyt.",
+      "beispiel": "A magas alfa azt mutatja, hogy a kérdések összefüggnek, nem azt, hogy azt ragadják meg, amit szántak. Ehhez bizonyíték kell a tartalomról, a külső mércével (kritérium) való összehasonlításból és a szándékolt tulajdonságról (konstruktum).",
+      "vorsicht": "A majdnem azonos kérdések felviszik az alfát, de szűk szeletet fednek le. A validitás a pontszámok értelmezéséhez tartozik, nem magához a teszthez."
+    },
+    "antwortstufen": {
+      "titel": "Válaszlehetőségek",
+      "kurz": "Miért számít a válaszlehetőségek száma? A válaszlehetőségek azok a lépcsők, amelyeket egy kérdés kínál, pl. 1-től 4-ig. A Pearson-korrelációkból számolt alfa finoman fokozatos értékeket feltételez. Kevés lépcsőnél az összefüggések túl kicsik lesznek, és a reliabilitást alulbecsüljük.",
+      "beispiel": "Ugyanaz az attitűd 3 vagy 7 lépcsőn: 3-nál a finom különbségek elvesznek, így a korrelációk és az alfa csökken.",
+      "vorsicht": "Hogy hány lépcsőtől elég, az nem eldöntött (gyakran öt-hét). A több lépcső nem automatikusan jobb.",
+      "fachwoerter": "Pearson-korreláció (két finoman fokozatos mennyiség közötti összefüggés szokásos mértéke)."
+    },
+    "messfehler": {
+      "titel": "Mérési hiba",
+      "kurz": "Miért torzítja az elemzést a pontatlan mérés? A mérési hiba a valódi értéktől való véletlen eltérés. Egy magyarázó változóban (prediktorban) gyengíti ennek a változónak a hatását (gyengülés, attenuation). A célváltozó véletlen hibája nem torzítja így a B-t.",
+      "beispiel": "Egy mediátort (olyan változót, amelyen át egy hatás fut) pontatlanul mérnek. A hatás egy része megkerüli, és a közvetlen útra esik: a mediátorhatás túl kicsi, a közvetlen hatás túl nagy.",
+      "vorsicht": "Ez nem mond semmit arról az útról, amelyen a hatás valójában halad."
+    },
+    "abhaengige-groesse": {
+      "titel": "Függő változó",
+      "kurz": "Mit jósolunk, és miből? A függő változó (y) az, amit jósolunk. A független változó (x) az, amiből jósolunk. Az „y regressziója x-re” azt jelenti: y-t x-ből jósoljuk.",
+      "beispiel": "A fűtési költséget a külső hőmérsékletből jósoljuk. A fűtési költség a függő változó.",
+      "vorsicht": "A „függő” csak azt jelenti: jósolt, nem azt, hogy x okozza. Ha felcseréled a szerepeket, más egyenest kapsz."
+    },
+    "kleinste-quadrate": {
+      "titel": "Legkisebb négyzetek módszere",
+      "kurz": "Hogyan helyezzük el a legjobb egyenest a pontok között? A legkisebb négyzetek módszere azt az egyenest választja, amelynél a négyzetes eltérések összege a legkisebb. Az eltéréseket az y irányában mérjük: megfigyelt mínusz jósolt. Ezek a reziduumok.",
+      "beispiel": "Pont y = 10-nél, az egyenes 8-at jósol: eltérés 2, négyzetesen 4.",
+      "vorsicht": "Nem az egyeneshez mért legrövidebb távolságot mérjük. A négyzetre emelés miatt a nagy eltérések jobban számítanak."
+    },
+    "standardfehler-schaetzer": {
+      "titel": "A becslés standard hibája",
+      "kurz": "Mennyire esnek tipikusan a megfigyelések az előrejelzéstől? A becslés standard hibája megmondja. Mértékegysége a függő változóé. A kisebb pontosabb előrejelzést jelent.",
+      "beispiel": "Szállítási idő napokban, érték 2: a tényleges idő tipikusan kb. 2 nappal tér el.",
+      "vorsicht": "A „tipikusan” nem maximum. Ne tévesszd össze egy B standard hibájával, amely azt írja le, mennyire pontosan becsüljük a B-t."
+    },
+    "kollinearitaet": {
+      "titel": "Kollinearitás (tolerancia, VIF)",
+      "kurz": "Két prediktor szinte ugyanazt méri? Akkor kollinearitás van: átfedik egymást. A tolerancia (tolerance) egy prediktor szóródásának az a része, amelyet a többi nem magyaráz. A VIF az 1 osztva a toleranciával. Minél nagyobb a VIF, annál nagyobb a hozzá tartozó B standard hibája. A becslés torzítatlan marad.",
+      "beispiel": "Alapterület és szobák: ,15-ös tolerancia azt jelenti, hogy az alapterület a szobák szóródásának csak 15%-át hagyja megmagyarázatlanul.",
+      "vorsicht": "A teljes modell lehet szignifikáns, noha egyik B sem az. A VIF-határok (5 vagy 10) szokások.",
+      "fachwoerter": "standard hiba (mennyire ingadozik tipikusan egy becsült érték), szignifikáns (a p-érték a választott határ alatt van, általában ,05).",
+      "statable": "Számold ki a regressziót, és az eredmény alatt nyisd meg az „A regresszió ellenőrzése: kollinearitás és feltűnő esetek” blokkot. Minden prediktorra megmutatja a toleranciát, a VIF-et és a saját hozzájárulást (sr²)."
+    },
+    "dummy-variable": {
+      "titel": "Dummy változó (0/1-es változó)",
+      "kurz": "Hogyan teszünk egy csoportot a regresszióba? Dummy változóként: 0 a referenciacsoportnak, 1 a másiknak. Akkor a konstans a referenciaátlag, a B az átlagok különbsége. q csoporthoz q - 1 dummy kell.",
+      "beispiel": "A jelű trágya (0), B jelű trágya (1): konstans 5,0, B = 1,2. A B jelű trágya átlaga: 6,2.",
+      "vorsicht": "A B előjele a referenciától függ. A B próbája megegyezik az egyenlő szóródású független mintás t-próbával."
+    },
+    "residuen": {
+      "titel": "Reziduumok",
+      "kurz": "Milyen messze van egy pont az előrejelzéstől? Ez a reziduuma: megfigyelt mínusz jósolt. A normalitást ezektől a hibáktól várjuk, nem a nyers értékektől. A reziduumokat hisztogrammal vagy Q-Q diagrammal ellenőrizzük.",
+      "beispiel": "Megfigyelt 70 kg, jósolt 66: reziduum +4.",
+      "vorsicht": "Több csoport nyers értékei összekeverednek, és ferdének tűnhetnek, noha a reziduumok rendben vannak.",
+      "fachwoerter": "Q-Q diagram (grafikon: ha a pontok az egyenes közelében vannak, az értékek illenek a normális eloszláshoz)."
+    },
+    "heteroskedastizitaet": {
+      "titel": "Heteroszkedaszticitás (a hibák egyenlőtlen szóródása)",
+      "kurz": "Mindenhol egyformán szóródnak az eltérések? Ha nem, az heteroszkedaszticitás. A reziduumdiagramon gyakran tölcsérként látszik. A meredekség torzítatlan marad, de kevésbé pontos, és a szokásos standard hibák hibásak. A robusztus standard hibák figyelembe veszik az egyenlőtlen szóródást.",
+      "beispiel": "Jósolt 1000: az eltérések kb. ±100. 5000-nél: ±600.",
+      "vorsicht": "A meredekséget a nemlinearitás, a kihagyott változók vagy az x mérési hibája torzítja, nem ez.",
+      "fachwoerter": "reziduumdiagram (az előrejelzéstől való eltérések képe), meredekség (B: változás egységenként), standard hiba (mennyire ingadozik tipikusan egy becslés), torzítatlan (átlagosan helyes)."
+    },
+    "hebelwert": {
+      "titel": "Befolyásoló erő (leverage)",
+      "kurz": "Mennyire húzhatja magához az egyenest egyetlen pont? A leverage az x értékének az x átlagától mért távolságával nő. Egy messze eső pont magához húzza az egyenest.",
+      "beispiel": "Tíz személy 20-30 órát edz, egy 90-et: magas leverage.",
+      "vorsicht": "A reziduuma (az egyenestől való távolság) éppen azért lehet kicsi, mert magához húzta az egyenest. Ezért hasonlítsd össze az egyenest a ponttal és nélküle."
+    },
+    "f-test": {
+      "titel": "F-próba (varianciaanalízis és regresszió)",
+      "kurz": "Van-e egyáltalán különbség vagy hatás? Az F-próba egészében ellenőriz. Regresszió: egyszerre nulla-e minden B? Varianciaanalízis: egyenlők-e a csoportátlagok? A varianciaanalízisben az F a csoportok közötti szóródás (átlagos négyzetösszeg) osztva a csoportokon belülivel.",
+      "beispiel": "Három tanítási módszer: közöttük 6,0, belül 2,0. F = 3,0.",
+      "vorsicht": "A szignifikáns F azt jelenti: legalább két átlag különbözik. Hogy melyek, azt csak a páronkénti összehasonlítások mutatják.",
+      "fachwoerter": "átlagos négyzetösszeg (a négyzetes eltérések összege osztva a szabadságfokkal, a szóródás egyik mértéke), nullhipotézis (a „nincs különbség” feltevés, amelyet a próba vizsgál)."
+    },
+    "schrittweise-regression": {
+      "titel": "Lépésenkénti regresszió (automatikus kiválasztás)",
+      "kurz": "Hogyan választ egy program magától prediktorokat? A lépésenkénti regresszió statisztikai kritérium alapján, például a p-érték szerint ad hozzá vagy hagy el prediktorokat. Gyakran idézik: belépés ,05-nél, kilépés ,10-nél.",
+      "beispiel": "A lakbér 20 lehetséges prediktorából négy marad.",
+      "vorsicht": "A választás nem ismer sem elméletet, sem okokat, és ezektől az adatoktól függ. Hogy a prediktoroknak van-e értelme, vagy okok-e, nyitva marad."
+    },
+    "extrapolation": {
+      "titel": "Extrapoláció (előrejelzés az adatokon kívül)",
+      "kurz": "Érvényes-e az előrejelzés messze a megfigyelt értékeken kívül? Az ottani előrejelzés az extrapoláció. Nem túl megbízható: az előrejelzés konfidenciaintervalluma szélesedik, minél távolabb van az x az x átlagától, és az egyenesnek ott nem kell érvényesnek lennie.",
+      "beispiel": "Növények mérve az 1-8. héten, hetente 5 cm. A 80. hét 400 cm-t adna.",
+      "vorsicht": "A magas R² ezen nem változtat."
+    },
+    "zusammenhang-ursache": {
+      "titel": "Összefüggés és ok (korreláció, kauzalitás)",
+      "kurz": "Azt mutatja-e egy összefüggés, hogy az egyik dolog okozza a másikat? Önmagában nem. A B azt mutatja: átlagosan több x több vagy kevesebb y-nal jár, a modell többi prediktorának azonos értékei mellett. Ez asszociáció. Az okság nem következik belőle; közös ok is előidézheti mindkettőt.",
+      "beispiel": "Több fagylalteladás, több leégés: mindkettő a napfényt követi.",
+      "vorsicht": "A területekre vonatkozó adatok a területek közötti összefüggést mutatják, nem az ottani egyes személyekét."
+    },
+    "lineares-modell": {
+      "titel": "Lineáris modell (a paraméterekben lineáris)",
+      "kurz": "Csak egyeneseket írhat le a lineáris regresszió? Nem. A „lineáris” a paraméterekre (a B-kre) vonatkozik: minden B csak megszoroz egy prediktort, minden összeadódik. Négyzetes taggal (x és x² prediktorként) a modell görbét illeszt.",
+      "beispiel": "Hozam = 2 + 3x - 0,2x²: görbe, de lineáris modell.",
+      "vorsicht": "Az x² csak egy további prediktor. A próbája (Sig.) mutatja, hogy kell-e, mert az R² minden hozzáadással nő."
+    },
+    "scheinregression": {
+      "titel": "Látszatregresszió (trend idősorokban)",
+      "kurz": "Valódi összefüggést mutat-e a magas R² két idősor között? Nem feltétlenül. Ha mindkettő nő az idővel (trend), az eredmény látszatregresszió. Figyelmeztető jelek: nagyon magas R² és hasonló reziduumok (autokorreláció), Durbin-Watson 0 közelében.",
+      "beispiel": "A kerékpárok az A városban és a B ország kávéimportja évente nő: R² = ,95.",
+      "vorsicht": "Az évről évre történő változásokkal az R² egyértelműen csökken, ha csak trend volt.",
+      "fachwoerter": "Durbin-Watson (az autokorreláció mérőszáma: 2 közelében nincs, 0 közelében pozitív, 4 közelében negatív)."
+    },
+    "prognoseguete": {
+      "titel": "Előrejelzési pontosság (MAE, MAPE, MASE)",
+      "kurz": "Mennyire talál az előrejelzés? MAE: átlagos abszolút hiba. MAPE: átlagos százalékos hiba, a megfigyelt értékkel oszt, nullánál végtelen. MASE: az illesztési időszak naiv előrejelzésének (utolsó érték) hibájával oszt. 1 alatt jobb, 1 fölött rosszabb annál.",
+      "beispiel": "MASE 0,8: a naiv hiba 80%-a.",
+      "vorsicht": "Nullákat tartalmazó ritka számoknál a MAPE használhatatlan."
+    },
+    "preisindex": {
+      "titel": "Árindex (Laspeyres, bázishatás)",
+      "kurz": "Mennyivel drágább lett ugyanaz a bevásárlás? A Laspeyres-index az alapidőszak mennyiségeit rögzíti, így csak az árak változnak. Bázishatás: az egy évvel korábbihoz képest a változás csökkenhet, noha az index nő, ha egy éve még jobban nőtt.",
+      "beispiel": "10 vekni, 20 l tej. Alap: 2 és 1, érték 40. Most 2,4 és 1,2: érték 48. Index 1,20.",
+      "vorsicht": "A rögzített mennyiségek nem fogják meg, hogy a vásárlók olcsóbb árukra váltanak."
+    },
+    "anscombe-quartett": {
+      "titel": "Anscombe-kvartett (azonos számok, eltérő adatok)",
+      "kurz": "Elég egyetlen szám az adatok leírására? Nem. Az Anscombe-kvartett: négy adathalmaz majdnem azonos r-rel, átlagokkal és egyenessel, de eltérő pontfelhőkkel (egyenes, ív, kiugró érték, egy pont mindent eldönt). Ezért nézd meg a pontdiagramot.",
+      "beispiel": "Az r = ,80 illik egy egyenes körüli felhőre és egy görbén lévő pontokra is.",
+      "vorsicht": "Az r csak az egyenes vonalú részt méri. Egyetlen pont élesen csökkentheti az r-t: ellenőrizd, ne töröld."
+    },
+    "kovarianz": {
+      "titel": "Kovariancia (és az r korreláció)",
+      "kurz": "Mennyire erősen nő vagy csökken együtt két érték? A kovariancia ezt standardizálatlanul méri, ezért az értéke a skálától függ. Az r korreláció a kovariancia osztva a szórások szorzatával, és nem változik, ha az egységek változnak.",
+      "beispiel": "Magasság és testsúly: kovariancia 60 cm-es magassággal, 0,6 méterben. Az r ugyanaz.",
+      "vorsicht": "A 0 kovariancia csak azt jelenti: nincs egyenes vonalú összefüggés, nem azt, hogy függetlenek.",
+      "fachwoerter": "szórás (az értékek átlagtól mért tipikus távolsága)."
+    },
+    "punktbiseriale-korrelation": {
+      "titel": "Pont-biszeriális korreláció (csoport és mérés)",
+      "kurz": "Összefügg-e egy csoport (0/1) egy méréssel? A pont-biszeriális korreláció egy 0/1-es változó Pearson-korrelációja egy számmal. A próbája a független mintás t-próba (egyenlő varianciák): ugyanaz a p, ugyanaz a t nagysága.",
+      "beispiel": "A = 0, B = 1, r = +,30: a B átlagosan magasabb értékeket ér el. Felcserélve: −,30.",
+      "vorsicht": "Az előjel a kódolást követi. A biszeriális korreláció más."
+    },
+    "fisher-z": {
+      "titel": "Fisher-féle Z (Fisher-féle Z-transzformáció)",
+      "kurz": "Miért ferde az intervallum az r körül? Az r legfeljebb 1 lehet, így magas r-nél kevesebb a hely fölötte. A Fisher-féle Z az r eloszlását nagyjából normálissá teszi. Az intervallumot Z-ben építik fel, és visszaváltják, ezért aszimmetrikus.",
+      "beispiel": "r = ,90, n = 30: az intervallum kb. ,80-tól ,95-ig.",
+      "vorsicht": "Az intervallum soha nem a valódi érték valószínűsége. A Fisher-féle Z nem z-standardizálás."
+    },
+    "fehlerarten": {
+      "titel": "Elsőfajú és másodfajú hiba (α, β)",
+      "kurz": "Tévedhet egy próba? Igen, kétféleképpen. Elsőfajú hiba: nincs különbség, mégis „szignifikáns”. Másodfajú hiba: van különbség, de elmarad a felismerése. Az α szint (gyakran ,05) az első hiba aránya, ha nincs semmi.",
+      "beispiel": "200 próba valódi különbség nélkül, α = ,05: kb. 10 tévesen szignifikáns.",
+      "vorsicht": "Az α nem mondja meg, hogy egy egyedi eredmény téves-e. A másodfajú hiba valószínűsége β = 1 mínusz az erő.",
+      "fachwoerter": "erő (annak esélye, hogy megtalálunk egy létező különbséget), szint (az előre választott határ a p-hez)."
+    },
+    "einseitig-zweiseitig": {
+      "titel": "Egyoldalas és kétoldalas próba",
+      "kurz": "Egy irány számít, vagy mindkettő? A kétoldalas azt kérdezi: van-e különbség, bármelyik irányban? Az egyoldalas csak azt kérdezi: nagyobb-e A, mint B? Ugyanazok az adatok lehetnek egyoldalasan szignifikánsak, kétoldalasan nem. Kétség esetén kétoldalasan próbálj.",
+      "beispiel": "Új tanítási módszer: kétoldalas p = ,08, egyoldalas p = ,04.",
+      "vorsicht": "Az irányt az adatok megnézése előtt kell rögzíteni. Ha utólag választják, új információ nélkül megfelezi a p-t."
+    },
+    "mehrfaches-testen": {
+      "titel": "Többszörös tesztelés (α-inflálódás, Bonferroni)",
+      "kurz": "Milyen gyakran téveszt meg a véletlen sok próbánál? A ,05-ös szinten minden próba az esetek 5%-ában ad téves riasztást, ha nincs semmi valódi. m független próbánál legalább egy esélye 1 - ,95 az m-edik hatványon (α-inflálódás). A Bonferroni a szintet m-mel osztja.",
+      "beispiel": "10 próba, semmi valódi: kb. 40% esély egy találatra.",
+      "vorsicht": "Kb. m-szer ,05 véletlen találat várható. A keresgélés csak hipotéziseket ad."
+    },
+    "effekt-ueberschaetzung": {
+      "titel": "Túlbecsült hatások (a győztes átka)",
+      "kurz": "Akkora-e egy szignifikáns hatás, mint amekkorát mértek? Gyakran nem. Ha csak a szignifikáns eredmények számítanak, a becslések felfelé torzítanak: egy kis vizsgálat csak szerencsésen nagy becsléssel lesz szignifikáns. Ez a győztes átka (winner's curse).",
+      "beispiel": "A valódi különbség közepes. A sok kis vizsgálatból csak a szignifikánsak jelennek meg; az átlaguk fölötte van.",
+      "vorsicht": "Minél kisebb a vizsgálat, annál erősebb a torzítás. A replikációk ezért gyakran kisebb hatásokat találnak, nem feltétlenül nullát.",
+      "fachwoerter": "szignifikáns (a p-érték a választott határ alatt van, általában ,05)."
+    },
+    "falsch-positive-befunde": {
+      "titel": "Álpozitív eredmények (elsőfajú hiba, kutatói szabadságfokok)",
+      "kurz": "Hány szignifikáns eredmény téves riasztás? Ez a szinttől, az erőtől és a valódi hatások arányától függ. Alacsony erőnél nő a téves arány. Több téves riasztás keletkezik akkor is, ha minden új eset után vizsgálnak, és szignifikanciánál abbahagyják, vagy sok elemzési utat kipróbálnak, és csak a sikeresről számolnak be (kutatói szabadságfokok).",
+      "beispiel": "1000 hatást vizsgálnak, 100 valódi, erő ,5, szint ,05: 50 igaz és 45 téves találat.",
+      "vorsicht": "A ,05-ös szint csak előre tervezett mintára és elemzésre érvényes. Az arány megtévesztési szándék nélkül is nő.",
+      "fachwoerter": "erő (annak esélye, hogy megtalálunk egy valódi hatást), szint (az előre rögzített határ a p-hez), szignifikáns (a p ez alatt a határ alatt van)."
+    },
+    "fehlerbalken": {
+      "titel": "Hibasávok (standard hiba, konfidenciaintervallum)",
+      "kurz": "Mit mutatnak a sávok az átlagoknál? Ez nincs rögzítve: szórás (az egyes értékek szóródása), standard hiba (az átlag pontossága) vagy konfidenciaintervallum. A „± szám” nem árulja el. Egy standard hiba mindkét oldalra nagyjából fele olyan széles, mint a 95%-os intervallum, és kb. 68%-nak felel meg.",
+      "beispiel": "Átfedő 95%-os intervallumok, mégis p = ,04.",
+      "vorsicht": "Az átfedés nem dönt; a különbség próbája dönt. Ha a 95%-os intervallumoknak nincs közös szakaszuk, a független csoportok a ,05-ös szinten szignifikánsan különböznek. Páros méréseknél a személyenkénti különbségek intervalluma számít, nem a két átlag intervalluma."
+    },
+    "levene-test": {
+      "titel": "Levene-próba (egyenlő szóródás)",
+      "kurz": "Egyformán szóródnak a csoportok? (Levene-próba) Azt ellenőrzi, hogy a variancia, az értékek szóródása, egyforma-e a csoportokban. A kis p egyenlőtlen szóródásra utal.",
+      "beispiel": "Két 8 fős csoport, Levene p = ,40: nincs jele egyenlőtlen szóródásnak.",
+      "vorsicht": "A nem szignifikáns nem jelenti, hogy a szóródás egyenlő. Kis csoportoknál a próba rosszul mutatja ki a különbségeket. Az egyenlőséget nem bizonyítja."
+    },
+    "gepoolter-t-test": {
+      "titel": "Összevont szóródás vagy Welch-próba (egyenlő szóródást feltételezünk?)",
+      "kurz": "Egyformán szóródik mindkét csoport? Az összevont (pooled) szóródású t-próba ezt feltételezi. A Welch-próba nem vonja össze, és módosítja a szabadságfokot. Két csoportnál a varianciaanalízis F-je a t négyzete, ugyanazzal a p-vel.",
+      "beispiel": "10 személy 8-as szóródással, 40 személy 3-assal: az összevonás főleg a nagy, kis szóródású csoportot tükrözi.",
+      "vorsicht": "Ha a kisebb csoport jobban szóródik, az összevont próba túl gyakran mutat szignifikanciát. A Welch ezt korrigálja.",
+      "fachwoerter": "szabadságfok (egy szám, amely rögzíti a t viszonyítási eloszlását)."
+    },
+    "zentraler-grenzwertsatz": {
+      "titel": "Centrális határeloszlás-tétel",
+      "kurz": "Normális eloszlásúnak kell lenniük az értékeknek? Nem mindig. A centrális határeloszlás-tétel azt mondja: sok megfigyelés átlagai nagyjából normálisak, még ha az egyes értékek ferdék is. Az átlagokra érvényes, nem az egyes értékekre.",
+      "beispiel": "A jövedelmek ferdék. Egyenként 200 személy átlagai majdnem szimmetrikusan helyezkednek el.",
+      "vorsicht": "Hogy hány elég, az az alakon múlik: erősen ferde értékeknél a 10 nem elég. Nagy csoportoknál a t-próbák általában használhatók normális eloszlású értékek nélkül."
+    },
+    "pseudoreplikation": {
+      "titel": "Pszeudoreplikáció (összefüggő mérések)",
+      "kurz": "Minden érték külön információnak számít? Nem, ha az értékek összetartoznak. Pszeudoreplikáció: az összefüggő értékeket függetlenként kezelik, például egy személy ismételt méréseit vagy egy osztály gyerekeit. A standard hiba túl kicsi lesz; a szignifikancia túl gyakran jelenik meg.",
+      "beispiel": "20 növény, mindegyiken 5 levelet mérnek: ez 20 független egység, nem 100.",
+      "vorsicht": "A több sor nem több információ. Orvosság: egységenként egy átlag, vagy a csoportosítást figyelembe vevő modell.",
+      "fachwoerter": "standard hiba (mennyire ingadozik tipikusan egy becslés), szignifikáns (a p-érték a választott határ alatt van, általában ,05)."
+    },
+    "simpson-paradox": {
+      "titel": "Simpson-paradoxon (csoportok összevonása)",
+      "kurz": "Megfordulhat egy összefüggés, ha összevonjuk a csoportokat? Igen. Az összkép elfedheti vagy megfordíthatja azt, amit minden csoport mutat (Simpson-paradoxon, az r korrelációnál is). Oka: a csoportok különböznek a jellemzőikben vagy az összetételükben.",
+      "beispiel": "Az A enyhe és súlyos esetekben is jobban segít, mint a B. De az A szinte csak súlyos esetekhez jut. Összességében az A rosszabbnak látszik.",
+      "vorsicht": "Az összeg ekkor nem olvasható le közvetlenül. Hogy melyik nézet érvényes, a helyzettől függ."
+    },
+    "erwartete-haeufigkeit": {
+      "titel": "Várható gyakoriság (khí-négyzet, kereszttábla)",
+      "kurz": "Hány esetet várnánk cellánként, ha a változók nem függnének össze? Sorösszeg szorozva az oszlopösszeggel, osztva a végösszeggel. A khí-négyzet-próba ezeket a megfigyelt gyakoriságokkal hasonlítja össze. Hogy melyik cella tűnik ki, azt csak a cellánkénti összehasonlítás mutatja.",
+      "beispiel": "Sor 60, oszlop 50, végösszeg 200: várható 60 · 50 / 200 = 15.",
+      "vorsicht": "Gyakran idézik: mind legalább 5, ez szokás. Kisebb értékeknél 2x2-es táblázatban használd a Fisher-féle egzakt próbát.",
+      "fachwoerter": "kereszttábla (két változó táblázata), standardizált reziduum (a megfigyelt és a várható közötti eltérés, összehasonlíthatóvá skálázva)."
+    },
+    "zeilenprozent": {
+      "titel": "Sorszázalék (arány a soron belül)",
+      "kurz": "Mekkora az arány egy csoporton belül? Kereszttáblában a sorszázalék a cella száma osztva a sorösszeggel, szorozva 100-zal. A sorösszeg a viszonyítási alap. A „Az A-k hány százalékának van B?” kérdés az A összegét veszi alapul. Az oszlopszázalék az oszlopösszeget használja.",
+      "beispiel": "80 kutyatulajdonos, közülük 20-nak macskája is van: 20 / 80 = 25%.",
+      "vorsicht": "A sorszázalék és az oszlopszázalék különböző számok. Kérdezd meg előbb: minek az aránya?",
+      "fachwoerter": "kereszttábla (két változó táblázata)."
+    },
+    "likelihood-ratio": {
+      "titel": "Likelihood-arány (LR)",
+      "kurz": "Mennyire változtatja meg egy vizsgálati eredmény a becslést? A pozitív LR a szenzitivitás osztva (1 mínusz specificitás): ennyiszer gyakoribb a pozitív eredmény a betegeknél, mint az egészségeseknél. 1 fölött a betegség mellett szól. A teszt utáni esély (odds) = a teszt előtti esély (odds) szorozva LR-rel.",
+      "beispiel": "Teszt előtt ,20, tehát az odds ,25. A 4-es LR 1-es oddsot ad, ami ,50.",
+      "vorsicht": "Az LR nem valószínűség. Vissza p-be: odds osztva (1 plusz odds).",
+      "fachwoerter": "szenzitivitás (a betegek azon aránya, akiket a teszt kimutat), specificitás (az egészségesek azon aránya, akiket a teszt helyesen egészségesnek mond), esély (odds: p osztva 1 mínusz p)."
+    },
+    "regelkarte": {
+      "titel": "Szabályozókártya (Shewhart, CUSUM, EWMA)",
+      "kurz": "Megváltozott a folyamat? A szabályozókártya a csoportátlagokat sorrendben ábrázolja, középvonallal és határokkal, gyakran ±3 standard hibával. A határon kívüli pont jel: valószínűleg több hat, mint a véletlen. Az 1. fázis a határokat múltbeli adatokból becsüli, a 2. fázis utána folyamatosan figyel. A CUSUM és az EWMA több csoportot von össze, és a kis, tartós eltolódásokat hamarabb találja meg.",
+      "beispiel": "Stabil: kb. 3 pont 1000-ből kívül esik. Rövid időn belül több pont egyértelmű jel.",
+      "vorsicht": "Ha egy stabil folyamat a határokon belül marad, az ingadozás véletlen: a beavatkozás ilyenkor növeli a szóródást. Kevés csoportból származó határok pontatlanok.",
+      "fachwoerter": "standard hiba (a csoportátlagok szóródása), stabil (az eloszlás az idővel nem változik)."
+    },
+    "prozessfaehigkeit": {
+      "titel": "Folyamatképesség (Cp, Cpk)",
+      "kurz": "Megfelel a folyamat az előírásnak? A Cp a megengedett tartományt a szóródással veti össze, és figyelmen kívül hagyja az átlag helyzetét. A Cpk az átlagnak a közelebbi határtól mért távolságát méri, legfeljebb akkora, mint a Cp. Mindkettő stabil, normális eloszlású folyamatot feltételez.",
+      "beispiel": "Cp = 1, középre állítva: kb. 0,27% kívül esik; eltolva több.",
+      "vorsicht": "A Cp = 1 csak azt jelenti: nem kevesebb, mint 0,27% esik kívül. Szabályozókártya-jelzések esetén a mutató keveset mond; azokat előbb tisztázd."
+    },
+    "messsystem": {
+      "titel": "Mérőrendszer (ismételhetőség, reprodukálhatóság)",
+      "kurz": "A szóródás mekkora része származik magából a mérésből? Ismételhetőség: a készülék szóródása ugyanazon az egységen, ugyanazzal a kezelővel, ugyanabban a beállításban. Reprodukálhatóság: szóródás a kezelők, beállítások vagy időszakok között. Az összes szóródás folyamatra és mérőrendszerre oszlik. Mérési arány = 1 mínusz folyamatarány. A jel-zaj arány megmutatja, mennyire jól lehet megkülönböztetni a darabokat: gyakran idézik, 5 vagy több jó, 2 alatt használhatatlan.",
+      "beispiel": "A folyamat a szóródás 80%-a: a mérőrendszer 20%.",
+      "vorsicht": "A szerzők másképp osztják ki a fogalmakat, ezért meg kell adni a használt meghatározást. A határok megállapodások."
+    },
+    "versuchsplanung": {
+      "titel": "Kísérlettervezés (kölcsönhatás, központi pont)",
+      "kurz": "Hogyan tervezzünk sokat mutató kísérleteket? Kölcsönhatás: az egyik faktor hatása egy másik szintjétől függ. Egyszerre egy faktor változtatásával nem becsülhető; az összes kombináció megtalálja. Egy ismételt központi pont a görbületet mutatja, és a szóródást becsüli.",
+      "beispiel": "A trágya erősen hat napfényben, alig árnyékban.",
+      "vorsicht": "Az egyik szinten kapott eredmény nem érvényes automatikusan mindenre. Görbületnél a két szint nem elég; a terv bővíthető.",
+      "fachwoerter": "faktor (olyan mennyiség, amelyet szándékosan állítunk be), szint (egy beállított értéke), folytonos (minden köztes érték lehetséges)."
+    }
+  },
+  "meldung": [
+    {
+      "id": "engine-absturz",
+      "art": "absturz",
+      "muster": "^Statable: PSPP crashed",
+      "original": "Statable: PSPP crashed and was restarted. RuntimeError: Aborted(Assertion failed: proc.n_cells < CRS_N_CELLS, at: ../../pspp-2.1.1/src/language/commands/crosstabs.c,494,cmd_crosstabs)",
+      "titel": "A statisztikai program összeomlott",
+      "text": {
+        "du": "Ezt a PSPP okozza, nem az adataid. A Statable újraindította, és újra betöltötte az adatokat a számítás előtti állapotban.",
+        "sie": "Ezt a PSPP okozza, nem az adataid. A Statable újraindította, és újra betöltötte az adatokat a számítás előtti állapotban."
+      },
+      "tun": {
+        "du": "Számolj újra kevesebb beállítással. Ha beállítottál WEIGHT, FILTER vagy SPLIT FILE parancsot, add meg újra.",
+        "sie": "Számolj újra kevesebb beállítással. Ha beállítottál WEIGHT, FILTER vagy SPLIT FILE parancsot, add meg újra."
+      }
+    },
+    {
+      "id": "nonpar-corr-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "NONPAR CORR is not yet implemented",
+      "original": "NONPAR CORR: NONPAR CORR is not yet implemented.",
+      "titel": "A motor nem tudja futtatni ezt a parancsot",
+      "text": {
+        "du": "A PSPP nem tudja kiszámolni a NONPAR CORR-t (Spearman, Kendall).",
+        "sie": "A PSPP nem tudja kiszámolni a NONPAR CORR-t (Spearman, Kendall)."
+      },
+      "tun": {
+        "du": "A Statable kiszámolja az „Összefügg két dolog?” kérdésben. Az adataid nem változtak.",
+        "sie": "A Statable kiszámolja az „Összefügg két dolog?” kérdésben. Az adataid nem változtak."
+      }
+    },
+    {
+      "id": "glm-with-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "GLM: [^\\n]*\\n[^\\n]*\\|[^\\n]*\\b[Ww][Ii][Tt][Hh]\\b",
+      "original": "GLM: Syntax error expecting MISSING, INTERCEPT, CRITERIA, METHOD, or DESIGN.\n   1 | GLM y BY g WITH x /DESIGN=x g.",
+      "titel": "A motor nem tudja futtatni ezt a parancsot",
+      "text": {
+        "du": "A PSPP nem tudja kiszámolni a GLM-et WITH-tel (kovarianciaanalízis).",
+        "sie": "A PSPP nem tudja kiszámolni a GLM-et WITH-tel (kovarianciaanalízis)."
+      },
+      "tun": {
+        "du": "A Statable kiszámolja az „Eltérnek a csoportok?” kérdésben, a „További beállítások” alatt egy kontrollváltozóval. Az adataid nem változtak.",
+        "sie": "A Statable kiszámolja az „Eltérnek a csoportok?” kérdésben, a „További beállítások” alatt egy kontrollváltozóval. Az adataid nem változtak."
+      }
+    },
+    {
+      "id": "befehl-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "Unknown command `([^']+)'",
+      "original": "Unknown command `FREQENCIES'.",
+      "titel": "A Statable nem ismeri ezt a parancsot",
+      "text": {
+        "du": "A(z) „{1}” nem ismert parancs.",
+        "sie": "A(z) „{1}” nem ismert parancs."
+      },
+      "tun": {
+        "du": "Ellenőrizd a helyesírást. Hasonló: {vorschlag}.",
+        "sie": "Ellenőrizd a helyesírást. Hasonló: {vorschlag}."
+      }
+    },
+    {
+      "id": "spalte-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "(\\S+) is not a variable name",
+      "original": "DESCRIPTIVES: konzentration is not a variable name.",
+      "titel": "Nincs ilyen oszlop",
+      "text": {
+        "du": "Az adataidban nincs „{1}” nevű oszlop.",
+        "sie": "Az adataidban nincs „{1}” nevű oszlop."
+      },
+      "tun": {
+        "du": "Egy hasonló: {vorschlag}. Az összes nevet az „Oszlopok” alatt találod.",
+        "sie": "Egy hasonló: {vorschlag}. Az összes nevet az „Oszlopok” alatt találod."
+      }
+    },
+    {
+      "id": "text-statt-zahl",
+      "art": "hinweis",
+      "muster": "(\\S+) is not a numeric variable\\.\\s+It will not be included",
+      "original": "DESCRIPTIVES: geschlecht is not a numeric variable.  It will not be included in the variable list.",
+      "titel": "Egy oszlop kimaradt",
+      "text": {
+        "du": "A(z) „{1}” csoportokat vagy szöveget tartalmaz, nem számokat. Ezért a Statable itt kihagyta. A többit kiszámolta.",
+        "sie": "A(z) „{1}” csoportokat vagy szöveget tartalmaz, nem számokat. Ezért a Statable itt kihagyta. A többit kiszámolta."
+      },
+      "tun": {
+        "du": "Csoportokhoz a gyakoriságok vagy a csoportok összehasonlítása illik.",
+        "sie": "Csoportokhoz a gyakoriságok vagy a csoportok összehasonlítása illik."
+      }
+    },
+    {
+      "id": "gruppen-fehlen",
+      "art": "nicht-verstanden",
+      "muster": "When applying GROUPS to a string variable, two values must be specified",
+      "original": "T-TEST: When applying GROUPS to a string variable, two values must be specified.",
+      "titel": "Melyik két csoport?",
+      "text": {
+        "du": "Az összehasonlításhoz hiányzik a két csoport neve.",
+        "sie": "Az összehasonlításhoz hiányzik a két csoport neve."
+      },
+      "tun": {
+        "du": "Írd őket zárójelbe utána, például telefon('igen' 'nem').",
+        "sie": "Írd őket zárójelbe utána, például telefon('igen' 'nem')."
+      }
+    },
+    {
+      "id": "wert-zu-lang",
+      "art": "nicht-verstanden",
+      "muster": "This (\\d+)-byte string is too long for variable (\\S+) with width (\\d+)",
+      "original": "T-TEST: This 10-byte string is too long for variable handy with width 4.",
+      "titel": "Ez az érték nem fordulhat elő az oszlopban",
+      "text": {
+        "du": "Az érték hosszabb, mint amennyi hely a(z) „{2}” oszlopban van. Ilyen érték ott nem fordul elő.",
+        "sie": "Az érték hosszabb, mint amennyi hely a(z) „{2}” oszlopban van. Ilyen érték ott nem fordul elő."
+      },
+      "tun": {
+        "du": "Az „Oszlopok” alatt ellenőrizheted, mely értékek vannak a(z) „{2}” oszlopban.",
+        "sie": "Az „Oszlopok” alatt ellenőrizheted, mely értékek vannak a(z) „{2}” oszlopban."
+      }
+    },
+    {
+      "id": "anfuehrung-offen",
+      "art": "nicht-verstanden",
+      "muster": "Unterminated string constant",
+      "original": "VARIABLE LABELS: Unterminated string constant.",
+      "titel": "Egy idézőjel még nyitva van",
+      "text": {
+        "du": "Egy szöveg ' jellel kezdődött, de nem fejeződött be.",
+        "sie": "Egy szöveg ' jellel kezdődött, de nem fejeződött be."
+      },
+      "tun": {
+        "du": "Tegyél még egy ' jelet a szöveg végére.",
+        "sie": "Tegyél még egy ' jelet a szöveg végére."
+      }
+    },
+    {
+      "id": "text-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting string",
+      "original": "VARIABLE LABELS: Syntax error expecting string.",
+      "titel": "Itt hiányzik egy szöveg",
+      "text": {
+        "du": "Ezen a helyen a parancs idézőjelek közötti szöveget vár.",
+        "sie": "Ezen a helyen a parancs idézőjelek közötti szöveget vár."
+      },
+      "tun": {
+        "du": "A szövegek idézőjelben állnak, például 'igen'. Címke: VARIABLE LABELS konc 'Koncentráció'. Csoportok szövegből: T-TEST GROUPS=csoport('A' 'B').",
+        "sie": "A szövegek idézőjelben állnak, például 'igen'. Címke: VARIABLE LABELS konc 'Koncentráció'. Csoportok szövegből: T-TEST GROUPS=csoport('A' 'B')."
+      }
+    },
+    {
+      "id": "funktion-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "No function or vector named (\\S+)",
+      "original": "COMPUTE: No function or vector named wurzel.",
+      "titel": "Ez a függvény nem létezik",
+      "text": {
+        "du": "A(z) „{1}” nem ismert függvény.",
+        "sie": "A(z) „{1}” nem ismert függvény."
+      },
+      "tun": {
+        "du": "A függvények angol nevűek, például SQRT a négyzetgyökhöz, MEAN az átlaghoz.",
+        "sie": "A függvények angol nevűek, például SQRT a négyzetgyökhöz, MEAN az átlaghoz."
+      }
+    },
+    {
+      "id": "rechnen-mit-text",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must be numeric",
+      "original": "COMPUTE: Both operands of + must be numeric.",
+      "titel": "Szöveggel nem lehet számolni",
+      "text": {
+        "du": "A(z) „{1}” egyik oldalán szöveges oszlop áll.",
+        "sie": "A(z) „{1}” egyik oldalán szöveges oszlop áll."
+      },
+      "tun": {
+        "du": "A csoportokat számokká alakíthatod az „Oszlopok” alatt - új oszlopként, az eredeti megmarad.",
+        "sie": "A csoportokat számokká alakíthatod az „Oszlopok” alatt - új oszlopként, az eredeti megmarad."
+      }
+    },
+    {
+      "id": "text-mit-zahl-vergleichen",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must have the same type",
+      "original": "SELECT IF: Both operands of = must have the same type.",
+      "titel": "Szöveget hasonlítasz össze számmal",
+      "text": {
+        "du": "Az oszlop szöveget tartalmaz, de számmal hasonlítják össze.",
+        "sie": "Az oszlop szöveget tartalmaz, de számmal hasonlítják össze."
+      },
+      "tun": {
+        "du": "Tedd az értéket idézőjelek közé, például nem = 'nő'.",
+        "sie": "Tedd az értéket idézőjelek közé, például nem = 'nő'."
+      }
+    },
+    {
+      "id": "spalte-gibt-es-schon",
+      "art": "nicht-verstanden",
+      "muster": "There is already a variable named (\\S+)",
+      "original": "NUMERIC: There is already a variable named konz2.",
+      "titel": "Ez a név már foglalt",
+      "text": {
+        "du": "Már van „{1}” nevű oszlop. A Statable semmit sem ír felül.",
+        "sie": "Már van „{1}” nevű oszlop. A Statable semmit sem ír felül."
+      },
+      "tun": {
+        "du": "Válassz másik nevet, például {1}_uj.",
+        "sie": "Válassz másik nevet, például {1}_uj."
+      }
+    },
+    {
+      "id": "umbenennen-doppelt",
+      "art": "nicht-verstanden",
+      "muster": "Renaming would duplicate variable name (\\S+)",
+      "original": "RENAME VARIABLES: Renaming would duplicate variable name nr.",
+      "titel": "Ez a név már foglalt",
+      "text": {
+        "du": "Az átnevezés után két oszlop viselné a(z) „{1}” nevet.",
+        "sie": "Az átnevezés után két oszlop viselné a(z) „{1}” nevet."
+      },
+      "tun": {
+        "du": "Válassz olyan nevet, amely még nem létezik.",
+        "sie": "Válassz olyan nevet, amely még nem létezik."
+      }
+    },
+    {
+      "id": "datei-nicht-gefunden",
+      "art": "datei",
+      "muster": "An error occurred while opening `([^']+)': No such file",
+      "original": "An error occurred while opening `/gibt-es-nicht.sav': No such file or directory.",
+      "titel": "A fájl nem található",
+      "text": {
+        "du": "A(z) „{datei}” már nincs azon a helyen, ahol volt.",
+        "sie": "A(z) „{datei}” már nincs azon a helyen, ahol volt."
+      },
+      "tun": {
+        "du": "Nyisd meg újra a „Fájl megnyitása” gombbal.",
+        "sie": "Nyisd meg újra a „Fájl megnyitása” gombbal."
+      }
+    },
+    {
+      "id": "datendatei-nicht-gefunden",
+      "art": "datei",
+      "muster": "Could not open `([^']+)' for reading as a data file",
+      "original": "Could not open `/fehlt.csv' for reading as a data file: No such file or directory.",
+      "titel": "A fájl nem található",
+      "text": {
+        "du": "A(z) „{datei}” fájlt nem lehetett megnyitni.",
+        "sie": "A(z) „{datei}” fájlt nem lehetett megnyitni."
+      },
+      "tun": {
+        "du": "Nyisd meg újra a „Fájl megnyitása” gombbal.",
+        "sie": "Nyisd meg újra a „Fájl megnyitása” gombbal."
+      }
+    },
+    {
+      "id": "keine-spss-datei",
+      "art": "datei",
+      "muster": "`([^']+)' is not a system or portable file",
+      "original": "GET: `/kaputt.sav' is not a system or portable file.",
+      "titel": "Ez a fájl nem olvasható",
+      "text": {
+        "du": "A(z) „{datei}” .sav végződésű, de belül nem SPSS-fájl. A többi adatod érintetlen.",
+        "sie": "A(z) „{datei}” .sav végződésű, de belül nem SPSS-fájl. A többi adatod érintetlen."
+      },
+      "tun": {
+        "du": "Talán Excel- vagy CSV-fájl? Akkor mentsd el újra .sav, .xlsx vagy .csv formátumban a programodban.",
+        "sie": "Talán Excel- vagy CSV-fájl? Akkor mentsd el újra .sav, .xlsx vagy .csv formátumban a programodban."
+      }
+    },
+    {
+      "id": "speichern-unmoeglich",
+      "art": "datei",
+      "muster": "Error opening `([^']+)' for writing",
+      "original": "Error opening `/gibt/es/nicht/x.sav' for writing as a system file: No such file or directory.",
+      "titel": "A fájlt nem lehetett menteni",
+      "text": {
+        "du": "A Statable nem tud írni a kiválasztott helyre. Az adataid nem vesznek el - még nyitva vannak itt.",
+        "sie": "A Statable nem tud írni a kiválasztott helyre. Az adataid nem vesznek el - még nyitva vannak itt."
+      },
+      "tun": {
+        "du": "Válassz másik mappát, például a „Letöltések” mappát.",
+        "sie": "Válassz másik mappát, például a „Letöltések” mappát."
+      }
+    },
+    {
+      "id": "name-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting identifier",
+      "original": "COMPUTE: Syntax error expecting identifier.",
+      "titel": "Itt hiányzik egy név",
+      "text": {
+        "du": "Ezen a helyen a parancs nevet vár. A nevek betűvel kezdődnek.",
+        "sie": "Ezen a helyen a parancs nevet vár. A nevek betűvel kezdődnek."
+      },
+      "tun": {
+        "du": "Példa: uj1 az 1uj helyett.",
+        "sie": "Példa: uj1 az 1uj helyett."
+      }
+    },
+    {
+      "id": "by-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `BY'",
+      "original": "CROSSTABS: Syntax error expecting `BY'.",
+      "titel": "Itt hiányzik a BY szó",
+      "text": {
+        "du": "A két oszlop között hiányzik a BY. Ez választja el őket, mint a „ez az oszlop a másik szerint” kifejezésben.",
+        "sie": "A két oszlop között hiányzik a BY. Ez választja el őket, mint a „ez az oszlop a másik szerint” kifejezésben."
+      },
+      "tun": {
+        "du": "CROSSTABS esetén: /TABLES=nem BY telefon. ONEWAY és GLM esetén a BY a szám és a csoport között áll: ONEWAY pont BY csoport.",
+        "sie": "CROSSTABS esetén: /TABLES=nem BY telefon. ONEWAY és GLM esetén a BY a szám és a csoport között áll: ONEWAY pont BY csoport."
+      }
+    },
+    {
+      "id": "spalte-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting variable name",
+      "original": "ONEWAY: Syntax error expecting variable name.",
+      "titel": "Itt hiányzik egy oszlop",
+      "text": {
+        "du": "Ezen a helyen a parancs egy oszlop nevét várja.",
+        "sie": "Ezen a helyen a parancs egy oszlop nevét várja."
+      },
+      "tun": {
+        "du": "Tipp: a parancsablakban a Statable gépelés közben felkínálja a megfelelő oszlopokat.",
+        "sie": "Tipp: a parancsablakban a Statable gépelés közben felkínálja a megfelelő oszlopokat."
+      }
+    },
+    {
+      "id": "klammer-auf-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\('",
+      "original": "NPAR TESTS: Syntax error expecting `('.",
+      "titel": "Itt hiányzik egy zárójel",
+      "text": {
+        "du": "Ezen a helyen hiányzik a „(”.",
+        "sie": "Ezen a helyen hiányzik a „(”."
+      },
+      "tun": {
+        "du": "Példa: /MANN-WHITNEY = konc BY telefon (0 1).",
+        "sie": "Példa: /MANN-WHITNEY = konc BY telefon (0 1)."
+      }
+    },
+    {
+      "id": "klammer-zu-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\)'",
+      "original": "COMPUTE: Syntax error expecting `)'.",
+      "titel": "Egy zárójel még nyitva van",
+      "text": {
+        "du": "Több a „(”, mint a „)”.",
+        "sie": "Több a „(”, mint a „)”."
+      },
+      "tun": {
+        "du": "Tedd a hiányzó „)” jelet a megfelelő helyre.",
+        "sie": "Tedd a hiányzó „)” jelet a megfelelő helyre."
+      }
+    },
+    {
+      "id": "gleich-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `='",
+      "original": "COMPUTE: Syntax error expecting `='.",
+      "titel": "Itt hiányzik egy egyenlőségjel",
+      "text": {
+        "du": "A parancsnak „=” jelre van szüksége a név és a számítás között.",
+        "sie": "A parancsnak „=” jelre van szüksége a név és a számítás között."
+      },
+      "tun": {
+        "du": "Példa: COMPUTE uj = konc * 2.",
+        "sie": "Példa: COMPUTE uj = konc * 2."
+      }
+    },
+    {
+      "id": "rechnung-unklar",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error parsing expression",
+      "original": "COMPUTE: Syntax error parsing expression.",
+      "titel": "A számítás hiányos",
+      "text": {
+        "du": "Az „=” után valami hiányzik, vagy egy karakter nem illik oda.",
+        "sie": "Az „=” után valami hiányzik, vagy egy karakter nem illik oda."
+      },
+      "tun": {
+        "du": "A jelölés mutatja a helyet.",
+        "sie": "A jelölés mutatja a helyet."
+      }
+    },
+    {
+      "id": "noch-keine-daten",
+      "art": "daten",
+      "muster": "is allowed only after the active dataset has been defined",
+      "original": "DESCRIPTIVES: DESCRIPTIVES is allowed only after the active dataset has been defined.",
+      "titel": "Még nincs megnyitott adat",
+      "text": {
+        "du": "A számításhoz a Statable-nek előbb adatokra van szüksége.",
+        "sie": "A számításhoz a Statable-nek előbb adatokra van szüksége."
+      },
+      "tun": {
+        "du": "Nyiss meg egy fájlt, vagy próbáld ki a példaadatokat.",
+        "sie": "Nyiss meg egy fájlt, vagy próbáld ki a példaadatokat."
+      }
+    },
+    {
+      "id": "text-in-zahlenspalte",
+      "art": "daten",
+      "muster": "Data for variable (\\S+) is not valid as format F: Field contents are not numeric",
+      "original": "Data for variable a is not valid as format F: Field contents are not numeric.",
+      "titel": "Szöveg van egy számoszlopban",
+      "text": {
+        "du": "A(z) „{1}” oszlopban egy helyen szám helyett szó áll. Az a cella üres marad; mindent más beolvastunk.",
+        "sie": "A(z) „{1}” oszlopban egy helyen szám helyett szó áll. Az a cella üres marad; mindent más beolvastunk."
+      },
+      "tun": {
+        "du": "Az adatellenőrzés megmutatja a cellát. Ha az adatokban tizedesvessző van (70,5), a DATA LIST FREE a vesszőt elválasztónak olvassa, és az értékek eltolódnak: a SET DECIMAL=COMMA. és a DATA LIST LIST(';') megoldja ezt.",
+        "sie": "Az adatellenőrzés megmutatja a cellát. Ha az adatokban tizedesvessző van (70,5), a DATA LIST FREE a vesszőt elválasztónak olvassa, és az értékek eltolódnak: a SET DECIMAL=COMMA. és a DATA LIST LIST(';') megoldja ezt."
+      }
+    },
+    {
+      "id": "beschriftung-passt-nicht",
+      "art": "daten",
+      "muster": "VALUE LABELS: Data is not valid as format F",
+      "original": "VALUE LABELS: Data is not valid as format F: Field contents are not numeric.",
+      "titel": "Ez a címke nem illik",
+      "text": {
+        "du": "Számoszlopban minden csoportcímkéhez szám kell, például 1 = 'igen'.",
+        "sie": "Számoszlopban minden csoportcímkéhez szám kell, például 1 = 'igen'."
+      },
+      "tun": {
+        "du": "A címkéket a legkönnyebben az „Oszlopok” alatt állíthatod be.",
+        "sie": "A címkéket a legkönnyebben az „Oszlopok” alatt állíthatod be."
+      }
+    },
+    {
+      "id": "keine-angabe-zu-lang",
+      "art": "hinweis",
+      "muster": "Truncating missing value to maximum acceptable length \\((\\d+) bytes\\)",
+      "original": "MISSING VALUES: Truncating missing value to maximum acceptable length (8 bytes).",
+      "titel": "A „nincs válasz” értéke le lett rövidítve",
+      "text": {
+        "du": "Az érték hosszabb a megengedettnél ({1} karakter), ezért le lett vágva.",
+        "sie": "Az érték hosszabb a megengedettnél ({1} karakter), ezért le lett vágva."
+      },
+      "tun": {
+        "du": "Az „Oszlopok” alatt ellenőrizd, hogy a „nincs válasz” még mindig helyesen van-e felismerve.",
+        "sie": "Az „Oszlopok” alatt ellenőrizd, hogy a „nincs válasz” még mindig helyesen van-e felismerve."
+      }
+    },
+    {
+      "id": "zu-viele-keine-angabe",
+      "art": "nicht-verstanden",
+      "muster": "Too many numeric missing values",
+      "original": "MISSING VALUES: Too many numeric missing values.  At most three individual values or one value and one range are allowed.",
+      "titel": "Legfeljebb három érték lehet „nincs válasz”",
+      "text": {
+        "du": "Egy oszlopnak legfeljebb három „nincs válasz” értéke lehet, vagy egy értéke és egy tartománya.",
+        "sie": "Egy oszlopnak legfeljebb három „nincs válasz” értéke lehet, vagy egy értéke és egy tartománya."
+      },
+      "tun": {
+        "du": "Példa: 96-tól 99-ig tartományként.",
+        "sie": "Példa: 96-tól 99-ig tartományként."
+      }
+    },
+    {
+      "id": "gewicht-text",
+      "art": "nicht-verstanden",
+      "muster": "The weighting variable must be numeric",
+      "original": "WEIGHT: The weighting variable must be numeric.",
+      "titel": "A súlyozás csak számokkal működik",
+      "text": {
+        "du": "A kiválasztott oszlop szöveget tartalmaz.",
+        "sie": "A kiválasztott oszlop szöveget tartalmaz."
+      },
+      "tun": {
+        "du": "Válassz számokat tartalmazó oszlopot.",
+        "sie": "Válassz számokat tartalmazó oszlopot."
+      }
+    },
+    {
+      "id": "alle-spalten-loeschen",
+      "art": "hinweis",
+      "muster": "may not be used to delete all variables",
+      "original": "DELETE VARIABLES: DELETE VARIABLES may not be used to delete all variables from the active dataset dictionary.  Use NEW FILE instead.",
+      "titel": "Az összes oszlop egyszerre nem távolítható el",
+      "text": {
+        "du": "Legalább egy oszlopnak maradnia kell. Semmi sem lett törölve.",
+        "sie": "Legalább egy oszlopnak maradnia kell. Semmi sem lett törölve."
+      },
+      "tun": {
+        "du": "Üres kezdéshez: „Új vizsgálat létrehozása”.",
+        "sie": "Üres kezdéshez: „Új vizsgálat létrehozása”."
+      }
+    },
+    {
+      "id": "dateityp-unbekannt",
+      "art": "datei",
+      "muster": "GET DATA: Syntax error expecting TXT",
+      "original": "GET DATA: Syntax error expecting TXT, PSQL, GNM, or ODS.",
+      "titel": "A parancs nem tudja olvasni ezt a fájlformátumot",
+      "text": {
+        "du": "Az Excel-fájlokat a legkönnyebben a „Fájl megnyitása” gombbal nyithatod meg.",
+        "sie": "Az Excel-fájlokat a legkönnyebben a „Fájl megnyitása” gombbal nyithatod meg."
+      },
+      "tun": {
+        "du": "Húzd a fájlt az ablakba.",
+        "sie": "Húzd a fájlt az ablakba."
+      }
+    },
+    {
+      "id": "auswahl-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting one of the following: (.+)\\.",
+      "original": "FREQUENCIES: Syntax error expecting one of the following: STATISTICS, PERCENTILES, FORMAT, NTILES, ALGORITHM, HISTOGRAM, PIECHART, BARCHART, MISSING, ORDER.",
+      "titel": "Ez a szó ide nem illik",
+      "text": {
+        "du": "Ezen a helyen csak ezen szavak egyike lehetséges: {1}.",
+        "sie": "Ezen a helyen csak ezen szavak egyike lehetséges: {1}."
+      },
+      "tun": {
+        "du": "Válassz közülük egyet.",
+        "sie": "Válassz közülük egyet."
+      }
+    },
+    {
+      "id": "auswahl-oder",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting ((?:\\S+, )+\\S+,? or \\S+)\\.",
+      "original": "EXAMINE: Syntax error expecting BOXPLOT, NPPLOT, HISTOGRAM, SPREADLEVEL, NONE, or ALL.",
+      "titel": "Ez a szó ide nem illik",
+      "text": {
+        "du": "Itt lehetséges: {1}.",
+        "sie": "Itt lehetséges: {1}."
+      },
+      "tun": {
+        "du": "Válassz közülük egyet.",
+        "sie": "Válassz közülük egyet."
+      }
+    }
+  ],
+  "rueckfall": {
+    "titel": "Ez nem sikerült",
+    "text": {
+      "du": "A Statable nem futtatta le a parancsot. Az adataidban nem változott semmi.",
+      "sie": "A Statable nem futtatta le a parancsot. Az adataidban nem változott semmi."
+    },
+    "tun": {
+      "du": "A „Részletek” alatt megtalálod a PSPP eredeti üzenetét. Vele továbbjutsz a súgóban vagy a „Jelentés” gombbal.",
+      "sie": "A „Részletek” alatt megtalálod a PSPP eredeti üzenetét. Vele továbbjutsz a súgóban vagy a „Jelentés” gombbal."
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+"vorhersagewert": [
+"positiver Vorhersagewert",
+"negativer Vorhersagewert",
+"Precision (Genauigkeit der positiven Vorhersage)"
+],
+"sensitivitaet": [
+"Recall"
+],
+"spezifitaet": [
+"Falsch-Positiv-Rate (1 minus Spezifität)"
+],
+"mediation": [
+"Mediator",
+"Mediatorvariable",
+"Mediationsanalyse"
+],
+"moderation": [
+"Moderatorvariable",
+"Moderationsanalyse"
+],
+"bootstrap": [
+"Bootstrapping"
+],
+"dichotom": [
+"Dichotome Variable"
+],
+"guetekriterien": [
+"Gütekriterium"
+],
+"normalverteilungstest": [
+"Normalitätsprüfung"
+],
+"fallzahlplanung": [
+"Stichprobenumfang bestimmen"
+],
+"standardfehler-schaetzer": [
+"Residualstandardabweichung",
+"Residualstandardfehler",
+"residual standard error"
+],
+"within-subjects": [
+"Messwiederholungsfaktor"
+],
+"attenuation": [
+"Regressionsverdünnung (regression dilution)"
+],
+"raking": [
+"Poststratifikation (post-stratification, bis auf das englische Wort)"
+],
+"intervallbreite": [
+"Fehlerspanne"
+],
+"stichprobenrahmen": [
+"Abdeckungsfehler (coverage error)"
+],
+"empirische-regel": [
+"Sigma-Regeln"
+],
+"phi-koeffizient": [
+"Phi-Quadrat (mean square contingency)"
+],
+"bernoulli": [
+"Bernoulli-Experiment",
+"Bernoulli-Kette"
+],
+"kreuztabelle": [
+"Kontingenztabelle"
+],
+"kollinearitaet": [
+"Multikollinearität"
+],
+"praediktor": [
+"Prädiktorvariable"
+],
+"wilcoxon-vorzeichen": [
+"Vorzeichenrangtest"
+],
+"effektstaerke": [
+"Effektgröße",
+"Effektmaß"
+],
+"konfidenzintervall": [
+"Vertrauensintervall",
+"Intervall"
+],
+"kommunalitaet": [
+"Uniqueness (Einzelrestvarianz, 1 minus Kommunalität)"
+],
+"kaplan-meier": [
+"Treppenkurve (Stufenkurve)"
+],
+"ueberlebensfunktion": [
+"Überlebenskurve"
+],
+"log-rank": [
+"Mantel-Cox-Test"
+],
+"quadratsummen-typen": [
+"Typ-III-Quadratsummen"
+],
+"kendall": [
+"Kendalls τb (Tau-b), τc"
+],
+"qq-diagramm": [
+"Q-Q-Plot (Schreibweise mit Bindestrichen)"
+],
+"messsystem": [
+"Gage R&R, Messsystemanalyse"
+],
+"designeffekt": [
+"Kish (Kish-Formel für die effektive Stichprobengröße)"
+],
+"mehrebenen": [
+"hierarchisches lineares Modell (HLM)"
+],
+"skalenwert": [
+"Faktorscore"
+],
+"augenscheinvaliditaet": [
+"Eindrucksvalidität"
+]
+,
+"logistische-regression": [
+"Binär logistisch",
+"Binär-logistische Regression"
+],
+"rangtest": [
+"Nichtparametrische Tests"
+]
+}

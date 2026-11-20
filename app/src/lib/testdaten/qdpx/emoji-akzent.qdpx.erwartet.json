@@ -1,0 +1,101 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "emoji-akzent.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 191,
+   "name": "Emoji-Interview",
+   "pruefung": "geprueft",
+   "sha256": "397f67b30462e873f6d9db2c8c54fc12864ea9490fcf746b0dff68bebeb4394b",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Anna Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/Lärm",
+   "dokument": "Emoji-Interview",
+   "person": "Anna Beispiel",
+   "text": "der Ärger über 🌧 das Wetter"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Emoji-Interview",
+   "person": "Anna Beispiel",
+   "text": "Meine Familie ist stolz"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Emoji-Interview",
+   "person": "Anna Beispiel",
+   "text": "Satz ohne Besonderheit"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Emoji-Interview",
+   "person": "Anna Beispiel",
+   "text": "freue mich"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Emoji-Interview",
+   "person": "Anna Beispiel",
+   "text": "lerne ich mit Müller"
+  }
+ ],
+ "meldungen": [],
+ "meldungenDetail": [],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "Statable Prüfdatei",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 1,
+  "faelle": 0,
+  "kodierende": 1,
+  "kodierungen": 5,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 5,
+  "variablen": 0
+ }
+}

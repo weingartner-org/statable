@@ -1,0 +1,61 @@
+survey_id,field,first_generation,study_mode,hs1,hs2,hs3,hs4,hs5,hs6,used_tutoring,gpa_first_term,belonging
+S01,Engineering,yes,part-time,5,4,3,4,2,3,yes,2.6,5
+S02,Nursing,no,full-time,4,5,2,3,2,3,yes,3.1,3
+S03,Social Work,yes,full-time,4,4,2,4,2,4,yes,2.7,3
+S04,Engineering,yes,full-time,4,4,1,5,2,4,no,3,5
+S05,Social Work,no,full-time,3,4,3,3,3,3,no,3.1,5
+S06,Business,yes,full-time,2,2,4,3,3,5,no,3.3,5
+S07,Nursing,yes,part-time,5,5,1,4,2,5,no,2.6,3
+S08,Biology,no,full-time,2,3,5,2,4,2,yes,3.5,6
+S09,Social Work,yes,full-time,2,2,3,3,3,3,no,2,6
+S10,Engineering,yes,part-time,4,4,1,3,3,2,no,2.6,5
+S11,Computer Science,no,full-time,4,5,1,3,3,4,yes,2.5,4
+S12,Social Work,no,full-time,3,,3,4,2,1,yes,2.9,4
+S13,History,no,full-time,3,1,4,2,4,2,yes,3.5,7
+S14,Social Work,yes,full-time,3,3,3,3,2,5,no,2.8,4
+S15,History,yes,full-time,3,3,2,3,2,3,yes,3,5
+S16,History,no,full-time,4,4,2,4,1,3,no,2.6,4
+S17,Engineering,no,part-time,2,2,4,2,4,1,yes,2.9,5
+S18,Law,yes,full-time,3,3,4,4,2,4,yes,3.9,4
+S19,Engineering,no,full-time,2,2,4,2,4,2,no,3.1,5
+S20,Law,no,full-time,2,3,3,4,2,3,yes,2.7,5
+S21,Business,yes,full-time,4,3,3,3,2,3,yes,3,4
+S22,Nursing,no,full-time,2,2,3,4,3,2,yes,3.2,5
+S23,Nursing,yes,full-time,3,4,2,4,2,4,no,3.3,5
+S24,Law,no,full-time,4,2,2,3,5,3,yes,2.2,4
+S25,Social Work,no,full-time,4,3,3,3,4,3,no,3.2,5
+S26,Biology,no,part-time,4,2,3,2,2,5,yes,2.8,5
+S27,Nursing,no,part-time,2,3,4,3,4,2,yes,2.9,5
+S28,History,no,full-time,2,2,3,3,4,,no,2.9,5
+S29,Social Work,no,full-time,3,3,3,2,2,3,yes,2.5,3
+S30,Business,no,full-time,3,5,2,5,2,3,yes,3.1,4
+S31,History,yes,full-time,3,3,3,3,4,4,yes,3.4,4
+S32,Computer Science,yes,full-time,4,3,2,3,3,3,yes,2.5,5
+S33,History,no,full-time,3,3,4,2,4,1,yes,3.7,6
+S34,Law,no,full-time,4,3,2,3,2,3,yes,2.4,4
+S35,Biology,no,full-time,3,3,2,3,4,2,yes,3.1,4
+S36,Computer Science,yes,part-time,4,3,1,4,3,4,no,3.4,7
+S37,Social Work,yes,full-time,4,3,2,2,2,4,yes,2.3,4
+S38,Engineering,no,part-time,3,3,3,3,4,3,yes,2.9,2
+S39,Social Work,no,part-time,2,1,5,2,5,1,yes,2.4,6
+S40,Nursing,no,full-time,4,4,2,3,2,3,no,2.7,4
+S41,History,yes,full-time,5,3,2,3,3,3,yes,3.1,4
+S42,Computer Science,no,part-time,2,1,5,2,4,3,yes,3.5,6
+S43,Engineering,yes,full-time,5,5,1,5,1,5,no,2.7,2
+S44,Nursing,no,full-time,3,3,5,3,3,3,yes,2.4,4
+S45,Engineering,no,full-time,2,2,3,3,4,4,no,3.8,5
+S46,Nursing,no,full-time,2,3,3,4,3,4,no,3.2,4
+S47,Biology,yes,part-time,3,4,1,,2,4,yes,2.9,4
+S48,History,no,part-time,4,4,2,4,3,5,yes,2.4,3
+S49,Social Work,yes,part-time,3,2,2,3,3,3,yes,2.6,5
+S50,Biology,no,part-time,3,4,1,3,2,3,no,2.7,4
+S51,Computer Science,no,full-time,3,2,5,3,3,3,yes,2.8,4
+S52,Law,no,part-time,3,3,4,4,4,3,yes,2.4,5
+S53,Business,yes,full-time,5,4,2,4,2,3,yes,2.5,4
+S54,Law,yes,full-time,5,5,1,3,2,4,yes,2.1,3
+S55,Social Work,no,full-time,4,3,3,4,3,3,yes,2.9,4
+S56,Nursing,no,part-time,5,3,2,4,2,3,yes,2.5,4
+S57,History,yes,full-time,3,4,3,4,3,3,no,3.5,5
+S58,Computer Science,no,full-time,2,2,3,2,3,1,yes,2.8,4
+S59,Biology,no,full-time,3,4,4,4,3,4,no,2.8,4
+S60,Engineering,no,part-time,2,2,2,3,3,4,no,2.4,5

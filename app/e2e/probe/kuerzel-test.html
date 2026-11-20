@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kürzel-Test</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #111; }
+  @media (prefers-color-scheme: dark) { body { background: #111; color: #eee; } }
+  label, input, button { font-size: 1rem; }
+  input { padding: 4px 6px; min-width: 16rem; }
+  button { padding: 4px 10px; margin-left: 8px; }
+  ol { font-family: ui-monospace, monospace; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<h1>Kürzel-Test</h1>
+<p>Diese Seite zeichnet jede Taste auf, die sie erreicht. Sie ruft nirgends <code>preventDefault</code> auf.</p>
+<p><label for="feld">Testfeld</label> <input id="feld" type="text"></p>
+<p><button id="knopf" type="button">Testknopf</button></p>
+<h2>Angekommene Tasten</h2>
+<ol id="liste"></ol>
+<script>
+  // Protokoll: jeder keydown im Fenster (Erfassungsphase), ohne den Standard zu verhindern.
+  // Das Protokoll steht zusaetzlich in der Adresse (#log=...) und im Titel, damit der
+  // Pruefer es ohne Eingriff in die Seite auslesen kann (/json des Edge-Debug-Ports).
+  var protokoll = [];
+  var liste = document.getElementById("liste");
+  window.addEventListener("keydown", function (e) {
+    var eintrag = {
+      n: protokoll.length + 1,
+      key: e.key,
+      code: e.code,
+      alt: e.altKey,
+      ctrl: e.ctrlKey,
+      shift: e.shiftKey,
+      defaultPrevented: e.defaultPrevented,
+      t: Math.round(performance.now())
+    };
+    protokoll.push(eintrag);
+    var li = document.createElement("li");
+    li.textContent = eintrag.n + ". key=" + e.key + " code=" + e.code +
+      " alt=" + e.altKey + " ctrl=" + e.ctrlKey + " shift=" + e.shiftKey +
+      " defaultPrevented=" + e.defaultPrevented;
+    liste.appendChild(li);
+    try {
+      history.replaceState(null, "", "#log=" + encodeURIComponent(JSON.stringify(protokoll)));
+    } catch (err) { /* ohne Adresse weiter, Liste bleibt sichtbar */ }
+    document.title = "Kürzel-Test " + eintrag.n;
+  }, true);
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "herkunft": "scripts/ueben-erwartet-varianzanalyse-vertiefen.R (R, lm, vcov, anova, emmeans)",
+  "aufgaben": {
+    "kontrast-rechnen": {
+      "wert": 7.99999999999999,
+      "se": 3.09838667696593,
+      "t": 2.58198889747161,
+      "alpha": 1.66666666666667
+    },
+    "trend-kontrast": {
+      "wert": 22,
+      "se": 5.47722557505166,
+      "t": 4.01663208837122,
+      "anteil": 93.076923076923
+    },
+    "wechselwirkung-differenz": {
+      "leicht": 1,
+      "schwer": 6,
+      "diff": 5,
+      "haupt": 3.5
+    },
+    "einfache-effekte-rechnen": {
+      "niedrig": 8,
+      "hoch": 1,
+      "se": 2,
+      "t": 4
+    },
+    "sphaerizitaet-differenzen": {
+      "v12": 0.5,
+      "v13": 2,
+      "v23": 4.5,
+      "verhaeltnis": 9
+    },
+    "familienfehler-dunnett": {
+      "paare": 6,
+      "kontrolle": 3,
+      "frei6": 26.4908109375,
+      "frei3": 14.2625
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "_hinweis": "Erwartete XLSForm zu export-plan.json, vom Prüfer aus xlsform.org hergeleitet (nicht durch den Bau erzeugt). Zellen sind Texte; leere Zellen fehlen. Blätter: survey, choices, settings, statable_skalen. Die Köpfe (kopf) stehen in der Reihenfolge, in der die Spalten geschrieben werden.",
+  "survey": {
+    "kopf": ["type", "name", "label::Deutsch (de)", "label::English (en)", "hint::Deutsch (de)", "hint::English (en)", "required", "relevant", "constraint", "appearance", "parameters", "image::Deutsch (de)", "image::English (en)", "statable_alt::Deutsch (de)", "statable_alt::English (en)", "statable_niveau", "statable_umgepolt", "statable_skala"],
+    "zeilen": [
+      { "type": "begin_group", "name": "s_person", "label::Deutsch (de)": "Zur Person", "label::English (en)": "About you" },
+      { "type": "acknowledge", "name": "einw", "label::Deutsch (de)": "Ich stimme der Teilnahme zu.", "label::English (en)": "I agree to take part.", "required": "yes", "statable_niveau": "nominal" },
+      { "type": "integer", "name": "alter", "label::Deutsch (de)": "Wie alt sind Sie?", "label::English (en)": "How old are you?", "hint::Deutsch (de)": "Bitte in ganzen Jahren.", "hint::English (en)": "Please give whole years.", "required": "yes", "constraint": ". >= 16 and . <= 99", "statable_niveau": "skala" },
+      { "type": "date", "name": "geb", "label::Deutsch (de)": "Wann sind Sie geboren?", "label::English (en)": "When were you born?", "statable_niveau": "skala" },
+      { "type": "select_one ja_nein", "name": "studium", "label::Deutsch (de)": "Sind Sie eingeschrieben?", "label::English (en)": "Are you enrolled?", "required": "yes", "statable_niveau": "nominal" },
+      { "type": "end_group" },
+      { "type": "begin_group", "name": "s_medien", "label::Deutsch (de)": "Mediennutzung", "label::English (en)": "Media use", "relevant": "${studium} = 1" },
+      { "type": "select_multiple medien", "name": "medien", "label::Deutsch (de)": "Welche Medien nutzen Sie?", "label::English (en)": "Which media do you use?", "statable_niveau": "nominal" },
+      { "type": "text", "name": "medien_anders", "label::Deutsch (de)": "Anderes, und zwar:", "label::English (en)": "Other, please specify:", "relevant": "selected(${medien}, 'other')" },
+      { "type": "select_one ja_nein", "name": "tv_nutzung", "label::Deutsch (de)": "Sehen Sie online fern?", "label::English (en)": "Do you watch TV online?", "relevant": "selected(${medien}, '3')", "statable_niveau": "nominal" },
+      { "type": "range", "name": "stunden", "label::Deutsch (de)": "Wie viele Stunden täglich?", "label::English (en)": "How many hours per day?", "relevant": "${studium} = 1 and ${alter} != ''", "parameters": "start=0 end=12 step=1", "statable_niveau": "skala" },
+      { "type": "rank wichtig", "name": "rang", "label::Deutsch (de)": "Ordnen Sie nach Wichtigkeit.", "label::English (en)": "Rank by importance.", "statable_niveau": "ordinal" },
+      { "type": "end_group" },
+      { "type": "begin_group", "name": "s_haltung", "label::Deutsch (de)": "Haltungen", "label::English (en)": "Attitudes" },
+      { "type": "begin_group", "name": "zust", "label::Deutsch (de)": "Wie sehr stimmen Sie zu?", "label::English (en)": "How far do you agree?", "relevant": "${alter} >= 18", "appearance": "field-list", "statable_niveau": "ordinal" },
+      { "type": "select_one zustimmung", "name": "zust_kopf", "label::Deutsch (de)": "Wie sehr stimmen Sie zu?", "label::English (en)": "How far do you agree?", "appearance": "label" },
+      { "type": "select_one zustimmung", "name": "zust_z1", "label::Deutsch (de)": "Ich lerne gern.", "label::English (en)": "I like learning.", "required": "yes", "appearance": "list-nolabel", "statable_skala": "lernen" },
+      { "type": "select_one zustimmung", "name": "zust_z2", "label::Deutsch (de)": "Ich bin oft müde.", "label::English (en)": "I am often tired.", "required": "yes", "appearance": "list-nolabel", "statable_umgepolt": "yes", "statable_skala": "lernen" },
+      { "type": "select_one zustimmung", "name": "zust_z3", "label::Deutsch (de)": "Prüfungen sind fair.", "label::English (en)": "Exams are fair.", "required": "yes", "appearance": "list-nolabel", "statable_skala": "lernen" },
+      { "type": "end_group" },
+      { "type": "text", "name": "kommentar", "label::Deutsch (de)": "Was möchten Sie noch sagen?", "label::English (en)": "Anything else?", "appearance": "multiline", "statable_niveau": "nominal" },
+      { "type": "note", "name": "h_bild", "label::Deutsch (de)": "Das ist die Mensa.", "label::English (en)": "This is the canteen.", "image::Deutsch (de)": "mensa.png", "image::English (en)": "mensa.png", "statable_alt::Deutsch (de)": "Foto der Mensa mit Tischen", "statable_alt::English (en)": "Photo of the canteen with tables" },
+      { "type": "end_group" }
+    ]
+  },
+  "choices": {
+    "kopf": ["list_name", "name", "label::Deutsch (de)", "label::English (en)", "statable_fehlend", "statable_ausschliessend", "statable_geordnet"],
+    "zeilen": [
+      { "list_name": "ja_nein", "name": "1", "label::Deutsch (de)": "Ja", "label::English (en)": "Yes" },
+      { "list_name": "ja_nein", "name": "2", "label::Deutsch (de)": "Nein", "label::English (en)": "No" },
+      { "list_name": "ja_nein", "name": "-9", "label::Deutsch (de)": "Keine Angabe", "label::English (en)": "No answer", "statable_fehlend": "keineAngabe" },
+      { "list_name": "zustimmung", "name": "1", "label::Deutsch (de)": "stimme gar nicht zu", "label::English (en)": "strongly disagree", "statable_geordnet": "yes" },
+      { "list_name": "zustimmung", "name": "2", "label::Deutsch (de)": "stimme eher nicht zu", "label::English (en)": "tend to disagree", "statable_geordnet": "yes" },
+      { "list_name": "zustimmung", "name": "3", "label::Deutsch (de)": "teils/teils", "label::English (en)": "neither agree nor disagree", "statable_geordnet": "yes" },
+      { "list_name": "zustimmung", "name": "4", "label::Deutsch (de)": "stimme eher zu", "label::English (en)": "tend to agree", "statable_geordnet": "yes" },
+      { "list_name": "zustimmung", "name": "5", "label::Deutsch (de)": "stimme voll zu", "label::English (en)": "strongly agree", "statable_geordnet": "yes" },
+      { "list_name": "zustimmung", "name": "-8", "label::Deutsch (de)": "weiß nicht", "label::English (en)": "don't know", "statable_fehlend": "weissNicht", "statable_geordnet": "yes" },
+      { "list_name": "medien", "name": "1", "label::Deutsch (de)": "Zeitung", "label::English (en)": "Newspaper" },
+      { "list_name": "medien", "name": "2", "label::Deutsch (de)": "Radio", "label::English (en)": "Radio" },
+      { "list_name": "medien", "name": "3", "label::Deutsch (de)": "Internet", "label::English (en)": "Internet" },
+      { "list_name": "medien", "name": "4", "label::Deutsch (de)": "Nichts davon", "label::English (en)": "None of these", "statable_ausschliessend": "yes" },
+      { "list_name": "medien", "name": "-8", "label::Deutsch (de)": "weiß nicht", "label::English (en)": "don't know", "statable_fehlend": "weissNicht" },
+      { "list_name": "medien", "name": "other", "label::Deutsch (de)": "Anderes, und zwar:", "label::English (en)": "Other, please specify:" },
+      { "list_name": "wichtig", "name": "1", "label::Deutsch (de)": "Preis", "label::English (en)": "Price" },
+      { "list_name": "wichtig", "name": "2", "label::Deutsch (de)": "Qualität", "label::English (en)": "Quality" },
+      { "list_name": "wichtig", "name": "3", "label::Deutsch (de)": "Service", "label::English (en)": "Service" }
+    ]
+  },
+  "settings": {
+    "kopf": ["form_title", "form_id", "version", "default_language", "statable_plan_id"],
+    "zeilen": [
+      { "form_title": "Studierendenbefragung", "form_id": "statable_6f0c9a52-3b1e-4d8a-9c47-2a5e1b7d0c33", "version": "3", "default_language": "Deutsch (de)", "statable_plan_id": "6f0c9a52-3b1e-4d8a-9c47-2a5e1b7d0c33" }
+    ]
+  },
+  "statable_skalen": {
+    "kopf": ["name", "bildung", "mindestens"],
+    "zeilen": [
+      { "name": "lernen", "bildung": "mittelwert", "mindestens": "2" }
+    ]
+  }
+}

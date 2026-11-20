@@ -1,0 +1,478 @@
+{
+ "codes": [
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "happiness",
+   "pfad": "happiness"
+  },
+  {
+   "definition": "thoughts about breakfast foods",
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "Feelings",
+   "pfad": "Feelings"
+  },
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "disgust",
+   "pfad": "disgust"
+  },
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "waste of time",
+   "pfad": "waste of time"
+  },
+  {
+   "definition": "aka regular",
+   "farbe": "#966450",
+   "kodierbar": true,
+   "name": "Coke::full-fat Coke",
+   "pfad": "Coke::full-fat Coke"
+  },
+  {
+   "definition": "non sucré",
+   "farbe": "#966450",
+   "kodierbar": true,
+   "name": "Coke::diet Coke",
+   "pfad": "Coke::diet Coke"
+  },
+  {
+   "definition": "the breakfast of champions",
+   "farbe": "#966450",
+   "kodierbar": true,
+   "name": "Coke",
+   "pfad": "Coke"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "milk",
+   "pfad": "milk"
+  },
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "serene",
+   "pfad": "serene"
+  },
+  {
+   "definition": "a plate of breakfast made by the hotel",
+   "farbe": "#463cc8",
+   "kodierbar": true,
+   "name": "bacon and eggs",
+   "pfad": "bacon and eggs"
+  },
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "sleepy",
+   "pfad": "sleepy"
+  },
+  {
+   "definition": "the foods people might eat for breakfast",
+   "farbe": "#46aa00",
+   "kodierbar": true,
+   "name": "Breakfast food",
+   "pfad": "Breakfast food"
+  },
+  {
+   "definition": "breakfast cereal made by Kellogg’s",
+   "farbe": "#dc0000",
+   "kodierbar": true,
+   "name": "cornflakes",
+   "pfad": "cornflakes"
+  },
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "\"rushed\"",
+   "pfad": "\"rushed\""
+  }
+ ],
+ "datei": "spec-beispiel-2-einfach.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 98,
+   "name": "1960s Coca Cola commercial - Audio.docx",
+   "pruefung": "ungeprueft",
+   "sha256": "bbf5f6ae72fb8e6c7c2fae5a0a6fa8968f112484444d001c875bbfa9e22bd1ea",
+   "zaehlweise": "b"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 102,
+   "name": "1960s Coca Cola commercial - Visual.docx",
+   "pruefung": "ungeprueft",
+   "sha256": "f8f18ebe3adb3832954b07499abcebc5f3601e43f0560437d3a3996f6e0e049a",
+   "zaehlweise": "b"
+  },
+  {
+   "art": "video",
+   "bom": false,
+   "fall": null,
+   "laenge": 98,
+   "name": "1960s Coca Cola commercial.mp4",
+   "pruefung": "ungeprueft",
+   "sha256": "bbf5f6ae72fb8e6c7c2fae5a0a6fa8968f112484444d001c875bbfa9e22bd1ea",
+   "zaehlweise": "b"
+  },
+  {
+   "art": "video",
+   "bom": false,
+   "fall": null,
+   "laenge": 102,
+   "name": "1960s Coca Cola commercial.mp4 (Transkript 2)",
+   "pruefung": "ungeprueft",
+   "sha256": "f8f18ebe3adb3832954b07499abcebc5f3601e43f0560437d3a3996f6e0e049a",
+   "zaehlweise": "b"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 260,
+   "name": "1994 Diet Coke-Diet Coke Break.docx",
+   "pruefung": "geprueft",
+   "sha256": "83b0e6a0a203d6294594930a084a3d90e971d11ef7bf06036f847da4e8cf8882",
+   "zaehlweise": "b"
+  },
+  {
+   "art": "video",
+   "bom": false,
+   "fall": null,
+   "laenge": 260,
+   "name": "1994 Diet Coke-Diet Coke Break.mp4",
+   "pruefung": "ungeprueft",
+   "sha256": "83b0e6a0a203d6294594930a084a3d90e971d11ef7bf06036f847da4e8cf8882",
+   "zaehlweise": "b"
+  },
+  {
+   "art": "pdftext",
+   "bom": false,
+   "fall": null,
+   "laenge": 80,
+   "name": "Kellogg's Passion for Nutrition.pdf",
+   "pruefung": "ungeprueft",
+   "sha256": "ee149b5f383142dff9cd9c6b6692bfd959af208b5e0877755509939df87bc6b4",
+   "zaehlweise": "b"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 411,
+   "name": "Mabel.txt",
+   "pruefung": "geprueft",
+   "sha256": "f3229d5a56946f3a7290b3b242ebc5aeaa65a2f8964e2e3ac66516cc669aecaf",
+   "zaehlweise": "b"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 440,
+   "name": "Mabêl 2ième.txt",
+   "pruefung": "geprueft",
+   "sha256": "b600289e470a49af3a4f35627044a42a0b55a955eff935aa7070a6de03499c5c",
+   "zaehlweise": "b"
+  },
+  {
+   "art": "pdftext",
+   "bom": false,
+   "fall": null,
+   "laenge": 520,
+   "name": "Pay de Limón con Base de Granola | Kellogg's ®.pdf",
+   "pruefung": "geprueft",
+   "sha256": "ed6f1b3183fc60aa7e8999b62057923f81f00f391b708575c46c5e0cd9853533",
+   "zaehlweise": "b"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 960,
+   "name": "Simon.docx",
+   "pruefung": "geprueft",
+   "sha256": "3e57fcd31656eca54fa346469bb2cb932a80d1a0b49dacfa98ec72ed4eff59d4",
+   "zaehlweise": "b"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "ATLAS.ti",
+  "Friedrich Markgraf",
+  "Sebastian Petrausch"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Coke::diet Coke",
+   "dokument": "1994 Diet Coke-Diet Coke Break.docx",
+   "person": "Friedrich Markgraf",
+   "text": "Oh, that was great. See you tomorrow? Eleven thirty. Mm."
+  },
+  {
+   "code": "bacon and eggs",
+   "dokument": "Mabel.txt",
+   "person": "Friedrich Markgraf",
+   "text": "I'm a single mum with an 8 month old and a toddler and breakfast is mayhem. The baby has porridge, I have coffee and the toddler has whatever.Dies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit der Text die gewünschte Länge bekommt. Weitere Wörter folgen hier ohne Besonderheiten. Dies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit der Text die gewünschte Länge bek"
+  },
+  {
+   "code": "cornflakes",
+   "dokument": "Mabel.txt",
+   "person": "Friedrich Markgraf",
+   "text": "I'm a single mum with an 8 month old and a toddler and breakfast is mayhem. The baby has porridge, I have coffee and the toddler has whatever.Dies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit der Text die gewünschte Länge bekommt. Weitere Wörter folgen hier ohne Besonderheiten. Dies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit der Text die gewünschte Länge bek"
+  },
+  {
+   "code": "happiness",
+   "dokument": "Mabel.txt",
+   "person": "Friedrich Markgraf",
+   "text": "I'm a single mum with an 8 month old and a toddler and breakfast is mayhem. The baby has porridge, I have coffee and the toddler has whatever.Dies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit der Text die gewünschte Länge bekommt. Weitere Wörter folgen hier ohne Besonderheiten. Dies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit der Text die gewünschte Länge bek"
+  },
+  {
+   "code": "cornflakes",
+   "dokument": "Pay de Limón con Base de Granola | Kellogg's ®.pdf",
+   "person": "Friedrich Markgraf",
+   "text": "favoritos. Dificultad: Media Tiempo: 2 horas 30 minutos      Porciones: 8 Ingredientes Para la baseDies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit der Text die gewünschte Läng"
+  },
+  {
+   "code": "waste of time",
+   "dokument": "Pay de Limón con Base de Granola | Kellogg's ®.pdf",
+   "person": "Friedrich Markgraf",
+   "text": "granola"
+  },
+  {
+   "code": "Feelings",
+   "dokument": "Simon.docx",
+   "person": "Friedrich Markgraf",
+   "text": "I did try the gluten free bread, but it was always so soggy,"
+  },
+  {
+   "code": "bacon and eggs",
+   "dokument": "Simon.docx",
+   "person": "Friedrich Markgraf",
+   "text": "damage done by fatty foodsDies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit der Text die gewünschte Länge bekommt. Weitere Wörter folgen hier ohne Besonderheiten. Dies ist ein neutraler Füllsatz "
+  },
+  {
+   "code": "happiness",
+   "dokument": "Simon.docx",
+   "person": "Friedrich Markgraf",
+   "text": "But to be honest, I used to have a much bigger breakfast, and these days I find myself snacking aboutDies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit damage done by fatty foodsDies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit der Text die gewünschte Länge bekommt. Weitere Wörter folgen hier ohne Besonderheiten. Dies ist ein neutraler Füllsatz "
+  }
+ ],
+ "meldungen": [
+  "nicht-gelesen"
+ ],
+ "meldungenDetail": [],
+ "memos": [
+  {
+   "bezug": [
+    {
+     "art": "projekt",
+     "ziel": null
+    }
+   ],
+   "text": "This is a great project by a dynamic team of researcher-developers. ",
+   "titel": "Research Plan"
+  },
+  {
+   "bezug": [
+    {
+     "art": "projekt",
+     "ziel": null
+    }
+   ],
+   "text": "This version is much better than the new Director’s cut ",
+   "titel": "My favorite Coke ad"
+  },
+  {
+   "bezug": [
+    {
+     "art": "segment",
+     "ziel": {
+      "dokument": "Mabêl 2ième.txt",
+      "text": "For some reason babies aren't supposed to have cow's milk that is low fat. However, I am really bad at it.Dies ist ein neutraler Füllsatz ohne Bedeutung. Er wiede"
+     }
+    }
+   ],
+   "text": "Mabel is not the only person I know who has Coke for breakfast!",
+   "titel": "Kommentar (ATLAS.ti)"
+  },
+  {
+   "bezug": [
+    {
+     "art": "segment",
+     "ziel": {
+      "dokument": "Simon.docx",
+      "text": "damage done by fatty foodsDies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt sich, damit der Text die gewünschte Länge bekommt. Weitere Wörter folgen hier ohne Besonderheiten. Dies ist ein neutraler Füllsatz "
+     }
+    }
+   ],
+   "text": "why does Simon feel the need to do this?",
+   "titel": "Kommentar (ATLAS.ti)"
+  }
+ ],
+ "mengen": [
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "Mabel.txt",
+    "Mabêl 2ième.txt"
+   ],
+   "name": "Mabel"
+  },
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "Simon.docx"
+   ],
+   "name": "gender: male"
+  },
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "Simon.docx"
+   ],
+   "name": "Simon"
+  },
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "1960s Coca Cola commercial - Audio.docx",
+    "1960s Coca Cola commercial - Visual.docx",
+    "1994 Diet Coke-Diet Coke Break.docx",
+    "Mabel.txt",
+    "Mabêl 2ième.txt",
+    "Simon.docx"
+   ],
+   "name": "Text files"
+  },
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "Mabel.txt",
+    "Mabêl 2ième.txt"
+   ],
+   "name": "gender: female"
+  },
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "1960s Coca Cola commercial.mp4",
+    "1994 Diet Coke-Diet Coke Break.mp4"
+   ],
+   "name": "Coke"
+  },
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "Simon.docx"
+   ],
+   "name": "age: 67"
+  },
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "Kellogg's Passion for Nutrition.pdf",
+    "Pay de Limón con Base de Granola | Kellogg's ®.pdf"
+   ],
+   "name": "PDFs"
+  },
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "Mabel.txt",
+    "Mabêl 2ième.txt"
+   ],
+   "name": "age: 25"
+  },
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "1960s Coca Cola commercial.mp4",
+    "1994 Diet Coke-Diet Coke Break.mp4"
+   ],
+   "name": "Video and Audio"
+  },
+  {
+   "art": "codes",
+   "mitglieder": [
+    "\"rushed\"",
+    "disgust",
+    "happiness",
+    "serene",
+    "sleepy",
+    "waste of time"
+   ],
+   "name": "Feelings"
+  },
+  {
+   "art": "codes",
+   "mitglieder": [
+    "\"rushed\"",
+    "disgust",
+    "sleepy",
+    "waste of time"
+   ],
+   "name": "negative feelings"
+  },
+  {
+   "art": "codes",
+   "mitglieder": [
+    "Coke",
+    "Coke::diet Coke",
+    "Coke::full-fat Coke",
+    "bacon and eggs",
+    "cornflakes",
+    "milk"
+   ],
+   "name": "Breakfast food"
+  },
+  {
+   "art": "codes",
+   "mitglieder": [
+    "happiness",
+    "serene",
+    "sleepy"
+   ],
+   "name": "positive feelings"
+  }
+ ],
+ "nichtGelesen": {
+  "AudioSource": 1,
+  "Graph": 1,
+  "Link": 1,
+  "PDFSelection": 4,
+  "PictureSource": 1,
+  "VideoSelection": 2
+ },
+ "programm": "ATLAS.ti 8.4.0 573 , macOS Version 10.14.3 (Build 18D109)",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 14,
+  "dokumente": 11,
+  "faelle": 0,
+  "kodierende": 3,
+  "kodierungen": 9,
+  "memos": 4,
+  "mengen": 14,
+  "segmente": 8,
+  "variablen": 0
+ }
+}

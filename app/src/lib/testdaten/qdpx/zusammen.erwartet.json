@@ -1,0 +1,486 @@
+{
+ "gleichePersonen": {
+  "a": "Anna Beispiel",
+  "b": "Anna Beispiel"
+ },
+ "mitGleichePersonen": {
+  "codePfade": [
+   "Belastung",
+   "Belastung/Hilfe",
+   "Belastung/Lärm",
+   "Belastung/Zeitdruck",
+   "Hilfe",
+   "Selbstwirksamkeit"
+  ],
+  "codeZuordnung": [
+   {
+    "pfadB": "Belastung",
+    "pfadZiel": "Belastung",
+    "wie": "guid"
+   },
+   {
+    "pfadB": "Belastung/ zeitdruck ",
+    "pfadZiel": "Belastung/Zeitdruck",
+    "wie": "pfad"
+   },
+   {
+    "pfadB": "Belastung/Lärm",
+    "pfadZiel": "Belastung/Lärm",
+    "wie": "guid"
+   },
+   {
+    "pfadB": "Belastung/Hilfe",
+    "pfadZiel": "Belastung/Hilfe",
+    "wie": "neu"
+   },
+   {
+    "pfadB": "Hilfe",
+    "pfadZiel": "Hilfe",
+    "wie": "guid"
+   },
+   {
+    "pfadB": "Selbstwirksamkeit",
+    "pfadZiel": "Selbstwirksamkeit",
+    "wie": "neu"
+   }
+  ],
+  "dokumente": [
+   "Interview 1",
+   "Interview 2",
+   "Interview 3",
+   "Interview 3 (aus Datei 2)",
+   "Interview 4",
+   "Interview 5"
+  ],
+  "faelle": [
+   {
+    "name": "Fall 1",
+    "werte": {
+     "Alter": 30,
+     "Studienfach": "Pädagogik"
+    }
+   },
+   {
+    "name": "Fall 2",
+    "werte": {
+     "Alter": 25
+    }
+   },
+   {
+    "name": "Fall 3",
+    "werte": {
+     "Alter": 22
+    }
+   }
+  ],
+  "kodierende": [
+   "Anna Beispiel",
+   "Berta Beispiel",
+   "Carla Beispiel"
+  ],
+  "kodierungen": [
+   {
+    "code": "Belastung/Hilfe",
+    "dokument": "Interview 1",
+    "person": "Berta Beispiel",
+    "text": "Meine Lerngruppe hilft mir sehr"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel",
+    "text": "Der Lärm im Wohnheim stört"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel",
+    "text": "Zeitdruck das Schlimmste"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 1",
+    "person": "Berta Beispiel",
+    "text": "Zeitdruck das Schlimmste"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel",
+    "text": "Meine Lerngruppe hilft mir sehr"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel",
+    "text": "spreche mit meiner Schwester"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 2",
+    "person": "Berta Beispiel",
+    "text": "Der Lärm im Großraumbüro"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 2",
+    "person": "Anna Beispiel",
+    "text": "Im Praktikum habe ich viel Druck gespürt"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 2",
+    "person": "Anna Beispiel",
+    "text": "Mein Chef hilft mir"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 2",
+    "person": "Anna Beispiel",
+    "text": "Mein Chef hilft mir"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 3",
+    "person": "Anna Beispiel",
+    "text": "Die Lage in der Wohnung ist ruhig"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 3 (aus Datei 2)",
+    "person": "Berta Beispiel",
+    "text": "Die Lage in der Wohnung ist laut"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 4",
+    "person": "Berta Beispiel",
+    "text": "der Zeitdruck wächst jede Woche"
+   },
+   {
+    "code": "Selbstwirksamkeit",
+    "dokument": "Interview 4",
+    "person": "Berta Beispiel",
+    "text": "der Zeitdruck wächst jede Woche"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 5",
+    "person": "Carla Beispiel",
+    "text": "die Wege sind weit"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 5",
+    "person": "Carla Beispiel",
+    "text": "Ich bin gern an der Uni"
+   }
+  ],
+  "meldungen": [
+   "fallwert-verschieden",
+   "text-verschieden"
+  ],
+  "segmenteGesamt": 15,
+  "variablen": [
+   "Alter",
+   "Studienfach"
+  ]
+ },
+ "ohneKodierende": {
+  "codePfade": [
+   "Belastung",
+   "Belastung/Lärm",
+   "Belastung/Zeitdruck",
+   "Hilfe"
+  ],
+  "codeZuordnung": [
+   {
+    "pfadB": "Belastung",
+    "pfadZiel": "Belastung",
+    "wie": "guid"
+   },
+   {
+    "pfadB": "Belastung/Zeitdruck",
+    "pfadZiel": "Belastung/Zeitdruck",
+    "wie": "guid"
+   },
+   {
+    "pfadB": "Belastung/Lärm",
+    "pfadZiel": "Belastung/Lärm",
+    "wie": "guid"
+   },
+   {
+    "pfadB": "Hilfe",
+    "pfadZiel": "Hilfe",
+    "wie": "guid"
+   }
+  ],
+  "dokumente": [
+   "Interview 1",
+   "Interview 2",
+   "Interview 3",
+   "Interview 5"
+  ],
+  "faelle": [
+   {
+    "name": "Fall 1",
+    "werte": {
+     "Alter": 30,
+     "Studienfach": "Pädagogik"
+    }
+   },
+   {
+    "name": "Fall 2",
+    "werte": {
+     "Alter": 25
+    }
+   }
+  ],
+  "kodierende": [
+   "Anna Beispiel",
+   "Carla Beispiel",
+   "Datei 2"
+  ],
+  "kodierungen": [
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel",
+    "text": "Der Lärm im Wohnheim stört"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel",
+    "text": "Zeitdruck das Schlimmste"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 1",
+    "person": "Datei 2",
+    "text": "Zeitdruck das Schlimmste"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel",
+    "text": "Meine Lerngruppe hilft mir sehr"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 2",
+    "person": "Anna Beispiel",
+    "text": "Im Praktikum habe ich viel Druck gespürt"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 2",
+    "person": "Anna Beispiel",
+    "text": "Mein Chef hilft mir"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 3",
+    "person": "Anna Beispiel",
+    "text": "Die Lage in der Wohnung ist ruhig"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 5",
+    "person": "Carla Beispiel",
+    "text": "Ich bin gern an der Uni"
+   }
+  ],
+  "meldungen": [],
+  "segmenteGesamt": 8,
+  "variablen": [
+   "Alter",
+   "Studienfach"
+  ]
+ },
+ "ohneZuordnung": {
+  "codePfade": [
+   "Belastung",
+   "Belastung/Hilfe",
+   "Belastung/Lärm",
+   "Belastung/Zeitdruck",
+   "Hilfe",
+   "Selbstwirksamkeit"
+  ],
+  "codeZuordnung": [
+   {
+    "pfadB": "Belastung",
+    "pfadZiel": "Belastung",
+    "wie": "guid"
+   },
+   {
+    "pfadB": "Belastung/ zeitdruck ",
+    "pfadZiel": "Belastung/Zeitdruck",
+    "wie": "pfad"
+   },
+   {
+    "pfadB": "Belastung/Lärm",
+    "pfadZiel": "Belastung/Lärm",
+    "wie": "guid"
+   },
+   {
+    "pfadB": "Belastung/Hilfe",
+    "pfadZiel": "Belastung/Hilfe",
+    "wie": "neu"
+   },
+   {
+    "pfadB": "Hilfe",
+    "pfadZiel": "Hilfe",
+    "wie": "guid"
+   },
+   {
+    "pfadB": "Selbstwirksamkeit",
+    "pfadZiel": "Selbstwirksamkeit",
+    "wie": "neu"
+   }
+  ],
+  "dokumente": [
+   "Interview 1",
+   "Interview 2",
+   "Interview 3",
+   "Interview 3 (aus Datei 2)",
+   "Interview 4",
+   "Interview 5"
+  ],
+  "faelle": [
+   {
+    "name": "Fall 1",
+    "werte": {
+     "Alter": 30,
+     "Studienfach": "Pädagogik"
+    }
+   },
+   {
+    "name": "Fall 2",
+    "werte": {
+     "Alter": 25
+    }
+   },
+   {
+    "name": "Fall 3",
+    "werte": {
+     "Alter": 22
+    }
+   }
+  ],
+  "kodierende": [
+   "Anna Beispiel",
+   "Anna Beispiel (Datei 2)",
+   "Berta Beispiel",
+   "Carla Beispiel"
+  ],
+  "kodierungen": [
+   {
+    "code": "Belastung/Hilfe",
+    "dokument": "Interview 1",
+    "person": "Berta Beispiel",
+    "text": "Meine Lerngruppe hilft mir sehr"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel",
+    "text": "Der Lärm im Wohnheim stört"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel",
+    "text": "Zeitdruck das Schlimmste"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 1",
+    "person": "Berta Beispiel",
+    "text": "Zeitdruck das Schlimmste"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel",
+    "text": "Meine Lerngruppe hilft mir sehr"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 1",
+    "person": "Anna Beispiel (Datei 2)",
+    "text": "spreche mit meiner Schwester"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 2",
+    "person": "Berta Beispiel",
+    "text": "Der Lärm im Großraumbüro"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 2",
+    "person": "Anna Beispiel",
+    "text": "Im Praktikum habe ich viel Druck gespürt"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 2",
+    "person": "Anna Beispiel",
+    "text": "Mein Chef hilft mir"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 2",
+    "person": "Anna Beispiel (Datei 2)",
+    "text": "Mein Chef hilft mir"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 3",
+    "person": "Anna Beispiel",
+    "text": "Die Lage in der Wohnung ist ruhig"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 3 (aus Datei 2)",
+    "person": "Berta Beispiel",
+    "text": "Die Lage in der Wohnung ist laut"
+   },
+   {
+    "code": "Belastung/Zeitdruck",
+    "dokument": "Interview 4",
+    "person": "Berta Beispiel",
+    "text": "der Zeitdruck wächst jede Woche"
+   },
+   {
+    "code": "Selbstwirksamkeit",
+    "dokument": "Interview 4",
+    "person": "Berta Beispiel",
+    "text": "der Zeitdruck wächst jede Woche"
+   },
+   {
+    "code": "Belastung/Lärm",
+    "dokument": "Interview 5",
+    "person": "Carla Beispiel",
+    "text": "die Wege sind weit"
+   },
+   {
+    "code": "Hilfe",
+    "dokument": "Interview 5",
+    "person": "Carla Beispiel",
+    "text": "Ich bin gern an der Uni"
+   }
+  ],
+  "meldungen": [
+   "fallwert-verschieden",
+   "person-gleicher-name",
+   "text-verschieden"
+  ],
+  "segmenteGesamt": 15,
+  "variablen": [
+   "Alter",
+   "Studienfach"
+  ]
+ }
+}

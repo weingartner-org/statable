@@ -1,0 +1,30 @@
+{
+  "quelle": "atrain",
+  "beitraege": [
+    {
+      "sprecher": "SPEAKER_00",
+      "zeitMs": 0,
+      "bisMs": 6800,
+      "text": "Guten Morgen, wollen wir die Semesterplanung besprechen? Ich habe die Termine für Oktober schon vorbereitet."
+    },
+    {
+      "sprecher": "SPEAKER_01",
+      "zeitMs": 7100,
+      "bisMs": 14200,
+      "text": "Gern, aber ich brauche noch die Raumliste. Außerdem muss der Übungstermin am Freitag verschoben werden."
+    },
+    {
+      "sprecher": "SPEAKER_00",
+      "zeitMs": 14600,
+      "bisMs": 18000,
+      "text": "Das klingt gut, ich schreibe es auf."
+    },
+    {
+      "sprecher": "SPEAKER_01",
+      "zeitMs": 18400,
+      "bisMs": 21900,
+      "text": "Danke, dann schicke ich die Liste bis Mittwoch."
+    }
+  ],
+  "meldungsArten": []
+}

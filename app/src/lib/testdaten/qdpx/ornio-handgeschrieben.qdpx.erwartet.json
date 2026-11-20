@@ -1,0 +1,160 @@
+{
+ "codes": [
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": false,
+   "name": "Topics",
+   "pfad": "Topics"
+  },
+  {
+   "definition": "Anything about physical or mental health",
+   "farbe": "#33cc33",
+   "kodierbar": true,
+   "name": "Health",
+   "pfad": "Topics/Health"
+  },
+  {
+   "definition": "Food and eating habits",
+   "farbe": "#dc0000",
+   "kodierbar": true,
+   "name": "Diet",
+   "pfad": "Topics/Health/Diet"
+  },
+  {
+   "definition": null,
+   "farbe": "#0000ff",
+   "kodierbar": true,
+   "name": "Wellbeing",
+   "pfad": "Topics/Wellbeing"
+  }
+ ],
+ "datei": "ornio-handgeschrieben.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": "Participant 1",
+   "laenge": 36,
+   "name": "Interview 1.txt",
+   "pruefung": "geprueft",
+   "sha256": "abf5534774d36c1df86d60508902a42d92661a4f4fbfae16f367012ff9fef00e",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "pdftext",
+   "bom": false,
+   "fall": null,
+   "laenge": 46,
+   "name": "doc.pdf",
+   "pruefung": "ungeprueft",
+   "sha256": "e3d02371af7ed8a1e6f0df0f9589bd95ae7d897367d105c6878f09eec0b4037c",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "audio",
+   "bom": false,
+   "fall": null,
+   "laenge": 36,
+   "name": "interview.m4a",
+   "pruefung": "ungeprueft",
+   "sha256": "abf5534774d36c1df86d60508902a42d92661a4f4fbfae16f367012ff9fef00e",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [
+  {
+   "dokumente": [
+    "Interview 1.txt"
+   ],
+   "name": "Participant 1",
+   "werte": {
+    "Age": 34,
+    "Consented": true
+   }
+  }
+ ],
+ "fehler": null,
+ "kodierende": [
+  "Researcher A"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Topics/Health",
+   "dokument": "Interview 1.txt",
+   "person": "Researcher A",
+   "text": "Diet and health"
+  },
+  {
+   "code": "Topics/Health/Diet",
+   "dokument": "Interview 1.txt",
+   "person": "Researcher A",
+   "text": "health are clo"
+  }
+ ],
+ "meldungen": [
+  "nicht-gelesen"
+ ],
+ "meldungenDetail": [],
+ "memos": [
+  {
+   "bezug": [
+    {
+     "art": "projekt",
+     "ziel": null
+    }
+   ],
+   "text": "Remember to follow up on diet-related comments.",
+   "titel": "Research memo"
+  }
+ ],
+ "mengen": [
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "Interview 1.txt"
+   ],
+   "name": "Diet-related"
+  },
+  {
+   "art": "codes",
+   "mitglieder": [
+    "Topics/Health/Diet"
+   ],
+   "name": "Diet-related"
+  }
+ ],
+ "nichtGelesen": {
+  "AudioSelection": 1,
+  "Graph": 1,
+  "Link": 1,
+  "PDFSelection": 1,
+  "PictureSource": 1,
+  "TranscriptSelection": 1,
+  "VideoSelection": 1,
+  "VideoSource": 1
+ },
+ "programm": "refi_qda test fixture",
+ "variablen": [
+  {
+   "name": "Age",
+   "typ": "ganzzahl"
+  },
+  {
+   "name": "Consented",
+   "typ": "ja/nein"
+  }
+ ],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 3,
+  "faelle": 1,
+  "kodierende": 1,
+  "kodierungen": 2,
+  "memos": 1,
+  "mengen": 2,
+  "segmente": 2,
+  "variablen": 2
+ }
+}

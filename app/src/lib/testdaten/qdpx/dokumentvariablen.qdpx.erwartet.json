@@ -1,0 +1,104 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "dokumentvariablen.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": "Interview Dok-Var",
+   "laenge": 393,
+   "name": "Interview Dok-Var",
+   "pruefung": "geprueft",
+   "sha256": "0821f3089b5764ca900cb0c43f5f9d40cb7069edaff00995786a39d661009d16",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [
+  {
+   "dokumente": [
+    "Interview Dok-Var"
+   ],
+   "name": "Interview Dok-Var",
+   "werte": {
+    "Semester": 2,
+    "Studienfach": "Soziologie"
+   }
+  }
+ ],
+ "fehler": null,
+ "kodierende": [
+  "Anna Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview Dok-Var",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  }
+ ],
+ "meldungen": [
+  "dokumentvariablen-fall"
+ ],
+ "meldungenDetail": [
+  {
+   "art": "dokumentvariablen-fall",
+   "dokument": "Interview Dok-Var"
+  }
+ ],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "Statable Prüfdatei",
+ "variablen": [
+  {
+   "name": "Studienfach",
+   "typ": "text"
+  },
+  {
+   "name": "Semester",
+   "typ": "ganzzahl"
+  }
+ ],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 1,
+  "faelle": 1,
+  "kodierende": 1,
+  "kodierungen": 1,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 1,
+  "variablen": 2
+ }
+}

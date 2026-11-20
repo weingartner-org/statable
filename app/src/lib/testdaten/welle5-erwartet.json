@@ -1,0 +1,4448 @@
+{
+  "quelle": "scripts/welle5-erwartet.R",
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "umkodieren": [
+    {
+      "name": "u1_uebernehmen",
+      "titel": "Einzelwert und Bereich, übrige übernehmen; 9 = Keine Angabe bleibt leer",
+      "daten": {
+        "spalten": [
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F8.1",
+            "fehlend": [
+              9
+            ],
+            "fehlendText": "9",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            9
+          ],
+          [
+            null
+          ],
+          [
+            0
+          ],
+          [
+            7
+          ],
+          [
+            2.5
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "x",
+        "ziel": "x_neu",
+        "regeln": [
+          {
+            "von": {
+              "bereich": [
+                null,
+                2
+              ]
+            },
+            "nach": 1
+          },
+          {
+            "von": {
+              "wert": 3
+            },
+            "nach": 2
+          }
+        ],
+        "uebrige": "uebernehmen",
+        "fehlend": "leer",
+        "labels": {
+          "1": "niedrig",
+          "2": "mittel"
+        }
+      },
+      "erwartet": {
+        "werte": [1, 1, 2, 4, 5, null, null, 1, 7, 2.5],
+        "ziel_format": "F8.1",
+        "ziel_fehlend": [],
+        "vorschau": [
+          {
+            "alt": 0,
+            "neu": 1,
+            "anzahl": 1
+          },
+          {
+            "alt": 1,
+            "neu": 1,
+            "anzahl": 1
+          },
+          {
+            "alt": 2,
+            "neu": 1,
+            "anzahl": 1
+          },
+          {
+            "alt": 2.5,
+            "neu": 2.5,
+            "anzahl": 1
+          },
+          {
+            "alt": 3,
+            "neu": 2,
+            "anzahl": 1
+          },
+          {
+            "alt": 4,
+            "neu": 4,
+            "anzahl": 1
+          },
+          {
+            "alt": 5,
+            "neu": 5,
+            "anzahl": 1
+          },
+          {
+            "alt": 7,
+            "neu": 7,
+            "anzahl": 1
+          },
+          {
+            "alt": 9,
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": null,
+            "neu": null,
+            "anzahl": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "u2_leer",
+      "titel": "gleiche Regeln, übrige leer lassen",
+      "daten": {
+        "spalten": [
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F8.1",
+            "fehlend": [
+              9
+            ],
+            "fehlendText": "9",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            9
+          ],
+          [
+            null
+          ],
+          [
+            0
+          ],
+          [
+            7
+          ],
+          [
+            2.5
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "x",
+        "ziel": "x_neu",
+        "regeln": [
+          {
+            "von": {
+              "bereich": [
+                null,
+                2
+              ]
+            },
+            "nach": 1
+          },
+          {
+            "von": {
+              "wert": 3
+            },
+            "nach": 2
+          }
+        ],
+        "uebrige": "leer",
+        "fehlend": "leer",
+        "labels": {
+          "1": "niedrig",
+          "2": "mittel"
+        }
+      },
+      "erwartet": {
+        "werte": [1, 1, 2, null, null, null, null, 1, null, null],
+        "ziel_format": "F8.0",
+        "ziel_fehlend": [],
+        "vorschau": [
+          {
+            "alt": 0,
+            "neu": 1,
+            "anzahl": 1
+          },
+          {
+            "alt": 1,
+            "neu": 1,
+            "anzahl": 1
+          },
+          {
+            "alt": 2,
+            "neu": 1,
+            "anzahl": 1
+          },
+          {
+            "alt": 2.5,
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": 3,
+            "neu": 2,
+            "anzahl": 1
+          },
+          {
+            "alt": 4,
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": 5,
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": 7,
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": 9,
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": null,
+            "neu": null,
+            "anzahl": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "u3_bereich_bis_hi",
+      "titel": "4 THRU HI fängt die 9 (Keine Angabe) NICHT ein",
+      "daten": {
+        "spalten": [
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F8.1",
+            "fehlend": [
+              9
+            ],
+            "fehlendText": "9",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            9
+          ],
+          [
+            null
+          ],
+          [
+            0
+          ],
+          [
+            7
+          ],
+          [
+            2.5
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "x",
+        "ziel": "x_neu",
+        "regeln": [
+          {
+            "von": {
+              "bereich": [
+                4,
+                null
+              ]
+            },
+            "nach": 3
+          },
+          {
+            "von": {
+              "bereich": [
+                null,
+                3
+              ]
+            },
+            "nach": 1
+          }
+        ],
+        "uebrige": "uebernehmen",
+        "fehlend": "leer",
+        "labels": {
+          "1": "bis 3",
+          "3": "ab 4"
+        }
+      },
+      "erwartet": {
+        "werte": [1, 1, 1, 3, 3, null, null, 1, 3, 1],
+        "ziel_format": "F8.0",
+        "ziel_fehlend": [],
+        "naiv_pspp_werte": [1, 1, 1, 3, 3, 3, null, 1, 3, 1],
+        "abweichung": "Ohne (MISSING=SYSMIS) vorn macht PSPP aus der 9 eine 3 (naiv_pspp_werte), die 9 gilt in der neuen Spalte als gültig."
+      }
+    },
+    {
+      "name": "u4_fehlend_behalten",
+      "titel": "Keine Angabe als Code behalten (in der neuen Spalte weiter als fehlend vereinbart)",
+      "daten": {
+        "spalten": [
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F8.1",
+            "fehlend": [
+              9
+            ],
+            "fehlendText": "9",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            9
+          ],
+          [
+            null
+          ],
+          [
+            0
+          ],
+          [
+            7
+          ],
+          [
+            2.5
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "x",
+        "ziel": "x_neu",
+        "regeln": [
+          {
+            "von": {
+              "bereich": [
+                4,
+                null
+              ]
+            },
+            "nach": 3
+          },
+          {
+            "von": {
+              "bereich": [
+                null,
+                3
+              ]
+            },
+            "nach": 1
+          }
+        ],
+        "uebrige": "uebernehmen",
+        "fehlend": "behalten",
+        "labels": {
+          "1": "bis 3",
+          "3": "ab 4"
+        }
+      },
+      "erwartet": {
+        "werte": [1, 1, 1, 3, 3, 9, null, 1, 3, 1],
+        "ziel_format": "F8.0",
+        "ziel_fehlend": [
+          9
+        ]
+      }
+    },
+    {
+      "name": "u5_sysmis_ausdruecklich",
+      "titel": "SYSMIS ausdrücklich ansprechen: leere Zellen werden 77, die 9 bleibt leer",
+      "daten": {
+        "spalten": [
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F8.1",
+            "fehlend": [
+              9
+            ],
+            "fehlendText": "9",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            9
+          ],
+          [
+            null
+          ],
+          [
+            0
+          ],
+          [
+            7
+          ],
+          [
+            2.5
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "x",
+        "ziel": "x_neu",
+        "regeln": [
+          {
+            "von": {
+              "fehlend": "SYSMIS"
+            },
+            "nach": 77
+          },
+          {
+            "von": {
+              "bereich": [
+                null,
+                3
+              ]
+            },
+            "nach": 1
+          }
+        ],
+        "uebrige": "uebernehmen",
+        "fehlend": "leer",
+        "labels": {}
+      },
+      "erwartet": {
+        "werte": [1, 1, 1, 4, 5, null, 77, 1, 7, 1],
+        "ziel_format": "F8.0",
+        "ziel_fehlend": []
+      }
+    },
+    {
+      "name": "u6_missing_ausdruecklich",
+      "titel": "MISSING ausdrücklich ansprechen: 9 UND leere Zellen werden 55",
+      "daten": {
+        "spalten": [
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F8.1",
+            "fehlend": [
+              9
+            ],
+            "fehlendText": "9",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            9
+          ],
+          [
+            null
+          ],
+          [
+            0
+          ],
+          [
+            7
+          ],
+          [
+            2.5
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "x",
+        "ziel": "x_neu",
+        "regeln": [
+          {
+            "von": {
+              "fehlend": "MISSING"
+            },
+            "nach": 55
+          },
+          {
+            "von": {
+              "bereich": [
+                null,
+                3
+              ]
+            },
+            "nach": 1
+          }
+        ],
+        "uebrige": "uebernehmen",
+        "fehlend": "leer",
+        "labels": {}
+      },
+      "erwartet": {
+        "werte": [1, 1, 1, 4, 5, 55, 55, 1, 7, 1],
+        "ziel_format": "F8.0",
+        "ziel_fehlend": []
+      }
+    },
+    {
+      "name": "u7_ueberschreiben",
+      "titel": "dieselbe Spalte überschreiben (nur mit ausdrücklichem ueberschreiben: true)",
+      "daten": {
+        "spalten": [
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F8.1",
+            "fehlend": [
+              9
+            ],
+            "fehlendText": "9",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            9
+          ],
+          [
+            null
+          ],
+          [
+            0
+          ],
+          [
+            7
+          ],
+          [
+            2.5
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "x",
+        "ziel": "x",
+        "regeln": [
+          {
+            "von": {
+              "bereich": [
+                null,
+                2
+              ]
+            },
+            "nach": 1
+          },
+          {
+            "von": {
+              "wert": 3
+            },
+            "nach": 2
+          }
+        ],
+        "uebrige": "uebernehmen",
+        "fehlend": "leer",
+        "labels": {},
+        "ueberschreiben": true
+      },
+      "erwartet": {
+        "werte": [1, 1, 2, 4, 5, null, null, 1, 7, 2.5],
+        "ziel_format": "F8.1",
+        "ziel_fehlend": []
+      }
+    },
+    {
+      "name": "u8_text_zahl",
+      "titel": "Text -> Zahl: nur genau 'ja' und 'nein' treffen (PSPP vergleicht Text byte-genau); Hinweis auf die Schreibvarianten",
+      "daten": {
+        "spalten": [
+          {
+            "name": "s",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A12",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            "ja"
+          ],
+          [
+            "Ja"
+          ],
+          [
+            "ja"
+          ],
+          [
+            "JA"
+          ],
+          [
+            " ja"
+          ],
+          [
+            "nein"
+          ],
+          [
+            "Nein"
+          ],
+          [
+            null
+          ],
+          [
+            "vielleicht"
+          ],
+          [
+            "ja"
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "s",
+        "ziel": "s_neu",
+        "regeln": [
+          {
+            "von": {
+              "wert": "ja"
+            },
+            "nach": 1
+          },
+          {
+            "von": {
+              "wert": "nein"
+            },
+            "nach": 0
+          }
+        ],
+        "uebrige": "leer",
+        "fehlend": "leer",
+        "labels": {
+          "0": "nein",
+          "1": "ja"
+        }
+      },
+      "erwartet": {
+        "werte": [1, null, 1, null, null, 0, null, null, null, 1],
+        "ziel_format": "F8.0",
+        "vorschau": [
+          {
+            "alt": "ja",
+            "neu": 1,
+            "anzahl": 3
+          },
+          {
+            "alt": "Ja",
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": "JA",
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": " ja",
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": "nein",
+            "neu": 0,
+            "anzahl": 1
+          },
+          {
+            "alt": "Nein",
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": "vielleicht",
+            "neu": null,
+            "anzahl": 1
+          },
+          {
+            "alt": null,
+            "neu": null,
+            "anzahl": 1
+          }
+        ],
+        "varianten": [
+          {
+            "schluessel": "ja",
+            "varianten": [
+              {
+                "wert": "ja",
+                "anzahl": 3
+              },
+              {
+                "wert": "Ja",
+                "anzahl": 1
+              },
+              {
+                "wert": "JA",
+                "anzahl": 1
+              },
+              {
+                "wert": " ja",
+                "anzahl": 1
+              }
+            ]
+          },
+          {
+            "schluessel": "nein",
+            "varianten": [
+              {
+                "wert": "nein",
+                "anzahl": 1
+              },
+              {
+                "wert": "Nein",
+                "anzahl": 1
+              }
+            ]
+          }
+        ],
+        "abweichung": "PSPP: 'Ja', 'JA', ' ja' (Leerzeichen vorn) treffen die Regel 'ja' NICHT; 'ja ' (Leerzeichen hinten) schon (PSPP füllt Text auf). Darum der Hinweis."
+      }
+    },
+    {
+      "name": "u9_text_zahl_uebrige_wert",
+      "titel": "übrige = 99; leere Textzellen bleiben leer (nicht 99)",
+      "daten": {
+        "spalten": [
+          {
+            "name": "s",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A12",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            "ja"
+          ],
+          [
+            "Ja"
+          ],
+          [
+            "ja"
+          ],
+          [
+            "JA"
+          ],
+          [
+            " ja"
+          ],
+          [
+            "nein"
+          ],
+          [
+            "Nein"
+          ],
+          [
+            null
+          ],
+          [
+            "vielleicht"
+          ],
+          [
+            "ja"
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "s",
+        "ziel": "s_neu",
+        "regeln": [
+          {
+            "von": {
+              "wert": "ja"
+            },
+            "nach": 1
+          },
+          {
+            "von": {
+              "wert": "nein"
+            },
+            "nach": 0
+          }
+        ],
+        "uebrige": {
+          "wert": 99
+        },
+        "fehlend": "leer",
+        "labels": {}
+      },
+      "erwartet": {
+        "werte": [1, 99, 1, 99, 99, 0, 99, null, 99, 1],
+        "ziel_format": "F8.0"
+      }
+    },
+    {
+      "name": "u10_text_text",
+      "titel": "Text -> Text: STRING-Zielspalte in der Breite der Quelle, übrige übernehmen",
+      "daten": {
+        "spalten": [
+          {
+            "name": "s",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A12",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            "ja"
+          ],
+          [
+            "Ja"
+          ],
+          [
+            "ja"
+          ],
+          [
+            "JA"
+          ],
+          [
+            " ja"
+          ],
+          [
+            "nein"
+          ],
+          [
+            "Nein"
+          ],
+          [
+            null
+          ],
+          [
+            "vielleicht"
+          ],
+          [
+            "ja"
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "s",
+        "ziel": "s_neu",
+        "regeln": [
+          {
+            "von": {
+              "wert": "ja"
+            },
+            "nach": "J"
+          },
+          {
+            "von": {
+              "wert": "nein"
+            },
+            "nach": "N"
+          }
+        ],
+        "uebrige": "uebernehmen",
+        "fehlend": "leer",
+        "labels": {}
+      },
+      "erwartet": {
+        "werte": ["J", "Ja", "J", "JA", " ja", "N", "Nein", null, "vielleicht", "J"],
+        "ziel_format": "A12"
+      }
+    },
+    {
+      "name": "u11_apostroph",
+      "titel": "Apostroph im neuen Text wird verdoppelt",
+      "daten": {
+        "spalten": [
+          {
+            "name": "s",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A12",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            "ja"
+          ],
+          [
+            "Ja"
+          ],
+          [
+            "ja"
+          ],
+          [
+            "JA"
+          ],
+          [
+            " ja"
+          ],
+          [
+            "nein"
+          ],
+          [
+            "Nein"
+          ],
+          [
+            null
+          ],
+          [
+            "vielleicht"
+          ],
+          [
+            "ja"
+          ]
+        ]
+      },
+      "opt": {
+        "spalte": "s",
+        "ziel": "s_neu",
+        "regeln": [
+          {
+            "von": {
+              "wert": "ja"
+            },
+            "nach": "it's"
+          }
+        ],
+        "uebrige": "uebernehmen",
+        "fehlend": "leer",
+        "labels": {}
+      },
+      "erwartet": {
+        "werte": ["it's", "Ja", "it's", "JA", " ja", "nein", "Nein", null, "vielleicht", "it's"],
+        "ziel_format": "A12"
+      }
+    }
+  ],
+  "umpolen": {
+    "spalte_mit_labels": {
+      "spalte": {
+        "name": "f1",
+        "bezeichnung": "",
+        "art": "zahl",
+        "niveau": "ordinal",
+        "format": "F1.0",
+        "fehlend": [
+          9
+        ],
+        "fehlendText": "9",
+        "werteLabels": {
+          "1": "sehr selten",
+          "2": "selten",
+          "3": "manchmal",
+          "4": "oft",
+          "5": "sehr oft"
+        }
+      },
+      "werte": [1, 2, 3, 4, 9, null, 4, 2],
+      "spanne": {
+        "min": 1,
+        "max": 5
+      },
+      "quelle": "labels",
+      "erwartet": [5, 4, 3, 2, null, null, 2, 4]
+    },
+    "spalte_ohne_labels_nur_eigene_werte": {
+      "spalte": {
+        "name": "f2",
+        "bezeichnung": "",
+        "art": "zahl",
+        "niveau": "ordinal",
+        "format": "F1.0",
+        "fehlend": [
+          9
+        ],
+        "fehlendText": "9",
+        "werteLabels": {}
+      },
+      "werte": [1, 2, 3, 4, 9, null, 4, 2],
+      "spanne": {
+        "min": 1,
+        "max": 4
+      },
+      "quelle": "daten",
+      "erwartet": [4, 3, 2, 1, null, null, 1, 3]
+    },
+    "spalte_ohne_labels_alle_fragen": {
+      "spalte": {
+        "name": "f3",
+        "bezeichnung": "",
+        "art": "zahl",
+        "niveau": "ordinal",
+        "format": "F1.0",
+        "fehlend": [
+          9
+        ],
+        "fehlendText": "9",
+        "werteLabels": {}
+      },
+      "werte": [1, 2, 3, 4, 9, null, 4, 2],
+      "werte_alle": [1, 2, 3, 4, 9, null, 4, 2, 5, 5, 1],
+      "spanne": {
+        "min": 1,
+        "max": 5
+      },
+      "quelle": "daten",
+      "erwartet": [5, 4, 3, 2, null, null, 2, 4]
+    },
+    "spalte_fest": {
+      "spalte": {
+        "name": "f4",
+        "bezeichnung": "",
+        "art": "zahl",
+        "niveau": "ordinal",
+        "format": "F1.0",
+        "fehlend": [
+          9
+        ],
+        "fehlendText": "9",
+        "werteLabels": {}
+      },
+      "werte": [1, 2, 3, 4, 9, null, 4, 2],
+      "fest": {
+        "min": 1,
+        "max": 7
+      },
+      "spanne": {
+        "min": 1,
+        "max": 7
+      },
+      "quelle": "fest",
+      "erwartet": [7, 6, 5, 4, null, null, 4, 6]
+    }
+  },
+  "berechnen": {
+    "zeilen": {
+      "daten": {
+        "spalten": [
+          {
+            "name": "i1",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F1.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "i2",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F1.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "i3",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F2.0",
+            "fehlend": [
+              99
+            ],
+            "fehlendText": "99",
+            "werteLabels": {}
+          },
+          {
+            "name": "i4",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F1.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "i5",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F1.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            4,
+            3,
+            5,
+            2,
+            4
+          ],
+          [
+            3,
+            null,
+            4,
+            4,
+            5
+          ],
+          [
+            2,
+            null,
+            99,
+            null,
+            1
+          ],
+          [
+            null,
+            null,
+            3,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            5,
+            5,
+            null,
+            null,
+            4
+          ],
+          [
+            1,
+            null,
+            2,
+            null,
+            null
+          ],
+          [
+            null,
+            2,
+            null,
+            4,
+            null
+          ]
+        ]
+      },
+      "spalten": [
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5"
+      ],
+      "gueltige_je_zeile": [5, 4, 2, 1, 0, 3, 2, 2],
+      "summe_i1_i2": {
+        "ausdruck": "i1 + i2",
+        "erwartet": [7, null, null, null, null, 10, null, null]
+      },
+      "statistik": {
+        "mean_1": {
+          "fn": "MEAN",
+          "mindestens": 1,
+          "aufgeloest": 1,
+          "erwartet": [3.6, 4, 1.5, 3, null, 4.66666666666667, 1.5, 3]
+        },
+        "mean_2": {
+          "fn": "MEAN",
+          "mindestens": 2,
+          "aufgeloest": 2,
+          "erwartet": [3.6, 4, 1.5, null, null, 4.66666666666667, 1.5, 3]
+        },
+        "mean_haelfte": {
+          "fn": "MEAN",
+          "mindestens": "haelfte",
+          "aufgeloest": 3,
+          "erwartet": [3.6, 4, null, null, null, 4.66666666666667, null, null]
+        },
+        "sum_1": {
+          "fn": "SUM",
+          "mindestens": 1,
+          "aufgeloest": 1,
+          "erwartet": [18, 16, 3, 3, null, 14, 3, 6]
+        },
+        "sum_3": {
+          "fn": "SUM",
+          "mindestens": 3,
+          "aufgeloest": 3,
+          "erwartet": [18, 16, null, null, null, 14, null, null]
+        },
+        "min_1": {
+          "fn": "MIN",
+          "mindestens": 1,
+          "aufgeloest": 1,
+          "erwartet": [2, 3, 1, 3, null, 4, 1, 2]
+        },
+        "max_1": {
+          "fn": "MAX",
+          "mindestens": 1,
+          "aufgeloest": 1,
+          "erwartet": [5, 5, 2, 3, null, 5, 2, 4]
+        },
+        "sd_2": {
+          "fn": "SD",
+          "mindestens": 2,
+          "aufgeloest": 2,
+          "erwartet": [1.14017542509914, 0.816496580927726, 0.707106781186548, null, null, 0.577350269189626, 0.707106781186548, 1.4142135623731]
+        }
+      },
+      "abweichung_summe": "R rowSums(na.rm = TRUE) = 0 bei 0 gültigen Werten; PSPP SUM() = leer. Sollwert = leer."
+    },
+    "rechenfehler": {
+      "daten": {
+        "spalten": [
+          {
+            "name": "a",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F8.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "b",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F8.0",
+            "fehlend": [
+              99
+            ],
+            "fehlendText": "99",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            null,
+            3
+          ],
+          [
+            9,
+            99
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "geteilt": {
+        "ausdruck": "a / b",
+        "eingaben": [
+          "a",
+          "b"
+        ],
+        "erwartet": [2, 0, null, null, null, null],
+        "zaehlung": {
+          "leer": 4,
+          "luecken": 2,
+          "rechenfehler": 2
+        }
+      },
+      "ln": {
+        "ausdruck": "LN(a)",
+        "eingaben": [
+          "a"
+        ],
+        "erwartet": [1.38629436111989, null, null, null, 2.19722457733622, 0],
+        "zaehlung": {
+          "leer": 3,
+          "luecken": 1,
+          "rechenfehler": 2
+        }
+      },
+      "wurzel": {
+        "ausdruck": "SQRT(a)",
+        "eingaben": [
+          "a"
+        ],
+        "erwartet": [2, 0, null, null, 3, 1],
+        "zaehlung": {
+          "leer": 2,
+          "luecken": 1,
+          "rechenfehler": 1
+        }
+      }
+    },
+    "bedingung": {
+      "daten": {
+        "spalten": [
+          {
+            "name": "g",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F1.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "a",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F8.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            null,
+            7
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            null
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "bedingung": {
+        "teile": [
+          {
+            "spalte": "g",
+            "op": "=",
+            "wert": 1
+          },
+          {
+            "spalte": "a",
+            "op": ">",
+            "wert": 2
+          }
+        ],
+        "verknuepfung": "AND",
+        "text": "g = 1 AND a > 2"
+      },
+      "ausdruck": "a * 10",
+      "erwartet": [50, null, null, null, null, null, 30]
+    }
+  },
+  "auswaehlen": {
+    "daten": {
+      "spalten": [
+        {
+          "name": "id",
+          "bezeichnung": "",
+          "art": "zahl",
+          "niveau": "metrisch",
+          "format": "F2.0",
+          "fehlend": [],
+          "fehlendText": "",
+          "werteLabels": {}
+        },
+        {
+          "name": "alter",
+          "bezeichnung": "",
+          "art": "zahl",
+          "niveau": "metrisch",
+          "format": "F2.0",
+          "fehlend": [
+            99
+          ],
+          "fehlendText": "99",
+          "werteLabels": {}
+        },
+        {
+          "name": "gruppe",
+          "bezeichnung": "",
+          "art": "zahl",
+          "niveau": "metrisch",
+          "format": "F1.0",
+          "fehlend": [],
+          "fehlendText": "",
+          "werteLabels": {}
+        },
+        {
+          "name": "geschl",
+          "bezeichnung": "",
+          "art": "text",
+          "niveau": "nominal",
+          "format": "A3",
+          "fehlend": [],
+          "fehlendText": "",
+          "werteLabels": {}
+        }
+      ],
+      "zeilen": [
+        [
+          1,
+          20,
+          1,
+          "w"
+        ],
+        [
+          2,
+          15,
+          2,
+          "m"
+        ],
+        [
+          3,
+          null,
+          1,
+          "w"
+        ],
+        [
+          4,
+          30,
+          null,
+          null
+        ],
+        [
+          5,
+          18,
+          2,
+          "m"
+        ],
+        [
+          6,
+          99,
+          1,
+          "w"
+        ],
+        [
+          7,
+          17,
+          2,
+          null
+        ],
+        [
+          8,
+          18,
+          1,
+          "w"
+        ],
+        [
+          9,
+          null,
+          2,
+          "m"
+        ],
+        [
+          10,
+          40,
+          1,
+          "w"
+        ]
+      ]
+    },
+    "faelle": [
+      {
+        "name": "alter_ab_18",
+        "bedingung": {
+          "teile": [
+            {
+              "spalte": "alter",
+              "op": ">=",
+              "wert": 18
+            }
+          ],
+          "verknuepfung": "AND",
+          "text": "alter >= 18"
+        },
+        "auswahl": [1, 0, null, 1, 1, null, 0, 1, null, 1],
+        "zaehlung": {
+          "erfuellt": 5,
+          "nicht": 2,
+          "leer": 3
+        },
+        "entfernt": 5,
+        "behalten_ids": [1, 4, 5, 8, 10]
+      },
+      {
+        "name": "und_gruppe_1",
+        "bedingung": {
+          "teile": [
+            {
+              "spalte": "alter",
+              "op": ">=",
+              "wert": 18
+            },
+            {
+              "spalte": "gruppe",
+              "op": "=",
+              "wert": 1
+            }
+          ],
+          "verknuepfung": "AND",
+          "text": "alter >= 18 AND gruppe = 1"
+        },
+        "auswahl": [1, 0, null, null, 0, null, 0, 1, 0, 1],
+        "zaehlung": {
+          "erfuellt": 3,
+          "nicht": 4,
+          "leer": 3
+        },
+        "entfernt": 7,
+        "behalten_ids": [1, 8, 10]
+      },
+      {
+        "name": "oder_text",
+        "bedingung": {
+          "teile": [
+            {
+              "spalte": "geschl",
+              "op": "=",
+              "wert": "w"
+            },
+            {
+              "spalte": "alter",
+              "op": "<",
+              "wert": 18
+            }
+          ],
+          "verknuepfung": "OR",
+          "text": "geschl = 'w' OR alter < 18"
+        },
+        "auswahl": [1, 1, 1, null, 0, 1, 1, 1, null, 1],
+        "zaehlung": {
+          "erfuellt": 7,
+          "nicht": 1,
+          "leer": 2
+        },
+        "entfernt": 3,
+        "behalten_ids": [1, 2, 3, 6, 7, 8, 10]
+      }
+    ],
+    "apostroph": {
+      "teile": [
+        {
+          "spalte": "geschl",
+          "op": "=",
+          "wert": "O'Brien"
+        }
+      ],
+      "verknuepfung": "AND",
+      "text": "geschl = 'O''Brien'"
+    }
+  },
+  "anhaengen": {
+    "z1_spalten_nur_in_einer": {
+      "a": {
+        "spalten": [
+          {
+            "name": "id",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F2.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "a",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [
+              9
+            ],
+            "fehlendText": "9",
+            "werteLabels": {}
+          },
+          {
+            "name": "b",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            10,
+            1
+          ],
+          [
+            2,
+            9,
+            null
+          ],
+          [
+            3,
+            30,
+            3
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "id",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F2.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "b",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "c",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            4,
+            5,
+            7
+          ],
+          [
+            5,
+            6,
+            null
+          ]
+        ]
+      },
+      "pruefen": {
+        "nurA": [
+          "a"
+        ],
+        "nurB": [
+          "c"
+        ],
+        "gemeinsam": [
+          "id",
+          "b"
+        ],
+        "typkonflikte": [],
+        "moeglich": true
+      },
+      "ergebnis_spalten": [
+        "id",
+        "a",
+        "b",
+        "c"
+      ],
+      "ergebnis": [
+        [
+          1,
+          10,
+          1,
+          null
+        ],
+        [
+          2,
+          9,
+          null,
+          null
+        ],
+        [
+          3,
+          30,
+          3,
+          null
+        ],
+        [
+          4,
+          null,
+          5,
+          7
+        ],
+        [
+          5,
+          null,
+          6,
+          null
+        ]
+      ],
+      "ergebnis_fehlend_a": [
+        9
+      ]
+    },
+    "z2_namen_gross_klein": {
+      "a": {
+        "spalten": [
+          {
+            "name": "id",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F2.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "Alter",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            20
+          ],
+          [
+            2,
+            30
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "ID",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F2.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "alter",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            3,
+            40
+          ]
+        ]
+      },
+      "pruefen": {
+        "nurA": [],
+        "nurB": [],
+        "gemeinsam": [
+          "id",
+          "Alter"
+        ],
+        "typkonflikte": [],
+        "moeglich": true
+      },
+      "ergebnis_spalten": [
+        "id",
+        "Alter"
+      ],
+      "ergebnis": [
+        [
+          1,
+          20
+        ],
+        [
+          2,
+          30
+        ],
+        [
+          3,
+          40
+        ]
+      ]
+    },
+    "z3_typkonflikt": {
+      "a": {
+        "spalten": [
+          {
+            "name": "id",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F2.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "code",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A5",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            "x"
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "id",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F2.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "code",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "pruefen": {
+        "nurA": [],
+        "nurB": [],
+        "gemeinsam": [
+          "id",
+          "code"
+        ],
+        "typkonflikte": [
+          {
+            "name": "code",
+            "a": "text",
+            "b": "zahl"
+          }
+        ],
+        "moeglich": false
+      }
+    },
+    "z4_textbreite": {
+      "a": {
+        "spalten": [
+          {
+            "name": "id",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F2.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "t",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A3",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            "abc"
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "id",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F2.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "t",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A8",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            2,
+            "abcdefgh"
+          ]
+        ]
+      },
+      "pruefen": {
+        "nurA": [],
+        "nurB": [],
+        "gemeinsam": [
+          "id",
+          "t"
+        ],
+        "typkonflikte": [],
+        "moeglich": true
+      },
+      "ergebnis_spalten": [
+        "id",
+        "t"
+      ],
+      "ergebnis": [
+        [
+          1,
+          "abc"
+        ],
+        [
+          2,
+          "abcdefgh"
+        ]
+      ]
+    }
+  },
+  "zuordnen": {
+    "m1_viele_zu_eins": {
+      "beziehung": "viele:1",
+      "a": {
+        "spalten": [
+          {
+            "name": "pid",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "kl",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            10,
+            5
+          ],
+          [
+            2,
+            10,
+            6
+          ],
+          [
+            3,
+            20,
+            7
+          ],
+          [
+            4,
+            30,
+            8
+          ],
+          [
+            5,
+            null,
+            9
+          ],
+          [
+            6,
+            20,
+            1
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "kl",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "lehrer",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A6",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "groesse",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            40,
+            "Gruber",
+            30
+          ],
+          [
+            10,
+            "Mayer",
+            21
+          ],
+          [
+            50,
+            "Leer",
+            12
+          ],
+          [
+            20,
+            "Huber",
+            25
+          ]
+        ]
+      },
+      "kennungA": "kl",
+      "kennungB": "kl",
+      "pruefen": {
+        "a": {
+          "faelle": 6,
+          "ohneKennung": 1,
+          "ohnePartner": [
+            30
+          ],
+          "faelleOhnePartner": 1,
+          "doppelt": [
+            10,
+            20
+          ]
+        },
+        "b": {
+          "faelle": 4,
+          "ohneKennung": 0,
+          "ohnePartner": [
+            40,
+            50
+          ],
+          "faelleOhnePartner": 2,
+          "doppelt": []
+        },
+        "entfallenB": 2,
+        "sperren": [],
+        "hinweise": []
+      },
+      "ergebnis_spalten": [
+        "pid",
+        "kl",
+        "x",
+        "lehrer",
+        "groesse"
+      ],
+      "ergebnis": [
+        [
+          1,
+          10,
+          5,
+          "Mayer",
+          21
+        ],
+        [
+          2,
+          10,
+          6,
+          "Mayer",
+          21
+        ],
+        [
+          3,
+          20,
+          7,
+          "Huber",
+          25
+        ],
+        [
+          4,
+          30,
+          8,
+          null,
+          null
+        ],
+        [
+          5,
+          null,
+          9,
+          null,
+          null
+        ],
+        [
+          6,
+          20,
+          1,
+          "Huber",
+          25
+        ]
+      ]
+    },
+    "m2_eins_zu_eins": {
+      "beziehung": "1:1",
+      "a": {
+        "spalten": [
+          {
+            "name": "id",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A4",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "score",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            "P01",
+            10
+          ],
+          [
+            "P02",
+            20
+          ],
+          [
+            "P03",
+            30
+          ],
+          [
+            "P04",
+            40
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "id",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A4",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "extra",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            "P06",
+            6
+          ],
+          [
+            "P02",
+            2
+          ],
+          [
+            "P05",
+            5
+          ],
+          [
+            "P03",
+            3
+          ]
+        ]
+      },
+      "kennungA": "id",
+      "kennungB": "id",
+      "pruefen": {
+        "a": {
+          "faelle": 4,
+          "ohneKennung": 0,
+          "ohnePartner": [
+            "P01",
+            "P04"
+          ],
+          "faelleOhnePartner": 2,
+          "doppelt": []
+        },
+        "b": {
+          "faelle": 4,
+          "ohneKennung": 0,
+          "ohnePartner": [
+            "P06",
+            "P05"
+          ],
+          "faelleOhnePartner": 2,
+          "doppelt": []
+        },
+        "entfallenB": 0,
+        "sperren": [],
+        "hinweise": []
+      },
+      "ergebnis_spalten": [
+        "id",
+        "score",
+        "extra"
+      ],
+      "ergebnis": [
+        [
+          "P01",
+          10,
+          null
+        ],
+        [
+          "P02",
+          20,
+          2
+        ],
+        [
+          "P03",
+          30,
+          3
+        ],
+        [
+          "P04",
+          40,
+          null
+        ],
+        [
+          "P05",
+          null,
+          5
+        ],
+        [
+          "P06",
+          null,
+          6
+        ]
+      ],
+      "regel": "1:1 (FILE + FILE): Fälle nur in B kommen ans ENDE des Ergebnisses (A-Spalten leer). viele:1 (TABLE): Fälle nur in B fallen weg."
+    },
+    "m3_doppelt_in_tabelle": {
+      "beziehung": "viele:1",
+      "a": {
+        "spalten": [
+          {
+            "name": "pid",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "kl",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            10,
+            5
+          ],
+          [
+            2,
+            10,
+            6
+          ],
+          [
+            3,
+            20,
+            7
+          ],
+          [
+            4,
+            30,
+            8
+          ],
+          [
+            5,
+            null,
+            9
+          ],
+          [
+            6,
+            20,
+            1
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "kl",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "lehrer",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A6",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            10,
+            "Mayer"
+          ],
+          [
+            10,
+            "Zweiter"
+          ],
+          [
+            20,
+            "Huber"
+          ]
+        ]
+      },
+      "kennungA": "kl",
+      "kennungB": "kl",
+      "sperren": [
+        {
+          "art": "doppelt",
+          "seite": "b",
+          "kennungen": [
+            10
+          ]
+        }
+      ],
+      "abweichung": "PSPP meldet nichts und nimmt still die erste Zeile (Mayer).",
+      "pspp_naiv_lehrer": ["Mayer", "Mayer", "Huber", null, null, "Huber"]
+    },
+    "m4_eins_zu_eins_doppelt": {
+      "beziehung": "1:1",
+      "a": {
+        "spalten": [
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "y",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      "kennungA": "k",
+      "kennungB": "k",
+      "sperren": [
+        {
+          "art": "doppelt",
+          "seite": "a",
+          "kennungen": [
+            1
+          ]
+        },
+        {
+          "art": "doppelt",
+          "seite": "b",
+          "kennungen": [
+            2
+          ]
+        }
+      ],
+      "abweichung": "PSPP 1:1 mit doppelter Kennung in A: nur die erste Zeile findet den Partner, die zweite bleibt leer (still)."
+    },
+    "m5_kennung_fehlt_beidseitig": {
+      "beziehung": "viele:1",
+      "a": {
+        "spalten": [
+          {
+            "name": "pid",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "kl",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            null
+          ],
+          [
+            3,
+            20
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "kl",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "lehrer",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A6",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            null,
+            "Null"
+          ],
+          [
+            10,
+            "Mayer"
+          ],
+          [
+            20,
+            "Huber"
+          ]
+        ]
+      },
+      "kennungA": "kl",
+      "kennungB": "kl",
+      "pruefen": {
+        "a": {
+          "faelle": 3,
+          "ohneKennung": 1,
+          "ohnePartner": [],
+          "faelleOhnePartner": 0,
+          "doppelt": []
+        },
+        "b": {
+          "faelle": 3,
+          "ohneKennung": 1,
+          "ohnePartner": [],
+          "faelleOhnePartner": 0,
+          "doppelt": []
+        },
+        "entfallenB": 1,
+        "sperren": [],
+        "hinweise": []
+      },
+      "ergebnis_spalten": [
+        "pid",
+        "kl",
+        "lehrer"
+      ],
+      "ergebnis": [
+        [
+          1,
+          10,
+          "Mayer"
+        ],
+        [
+          2,
+          null,
+          null
+        ],
+        [
+          3,
+          20,
+          "Huber"
+        ]
+      ],
+      "abweichung": "PSPP verbindet fehlende Kennung mit fehlender Kennung (pid 2 bekäme 'Null'). Statable: Fälle ohne Kennung finden nie einen Partner; in B fallen sie weg (gezählt).",
+      "pspp_naiv_lehrer": ["Mayer", "Null", "Huber"]
+    },
+    "m6_kennung_typ": {
+      "beziehung": "viele:1",
+      "a": {
+        "spalten": [
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A3",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "y",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            "1",
+            7
+          ],
+          [
+            "2",
+            8
+          ]
+        ]
+      },
+      "kennungA": "k",
+      "kennungB": "k",
+      "sperren": [
+        {
+          "art": "typ",
+          "a": "zahl",
+          "b": "text"
+        }
+      ]
+    },
+    "m7_text_kennung": {
+      "beziehung": "viele:1",
+      "a": {
+        "spalten": [
+          {
+            "name": "pid",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A8",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            "A01"
+          ],
+          [
+            2,
+            "007"
+          ],
+          [
+            3,
+            " 7"
+          ],
+          [
+            4,
+            "a01"
+          ],
+          [
+            5,
+            "B02"
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A8",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "wert",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            "A01",
+            1
+          ],
+          [
+            "7",
+            2
+          ],
+          [
+            "b02",
+            3
+          ]
+        ]
+      },
+      "kennungA": "k",
+      "kennungB": "k",
+      "pruefen": {
+        "a": {
+          "faelle": 5,
+          "ohneKennung": 0,
+          "ohnePartner": [
+            "007",
+            " 7",
+            "a01",
+            "B02"
+          ],
+          "faelleOhnePartner": 4,
+          "doppelt": []
+        },
+        "b": {
+          "faelle": 3,
+          "ohneKennung": 0,
+          "ohnePartner": [
+            "7",
+            "b02"
+          ],
+          "faelleOhnePartner": 2,
+          "doppelt": []
+        },
+        "entfallenB": 2,
+        "sperren": [],
+        "hinweise": [
+          {
+            "art": "schreibweise",
+            "zusaetzlich": 4
+          }
+        ]
+      },
+      "ergebnis_spalten": [
+        "pid",
+        "k",
+        "wert"
+      ],
+      "ergebnis": [
+        [
+          1,
+          "A01",
+          1
+        ],
+        [
+          2,
+          "007",
+          null
+        ],
+        [
+          3,
+          " 7",
+          null
+        ],
+        [
+          4,
+          "a01",
+          null
+        ],
+        [
+          5,
+          "B02",
+          null
+        ]
+      ],
+      "abweichung": "PSPP: 'A01' ~ 'A01' passt, 'a01', '007', ' 7' nicht; '7  ' (Leerzeichen HINTEN) passt zu '7'.",
+      "normalisiert": {
+        "eingabe": [
+          "A01",
+          "007",
+          " 7",
+          "a01",
+          "B02",
+          "000",
+          "0",
+          "00A",
+          " B02 "
+        ],
+        "erwartet": [
+          "a01",
+          "7",
+          "7",
+          "a01",
+          "b02",
+          "0",
+          "0",
+          "00a",
+          "b02"
+        ]
+      }
+    },
+    "m7b_doppelt_hinten": {
+      "beziehung": "viele:1",
+      "a": {
+        "spalten": [
+          {
+            "name": "pid",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A8",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            "A01"
+          ],
+          [
+            2,
+            "007"
+          ],
+          [
+            3,
+            " 7"
+          ],
+          [
+            4,
+            "a01"
+          ],
+          [
+            5,
+            "B02"
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A8",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "wert",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            "7",
+            1
+          ],
+          [
+            "7 ",
+            2
+          ],
+          [
+            "A01",
+            3
+          ]
+        ]
+      },
+      "kennungA": "k",
+      "kennungB": "k",
+      "sperren": [
+        {
+          "art": "doppelt",
+          "seite": "b",
+          "kennungen": [
+            "7"
+          ]
+        }
+      ]
+    },
+    "m8_namenskonflikt": {
+      "beziehung": "viele:1",
+      "a": {
+        "spalten": [
+          {
+            "name": "pid",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "kl",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "note",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A5",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            10,
+            "a",
+            5
+          ],
+          [
+            2,
+            20,
+            "b",
+            6
+          ],
+          [
+            3,
+            30,
+            "c",
+            7
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "klasse",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "note",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A5",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "y",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            10,
+            "zz",
+            55,
+            1
+          ],
+          [
+            20,
+            "yy",
+            66,
+            2
+          ]
+        ]
+      },
+      "kennungA": "kl",
+      "kennungB": "klasse",
+      "konflikte": [
+        {
+          "name": "note",
+          "vorschlag": "note_2"
+        },
+        {
+          "name": "x",
+          "vorschlag": "x_2"
+        }
+      ],
+      "umbenennen": {
+        "note": "note_2",
+        "x": "x_2"
+      },
+      "sperren_ohne_umbenennen": [
+        {
+          "art": "namen",
+          "konflikte": [
+            {
+              "name": "note",
+              "vorschlag": "note_2"
+            },
+            {
+              "name": "x",
+              "vorschlag": "x_2"
+            }
+          ]
+        }
+      ],
+      "ergebnis_spalten": [
+        "pid",
+        "kl",
+        "note",
+        "x",
+        "note_2",
+        "x_2",
+        "y"
+      ],
+      "ergebnis": [
+        [
+          1,
+          10,
+          "a",
+          5,
+          "zz",
+          55,
+          1
+        ],
+        [
+          2,
+          20,
+          "b",
+          6,
+          "yy",
+          66,
+          2
+        ],
+        [
+          3,
+          30,
+          "c",
+          7,
+          null,
+          null,
+          null
+        ]
+      ],
+      "abweichung": "Ohne Umbenennen gewinnt in PSPP die Spalte der ersten Datei; note und x der zweiten fallen still weg (Beleg: pspp_naiv_spalten).",
+      "pspp_naiv_spalten": [
+        "pid",
+        "kl",
+        "note",
+        "x",
+        "y"
+      ]
+    },
+    "m8b_vorschlag_vergeben": {
+      "a": {
+        "spalten": [
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "x_2",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "b": {
+        "spalten": [
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F3.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "kennungA": "k",
+      "kennungB": "k",
+      "konflikte": [
+        {
+          "name": "x",
+          "vorschlag": "x_3"
+        }
+      ]
+    }
+  },
+  "aggregieren": {
+    "daten": {
+      "spalten": [
+        {
+          "name": "id",
+          "bezeichnung": "",
+          "art": "zahl",
+          "niveau": "metrisch",
+          "format": "F2.0",
+          "fehlend": [],
+          "fehlendText": "",
+          "werteLabels": {}
+        },
+        {
+          "name": "g",
+          "bezeichnung": "",
+          "art": "zahl",
+          "niveau": "metrisch",
+          "format": "F1.0",
+          "fehlend": [],
+          "fehlendText": "",
+          "werteLabels": {}
+        },
+        {
+          "name": "h",
+          "bezeichnung": "",
+          "art": "text",
+          "niveau": "nominal",
+          "format": "A3",
+          "fehlend": [],
+          "fehlendText": "",
+          "werteLabels": {}
+        },
+        {
+          "name": "x",
+          "bezeichnung": "",
+          "art": "zahl",
+          "niveau": "metrisch",
+          "format": "F4.1",
+          "fehlend": [
+            99
+          ],
+          "fehlendText": "99",
+          "werteLabels": {}
+        },
+        {
+          "name": "y",
+          "bezeichnung": "",
+          "art": "zahl",
+          "niveau": "metrisch",
+          "format": "F4.1",
+          "fehlend": [],
+          "fehlendText": "",
+          "werteLabels": {}
+        }
+      ],
+      "zeilen": [
+        [
+          1,
+          1,
+          "a",
+          2,
+          1.5
+        ],
+        [
+          2,
+          1,
+          "a",
+          4,
+          2.5
+        ],
+        [
+          3,
+          1,
+          "b",
+          9,
+          null
+        ],
+        [
+          4,
+          2,
+          "b",
+          5,
+          4
+        ],
+        [
+          5,
+          2,
+          "b",
+          null,
+          5
+        ],
+        [
+          6,
+          2,
+          "a",
+          7,
+          6
+        ],
+        [
+          7,
+          null,
+          "a",
+          3,
+          7
+        ],
+        [
+          8,
+          null,
+          "a",
+          8,
+          8
+        ],
+        [
+          9,
+          3,
+          "a",
+          6,
+          9
+        ],
+        [
+          10,
+          3,
+          "b",
+          99,
+          10
+        ],
+        [
+          11,
+          2,
+          "b",
+          10,
+          11
+        ],
+        [
+          12,
+          null,
+          "b",
+          1,
+          12
+        ],
+        [
+          13,
+          4,
+          "a",
+          null,
+          13
+        ],
+        [
+          14,
+          4,
+          "b",
+          99,
+          14
+        ],
+        [
+          15,
+          1,
+          "b",
+          10,
+          15
+        ],
+        [
+          16,
+          1,
+          "a",
+          4,
+          16
+        ]
+      ]
+    },
+    "nach_g": {
+      "name": "nach_g",
+      "gruppen": [
+        "g"
+      ],
+      "zeilen": [
+        {
+          "schluessel": [
+            null
+          ],
+          "N": 3,
+          "NX": 3,
+          "NU": 3,
+          "NUX": 3,
+          "NMISS": 0,
+          "MEAN": 4,
+          "SD": 3.60555127546399,
+          "MEDIAN": 3,
+          "MIN": 1,
+          "MAX": 8,
+          "SUM": 12
+        },
+        {
+          "schluessel": [
+            1
+          ],
+          "N": 5,
+          "NX": 5,
+          "NU": 5,
+          "NUX": 5,
+          "NMISS": 0,
+          "MEAN": 5.8,
+          "SD": 3.4928498393146,
+          "MEDIAN": 4,
+          "MIN": 2,
+          "MAX": 10,
+          "SUM": 29
+        },
+        {
+          "schluessel": [
+            2
+          ],
+          "N": 4,
+          "NX": 3,
+          "NU": 4,
+          "NUX": 3,
+          "NMISS": 1,
+          "MEAN": 7.33333333333333,
+          "SD": 2.51661147842358,
+          "MEDIAN": 7,
+          "MIN": 5,
+          "MAX": 10,
+          "SUM": 22
+        },
+        {
+          "schluessel": [
+            3
+          ],
+          "N": 2,
+          "NX": 1,
+          "NU": 2,
+          "NUX": 1,
+          "NMISS": 1,
+          "MEAN": 6,
+          "SD": null,
+          "MEDIAN": 6,
+          "MIN": 6,
+          "MAX": 6,
+          "SUM": 6
+        },
+        {
+          "schluessel": [
+            4
+          ],
+          "N": 2,
+          "NX": 0,
+          "NU": 2,
+          "NUX": 0,
+          "NMISS": 2,
+          "MEAN": null,
+          "SD": null,
+          "MEDIAN": null,
+          "MIN": null,
+          "MAX": null,
+          "SUM": null
+        }
+      ]
+    },
+    "nach_h_und_g": {
+      "name": "nach_h_und_g",
+      "gruppen": [
+        "h",
+        "g"
+      ],
+      "zeilen": [
+        {
+          "schluessel": [
+            "a",
+            null
+          ],
+          "N": 2,
+          "NX": 2,
+          "NU": 2,
+          "NUX": 2,
+          "NMISS": 0,
+          "MEAN": 5.5,
+          "SD": 3.53553390593274,
+          "MEDIAN": 5.5,
+          "MIN": 3,
+          "MAX": 8,
+          "SUM": 11
+        },
+        {
+          "schluessel": [
+            "a",
+            1
+          ],
+          "N": 3,
+          "NX": 3,
+          "NU": 3,
+          "NUX": 3,
+          "NMISS": 0,
+          "MEAN": 3.33333333333333,
+          "SD": 1.15470053837925,
+          "MEDIAN": 4,
+          "MIN": 2,
+          "MAX": 4,
+          "SUM": 10
+        },
+        {
+          "schluessel": [
+            "a",
+            2
+          ],
+          "N": 1,
+          "NX": 1,
+          "NU": 1,
+          "NUX": 1,
+          "NMISS": 0,
+          "MEAN": 7,
+          "SD": null,
+          "MEDIAN": 7,
+          "MIN": 7,
+          "MAX": 7,
+          "SUM": 7
+        },
+        {
+          "schluessel": [
+            "a",
+            3
+          ],
+          "N": 1,
+          "NX": 1,
+          "NU": 1,
+          "NUX": 1,
+          "NMISS": 0,
+          "MEAN": 6,
+          "SD": null,
+          "MEDIAN": 6,
+          "MIN": 6,
+          "MAX": 6,
+          "SUM": 6
+        },
+        {
+          "schluessel": [
+            "a",
+            4
+          ],
+          "N": 1,
+          "NX": 0,
+          "NU": 1,
+          "NUX": 0,
+          "NMISS": 1,
+          "MEAN": null,
+          "SD": null,
+          "MEDIAN": null,
+          "MIN": null,
+          "MAX": null,
+          "SUM": null
+        },
+        {
+          "schluessel": [
+            "b",
+            null
+          ],
+          "N": 1,
+          "NX": 1,
+          "NU": 1,
+          "NUX": 1,
+          "NMISS": 0,
+          "MEAN": 1,
+          "SD": null,
+          "MEDIAN": 1,
+          "MIN": 1,
+          "MAX": 1,
+          "SUM": 1
+        },
+        {
+          "schluessel": [
+            "b",
+            1
+          ],
+          "N": 2,
+          "NX": 2,
+          "NU": 2,
+          "NUX": 2,
+          "NMISS": 0,
+          "MEAN": 9.5,
+          "SD": 0.707106781186548,
+          "MEDIAN": 9.5,
+          "MIN": 9,
+          "MAX": 10,
+          "SUM": 19
+        },
+        {
+          "schluessel": [
+            "b",
+            2
+          ],
+          "N": 3,
+          "NX": 2,
+          "NU": 3,
+          "NUX": 2,
+          "NMISS": 1,
+          "MEAN": 7.5,
+          "SD": 3.53553390593274,
+          "MEDIAN": 7.5,
+          "MIN": 5,
+          "MAX": 10,
+          "SUM": 15
+        },
+        {
+          "schluessel": [
+            "b",
+            3
+          ],
+          "N": 1,
+          "NX": 0,
+          "NU": 1,
+          "NUX": 0,
+          "NMISS": 1,
+          "MEAN": null,
+          "SD": null,
+          "MEDIAN": null,
+          "MIN": null,
+          "MAX": null,
+          "SUM": null
+        },
+        {
+          "schluessel": [
+            "b",
+            4
+          ],
+          "N": 1,
+          "NX": 0,
+          "NU": 1,
+          "NUX": 0,
+          "NMISS": 1,
+          "MEAN": null,
+          "SD": null,
+          "MEDIAN": null,
+          "MIN": null,
+          "MAX": null,
+          "SUM": null
+        }
+      ]
+    },
+    "abweichung": {
+      "median_leer": "PSPP AGGREGATE MEDIAN gibt bei einer Gruppe ohne gültigen Wert NaN (CSV: 'nan'), kein Fehlend. Sollwert: leer (R: NA).",
+      "summe_leer": "R sum(numeric(0)) = 0; PSPP SUM() = leer. Sollwert: leer.",
+      "n_und_nu": "Fachblatt: 'N vs. NU (mit/ohne fehlende)'. PSPP: N = Fälle der Gruppe, N(x) = gültige Werte von x, NU/NU(x) = dasselbe ohne Gewichte. Statable hat keine Gewichte, also NU = N. Mit/ohne fehlende unterscheiden N und N(x).",
+      "fehlende_gruppe": "Fehlende Gruppenangabe (leer) ist eine eigene Gruppe, steht ZUERST. Benutzerdefiniert fehlend (g = 9 mit MISSING VALUES) ist ZUSÄTZLICH eine eigene Gruppe '9' (nach den gültigen)."
+    },
+    "gruppe_mit_9": {
+      "daten": {
+        "spalten": [
+          {
+            "name": "g",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F1.0",
+            "fehlend": [
+              9
+            ],
+            "fehlendText": "9",
+            "werteLabels": {}
+          },
+          {
+            "name": "x",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F1.0",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            null,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "gruppen": [
+        "g"
+      ],
+      "uebersicht": {
+        "gruppen": 4,
+        "ohneAngabe": 3
+      },
+      "zeilen": [
+        {
+          "schluessel": [
+            null
+          ],
+          "N": 1,
+          "MEAN": 5
+        },
+        {
+          "schluessel": [
+            1
+          ],
+          "N": 2,
+          "MEAN": 1.5
+        },
+        {
+          "schluessel": [
+            2
+          ],
+          "N": 1,
+          "MEAN": 6
+        },
+        {
+          "schluessel": [
+            9
+          ],
+          "N": 2,
+          "MEAN": 3.5
+        }
+      ]
+    },
+    "uebersicht_nach_g": {
+      "gruppen": 5,
+      "ohneAngabe": 3
+    },
+    "uebersicht_nach_h_und_g": {
+      "gruppen": 10,
+      "ohneAngabe": 3
+    }
+  },
+  "doppelte": {
+    "daten": {
+      "spalten": [
+        {
+          "name": "nr",
+          "bezeichnung": "",
+          "art": "zahl",
+          "niveau": "metrisch",
+          "format": "F2.0",
+          "fehlend": [],
+          "fehlendText": "",
+          "werteLabels": {}
+        },
+        {
+          "name": "name",
+          "bezeichnung": "",
+          "art": "text",
+          "niveau": "nominal",
+          "format": "A14",
+          "fehlend": [],
+          "fehlendText": "",
+          "werteLabels": {}
+        },
+        {
+          "name": "plz",
+          "bezeichnung": "",
+          "art": "zahl",
+          "niveau": "metrisch",
+          "format": "F5.0",
+          "fehlend": [],
+          "fehlendText": "",
+          "werteLabels": {}
+        }
+      ],
+      "zeilen": [
+        [
+          1,
+          "Anna Berg",
+          10115
+        ],
+        [
+          2,
+          "anna berg",
+          10115
+        ],
+        [
+          3,
+          " Anna Berg ",
+          10115
+        ],
+        [
+          4,
+          "Anna Berg",
+          10116
+        ],
+        [
+          5,
+          "Äsop",
+          1
+        ],
+        [
+          6,
+          "Äsop",
+          1
+        ],
+        [
+          7,
+          "Straße",
+          2
+        ],
+        [
+          8,
+          "STRASSE",
+          2
+        ],
+        [
+          9,
+          " Anna Berg",
+          10115
+        ],
+        [
+          10,
+          "Bernd",
+          5
+        ],
+        [
+          11,
+          "bernd",
+          5
+        ],
+        [
+          12,
+          "Bernd",
+          5
+        ]
+      ]
+    },
+    "normalisiert": {
+      "name": "normalisiert",
+      "spalten": [
+        "name",
+        "plz"
+      ],
+      "genau": false,
+      "fehlendGleich": true,
+      "markierung": [0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1],
+      "gruppen": [
+        {
+          "zeilen": [
+            1,
+            2,
+            3,
+            9
+          ],
+          "anzahl": 4
+        },
+        {
+          "zeilen": [
+            5,
+            6
+          ],
+          "anzahl": 2
+        },
+        {
+          "zeilen": [
+            10,
+            11,
+            12
+          ],
+          "anzahl": 3
+        }
+      ],
+      "wiederholungen": 6,
+      "nichtPruefbar": 0
+    },
+    "genau": {
+      "name": "genau",
+      "spalten": [
+        "name",
+        "plz"
+      ],
+      "genau": true,
+      "fehlendGleich": true,
+      "markierung": [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+      "gruppen": [
+        {
+          "zeilen": [
+            5,
+            6
+          ],
+          "anzahl": 2
+        },
+        {
+          "zeilen": [
+            10,
+            12
+          ],
+          "anzahl": 2
+        }
+      ],
+      "wiederholungen": 2,
+      "nichtPruefbar": 0
+    },
+    "nur_name": {
+      "name": "nur_name",
+      "spalten": [
+        "name"
+      ],
+      "genau": false,
+      "fehlendGleich": true,
+      "markierung": [0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1],
+      "gruppen": [
+        {
+          "zeilen": [
+            1,
+            2,
+            3,
+            4,
+            9
+          ],
+          "anzahl": 5
+        },
+        {
+          "zeilen": [
+            5,
+            6
+          ],
+          "anzahl": 2
+        },
+        {
+          "zeilen": [
+            10,
+            11,
+            12
+          ],
+          "anzahl": 3
+        }
+      ],
+      "wiederholungen": 7,
+      "nichtPruefbar": 0
+    },
+    "alle_spalten": {
+      "name": "alle_spalten",
+      "spalten": [],
+      "genau": false,
+      "fehlendGleich": true,
+      "markierung": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "gruppen": [],
+      "wiederholungen": 0,
+      "nichtPruefbar": 0
+    },
+    "zahlen": {
+      "daten": {
+        "spalten": [
+          {
+            "name": "v",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F16.2",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          },
+          {
+            "name": "t",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A4",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            "1"
+          ],
+          [
+            1,
+            "1.0"
+          ],
+          [
+            0.30000000000000004,
+            "01"
+          ],
+          [
+            0.3,
+            " 1"
+          ],
+          [
+            123456789012345,
+            "1"
+          ],
+          [
+            123456789012346,
+            "x"
+          ],
+          [
+            2,
+            "X"
+          ]
+        ]
+      },
+      "name": "zahlen_v",
+      "spalten": [
+        "v"
+      ],
+      "genau": false,
+      "fehlendGleich": true,
+      "markierung": [0, 1, 0, 1, 0, 0, 0],
+      "gruppen": [
+        {
+          "zeilen": [
+            1,
+            2
+          ],
+          "anzahl": 2
+        },
+        {
+          "zeilen": [
+            3,
+            4
+          ],
+          "anzahl": 2
+        }
+      ],
+      "wiederholungen": 2,
+      "nichtPruefbar": 0
+    },
+    "text_ziffern": {
+      "name": "text_ziffern",
+      "spalten": [
+        "t"
+      ],
+      "genau": false,
+      "fehlendGleich": true,
+      "markierung": [0, 0, 0, 1, 1, 0, 1],
+      "gruppen": [
+        {
+          "zeilen": [
+            1,
+            4,
+            5
+          ],
+          "anzahl": 3
+        },
+        {
+          "zeilen": [
+            6,
+            7
+          ],
+          "anzahl": 2
+        }
+      ],
+      "wiederholungen": 3,
+      "nichtPruefbar": 0
+    },
+    "fehlend": {
+      "daten": {
+        "spalten": [
+          {
+            "name": "k",
+            "bezeichnung": "",
+            "art": "zahl",
+            "niveau": "metrisch",
+            "format": "F2.0",
+            "fehlend": [
+              99
+            ],
+            "fehlendText": "99",
+            "werteLabels": {}
+          },
+          {
+            "name": "t",
+            "bezeichnung": "",
+            "art": "text",
+            "niveau": "nominal",
+            "format": "A2",
+            "fehlend": [],
+            "fehlendText": "",
+            "werteLabels": {}
+          }
+        ],
+        "zeilen": [
+          [
+            1,
+            "a"
+          ],
+          [
+            null,
+            "a"
+          ],
+          [
+            99,
+            "a"
+          ],
+          [
+            null,
+            null
+          ],
+          [
+            1,
+            "a"
+          ],
+          [
+            99,
+            "b"
+          ],
+          [
+            2,
+            "a"
+          ]
+        ]
+      },
+      "gleich": {
+        "name": "fehlend_gleich",
+        "spalten": [
+          "k",
+          "t"
+        ],
+        "genau": false,
+        "fehlendGleich": true,
+        "markierung": [0, 0, 1, 0, 1, 0, 0],
+        "gruppen": [
+          {
+            "zeilen": [
+              1,
+              5
+            ],
+            "anzahl": 2
+          },
+          {
+            "zeilen": [
+              2,
+              3
+            ],
+            "anzahl": 2
+          }
+        ],
+        "wiederholungen": 2,
+        "nichtPruefbar": 0
+      },
+      "verschieden": {
+        "name": "fehlend_verschieden",
+        "spalten": [
+          "k",
+          "t"
+        ],
+        "genau": false,
+        "fehlendGleich": false,
+        "markierung": [0, 0, 0, 0, 1, 0, 0],
+        "gruppen": [
+          {
+            "zeilen": [
+              1,
+              5
+            ],
+            "anzahl": 2
+          }
+        ],
+        "wiederholungen": 1,
+        "nichtPruefbar": 4
+      }
+    }
+  }
+}

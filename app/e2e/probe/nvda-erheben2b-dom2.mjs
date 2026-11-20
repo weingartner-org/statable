@@ -1,0 +1,16 @@
+import { chromium } from '@playwright/test';
+const browser = await chromium.launch({ channel: 'msedge', headless: true });
+const page = await (await browser.newContext({ locale: 'de-DE' })).newPage();
+await page.goto('http://127.0.0.1:4310/src/ausfuellen/vorschau.html', { waitUntil: 'load' }); await page.waitForTimeout(2500);
+const weiter = () => page.getByRole('button', { name: /^Weiter$/ }).click();
+await page.getByRole('radio').first().check(); await weiter(); await page.waitForTimeout(400);
+await page.locator('input[type=number]').first().fill('30'); await weiter(); await page.waitForTimeout(400);
+await page.getByRole('button', { name: 'Diese Reihenfolge übernehmen' }).click(); await page.waitForTimeout(300);
+await page.getByLabel('Ich stimme zu').check(); await page.waitForTimeout(300);
+console.log('checked', await page.getByLabel('Ich stimme zu').isChecked());
+await weiter(); await page.waitForTimeout(600);
+console.log(await page.evaluate(() => document.querySelector('h2')?.textContent + ' | ' + (document.querySelector('[role=alert]')?.innerText ?? 'kein Alert')));
+console.log(await page.evaluate(() => 'invalid-Radios=' + document.querySelectorAll('input[type=radio][aria-invalid=true]').length + ' von ' + document.querySelectorAll('input[type=radio]').length + ' | required=' + document.querySelectorAll('input[type=radio][aria-required=true],input[type=radio][required]').length + ' | Fehlertexte=' + [...document.querySelectorAll('[id$=-fehler]')].map((e) => e.textContent).join('|')));
+await page.getByRole('radio').first().check({ force: true });
+console.log(await page.evaluate(() => 'nach Wahl in Zeile 1: invalid=' + document.querySelectorAll('input[type=radio][aria-invalid=true]').length));
+await browser.close();

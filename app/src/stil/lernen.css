@@ -1,0 +1,187 @@
+/* Bereich „Lernen“: Farben des Lernstands als Tokens für jedes Thema. Grün = durchgemacht, Rot = übersprungen, Grau = noch offen.
+ * Der Zustand steht nie nur in der Farbe: Grün ist ein Kreis mit Haken, Rot eine Raute mit Kreuz und gestreifter Balken, Grau ein leerer Ring.
+ * Jede Farbe hat gegen --blatt mindestens 3:1 (Bedienelemente und Grafik, WCAG 1.4.11), geprüft für alle sieben Themen.
+ * Breiten nie mit @media (max-width), sondern über die Klassen am <html> (lib/groesse.svelte.ts). */
+:root { --lern-gruen: #1E7B3A; --lern-rot: #B3261E; --lern-grau: var(--linie-stark); }
+:root[data-thema="dunkel"] { --lern-gruen: #6FCF8B; --lern-rot: #F2958A; }
+@media (prefers-color-scheme: dark) { :root[data-thema="auto"] { --lern-gruen: #6FCF8B; --lern-rot: #F2958A; } }
+:root[data-thema="sw"] { --lern-gruen: #006400; --lern-rot: #BE0000; }
+:root[data-thema="ws"] { --lern-gruen: #8CE99A; --lern-rot: #FF8282; }
+:root[data-thema="sg"] { --lern-gruen: #005A00; --lern-rot: #A00000; }
+:root[data-thema="gs"] { --lern-gruen: #7CFC9A; --lern-rot: #FF8C6E; }
+:root[data-thema="gb"] { --lern-gruen: #7CFF9A; --lern-rot: #FFA896; }
+
+/* Balken der Einheit als Reiter, sitzt im Band */
+.lb { margin: var(--a3) 0 0; }
+.lb-zeile { margin: 0 0 var(--a2); font-size: var(--gr-klein); }
+.lb-liste { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--a1); }
+.lb-punkt { flex: 1 1 8rem; min-width: 0; }
+.lb-punkt a { --lb-feld: var(--tinte-auf-akzent); --lb-marke: var(--lern-gruen); --lb-ring: var(--tinte-auf-akzent); display: flex; align-items: center; gap: var(--a2); min-height: 3rem; box-sizing: border-box; padding: var(--a1) var(--a3); border-radius: var(--r-klein) var(--r-klein) 0 0; color: var(--tinte-auf-akzent); background: color-mix(in srgb, var(--tinte-auf-akzent) 14%, transparent); text-decoration: none; }
+.lb-punkt.rot a { --lb-marke: var(--lern-rot); }
+.lb-punkt a:hover { background: color-mix(in srgb, var(--tinte-auf-akzent) 26%, transparent); }
+.lb-punkt a:focus-visible { outline: var(--fokus-outline); outline-offset: -3px; }
+.lb-punkt a[aria-current] { --lb-feld: var(--lern-gruen); --lb-marke: var(--blatt); --lb-ring: var(--lern-grau); background: var(--blatt); color: var(--tinte); font-weight: 700; }
+.lb-punkt.rot a[aria-current] { --lb-feld: var(--lern-rot); --lb-marke: var(--blatt); }
+.lb-zeichen { width: 1.4rem; height: 1.4rem; flex: none; display: block; }
+.lb-feld { fill: var(--lb-feld); }
+.lb-marke { stroke: var(--lb-marke); }
+.lb-ring { stroke: var(--lb-ring); }
+.lb-name { line-height: 1.25; overflow-wrap: anywhere; }
+
+/* Seiten „Lernen“ */
+.ln h2 { font: 650 var(--gr-h2)/1.3 var(--schrift-ui); margin: var(--a5) 0 var(--a2); }
+.ln h2:focus-visible, .ln h1:focus-visible { outline: var(--fokus-outline); outline-offset: 2px; border-radius: 4px; }
+.ln h3 { font: 650 var(--gr-text)/1.3 var(--schrift-ui); margin: var(--a4) 0 var(--a1); }
+.ln-datenschutz { color: var(--tinte-2); margin: var(--a1) 0; }
+.ln-abschnitt { max-width: var(--breite-text, 68ch); min-width: 0; }
+.ln-abschnitt > h2 { margin-top: var(--a4); }
+.ln-abschnitt :where(p) { margin: var(--a2) 0; }
+.ln-knoepfe, .ln-weiter, .ln-links { display: flex; flex-wrap: wrap; gap: var(--a2) var(--a3); align-items: center; margin: var(--a3) 0; }
+.ln-weiter { margin-top: var(--a5); padding-top: var(--a3); border-top: 1px solid var(--linie); }
+.ln-stand { font-weight: 650; }
+.ln-hinweis, .ln-klein { color: var(--tinte-2); font-size: var(--gr-klein); }
+.ln-mehr { margin: var(--a2) 0; }
+.ln-naechste { margin-top: var(--a6); padding-top: var(--a3); border-top: 1px solid var(--linie); max-width: var(--breite-text, 68ch); }
+
+/* Einheit: Band mit Titel und Reitern, darunter der Inhalt */
+.blatt.ln-mit-band { padding: 0; }
+.ln-band { background: var(--akzent-druck); color: var(--tinte-auf-akzent); border-radius: var(--r-gross) var(--r-gross) 0 0; padding: var(--a4) var(--a5) 0; }
+.ln-band a:not(.k):not([aria-current]) { color: inherit; }
+.ln-band .blatt-kopf { margin-bottom: var(--a2); align-items: flex-start; }
+.ln-band .zurueck { color: var(--tinte); }
+.ln-band .blatt-kopf p { font-size: var(--gr-h2); color: inherit; margin: var(--a1) 0 0; }   /* Leitfrage im Band: hell wie der Titel - die allgemeine Regel .blatt-kopf p (Grau) wäre auf Petrol kaum lesbar */
+.ln-pfad { font-size: var(--gr-klein); margin: var(--a1) 0; }
+.ln-koerper { padding: var(--a2) var(--a5) var(--a4); }
+
+/* Übersicht: links Themen oder Lernpfade, rechts die Einheiten */
+.ln-oben { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--a2) var(--a4); }
+.ln-suche { flex: 1 1 20rem; min-width: 0; }
+.ln-suche.sucht { flex-basis: 100%; }
+.ln-suche .ls-suche { margin-top: 0; }
+.ln-weiterlernen { text-align: start; min-height: 44px; padding: var(--a1) var(--a4); }
+.ln-zwei { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--a4) var(--a6); margin-top: var(--a4); }
+.ln-seite { flex: 1 1 18rem; min-width: 0; max-width: 24rem; background: var(--blatt-2); border-radius: var(--r-gross); padding: var(--a2); }
+.ln-inhalt { flex: 999 1 26rem; min-width: 0; }
+:where(:root.eng-860) .ln-seite { max-width: none; }
+
+.ln-wahl { display: flex; gap: var(--a1); padding: var(--a1); margin-bottom: var(--a2); background: var(--grund); border-radius: var(--r); }
+.ln-wahl a { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 2.5rem; border-radius: var(--r-klein); color: var(--akzent-tinte); font-weight: 700; text-decoration: none; }
+.ln-wahl a:hover { background: var(--blatt-2); }
+.ln-wahl a[aria-current] { background: var(--blatt); color: var(--tinte); box-shadow: 0 1px 2px rgba(40,30,10,.18); }
+.ln-wahl a:focus-visible, .ln-menue a:focus-visible, .ln-zeilen a:focus-visible { outline: var(--fokus-outline); outline-offset: 2px; }
+
+.ln-menue { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.ln-menue a { display: flex; align-items: center; gap: var(--a3); min-height: 3rem; padding-block: var(--a1); padding-inline: var(--a2) var(--a3); border-radius: var(--r); color: var(--tinte); text-decoration: none; line-height: 1.25; transition: background var(--dauer-kurz); }
+.ln-menue a > svg { color: var(--akzent); }
+.ln-menue a:hover { background: var(--blatt); }
+.ln-menue a[aria-current] { --lz-punkt: var(--tinte-auf-akzent); background: var(--akzent-druck); color: var(--tinte-auf-akzent); font-weight: 700; }
+.ln-menue a[aria-current] > svg { color: var(--tinte-auf-akzent); }
+.ln-menue-name { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.ln-menue-zahl { flex: none; font-size: var(--gr-klein); font-weight: 400; font-variant-numeric: tabular-nums; color: var(--tinte-2); }
+.ln-menue a[aria-current] .ln-menue-zahl { color: inherit; }
+
+.ln-inhalt-kopf { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--a2) var(--a4); }
+.ln-inhalt-kopf > div { flex: 1 1 16rem; min-width: 0; }
+.ln .ln-inhalt-kopf h2 { font: 650 var(--gr-h1)/var(--zh-eng) var(--schrift-ui); margin: 0; }
+.ln-inhalt-kopf p { margin: var(--a1) 0 0; }
+.ln-zeilen { list-style: none; margin: var(--a3) 0 0; padding: 0; }
+.ln-zeilen li { border-bottom: 1px dotted var(--linie-stark); }
+.ln-zeilen a { display: flex; align-items: center; gap: var(--a3); min-height: 3.25rem; padding: var(--a2) var(--a1); border-radius: var(--r-klein); color: var(--tinte); text-decoration: none; }
+.ln-zeilen a:hover { background: var(--blatt-2); }
+.ln-zeilen a:hover strong { text-decoration: underline; }
+.ln-zeile-text { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.3; }
+.ln-zeile-text strong { font-weight: 700; }
+.ln-zeile-zahl { flex: none; font-variant-numeric: tabular-nums; }
+.ln-links { margin-top: var(--a5); }
+
+/* ---- Eigene Lernpfade: Seitenleiste, Teilen, Auswahlseite, Vorschau ---- */
+.ln-menue-trenner { height: 1px; margin: var(--a2) var(--a2); background: var(--linie-stark); }
+.ln-menue a.ln-neu { color: var(--akzent-tinte); font-weight: 700; border: 1px dashed var(--linie-stark); }
+.ln-neu-plus { flex: none; width: 1.5rem; text-align: center; font-size: 1.4em; line-height: 1; }
+.ln-eigen-knoepfe { display: flex; flex-wrap: wrap; align-items: center; gap: var(--a2); margin-top: var(--a3); }
+.ln-loesch { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--a2); }
+.ln-teilen { margin-top: var(--a3); padding: var(--a3); background: var(--blatt-2); border-radius: var(--r-gross); display: grid; gap: var(--a2); }
+.ln-teilen p { margin: 0; }
+.ln-scorm { display: flex; flex-wrap: wrap; align-items: center; gap: var(--a2); }
+.ln-teilen input, .pb input[type="text"], .pb input[type="search"], .pb select { width: 100%; min-height: 2.75rem; box-sizing: border-box; padding: var(--a1) var(--a2); font: inherit; color: var(--tinte); background: var(--blatt); border: 1px solid var(--linie-stark); border-radius: var(--r); }
+.pb-reihe { display: flex; flex-wrap: wrap; gap: var(--a2); align-items: stretch; }
+.pb-reihe > input, .pb-reihe > select { flex: 1 1 14rem; width: auto; }
+.pb { display: grid; gap: var(--a4); margin-top: var(--a3); }
+.pb p { margin: 0; }
+.pb-name, .pb-werkzeug { display: grid; gap: var(--a1); }
+.pb label[for] { font-weight: 700; }
+.pb-zwei { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--a4) var(--a6); }
+.pb-wahl { flex: 1 1 24rem; min-width: 0; display: grid; gap: var(--a3); }
+.pb-mein { flex: 1 1 20rem; min-width: 0; background: var(--blatt-2); border-radius: var(--r-gross); padding: var(--a3); display: grid; gap: var(--a2); align-content: start; }
+.pb h2 { margin: 0; font: 650 var(--gr-h2)/var(--zh-eng) var(--schrift-ui); }
+.pb-klein-h { margin: 0; font-weight: 700; }
+.pb-bereich { border: 1px solid var(--linie-stark); border-radius: var(--r); padding: 0 var(--a2); }
+.pb-bereich[open] { padding-bottom: var(--a2); }
+.pb-bereich > summary { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--a1) var(--a3); min-height: 3rem; cursor: pointer; font-weight: 700; }
+.pb-bname { min-width: 0; overflow-wrap: anywhere; }
+.pb-alle { margin-bottom: var(--a1); }
+.pb-liste, .pb-reihenfolge { list-style: none; margin: 0; padding: 0; }
+.pb-liste li { border-bottom: 1px dotted var(--linie-stark); }
+.pb-liste label { display: flex; align-items: flex-start; gap: var(--a3); min-height: 2.75rem; padding: var(--a2) var(--a1); cursor: pointer; }
+.pb-liste input[type="checkbox"] { flex: none; width: 1.25rem; height: 1.25rem; margin-top: .15rem; }
+.pb-reihenfolge li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--a2); padding: var(--a2) 0; border-bottom: 1px dotted var(--linie-stark); }
+.pb-reihenfolge .ln-zeile-text { flex: 1 1 12rem; }
+.pb-knoepfe { display: flex; gap: var(--a1); }
+.pb-knoepfe .k { min-width: 2.75rem; }
+.pb-pruefung { margin-top: var(--a3); }
+.pb-pruefung label { display: flex; gap: var(--a2); align-items: center; }
+.pb-pruefung p { margin: var(--a1, .25rem) 0 0; }
+.pb-fuss { display: flex; flex-wrap: wrap; gap: var(--a3); align-items: center; position: sticky; bottom: 0; padding: var(--a3) 0; background: var(--blatt); }
+.pb-status { min-height: 1.5em; color: var(--tinte-2); }
+.pb-vorschau { display: grid; gap: var(--a3); margin-top: var(--a3); }
+.pb-vorschau h2, .pb-vorschau p { margin: 0; }
+.pb-vorschau .pb-fuss { position: static; }
+
+/* Selbst rechnen (Rechenaufgabe): Lage, Tabelle, Schritte mit Zahlenfeld, Rechenweg, Warum-so-Kasten */
+.ra { display: grid; gap: var(--a3); }
+.ra-lage { margin: 0; }
+.ra-tab caption { text-align: start; font-weight: 700; padding: var(--a2) 0; }
+.ra-schritte { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--a4); }
+.ra-schritt { display: grid; gap: var(--a2); padding: var(--a3); border: 1px solid var(--linie-stark); border-inline-start-width: 5px; border-radius: var(--r); background: var(--blatt); }
+.ra-schritt.ra-ok { border-inline-start-color: var(--lern-gruen); }
+.ra-schritt h3 { margin: 0; font: 700 var(--gr-h3, 1.05rem)/1.35 var(--schrift-ui); }
+.ra-frage { font-weight: 600; }
+.ra-form { display: flex; flex-wrap: wrap; gap: var(--a2); align-items: center; margin: var(--a2) 0 0; }
+.ra-form input[type="text"] { width: 9rem; min-height: 2.75rem; box-sizing: border-box; padding: var(--a1) var(--a2); font: inherit; font-variant-numeric: tabular-nums; color: var(--tinte); background: var(--blatt); border: 1px solid var(--linie-stark); border-radius: var(--r); }
+.ra-form input[aria-invalid='true'] { border-color: var(--lern-rot); border-width: 2px; }
+.ra-einheit { color: var(--tinte-2); }
+.ra-rueck { margin: 0; min-height: 1.4em; }
+.ra-rueck.ra-gut { color: var(--lern-gruen); font-weight: 650; }
+.ra-rueck.ra-schlecht { color: var(--lern-rot); }
+.ra-marke { display: inline-block; min-width: 1.2em; font-weight: 800; }
+.ra-weg { padding: var(--a2) var(--a3); background: var(--blatt-2); border-radius: var(--r); }
+.ra-weg h4, .ra-warum h4 { margin: 0 0 var(--a1); font-size: var(--gr-klein); text-transform: none; letter-spacing: 0; }
+.ra-weg ol { margin: 0; padding-inline-start: 1.4em; }
+.ra-weg li { margin: var(--a1) 0; font-variant-numeric: tabular-nums; }
+.ra-warum { padding: var(--a2) var(--a3); border-inline-start: 3px solid var(--akzent); background: var(--akzent-hell); border-start-start-radius: 0; border-start-end-radius: var(--r); border-end-end-radius: var(--r); border-end-start-radius: 0; }
+.ra-warum p { margin: 0; }
+.ra-fertig { padding: var(--a3); border: 2px solid var(--lern-gruen); border-radius: var(--r); }
+.ra-fertig[hidden] { display: none; }
+.ra-fertig h3 { margin: 0 0 var(--a2); }
+.ra-fertig p { margin: var(--a2) 0 0; }
+
+/* ---- Stufe 6: Pfade in Gruppen, Marke „Hier anfangen“, Links im Rand ---- */
+.ln-gruppe { margin: 0; }
+.ln-gruppe > details.auf { border-top: 0; padding: 0; }
+.ln-gruppe > details > summary { display: flex; align-items: center; gap: var(--a2); min-height: 2.75rem; padding: var(--a1) var(--a2); border-radius: var(--r); cursor: pointer; font-weight: 700; color: var(--akzent-tinte); }
+.ln-gruppe > details > summary:hover { background: var(--blatt); }
+.ln-gruppe > details > summary:focus-visible { outline: var(--fokus-outline); outline-offset: 2px; }
+.ln-gruppe-zahl { font-weight: 400; color: var(--tinte-2); font-variant-numeric: tabular-nums; }
+.ln-gruppe > details > .ln-menue { margin-bottom: var(--a2); }
+.ln-marke { display: block; width: fit-content; margin-top: var(--a1); padding: 0 var(--a2); border: 1px solid currentColor; border-radius: 999px; font-size: var(--gr-klein); font-weight: 700; line-height: 1.6; white-space: nowrap; }
+.ln-menue a[aria-current] .ln-marke { border-color: currentColor; }
+.rand-links { margin: var(--a1) 0 var(--a2); padding-inline-start: 1.2em; display: grid; gap: var(--a1); }
+
+/* Breite Karte: Erklärung und Beispiel in zwei Spalten (Hauptsache links, „Mehr zu …“ und der Schritt rechts). Reihenfolge im Code bleibt, Vorleseprogramme lesen wie vorher. Wie in der Hilfe über @container, damit „+“ (größere Schrift) mitwirkt. */
+.ln-abschnitt { container-type: inline-size; }
+.ln-abschnitt:has(.ln-spalten.mit-neben, .ue-spalten.mit-material) { max-width: none; }
+.ln-spalten-haupt, .ln-spalten-neben { max-width: var(--breite-text, 68ch); min-width: 0; }
+@container (min-width: calc(2 * 50ch + 3rem)) {
+  .ln-spalten.mit-neben { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: var(--a6); align-items: start; }
+  .ln-spalten.mit-neben > .ln-spalten-neben > :first-child { margin-top: var(--a4); }
+}

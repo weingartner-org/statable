@@ -1,0 +1,117 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "transkripte-quellcoding.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 393,
+   "name": "Interview 1",
+   "pruefung": "geprueft",
+   "sha256": "0821f3089b5764ca900cb0c43f5f9d40cb7069edaff00995786a39d661009d16",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "audio",
+   "bom": false,
+   "fall": null,
+   "laenge": 28,
+   "name": "Podcast.m4a",
+   "pruefung": "ungeprueft",
+   "sha256": "326a80592ac6cfd2aae1d331c5e9d3d9e57f6ab0bf8cff3c1895136305582241",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "audio",
+   "bom": false,
+   "fall": null,
+   "laenge": 28,
+   "name": "Podcast.m4a (Transkript 2)",
+   "pruefung": "ungeprueft",
+   "sha256": "16c3c5a67f050c70ebf5f663b79e5483f2d2d11305ed230eada7d28909fe40f5",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Anna Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Interviewerin: Wie erleben Sie die Prüfungsphase?\nBefragte: Ehrlich gesagt ist der Zeitdruck das Schlimmste. Ich schlafe kaum noch.\nInterviewerin: Was hilft Ihnen dabei?\nBefragte: Meine Lerngruppe hilft mir sehr. Der Lärm im Wohnheim stört, dann gehe ich in die Bibliothek.\nInterviewerin: Und wenn es zu viel wird?\nBefragte: Dann rufe ich zu Hause an und spreche mit meiner Schwester darüber.\n"
+  }
+ ],
+ "meldungen": [],
+ "meldungenDetail": [],
+ "memos": [
+  {
+   "bezug": [
+    {
+     "art": "segment",
+     "ziel": {
+      "dokument": "Interview 1",
+      "text": "Meine Lerngruppe hilft mir sehr"
+     }
+    }
+   ],
+   "text": "Nur ein Kommentar, keine Kodierung.",
+   "titel": "Kommentar (ATLAS.ti)"
+  }
+ ],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "Statable Prüfdatei",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 3,
+  "faelle": 0,
+  "kodierende": 1,
+  "kodierungen": 2,
+  "memos": 1,
+  "mengen": 0,
+  "segmente": 3,
+  "variablen": 0
+ }
+}

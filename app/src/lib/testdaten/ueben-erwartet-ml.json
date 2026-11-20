@@ -1,0 +1,96 @@
+{
+  "herkunft": "scripts/ueben-erwartet-ml.R (Palmer-Pinguine, Geschlecht aus Schnabeltiefe und Körpermasse, 70 % Training, set.seed(1))",
+  "n": 333,
+  "training": 233,
+  "test": 100,
+  "test_weiblich": 52,
+  "test_maennlich": 48,
+  "mittel_tiefe": 17.15,
+  "sd_tiefe": 2.01,
+  "mittel_masse": 4207.8,
+  "sd_masse": 786.4,
+  "k1_fehler_training_faelle": 1,
+  "k1_fehler_training_prozent": 0.4,
+  "k1_fehler_test_prozent": 18,
+  "k1_konfusion": [
+    [42, 10],
+    [8, 40]
+  ],
+  "k15_konfusion": [
+    [43, 9],
+    [6, 42]
+  ],
+  "k15_treffer_prozent": 85,
+  "k15_fehler_prozent": 15,
+  "k15_sens_weiblich_prozent": 82.7,
+  "k15_sens_maennlich_prozent": 87.5,
+  "k15_vorhergesagt_weiblich": 49,
+  "k15_anteil_richtig_unter_vorhergesagt_weiblich_prozent": 87.8,
+  "immer_weiblich_prozent": 52,
+  "cv_bestes_k": 17,
+  "cv_fehler_prozent": 7.7,
+  "cv_fehler_faelle": 18,
+  "test_fehler_bestes_k_prozent": 16,
+  "test_min_prozent": 13,
+  "test_min_k": [37, 43],
+  "roh_k15_fehler_prozent": 32,
+  "fall_tiefe": 19.3,
+  "fall_masse": 3450,
+  "fall_geschlecht": "weiblich",
+  "nachbarn": [
+    {
+      "tiefe": 19.2,
+      "masse": 3500,
+      "abstand": 0.081,
+      "geschlecht": "männlich"
+    },
+    {
+      "tiefe": 19.4,
+      "masse": 3525,
+      "abstand": 0.108,
+      "geschlecht": "weiblich"
+    },
+    {
+      "tiefe": 19,
+      "masse": 3450,
+      "abstand": 0.149,
+      "geschlecht": "weiblich"
+    },
+    {
+      "tiefe": 19,
+      "masse": 3425,
+      "abstand": 0.152,
+      "geschlecht": "männlich"
+    },
+    {
+      "tiefe": 19.1,
+      "masse": 3550,
+      "abstand": 0.161,
+      "geschlecht": "männlich"
+    }
+  ],
+  "roh_nachbarn": [
+    {
+      "tiefe": 19,
+      "masse": 3450,
+      "abstand": 0.3,
+      "geschlecht": "weiblich"
+    },
+    {
+      "tiefe": 18.8,
+      "masse": 3450,
+      "abstand": 0.5,
+      "geschlecht": "männlich"
+    },
+    {
+      "tiefe": 18.6,
+      "masse": 3450,
+      "abstand": 0.7,
+      "geschlecht": "weiblich"
+    }
+  ],
+  "q_roh_tiefe": 4,
+  "q_roh_masse": 10000,
+  "q_std_tiefe": 0.99,
+  "q_std_masse": 0.016
+}

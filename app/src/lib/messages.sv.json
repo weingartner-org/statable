@@ -1,0 +1,1535 @@
+{
+  "_info": {
+    "stand": "2026-10-09",
+    "zweck": "Statable glossary (Swedish, du). Explanations and messages translated from the English template; muster/original/art unchanged.",
+    "regeln": [
+      "Messages: the first matching rule wins.",
+      "Explanations address no one directly; messages use du. The fields 'du' and 'sie' hold the same text.",
+      "Numbers in Swedish: decimal comma, no leading zero for p, r and alpha (,005).",
+      "pruefen: true = have a statistics expert check it before use."
+    ]
+  },
+  "erklaer": {
+    "bayes": {
+      "titel": "Bayesfaktor (BF₁₀)",
+      "kurz": "Pekar data mer mot en skillnad eller mot att det inte finns någon? Bayesfaktorn (BF₁₀) jämför båda. BF₁₀ = 8 betyder: data skulle vara ungefär 8 gånger mer sannolika om det finns en skillnad.",
+      "beispiel": "Hållbarhet hos bröd från två bagerier: BF₁₀ = 6, alltså är data 6 gånger mer sannolika med en skillnad. BF₁₀ = 0,25 skulle betyda: 4 gånger mer sannolika utan skillnad (1 / 0,25 = 4).",
+      "vorsicht": "Bayesfaktorn säger inte hur sannolik en skillnad är, och den beror på ett antagande som valts i förväg. Ett värde nära 1 betyder bara att ingen av sidorna stöds; beteckningar som ”måttlig” är tumregler.",
+      "fachwoerter": "p-värde (hur ofta en skillnad minst så stor skulle förekomma om det verkligen inte finns någon), H₀ och H₁ (antagandena ”ingen skillnad” och ”en skillnad”), prior (antagandet om möjliga skillnader som valts i förväg), BF₀₁ (den omvända jämförelsen, BF₀₁ = 1 / BF₁₀).",
+      "pruefen": true
+    },
+    "p-wert": {
+      "titel": "p-värde",
+      "kurz": "Är en skillnad verklig eller bara slump? Det går aldrig att veta säkert. P-värdet hjälper så här: anta att det verkligen inte finns någon skillnad. Hur ofta skulle en skillnad minst så stor ändå dyka upp?",
+      "beispiel": "Två tomatsorter, p = ,03: om sorterna verkligen vore lika skulle en sådan skillnad dyka upp i ungefär 3 av 100 försök.",
+      "vorsicht": "p är inte sannolikheten att resultatet beror på slumpen. P säger inte heller hur stor eller viktig skillnaden är: det är vad effektstorleken är till för. Det gäller bara om också beräkningens övriga förutsättningar är uppfyllda, till exempel slumpmässigt urval och oberoende.",
+      "pruefen": true
+    },
+    "signifikanz": {
+      "titel": "Statistiskt signifikant",
+      "kurz": "Vad betyder ”signifikant”? P-värdet ligger under en gräns som satts i förväg, oftast ,05. Data passar då dåligt med antagandet ”ingen skillnad”.",
+      "beispiel": "p = ,03 ligger under ,05: signifikant. p = ,07 ligger över: inte signifikant.",
+      "vorsicht": "Signifikant betyder inte viktigt eller bevisat. Inte signifikant betyder inte att det saknas skillnad. Gränsen ,05 är en vana. Vid mycket många fall blir redan en liten effekt signifikant. Och: skillnaden mellan ”signifikant” och ”inte signifikant” är inte i sig automatiskt signifikant.",
+      "pruefen": true
+    },
+    "effektstaerke": {
+      "titel": "Effektstorlek",
+      "kurz": "Hur stor är en skillnad eller ett samband? Effektstorleken visar det. Fler personer ger ett mindre p-värde; effektstorleken ändras inte bara av det.",
+      "beispiel": "Cohens d = 0,5: två grupper ligger en halv standardavvikelse (det typiska avståndet mellan värdena och medelvärdet) ifrån varandra.",
+      "vorsicht": "Orden liten, medelstor, stor (d = 0,2, 0,5, 0,8) är en vana som går tillbaka på Cohen. Vad som räknas som mycket beror på området och frågan.",
+      "pruefen": true
+    },
+    "konfidenzintervall": {
+      "titel": "Konfidensintervall (KI)",
+      "kurz": "Hur precist är ett resultat? Konfidensintervallet (KI) är ett område kring det uppmätta värdet. Det visar vilka verkliga värden som passar data väl. Smalt betyder precist, brett betyder oprecist.",
+      "beispiel": "En ny pendlingsväg sparar i genomsnitt 4 minuter, 95 % KI [1,2; 6,8]: en verklig besparing på 2 eller 6 minuter passar data väl.",
+      "vorsicht": "”95 %” beskriver metoden: vid många upprepningar skulle omkring 95 av 100 sådana områden innehålla det verkliga värdet. Om just det här gör det är okänt. Om området på 95 % innehåller 0 passar också ”ingen skillnad” data, och det tvåsidiga testet på nivå ,05 är inte statistiskt signifikant.",
+      "pruefen": true
+    },
+    "normalverteilung": {
+      "titel": "Normalfördelning",
+      "kurz": "Hur är värdena spridda? I en normalfördelning ligger de flesta värden i mitten och blir jämnt sällsyntare åt båda sidor. Det ger en klockform.",
+      "beispiel": "Vikten på förpackade pastapåsar om 500 g varierar klockformat kring 500 g. Väntetider på en kundtjänst gör det inte: många är korta, några få mycket långa.",
+      "vorsicht": "Vid jämförelse av medelvärden spelar en lång svans åt ena sidan (skevhet) och extremvärden större roll än ett fast antal personer. Med många personer betyder formen mindre; med mycket få går den knappt att bedöma.",
+      "fachwoerter": "Welchs test (ett t-test som inte kräver lika spridning i grupperna), skevhet (en lång svans åt ena sidan), extremvärde (ett värde långt från de andra).",
+      "pruefen": true
+    },
+    "mittelwert": {
+      "titel": "Medelvärde (M)",
+      "kurz": "Vad är det typiska värdet? Medelvärdet är genomsnittet: addera alla värden och dela med hur många de är.",
+      "beispiel": "Fem väntetider vid en disk: 8, 12, 9, 15 och 11 minuter. Tillsammans 55, delat med 5 ger 11 minuter.",
+      "vorsicht": "Några få mycket höga eller låga värden drar med medelvärdet. Med 60 i stället för 11 minuter skulle det bli 20,8; medianen, mittvärdet i den ordnade serien, skulle bara stiga från 11 till 12.",
+      "pruefen": false
+    },
+    "standardabweichung": {
+      "titel": "Standardavvikelse (SD)",
+      "kurz": "Hur olika är värdena? Standardavvikelsen (SD) säger hur långt värdena typiskt ligger från medelvärdet. Liten betyder att värdena ligger nära varandra.",
+      "beispiel": "Sömn: medelvärde 7 timmar, SD 1 timme. Vid en klockformad fördelning sover omkring två tredjedelar mellan 6 och 8 timmar.",
+      "vorsicht": "SD beskriver hur olika människor är. Hur precist medelvärdet är framgår av standardfelet och konfidensintervallet.",
+      "pruefen": false
+    },
+    "freiheitsgrade": {
+      "titel": "Frihetsgrader (df)",
+      "kurz": "Vad betyder talet inom parentes, till exempel t(18)? Det är frihetsgraderna (df), ett tal som främst beror på hur många personer det finns. Programmet behöver det för p-värdet.",
+      "beispiel": "20 personer i två grupper: 20 minus 2 ger 18 frihetsgrader, alltså t(18). Med grupper med olika spridning (Welchs test) är talet ofta ett decimaltal, som t(14,3).",
+      "vorsicht": "Oftast är det allt man behöver veta om frihetsgrader. De hör ändå hemma i varje rapport, så att andra kan kontrollera resultatet.",
+      "pruefen": false
+    },
+    "korrelation": {
+      "titel": "Korrelation (r)",
+      "kurz": "Hänger två saker ihop? Korrelationen r visar det som ett tal från −1 till +1. Positivt: mer av det ena hör ihop med mer av det andra. Negativt: med mindre. Nära 0: inget rätlinjigt samband.",
+      "beispiel": "Sömn och koncentration: r = ,30. Personer som sover mer tenderar att koncentrera sig bättre.",
+      "vorsicht": "Ett samband är ingen orsak. r ser bara rätlinjiga samband, så titta också på spridningsdiagrammet.",
+      "pruefen": true
+    },
+    "korrelationsmatrix": {
+      "titel": "Korrelationsmatris",
+      "kurz": "Vilka av flera talkolumner hänger ihop? Korrelationsmatrisen visar alla par på en gång. Holm-korrektionen gör p-värdena strängare, eftersom ett par lätt sticker ut av en slump när det finns många.",
+      "beispiel": "Fem kolumner ger 10 par. Det mest påfallande har p = ,012; efter Holm-korrektionen blir det ,012 gånger 10 = ,12 - inte längre under ,05.",
+      "vorsicht": "Den som testar många par hittar också slumpträffar; den som bara söker bör använda Holm-värdena. Ett samband är ingen orsak.",
+      "fachwoerter": "r enligt Pearson (sambandet mellan två talkolumner, för rätlinjiga samband), rs enligt Spearman (samma idé med rangtal i stället för värden), n (antal fall per par), 95-procentigt konfidensintervall (ett område som rimmar väl med det verkliga sambandet, givet data).",
+      "pruefen": true
+    },
+    "regression": {
+      "titel": "Regression",
+      "kurz": "Kan ett värde förutsägas ur andra? Regression drar den linje som passar data bäst. Den visar hur mycket förutsägelsen ändras när ett annat värde ändras.",
+      "beispiel": "Lägenhetspris efter golvyta: en m² mer hör i genomsnitt ihop med 2 400 € högre pris.",
+      "vorsicht": "En förutsägelse är ingen orsak. För det vanliga testet bör residualerna (avstånden från linjen) vara normalfördelade, inte råvärdena.",
+      "pruefen": true
+    },
+    "chi-quadrat": {
+      "titel": "Chi-två-test (χ²)",
+      "kurz": "Förekommer något oftare i vissa grupper? Chi-två-testet (χ²) jämför de räknade fallen i en korstabell med de antal som skulle förväntas om det inte fanns något samband.",
+      "beispiel": "100 personer vardera: 60 % av morgonmänniskorna dricker kaffe, 40 % av kvällsmänniskorna. χ²(1) = 8,0, p = ,005.",
+      "vorsicht": "χ² säger inte hur starkt sambandet är: med dubbelt så många personer och samma andelar fördubblas det. Cramérs V visar styrkan.",
+      "fachwoerter": "Fishers exakta test (mer exakt än χ² för 2 × 2-tabeller med få personer), förväntat antal (hur många fall en cell skulle rymma om det inte fanns något samband).",
+      "pruefen": true
+    },
+    "streuung": {
+      "titel": "Spridning",
+      "kurz": "Hur olika är värdena? Spridning är samlingsordet. Mått är variationsbredden (största minus minsta värde), standardavvikelsen och kvartilavståndet (bredden på den mittersta halvan av värdena).",
+      "beispiel": "Restid för 40 resor: 12 till 51 minuter, variationsbredd 51 − 12 = 39, standardavvikelse 8,5, kvartilavstånd 10.",
+      "vorsicht": "Variationsbredden beror på bara två värden. Ett enda extremvärde gör den mycket större.",
+      "pruefen": false
+    },
+    "stichprobe": {
+      "titel": "Stickprov",
+      "kurz": "Vilka deltog egentligen? Det är stickprovet. Det används för att säga något om en större grupp, populationen.",
+      "beispiel": "Ett bibliotek frågar 150 besökare en tisdag för att säga något om alla användare under året. Om det håller beror på hur de 150 valdes ut.",
+      "vorsicht": "Många personer kompenserar inte ett ensidigt urval. Att bara fråga besökare en tisdagsförmiddag beskriver framför allt de besökarna.",
+      "pruefen": false
+    },
+    "voraussetzung": {
+      "titel": "Förutsättning",
+      "kurz": "Får en metod användas med de här data? Varje metod vilar på antaganden, förutsättningarna, till exempel ”varje person hör till exakt en grupp”. Om de inte stämmer kan resultatet vilseleda.",
+      "beispiel": "Innan två kundgrupper jämförs: är de verkligen två skilda grupper? Är värdena tal? Finns det mycket påfallande enskilda värden?",
+      "vorsicht": "En anmärkning är inget förbud, utan ett skäl att titta närmare. Vissa antaganden kan inget program kontrollera, som om personer svarade oberoende av varandra, alltså utan att ha kommit överens i förväg - det beror på hur data samlades in.",
+      "pruefen": true
+    },
+    "ausreisser": {
+      "titel": "Avvikande värde",
+      "kurz": "Ligger ett värde påfallande långt från alla andra? Då är det ett extremvärde (outlier). Det kan vara ett skrivfel, ett mätfel - eller ett äkta, ovanligt svar.",
+      "beispiel": "Tio leveranstider i dagar: nio mellan 2 och 4 (summa 27), en på 31. Utan 31 är medelvärdet 27 / 9 = 3,0 dagar, med det 58 / 10 = 5,8.",
+      "vorsicht": "Ta aldrig bort extremvärden i tysthet: kontrollera först originalet, visa beräkningen med och utan det och ange ett skäl för beslutet. I regression drar en punkt långt ut linjen mot sig, även om den knappt sticker ut. I en boxplot syns avvikande värden som punkter utanför whiskers (strecken vid lådan). Det gör dem ännu inte till fel.",
+      "pruefen": true,
+      "statable": "Vid en regression listar blocket ”Kontrollera regressionen: kollinearitet och ovanliga fall” under resultatet fallen med stor residual, leverage eller Cooks avstånd, med deras radnummer i data. Titta där, ta aldrig bort tyst. Enstaka värden i en kolumn flaggas av datakontrollen vid öppning."
+    },
+    "reliabilitaet": {
+      "titel": "Skalans reliabilitet (Cronbachs alfa)",
+      "kurz": "Mäter flera frågor tillsammans tillförlitligt? Cronbachs alfa visar hur starkt svaren på frågorna i en skala hänger ihop. Värdet ligger oftast mellan 0 och 1.",
+      "beispiel": "Fem frågor om arbetstillfredsställelse: α = ,82.",
+      "vorsicht": "Ett högt alfa bevisar inte att alla frågor mäter samma sak, och fler frågor höjer det av sig självt. ,70 nämns ofta som minimum; det är en vana.",
+      "fachwoerter": "intern konsistens (hur starkt svaren på frågorna i en skala hänger ihop), endimensionalitet (alla frågor mäter samma egenskap), faktoranalys (visar om frågorna mäter en eller flera egenskaper), item-total-korrelation (hur väl en fråga passar de andra), omkodning av omvända frågor (en omvänd fråga vänds så att den pekar åt samma håll).",
+      "pruefen": true
+    },
+    "faktorenanalyse": {
+      "titel": "Faktoranalys",
+      "kurz": "Vilka frågor hör ihop? Faktoranalys söker grupper av frågor som besvaras likartat. Laddningen (från −1 till 1) visar hur starkt en fråga hör till en grupp.",
+      "beispiel": "Nio frågor om stadslivet bildar tre grupper: trafik, trygghet, fritid.",
+      "vorsicht": "Beräkningen hittar bara grupper. Människor avgör vad de betyder. Laddningar från ,30 till ,50 och uppåt räknas ofta med; det finns ingen fast gräns.",
+      "fachwoerter": "principalkomponentanalys (förval, som i SPSS: slår ihop frågorna till komponenter), principalaxelfaktorisering (söker gemensamma egenskaper bakom frågorna), Promax (en rotation som låter faktorerna hänga ihop).",
+      "pruefen": true
+    },
+    "koeffizient-b": {
+      "titel": "Regressionskoefficienten B och konstanten",
+      "kurz": "Hur mycket ändras förutsägelsen när ett annat värde stiger med 1 och de övriga förblir desamma? B säger det, i datas enheter. Därför ändras B när fler värden kommer in i modellen. Konstanten är förutsägelsen när alla andra värden är 0.",
+      "beispiel": "Lägenhetspris i 1000 €: B = 2,4 för golvyta. En m² mer hör i genomsnitt ihop med 2 400 € högre pris, på samma våning.",
+      "vorsicht": "B ändras med enheten (euro eller tusen euro). Bara vid samma enhet kan B jämföras mellan studier; vid olika skalor eller enheter återstår bara beta, som dock beror på spridningen i stickprovet. Konstanten betyder ofta ingenting om 0 aldrig förekommer (0 m²).",
+      "fachwoerter": "beta (B uttryckt i standardavvikelser, så att skalor blir jämförbara), prediktor (ett värde som används för att förutsäga).",
+      "pruefen": true
+    },
+    "beta": {
+      "titel": "Standardiserad koefficient beta (β)",
+      "kurz": "B utan enheter: beta räknar om allt till standardavvikelser (det typiska avståndet mellan värdena och medelvärdet). Det ställer storheter med olika enheter bredvid varandra inom en studie. Med bara en prediktor är beta lika med r.",
+      "beispiel": "Lägenhetspris: golvyta β = ,62. Om golvytan stiger med en standardavvikelse stiger priset i genomsnitt med 0,62 standardavvikelser.",
+      "vorsicht": "Beta beror på hur olika fallen i ett stickprov är, så det kan inte bara jämföras mellan studier. Om två studier har olika skalor eller enheter kan bara beta ställas bredvid varandra, inte B - men även beta beror på spridningen i stickprovet. Om ett större beta betyder ”viktigare” är omstritt.",
+      "pruefen": true
+    },
+    "standardfehler": {
+      "titel": "Standardfel",
+      "kurz": "Hur precis är en skattning? Med andra personer skulle ett något annat värde komma ut. Standardfelet säger hur mycket värdet typiskt varierar på det sättet. Mindre betyder mer precist.",
+      "beispiel": "1,5 poäng mer per träningstimme (B = 1,5), standardfel 0,5. B delat med standardfelet ger t = 3,0, vilket leder till p (Sig.).",
+      "vorsicht": "Fler personer gör det mindre, även om sambandet förblir detsamma. ”Skattningens standardfel” i modellsammanfattningen är något annat: det typiska avståndet mellan värdena och linjen. Fyra gånger så många personer halverar det ungefär. Standardavvikelsen (det typiska avståndet mellan de enskilda värdena och medelvärdet) förblir ungefär densamma.",
+      "fachwoerter": "stickprov (de personer som faktiskt studerades), t (B delat med standardfelet), Sig. (vad SPSS kallar motsvarande p-värde).",
+      "pruefen": true
+    },
+    "r-quadrat": {
+      "titel": "R² (R i kvadrat) och justerad R²",
+      "kurz": "Hur mycket av skillnaderna förklarar en modell? R² är en andel från 0 till 1. Justerat R² drar bort lite, eftersom varje tillagd storhet kan höja R² även om den inte bidrar med något. Med bara en prediktor är R² kvadraten på korrelationen r. r i sig är ingen andel.",
+      "beispiel": "R² = ,40: golvyta och läge förklarar 40 % av prisskillnaderna i de här data.",
+      "vorsicht": "”Förklarar” är menat räknemässigt, inte som en orsak. Ett högre R² ensamt gör inte en modell bättre.",
+      "fachwoerter": "varians (hur brett värdena sprider sig kring sitt medelvärde), signifikant (p-värdet ligger under den valda gränsen, oftast ,05), prediktor (ett värde som används för att förutsäga).",
+      "pruefen": true
+    },
+    "eigenwert-rotation": {
+      "titel": "Egenvärde, parallellanalys, laddning och rotation",
+      "kurz": "Hur många grupper av frågor finns det? Egenvärdet visar hur mycket av skillnaderna en grupp fångar. Parallellanalys behåller bara grupper över värdet för slumpdata; rotation gör tilldelningen av frågor tydligare.",
+      "beispiel": "Åtta frågor om bostadsområdet: två grupper ligger över slumpvärdet, med egenvärdena 3,1 och 1,6. Tillsammans 4,7 av 8, alltså 59 %. Fråga 6 har en laddning på ,81 på grupp 1 (stark tillhörighet) och ,05 på grupp 2.",
+      "vorsicht": "Ingen regel är ett bevis: ”egenvärde över 1” anger ofta för många grupper, parallellanalys kan ange för få när den första gruppen är mycket stor, det finns få personer och grupperna hänger starkt ihop. Antalet avgörs tillsammans med scree-diagrammet (ett diagram över egenvärdena) och frågornas innehåll.",
+      "fachwoerter": "komponent (en av grupperna som beräkningen bildar), Kaiser-kriteriet (behåller komponenter med egenvärde över 1), Varimax (en rotation som håller komponenterna oberoende), Promax (en rotation som låter faktorerna hänga ihop).",
+      "pruefen": true
+    },
+    "trennschaerfe": {
+      "titel": "Korrigerad item-totalkorrelation och alfa om item tas bort",
+      "kurz": "Passar en fråga ihop med de andra frågorna i en skala? Diskriminationsförmågan (item-total-korrelationen) är korrelationen mellan frågan och summan av de andra frågorna. Hög betyder: personer som svarar högt här tenderar att svara högt också på de andra. Cronbachs alfa om item tas bort är skalans alfa utan den här frågan. Om det stiger drar frågan ner alfa.",
+      "beispiel": "Diskriminationsförmåga ,55: passar bra. Diskriminationsförmåga −,40: frågan går åt andra hållet; kanske omkodades den inte.",
+      "vorsicht": "Värden på omkring ,40 till ,70 kallas ofta bra; det är en vana. Hög diskriminationsförmåga bevisar inte att alla frågor mäter samma sak. Även innehållet avgör om en fråga tas bort.",
+      "fachwoerter": "Cronbachs alfa (hur starkt svaren i en skala hänger ihop), item (en enskild fråga i skalan), omkodning av omvända frågor (en omvänd fråga vänds så att den pekar åt samma håll).",
+      "pruefen": true
+    },
+    "rangkorrelation": {
+      "titel": "Rangkorrelation (rs, τb)",
+      "kurz": "Hänger två rangordningar ihop? Rangkorrelation (rs enligt Spearman, τb enligt Kendall) jämför inte talen utan deras rangplaceringar, och passar när bara ordningen räknas. Den ligger mellan −1 och +1.",
+      "beispiel": "Tillfredsställelse (nivå 1 till 5) och besök per månad hos 60 personer: rs = −,22. Personer som kommer oftare tenderar att vara något mindre nöjda. Sambandet är svagt.",
+      "vorsicht": "Ett samband är ingen orsak. Rangkorrelation fångar varje samband som fortsätter stiga eller fortsätter sjunka, även krökta; ett spridningsdiagram visar formen.",
+      "pruefen": true
+    },
+    "kappa": {
+      "titel": "Cohens kappa (κ)",
+      "kurz": "Hur väl är två bedömare överens när gissning dragits bort? Cohens kappa (κ) tar bort den överensstämmelse som slumpen ensam skulle ge. 0 betyder inte bättre än slump; 1 betyder perfekt överensstämmelse.",
+      "beispiel": "Två läkare sorterar 50 hudfoton som ”avvikande” eller ”oavvikande”. De är överens om 40 (80 %); efter att slumpen dragits bort är κ = ,60 (95-procentigt intervall ,38 till ,82).",
+      "vorsicht": "κ är lågt trots hög överensstämmelse när en kategori är mycket sällsynt eller mycket vanlig. Beteckningar som ”måttlig” eller ”betydande” (Landis och Koch 1977) är tumregler, inga gränser.",
+      "pruefen": true
+    },
+    "krippendorff-alpha": {
+      "titel": "Krippendorffs alfa (α)",
+      "kurz": "Är flera personer överens när de sorterar, även om inte alla bedömde varje fall? Krippendorffs alfa (α) mäter det i ett tal. Ofta nämns: från ,800 tillförlitligt, från ,667 för preliminära slutsatser.",
+      "beispiel": "Tre personer sorterar 60 kundkommentarer i ”beröm”, ”kritik” eller ”fråga”: α = ,71. Det ligger över ,667 men under ,800: tillräckligt för preliminära slutsatser, inte för tillförlitliga.",
+      "vorsicht": "Gränserna ,800 och ,667 är förslag av Krippendorff, inga naturlagar. Med få fall är intervallet brett.",
+      "pruefen": true
+    },
+    "icc": {
+      "titel": "Intraklasskorrelation (ICC)",
+      "kurz": "Hur mycket av skillnaderna mellan bedömningar kommer från de bedömda fallen snarare än från bedömarna? ICC (intraklasskorrelation) visar det: 0 betyder ingen överensstämmelse, 1 perfekt överensstämmelse.",
+      "beispiel": "Tre domare poängsätter 10 tårtor från 0 till 100 poäng: ICC(2,1) = ,82 (95-procentigt intervall ,43 till ,95) för en enskild bedömning, ICC(2,3) = ,93 (,70 till ,98) för medelvärdet av de tre bedömningarna. Med bara 10 tårtor är det första intervallet fortfarande brett.",
+      "vorsicht": "Det finns varianter (enskild bedömning eller medelvärde; full överensstämmelse, eller en fast förskjutning mellan bedömarna tillåts); den passande väljs i förväg. Med få fall är ICC oprecist, och det blir lågt när fallen knappt skiljer sig - även med god överensstämmelse.",
+      "fachwoerter": "konfidensintervall (ett område som rimmar väl med det verkliga ICC, givet data), absolut överensstämmelse ICC(2,·) (värdena ska vara lika), konsistens ICC(3,·) (en fast förskjutning mellan bedömarna tillåts), enskild och medel (en bedömning eller medelvärdet av alla bedömningar).",
+      "pruefen": true
+    },
+    "bland-altman": {
+      "titel": "Bland-Altman-diagram",
+      "kurz": "Hur långt ifrån varandra är två mätmetoder på samma fall? Bland-Altman-diagrammet visar varje falls skillnad mot dess medelvärde. Bias är medelskillnaden; gränserna omsluter omkring 95 % av alla skillnader.",
+      "beispiel": "Två kliniska termometrar hos 12 personer: bias = 0,16 °C (95 % KI 0,05 till 0,27), överensstämmelsegränser −0,18 till 0,50 °C. Den andra visar i genomsnitt högre (biasens intervall innehåller inte 0); i ett enskilt fall visar den upp till 0,5 °C högre.",
+      "vorsicht": "Om området är litet nog avgör fackområdet, inte statistiken. Med få fall är gränserna oprecisa, och om skillnaderna beror på medelvärdet gäller gränserna inte lika bra överallt.",
+      "fachwoerter": "ICC (intraklasskorrelation: relaterar skillnaderna till skillnaderna mellan fall), standardavvikelse (SD, den typiska spridningen; gränserna är bias ± 1,96 SD).",
+      "pruefen": true
+    },
+    "sensitivitaet": {
+      "titel": "Sensitivitet",
+      "kurz": "Hur många av de verkligen berörda personerna hittar ett test? Sensitivitet är andelen av de verkligt positiva som testet kallar positiva. Sanningen utgörs av den bästa tillgängliga jämförande kontrollen.",
+      "beispiel": "Av 40 personer med bekräftad diagnos upptäcker snabbtestet 34: sensitivitet = 34 / 40 = 85 % (95 % KI 71 till 93 %).",
+      "vorsicht": "Om testet ställs in strängare eller mildare ändras sensitivitet och specificitet åt motsatta håll. Med få berörda personer är intervallet brett.",
+      "fachwoerter": "referensstandard (den bästa tillgängliga kontrollen, vars resultat räknas som sanningen), sant positiva (berörda personer som testet upptäcker).",
+      "pruefen": true
+    },
+    "spezifitaet": {
+      "titel": "Specificitet",
+      "kurz": "Hur många av de icke berörda personerna känner ett test igen rätt? Specificitet är andelen av de verkligt negativa som testet kallar negativa. Hög betyder få falsklarm.",
+      "beispiel": "Av 120 personer utan diagnosen förblir 108 oavvikande: specificitet = 108 / 120 = 90 % (95 % KI 83 till 94 %).",
+      "vorsicht": "Jämförelsekontrollen behandlas som sanningen; om den själv är osäker blir sensitivitet och specificitet oprecisa. Vid sällsynta tillstånd säger ett positivt resultat ofta mindre än väntat trots hög specificitet (se prediktiva värden).",
+      "fachwoerter": "referensstandard (den bästa tillgängliga kontrollen, vars resultat räknas som sanningen), sant negativa (icke berörda personer som testet rätt släpper igenom).",
+      "pruefen": true
+    },
+    "vorhersagewert": {
+      "titel": "Prediktiva värden (PPV, NPV)",
+      "kurz": "Hur sannolikt är det att någon verkligen är berörd när testet är positivt? Det positiva prediktiva värdet (PPV) säger det: andelen positiva test som verkligen är berörda. Det negativa (NPV) gäller negativa test.",
+      "beispiel": "Ett test med 90 % sensitivitet och 90 % specificitet. Av 1000 personer är 100 berörda: 90 upptäcks, men 90 av de 900 friska testar också positivt. PPV = 90 / 180 = 50 %. Om 500 vore berörda skulle PPV vara 450 / 500 = 90 %.",
+      "vorsicht": "Båda värdena ändras med hur vanligt tillståndet är, även vid lika sensitivitet och specificitet, och gäller bara grupper med liknande prevalens. Om berörda och icke berörda personer söktes upp var för sig (fall-kontrollstudie) kan de inte tolkas.",
+      "fachwoerter": "likelihood-kvoter (LR+ = sensitivitet / (1 − specificitet), LR− = (1 − sensitivitet) / specificitet: hur mycket vanligare ett resultat är hos berörda än hos icke berörda personer; de beror inte på prevalensen).",
+      "pruefen": true
+    },
+    "gepaarte-messung": {
+      "titel": "Parad mätning (dz, dav)",
+      "kurz": "Har något förändrats hos samma personer? Vid en parad mätning kommer ”före” och ”efter” från samma personer. dz och dav är två mått på hur stor förändringen är. Det parade t-testet arbetar med skillnaderna per person. Det tar bort skillnaderna mellan personer, och p-värdet blir ofta mindre.",
+      "beispiel": "Armhävningar hos 10 personer före och efter sex veckors träning: 2,9 fler i genomsnitt. dz = 2,9 / 1,37 = 2,12; dav = 2,9 / 3,94 = 0,74. dz är mycket större eftersom före och efter hänger starkt ihop (r = ,98).",
+      "vorsicht": "dz delar den genomsnittliga förändringen med förändringarnas spridning, dav med den genomsnittliga spridningen före och efter; bara dav är jämförbart med d från gruppjämförelser. Utan en jämförelsegrupp visar mätningen inte vad som orsakade förändringen; Cohens beteckningar (0,2 / 0,5 / 0,8) är en vana och gäller dav, inte dz.",
+      "fachwoerter": "standardavvikelse (den typiska spridningen av värden kring deras medelvärde), styrka (chansen att hitta en skillnad som verkligen finns; dz används för att beräkna den).",
+      "pruefen": true
+    },
+    "logistische-regression": {
+      "titel": "Logistisk regression",
+      "kurz": "Vad beror det på om något inträffar eller inte? Logistisk regression förutsäger ett ja/nej-utfall ur andra värden. Ett modelltest kontrollerar om den förutsäger bättre än en modell utan de värdena.",
+      "beispiel": "Uppsägning (ja/nej) utifrån lön, ålder och pendlingstid hos 300 personer, 36 % säger upp sig: modelltest χ²(3) = 14,2, p = ,003; Nagelkerkes R² = ,06. 68 % klassificeras rätt; utan modellen skulle det vara 64 % (så många hör till den större gruppen).",
+      "vorsicht": "Nagelkerkes R² är ingen andel förklarade skillnader som i linjär regression. En hög träffsäkerhet är värd lite om en grupp ändå är mycket större, och den gäller oftast bara de data modellen anpassades på.",
+      "fachwoerter": "odds (sannolikheten delad med sannolikheten för motsatsen: 75 % är odds 3 mot 1), prediktor (ett värde som används för att förutsäga), pseudo-R² (Nagelkerkes R² står i för R² i linjär regression men är inte en andel förklarade skillnader).",
+      "pruefen": true,
+      "statable": "Kör regressionen (målkolumn med två värden) och öppna blocket ”Kontrollera den logistiska regressionen: ovanliga fall, anpassning, logitens linjäritet, block” under resultatet. Det visar VIF, ovanliga fall (leverage, Cooks avstånd, devians-residual, DFBETA), Hosmer-Lemeshow-testet, Box-Tidwell-testet och block-χ² för ett andra block av prediktorer."
+    },
+    "odds-ratio": {
+      "titel": "Oddskvot (OR)",
+      "kurz": "Med vilken faktor ändras chansen för en händelse när ett värde stiger med 1? Det är oddskvoten (OR). 1 betyder inget samband; över 1 stiger chansen; under 1 sjunker den.",
+      "beispiel": "Chansen att ett paket kommer försent, per 100 km avstånd: OR = 1,35, 95-procentigt intervall [1,12; 1,63]. Med 100 km mer stiger chansen till 1,35 gånger, alltså med omkring 35 %. Intervallet innehåller inte 1.",
+      "vorsicht": "”Chans” betyder här kvoten mellan ”inträffar” och ”inträffar inte” (3 mot 1 snarare än 75 %); en OR är alltså inte ”x gånger så sannolik” - det gäller bara sällsynta händelser. Om 1 ligger inom intervallet är ett samband inte visat.",
+      "fachwoerter": "odds (sannolikheten delad med sannolikheten för motsatsen), prediktor (ett värde som används för att förutsäga), Wald (den vanliga metoden för OR:s intervall).",
+      "pruefen": true
+    },
+    "eta-quadrat": {
+      "titel": "Eta-kvadrat (η²) och omega-kvadrat (ω²)",
+      "kurz": "Hur mycket av skillnaderna i det uppmätta värdet hänger ihop med gruppen? η² (eta-kvadrat) är den andelen, 0 till 1. ω² är samma idé, beräknad försiktigare, och något mindre.",
+      "beispiel": "Tre gödselmedel, 20 växter vardera: η² = ,25 och ω² = ,22. Gödselmedlet hänger ihop med ungefär en fjärdedel av skillnaderna i skörd.",
+      "vorsicht": "Beteckningarna ,01 / ,06 / ,14 efter Cohen är en vana för gruppjämförelser; med personer som mätts flera gånger eller grupper som inte tilldelats blir en variant (partiellt η²) mycket större, så Statable använder generaliserat η² (ηG²) där. Gruppjämförelsen (variansanalys) visar bara att minst två grupper skiljer sig, inte vilka.",
+      "fachwoerter": "population (alla som påståendet gäller; stickprovet är bara en del av den), konfidensintervall (ett rimligt område för η² i populationen), upprepade mätningar (samma personer mätta flera gånger), partiellt η² (ηp²: effekten i förhållande till effekten plus dess fel), signifikant (p-värdet ligger under den valda gränsen; om testet inte är signifikant är intervallets nedre gräns 0).",
+      "pruefen": true
+    },
+    "paarvergleich": {
+      "titel": "Parvisa jämförelser (post hoc: Tukey, Games-Howell, Bonferroni)",
+      "kurz": "Vilka grupper skiljer sig när det finns fler än två? Parvisa jämförelser testar varje par och gör p-värdena strängare, eftersom många jämförelser lätt ”hittar” något av en slump. Vanliga är Tukey, Games-Howell och Bonferroni.",
+      "beispiel": "Tre sorter ger 3 par. Med Bonferroni multipliceras varje p med 3: ,020 blir ,060 - inte längre under ,05.",
+      "vorsicht": "Ett par som inte är signifikant betyder inte ”lika”, bara ”inte visat”. Med många grupper blir paren många, och varje enskilt är svårare att påvisa.",
+      "fachwoerter": "variansanalys (jämför medelvärdena hos tre eller fler grupper), post hoc (efteråt, efter variansanalysen), Games-Howell (förval i Statable, kräver inte lika spridning), Tukey (förutsätter lika spridning), Bonferroni (strikt och enkelt: varje p gånger antalet par).",
+      "pruefen": true
+    },
+    "welch-anova": {
+      "titel": "Welchs variansanalys",
+      "kurz": "Hur jämför man flera grupper som sprider sig olika? Den klassiska variansanalysen kräver lika spridning. Welchs variansanalys gör det inte: den väger varje grupp efter dess spridning.",
+      "beispiel": "Leveranstider för fyra lager med mycket olika spridning: Welch F(3; 41,8) = 5,4, p = ,003. Lagren skiljer sig, utan antagande om lika spridning.",
+      "vorsicht": "Inte heller Welchs analys visar mer än att minst två grupper skiljer sig. De parvisa jämförelserna visar vilka (Games-Howell passar till den).",
+      "fachwoerter": "frihetsgrader (df: talen inom parentes bredvid F; de avgör vilken fördelning testet jämför med), spridning (hur långt isär en grupps värden ligger).",
+      "pruefen": true
+    },
+    "rangtest": {
+      "titel": "Rangtest (ingen normalfördelning)",
+      "kurz": "Vad gör man när medelvärden passar dåligt på grund av extremvärden eller skevhet? Rangtest ordnar alla värden och arbetar med rangplaceringar. De kräver ingen normalfördelning och reagerar knappt på enstaka extremvärden.",
+      "beispiel": "Väntetider i minuter, 6 mätningar vardera: tjänst A 4, 5, 6, 7, 9, 13; tjänst B 8, 10, 11, 12, 15, 40. Mann-Whitney-test (två grupper) U = 5, p = ,041 (exakt): B tenderar att vara högre. Extremvärdet 40 spelar knappt någon roll.",
+      "vorsicht": "Ett rangtest visar om en grupp tenderar att ha högre värden - det testar inte medianerna ensamma. Olika spridning eller form kan också utlösa det.",
+      "fachwoerter": "Kruskal-Wallis (rangtest för tre eller fler grupper), Wilcoxon (rangtest för två mätningar av samma personer), Dunn-test med Holm-justering (visar efter Kruskal-Wallis vilka par som skiljer sig), Hodges-Lehmann-skattning (HL: medianen av alla skillnader mellan en person från varje grupp) med sitt 95-procentiga konfidensintervall (ett rimligt område för den), effektstorlek (hur stor skillnaden är: r = |z| / √N, för Kruskal-Wallis ε² = H / (n − 1)), rangbiserial korrelation (andelen par där en grupp är högre, gånger 2, minus 1), lika rangtal (ties) (lika värden).",
+      "pruefen": true
+    },
+    "sphaerizitaet": {
+      "titel": "Sfäricitet (Mauchlys test)",
+      "kurz": "Samma personer mäts flera gånger: varierar skillnaderna mellan två mättillfällen lika starkt? Det är sfäricitet. Om den bryts blir resultatet signifikant för ofta.",
+      "beispiel": "Reaktionstid hos 20 personer på tre dagar: Mauchlys test W = ,75, p = ,075; ε (Greenhouse-Geisser) = ,80 (1 skulle betyda: uppfyllt). Testet visar ingen överträdelse, men ε ligger tydligt under 1 - så en korrektion tillämpas.",
+      "vorsicht": "Mauchlys test kontrollerar sfäriciteten (p över ,05 talar inte emot den), men det är svagt med få personer och markerar även små avvikelser med många. Därför visar Statable alltid Greenhouse-Geisser-korrektionen, inte bara när p ligger under ,05.",
+      "fachwoerter": "upprepade mätningar (samma personer mätta flera gånger), variansanalys (jämför medelvärden), frihetsgrader (df: talen inom parentes bredvid F), p-värde (hur ofta ett resultat minst så stort skulle förekomma om antagandet gäller), W (Mauchlys tests teststatistika).",
+      "pruefen": true,
+      "statable": "Under resultatet av variansanalysen för upprepade mätningar väljer du korrektionen för sfäricitet (Greenhouse-Geisser som standard, Huynh-Feldt eller ingen). Med en faktor med upprepade mätningar står Mauchly-testet i tabellen; med två faktorer har varje effekt sitt eget ε."
+    },
+    "greenhouse-geisser": {
+      "titel": "Greenhouse-Geisser- och Huynh-Feldt-korrektion (ε)",
+      "kurz": "Vad gör man när sfäriciteten bryts? Korrektionen gör resultatet försiktigare: p blir större. Hur mycket avgörs av ε (epsilon): 1 betyder uppfyllt, mindre betyder starkare brutet.",
+      "beispiel": "Med ε = ,80 blir F(2; 38) = 6,2, p = ,005 till F(1,60; 30,40) = 6,2, p = ,009: de två talen inom parentes, 2 och 38, multipliceras med ,80 och ger 1,60 och 30,40.",
+      "vorsicht": "Greenhouse-Geisser är den strängare, Huynh-Feldt den något generösare skattningen. Talen inom parentes är inte längre heltal; det är vanligt, och med ε nära 1 ändrar korrektionen knappt något.",
+      "fachwoerter": "frihetsgrader (df: talen inom parentes bredvid F), variansanalys (jämför medelvärden), sfäricitet (alla skillnader mellan två mättillfällen varierar lika).",
+      "pruefen": true,
+      "statable": "Under resultatet av variansanalysen för upprepade mätningar väljer du korrektionen: Greenhouse-Geisser (standard), Huynh-Feldt eller ingen. Frihetsgrader och p visas direkt korrigerade med ε; med två faktorer med upprepade mätningar har varje effekt sitt eget ε."
+    },
+    "mediation": {
+      "titel": "Mediation (indirekt effekt)",
+      "kurz": "Går en effekt via ett mellansteg? Till exempel: buller påverkar sömnen, och sömnen påverkar humöret. Mediation beräknar hur stor den indirekta banan är.",
+      "beispiel": "Indirekt bana via sömn 0,20, 95-procentigt intervall [0,11; 0,30]: 0 ligger inte inom det.",
+      "vorsicht": "En enda enkät visar ingen orsak: ordningen är ett antagande. Det som räknas är den indirekta banans intervall, inte om de enskilda stegen är signifikanta.",
+      "fachwoerter": "mediator (variabeln M via vilken en effekt går), banorna a (X → M), b (M → Y), c′ (X → Y direkt) och c (X → Y totalt; c = c′ + a·b), bootstrap (att dra nytt ur de befintliga personerna 5000 gånger), konfidensintervall (ett område som rimmar väl med det verkliga värdet, givet data).",
+      "pruefen": true
+    },
+    "moderation": {
+      "titel": "Moderation (interaktion, enkla lutningar)",
+      "kurz": "Är ett samband detsamma för alla? Moderation testar om det beror på en tredje storhet.",
+      "beispiel": "Mer övning hjälper nybörjare mycket och erfarna knappt alls: erfarenhet modererar sambandet.",
+      "vorsicht": "Moderation är inte mediation: moderatorn ändrar sambandets styrka; den är inte ett mellansteg. Moderation ensam visar inte heller en orsak.",
+      "fachwoerter": "moderator (den tredje variabeln W som sambandet beror på), centrering (att förskjuta värden kring deras medelvärde), regression (förutsägelse med produkten X·W som interaktionsterm), signifikant (p-värdet ligger under den valda gränsen), enkla lutningar (X:s lutning vid lågt, medelhögt och högt W), ΔR² (vinsten i förklarad varians på grund av interaktionen), Johnson-Neyman (anger de punkter på W från vilka lutningen blir signifikant).",
+      "pruefen": true
+    },
+    "nap": {
+      "titel": "NAP (icke-överlapp för alla par)",
+      "kurz": "Har ett beteende förbättrats genom en insats? NAP jämför varje värde före (A) med varje värde under insatsen (B) och anger andelen par där B är bättre; lika räknas som hälften.",
+      "beispiel": "Minuter ett barn sitter vid bordet: baslinje 3, 4, 4, 5; insats 6, 5, 7, 8, 7. Av 20 par är B bättre i 19 och lika i 1: NAP = (19 + 0,5) / 20 = ,975.",
+      "vorsicht": "NAP ignorerar varje trend före insatsen och visar inte med hur mycket B är bättre; beteckningarna svag, medelstor och stark (Parker och Vannest) är en tumregel. Ett test för det förutsätter oberoende mätningar, vilket tidsserier ofta saknar.",
+      "fachwoerter": "AUC (ytan under ROC-kurvan: samma sannolikhet, NAP är lika med den), Mann-Whitney (rangtest för två grupper, ger p-värdet här), p-värde (hur ofta ett resultat minst så stort skulle förekomma om det inte finns någon skillnad), konfidensintervall enligt Newcombe (ett område som visar hur osäkert värdet är med få mätningar).",
+      "pruefen": true
+    },
+    "pnd": {
+      "titel": "PND (andel icke-överlappande data)",
+      "kurz": "Hur många värden i insatsfasen (B) slår det bästa värdet före den (A)? Det är PND: andelen B-värden över det bästa A-värdet (Scruggs et al. 1987).",
+      "beispiel": "Med samma data (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): det bästa A-värdet är 5. Fyra av fem B-värden ligger över det (6, 7, 8, 7), PND = 4 / 5 = 80 %. Om ”lägre = bättre” räknas det lägsta A-värdet.",
+      "vorsicht": "PND beror på ett enda värde före insatsen: ett extremvärde där gör det oanvändbart, och med fler mätningar före sjunker det, även om inget annat skiljer sig. NAP passar bättre; PND finns för jämförelse med äldre arbeten.",
+      "pruefen": true
+    },
+    "tau-u": {
+      "titel": "Tau-U och baslinjekorrigerat Tau",
+      "kurz": "Hur väl kan en förbättring visas när värdena redan rör sig åt ett håll före insatsen? Tau-U jämför före och efter som NAP och kan ta bort den trenden.",
+      "beispiel": "Med samma data (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): Tau-U utan trendborttagning = (19 − 0) / 20 = ,95. Redan före insatsen stiger 5 av de 6 paren: med trenden borttagen är Tau-U = (19 − 5) / 20 = ,70.",
+      "vorsicht": "Trendborttagningen förutsätter att den tidigare trenden helt enkelt skulle fortsätta efteråt - ett starkt antagande med en lång insatsfas. Med färre än 3 mätningar före kan ingen trend testas, och p-värdena förutsätter oberoende mätningar.",
+      "fachwoerter": "Kendall (Kendalls tau: ett samband beräknat ur rangordningar, grunden för båda måtten), Tau-BC (baslinjekorrigerat tau: tar bara bort en trend i A om den är signifikant), Theil-Sen (en robust trendlinje ur medianlutningen för alla par av punkter).",
+      "pruefen": true
+    },
+    "einzelfall": {
+      "titel": "Single-case-analys (A-B-design)",
+      "kurz": "Fungerade en insats för en enskild person? En person (eller några få) mäts upprepat över tid: först utan insatsen (fas A), sedan med den (fas B). De två faserna jämförs.",
+      "beispiel": "Ett barn sitter vid bordet i genomsnitt 4 minuter över fyra baslinjemätningar (3, 4, 4, 5), och i genomsnitt 6,6 minuter över fem mätningar med insatsen (6, 5, 7, 8, 7).",
+      "vorsicht": "En A-B-design bevisar ensam ingen orsak: personen kan också utvecklas av sig själv, eller andra händelser kan spela in. Replikationer är mer övertygande (A-B-A-B, flera personer med förskjutna starter).",
+      "fachwoerter": "median (mittvärdet), NAP (andelen A-B-par där B är bättre), tau och Tau-U (mått baserade på Kendalls tau som kan ta hänsyn till en trend i baslinjen), PND (andelen B-värden över det bästa A-värdet), multiple baseline (flera personer med förskjuten start av insatsen).",
+      "pruefen": true
+    },
+    "kaplan-meier": {
+      "titel": "Kaplan-Meier (tid till händelse)",
+      "kurz": "Hur många är fortfarande utan händelsen efter en viss tid? Kaplan-Meier-kurvan visar det för varje tidpunkt och sjunker vid varje händelse. Den använder också personer som bara observerats en del av tiden.",
+      "beispiel": "10 anställda, tid till avgång i månader: 5 säger upp sig (efter 3, 5, 5, 8 och 12 månader), för 5 slutar observationen utan avgång (efter 6, 9, 10, 14 och 15 månader). Efter 8 månader har 9/10 · 7/9 · 5/6 = 58 % ännu inte sagt upp sig.",
+      "vorsicht": "Metoden förutsätter att lämna observationen inte har med risken att göra. I högra änden finns oftast bara några få personer kvar; där är kurvan osäker.",
+      "fachwoerter": "censurerad (observerad bara till en viss punkt, händelsen har inte inträffat dessförinnan), trappstegskurva (sjunker ett steg vid varje händelse), i riskzonen (fortfarande observerad och utan händelse).",
+      "pruefen": true
+    },
+    "zensierung": {
+      "titel": "Censurering",
+      "kurz": "Vad gäller för personer där inget hade hänt vid observationens slut? De kallas censurerade: man vet bara att händelsen inte inträffade tidigare.",
+      "beispiel": "En anställd som fortfarande är kvar i företaget när studien slutar efter 14 månader är censurerad vid tid 14. I diagrammet syns hon som ett litet streck på kurvan.",
+      "vorsicht": "Ta inte bort censurerade personer och räkna dem inte som händelser: båda snedvrider kurvan. Metoden förutsätter att censurerade personer har samma fortsatta risk som de andra.",
+      "fachwoerter": "Kaplan-Meier (metoden som också använder censurerade personer), i riskzonen (fortfarande observerad och utan händelse), icke-informativ censurering (att lämna observationen har inte med risken att göra).",
+      "pruefen": true
+    },
+    "ueberlebensfunktion": {
+      "titel": "Överlevnadsfunktion S(t)",
+      "kurz": "Hur många har ännu inte upplevt händelsen vid tid t? Det visar överlevnadsfunktionen S(t); den börjar på 1 (alla) och sjunker vid händelser. ”Överlevnad” betyder här bara ”ännu ingen händelse”.",
+      "beispiel": "S(8) = ,58, 95-procentigt intervall [,34; 1,00]: efter 8 månader har uppskattningsvis 58 % av de anställda ännu inte sagt upp sig. Med 10 personer är intervallet mycket brett.",
+      "vorsicht": "Intervallet beräknas (som i R survfit) så att det aldrig faller under 0; den övre gränsen kapas vid 1. När få personer fortfarande observeras är det mycket brett.",
+      "fachwoerter": "konfidensintervall (ett område som rimmar väl med den verkliga andelen, givet data), standardfel (enligt Greenwood: hur mycket värdet skulle variera från stickprov till stickprov), logskala (intervallet beräknas på logaritmerade värden).",
+      "pruefen": true
+    },
+    "median-ueberlebenszeit": {
+      "titel": "Mediantid till händelsen",
+      "kurz": "När har hälften upplevt händelsen? Det är mediantiden: den punkt där kurvan sjunker till 50 %. Om den aldrig sjunker så lågt är medianen ”inte nådd”.",
+      "beispiel": "Median = 12 månader, 95-procentigt intervall [5; inte nådd]: den nedre gränsen är 5, uppåt är intervallet öppet.",
+      "vorsicht": "Medianen är här bättre än medelvärdet, som sneda data och personer utan händelse vid slutet förvränger. Om kurvan ligger exakt på 50 % under en sträcka tar Statable, som R, mittpunkten; med få händelser är medianen mycket osäker.",
+      "pruefen": true
+    },
+    "log-rank": {
+      "titel": "Log-rank-test",
+      "kurz": "Skiljer sig flera gruppers kurvor åt? Log-rank-testet jämför, vid varje händelsetid, hur många händelser varje grupp hade och hur många som skulle förväntas om alla grupper vore lika.",
+      "beispiel": "Två team, tid till avgång: χ²(1) = 5,1, p = ,024. Kurvorna skiljer sig.",
+      "vorsicht": "Testet är starkast när kurvorna aldrig byter sida; om de korsar varandra kan det missa en verklig skillnad. Det säger ingenting om skillnadens storlek; medianer och andelar vid fasta tidpunkter tjänar till det.",
+      "fachwoerter": "Mantel-Cox (ett annat namn på testet), Cox (ska inte förväxlas med Cox-regression), Holm (justerar p-värdena för flera par), frihetsgrader (df: här grupper minus 1).",
+      "pruefen": true
+    },
+    "anzahl-unter-risiko": {
+      "titel": "Antal i riskmängd",
+      "kurz": "Hur många personer bär upp kurvan vid en given punkt? Antalet i riskzonen är hur många som fortfarande observeras och inte har haft händelsen vid tid t. Det står ofta under diagrammet.",
+      "beispiel": "Vid månad 10 finns fortfarande 4 av de 10 personerna i riskzonen: där vilar kurvan på 4 personer.",
+      "vorsicht": "Där bara få är kvar i riskzonen hoppar kurvan kraftigt vid varje händelse och intervallet är brett. Sådana ställen bör inte övertolkas.",
+      "fachwoerter": "censurering (personer som observerats bara till en viss punkt och sedan faller bort; de sänker antalet precis som händelser gör).",
+      "pruefen": true
+    },
+    "bootstrap": {
+      "titel": "Bootstrap (percentilintervall)",
+      "kurz": "Hur osäker är en siffra utan enkel formel? Bootstrap drar om 5000 gånger ur de tillgängliga personerna och räknar om siffran varje gång. De mittersta 95 % av resultaten bildar intervallet.",
+      "beispiel": "Median (mittvärdet) av väntetiden hos 12 personer: 11,5 minuter. Av de 5000 nya medianerna ligger 2,5 % under 7,5 och 2,5 % över 16,5: 95-procentigt bootstrap-intervall [7,5; 16,5].",
+      "vorsicht": "Med få personer (under omkring 50) är intervallet oprecist och ofta för smalt. Med ett fast startvärde för slumptalen ger samma data alltid samma intervall; ett annat startvärde förskjuter gränserna bara något.",
+      "fachwoerter": "konfidensintervall (ett område som rimmar väl med det verkliga värdet, givet data), percentil (gränserna vid 2,5 % och 97,5 % av de ordnade resultaten), dragning med återläggning (samma person kan förekomma flera gånger), frö (fastställer slumptalen).",
+      "pruefen": true
+    },
+    "omega": {
+      "titel": "McDonalds omega (ω)",
+      "kurz": "Mäter flera frågor tillsammans en sak tillförlitligt, även om de inte bidrar lika mycket? Omega (ω) mäter det som Cronbachs alfa, men använder varje frågas faktiska bidrag. Alfa förutsätter detsamma för alla.",
+      "beispiel": "Fem frågor med bidrag (laddningar) på ,5 / ,6 / ,7 / ,7 / ,8: ω = ,80. Alfa, som förutsätter lika bidrag, är något lägre med ,79.",
+      "vorsicht": "Omega förutsätter att frågorna mäter en enda sak; annars är det meningslöst att tolka (faktoranalys hjälper då). Riktmärken (ofta ,70) är bara preliminära, och även omega gäller den här gruppen personer, inte frågeformuläret som sådant. Alfa träffar reliabiliteten exakt bara om frågorna mäter en sak, bidrar lika mycket och har okorrelerade fel.",
+      "pruefen": true
+    },
+    "cfa": {
+      "titel": "Konfirmatorisk faktoranalys (CFA)",
+      "kurz": "Passar en förutbestämd uppdelning av frågor i grupper data? Konfirmatorisk faktoranalys (CFA) fastställer i förväg vilka frågor som hör till vilken grupp (faktor) och testar hur väl det passar.",
+      "beispiel": "Nio frågor, tre grupper om tre frågor vardera (trafik, trygghet, fritid): CFI = ,92, RMSEA = ,07, två mått på anpassning. De missar de vanliga riktmärkena med liten marginal: CFI under ,95, RMSEA över ,06.",
+      "vorsicht": "God anpassning visar inte att grupperna mäter rätt sak, och en annan modell kan passa lika bra. Om uppdelningen justeras först efter att ha tittat på samma data är testet inte längre oberoende.",
+      "fachwoerter": "anpassningsmått (mått på hur väl modellen passar, här CFI och RMSEA), explorativ faktoranalys (söker grupper av frågor i data), standardiserade laddningar (hur starkt en fråga hör till sin faktor).",
+      "pruefen": true
+    },
+    "fit-indizes": {
+      "titel": "Anpassningsmått (CFI, TLI, RMSEA, SRMR)",
+      "kurz": "Passar modellen data? Anpassningsmått gör detta till tal. För CFI och TLI är högre bättre, för RMSEA och SRMR lägre. RMSEA:s 90-procentiga intervall visar hur precist det skattas.",
+      "beispiel": "CFI = ,96, TLI = ,95, RMSEA = ,05, SRMR = ,04: enligt de vanliga riktmärkena ligger anpassningen i det goda området.",
+      "vorsicht": "Riktmärkena (CFI och TLI från ,95, RMSEA upp till ,06, SRMR upp till ,08; Hu och Bentler 1999) är erfarenhetsregler, inga tester; ,90 kallas ofta fortfarande acceptabelt för CFI och TLI, och med små modeller eller få personer är de opålitliga. χ²-testet blir signifikant med stora stickprov även för små avvikelser.",
+      "pruefen": true
+    },
+    "mehrebenen": {
+      "titel": "Flernivåmodell (blandad modell)",
+      "kurz": "Vad gäller om personer är kapslade i grupper, som barn i klasser? Personer i en grupp är ofta lika. Flernivåmodellen ger varje grupp en egen nivå och skiljer skillnader mellan grupper från skillnader inom dem.",
+      "beispiel": "Tillfredsställelse hos 500 anställda i 25 företag: 12 % av spridningen ligger mellan företagen. En timmes utbildning mer per månad hör ihop med 0,8 poäng högre tillfredsställelse (p < ,001), även när företaget beaktas.",
+      "vorsicht": "Den behöver flera grupper med flera fall vardera; med färre än 10 grupper är skattningarna på gruppnivå mycket osäkra. En flernivåmodell visar samband, inte orsaker.",
+      "pruefen": true,
+      "statable": "I resultatet under ”För specialister” kan du centrera vid totalmedelvärdet eller gruppmedelvärdet (effekt inom mot effekt mellan grupperna), välja en slumpmässig lutning och lägga till en interaktion, även mellan nivåerna. Under det jämför ”Jämför modellerna” nollmodell, fixa effekter, interaktioner och slumpmässig lutning med ML (AIC, BIC, −2LL, likelihood-kvottest). Om data är person gånger tidpunkt erbjuder Statable sättet ”tid med slumpmässig lutning per person” (tillväxtmodell)."
+    },
+    "icc-mehrebenen": {
+      "titel": "ICC i flernivåmodellen (gruppernas andel)",
+      "kurz": "Hur mycket skiljer sig grupperna? ICC är andelen av den totala spridningen som ligger mellan grupperna. ICC = ,12 betyder: 12 % av skillnaderna hör ihop med gruppen.",
+      "beispiel": "ICC = ,12 med 20 fall per grupp: designeffekten är 1 + (20 − 1) · ,12 = 3,28. Ett medelvärdes osäkerhet (standardfel) är då ungefär 1,8 gånger (√3,28) så stor som en beräkning som bortser från grupperna anger.",
+      "vorsicht": "Ska inte förväxlas med ICC för överensstämmelse mellan bedömare: här är det gruppernas andel av spridningen. Från ,05 liten, från ,10 medelstor, från ,15 stor (Hox) är bara en tumregel.",
+      "fachwoerter": "intraklasskorrelation (ICC: andelen av den totala spridningen som ligger mellan grupperna), varians (hur brett värdena sprider sig), nollmodell (modellen utan förklarande kolumner, i vilken ICC beräknas).",
+      "pruefen": true
+    },
+    "meta-effekt": {
+      "titel": "Sammanvägd effekt (metaanalys)",
+      "kurz": "Hur stor är en effekt över flera studier tillsammans? Den poolade effekten är det viktade genomsnittet av alla studier: mer precisa studier väger tyngre. Om de verkliga effekterna varierar mellan studier blir intervallet bredare.",
+      "beispiel": "Tre studier: 0,40 (standardfel, alltså oprecision, 0,10), 0,20 (0,05) och 0,30 (0,10). Vikt = 1 / standardfel²: 100, 400, 100. Viktat genomsnitt = (40 + 80 + 30) / 600 = 0,25 - som vid en gemensam verklig effekt.",
+      "vorsicht": "Genomsnittet är bara meningsfullt om studierna mäter samma sak. Om studierna skiljer sig starkt, titta också på prediktionsintervallet.",
+      "fachwoerter": "heterogenitet (hur starkt studierna skiljer sig från varandra), konfidensintervall (ett område som rimmar väl med genomsnittet av de verkliga effekterna, givet data), slumpeffektmodell (tillåter att de verkliga effekterna varierar mellan studier, τ²), standardfel (ett mått på hur oprecis en studie är).",
+      "pruefen": true
+    },
+    "i-quadrat": {
+      "titel": "I² och Q (heterogenitet)",
+      "kurz": "Skiljer sig studierna mer än slumpen skulle få oss att vänta oss? I² säger i procent hur mycket av skillnaderna mellan resultaten som kommer från verkliga skillnader mellan studier. Q-testet frågar samma sak.",
+      "beispiel": "Tolv studier: Q(11) = 42,0, p < ,001; I² = (42,0 − 11) / 42,0 = 74 %. Ofta citerade beteckningar: 25 %, 50 %, 75 % (Higgins et al. 2003).",
+      "vorsicht": "I² är en andel, inget mått på hur stora skillnaderna är: med mycket precisa studier blir I² stort även om effekterna ligger nära varandra. Med få studier är I² mycket oprecist, och ett litet värde bevisar inte att studierna är lika; hur långt de verkliga effekterna sprider sig visar τ och prediktionsintervallet.",
+      "pruefen": true,
+      "fachwoerter": "τ (spridningen hos de verkliga effekterna mellan studier), prediktionsintervall (området där effekten i en ny studie sannolikt ligger), Q (ett test av om resultaten varierar mer än slumpen skulle ge)."
+    },
+    "tau-quadrat": {
+      "titel": "τ² (variation mellan studier)",
+      "kurz": "Hur olika är studiernas verkliga effekter? τ² (tau-kvadrat) mäter den spridningen; dess kvadratrot τ är i effektens enhet. Till skillnad från I² bortser det från hur precisa studierna är.",
+      "beispiel": "τ² = 0,04, alltså τ = 0,20: med en genomsnittlig effekt på 0,30 sprider sig studiernas verkliga effekter typiskt med omkring 0,20 kring den.",
+      "vorsicht": "Med färre än omkring fem studier är τ² mycket osäkert och dess intervall mycket brett.",
+      "fachwoerter": "standardavvikelse (τ är kvadratroten av τ²), varians (hur brett de verkliga effekterna sprider sig), REML (metoden som används för att skatta τ²).",
+      "pruefen": true
+    },
+    "praediktionsintervall": {
+      "titel": "Prediktionsintervall (metaanalys)",
+      "kurz": "Var ligger effekten i en ny, jämförbar studie sannolikt? Prediktionsintervallet visar det. Det är bredare än genomsnittets konfidensintervall, eftersom det också inkluderar skillnaderna mellan studier.",
+      "beispiel": "Poolad 0,20, 95 % KI [0,12; 0,28], prediktionsintervall [−0,05; 0,45]: en ny studie kunde också hitta en effekt nära 0.",
+      "vorsicht": "Med få studier är intervallet mycket osäkert.",
+      "pruefen": true
+    },
+    "forest-plot": {
+      "titel": "Forest plot",
+      "kurz": "Hur ser resultaten från alla studier ut? Skogsdiagrammet (forest plot) visar varje studie som en kvadrat (effekt) med en linje (95-procentigt intervall). Romben är genomsnittet; den streckade linjen betyder ingen effekt.",
+      "beispiel": "Romb vid 0,20 med spetsar vid 0,12 och 0,28, streckad linje vid 0 (vid 1 för kvoter): romben ligger helt till höger om den - genomsnittet skiljer sig från ”ingen effekt”.",
+      "vorsicht": "Kontrollera om en enda stor studie avgör resultatet (stor kvadrat) och om intervallen överlappar.",
+      "fachwoerter": "prediktionsintervall (området där den verkliga effekten i en ny studie sannolikt ligger), poolad effekt (genomsnittet av alla studier, romben).",
+      "pruefen": true
+    },
+    "funnel-plot": {
+      "titel": "Funnel plot och Eggers test",
+      "kurz": "Saknas studier? Trattdiagrammet (funnel plot) visar varje studie efter effekt och precision: precisa samlas överst, oprecisa sprider sig bredare nedanför. En saknad sida gör det sned; Eggers test kontrollerar detta.",
+      "beispiel": "Eggers test p = ,03 med 14 studier: tratten är påfallande sned - små studier visar i genomsnitt större effekter.",
+      "vorsicht": "Under 10 studier har testet låg styrka (Sterne et al. 2011). Tratten kan också vara sned för att små och stora studier verkligen skiljer sig.",
+      "fachwoerter": "standardfel (ett mått på hur oprecis en studie är), asymmetri (tratten är tom på ena sidan), regression (Egger-testet förutsäger effekten ur standardfelet).",
+      "pruefen": true
+    },
+    "mehrfachantworten-set": {
+      "titel": "Flervalsfråga-set",
+      "kurz": "Vad gäller om flera alternativ kunde kryssas för en fråga? En flervalsuppsättning (multiple response set) slår ihop kolumnerna för de enskilda alternativen till en fråga. Statable räknar, för varje alternativ, hur många personer som nämnde det.",
+      "beispiel": "”Hur tar du dig till jobbet?” med alternativen cykel, buss, bil: tre kolumner (kryssat = 1, annars 0), en uppsättning. I SPSS kallas detta MRSETS.",
+      "vorsicht": "Samma persons kryss hänger ihop. Därför finns inget vanligt chi-två-test för flervalsfrågor.",
+      "pruefen": true
+    },
+    "prozent-der-faelle": {
+      "titel": "Procent av fallen",
+      "kurz": "Hur många personer nämnde ett alternativ? Procent av fallen är antalet omnämnanden delat med antalet giltiga fall. Eftersom varje person kan nämna flera alternativ summerar värdena till mer än 100 %.",
+      "beispiel": "18 av 40 personer kommer med cykel: 18 / 40 = 45 % av fallen.",
+      "vorsicht": "Giltiga fall är de med minst ett kryss (som i SPSS). Den som inte kryssat något finns inte i basen, om inte ”räkna fall utan kryss” är påslaget.",
+      "pruefen": true
+    },
+    "prozent-der-antworten": {
+      "titel": "Procent av svaren",
+      "kurz": "Hur är alla kryss fördelade? Procent av svaren är antalet omnämnanden av ett alternativ delat med summan av alla omnämnanden. De här värdena summerar till 100 %.",
+      "beispiel": "Cykel nämndes 18 gånger, det fanns 60 omnämnanden totalt: 18 / 60 = 30 % av svaren.",
+      "vorsicht": "Värdet säger hur omnämnandena fördelas, inte hur många personer som väljer ett alternativ. Det är vad procent av fallen är till för.",
+      "pruefen": true
+    },
+    "shapiro-wilk": {
+      "titel": "Shapiro-Wilk-test",
+      "kurz": "Ser värdena ut att komma från en normalfördelning? Shapiro-Wilk-testet kontrollerar det. Om p är mindre än ,05 avviker fördelningen synbart; annars talar testet inte emot den.",
+      "beispiel": "Reaktionstider hos 25 personer: W = ,73 (1 skulle vara perfekt överensstämmelse), p < ,001. Fördelningen är sned; medianen beskriver mitten bättre.",
+      "vorsicht": "Med många personer markerar testet även små avvikelser, med få missar det stora. Ett icke-signifikant resultat bevisar ingen normalfördelning; Q-Q-diagrammet kompletterar det.",
+      "pruefen": true
+    },
+    "qq-diagramm": {
+      "titel": "Q-Q-diagram",
+      "kurz": "Följer värdena en normalfördelning? Q-Q-diagrammet sätter varje uppmätt värde som en punkt mot det värde en normalfördelning skulle ge. Om punkterna ligger nära linjen passar det.",
+      "beispiel": "För kroppslängden hos 100 vuxna ligger punkterna nästan på linjen. För väntetider på en kundtjänst böjer de uppåt i övre änden: några få mycket långa väntetider.",
+      "vorsicht": "Kurvor visar skevhet, enstaka punkter långt ut i ändarna visar extremvärden. Med få värden vickar punkterna slumpmässigt kring linjen; Shapiro-Wilk-testet sammanfattar avvikelsen i ett tal men ersätter inte att titta.",
+      "pruefen": true
+    },
+    "partialkorrelation": {
+      "titel": "Partiell korrelation",
+      "kurz": "Hänger två tal fortfarande ihop när ett tredje hålls lika? Partiell korrelation visar sambandet mellan två tal efter att den del som beror på ett eller flera ytterligare tal tagits bort från båda.",
+      "beispiel": "Glassförsäljning och solbränna hänger starkt ihop (r = ,62). När temperaturen tas bort (r = ,80 och ,75 med de två) återstår knappt något: pr = ,05.",
+      "vorsicht": "Bara den rätlinjiga delen av det som mätts och valts tas bort. Om det tredje talet är orsaken till båda avgörs av sakområdet, inte av beräkningen: att ta bort en gemensam effekt av båda talen kan till och med skapa ett skensamband.",
+      "pruefen": true
+    },
+    "roc-auc": {
+      "titel": "ROC-kurva och area under kurvan (AUC)",
+      "kurz": "Hur väl skiljer ett uppmätt värde berörda från icke berörda personer? ROC-kurvan visar det för varje möjligt gränsvärde, och dess area (AUC) sammanfattar det: ,50 betyder slump, 1 perfekt åtskillnad.",
+      "beispiel": "AUC = ,85: om du drar en berörd och en icke berörd person har den berörda det mer påfallande värdet i 85 % av fallen. Vid gränsvärdet 20 poäng upptäcker testet 80 % av de berörda och 78 % av de andra; Youdenindexet ,80 + ,78 − 1 = ,58 används för att välja gränsvärdet.",
+      "vorsicht": "Gränsvärdet väljs på just de här data och presterar oftast sämre i nya data. Youdenindexet vet inte vilket fel som väger tyngre.",
+      "fachwoerter": "sensitivitet (andelen berörda personer som testet upptäcker), specificitet (andelen icke berörda personer som testet rätt släpper igenom), gränsvärde (från den här poängen räknas någon som markerad), Youdenindex (J = sensitivitet + specificitet − 1).",
+      "pruefen": true
+    },
+    "hazard-ratio": {
+      "titel": "Hazardkvot (HR)",
+      "kurz": "Hur mycket snabbare eller långsammare inträffar en händelse i en grupp? Hazardkvoten (HR) jämför gruppernas risk att händelsen sker i nästa ögonblick. 1 betyder ingen skillnad.",
+      "beispiel": "Tid till den första arbetsolyckan, med utbildning mot utan: HR = 0,70, 95-procentigt intervall [0,52; 0,94]. Med utbildning är risken för en olycka i nästa ögonblick 0,70 gånger så stor vid varje tidpunkt. Intervallet innehåller inte 1.",
+      "vorsicht": "En HR är ingen riskkvot: HR = 1,8 betyder inte att händelsen är 1,8 gånger så sannolik. Den kan ändras över tid; ett enda värde är då bara ett genomsnitt.",
+      "fachwoerter": "hazard (risken att få händelsen i nästa ögonblick), proportionella hazarder (kvoten förblir densamma över tid), Cox-regression (metoden som skattar HR), Wald (den vanliga metoden för intervallet).",
+      "pruefen": true
+    },
+    "proportionale-hazards": {
+      "titel": "Proportionella hazarder",
+      "kurz": "Förblir skillnaden mellan två grupper densamma över tid? Hazardkvoten (HR) förutsätter att riskkvoten alltid är densamma. Ett test (cox.zph) kontrollerar detta; ett p under ,05 talar emot det.",
+      "beispiel": "p = ,031 för gruppen: kvoten är inte konstant. Om kurvorna korsar varandra i diagrammet är det ett tydligt tecken.",
+      "vorsicht": "Med många personer reagerar testet även på små avvikelser, med få missar det stora.",
+      "pruefen": true
+    },
+    "risikodifferenz": {
+      "titel": "Riskdifferens (RD)",
+      "kurz": "Med hur mycket är risken högre i en grupp? Riskskillnaden (RD) är en grupps risk minus den andras, som andel eller i procentenheter. 0 betyder ingen skillnad.",
+      "beispiel": "Arbetsolyckor under ett år: 36 av 400 med utbildning (9 %), 60 av 400 utan (15 %). RD = ,09 − ,15 = −,060, 95-procentigt intervall [−,105; −,015]: 6 procentenheter färre med utbildning.",
+      "vorsicht": "Riskskillnaden beskriver en skillnad; den bevisar ingen orsak, och i en fall-kontrollstudie (berörda och icke berörda personer söktes upp var för sig) kan den inte tolkas. Statable beräknar intervallet enligt Newcombe, vilket är säkrare med små tal än den enklare metoden.",
+      "fachwoerter": "Wald-intervall (en enkel approximation för intervallet, mindre säker med små tal), Newcombe-intervall (metoden Statable använder).",
+      "pruefen": true
+    },
+    "relatives-risiko": {
+      "titel": "Relativ risk (RR)",
+      "kurz": "Hur många gånger så stor är risken i en grupp? Den relativa risken (RR) är en grupps risk delad med den andras. 1 betyder ingen skillnad; 0,5 betyder hälften så stor.",
+      "beispiel": "Samma arbetsolyckor: RR = 0,09 / 0,15 = 0,60, 95-procentigt intervall [0,41; 0,89]. Med utbildning är risken 0,60 gånger så stor. Intervallet innehåller inte 1.",
+      "vorsicht": "Om en grupp inte har någon händelse alls kan RR:s intervall inte beräknas; Statable korrigerar inte i tysthet. Den gäller grupper som följts över tid och experiment, inte fall-kontrollstudier.",
+      "pruefen": true
+    },
+    "nnt": {
+      "titel": "NNT (antal som behöver behandlas)",
+      "kurz": "Hos hur många måste man ingripa för att en händelse färre ska inträffa? NNT (number needed to treat) är 1 delat med riskskillnaden. NNTB betyder en ytterligare nytta, NNTH en ytterligare skada.",
+      "beispiel": "Med RD = −,06 är NNTB = 1 / ,06 = 16,7 (95-procentigt intervall NNTB 9,5 till 67,0): för omkring 17 utbildade personer inträffar en olycka färre.",
+      "vorsicht": "NNT-intervallet går genom oändligheten när riskskillnaden också kan vara 0 (till exempel NNTH 25 till ∞ till NNTB 10) - läs det aldrig som ett intervall med negativa tal. Om en händelse är önskvärd måste personen ange.",
+      "pruefen": true
+    },
+    "typical-error": {
+      "titel": "Typical error (TE)",
+      "kurz": "Hur mycket avviker en enskild mätning typiskt vid upprepning? Det säger det typiska felet (TE), i mätningens enhet. Det beräknas ur två mätningar av samma personer.",
+      "beispiel": "Hopphöjd hos 8 personer på två dagar: skillnaderna mellan dagarna har en standardavvikelse på 2,1 cm. TE = 2,1 / √2 = 1,5 cm: ett enskilt hopp avviker typiskt med 1,5 cm.",
+      "vorsicht": "TE gäller bara om inget ändrades mellan mätningarna. Det är lika med mätningens standardfel ur upprepade mätningar, inte det ur hur frågorna i en skala hänger ihop.",
+      "fachwoerter": "reliabilitet (hur pålitlig en mätning är vid upprepning), standardavvikelse (SD) för differenserna (den typiska spridningen av differenserna mellan de två mätningarna), mätningens standardfel (det typiska felet i en enskild mätning).",
+      "pruefen": true
+    },
+    "lilliefors": {
+      "titel": "Lilliefors-test",
+      "kurz": "Passar värdena en normalfördelning? Lilliefors-testet kontrollerar det, även när medelvärdet och spridningen först skattas ur data. Ett p under ,05 betyder att fördelningen avviker från normal.",
+      "beispiel": "Besökares uppehållstid i minuter, 30 besökare: D = ,17, p = ,033 (Lilliefors-versionen av Kolmogorov-Smirnov-testet). Fördelningen avviker från en normalfördelning.",
+      "vorsicht": "Ett p över ,05 betyder inte att data är normalfördelade, bara att testet inte talar emot det. Med få personer missar det stora avvikelser; Q-Q-diagrammet visar mer.",
+      "fachwoerter": "standardavvikelse (den typiska spridningen av värden kring deras medelvärde), Kolmogorov-Smirnov-test (jämför datas fördelning med en normalfördelning).",
+      "pruefen": true
+    },
+    "chi-quadrat-anpassung": {
+      "titel": "Chi-två-test för anpassning (χ²)",
+      "kurz": "Passar fördelningen över kategorier en förväntad? Chi-två-anpassningstestet (χ²) kontrollerar om räknade frekvenser passar givna proportioner, till exempel lika andelar. Ett p under ,05 betyder: de avviker från förväntan.",
+      "beispiel": "En tärning, 120 kast, 20 förväntade per sida. Observerat: 14, 22, 18, 25, 19, 22. χ²(5, N = 120) = 74 / 20 = 3,7, p = ,593: frekvenserna talar inte emot en rättvis tärning.",
+      "vorsicht": "Om färre än 1 förväntas i en kategori, eller färre än 5 i mer än en femtedel av kategorierna, är p osäkert (en vana efter Cochran 1954). Ett icke-signifikant resultat bekräftar inte förväntan.",
+      "pruefen": true
+    },
+    "ladung": {
+      "titel": "Laddning (faktorladdning)",
+      "kurz": "Hur starkt hör en fråga (item) till en faktor eller komponent, alltså en grupp frågor? Laddningen visar det: vid ortogonal (vinkelrät) rotation är den korrelationen (från −1 till 1) mellan de två. Minustecknet visar bara riktningen, som bestäms av hur komponenten är orienterad. För styrkan räknas det absoluta värdet.",
+      "beispiel": "Fråga A: ,70 på komponent 1, ,10 på komponent 2: hör till komponent 1. Fråga B: −,65 på komponent 1: hör också dit, bara åt motsatt håll.",
+      "vorsicht": "Gränsen (ofta ,30 till ,50) är en vana. Över den två gånger kallas korsladdning (cross-loading): kontrollera efter innehåll. Tomma celler i tabellen är små laddningar som har dolts."
+    },
+    "eigenwert": {
+      "titel": "Egenvärde och Kaiser-kriteriet",
+      "kurz": "Hur mycket av skillnaderna i svaren fångar en komponent (en grupp frågor)? Egenvärdet visar det. Delat med antalet frågor ger det komponentens andel av variansen. Kumulativt betyder flera komponenter sammanlagda.",
+      "beispiel": "Med 6 frågor: komponent 1 har 2,4 (40 %), komponent 2 har 1,2 (20 %). Kumulativt 3,6 av 6, alltså 60 %.",
+      "vorsicht": "Kaiser-kriteriet behåller komponenter med ett egenvärde över 1. I simuleringar anger det ofta för många komponenter och bör inte avgöra ensamt. Parallellanalys kompletterar det.",
+      "fachwoerter": "varians (hur brett svaren sprider sig), parallellanalys (jämför egenvärdena med värdena för slumpdata)."
+    },
+    "kommunalitaet": {
+      "titel": "Kommunalitet (h²)",
+      "kurz": "Hur mycket av en fråga förklarar komponenterna (faktorerna) tillsammans? Det är kommunaliteten (h²): den andel av skillnaderna i svaren på den här frågan som alla komponenter fångar gemensamt. För okorrelerade komponenter är det summan av de kvadrerade laddningarna.",
+      "beispiel": "En fråga laddar ,6 och ,5 på två komponenter: h² = ,36 + ,25 = ,61, alltså omkring 61 %.",
+      "vorsicht": "Låg kan betyda mycket slumpfel, som gemensamma faktorer aldrig förklarar, eller att frågan inte passar de andra till innehållet."
+    },
+    "rotation": {
+      "titel": "Rotation (ortogonal och oblik)",
+      "kurz": "Hur blir tilldelningen av frågor tydligare? Genom rotation: lösningens axlar vrids tills varje fråga laddar främst på en faktor. Många lägen passar korrelationerna lika bra. Rotationen väljer ett med en tydlig struktur.",
+      "beispiel": "Ortogonal (vinkelrät, t.ex. varimax): faktorerna förblir okorrelerade. Oblik (sned, t.ex. promax): faktorerna får hänga ihop.",
+      "vorsicht": "Ortogonal rotation ändrar laddningarna, inte kommunaliteterna (hur mycket av en fråga faktorerna förklarar tillsammans). Oblik tvingar inte fram något samband: med okorrelerade faktorer liknar bilden den ortogonala."
+    },
+    "explorative-faktorenanalyse": {
+      "titel": "Explorativ faktoranalys (EFA)",
+      "kurz": "Finns det gemensamma egenskaper bakom frågorna, och vilka? Explorativ faktoranalys söker efter dem utan en på förhand bestämd struktur. Den förutsätter en gemensam orsak. Det måste först vara rimligt till innehållet, före all statistik.",
+      "beispiel": "Tio frågor om välbefinnande ger två grupper. Om det finns två egenskaper avgörs av ämneskunskap.",
+      "vorsicht": "En struktur som hittats i samma data passar naturligtvis väl till dem. Den kan bara bekräftas med nya data.",
+      "fachwoerter": "konfirmatorisk (testar en på förhand bestämd struktur)."
+    },
+    "bartlett-test": {
+      "titel": "Bartletts test (lämplighet för faktoranalys)",
+      "kurz": "Hänger frågorna överhuvudtaget ihop? Bartletts sfäricitetstest kontrollerar om alla korrelationer är noll (enhetsmatris: noll utom diagonalen). Statistiskt signifikant betyder bara: inte alla är noll.",
+      "beispiel": "Med 30 personer kan ett medelstort samband gå oupptäckt. Med 5000 personer blir även mycket små samband statistiskt signifikanta.",
+      "vorsicht": "Teststatistikan beror starkt på stickprovets storlek. Vid många fall är den nästan alltid signifikant och säger då lite om lämpligheten. Förväxla den inte med Mauchlys sfäricitetstest för upprepade mätningar.",
+      "fachwoerter": "signifikant (p-värdet ligger under den valda gränsen, oftast ,05), teststatistika (talet som ett test beräknar ur data)."
+    },
+    "hauptkomponenten": {
+      "titel": "Principalkomponentanalys (PCA) och faktoranalys",
+      "kurz": "Sammanfattar jag bara frågor, eller söker jag en gemensam egenskap? Principalkomponentanalys (PCA) delar upp den totala variansen. Faktoranalys förklarar bara den gemensamma delen. Den lägger resten av varje fråga (dess egenart plus mätfel) åt sidan som unik del.",
+      "beispiel": "Med få frågor per faktor är PCA-laddningarna oftast högre än faktorladdningarna, eftersom de inkluderar resten.",
+      "vorsicht": "Ofta liknande, inte alltid: skillnader syns främst vid låga kommunaliteter.",
+      "fachwoerter": "varians (hur brett svaren sprider sig), unikhet (den del av en fråga som faktorerna inte förklarar)."
+    },
+    "fallzahl-faktorenanalyse": {
+      "titel": "Stickprovsstorlek för faktoranalys",
+      "kurz": "Hur många personer behöver en faktoranalys? Det beror mindre på antalet frågor än på två saker: hur höga är kommunaliteterna (hur mycket av en fråga faktorerna förklarar), och hur många frågor definierar varje faktor tydligt? Ju högre båda är, desto mindre kan stickprovet vara.",
+      "beispiel": "Höga kommunaliteter, fyra starka frågor per faktor: få personer kan räcka. Låga kommunaliteter, två svaga frågor per faktor: även många kan vara för få.",
+      "vorsicht": "Fasta förhållanden som ”tio personer per fråga” missar detta."
+    },
+    "umpolen": {
+      "titel": "Omkodning av omvända frågor (reverse-coding)",
+      "kurz": "Hör omkodning till reliabilitetsanalysen? Ja: för Cronbachs alfa och skalvärdet måste alla frågor i en skala räknas åt samma håll. En omvänd fråga kodas därför om så att ”högt” alltid betyder samma sak. På en skala från 1 till 5 blir en 1 en 5.",
+      "beispiel": "”Jag är ofta trött” bredvid ”Jag har gott om energi”: utan omkodning tar de delvis ut varandra i summan. Alfa (hur nära frågorna hänger ihop) sjunker och kan till och med hamna under noll.",
+      "vorsicht": "För faktoranalysen behövs ingen omkodning: en omvänd fråga får då en negativ laddning, och en negativ laddning väger lika mycket som en positiv. Formuleringen visar om en fråga går åt andra hållet."
+    },
+    "eingeschraenkte-streuung": {
+      "titel": "Begränsad variationsbredd (range restriction)",
+      "kurz": "Varför är ett samband mindre när alla är lika? Begränsad variationsbredd: med en smal skiva av en egenskap sjunker korrelationen, även för samma samband. Det sänker också laddningar.",
+      "beispiel": "Ålder och längd hänger nära ihop hos barn från 2 till 16. Bara bland 10- till 11-åringar är korrelationen mycket mindre.",
+      "vorsicht": "Ett litet r i en enhetlig grupp betyder inte att sambandet är litet överallt. Reliabiliteten (andelen verkliga skillnader av alla skillnader) är också lägre där, eftersom det finns få verkliga skillnader."
+    },
+    "inter-item-korrelation": {
+      "titel": "Genomsnittlig inter-item-korrelation",
+      "kurz": "Hur nära hänger frågorna i en skala ihop i genomsnitt? Den genomsnittliga inter-item-korrelationen visar det (item = fråga): medelkorrelationen för varje par. Den beror inte på antalet frågor. Alfa stiger också med fler frågor.",
+      "beispiel": "Två skalor med alfa ,80: 4 frågor med en medelkorrelation på ,50, eller 12 frågor med bara ,25.",
+      "vorsicht": "Ett högt alfa från många frågor bevisar inte en enhetlig skala. En kort skala med lågt alfa mäter oprecist, även om kortheten är orsaken.",
+      "fachwoerter": "alfa (hur starkt svaren på en skala hänger ihop)."
+    },
+    "eindimensionalitaet": {
+      "titel": "Endimensionalitet",
+      "kurz": "Mäter alla frågor en enda egenskap? Det är endimensionalitet. En faktoranalys kan kontrollera det. Alfa visar det inte: det mäter hur sammanhängande frågorna är, inte hur många egenskaper som ligger bakom.",
+      "beispiel": "Två grupper med 5 frågor, korrelation ,60 inom grupperna, 0 mellan dem. Alfa för de tio: omkring ,78, fastän två egenskaper mäts.",
+      "vorsicht": "Om två grupper har ett egenvärde över 1 tyder det på två egenskaper, det är inget bevis.",
+      "fachwoerter": "alfa (hur starkt svaren på en skala hänger ihop), egenvärde (hur mycket spridning en komponent fångar)."
+    },
+    "reliabilitaet-wege": {
+      "titel": "Sätt att skatta reliabilitet (alfa, retest, split-half)",
+      "kurz": "Varför ger olika metoder olika reliabilitet för samma skala? Alfa, retest (mäta två gånger) och split-half (jämföra två hälfter) är olika sätt att skatta samma reliabilitet. Var och en förutsätter något annat.",
+      "beispiel": "Alfa förutsätter bland annat att alla frågor mäter en egenskap. Retest förutsätter att egenskapen inte ändras och att minnet inte hjälper.",
+      "vorsicht": "Bara när förutsättningarna är uppfyllda bör talen stämma överens. Skillnader tyder på brott mot förutsättningarna eller på slump."
+    },
+    "validitaet": {
+      "titel": "Validitet",
+      "kurz": "Mäter skalan verkligen det den ska mäta? Det är validitet. Reliabilitet behövs för den, men räcker inte: ett måttband mäter längd tillförlitligt, men inte vikt.",
+      "beispiel": "Ett högt alfa visar att frågorna hänger ihop, inte om de fångar det som avses. Det kräver evidens från innehållet, från jämförelse med ett yttre mått (kriterium) och om den avsedda egenskapen (konstrukt).",
+      "vorsicht": "Nästan likadana frågor driver upp alfa men täcker ett smalt utsnitt. Validitet hör till tolkningen av poängen, inte till själva testet."
+    },
+    "antwortstufen": {
+      "titel": "Svarsalternativ",
+      "kurz": "Varför spelar antalet svarsalternativ roll? Svarsalternativ är de valsteg en fråga erbjuder, t.ex. 1 till 4. Alfa från Pearson-korrelationer förutsätter finkorniga värden. Med få steg blir sambanden för små och reliabiliteten underskattas.",
+      "beispiel": "Samma inställning på 3 eller 7 steg: med 3 går fina skillnader förlorade, så korrelationer och alfa sjunker.",
+      "vorsicht": "Från hur många steg det räcker är inte avgjort (ofta fem till sju). Fler steg är inte automatiskt bättre.",
+      "fachwoerter": "Pearson-korrelation (standardmåttet för sambandet mellan två finkorniga storheter)."
+    },
+    "messfehler": {
+      "titel": "Mätfel",
+      "kurz": "Varför förvränger oprecis mätning analysen? Mätfel är slumpmässig avvikelse från det sanna värdet. Finns det i en förklarande storhet (prediktor) försvagas den storhetens effekt (attenuation). Slumpmässiga fel i utfallet ger inte B någon bias på det här sättet.",
+      "beispiel": "En mediator (en variabel som ett inflytande går genom) mäts oprecist. En del av inflytandet går förbi den och tillfaller den direkta stigen: mediatoreffekten för liten, den direkta för stor.",
+      "vorsicht": "Det säger ingenting om vilken väg inflytandet verkligen tar."
+    },
+    "abhaengige-groesse": {
+      "titel": "Beroende variabel",
+      "kurz": "Vad förutsägs, och utifrån vad? Den beroende variabeln (y) förutsägs. Den oberoende variabeln (x) är det man förutsäger utifrån. ”Regression av y på x” betyder: y förutsägs ur x.",
+      "beispiel": "Uppvärmningskostnader förutsägs ur utetemperaturen. Uppvärmningskostnaderna är den beroende variabeln.",
+      "vorsicht": "”Beroende” betyder bara: förutsagd, inte: orsakad av x. Byter man roller får man en annan linje."
+    },
+    "kleinste-quadrate": {
+      "titel": "Minstakvadratmetoden",
+      "kurz": "Hur lägger man den bästa linjen genom punkter? Minstakvadratmetoden väljer linjen med minst summa av kvadrerade avvikelser. De mäts i y-riktningen: observerat minus förutsagt. Det är residualerna.",
+      "beispiel": "Punkt vid y = 10, linjen förutsäger 8: avvikelse 2, kvadrerad 4.",
+      "vorsicht": "Det kortaste avståndet till linjen är inte det som mäts. Kvadreringen gör att stora avvikelser väger tyngre."
+    },
+    "standardfehler-schaetzer": {
+      "titel": "Skattningens standardfel",
+      "kurz": "Hur långt från förutsägelsen ligger observationerna typiskt? Skattningens standardfel säger det. Det har den beroende variabelns enhet. Mindre betyder en mer precis förutsägelse.",
+      "beispiel": "Leveranstid i dagar, värde 2: den faktiska tiden avviker typiskt omkring 2 dagar.",
+      "vorsicht": "”Typiskt” är inget maximum. Förväxla det inte med standardfelet för ett B, som beskriver hur precist B skattas."
+    },
+    "kollinearitaet": {
+      "titel": "Kollinearitet (tolerans, VIF)",
+      "kurz": "Mäter två prediktorer nästan samma sak? Då finns kollinearitet: de överlappar. Toleransen är den del av en prediktors spridning som de andra inte förklarar. VIF är 1 delat med toleransen. Ju större VIF, desto större standardfel för dess B. Skattningen förblir utan bias.",
+      "beispiel": "Golvyta och antal rum: tolerans ,15 betyder att golvytan lämnar bara 15 % av spridningen i antal rum oförklarad.",
+      "vorsicht": "Hela modellen kan vara statistiskt signifikant fastän inget B är det. VIF-gränser (5 eller 10) är vana.",
+      "fachwoerter": "standardfel (hur mycket ett skattat värde typiskt varierar), signifikant (p-värdet ligger under den valda gränsen, oftast ,05).",
+      "statable": "Kör regressionen och öppna blocket ”Kontrollera regressionen: kollinearitet och ovanliga fall” under resultatet. Det visar tolerans, VIF och det egna bidraget (sr²) för varje prediktor."
+    },
+    "dummy-variable": {
+      "titel": "Dummyvariabel (0/1-variabel)",
+      "kurz": "Hur får man in en grupp i en regression? Som dummyvariabel: 0 för referensgruppen, 1 för den andra. Då är konstanten referensgruppens medelvärde och B skillnaden mellan medelvärdena. Med q grupper behövs q - 1 dummyvariabler.",
+      "beispiel": "Gödsel A (0), B (1): konstant 5,0, B = 1,2. Medelvärde för B: 6,2.",
+      "vorsicht": "Tecknet på B beror på referensen. Testet av B motsvarar t-testet för oberoende stickprov med lika spridning."
+    },
+    "residuen": {
+      "titel": "Residualer",
+      "kurz": "Hur långt från förutsägelsen ligger en punkt? Det är dess residual: observerat minus förutsagt. Normalitet krävs av dessa fel, inte av råvärdena. Man kontrollerar residualerna med ett histogram eller ett Q-Q-diagram.",
+      "beispiel": "Observerat 70 kg, förutsagt 66: residual +4.",
+      "vorsicht": "Råvärden från flera grupper blandas och kan se sneda ut, fastän residualerna är i sin ordning.",
+      "fachwoerter": "Q-Q-diagram (diagram: ligger punkterna nära linjen passar värdena en normalfördelning)."
+    },
+    "heteroskedastizitaet": {
+      "titel": "Heteroskedasticitet (ojämn spridning av fel)",
+      "kurz": "Sprider sig avvikelserna lika överallt? Om inte, är det heteroskedasticitet. I residualdiagrammet syns det ofta som en tratt. Lutningen förblir utan bias men blir mindre precis, och de vanliga standardfelen är fel. Robusta standardfel tar hänsyn till den ojämna spridningen.",
+      "beispiel": "Förutsagt 1000: avvikelser omkring ±100. Vid 5000: ±600.",
+      "vorsicht": "En lutning får bias av icke-linjäritet, utelämnade variabler eller mätfel i x, inte av detta.",
+      "fachwoerter": "residualdiagram (en bild av avvikelserna från förutsägelsen), lutning (B: förändring per enhet), standardfel (hur mycket en skattning typiskt varierar), utan bias (rätt i genomsnitt)."
+    },
+    "hebelwert": {
+      "titel": "Hävstångsvärde (leverage)",
+      "kurz": "Hur starkt kan en enskild punkt dra linjen till sig? Hävstångsvärdet växer med avståndet mellan punktens x-värde och medelvärdet av x. En punkt långt ut drar linjen mot sig.",
+      "beispiel": "Tio personer tränar 20 till 30 timmar, en 90: högt hävstångsvärde.",
+      "vorsicht": "Dess residual (avståndet till linjen) kan vara liten just för att den drog linjen till sig. Jämför därför linjen med och utan punkten."
+    },
+    "f-test": {
+      "titel": "F-test (variansanalys och regression)",
+      "kurz": "Finns det över huvud taget någon skillnad eller effekt? F-testet prövar det som helhet. Regression: är alla B noll samtidigt? Variansanalys: är alla gruppmedelvärden lika? I variansanalys är F spridningen (medelkvadraten) mellan grupper delad med den inom grupper.",
+      "beispiel": "Tre undervisningsmetoder: mellan 6,0, inom 2,0. F = 3,0.",
+      "vorsicht": "Ett statistiskt signifikant F betyder: minst två medelvärden skiljer sig. Vilka, visar bara parvisa jämförelser.",
+      "fachwoerter": "medelkvadrat (kvadratsumman av avvikelserna delad med frihetsgraderna, ett mått på spridning), nollhypotes (antagandet ”ingen skillnad” som testet prövar)."
+    },
+    "schrittweise-regression": {
+      "titel": "Stegvis regression (automatiskt urval)",
+      "kurz": "Hur väljer ett program prediktorer av sig självt? Stegvis regression lägger till eller tar bort prediktorer efter ett statistiskt kriterium, till exempel p-värdet. Ofta nämns: intag vid ,05, borttagning vid ,10.",
+      "beispiel": "Av 20 möjliga prediktorer för hyran återstår fyra.",
+      "vorsicht": "Valet känner varken teori eller orsaker och beror på just de här data. Om prediktorerna är rimliga eller orsaker förblir öppet."
+    },
+    "extrapolation": {
+      "titel": "Extrapolering (förutsägelse utanför data)",
+      "kurz": "Gäller förutsägelsen långt utanför de observerade värdena? Att förutsäga där är extrapolering. Det är inte särskilt tillförlitligt: förutsägelsens konfidensintervall blir bredare ju längre x ligger från medelvärdet av x, och linjen behöver inte gälla där.",
+      "beispiel": "Växter mätta i vecka 1 till 8, 5 cm per vecka. Vecka 80 skulle ge 400 cm.",
+      "vorsicht": "Ett högt R² ändrar inte detta."
+    },
+    "zusammenhang-ursache": {
+      "titel": "Samband och orsak (korrelation, kausalitet)",
+      "kurz": "Visar ett samband att det ena orsakar det andra? Inte i sig. B visar: i genomsnitt hör mer x ihop med mer eller mindre y, vid lika värden på modellens övriga prediktorer. Det är ett samband. Kausalitet följer inte av det; en gemensam orsak kan också skapa båda.",
+      "beispiel": "Mer glassförsäljning, mer solbränna: båda följer solskenet.",
+      "vorsicht": "Data för områden visar ett samband mellan områden, inte för de enskilda människorna inom dem."
+    },
+    "lineares-modell": {
+      "titel": "Linjär modell (linjär i parametrarna)",
+      "kurz": "Kan linjär regression bara beskriva raka linjer? Nej. ”Linjär” syftar på parametrarna (B): varje B multiplicerar bara en prediktor, allt adderas. Med en kvadratisk term (x och x² som prediktorer) anpassar modellen en kurva.",
+      "beispiel": "Avkastning = 2 + 3x - 0,2x²: en kurva, men en linjär modell.",
+      "vorsicht": "x² är bara ytterligare en prediktor. Dess test (Sig.) visar om den behövs, eftersom R² stiger vid varje tillägg."
+    },
+    "scheinregression": {
+      "titel": "Skenregression (trend i tidsserier)",
+      "kurz": "Visar ett högt R² mellan två tidsserier ett verkligt samband? Inte nödvändigtvis. Om båda stiger över tid (trend) blir resultatet en skenregression. Varningssignaler: mycket högt R² och liknande residualer (autokorrelation), Durbin-Watson nära 0.",
+      "beispiel": "Cyklar i stad A och kaffeimport i land B ökar varje år: R² = ,95.",
+      "vorsicht": "Med förändringar från år till år sjunker R² tydligt om det bara var trend.",
+      "fachwoerter": "Durbin-Watson (testvärde för autokorrelation: nära 2 ingen, nära 0 positiv, nära 4 negativ)."
+    },
+    "prognoseguete": {
+      "titel": "Prognosnoggrannhet (MAE, MAPE, MASE)",
+      "kurz": "Hur väl träffar en prognos? MAE: genomsnittligt absolut fel. MAPE: genomsnittligt procentuellt fel, delar med det observerade värdet, oändligt vid noll. MASE: delar med felet för den naiva prognosen (senaste värdet) i anpassningsperioden. Under 1 bättre, över 1 sämre än den.",
+      "beispiel": "MASE 0,8: 80 % av det naiva felet.",
+      "vorsicht": "För sällsynta räkningar med nollor är MAPE oanvändbart."
+    },
+    "preisindex": {
+      "titel": "Prisindex (Laspeyres, baseffekt)",
+      "kurz": "Hur mycket dyrare har samma varukorg blivit? Laspeyres index håller kvantiteterna från basperioden fasta, så bara priserna ändras. Baseffekt: förändringen jämfört med ett år tidigare kan sjunka fastän indexet stiger, om det steg mer ett år tidigare.",
+      "beispiel": "10 bröd, 20 l mjölk. Bas: 2 och 1, värde 40. Nu 2,4 och 1,2: värde 48. Index 1,20.",
+      "vorsicht": "Fasta kvantiteter fångar inte att köpare byter till billigare varor."
+    },
+    "anscombe-quartett": {
+      "titel": "Anscombes kvartett (samma tal, olika data)",
+      "kurz": "Räcker ett enda tal för att beskriva data? Nej. Anscombes kvartett: fyra datamängder med nästan samma r, medelvärden och linje, men olika punktmoln (linje, båge, extremvärde, en punkt avgör allt). Titta därför på spridningsdiagrammet.",
+      "beispiel": "r = ,80 passar ett moln kring en linje och punkter på en kurva.",
+      "vorsicht": "r mäter bara den raka delen. En enda punkt kan sänka r kraftigt: kontrollera den, ta inte bort den."
+    },
+    "kovarianz": {
+      "titel": "Kovarians (och korrelationen r)",
+      "kurz": "Hur starkt stiger eller sjunker två värden tillsammans? Kovariansen mäter det ostandardiserat, så dess värde beror på skalan. Korrelationen r är kovariansen delad med produkten av standardavvikelserna och förblir densamma när enheter ändras.",
+      "beispiel": "Längd och vikt: kovarians 60 med längd i cm, 0,6 i meter. r detsamma.",
+      "vorsicht": "Kovarians 0 betyder bara: inget rätlinjigt samband, inte oberoende.",
+      "fachwoerter": "standardavvikelse (typiskt avstånd mellan värdena och medelvärdet)."
+    },
+    "punktbiseriale-korrelation": {
+      "titel": "Punktbiserial korrelation (grupp och mätning)",
+      "kurz": "Hänger en grupp (0/1) ihop med en mätning? Den punktbiseriala korrelationen är Pearson-korrelationen mellan en 0/1-variabel och ett tal. Dess test är t-testet för oberoende stickprov (lika varianser): samma p, samma storlek på t.",
+      "beispiel": "A = 0, B = 1, r = +,30: B har i genomsnitt högre värden. Omkastat: -,30.",
+      "vorsicht": "Tecknet följer kodningen. Den biseriala korrelationen är något annat."
+    },
+    "fisher-z": {
+      "titel": "Fisher Z (Fisher Z-transformation)",
+      "kurz": "Varför är intervallet skevt kring r? r kan högst vara 1, så vid högt r finns det mindre utrymme uppåt. Fisher Z gör fördelningen av r ungefär normal. Intervallet byggs i Z och räknas tillbaka, så det blir asymmetriskt.",
+      "beispiel": "r = ,90, n = 30: intervall omkring ,80 till ,95.",
+      "vorsicht": "Intervallet är aldrig sannolikheten för det sanna värdet. Fisher Z är inte z-standardisering."
+    },
+    "fehlerarten": {
+      "titel": "Typ I- och typ II-fel (α, β)",
+      "kurz": "Kan ett test ha fel? Ja, på två sätt. Typ I-fel: ingen skillnad, men ändå ”statistiskt signifikant”. Typ II-fel: en skillnad finns men missas. Nivån α (ofta ,05) är andelen av det första felet när det inte finns något.",
+      "beispiel": "200 test utan verklig skillnad, α = ,05: omkring 10 felaktigt signifikanta.",
+      "vorsicht": "α säger inte om ett enskilt fynd är fel. Ett typ II-fel har sannolikheten β = 1 minus styrkan.",
+      "fachwoerter": "Styrka (chansen att hitta en skillnad som finns), nivå (gränsen för p som väljs i förväg)."
+    },
+    "einseitig-zweiseitig": {
+      "titel": "Ensidigt och tvåsidigt test",
+      "kurz": "Räknas en riktning eller båda? Tvåsidigt frågar: finns det en skillnad, åt vilket håll som helst? Ensidigt frågar bara: är A större än B? Samma data kan vara statistiskt signifikanta ensidigt men inte tvåsidigt. Testa tvåsidigt när du är osäker.",
+      "beispiel": "Ny undervisningsmetod: tvåsidigt p = ,08, ensidigt p = ,04.",
+      "vorsicht": "Riktningen måste fastställas innan man tittar på data. Väljer man den efteråt halveras p utan ny information."
+    },
+    "mehrfaches-testen": {
+      "titel": "Multipla test (alfainflation, Bonferroni)",
+      "kurz": "Hur ofta lurar slumpen oss vid många test? På nivå ,05 ger varje test falsklarm i 5 % av fallen när inget är verkligt. Vid m oberoende test är chansen för minst ett 1 - ,95 upphöjt till m (alfainflation). Bonferroni delar nivån med m.",
+      "beispiel": "10 test, inget verkligt: omkring 40 % chans för en slumpträff.",
+      "vorsicht": "Omkring m gånger ,05 slumpträffar. Att söka ger bara hypoteser."
+    },
+    "effekt-ueberschaetzung": {
+      "titel": "Överskattade effekter (winner’s curse)",
+      "kurz": "Är en statistiskt signifikant effekt lika stor som uppmätt? Ofta inte. Om bara signifikanta resultat räknas blir skattningarna snedvridna uppåt: en liten studie blir signifikant bara med en lyckosamt stor skattning. Det är winner’s curse.",
+      "beispiel": "Den sanna skillnaden är medelstor. Av många små studier syns bara de signifikanta; deras medelvärde ligger över den.",
+      "vorsicht": "Ju mindre studie, desto starkare snedvridning. Replikationer finner därför ofta mindre effekter, inte nödvändigtvis noll.",
+      "fachwoerter": "signifikant (p-värdet ligger under den valda gränsen, oftast ,05)."
+    },
+    "falsch-positive-befunde": {
+      "titel": "Falskt positiva fynd (typ I-fel, forskarens frihetsgrader)",
+      "kurz": "Hur många signifikanta fynd är falsklarm? Det beror på nivå, styrka och andelen verkliga effekter. Vid låg styrka stiger den falska andelen. Fler falsklarm uppstår också när man testar efter varje nytt fall och stannar vid signifikans, eller prövar många analyser och rapporterar bara den lyckade (forskarens frihetsgrader).",
+      "beispiel": "1000 effekter testade, 100 verkliga, styrka ,5, nivå ,05: 50 sanna och 45 falska träffar.",
+      "vorsicht": "Nivån ,05 gäller bara för ett stickprov och en analys som planerats i förväg. Andelen stiger även utan avsikt att vilseleda.",
+      "fachwoerter": "styrka (chansen att hitta en verklig effekt), nivå (gränsen för p som satts i förväg), signifikant (p ligger under den här gränsen)."
+    },
+    "fehlerbalken": {
+      "titel": "Felstaplar (standardfel, konfidensintervall)",
+      "kurz": "Vad visar staplarna vid medelvärdena? Det är inte bestämt: standardavvikelse (spridningen hos enskilda värden), standardfel (medelvärdets precision) eller konfidensintervall. ”± tal” säger inte vilket. Ett standardfel på var sida är ungefär hälften så brett som 95 %-intervallet och motsvarar omkring 68 %.",
+      "beispiel": "Överlappande 95 %-intervall, men ändå p = ,04.",
+      "vorsicht": "Överlappning avgör inte; testet av skillnaden gör det. Om 95 %-intervallen inte delar något område skiljer sig oberoende grupper statistiskt signifikant på nivå ,05. Vid parade mätningar räknas intervallet för skillnaderna per person, inte intervallen för de två medelvärdena."
+    },
+    "levene-test": {
+      "titel": "Levenes test (lika spridning)",
+      "kurz": "Sprider sig grupperna lika? (Levenes test) Det kontrollerar om variansen, värdenas spridning, är densamma i grupperna. Ett litet p tyder på ojämn spridning.",
+      "beispiel": "Två grupper med 8 personer vardera, Levene p = ,40: inget tecken på ojämn spridning.",
+      "vorsicht": "Inte signifikant betyder inte att spridningen är lika. Med små grupper upptäcker testet skillnader dåligt. Det bevisar inte likhet."
+    },
+    "gepoolter-t-test": {
+      "titel": "Poolad spridning eller Welchs test (lika spridning antagen?)",
+      "kurz": "Sprider sig båda grupperna lika? T-testet med poolad (sammanslagen) spridning förutsätter det. Welchs test slår inte ihop och justerar frihetsgraderna. Med två grupper är F i variansanalysen kvadraten på t, med samma p.",
+      "beispiel": "10 personer med spridning 8, 40 med spridning 3: poolningen speglar mest den stora gruppen med den lilla spridningen.",
+      "vorsicht": "Om den mindre gruppen sprider sig mer visar det poolade testet signifikans för ofta. Welch rättar till detta.",
+      "fachwoerter": "Frihetsgrader (ett tal som fastställer referensfördelningen för t)."
+    },
+    "zentraler-grenzwertsatz": {
+      "titel": "Centrala gränsvärdessatsen",
+      "kurz": "Måste värden vara normalfördelade? Inte alltid. Centrala gränsvärdessatsen säger: medelvärden av många observationer är ungefär normalfördelade, även när enskilda värden är sneda. Den gäller medelvärden, inte enskilda värden.",
+      "beispiel": "Inkomster är sneda. Medelvärden av 200 personer vardera ligger nästan symmetriskt.",
+      "vorsicht": "Hur många som räcker beror på formen: med mycket sneda värden räcker inte 10. Med stora grupper går t-test oftast att använda utan normalfördelade värden."
+    },
+    "pseudoreplikation": {
+      "titel": "Pseudoreplikation (beroende mätningar)",
+      "kurz": "Räknas varje värde som separat information? Nej, om värden hör ihop. Pseudoreplikation: beroende värden behandlas som oberoende, till exempel upprepade mätningar på en person eller barn i en klass. Standardfelet blir för litet; signifikans visar sig för ofta.",
+      "beispiel": "20 växter, 5 blad mätta på varje: det är 20 oberoende enheter, inte 100.",
+      "vorsicht": "Fler rader är inte mer information. Åtgärd: ett medelvärde per enhet, eller en modell som tar hänsyn till grupperingen.",
+      "fachwoerter": "standardfel (hur mycket en skattning typiskt varierar), signifikant (p-värdet ligger under den valda gränsen, oftast ,05)."
+    },
+    "simpson-paradox": {
+      "titel": "Simpsons paradox (att slå ihop grupper)",
+      "kurz": "Kan ett samband vända när grupper slås ihop? Ja. Helhetsbilden kan dölja eller vända det varje grupp visar (Simpsons paradox, även för korrelationen r). Orsak: grupperna skiljer sig åt i måtten eller i sammansättning.",
+      "beispiel": "A hjälper mer än B vid lindriga och vid svåra fall. Men A går nästan bara till svåra fall. Totalt ser A sämre ut.",
+      "vorsicht": "Totalen kan då inte läsas direkt. Vilken bild som gäller beror på situationen."
+    },
+    "erwartete-haeufigkeit": {
+      "titel": "Förväntat antal (chi-två, korstabell)",
+      "kurz": "Hur många fall per cell skulle man vänta sig om variablerna inte hängde ihop? Radsumma gånger kolumnsumma delat med totalsumman. Chi-två-testet jämför dem med de observerade antalen. Vilken cell som sticker ut syns bara i jämförelsen per cell.",
+      "beispiel": "Rad 60, kolumn 50, total 200: förväntat 60 · 50 / 200 = 15.",
+      "vorsicht": "Ofta nämnt: alla minst 5, en vana. Vid mindre värden i en 2 × 2-tabell används Fishers exakta test.",
+      "fachwoerter": "Korstabell (tabell över två variabler), standardiserad residual (skillnaden mellan observerat och förväntat, skalad för att vara jämförbar)."
+    },
+    "zeilenprozent": {
+      "titel": "Radprocent (andel inom raden)",
+      "kurz": "Vilken andel inom en grupp? I en korstabell är radprocent cellantalet delat med radsumman, gånger 100. Radsumman är referensen. ”Hur många procent av A har B?” tar summan för A som referens. Kolumnprocent använder kolumnsumman.",
+      "beispiel": "80 hundägare, 20 av dem också med katt: 20 / 80 = 25 %.",
+      "vorsicht": "Rad- och kolumnprocent är olika tal. Fråga först: andel av vad?",
+      "fachwoerter": "Korstabell (tabell över två variabler)."
+    },
+    "likelihood-ratio": {
+      "titel": "Likelihood-kvot (LR)",
+      "kurz": "Hur mycket ändrar ett testresultat bedömningen? Den positiva LR är sensitivitet delad med (1 minus specificitet): så många gånger oftare förekommer ett positivt resultat hos de sjuka än hos de friska. Över 1 talar för sjukdomen. Odds efter testet = odds före testet gånger LR.",
+      "beispiel": "Före testet ,20, alltså odds ,25. LR 4 ger odds 1, vilket är ,50.",
+      "vorsicht": "LR är ingen sannolikhet. Tillbaka till p: odds delat med (1 plus odds).",
+      "fachwoerter": "Sensitivitet (andelen sjuka som testet upptäcker), specificitet (andelen friska som testet med rätta kallar friska), odds (p delat med 1 minus p)."
+    },
+    "regelkarte": {
+      "titel": "Styrdiagram (Shewhart, CUSUM, EWMA)",
+      "kurz": "Har processen ändrats? Ett styrdiagram ritar gruppmedelvärden i ordning, med en mittlinje och gränser, ofta ±3 standardfel. En punkt utanför är en signal: troligen verkar mer än slumpen. Fas 1 skattar gränser ur tidigare data, fas 2 övervakar sedan löpande. CUSUM och EWMA kombinerar flera grupper och upptäcker små, bestående förskjutningar tidigare.",
+      "beispiel": "Stabil: omkring 3 av 1000 punkter utanför. Flera tätt efter varandra är en tydlig signal.",
+      "vorsicht": "Om en stabil process håller sig inom gränserna är variationen slump: att justera ökar då spridningen. Gränser från få grupper är oprecisa.",
+      "fachwoerter": "Standardfel (gruppmedelvärdenas spridning), stabil (fördelningen förblir densamma över tid)."
+    },
+    "prozessfaehigkeit": {
+      "titel": "Processduglighet (Cp, Cpk)",
+      "kurz": "Uppfyller processen specifikationen? Cp jämför det tillåtna området med spridningen och bortser från var medelvärdet ligger. Cpk mäter avståndet från medelvärdet till den närmaste gränsen, högst lika stort som Cp. Båda förutsätter en stabil, normalfördelad process.",
+      "beispiel": "Cp = 1, centrerad: omkring 0,27 % utanför; förskjuten, mer.",
+      "vorsicht": "Cp = 1 betyder bara: inte färre än 0,27 % utanför. Vid signaler i styrdiagrammet säger indexet lite; åtgärda dem först."
+    },
+    "messsystem": {
+      "titel": "Mätsystem (repeterbarhet, reproducerbarhet)",
+      "kurz": "Hur mycket spridning kommer från själva mätningen? Repeterbarhet: instrumentets spridning på samma enhet, samma operatör, samma uppställning. Reproducerbarhet: spridning mellan operatörer, uppställningar eller perioder. Den totala spridningen delas upp i process och mätsystem. Mätandel = 1 minus processandel. Signal-brusförhållandet visar hur väl delar kan skiljas åt: ofta anges 5 eller mer som bra, under 2 som oanvändbart.",
+      "beispiel": "Processen står för 80 % av spridningen: mätsystemet 20 %.",
+      "vorsicht": "Författare tilldelar begreppen olika, så den använda definitionen måste anges. Gränserna är konventioner."
+    },
+    "versuchsplanung": {
+      "titel": "Försöksplanering (interaktion, centrumpunkt)",
+      "kurz": "Hur planerar man försök som visar mycket? Interaktion: en faktors effekt beror på nivån hos en annan. Att ändra en faktor i taget kan inte skatta den; alla kombinationer hittar den. En upprepad centrumpunkt visar krökning och skattar spridningen.",
+      "beispiel": "Gödsel verkar starkt i sol, knappt alls i skugga.",
+      "vorsicht": "Ett resultat på en nivå gäller inte automatiskt för alla. Vid krökning räcker inte två nivåer; designen kan utökas.",
+      "fachwoerter": "Faktor (en storhet som man ställer in med avsikt), nivå (ett inställt värde av den), kontinuerlig (varje värde däremellan är möjligt)."
+    }
+  },
+  "meldung": [
+    {
+      "id": "engine-absturz",
+      "art": "absturz",
+      "muster": "^Statable: PSPP crashed",
+      "original": "Statable: PSPP crashed and was restarted. RuntimeError: Aborted(Assertion failed: proc.n_cells < CRS_N_CELLS, at: ../../pspp-2.1.1/src/language/commands/crosstabs.c,494,cmd_crosstabs)",
+      "titel": "Statistikprogrammet kraschade",
+      "text": {
+        "du": "Det beror på PSPP, inte på dina data. Statable har startat om det och läst in data igen som de var före den här beräkningen.",
+        "sie": "Det beror på PSPP, inte på dina data. Statable har startat om det och läst in data igen som de var före den här beräkningen."
+      },
+      "tun": {
+        "du": "Räkna igen med färre val. Om du hade angett WEIGHT, FILTER eller SPLIT FILE, ange dem igen.",
+        "sie": "Räkna igen med färre val. Om du hade angett WEIGHT, FILTER eller SPLIT FILE, ange dem igen."
+      }
+    },
+    {
+      "id": "nonpar-corr-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "NONPAR CORR is not yet implemented",
+      "original": "NONPAR CORR: NONPAR CORR is not yet implemented.",
+      "titel": "Statistikprogrammet kan inte köra det här kommandot",
+      "text": {
+        "du": "PSPP kan inte beräkna NONPAR CORR (Spearman, Kendall).",
+        "sie": "PSPP kan inte beräkna NONPAR CORR (Spearman, Kendall)."
+      },
+      "tun": {
+        "du": "Statable beräknar det i frågan ”Hänger två saker ihop?”. Dina data har inte ändrats.",
+        "sie": "Statable beräknar det i frågan ”Hänger två saker ihop?”. Dina data har inte ändrats."
+      }
+    },
+    {
+      "id": "glm-with-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "GLM: [^\\n]*\\n[^\\n]*\\|[^\\n]*\\b[Ww][Ii][Tt][Hh]\\b",
+      "original": "GLM: Syntax error expecting MISSING, INTERCEPT, CRITERIA, METHOD, or DESIGN.\n   1 | GLM y BY g WITH x /DESIGN=x g.",
+      "titel": "Statistikprogrammet kan inte köra det här kommandot",
+      "text": {
+        "du": "PSPP kan inte beräkna GLM med WITH (kovariansanalys).",
+        "sie": "PSPP kan inte beräkna GLM med WITH (kovariansanalys)."
+      },
+      "tun": {
+        "du": "Statable beräknar det i frågan ”Skiljer sig grupper åt?” under ”Fler alternativ” med en kontrollvariabel. Dina data har inte ändrats.",
+        "sie": "Statable beräknar det i frågan ”Skiljer sig grupper åt?” under ”Fler alternativ” med en kontrollvariabel. Dina data har inte ändrats."
+      }
+    },
+    {
+      "id": "befehl-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "Unknown command `([^']+)'",
+      "original": "Unknown command `FREQENCIES'.",
+      "titel": "Statable känner inte igen det här kommandot",
+      "text": {
+        "du": "”{1}” är inget känt kommando.",
+        "sie": "”{1}” är inget känt kommando."
+      },
+      "tun": {
+        "du": "Kontrollera stavningen. Liknande: {vorschlag}.",
+        "sie": "Kontrollera stavningen. Liknande: {vorschlag}."
+      }
+    },
+    {
+      "id": "spalte-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "(\\S+) is not a variable name",
+      "original": "DESCRIPTIVES: konzentration is not a variable name.",
+      "titel": "Den kolumnen finns inte",
+      "text": {
+        "du": "Dina data har ingen kolumn ”{1}”.",
+        "sie": "Dina data har ingen kolumn ”{1}”."
+      },
+      "tun": {
+        "du": "En liknande: {vorschlag}. Alla namn ser du under ”Kolumner”.",
+        "sie": "En liknande: {vorschlag}. Alla namn ser du under ”Kolumner”."
+      }
+    },
+    {
+      "id": "text-statt-zahl",
+      "art": "hinweis",
+      "muster": "(\\S+) is not a numeric variable\\.\\s+It will not be included",
+      "original": "DESCRIPTIVES: geschlecht is not a numeric variable.  It will not be included in the variable list.",
+      "titel": "En kolumn utelämnades",
+      "text": {
+        "du": "”{1}” innehåller grupper eller text, inte tal. Därför utelämnade Statable den här. Resten beräknades.",
+        "sie": "”{1}” innehåller grupper eller text, inte tal. Därför utelämnade Statable den här. Resten beräknades."
+      },
+      "tun": {
+        "du": "För grupper passar frekvenser eller en gruppjämförelse.",
+        "sie": "För grupper passar frekvenser eller en gruppjämförelse."
+      }
+    },
+    {
+      "id": "gruppen-fehlen",
+      "art": "nicht-verstanden",
+      "muster": "When applying GROUPS to a string variable, two values must be specified",
+      "original": "T-TEST: When applying GROUPS to a string variable, two values must be specified.",
+      "titel": "Vilka två grupper?",
+      "text": {
+        "du": "Namnen på de två grupperna saknas för jämförelsen.",
+        "sie": "Namnen på de två grupperna saknas för jämförelsen."
+      },
+      "tun": {
+        "du": "Skriv dem inom parentes efter, till exempel telefon('ja' 'nej').",
+        "sie": "Skriv dem inom parentes efter, till exempel telefon('ja' 'nej')."
+      }
+    },
+    {
+      "id": "wert-zu-lang",
+      "art": "nicht-verstanden",
+      "muster": "This (\\d+)-byte string is too long for variable (\\S+) with width (\\d+)",
+      "original": "T-TEST: This 10-byte string is too long for variable handy with width 4.",
+      "titel": "Det här värdet kan inte finnas i kolumnen",
+      "text": {
+        "du": "Värdet är längre än vad kolumnen ”{2}” har plats för. Ett sådant värde förekommer inte där.",
+        "sie": "Värdet är längre än vad kolumnen ”{2}” har plats för. Ett sådant värde förekommer inte där."
+      },
+      "tun": {
+        "du": "Kontrollera under ”Kolumner” vilka värden som finns i ”{2}”.",
+        "sie": "Kontrollera under ”Kolumner” vilka värden som finns i ”{2}”."
+      }
+    },
+    {
+      "id": "anfuehrung-offen",
+      "art": "nicht-verstanden",
+      "muster": "Unterminated string constant",
+      "original": "VARIABLE LABELS: Unterminated string constant.",
+      "titel": "Ett citattecken är fortfarande öppet",
+      "text": {
+        "du": "En text påbörjades med ' men avslutades inte.",
+        "sie": "En text påbörjades med ' men avslutades inte."
+      },
+      "tun": {
+        "du": "Lägg till ännu ett ' i slutet av texten.",
+        "sie": "Lägg till ännu ett ' i slutet av texten."
+      }
+    },
+    {
+      "id": "text-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting string",
+      "original": "VARIABLE LABELS: Syntax error expecting string.",
+      "titel": "Här saknas en text",
+      "text": {
+        "du": "På det här stället förväntar kommandot en text inom citattecken.",
+        "sie": "På det här stället förväntar kommandot en text inom citattecken."
+      },
+      "tun": {
+        "du": "Texter står inom citattecken, till exempel 'ja'. Etikett: VARIABLE LABELS konc 'Koncentration'. Grupper av text: T-TEST GROUPS=grupp('A' 'B').",
+        "sie": "Texter står inom citattecken, till exempel 'ja'. Etikett: VARIABLE LABELS konc 'Koncentration'. Grupper av text: T-TEST GROUPS=grupp('A' 'B')."
+      }
+    },
+    {
+      "id": "funktion-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "No function or vector named (\\S+)",
+      "original": "COMPUTE: No function or vector named wurzel.",
+      "titel": "Den här funktionen finns inte",
+      "text": {
+        "du": "”{1}” är ingen känd funktion.",
+        "sie": "”{1}” är ingen känd funktion."
+      },
+      "tun": {
+        "du": "Funktioner har engelska namn, till exempel SQRT för kvadratroten, MEAN för medelvärdet.",
+        "sie": "Funktioner har engelska namn, till exempel SQRT för kvadratroten, MEAN för medelvärdet."
+      }
+    },
+    {
+      "id": "rechnen-mit-text",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must be numeric",
+      "original": "COMPUTE: Both operands of + must be numeric.",
+      "titel": "Text kan inte användas i en beräkning",
+      "text": {
+        "du": "Ena sidan av ”{1}” är en kolumn med text.",
+        "sie": "Ena sidan av ”{1}” är en kolumn med text."
+      },
+      "tun": {
+        "du": "Under ”Kolumner” kan du omvandla grupper till tal - som en ny kolumn, originalet finns kvar.",
+        "sie": "Under ”Kolumner” kan du omvandla grupper till tal - som en ny kolumn, originalet finns kvar."
+      }
+    },
+    {
+      "id": "text-mit-zahl-vergleichen",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must have the same type",
+      "original": "SELECT IF: Both operands of = must have the same type.",
+      "titel": "Text jämförs med ett tal",
+      "text": {
+        "du": "Kolumnen innehåller text, men den jämförs med ett tal.",
+        "sie": "Kolumnen innehåller text, men den jämförs med ett tal."
+      },
+      "tun": {
+        "du": "Sätt värdet inom citattecken, till exempel kön = 'kvinna'.",
+        "sie": "Sätt värdet inom citattecken, till exempel kön = 'kvinna'."
+      }
+    },
+    {
+      "id": "spalte-gibt-es-schon",
+      "art": "nicht-verstanden",
+      "muster": "There is already a variable named (\\S+)",
+      "original": "NUMERIC: There is already a variable named konz2.",
+      "titel": "Det här namnet är redan upptaget",
+      "text": {
+        "du": "Det finns redan en kolumn ”{1}”. Statable skriver inte över något.",
+        "sie": "Det finns redan en kolumn ”{1}”. Statable skriver inte över något."
+      },
+      "tun": {
+        "du": "Välj ett annat namn, till exempel {1}_ny.",
+        "sie": "Välj ett annat namn, till exempel {1}_ny."
+      }
+    },
+    {
+      "id": "umbenennen-doppelt",
+      "art": "nicht-verstanden",
+      "muster": "Renaming would duplicate variable name (\\S+)",
+      "original": "RENAME VARIABLES: Renaming would duplicate variable name nr.",
+      "titel": "Det här namnet är redan upptaget",
+      "text": {
+        "du": "Efter namnbytet skulle två kolumner heta ”{1}”.",
+        "sie": "Efter namnbytet skulle två kolumner heta ”{1}”."
+      },
+      "tun": {
+        "du": "Välj ett namn som inte finns ännu.",
+        "sie": "Välj ett namn som inte finns ännu."
+      }
+    },
+    {
+      "id": "datei-nicht-gefunden",
+      "art": "datei",
+      "muster": "An error occurred while opening `([^']+)': No such file",
+      "original": "An error occurred while opening `/gibt-es-nicht.sav': No such file or directory.",
+      "titel": "Filen hittades inte",
+      "text": {
+        "du": "”{datei}” ligger inte längre där den låg.",
+        "sie": "”{datei}” ligger inte längre där den låg."
+      },
+      "tun": {
+        "du": "Öppna den igen med ”Öppna fil”.",
+        "sie": "Öppna den igen med ”Öppna fil”."
+      }
+    },
+    {
+      "id": "datendatei-nicht-gefunden",
+      "art": "datei",
+      "muster": "Could not open `([^']+)' for reading as a data file",
+      "original": "Could not open `/fehlt.csv' for reading as a data file: No such file or directory.",
+      "titel": "Filen hittades inte",
+      "text": {
+        "du": "”{datei}” kunde inte öppnas.",
+        "sie": "”{datei}” kunde inte öppnas."
+      },
+      "tun": {
+        "du": "Öppna den igen med ”Öppna fil”.",
+        "sie": "Öppna den igen med ”Öppna fil”."
+      }
+    },
+    {
+      "id": "keine-spss-datei",
+      "art": "datei",
+      "muster": "`([^']+)' is not a system or portable file",
+      "original": "GET: `/kaputt.sav' is not a system or portable file.",
+      "titel": "Den här filen kan inte läsas",
+      "text": {
+        "du": "”{datei}” slutar på .sav men är inte en SPSS-fil inuti. Dina övriga data påverkas inte.",
+        "sie": "”{datei}” slutar på .sav men är inte en SPSS-fil inuti. Dina övriga data påverkas inte."
+      },
+      "tun": {
+        "du": "Är det kanske en Excel- eller CSV-fil? Spara den i så fall på nytt som .sav, .xlsx eller .csv i ditt program.",
+        "sie": "Är det kanske en Excel- eller CSV-fil? Spara den i så fall på nytt som .sav, .xlsx eller .csv i ditt program."
+      }
+    },
+    {
+      "id": "speichern-unmoeglich",
+      "art": "datei",
+      "muster": "Error opening `([^']+)' for writing",
+      "original": "Error opening `/gibt/es/nicht/x.sav' for writing as a system file: No such file or directory.",
+      "titel": "Filen kunde inte sparas",
+      "text": {
+        "du": "Statable kan inte skriva till den valda platsen. Dina data är inte förlorade - de är fortfarande öppna här.",
+        "sie": "Statable kan inte skriva till den valda platsen. Dina data är inte förlorade - de är fortfarande öppna här."
+      },
+      "tun": {
+        "du": "Välj en annan mapp, till exempel ”Hämtade filer”.",
+        "sie": "Välj en annan mapp, till exempel ”Hämtade filer”."
+      }
+    },
+    {
+      "id": "name-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting identifier",
+      "original": "COMPUTE: Syntax error expecting identifier.",
+      "titel": "Här saknas ett namn",
+      "text": {
+        "du": "På det här stället förväntar kommandot ett namn. Namn börjar med en bokstav.",
+        "sie": "På det här stället förväntar kommandot ett namn. Namn börjar med en bokstav."
+      },
+      "tun": {
+        "du": "Exempel: ny1 i stället för 1ny.",
+        "sie": "Exempel: ny1 i stället för 1ny."
+      }
+    },
+    {
+      "id": "by-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `BY'",
+      "original": "CROSSTABS: Syntax error expecting `BY'.",
+      "titel": "Ordet BY saknas här",
+      "text": {
+        "du": "BY saknas mellan de två kolumnerna. Det skiljer dem åt, som i ”den här kolumnen efter den där kolumnen”.",
+        "sie": "BY saknas mellan de två kolumnerna. Det skiljer dem åt, som i ”den här kolumnen efter den där kolumnen”."
+      },
+      "tun": {
+        "du": "Vid CROSSTABS: /TABLES=kön BY telefon. Vid ONEWAY och GLM står BY mellan talet och gruppen: ONEWAY poäng BY grupp.",
+        "sie": "Vid CROSSTABS: /TABLES=kön BY telefon. Vid ONEWAY och GLM står BY mellan talet och gruppen: ONEWAY poäng BY grupp."
+      }
+    },
+    {
+      "id": "spalte-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting variable name",
+      "original": "ONEWAY: Syntax error expecting variable name.",
+      "titel": "Här saknas en kolumn",
+      "text": {
+        "du": "På det här stället förväntar kommandot namnet på en kolumn.",
+        "sie": "På det här stället förväntar kommandot namnet på en kolumn."
+      },
+      "tun": {
+        "du": "Tips: I kommandofönstret föreslår Statable passande kolumner medan du skriver.",
+        "sie": "Tips: I kommandofönstret föreslår Statable passande kolumner medan du skriver."
+      }
+    },
+    {
+      "id": "klammer-auf-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\('",
+      "original": "NPAR TESTS: Syntax error expecting `('.",
+      "titel": "Här saknas en parentes",
+      "text": {
+        "du": "På det här stället saknas ”(”.",
+        "sie": "På det här stället saknas ”(”."
+      },
+      "tun": {
+        "du": "Exempel: /MANN-WHITNEY = konc BY telefon (0 1).",
+        "sie": "Exempel: /MANN-WHITNEY = konc BY telefon (0 1)."
+      }
+    },
+    {
+      "id": "klammer-zu-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\)'",
+      "original": "COMPUTE: Syntax error expecting `)'.",
+      "titel": "En parentes är fortfarande öppen",
+      "text": {
+        "du": "Det finns fler ”(” än ”)”.",
+        "sie": "Det finns fler ”(” än ”)”."
+      },
+      "tun": {
+        "du": "Sätt den saknade ”)” på rätt ställe.",
+        "sie": "Sätt den saknade ”)” på rätt ställe."
+      }
+    },
+    {
+      "id": "gleich-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `='",
+      "original": "COMPUTE: Syntax error expecting `='.",
+      "titel": "Här saknas ett likhetstecken",
+      "text": {
+        "du": "Kommandot behöver ett ”=” mellan namnet och beräkningen.",
+        "sie": "Kommandot behöver ett ”=” mellan namnet och beräkningen."
+      },
+      "tun": {
+        "du": "Exempel: COMPUTE ny = konc * 2.",
+        "sie": "Exempel: COMPUTE ny = konc * 2."
+      }
+    },
+    {
+      "id": "rechnung-unklar",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error parsing expression",
+      "original": "COMPUTE: Syntax error parsing expression.",
+      "titel": "Beräkningen är ofullständig",
+      "text": {
+        "du": "Något saknas efter ”=”, eller ett tecken passar inte.",
+        "sie": "Något saknas efter ”=”, eller ett tecken passar inte."
+      },
+      "tun": {
+        "du": "Markören visar stället.",
+        "sie": "Markören visar stället."
+      }
+    },
+    {
+      "id": "noch-keine-daten",
+      "art": "daten",
+      "muster": "is allowed only after the active dataset has been defined",
+      "original": "DESCRIPTIVES: DESCRIPTIVES is allowed only after the active dataset has been defined.",
+      "titel": "Inga data är öppna ännu",
+      "text": {
+        "du": "För att beräkna behöver Statable först data.",
+        "sie": "För att beräkna behöver Statable först data."
+      },
+      "tun": {
+        "du": "Öppna en fil eller prova exempeldata.",
+        "sie": "Öppna en fil eller prova exempeldata."
+      }
+    },
+    {
+      "id": "text-in-zahlenspalte",
+      "art": "daten",
+      "muster": "Data for variable (\\S+) is not valid as format F: Field contents are not numeric",
+      "original": "Data for variable a is not valid as format F: Field contents are not numeric.",
+      "titel": "Det finns text i en talkolumn",
+      "text": {
+        "du": "I ”{1}” står ett ord i stället för ett tal på ett ställe. Den cellen förblir tom; allt annat lästes in.",
+        "sie": "I ”{1}” står ett ord i stället för ett tal på ett ställe. Den cellen förblir tom; allt annat lästes in."
+      },
+      "tun": {
+        "du": "Datakontrollen visar dig cellen. Står det en decimalkomma (70,5) i data läser DATA LIST FREE kommatecknet som skiljetecken och värdena förskjuts: SET DECIMAL=COMMA. och DATA LIST LIST(';') löser det.",
+        "sie": "Datakontrollen visar dig cellen. Står det en decimalkomma (70,5) i data läser DATA LIST FREE kommatecknet som skiljetecken och värdena förskjuts: SET DECIMAL=COMMA. och DATA LIST LIST(';') löser det."
+      }
+    },
+    {
+      "id": "beschriftung-passt-nicht",
+      "art": "daten",
+      "muster": "VALUE LABELS: Data is not valid as format F",
+      "original": "VALUE LABELS: Data is not valid as format F: Field contents are not numeric.",
+      "titel": "Den här etiketten passar inte",
+      "text": {
+        "du": "I en talkolumn behöver varje gruppetikett ett tal, till exempel 1 = 'ja'.",
+        "sie": "I en talkolumn behöver varje gruppetikett ett tal, till exempel 1 = 'ja'."
+      },
+      "tun": {
+        "du": "Enklast sätter du etiketter under ”Kolumner”.",
+        "sie": "Enklast sätter du etiketter under ”Kolumner”."
+      }
+    },
+    {
+      "id": "keine-angabe-zu-lang",
+      "art": "hinweis",
+      "muster": "Truncating missing value to maximum acceptable length \\((\\d+) bytes\\)",
+      "original": "MISSING VALUES: Truncating missing value to maximum acceptable length (8 bytes).",
+      "titel": "Värdet för ”inget svar” förkortades",
+      "text": {
+        "du": "Värdet är längre än tillåtet ({1} tecken) och klipptes av.",
+        "sie": "Värdet är längre än tillåtet ({1} tecken) och klipptes av."
+      },
+      "tun": {
+        "du": "Kontrollera under ”Kolumner” om ”inget svar” fortfarande känns igen rätt.",
+        "sie": "Kontrollera under ”Kolumner” om ”inget svar” fortfarande känns igen rätt."
+      }
+    },
+    {
+      "id": "zu-viele-keine-angabe",
+      "art": "nicht-verstanden",
+      "muster": "Too many numeric missing values",
+      "original": "MISSING VALUES: Too many numeric missing values.  At most three individual values or one value and one range are allowed.",
+      "titel": "Högst tre värden för ”inget svar”",
+      "text": {
+        "du": "En kolumn kan ha högst tre värden för ”inget svar”, eller ett värde och ett intervall.",
+        "sie": "En kolumn kan ha högst tre värden för ”inget svar”, eller ett värde och ett intervall."
+      },
+      "tun": {
+        "du": "Exempel: 96 till 99 som intervall.",
+        "sie": "Exempel: 96 till 99 som intervall."
+      }
+    },
+    {
+      "id": "gewicht-text",
+      "art": "nicht-verstanden",
+      "muster": "The weighting variable must be numeric",
+      "original": "WEIGHT: The weighting variable must be numeric.",
+      "titel": "Viktning fungerar bara med tal",
+      "text": {
+        "du": "Den valda kolumnen innehåller text.",
+        "sie": "Den valda kolumnen innehåller text."
+      },
+      "tun": {
+        "du": "Välj en kolumn med tal.",
+        "sie": "Välj en kolumn med tal."
+      }
+    },
+    {
+      "id": "alle-spalten-loeschen",
+      "art": "hinweis",
+      "muster": "may not be used to delete all variables",
+      "original": "DELETE VARIABLES: DELETE VARIABLES may not be used to delete all variables from the active dataset dictionary.  Use NEW FILE instead.",
+      "titel": "Det går inte att ta bort alla kolumner på en gång",
+      "text": {
+        "du": "Minst en kolumn måste finnas kvar. Inget har tagits bort.",
+        "sie": "Minst en kolumn måste finnas kvar. Inget har tagits bort."
+      },
+      "tun": {
+        "du": "För en tom start: ”Skapa en ny studie”.",
+        "sie": "För en tom start: ”Skapa en ny studie”."
+      }
+    },
+    {
+      "id": "dateityp-unbekannt",
+      "art": "datei",
+      "muster": "GET DATA: Syntax error expecting TXT",
+      "original": "GET DATA: Syntax error expecting TXT, PSQL, GNM, or ODS.",
+      "titel": "Kommandot kan inte läsa det här filformatet",
+      "text": {
+        "du": "Enklast öppnar du Excel-filer med ”Öppna fil”.",
+        "sie": "Enklast öppnar du Excel-filer med ”Öppna fil”."
+      },
+      "tun": {
+        "du": "Dra filen in i fönstret.",
+        "sie": "Dra filen in i fönstret."
+      }
+    },
+    {
+      "id": "auswahl-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting one of the following: (.+)\\.",
+      "original": "FREQUENCIES: Syntax error expecting one of the following: STATISTICS, PERCENTILES, FORMAT, NTILES, ALGORITHM, HISTOGRAM, PIECHART, BARCHART, MISSING, ORDER.",
+      "titel": "Det här ordet passar inte här",
+      "text": {
+        "du": "På det här stället är bara ett av de här orden möjligt: {1}.",
+        "sie": "På det här stället är bara ett av de här orden möjligt: {1}."
+      },
+      "tun": {
+        "du": "Välj ett av dem.",
+        "sie": "Välj ett av dem."
+      }
+    },
+    {
+      "id": "auswahl-oder",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting ((?:\\S+, )+\\S+,? or \\S+)\\.",
+      "original": "EXAMINE: Syntax error expecting BOXPLOT, NPPLOT, HISTOGRAM, SPREADLEVEL, NONE, or ALL.",
+      "titel": "Det här ordet passar inte här",
+      "text": {
+        "du": "Möjligt här: {1}.",
+        "sie": "Möjligt här: {1}."
+      },
+      "tun": {
+        "du": "Välj ett av dem.",
+        "sie": "Välj ett av dem."
+      }
+    }
+  ],
+  "rueckfall": {
+    "titel": "Det fungerade inte",
+    "text": {
+      "du": "Statable körde inte kommandot. Inget har förändrats i dina data.",
+      "sie": "Statable körde inte kommandot. Inget har förändrats i dina data."
+    },
+    "tun": {
+      "du": "Under ”Detaljer” hittar du det ursprungliga meddelandet från PSPP. Med det kommer du vidare i hjälpen eller via ”Rapportera”.",
+      "sie": "Under ”Detaljer” hittar du det ursprungliga meddelandet från PSPP. Med det kommer du vidare i hjälpen eller via ”Rapportera”."
+    }
+  }
+}

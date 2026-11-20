@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><title>Testseite Tabellenköpfe</title></head>
+<body><main>
+<h1>Testseite Tabellenköpfe</h1>
+<p>Vier Varianten, gleiche Zahlen. Gemessen wird, was NVDA spricht und was auf der Braillezeile steht.</p>
+
+<h2>Variante 1: langer Text, aria-braillelabel kurz</h2>
+<table><caption>Gruppenstatistik V1</caption>
+<thead><tr><th scope="col">Gruppe</th><th scope="col" aria-braillelabel="SD">Standardabweichung</th><th scope="col" aria-braillelabel="SE">Standardfehler des Mittelwertes</th><th scope="col" aria-braillelabel="p">Signifikanz (2-seitig)</th></tr></thead>
+<tbody><tr><th scope="row">Kontrolle</th><td>1,20</td><td>0,15</td><td>0,031</td></tr><tr><th scope="row">Training</th><td>1,45</td><td>0,18</td><td>0,004</td></tr></tbody></table>
+
+<h2>Variante 2: kurzer Text, langer aria-label</h2>
+<table><caption>Gruppenstatistik V2</caption>
+<thead><tr><th scope="col">Gruppe</th><th scope="col" aria-label="Standardabweichung">SD</th><th scope="col" aria-label="Standardfehler des Mittelwertes">SE</th><th scope="col" aria-label="Signifikanz (2-seitig)">p</th></tr></thead>
+<tbody><tr><th scope="row">Kontrolle</th><td>1,20</td><td>0,15</td><td>0,031</td></tr><tr><th scope="row">Training</th><td>1,45</td><td>0,18</td><td>0,004</td></tr></tbody></table>
+
+<h2>Variante 3: langer Text mit abbr kurz</h2>
+<table><caption>Gruppenstatistik V3</caption>
+<thead><tr><th scope="col">Gruppe</th><th scope="col" abbr="SD">Standardabweichung</th><th scope="col" abbr="SE">Standardfehler des Mittelwertes</th><th scope="col" abbr="p">Signifikanz (2-seitig)</th></tr></thead>
+<tbody><tr><th scope="row">Kontrolle</th><td>1,20</td><td>0,15</td><td>0,031</td></tr><tr><th scope="row">Training</th><td>1,45</td><td>0,18</td><td>0,004</td></tr></tbody></table>
+
+<h2>Variante 4: kurzer Text, aria-description lang</h2>
+<table><caption>Gruppenstatistik V4</caption>
+<thead><tr><th scope="col">Gruppe</th><th scope="col" aria-description="Standardabweichung">SD</th><th scope="col" aria-description="Standardfehler des Mittelwertes">SE</th><th scope="col" aria-description="Signifikanz (2-seitig)">p</th></tr></thead>
+<tbody><tr><th scope="row">Kontrolle</th><td>1,20</td><td>0,15</td><td>0,031</td></tr><tr><th scope="row">Training</th><td>1,45</td><td>0,18</td><td>0,004</td></tr></tbody></table>
+
+<h2>Statistische Zeichen</h2>
+<p>η² = 0,12; χ² = 4,5; p &lt; ,001; <i>M</i> = 3,2; <i>SD</i> = 0,8; α = ,05; 1.234,5</p>
+</main></body></html>

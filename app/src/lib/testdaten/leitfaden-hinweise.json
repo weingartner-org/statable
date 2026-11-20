@@ -1,0 +1,576 @@
+[
+ {
+  "text": "Erzählen Sie doch mal, wie ein typischer Tag im Semester bei Ihnen aussieht.",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "Erzählaufforderung; 'doch mal' ist keine Suggestion"
+ },
+ {
+  "text": "Wie ist es für Sie, wenn die Prüfungen näher rücken?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "offen; 'ist' steht nicht am Anfang"
+ },
+ {
+  "text": "Was geht Ihnen durch den Kopf, wenn Sie an die Abgabe denken?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "offen"
+ },
+ {
+  "text": "Wie kam es dazu?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "Aufrechterhaltungsfrage, offen"
+ },
+ {
+  "text": "Und dann?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "Aufrechterhaltung, kein Hinweis"
+ },
+ {
+  "text": "Ist das Studium anstrengend?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "beginnt mit 'Ist'"
+ },
+ {
+  "text": "   Sind Sie mit Ihrer Planung zufrieden?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "führende Leerzeichen werden ignoriert"
+ },
+ {
+  "text": "HABEN Sie schon einmal einen Termin verpasst?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "Großschreibung egal"
+ },
+ {
+  "text": "Gibt es etwas, das Sie noch ergänzen möchten?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "'Gibt es' gilt als geschlossen"
+ },
+ {
+  "text": "Glauben Sie, dass Lernen in der Gruppe besser ist?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "'Glauben Sie' am Anfang"
+ },
+ {
+  "text": "Finden Sie nicht, dass ein fester Lernplan wichtig ist?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen",
+   "suggestiv"
+  ],
+  "notiz": "zwei Hinweise: 'Finden Sie' und 'Finden Sie nicht'"
+ },
+ {
+  "text": "Haben Sie sicherlich auch Stress gehabt?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen",
+   "suggestiv"
+  ],
+  "notiz": "'Haben' am Anfang, 'sicherlich' suggestiv"
+ },
+ {
+  "text": "Sie sind doch bestimmt auch vor Prüfungen gestresst?",
+  "sprache": "de",
+  "erwartet": [
+   "suggestiv"
+  ],
+  "notiz": "'Sie sind doch' und 'bestimmt auch'; kein Verb-Anfang aus der Liste"
+ },
+ {
+  "text": "Wie war das, haben Sie nicht auch so gedacht?",
+  "sprache": "de",
+  "erwartet": [
+   "suggestiv"
+  ],
+  "notiz": "'nicht auch' mitten im Satz; beginnt mit 'Wie'"
+ },
+ {
+  "text": "Wie schwierig war das doch sicher für Sie?",
+  "sprache": "de",
+  "erwartet": [
+   "suggestiv"
+  ],
+  "notiz": "'doch sicher'"
+ },
+ {
+  "text": "Was hat Sie bewogen, und wie ging es weiter?",
+  "sprache": "de",
+  "erwartet": [
+   "doppelt"
+  ],
+  "notiz": "zwei Fragewörter mit 'und'"
+ },
+ {
+  "text": "Wie war die Prüfungszeit? Wie ging es danach weiter?",
+  "sprache": "de",
+  "erwartet": [
+   "doppelt"
+  ],
+  "notiz": "zwei Fragezeichen"
+ },
+ {
+  "text": "Wie gehen Sie mit Stress und Zeitdruck um?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "'und' verbindet nur Hauptwörter, ein Fragewort: kein Hinweis"
+ },
+ {
+  "text": "Lernen Sie lieber allein oder in der Gruppe?",
+  "sprache": "de",
+  "erwartet": [
+   "alternativ"
+  ],
+  "notiz": "'oder' am Ende mit zwei Möglichkeiten; 'Lernen' steht nicht in der Liste"
+ },
+ {
+  "text": "Was war schwieriger, die Planung oder die Umsetzung?",
+  "sprache": "de",
+  "erwartet": [
+   "alternativ"
+  ],
+  "notiz": "ein Fragewort, 'oder' nur zwischen Möglichkeiten: nicht doppelt"
+ },
+ {
+  "text": "Waren Sie damit zufrieden oder unzufrieden?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen",
+   "alternativ"
+  ],
+  "notiz": "'Waren' und 'oder' am Ende"
+ },
+ {
+  "text": "Warum haben Sie das Studium angefangen?",
+  "sprache": "de",
+  "erwartet": [
+   "warum"
+  ],
+  "notiz": "beginnt mit 'Warum', 'haben' steht nicht vorn"
+ },
+ {
+  "text": "wieso haben Sie sich dafür entschieden?",
+  "sprache": "de",
+  "erwartet": [
+   "warum"
+  ],
+  "notiz": "klein geschrieben, 'Wieso'"
+ },
+ {
+  "text": "Warum haben Sie das getan und wie ging es dann weiter?",
+  "sprache": "de",
+  "erwartet": [
+   "doppelt",
+   "warum"
+  ],
+  "notiz": "zwei Hinweise"
+ },
+ {
+  "text": "  Wie alt sind Sie?  ",
+  "sprache": "de",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "Leerzeichen vorn und hinten; 'Wie alt'"
+ },
+ {
+  "text": "Wie viele Geschwister haben Sie?",
+  "sprache": "de",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "'Wie viele'"
+ },
+ {
+  "text": "Welchen Abschluss haben Sie?",
+  "sprache": "de",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "'Welchen Abschluss'"
+ },
+ {
+  "text": "Wann genau haben Sie mit dem Studium begonnen?",
+  "sprache": "de",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "'Wann genau'"
+ },
+ {
+  "text": "Wenn Sie an Ihr erstes Semester zurückdenken, an die vielen neuen Eindrücke, die Menschen, die Veranstaltungen, die Fristen und die Erwartungen der Lehrenden an alle Studierenden, wie hat sich Ihr Alltag da insgesamt verändert?",
+  "sprache": "de",
+  "erwartet": [
+   "lang"
+  ],
+  "notiz": "mehr als 30 Wörter, nur ein Fragewort"
+ },
+ {
+  "text": "Wenn Sie an Ihr erstes Semester zurückdenken, an die vielen neuen Eindrücke, die Menschen, die Veranstaltungen, die Fristen und alle diese Erwartungen der Lehrenden, wie hat sich Ihr Alltag verändert?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "genau 30 Wörter (Leerzeichen-Zählung): nicht lang"
+ },
+ {
+  "text": "Können Sie das genauer erzählen?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "Entscheid 1: Erzählbitte, nie geschlossen"
+ },
+ {
+  "text": "Wann haben Sie angefangen?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "Entscheid 2: nur 'Wann genau' ist fakt"
+ },
+ {
+  "text": "Hat sich das im Zeitablauf verändert?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "Entscheid 3: 'Hat' in der Liste"
+ },
+ {
+  "text": "Kannst du mir erzählen, wie dein Tag aussieht?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "Entscheid 1: Kannst + erzählen = Erzählbitte"
+ },
+ {
+  "text": "Sie sind doch im vierten Semester, oder?",
+  "sprache": "de",
+  "erwartet": [
+   "suggestiv"
+  ],
+  "notiz": "Entscheid 4: angehängtes 'oder?' ist nicht alternativ"
+ },
+ {
+  "text": "Wie lange arbeiten Sie schon in dem Beruf?",
+  "sprache": "de",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "Entscheid 5: 'Wie lange'"
+ },
+ {
+  "text": "Wie viel Zeit verbringen Sie pro Woche mit Lernen?",
+  "sprache": "de",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "Entscheid 5: 'Wie viel'"
+ },
+ {
+  "text": "„Ist das so?“ Wie meinten Sie das?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "Entscheid 6: Fragezeichen in Anführungszeichen zählen nicht (kein doppelt); führendes Anführungszeichen wird abgeschnitten, dann 'Ist'"
+ },
+ {
+  "text": "„Ist das Studium stressig?“",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "Entscheid 6: führendes Anführungszeichen abschneiden"
+ },
+ {
+  "text": "Ob allein oder in der Gruppe, wie lernen Sie meistens?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "Entscheid 7: kein alternativ"
+ },
+ {
+  "text": "Tell me about a typical week during the semester.",
+  "sprache": "en",
+  "erwartet": [],
+  "notiz": "Erzählaufforderung"
+ },
+ {
+  "text": "What was it like when the exams came closer?",
+  "sprache": "en",
+  "erwartet": [],
+  "notiz": "offen; 'What was' ist kein 'Was ...' am Anfang"
+ },
+ {
+  "text": "How do you balance work and study?",
+  "sprache": "en",
+  "erwartet": [],
+  "notiz": "'and' verbindet Hauptwörter, ein Fragewort"
+ },
+ {
+  "text": "Can you say more about that?",
+  "sprache": "en",
+  "erwartet": [],
+  "notiz": "Entscheid 1: Erzählbitte"
+ },
+ {
+  "text": "Do you like studying?",
+  "sprache": "en",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "'Do'"
+ },
+ {
+  "text": "DID you ever miss a deadline?",
+  "sprache": "en",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "Großschreibung"
+ },
+ {
+  "text": "Was it difficult to plan your week?",
+  "sprache": "en",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "'Was' am Anfang (englisch)"
+ },
+ {
+  "text": "Have you ever felt overwhelmed?",
+  "sprache": "en",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "'Have'"
+ },
+ {
+  "text": "Would you say you were stressed or relaxed?",
+  "sprache": "en",
+  "erwartet": [
+   "geschlossen",
+   "alternativ"
+  ],
+  "notiz": "'Would' und 'oder' am Ende"
+ },
+ {
+  "text": "Don't you think that planning ahead is important?",
+  "sprache": "en",
+  "erwartet": [
+   "suggestiv"
+  ],
+  "notiz": "'don't you think'; 'Don't' steht nicht in der Liste"
+ },
+ {
+  "text": "Wouldn't you agree that group work helps?",
+  "sprache": "en",
+  "erwartet": [
+   "suggestiv"
+  ],
+  "notiz": "'wouldn't you agree'"
+ },
+ {
+  "text": "Surely you felt stressed before exams?",
+  "sprache": "en",
+  "erwartet": [
+   "suggestiv"
+  ],
+  "notiz": "'surely'"
+ },
+ {
+  "text": "Isn't it true that most students procrastinate?",
+  "sprache": "en",
+  "erwartet": [
+   "suggestiv"
+  ],
+  "notiz": "'isn't it true'"
+ },
+ {
+  "text": "How did it feel and what did you do next?",
+  "sprache": "en",
+  "erwartet": [
+   "doppelt"
+  ],
+  "notiz": "zwei Fragewörter mit 'and'"
+ },
+ {
+  "text": "Why did you leave the course?",
+  "sprache": "en",
+  "erwartet": [
+   "warum"
+  ],
+  "notiz": "'Why'"
+ },
+ {
+  "text": "Why did you choose this course, and how did you feel about it?",
+  "sprache": "en",
+  "erwartet": [
+   "doppelt",
+   "warum"
+  ],
+  "notiz": "zwei Hinweise"
+ },
+ {
+  "text": "How old are you?",
+  "sprache": "en",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "'How old'"
+ },
+ {
+  "text": "How many courses do you take?",
+  "sprache": "en",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "'How many'"
+ },
+ {
+  "text": "When exactly did you start studying?",
+  "sprache": "en",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "'When exactly'"
+ },
+ {
+  "text": "When you think back to your first semester, to all the new impressions, the people, the lectures, the deadlines and the expectations of the teachers towards all students, how did your everyday life change overall?",
+  "sprache": "en",
+  "erwartet": [
+   "lang"
+  ],
+  "notiz": "mehr als 30 Wörter"
+ },
+ {
+  "text": "   Is that how it felt?",
+  "sprache": "en",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "führende Leerzeichen"
+ },
+ {
+  "text": "Könnten Sie ein Beispiel nennen?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "Entscheid 1: Erzählbitte"
+ },
+ {
+  "text": "Würden Sie das bitte genauer beschreiben?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "Entscheid 1"
+ },
+ {
+  "text": "Können Sie Auto fahren?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "'Können' ohne Erzählverb bleibt geschlossen"
+ },
+ {
+  "text": "Could you describe how you plan your week?",
+  "sprache": "en",
+  "erwartet": [],
+  "notiz": "Entscheid 1"
+ },
+ {
+  "text": "Would you like to add anything?",
+  "sprache": "en",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "'Would' ohne Erzählverb bleibt geschlossen"
+ },
+ {
+  "text": "Hatte Ihre Planung Lücken?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "Entscheid 3: 'Hatte'"
+ },
+ {
+  "text": "Bist du gern Studentin?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "Entscheid 3: Du-Form 'Bist'"
+ },
+ {
+  "text": "Hast du schon mal einen Termin verpasst?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "Entscheid 3: Du-Form 'Hast'"
+ },
+ {
+  "text": "Had you planned this in advance?",
+  "sprache": "en",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "Entscheid 3: 'Had'"
+ },
+ {
+  "text": "You planned this carefully, right?",
+  "sprache": "en",
+  "erwartet": [],
+  "notiz": "Entscheid 4: 'right?' ist nicht alternativ"
+ },
+ {
+  "text": "How long have you studied here?",
+  "sprache": "en",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "Entscheid 5: 'How long'"
+ },
+ {
+  "text": "How much time do you spend studying?",
+  "sprache": "en",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "Entscheid 5: 'How much'"
+ },
+ {
+  "text": "(Bitte kurz) Wie alt sind Sie?",
+  "sprache": "de",
+  "erwartet": [
+   "fakt"
+  ],
+  "notiz": "Entscheid 6: führende Klammer abschneiden"
+ },
+ {
+  "text": "– Ist das so?",
+  "sprache": "de",
+  "erwartet": [
+   "geschlossen"
+  ],
+  "notiz": "Entscheid 6: führender Gedankenstrich abschneiden"
+ },
+ {
+  "text": "Wie war das – „Warum denn?“ – für Sie?",
+  "sprache": "de",
+  "erwartet": [],
+  "notiz": "Entscheid 6: Fragezeichen in Anführungszeichen zählt nicht; Warum steht nicht am Anfang"
+ }
+]

@@ -1,0 +1,20 @@
+// Paket 2C: Fragebogen im geöffneten Projekt: Autospeichern, nach Neuladen noch da. Aufruf: PORT=5199 node e2e/probe/2c-projekt.mjs
+import { chromium } from '@playwright/test';
+const U = `http://localhost:${process.env.PORT || 5199}/`;
+const b = await chromium.launch(); const page = await (await b.newContext({ locale: 'de-DE', viewport: { width: 1400, height: 900 } })).newPage();
+let fehler = 0; const ok = (x, t) => { console.log((x ? 'ok    ' : 'FEHLER') + ' ' + t); if (!x) fehler++; };
+await page.goto(U + '#beispiele'); await page.waitForTimeout(1500);
+await page.getByRole('button', { name: /Öffnen und üben/ }).first().click(); await page.waitForTimeout(3000);
+await page.goto(U + '#fragebogen'); await page.waitForSelector('h1');
+ok(!(await page.locator('.hinweis-ohne').count()), 'mit Projekt kein Hinweis „kein Projekt geöffnet“');
+await page.getByRole('button', { name: 'Neuen Fragebogen anlegen' }).click();
+await page.getByRole('button', { name: 'Frage hinzufügen' }).click();
+await page.fill('#fb-fragetext-de', 'Gespeicherte Frage'); await page.fill('#fb-fragetext-en', 'Saved question'); await page.keyboard.press('Tab');
+await page.waitForTimeout(1500);
+await page.reload(); await page.waitForTimeout(5000);
+console.log('Adresse nach Neuladen:', page.url(), '| Projekt-Zeile:', (await page.locator('header').first().innerText()).replace(/\s+/g, ' ').slice(0, 200));
+await page.waitForTimeout(1500);
+const t = await page.locator('.gl .eintrag').allInnerTexts();
+console.log('ohne-Projekt-Hinweis da:', await page.locator('.hinweis-ohne').count());
+ok(t.some(x => x.includes('Gespeicherte Frage')), 'nach Neuladen ist der Fragebogen noch im Projekt: ' + JSON.stringify(t.map(x => x.replace(/\s+/g, ' '))));
+await b.close(); process.exit(fehler ? 1 : 0);

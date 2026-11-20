@@ -1,0 +1,4 @@
+Response,Submitted on:,Institution,Department,Course,Group,User id,User idnumber,Full name,Username,Q01_zufriedenheit,Q02_mahlzeiten->fruehstueck,Q02_mahlzeiten->mittagessen,Q03_kommentar
+1,08/11/2026 10:15:30,Universität Beispiel,Soziologie,Statistik 1,A,17,s123,Anna Beispiel,abeispiel,1,1,0,Gut
+2,08/11/2026 10:40:02,Universität Beispiel,Soziologie,Statistik 1,B,18,s124,Ben Muster,bmuster,3,0,1,
+3,09/11/2026 08:05:44,Universität Beispiel,Soziologie,Statistik 1,A,19,s125,Carla Probe,cprobe,2,1,1,Zu laut

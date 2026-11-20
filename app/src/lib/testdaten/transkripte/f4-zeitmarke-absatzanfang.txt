@@ -1,0 +1,7 @@
+#00:00:00-0# I: Guten Morgen, wollen wir die Semesterplanung besprechen?
+
+#00:00:03-2# B: Gern, aber ich brauche noch die Raumliste.
+
+#00:00:07-1# I: Ich habe die Termine für Oktober schon vorbereitet. Außerdem muss der Übungstermin am Freitag verschoben werden.
+
+#00:00:14-2# B: Danke, dann schicke ich die Liste bis Mittwoch.

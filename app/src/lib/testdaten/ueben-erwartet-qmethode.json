@@ -1,0 +1,19 @@
+{
+  "herkunft": "scripts/ueben-erwartet-qmethode.R (Basis-R, R 4.6.1)",
+  "korrelationP1P2": 0.5375494071,
+  "eigenwert1": 3.6656265500,
+  "eigenwert2": 2.8307063538,
+  "eigenwert3": 0.7539175184,
+  "schwelle": 0.5436061923,
+  "normal975": 1.9599639845,
+  "ladungP4F1": 0.9700797783,
+  "ladungP6F1": 0.3575970974,
+  "ladungP6F2": 0.8013345445,
+  "ladungP8F2": 0.9195512542,
+  "personenF1": 4,
+  "personenF2": 4,
+  "z1A1": 1.5593761101,
+  "z2A1": -1.1709864417,
+  "z1A4": 1.3394138270,
+  "z2A4": 1.2949328473
+}

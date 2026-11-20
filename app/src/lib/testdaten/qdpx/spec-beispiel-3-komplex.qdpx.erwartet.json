@@ -1,0 +1,207 @@
+{
+ "codes": [
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": false,
+   "name": "English Keyword Group 1",
+   "pfad": "English Keyword Group 1"
+  },
+  {
+   "definition": "English Definition",
+   "farbe": "#0080ff",
+   "kodierbar": true,
+   "name": "English Keyword 1",
+   "pfad": "English Keyword Group 1/English Keyword 1"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": false,
+   "name": "Français Catégorie 1",
+   "pfad": "Français Catégorie 1"
+  },
+  {
+   "definition": "Français Définition",
+   "farbe": "#0080ff",
+   "kodierbar": true,
+   "name": "Français Mot-clé 1",
+   "pfad": "Français Catégorie 1/Français Mot-clé 1"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": false,
+   "name": "Collections",
+   "pfad": "Collections"
+  },
+  {
+   "definition": "English Collection Comment 1",
+   "farbe": null,
+   "kodierbar": true,
+   "name": "English Collection 1",
+   "pfad": "Collections/English Collection 1"
+  }
+ ],
+ "datei": "spec-beispiel-3-komplex.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 120,
+   "name": "English Document 1",
+   "pruefung": "ungeprueft",
+   "sha256": "c92698686bc096a0e84861e75123ec5af99a8bf3233993584a8b5820cd88631e",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 120,
+   "name": "Français Document 1",
+   "pruefung": "ungeprueft",
+   "sha256": "388a51707742d4c9d5a1e0aa78b983da5d39a009801e35d90e7cd3a45d70caf8",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "English Document Author 1",
+  "Apostrophe's Test Document Author 1",
+  "Français Document Author 1",
+  "Unbekannt"
+ ],
+ "kodierendeUnbekanntAnzahl": 3,
+ "kodierungen": [
+  {
+   "code": "Collections/English Collection 1",
+   "dokument": "English Document 1",
+   "person": "Unbekannt",
+   "text": "n erfundener T"
+  },
+  {
+   "code": "English Keyword Group 1/English Keyword 1",
+   "dokument": "English Document 1",
+   "person": "English Document Author 1",
+   "text": "Ein erfundener Text für das Beispiel: English Document 1Dies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt si"
+  },
+  {
+   "code": "English Keyword Group 1/English Keyword 1",
+   "dokument": "English Document 1",
+   "person": "Unbekannt",
+   "text": "n erfundener T"
+  },
+  {
+   "code": "Français Catégorie 1/Français Mot-clé 1",
+   "dokument": "Français Document 1",
+   "person": "Français Document Author 1",
+   "text": "Ein erfundener Text für das Beispiel: Français Document 1Dies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt s"
+  },
+  {
+   "code": "Français Catégorie 1/Français Mot-clé 1",
+   "dokument": "Français Document 1",
+   "person": "Unbekannt",
+   "text": "ançais Document "
+  }
+ ],
+ "meldungen": [
+  "kodierende-unbekannt",
+  "positionen-ungeprueft"
+ ],
+ "meldungenDetail": [
+  {
+   "art": "positionen-ungeprueft",
+   "dokument": "English Document 1"
+  },
+  {
+   "art": "positionen-ungeprueft",
+   "dokument": "Français Document 1"
+  }
+ ],
+ "memos": [
+  {
+   "bezug": [
+    {
+     "art": "code",
+     "ziel": "Collections/English Collection 1"
+    }
+   ],
+   "text": "English Collection Note 1",
+   "titel": "English Collection Note 1"
+  },
+  {
+   "bezug": [
+    {
+     "art": "dokument",
+     "ziel": "English Document 1"
+    },
+    {
+     "art": "segment",
+     "ziel": {
+      "dokument": "English Document 1",
+      "text": "Ein erfundener Text für das Beispiel: English Document 1Dies ist ein neutraler Füllsatz ohne Bedeutung. Er wiederholt si"
+     }
+    }
+   ],
+   "text": "English Document Note 1",
+   "titel": "English Document Note 1"
+  },
+  {
+   "bezug": [
+    {
+     "art": "segment",
+     "ziel": {
+      "dokument": "English Document 1",
+      "text": "n erfundener T"
+     }
+    }
+   ],
+   "text": "English Quote Note 1",
+   "titel": "English Quote Note 1"
+  },
+  {
+   "bezug": [
+    {
+     "art": "segment",
+     "ziel": {
+      "dokument": "English Document 1",
+      "text": "n erfundener T"
+     }
+    }
+   ],
+   "text": "Quote Comment",
+   "titel": "Kommentar (ATLAS.ti)"
+  },
+  {
+   "bezug": [
+    {
+     "art": "segment",
+     "ziel": {
+      "dokument": "Français Document 1",
+      "text": "ançais Document "
+     }
+    }
+   ],
+   "text": "Quote Comment",
+   "titel": "Kommentar (ATLAS.ti)"
+  }
+ ],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "Transana 3.22b2-QDE-Win (nachgebaut)",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 6,
+  "dokumente": 2,
+  "faelle": 0,
+  "kodierende": 4,
+  "kodierungen": 5,
+  "memos": 5,
+  "mengen": 0,
+  "segmente": 4,
+  "variablen": 0
+ }
+}

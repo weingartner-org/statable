@@ -1,0 +1,1325 @@
+{
+ "hinweis": "Englische PSPP-Texte, die in Tabellen sichtbar werden (Titel, Spalten-, Zeilenköpfe), mit der deutschen Übersetzung. Übersetzung je Sprache: src/output/<code>-dict.json = { \"englischer Text\": \"Übersetzung\" }. Platzhalter (%s, %zu, %g, %%) und Klammerzusätze genau so übernehmen. Erzeugt von i18n/pspp-vorlage.mjs - nicht von Hand ändern.",
+ "eintraege": [
+  {
+   "en": "-2 Log likelihood",
+   "de": "-2 Log Likelihood"
+  },
+  {
+   "en": "(Constant)",
+   "de": "(Konstante)"
+  },
+  {
+   "en": "(I) Family",
+   "de": "(I) Familie"
+  },
+  {
+   "en": "(J) Family",
+   "de": "(J) Familie"
+  },
+  {
+   "en": "% of Variance",
+   "de": "% der Varianz"
+  },
+  {
+   "en": "%d thru %d",
+   "de": "%d bis %d"
+  },
+  {
+   "en": "%d%% CI for Exp(B)",
+   "de": "%d%% CI für Exp(B)"
+  },
+  {
+   "en": "%g%% Confidence Interval",
+   "de": "%g%% Konfidenzintervall"
+  },
+  {
+   "en": "%g%% Confidence Interval for B",
+   "de": "%g%% Konfidenzintervall für B"
+  },
+  {
+   "en": "%g%% Confidence Interval for Mean",
+   "de": "%g%% Konfidenzintervall für Mittelwert"
+  },
+  {
+   "en": "%g%% Confidence Interval of the Difference",
+   "de": "%g%% Konfidenzintervall der Differenz"
+  },
+  {
+   "en": "%s Dependent",
+   "de": "%s Abhängig"
+  },
+  {
+   "en": "%s of %s by %s",
+   "de": "%s von %s durch %s"
+  },
+  {
+   "en": "> Median",
+   "de": "> Median"
+  },
+  {
+   "en": "≤ Median",
+   "de": "≤ Median"
+  },
+  {
+   "en": "1 - Specificity",
+   "de": "1- Spezifität"
+  },
+  {
+   "en": "5% Trimmed Mean",
+   "de": "5% getrimmtes Mittel"
+  },
+  {
+   "en": "95% CI for Exp(B)",
+   "de": "95 %-KI für Exp(B)"
+  },
+  {
+   "en": "95% Confidence Interval",
+   "de": "95% Konfidenzintervall"
+  },
+  {
+   "en": "95% Confidence Interval for B",
+   "de": "95 %-Konfidenzintervall für B"
+  },
+  {
+   "en": "95% Confidence Interval of the Difference",
+   "de": "95% Konfidenzintervall der Differenz"
+  },
+  {
+   "en": "a. Significant at .05 level",
+   "de": "a. Signifikant auf dem Niveau 0,05"
+  },
+  {
+   "en": "Absolute",
+   "de": "Absolut"
+  },
+  {
+   "en": "Adjusted R Square",
+   "de": "Korrigiertes R-Quadrat"
+  },
+  {
+   "en": "Adjusted Residual",
+   "de": "Korrigiertes Residuum"
+  },
+  {
+   "en": "Analysis N",
+   "de": "Analyse N"
+  },
+  {
+   "en": "ANOVA",
+   "de": "ANOVA"
+  },
+  {
+   "en": "ANOVA (%s)",
+   "de": "ANOVA (%s)"
+  },
+  {
+   "en": "Anti-image Correlation",
+   "de": "Anti-Image-Korrelation"
+  },
+  {
+   "en": "Anti-image Covariance",
+   "de": "Anti-Image-Kovarianz"
+  },
+  {
+   "en": "Anti-Image Matrices",
+   "de": "Anti-Image-Korrelationsmatrix"
+  },
+  {
+   "en": "Approx. Chi-Square",
+   "de": "Geschätztes Chi-Quadrat"
+  },
+  {
+   "en": "Approx. Sig.",
+   "de": "Näherungsw. Signif."
+  },
+  {
+   "en": "Approx. T",
+   "de": "Näherungsweises T"
+  },
+  {
+   "en": "Area",
+   "de": "Fläche"
+  },
+  {
+   "en": "Area Under the Curve",
+   "de": "Fläche unter der Kurve"
+  },
+  {
+   "en": "Assumption",
+   "de": "Annahme"
+  },
+  {
+   "en": "Asymp. Sig.",
+   "de": "Asymp. Sig."
+  },
+  {
+   "en": "Asymp. Sig. (2-tailed)",
+   "de": "Asymp. Sig. (2-seitig)"
+  },
+  {
+   "en": "Asymp. Std. Error",
+   "de": "Asymp. Std.-Fehler"
+  },
+  {
+   "en": "Asymptotic Sig.",
+   "de": "Asymptotisch Sig."
+  },
+  {
+   "en": "Asymptotic Sig. (2-tailed)",
+   "de": "Asymptotische Sig. (2-seitig)"
+  },
+  {
+   "en": "Bartlett's Test of Sphericity",
+   "de": "Bartlett's Test auf Sphärizität"
+  },
+  {
+   "en": "Beta",
+   "de": "Beta"
+  },
+  {
+   "en": "Between Groups",
+   "de": "Zwischen Gruppen"
+  },
+  {
+   "en": "Binomial Test",
+   "de": "Test auf Binomialverteilung"
+  },
+  {
+   "en": "Bonferroni",
+   "de": "Bonferroni"
+  },
+  {
+   "en": "Case",
+   "de": "Fall"
+  },
+  {
+   "en": "Case Number",
+   "de": "Fallnummer"
+  },
+  {
+   "en": "Case Processing Summary",
+   "de": "Zusammenfassung der Fallverarbeitung"
+  },
+  {
+   "en": "Case Summary",
+   "de": "Fallzusammenfassung"
+  },
+  {
+   "en": "Cases",
+   "de": "Fälle"
+  },
+  {
+   "en": "Cases < Test Value",
+   "de": "Fälle < Testwert"
+  },
+  {
+   "en": "Cases ≥ Test Value",
+   "de": "Fälle ≥ Testwert"
+  },
+  {
+   "en": "Categorical Variables' Codings",
+   "de": "Kodierungen der kategorialen Variablen"
+  },
+  {
+   "en": "Category",
+   "de": "Kategorie"
+  },
+  {
+   "en": "Chi-square",
+   "de": "Chi-Quadrat"
+  },
+  {
+   "en": "Chi-Square",
+   "de": "Chi-Quadrat"
+  },
+  {
+   "en": "Chi-Square Tests",
+   "de": "Chi-Quadrat Tests"
+  },
+  {
+   "en": "Classification Table",
+   "de": "Klassifikationstabelle"
+  },
+  {
+   "en": "Cluster",
+   "de": "Cluster"
+  },
+  {
+   "en": "Coefficient Correlations",
+   "de": "Korrelationen der Koeffizienten"
+  },
+  {
+   "en": "Coefficients",
+   "de": "Koeffizienten"
+  },
+  {
+   "en": "Coefficients (%s)",
+   "de": "Koeffizienten (%s)"
+  },
+  {
+   "en": "Collinearity Statistics",
+   "de": "Kollinearitätsstatistiken"
+  },
+  {
+   "en": "Column %",
+   "de": "Spalte %"
+  },
+  {
+   "en": "Columns",
+   "de": "Spalten"
+  },
+  {
+   "en": "Communalities",
+   "de": "Kommunalitäten"
+  },
+  {
+   "en": "Component",
+   "de": "Komponente"
+  },
+  {
+   "en": "Component Matrix",
+   "de": "Komponentenmatrix"
+  },
+  {
+   "en": "Constant",
+   "de": "Konstante"
+  },
+  {
+   "en": "Contingency Coefficient",
+   "de": "Kontingenz Koeffizient"
+  },
+  {
+   "en": "Continuity Correction",
+   "de": "Kontinuitätskorrektur"
+  },
+  {
+   "en": "Coordinates of the Curve",
+   "de": "Koordinaten der Kurve"
+  },
+  {
+   "en": "Corrected Item-Total Correlation",
+   "de": "Korrigierte Item-Skala-Korrelation"
+  },
+  {
+   "en": "Corrected Model",
+   "de": "Korrigiertes Modell"
+  },
+  {
+   "en": "Corrected Total",
+   "de": "Korrigierte Gesamtvariation"
+  },
+  {
+   "en": "Correlation",
+   "de": "Korrelation"
+  },
+  {
+   "en": "Correlation Matrix",
+   "de": "Korrelationsmatrix"
+  },
+  {
+   "en": "Correlations",
+   "de": "Korrelationen"
+  },
+  {
+   "en": "Count",
+   "de": "Beobachtete Häufigkeit"
+  },
+  {
+   "en": "Covariance",
+   "de": "Kovarianz"
+  },
+  {
+   "en": "Covariance Matrix",
+   "de": "Kovarianzmatrix"
+  },
+  {
+   "en": "Covariances",
+   "de": "Kovarianzen"
+  },
+  {
+   "en": "Cox & Snell R Square",
+   "de": "Cox & Snell R-Quadrat"
+  },
+  {
+   "en": "Cramer's V",
+   "de": "Cramérs V"
+  },
+  {
+   "en": "Cronbach's Alpha",
+   "de": "Cronbachs Alpha"
+  },
+  {
+   "en": "Cronbach's Alpha if Item Deleted",
+   "de": "Cronbachs Alpha wenn Item gelöscht"
+  },
+  {
+   "en": "Cross-products",
+   "de": "Kreuzprodukte"
+  },
+  {
+   "en": "Cumulative %",
+   "de": "Kumuliert %"
+  },
+  {
+   "en": "Cumulative Percent",
+   "de": "Kumulierte Prozente"
+  },
+  {
+   "en": "dataset",
+   "de": "Datensatz"
+  },
+  {
+   "en": "Dependent Variable Encoding",
+   "de": "Codierung abhängiger Variablen"
+  },
+  {
+   "en": "Descriptive Statistics",
+   "de": "Deskriptive Statistiken"
+  },
+  {
+   "en": "Descriptives",
+   "de": "Deskriptive Statistiken"
+  },
+  {
+   "en": "df",
+   "de": "df"
+  },
+  {
+   "en": "df1",
+   "de": "df1"
+  },
+  {
+   "en": "df2",
+   "de": "df2"
+  },
+  {
+   "en": "Differences",
+   "de": "Differenzen"
+  },
+  {
+   "en": "Directional Measures",
+   "de": "Gerichtete Maße"
+  },
+  {
+   "en": "Eigenvalue",
+   "de": "Eigenwert"
+  },
+  {
+   "en": "Equal variances assumed",
+   "de": "Varianzen sind gleich"
+  },
+  {
+   "en": "Equal variances not assumed",
+   "de": "Varianzen sind nicht gleich"
+  },
+  {
+   "en": "Error",
+   "de": "Fehler"
+  },
+  {
+   "en": "Eta",
+   "de": "Eta"
+  },
+  {
+   "en": "Exact Sig. (1-tailed)",
+   "de": "Exakte Sig. (1-seitig)"
+  },
+  {
+   "en": "Exact Sig. (2-tailed)",
+   "de": "Exakte Sig. (2-seitig)"
+  },
+  {
+   "en": "Excluded",
+   "de": "Ausgeschlossen"
+  },
+  {
+   "en": "Exp(B)",
+   "de": "Exp(B)"
+  },
+  {
+   "en": "Expected",
+   "de": "Erwartet"
+  },
+  {
+   "en": "Expected N",
+   "de": "Erwartete N"
+  },
+  {
+   "en": "Extraction",
+   "de": "Extraktion"
+  },
+  {
+   "en": "Extraction Sums of Squared Loadings",
+   "de": "Summe der quadrierten Ladungen der Extraktion"
+  },
+  {
+   "en": "Extreme Values",
+   "de": "Extremwerte"
+  },
+  {
+   "en": "Factor",
+   "de": "Faktor"
+  },
+  {
+   "en": "Factor Correlation Matrix",
+   "de": "Faktor-Korrelationsmatrix"
+  },
+  {
+   "en": "Factor Matrix",
+   "de": "Faktor Matrix"
+  },
+  {
+   "en": "Final Cluster Centers",
+   "de": "Clusterzentren der Ausgangsklassifikation"
+  },
+  {
+   "en": "Fisher's Exact Test",
+   "de": "Exakter Test nach Fisher"
+  },
+  {
+   "en": "For cohort %s = %s",
+   "de": "Für Kohorte %s = %s"
+  },
+  {
+   "en": "Format",
+   "de": "Format"
+  },
+  {
+   "en": "Frequencies",
+   "de": "Häufigkeiten"
+  },
+  {
+   "en": "Frequency",
+   "de": "Häufigkeit"
+  },
+  {
+   "en": "Games-Howell",
+   "de": "Games-Howell"
+  },
+  {
+   "en": "Gamma",
+   "de": "Gamma"
+  },
+  {
+   "en": "Goodman and Kruskal tau",
+   "de": "Goodman und Kruskal tau"
+  },
+  {
+   "en": "Group",
+   "de": "Gruppe"
+  },
+  {
+   "en": "Group 1",
+   "de": "Gruppe 1"
+  },
+  {
+   "en": "Group 2",
+   "de": "Gruppe 2"
+  },
+  {
+   "en": "Group Statistics",
+   "de": "Gruppenstatistiken"
+  },
+  {
+   "en": "Groups",
+   "de": "Gruppen"
+  },
+  {
+   "en": "Highest",
+   "de": "Höchster"
+  },
+  {
+   "en": "Included",
+   "de": "Eingeschlossen"
+  },
+  {
+   "en": "Included in Analysis",
+   "de": "Einbezogen in Analyse"
+  },
+  {
+   "en": "Independent Samples Test",
+   "de": "Test bei unabhängigen Stichproben"
+  },
+  {
+   "en": "Initial",
+   "de": "Ursprünglich"
+  },
+  {
+   "en": "Initial Eigenvalues",
+   "de": "Ursprüngliche Eigenwerte"
+  },
+  {
+   "en": "Intercept",
+   "de": "Konstanter Term"
+  },
+  {
+   "en": "Internal Value",
+   "de": "Interner Wert"
+  },
+  {
+   "en": "Interquartile Range",
+   "de": "Interquartilsabstand"
+  },
+  {
+   "en": "Interval by Interval",
+   "de": "Interval zu Interval"
+  },
+  {
+   "en": "Item-Total Statistics",
+   "de": "Item-Skala-Statistiken"
+  },
+  {
+   "en": "Jonckheere-Terpstra Test",
+   "de": "Jonckheere-Terpstra Test"
+  },
+  {
+   "en": "Kaiser-Meyer-Olkin Measure of Sampling Adequacy",
+   "de": "Kaiser-Meyer-Olkin-Maß für Angemessenheit der Stichproben"
+  },
+  {
+   "en": "Kappa",
+   "de": "Kappa"
+  },
+  {
+   "en": "Kendall's tau-b",
+   "de": "Kendall's tau-b"
+  },
+  {
+   "en": "Kendall's tau-c",
+   "de": "Kendall's tau-c"
+  },
+  {
+   "en": "Kendall's W",
+   "de": "Kendall's W"
+  },
+  {
+   "en": "KMO and Bartlett's Test",
+   "de": "KMO und Bartlett's Test"
+  },
+  {
+   "en": "Kolmogorov-Smirnov Z",
+   "de": "Kolmogorov-Smirnov Z"
+  },
+  {
+   "en": "Kurtosis",
+   "de": "Kurtosis"
+  },
+  {
+   "en": "label",
+   "de": "Label"
+  },
+  {
+   "en": "Label",
+   "de": "Beschriftung"
+  },
+  {
+   "en": "Lambda",
+   "de": "Lambda"
+  },
+  {
+   "en": "Levene Statistic",
+   "de": "Levene Statistik"
+  },
+  {
+   "en": "Levene's Test for Equality of Variances",
+   "de": "Levene-Test der Varianzgleichheit"
+  },
+  {
+   "en": "Likelihood Ratio",
+   "de": "Likelihood-Quotient"
+  },
+  {
+   "en": "Linear-by-Linear Association",
+   "de": "Zusammenhang linear-mit-linear"
+  },
+  {
+   "en": "Lower",
+   "de": "Untere"
+  },
+  {
+   "en": "Lower Bound",
+   "de": "Untere Grenze"
+  },
+  {
+   "en": "Lowest",
+   "de": "Niedrigster"
+  },
+  {
+   "en": "Mann-Whitney U",
+   "de": "Mann-Whitney U"
+  },
+  {
+   "en": "Maximum",
+   "de": "Maximum"
+  },
+  {
+   "en": "Mean",
+   "de": "Mittelwert"
+  },
+  {
+   "en": "Mean Difference",
+   "de": "Mittlere Differenz"
+  },
+  {
+   "en": "Mean Difference (I - J)",
+   "de": "Differenz der Mittelwerte (I - J)"
+  },
+  {
+   "en": "Mean J-T Statistic",
+   "de": "Mittelwert der J-T Statistik"
+  },
+  {
+   "en": "Mean Rank",
+   "de": "Durchschnittlicher Rang"
+  },
+  {
+   "en": "Mean Square",
+   "de": "Mittel der Quadrate"
+  },
+  {
+   "en": "Means",
+   "de": "Mittelwerte"
+  },
+  {
+   "en": "Measure",
+   "de": "Messniveau"
+  },
+  {
+   "en": "Measure of Agreement",
+   "de": "Übereinstimmungsmaß"
+  },
+  {
+   "en": "Median",
+   "de": "Median"
+  },
+  {
+   "en": "Minimum",
+   "de": "Minimum"
+  },
+  {
+   "en": "Missing",
+   "de": "Fehlende Werte"
+  },
+  {
+   "en": "Missing Cases",
+   "de": "Fehlende Fälle"
+  },
+  {
+   "en": "Missing N (listwise)",
+   "de": "Fehlende N (listenweise)"
+  },
+  {
+   "en": "Mode",
+   "de": "Modalwert"
+  },
+  {
+   "en": "Model Summary",
+   "de": "Modellzusammenfassung"
+  },
+  {
+   "en": "Model Summary (%s)",
+   "de": "Modellzusammenfassung (%s)"
+  },
+  {
+   "en": "Most Extreme Differences",
+   "de": "Größte Differenz"
+  },
+  {
+   "en": "Multiple Comparisons",
+   "de": "Mehrfachvergleiche"
+  },
+  {
+   "en": "Multiple Comparisons (%s)",
+   "de": "Mehrfachvergleiche (%s)"
+  },
+  {
+   "en": "N of Items",
+   "de": "N der Items"
+  },
+  {
+   "en": "N of Valid Cases",
+   "de": "N der gültigen Fälle"
+  },
+  {
+   "en": "Nagelkerke R Square",
+   "de": "Nagelkerke R-Quadrat"
+  },
+  {
+   "en": "Name",
+   "de": "Name"
+  },
+  {
+   "en": "Negative",
+   "de": "Negativ"
+  },
+  {
+   "en": "Negative Differences",
+   "de": "Negative Differenzen"
+  },
+  {
+   "en": "Negative Ranks",
+   "de": "Negative Ränge"
+  },
+  {
+   "en": "Nominal by Interval",
+   "de": "Nominal zu Interval"
+  },
+  {
+   "en": "Nominal by Nominal",
+   "de": "Nominal zu Nominal"
+  },
+  {
+   "en": "None",
+   "de": "Keine"
+  },
+  {
+   "en": "Normal Parameters",
+   "de": "Normal Parameter"
+  },
+  {
+   "en": "note",
+   "de": "Hinweis"
+  },
+  {
+   "en": "Note",
+   "de": "Notiz"
+  },
+  {
+   "en": "Number of Cases in each Cluster",
+   "de": "Anzahl der Fälle in jedem Cluster"
+  },
+  {
+   "en": "Number of levels in %s",
+   "de": "Anzahl der Stufen in %s"
+  },
+  {
+   "en": "Number of Runs",
+   "de": "Anzahl der Sequenzen"
+  },
+  {
+   "en": "Observed",
+   "de": "Beobachtet"
+  },
+  {
+   "en": "Observed J-T Statistic",
+   "de": "Beobachtete J-T Statistik"
+  },
+  {
+   "en": "Observed N",
+   "de": "Beobachtete N"
+  },
+  {
+   "en": "Observed Prop.",
+   "de": "Beobachtete Wahrsch."
+  },
+  {
+   "en": "Odds Ratio for %s",
+   "de": "Quotenverhältnis für %s"
+  },
+  {
+   "en": "One-Sample Kolmogorov-Smirnov Test",
+   "de": "Kolmogorov-Smirnov Test für eine Stichprobe"
+  },
+  {
+   "en": "One-Sample Statistics",
+   "de": "Statistik bei einer Stichprobe"
+  },
+  {
+   "en": "One-Sample Test",
+   "de": "Test bei einer Stichprobe"
+  },
+  {
+   "en": "Ordinal by Ordinal",
+   "de": "Ordinal zu Ordinal"
+  },
+  {
+   "en": "Original Value",
+   "de": "Ursprünglicher Wert"
+  },
+  {
+   "en": "Overall Percentage",
+   "de": "Gesamtprozentsatz"
+  },
+  {
+   "en": "Pair %zu",
+   "de": "Paar %zu"
+  },
+  {
+   "en": "Paired Differences",
+   "de": "Gepaarte Differenzen"
+  },
+  {
+   "en": "Paired Sample Statistics",
+   "de": "Statistik bei gepaarten Stichproben"
+  },
+  {
+   "en": "Paired Samples Correlations",
+   "de": "Korrelationen bei gepaarten Stichproben"
+  },
+  {
+   "en": "Paired Samples Test",
+   "de": "Test bei gepaarten Stichproben"
+  },
+  {
+   "en": "Parameter coding",
+   "de": "Parameterkodierung"
+  },
+  {
+   "en": "Pattern Matrix",
+   "de": "Mustermatrix"
+  },
+  {
+   "en": "Pearson Chi-Square",
+   "de": "Pearson Chi-Quadrat"
+  },
+  {
+   "en": "Pearson Correlation",
+   "de": "Pearson Korrelation"
+  },
+  {
+   "en": "Pearson's R",
+   "de": "Pearson's R"
+  },
+  {
+   "en": "Percent",
+   "de": "Prozent"
+  },
+  {
+   "en": "Percentage Correct",
+   "de": "Prozentsatz der Richtigen"
+  },
+  {
+   "en": "Percentiles",
+   "de": "Perzentile"
+  },
+  {
+   "en": "Phase",
+   "de": "Phase"
+  },
+  {
+   "en": "Phi",
+   "de": "Phi"
+  },
+  {
+   "en": "Point Probability",
+   "de": "Punktwahrscheinlichkeit"
+  },
+  {
+   "en": "Positive",
+   "de": "Positiv"
+  },
+  {
+   "en": "Positive Differences",
+   "de": "Positive Differenzen"
+  },
+  {
+   "en": "Positive if greater than or equal to",
+   "de": "Positiv falls größer oder gleich"
+  },
+  {
+   "en": "Positive Ranks",
+   "de": "Positive Ränge"
+  },
+  {
+   "en": "Predicted",
+   "de": "Vorhergesagt"
+  },
+  {
+   "en": "R Square",
+   "de": "R-Quadrat"
+  },
+  {
+   "en": "Range",
+   "de": "Spannweite"
+  },
+  {
+   "en": "Ranks",
+   "de": "Ränge"
+  },
+  {
+   "en": "Reading free-form data from %s.",
+   "de": "Unformatierte Daten werden aus %s gelesen."
+  },
+  {
+   "en": "Regression",
+   "de": "Regression"
+  },
+  {
+   "en": "Reliability Statistics",
+   "de": "Reliabilitätsstatistiken"
+  },
+  {
+   "en": "Residual",
+   "de": "Residuen"
+  },
+  {
+   "en": "Risk Estimate",
+   "de": "Risikoschätzung"
+  },
+  {
+   "en": "Rotated Component Matrix",
+   "de": "Rotierte Komponentenmatrix"
+  },
+  {
+   "en": "Rotated Factor Matrix",
+   "de": "Rotierte Faktormatrix"
+  },
+  {
+   "en": "Rotation Sums of Squared Loadings",
+   "de": "Summe der quadrierten Ladungen der Rotation"
+  },
+  {
+   "en": "Row",
+   "de": "Zeile"
+  },
+  {
+   "en": "Row %",
+   "de": "Zeile %"
+  },
+  {
+   "en": "Runs Test",
+   "de": "Sequenzen-Test"
+  },
+  {
+   "en": "S.E.",
+   "de": "S.E."
+  },
+  {
+   "en": "S.E. Kurt",
+   "de": "S.E. Kurt"
+  },
+  {
+   "en": "S.E. Mean",
+   "de": "Standardfehler des Mittelwertes"
+  },
+  {
+   "en": "S.E. Skew",
+   "de": "Std.-Fehler Schiefe"
+  },
+  {
+   "en": "Sample",
+   "de": "Beispiel"
+  },
+  {
+   "en": "Save",
+   "de": "Speichern"
+  },
+  {
+   "en": "Scale",
+   "de": "Skala"
+  },
+  {
+   "en": "Scale Mean if Item Deleted",
+   "de": "Skalenmittelwert wenn Item gelöscht"
+  },
+  {
+   "en": "Scale Variance if Item Deleted",
+   "de": "Skalenvarianz wenn Item gelöscht"
+  },
+  {
+   "en": "Scheffé",
+   "de": "Scheffé"
+  },
+  {
+   "en": "Sensitivity",
+   "de": "Sensitivität"
+  },
+  {
+   "en": "Shapiro-Wilk",
+   "de": "Shapiro-Wilk"
+  },
+  {
+   "en": "Sig.",
+   "de": "Sig."
+  },
+  {
+   "en": "Sig. (1-tailed)",
+   "de": "Sig. (1-seitig)"
+  },
+  {
+   "en": "Sig. (2-tailed)",
+   "de": "Sig. (2-seitig)"
+  },
+  {
+   "en": "Skewness",
+   "de": "Schiefe"
+  },
+  {
+   "en": "Somers' d",
+   "de": "Somers' d"
+  },
+  {
+   "en": "Source",
+   "de": "Quelle"
+  },
+  {
+   "en": "Spearman Correlation",
+   "de": "Spearman Korrelation"
+  },
+  {
+   "en": "Spread",
+   "de": "Streubreite"
+  },
+  {
+   "en": "Standard deviation",
+   "de": "Standardabweichung"
+  },
+  {
+   "en": "Standard error",
+   "de": "Standardfehler"
+  },
+  {
+   "en": "Standardized Coefficients",
+   "de": "Standardisierte Koeffizienten"
+  },
+  {
+   "en": "Statistic",
+   "de": "Statistik"
+  },
+  {
+   "en": "Statistics",
+   "de": "Statistiken"
+  },
+  {
+   "en": "Std Dev",
+   "de": "Std Abw"
+  },
+  {
+   "en": "Std. Deviation",
+   "de": "Std. Abweichung"
+  },
+  {
+   "en": "Std. Deviation of J-T Statistic",
+   "de": "Standardabweichung der J-T Statistik"
+  },
+  {
+   "en": "Std. Error",
+   "de": "Standardfehler"
+  },
+  {
+   "en": "Std. Error Difference",
+   "de": "Stdfehler der Differenz"
+  },
+  {
+   "en": "Std. Error of the Estimate",
+   "de": "Standardfehler der Schätzung"
+  },
+  {
+   "en": "Std. J-T Statistic",
+   "de": "Std. J-T Statistik"
+  },
+  {
+   "en": "Std. Residual",
+   "de": "Std. Residuum"
+  },
+  {
+   "en": "Step",
+   "de": "Schritt"
+  },
+  {
+   "en": "Step 1",
+   "de": "Schritt 1"
+  },
+  {
+   "en": "Structure Matrix",
+   "de": "Strukturmatrix"
+  },
+  {
+   "en": "Sum",
+   "de": "Summe"
+  },
+  {
+   "en": "Sum of Ranks",
+   "de": "Summe der Ränge"
+  },
+  {
+   "en": "Sum of Squares",
+   "de": "Quadratsumme"
+  },
+  {
+   "en": "Summary",
+   "de": "Zusammenfassung"
+  },
+  {
+   "en": "Symmetric",
+   "de": "Symmetrisch"
+  },
+  {
+   "en": "Symmetric Measures",
+   "de": "Symmetrische Zusammenhangsmaße"
+  },
+  {
+   "en": "T-Test for Equality of Means",
+   "de": "T-Test für die Gleichheit der Mittelwerte"
+  },
+  {
+   "en": "Test",
+   "de": "Test"
+  },
+  {
+   "en": "Test of Homogeneity of Variances",
+   "de": "Test der Homogenität der Varianzen"
+  },
+  {
+   "en": "Test Prop.",
+   "de": "Testwahrsch."
+  },
+  {
+   "en": "Test Statistics",
+   "de": "Teststatistiken"
+  },
+  {
+   "en": "Test Value (median)",
+   "de": "Testwert (Median)"
+  },
+  {
+   "en": "Test Value = %g",
+   "de": "Testwert = %g"
+  },
+  {
+   "en": "Test variable",
+   "de": "Testvariable"
+  },
+  {
+   "en": "Tests of Between-Subjects Effects",
+   "de": "Test der Zwischensubjekteffekte"
+  },
+  {
+   "en": "Tests of Normality",
+   "de": "Test der Normalität"
+  },
+  {
+   "en": "Text",
+   "de": "Text"
+  },
+  {
+   "en": "Ties",
+   "de": "Rangbindungen"
+  },
+  {
+   "en": "Tolerance",
+   "de": "Toleranz"
+  },
+  {
+   "en": "Total",
+   "de": "Gesamt"
+  },
+  {
+   "en": "Total %",
+   "de": "Gesamt %"
+  },
+  {
+   "en": "Total Cases",
+   "de": "Gesamte Fälle"
+  },
+  {
+   "en": "Total Variance Explained",
+   "de": "Erklärte Gesamtvarianz"
+  },
+  {
+   "en": "Tukey HSD",
+   "de": "Tukey HSD"
+  },
+  {
+   "en": "Tukey's Hinges",
+   "de": "Tukeys Hinges"
+  },
+  {
+   "en": "Type",
+   "de": "Typ"
+  },
+  {
+   "en": "Type III Sum Of Squares",
+   "de": "Quadratsumme Typ III"
+  },
+  {
+   "en": "Uncertainty Coefficient",
+   "de": "Unsicherheitskoeffizient"
+  },
+  {
+   "en": "Unstandardized Coefficients",
+   "de": "Unstandardisierte Koeffizienten"
+  },
+  {
+   "en": "Unweighted",
+   "de": "Ungewichtet"
+  },
+  {
+   "en": "Unweighted Cases",
+   "de": "Ungewichtete Fälle"
+  },
+  {
+   "en": "Upper",
+   "de": "Obere"
+  },
+  {
+   "en": "Upper Bound",
+   "de": "Obere Grenze"
+  },
+  {
+   "en": "Valid",
+   "de": "Gültig"
+  },
+  {
+   "en": "Valid N (listwise)",
+   "de": "Gültige N (listenweise)"
+  },
+  {
+   "en": "Valid Percent",
+   "de": "Gültige Prozente"
+  },
+  {
+   "en": "Value",
+   "de": "Wert"
+  },
+  {
+   "en": "Variable",
+   "de": "Variable"
+  },
+  {
+   "en": "Variable under test",
+   "de": "Getestete Variable"
+  },
+  {
+   "en": "Variables in the Equation",
+   "de": "Variablen in der Gleichung"
+  },
+  {
+   "en": "Variance",
+   "de": "Varianz"
+  },
+  {
+   "en": "VIF",
+   "de": "VIF"
+  },
+  {
+   "en": "Wald",
+   "de": "Wald"
+  },
+  {
+   "en": "Weight",
+   "de": "Gewicht"
+  },
+  {
+   "en": "Weighted",
+   "de": "Gewichtet"
+  },
+  {
+   "en": "Weighted Average",
+   "de": "Gewichteter Durchschnitt"
+  },
+  {
+   "en": "Width",
+   "de": "Spaltenbreite"
+  },
+  {
+   "en": "Wilcoxon W",
+   "de": "Wilcoxon W"
+  },
+  {
+   "en": "Within Groups",
+   "de": "Innerhalb Gruppen"
+  }
+ ]
+}

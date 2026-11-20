@@ -1,0 +1,180 @@
+{
+  "r_version": "R version 4.6.1 (2026-06-24 ucrt)",
+  "irrCAC_version": "1.4",
+  "veroeffentlicht": {
+    "quelle": "irrCAC-Vignette 'Calculating Chance-corrected Agreement Coefficients (CAC)', CRAN (cac.raw4raters, gwet.ac1.raw)",
+    "fall": "A_krippendorff_beispiel",
+    "wert": 0.77544,
+    "se": 0.14295,
+    "ki_unten_gerundet": 0.461,
+    "ki_oben": 1,
+    "pa": 0.8181818,
+    "pe": 0.1903212,
+    "tot_obs": 41
+  },
+  "faelle": [
+    {
+      "name": "A_krippendorff_beispiel",
+      "n_einheiten_alle": 12,
+      "alles_gleich": false,
+      "ac1": {
+        "wert": 0.775444068126995,
+        "se": 0.142949950640765,
+        "unten": 0.460813348130838,
+        "oben": 1,
+        "p_einseitig": 0.000104360492031663,
+        "pa": 0.818181818181818,
+        "pe": 0.190321180555556
+      },
+      "ac1_hand": 0.775444068126995
+    },
+    {
+      "name": "B_diagnoses",
+      "n_einheiten_alle": 30,
+      "alles_gleich": false,
+      "ac1": {
+        "wert": 0.447884515844564,
+        "se": 0.0556621416816179,
+        "unten": 0.334042653732729,
+        "oben": 0.561726377956399,
+        "p_einseitig": 3.56224627573454e-09,
+        "pa": 0.555555555555556,
+        "pe": 0.195015432098765
+      },
+      "ac1_hand": 0.447884515844564
+    },
+    {
+      "name": "C_seltene_kategorie",
+      "n_einheiten_alle": 30,
+      "alles_gleich": false,
+      "ac1": {
+        "wert": 0.927145169994603,
+        "se": 0.0441987899624272,
+        "unten": 0.83674849461705,
+        "oben": 1,
+        "p_einseitig": 0,
+        "pa": 0.933333333333333,
+        "pe": 0.0849382716049383
+      },
+      "ac1_hand": 0.927145169994603
+    },
+    {
+      "name": "D_zwei_kodierende",
+      "n_einheiten_alle": 20,
+      "alles_gleich": false,
+      "ac1": {
+        "wert": 0.627906976744186,
+        "se": 0.147534569115083,
+        "unten": 0.319113574729552,
+        "oben": 0.93670037875882,
+        "p_einseitig": 0.000213566060168979,
+        "pa": 0.75,
+        "pe": 0.328125
+      },
+      "ac1_hand": 0.627906976744186
+    },
+    {
+      "name": "E_ordinal_luecken",
+      "n_einheiten_alle": 15,
+      "alles_gleich": false,
+      "ac1": {
+        "wert": 0.417262443874896,
+        "se": 0.0652064344830572,
+        "unten": 0.277408551229051,
+        "oben": 0.557116336520742,
+        "p_einseitig": 8.2847782827411e-06,
+        "pa": 0.533333333333333,
+        "pe": 0.199182098765432
+      },
+      "ac1_hand": 0.417262443874896
+    },
+    {
+      "name": "F_alles_gleich",
+      "n_einheiten_alle": 5,
+      "alles_gleich": true,
+      "ac1": {
+        "wert": null,
+        "se": null,
+        "unten": null,
+        "oben": null,
+        "p_einseitig": null
+      },
+      "ac1_irrCAC_roh": 1
+    },
+    {
+      "name": "G_einheit_mit_einer_kodierung",
+      "n_einheiten_alle": 13,
+      "alles_gleich": false,
+      "ac1": {
+        "wert": 0.776070888801474,
+        "se": 0.155913228309466,
+        "unten": 0.436365146645975,
+        "oben": 1,
+        "p_einseitig": 0.000160576940745116,
+        "pa": 0.818181818181818,
+        "pe": 0.188054733727811
+      },
+      "ac1_hand": 0.776070888801474
+    },
+    {
+      "name": "H_text_ja_nein",
+      "n_einheiten_alle": 20,
+      "alles_gleich": false,
+      "ac1": {
+        "wert": 0.615384615384616,
+        "se": 0.141996694580367,
+        "unten": 0.318182117981437,
+        "oben": 0.912587112787794,
+        "p_einseitig": 0.000178876553627361,
+        "pa": 0.8,
+        "pe": 0.48
+      },
+      "ac1_hand": 0.615384615384616
+    },
+    {
+      "name": "I_kategorie_fehlt_bei_einer_person",
+      "n_einheiten_alle": 18,
+      "alles_gleich": false,
+      "ac1": {
+        "wert": 0.398481012658228,
+        "se": 0.119542995679154,
+        "unten": 0.146267338153488,
+        "oben": 0.650694687162968,
+        "p_einseitig": 0.00196797604507892,
+        "pa": 0.592592592592593,
+        "pe": 0.322702331961591
+      },
+      "ac1_hand": 0.398481012658228
+    },
+    {
+      "name": "J_zwei_einheiten",
+      "n_einheiten_alle": 2,
+      "alles_gleich": false,
+      "ac1": {
+        "wert": 0.4,
+        "se": 0.84,
+        "unten": -10.2732119783867,
+        "oben": 1,
+        "p_einseitig": 0.358536971878491,
+        "pa": 0.666666666666667,
+        "pe": 0.444444444444444
+      },
+      "ac1_hand": 0.4
+    },
+    {
+      "name": "K_text_drei_kategorien_luecken",
+      "n_einheiten_alle": 12,
+      "alles_gleich": false,
+      "ac1": {
+        "wert": 0.523704520396913,
+        "se": 0.155536782752055,
+        "unten": 0.181370369711242,
+        "oben": 0.866038671082584,
+        "p_einseitig": 0.00314232204405207,
+        "pa": 0.666666666666667,
+        "pe": 0.300154320987654
+      },
+      "ac1_hand": 0.523704520396913
+    }
+  ]
+}

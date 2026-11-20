@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "Statable",
+  "short_name": "statable",
+  "description": "Kostenlose Statistik im Browser: Frage wählen, Ergebnis als Satz lesen, Bericht als Word, PDF oder Excel. Mit Lernen und Hilfe. Die Daten bleiben auf dem Gerät.",
+  "lang": "de",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "categories": ["education", "productivity"],
+  "background_color": "#F7F5F0",
+  "theme_color": "#EFEDE8",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "screenshots": [
+    { "src": "screenshots/breit.png", "sizes": "1280x800", "type": "image/png", "form_factor": "wide", "label": "Daten und Auswertung am großen Bildschirm" },
+    { "src": "screenshots/schmal.png", "sizes": "780x1688", "type": "image/png", "form_factor": "narrow", "label": "Statable auf dem Telefon" }
+  ]
+}

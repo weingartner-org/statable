@@ -1,0 +1,26 @@
+WEBVTT - Testdatei
+
+NOTE
+Das ist ein Kommentar
+und geht über zwei Zeilen.
+
+STYLE
+::cue {
+  color: red
+}
+
+REGION
+id:oben
+width:40%
+
+kapitel-1
+01:05.000 --> 01:08.500 align:start position:10% line:90%
+Wir brauchen <c.yellow>Raum &amp; Zeit</c> für die <i>Planung</i>.
+
+01:12.000 --> 01:14.000
+<01:12.500>Dann <b>los</b> &lt;bitte&gt;!
+
+01:15.000 --> 01:16.000
+
+01:19.500 --> 01:21.000
+Fertig.

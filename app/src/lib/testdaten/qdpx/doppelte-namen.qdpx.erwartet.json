@@ -1,0 +1,100 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "doppelte-namen.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 408,
+   "name": "Interview.txt",
+   "pruefung": "geprueft",
+   "sha256": "526744d829863a9d4780f41cb91f24d646106b43fd062d84107adacfd47afc81",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 408,
+   "name": "Interview.txt (2)",
+   "pruefung": "geprueft",
+   "sha256": "7f7075e32f27468d966a29d1a13282aa393c882c8f19e274ad03db6f4da4073a",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Anna Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview.txt",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  },
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview.txt (2)",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  }
+ ],
+ "meldungen": [
+  "name-doppelt"
+ ],
+ "meldungenDetail": [
+  {
+   "art": "name-doppelt",
+   "dokument": "Interview.txt"
+  }
+ ],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "Statable Prüfdatei",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 2,
+  "faelle": 0,
+  "kodierende": 1,
+  "kodierungen": 2,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 2,
+  "variablen": 0
+ }
+}

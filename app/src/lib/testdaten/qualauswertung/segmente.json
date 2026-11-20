@@ -1,0 +1,667 @@
+{
+  "format": "statable-qualitativ",
+  "version": 1,
+  "id": "p-segmente",
+  "name": "Prüfprojekt Segmentebene (erfunden)",
+  "kodierende": [
+    {
+      "id": "p-a",
+      "name": "Kodiererin A"
+    },
+    {
+      "id": "p-b",
+      "name": "Kodierer B"
+    },
+    {
+      "id": "p-c",
+      "name": "Kodiererin C (ohne Segmente)"
+    }
+  ],
+  "dokumente": [
+    {
+      "id": "d-schwelle",
+      "name": "Schwelle genau",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-knapp",
+      "name": "Schwelle knapp darunter",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-eins-zwei",
+      "name": "Eins gegen zwei",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-zwei-klein",
+      "name": "Eins gegen zwei (beide klein)",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-nest",
+      "name": "Verschachtelt",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-ganz",
+      "name": "Ganzes Dokument",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-kette",
+      "name": "Kette",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-gemischt",
+      "name": "Gemischte Gruppe",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-emoji",
+      "name": "Mit Emoji",
+      "art": "text",
+      "text": "Hallo 😀👍 Welt! Der erste Satz mit Umlauten: äöü. Zweiter Satz folgt hier. Dritter Satz endet dort.",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-crlf",
+      "name": "Mit Zeilenumbruch",
+      "art": "text",
+      "text": "Zeile eins.\r\nZeile zwei ist länger.\r\nZeile drei.",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-nur-a",
+      "name": "Nur A kodiert",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    },
+    {
+      "id": "d-leer",
+      "name": "Ohne Segmente",
+      "art": "text",
+      "text": "abcdefghi abcdefghi abcdefghi ",
+      "erstellt": 1700000000000,
+      "geaendert": 1700000000000
+    }
+  ],
+  "codes": [
+    {
+      "id": "c1",
+      "name": "Belastung",
+      "kodierbar": true,
+      "reihenfolge": 1,
+      "regel": "Bestehende Regel."
+    },
+    {
+      "id": "c2",
+      "name": "Zeit",
+      "kodierbar": true,
+      "reihenfolge": 2
+    },
+    {
+      "id": "c3",
+      "name": "Geld",
+      "kodierbar": true,
+      "reihenfolge": 3
+    },
+    {
+      "id": "c4",
+      "name": "Familie (nur A)",
+      "kodierbar": true,
+      "reihenfolge": 4
+    }
+  ],
+  "segmente": [
+    {
+      "id": "s01",
+      "dokument": "d-schwelle",
+      "start": 0,
+      "ende": 90,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s02",
+      "dokument": "d-schwelle",
+      "start": 0,
+      "ende": 100,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s03",
+      "dokument": "d-knapp",
+      "start": 0,
+      "ende": 899,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s04",
+      "dokument": "d-knapp",
+      "start": 0,
+      "ende": 1000,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s05",
+      "dokument": "d-eins-zwei",
+      "start": 10,
+      "ende": 60,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s06",
+      "dokument": "d-eins-zwei",
+      "start": 10,
+      "ende": 55,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s07",
+      "dokument": "d-eins-zwei",
+      "start": 55,
+      "ende": 60,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s08",
+      "dokument": "d-zwei-klein",
+      "start": 10,
+      "ende": 60,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s09",
+      "dokument": "d-zwei-klein",
+      "start": 10,
+      "ende": 30,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s10",
+      "dokument": "d-zwei-klein",
+      "start": 35,
+      "ende": 60,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s11",
+      "dokument": "d-nest",
+      "start": 0,
+      "ende": 100,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s12",
+      "dokument": "d-nest",
+      "start": 20,
+      "ende": 40,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s13",
+      "dokument": "d-nest",
+      "start": 0,
+      "ende": 100,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s14",
+      "dokument": "d-nest",
+      "start": 20,
+      "ende": 40,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s15",
+      "dokument": "d-ganz",
+      "start": 0,
+      "ende": 60,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s16",
+      "dokument": "d-ganz",
+      "start": 0,
+      "ende": 30,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s17",
+      "dokument": "d-ganz",
+      "start": 30,
+      "ende": 60,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s18",
+      "dokument": "d-kette",
+      "start": 0,
+      "ende": 20,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s19",
+      "dokument": "d-kette",
+      "start": 15,
+      "ende": 35,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s20",
+      "dokument": "d-kette",
+      "start": 30,
+      "ende": 50,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s21",
+      "dokument": "d-kette",
+      "start": 60,
+      "ende": 70,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s22",
+      "dokument": "d-kette",
+      "start": 100,
+      "ende": 110,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s23",
+      "dokument": "d-gemischt",
+      "start": 0,
+      "ende": 30,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s24",
+      "dokument": "d-gemischt",
+      "start": 0,
+      "ende": 30,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s25",
+      "dokument": "d-gemischt",
+      "start": 20,
+      "ende": 50,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s26",
+      "dokument": "d-emoji",
+      "start": 49,
+      "ende": 73,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s27",
+      "dokument": "d-emoji",
+      "start": 57,
+      "ende": 73,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s28",
+      "dokument": "d-emoji",
+      "start": 15,
+      "ende": 48,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s29",
+      "dokument": "d-emoji",
+      "start": 15,
+      "ende": 48,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s30",
+      "dokument": "d-emoji",
+      "start": 6,
+      "ende": 13,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s31",
+      "dokument": "d-emoji",
+      "start": 74,
+      "ende": 98,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s32",
+      "dokument": "d-crlf",
+      "start": 6,
+      "ende": 23,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    },
+    {
+      "id": "s33",
+      "dokument": "d-crlf",
+      "start": 13,
+      "ende": 35,
+      "erstellt": 1700000000000,
+      "kodierende": "p-b"
+    },
+    {
+      "id": "s34",
+      "dokument": "d-nur-a",
+      "start": 0,
+      "ende": 25,
+      "erstellt": 1700000000000,
+      "kodierende": "p-a"
+    }
+  ],
+  "kodierungen": [
+    {
+      "id": "k01",
+      "segment": "s01",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k02",
+      "segment": "s02",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k03",
+      "segment": "s03",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k04",
+      "segment": "s04",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k05",
+      "segment": "s05",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k06",
+      "segment": "s06",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k07",
+      "segment": "s07",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k08",
+      "segment": "s08",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k09",
+      "segment": "s09",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k10",
+      "segment": "s10",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k11",
+      "segment": "s11",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k12",
+      "segment": "s12",
+      "code": "c2",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k13",
+      "segment": "s13",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k14",
+      "segment": "s14",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k15",
+      "segment": "s15",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k16",
+      "segment": "s16",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k17",
+      "segment": "s17",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k18",
+      "segment": "s18",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k19",
+      "segment": "s19",
+      "code": "c2",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k20",
+      "segment": "s20",
+      "code": "c3",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k21",
+      "segment": "s21",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k22",
+      "segment": "s22",
+      "code": "c2",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k23",
+      "segment": "s23",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k24",
+      "segment": "s24",
+      "code": "c2",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k25",
+      "segment": "s25",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k26",
+      "segment": "s26",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k27",
+      "segment": "s27",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k28",
+      "segment": "s28",
+      "code": "c2",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k29",
+      "segment": "s29",
+      "code": "c2",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k30",
+      "segment": "s30",
+      "code": "c3",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k31",
+      "segment": "s31",
+      "code": "c2",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k32",
+      "segment": "s32",
+      "code": "c1",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k33",
+      "segment": "s33",
+      "code": "c1",
+      "kodierende": "p-b",
+      "erstellt": 1700000000000
+    },
+    {
+      "id": "k34",
+      "segment": "s34",
+      "code": "c4",
+      "kodierende": "p-a",
+      "erstellt": 1700000000000
+    }
+  ],
+  "memos": [],
+  "faelle": [],
+  "variablen": [],
+  "protokoll": [],
+  "herkunft": {
+    "art": "neu",
+    "zeit": 1700000000000
+  }
+}

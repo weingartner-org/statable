@@ -1,0 +1,178 @@
+/* Statable - Designtokens (Richtung "Arbeitsheft"). Quelle der Wahrheit für Farben, Schrift, Abstände, Formen, Bewegung.
+   Jede Textfarbe ist gegen --blatt UND --grund auf mindestens 4,5:1 geprüft (siehe ../uebergabe/kontrast-pruefung.mjs). */
+
+/* Eine Schrift für die ganze Oberfläche: Atkinson Hyperlegible (Braille Institute; Lizenztext in der Schriftdatei: kostenlos, ohne Ableitungen oder Änderung - nicht SIL OFL) - gebaut für Lesbarkeit,
+   eindeutige Formen bei Il1, 0O, rn/m. Bericht (Vorschau, Word, PDF) in Arial bzw. der gleich breiten Liberation Sans - ohne Serifen. */
+@font-face{font-family:'Atkinson Hyperlegible';src:url(./fonts/atkinson-regular.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Atkinson Hyperlegible';src:url(./fonts/atkinson-bold.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;src:url(./fonts/atkinson-italic.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;src:url(./fonts/atkinson-bolditalic.woff2) format('woff2');font-weight:700;font-display:swap}
+
+:root{
+  color-scheme:light;
+  /* Flächen */
+  --grund:#EFEDE8;          /* der Tisch, auf dem das Heft liegt */
+  --blatt:#FFFEFB;          /* Papier */
+  --blatt-2:#F7F5F0;        /* leicht abgesetzte Fläche auf dem Papier */
+  --blatt-gehoben:#FFFFFF;  /* Dialoge, Menüs */
+  /* Text */
+  --tinte:#1D2530;          /* Haupttext */
+  --tinte-2:#4C5661;        /* Nebentext */
+  --tinte-auf-akzent:#FFFFFF;
+  /* Linien */
+  --linie:#DDD8CF;          /* nur Schmuck/Trennung */
+  --linie-stark:#867F74;    /* Ränder von Eingabefeldern (mind. 3:1) */
+  /* Akzent: "passt, erledigt, weiter" */
+  --akzent:#17756A;
+  --akzent-druck:#105E55;
+  --akzent-tinte:#0E5A51;
+  --akzent-hell:#E2F0EC;
+  /* Hinweis: "schau mal hin" - nie Alarm. Violett (10.10., vorher Ocker): Teal = passt, Koralle = Verlust, Blau = Fokus - Violett trägt noch keine Bedeutung
+     und liegt weit weg von Rot. Text mindestens 4,5:1 auf Blatt, Grund und Hinweisgrund in allen sieben Themen. */
+  --hinweis:#7B4F8E;
+  --hinweis-hell:#F2EAF6;
+  --hinweis-linie:#C9AFD6;
+  /* Verlust: NUR wenn wirklich etwas verloren gehen kann */
+  --verlust:#A3352B;
+  --verlust-hell:#FBE9E6;
+  /* Fokus */
+  --fokus:#1B5FC1;
+  --fokus-ring:0 0 0 2px var(--blatt),0 0 0 5px var(--fokus);
+  /* Der Fokusring ist ein outline (bleibt im Windows-Kontrastmodus sichtbar); --fokus-ring (box-shadow) darf nur zusätzlich stehen. */
+  --fokus-outline:3px solid var(--fokus);
+  /* Diagramm */
+  --dg-a:#17756A; --dg-b:#C4502F; --dg-punkt-a:rgba(23,117,106,.45); --dg-punkt-b:rgba(196,80,47,.42); --dg-achse:#4C5661; --dg-gitter:#E6E2DA;
+
+  /* Schrift */
+  --schrift-ui:'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --schrift-heft:var(--schrift-ui);  /* früher Source Serif 4 - seit 07.10. eine Schrift überall */
+  --schrift-papier:Arial,'Liberation Sans',Helvetica,sans-serif;  /* Papier-Vorschau des Berichts = Word-Datei */
+  --schrift-befehl:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  /* Fünf Größen, nicht mehr (Johannes 07.10.: „die Schriftgrößen sind viel zu unterschiedlich“). Statistik: Platz für Zahlen. */
+  --gr-klein:.8125rem;  /* 13 px - Nebentext, Spaltentypen */
+  --gr-text:.9375rem;   /* 15 px - Text, Knöpfe, Tabellen */
+  --gr-h2:1.0625rem;    /* 17 px - Abschnitte, Ergebnissatz */
+  --gr-h1:1.25rem;      /* 20 px - Seitentitel */
+  --gr-gross:1.5rem;    /* 24 px - nur Startseite */
+  --gr-heft:var(--gr-text); --gr-h3:var(--gr-h2);
+  --zh:1.45;            /* Zeilenhöhe Text */
+  --zh-eng:1.25;        /* Zeilenhöhe Überschriften */
+
+  /* Abstände (4er-Raster) */
+  --a1:.25rem; --a2:.5rem; --a3:.75rem; --a4:1rem; --a5:1.5rem; --a6:2rem; --a7:3rem; --a8:4rem;   /* in rem: wachsen und schrumpfen mit der Grundschrift */
+  --ziel:2rem;          /* Knopfhöhe mit Maus; am Touch-Gerät 44 px (unten) */
+  --breite-text:68ch;   /* längste Textzeile */
+  --breite-blatt:860px;
+  --rand-breite:17.5rem;
+
+  /* Formen */
+  --r-klein:8px; --r:12px; --r-gross:16px; --r-rund:999px;
+  --schatten-blatt:0 1px 2px rgba(40,30,10,.06),0 8px 24px rgba(40,30,10,.06);
+  --schatten-heben:0 4px 12px rgba(40,30,10,.10),0 16px 40px rgba(40,30,10,.12);
+
+  /* Bewegung */
+  --dauer-kurz:120ms; --dauer:180ms; --dauer-lang:280ms;
+  --kurve:cubic-bezier(.2,.7,.2,1);
+}
+
+/* Dunkel: gleichwertig, nicht nur "augenschonend". Kein reines Schwarz. */
+:root[data-thema="dunkel"]{
+  color-scheme:dark;
+  --grund:#14181D; --blatt:#1D232A; --blatt-2:#242B33; --blatt-gehoben:#28303A;
+  --tinte:#E8ECEF; --tinte-2:#AAB4BE; --tinte-auf-akzent:#08201D;
+  --linie:#323B45; --linie-stark:#7C8794;
+  --akzent:#5CC2B2; --akzent-druck:#7FD3C5; --akzent-tinte:#7FD3C5; --akzent-hell:#1C3834;
+  --hinweis:#C29AD6; --hinweis-hell:#2D2237; --hinweis-linie:#5E4570;
+  --verlust:#F2958A; --verlust-hell:#3D201D;
+  --fokus:#8DB8FF;
+  --dg-a:#5CC2B2; --dg-b:#F0876B; --dg-punkt-a:rgba(92,194,178,.5); --dg-punkt-b:rgba(240,135,107,.45); --dg-achse:#AAB4BE; --dg-gitter:#2C343D;
+  --schatten-blatt:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  --schatten-heben:0 4px 12px rgba(0,0,0,.4),0 16px 40px rgba(0,0,0,.4);
+}
+@media (prefers-color-scheme:dark){
+  :root[data-thema="auto"]{
+    color-scheme:dark;
+    --grund:#14181D; --blatt:#1D232A; --blatt-2:#242B33; --blatt-gehoben:#28303A;
+    --tinte:#E8ECEF; --tinte-2:#AAB4BE; --tinte-auf-akzent:#08201D;
+    --linie:#323B45; --linie-stark:#7C8794;
+    --akzent:#5CC2B2; --akzent-druck:#7FD3C5; --akzent-tinte:#7FD3C5; --akzent-hell:#1C3834;
+    --hinweis:#C29AD6; --hinweis-hell:#2D2237; --hinweis-linie:#5E4570;
+    --verlust:#F2958A; --verlust-hell:#3D201D;
+    --fokus:#8DB8FF;
+    --dg-a:#5CC2B2; --dg-b:#F0876B; --dg-punkt-a:rgba(92,194,178,.5); --dg-punkt-b:rgba(240,135,107,.45); --dg-achse:#AAB4BE; --dg-gitter:#2C343D;
+    --schatten-blatt:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+    --schatten-heben:0 4px 12px rgba(0,0,0,.4),0 16px 40px rgba(0,0,0,.4);
+  }
+}
+
+/* Starke Kontraste (Kopfzeile, Knopf "Farben und Kontrast"). Dieselben fünf wie in den Sensorik-Apps
+   (imgriff/src/lib/contrast.ts): Schrift darf leuchten, der Grund bleibt gedämpft; Linien in Schriftfarbe.
+   Schriftgröße gibt es nicht als Einstellung: alles ist in rem, Strg/Cmd + Plus vergrößert die ganze Seite. */
+:root[data-thema="sw"]{
+  color-scheme:light;
+  --grund:#F2F0E0; --blatt:#FFFDF0; --blatt-2:#F2F0E0; --blatt-gehoben:#FFFDF0;
+  --tinte:#000; --tinte-2:#3C3C3C; --tinte-auf-akzent:#FFFDF0;
+  --linie:#000; --linie-stark:#000;
+  --akzent:#0028A0; --akzent-druck:#001E82; --akzent-tinte:#0028A0; --akzent-hell:#E0E6FA;
+  --hinweis:#5E2D79; --hinweis-hell:#F1E8F6; --hinweis-linie:#5E2D79;
+  --verlust:#BE0000; --verlust-hell:#FFE2E2;
+  --fokus:#0028A0;
+  --dg-a:#0028A0; --dg-b:#B8321A; --dg-punkt-a:rgba(0,40,160,.5); --dg-punkt-b:rgba(184,50,26,.5); --dg-achse:#000; --dg-gitter:#BDBBAE;
+  --schatten-blatt:none; --schatten-heben:0 0 0 2px #000;
+}
+:root[data-thema="ws"]{
+  color-scheme:dark;
+  --grund:#1A1A1A; --blatt:#000; --blatt-2:#1A1A1A; --blatt-gehoben:#000;
+  --tinte:#FFF; --tinte-2:#DDD; --tinte-auf-akzent:#000;
+  --linie:#FFF; --linie-stark:#FFF;
+  --akzent:#78BEFF; --akzent-druck:#A0D2FF; --akzent-tinte:#78BEFF; --akzent-hell:#142846;
+  --hinweis:#DDB6F2; --hinweis-hell:#2A1838; --hinweis-linie:#DDB6F2;
+  --verlust:#FF8282; --verlust-hell:#461010;
+  --fokus:#FFD600;
+  --dg-a:#78BEFF; --dg-b:#FF9A7A; --dg-punkt-a:rgba(120,190,255,.55); --dg-punkt-b:rgba(255,154,122,.5); --dg-achse:#FFF; --dg-gitter:#444;
+  --schatten-blatt:none; --schatten-heben:0 0 0 2px #FFF;
+}
+:root[data-thema="sg"]{
+  color-scheme:light;
+  --grund:#F2DA70; --blatt:#FFEC8C; --blatt-2:#F2DA70; --blatt-gehoben:#FFEC8C;
+  --tinte:#000; --tinte-2:#3A2C00; --tinte-auf-akzent:#FFEC8C;
+  --linie:#000; --linie-stark:#000;
+  --akzent:#000096; --akzent-druck:#000078; --akzent-tinte:#000096; --akzent-hell:#ECE264;
+  --hinweis:#55207A; --hinweis-hell:#F0D4F2; --hinweis-linie:#55207A;
+  --verlust:#A00000; --verlust-hell:#FCD250;
+  --fokus:#000;
+  --dg-a:#000096; --dg-b:#A3260F; --dg-punkt-a:rgba(0,0,150,.5); --dg-punkt-b:rgba(163,38,15,.5); --dg-achse:#000; --dg-gitter:#C8B45A;
+  --schatten-blatt:none; --schatten-heben:0 0 0 2px #000;
+}
+:root[data-thema="gs"]{
+  color-scheme:dark;
+  --grund:#1A1A00; --blatt:#000; --blatt-2:#1A1A00; --blatt-gehoben:#000;
+  --tinte:#FFD600; --tinte-2:#F0C800; --tinte-auf-akzent:#000;
+  --linie:#FFD600; --linie-stark:#FFD600;
+  --akzent:#78C8FF; --akzent-druck:#A0DCFF; --akzent-tinte:#78C8FF; --akzent-hell:#14243C;
+  --hinweis:#E2B8FA; --hinweis-hell:#2C1840; --hinweis-linie:#E2B8FA;
+  --verlust:#FF8C6E; --verlust-hell:#3C140A;
+  --fokus:#FFF;
+  --dg-a:#78C8FF; --dg-b:#FFD600; --dg-punkt-a:rgba(120,200,255,.55); --dg-punkt-b:rgba(255,214,0,.5); --dg-achse:#FFD600; --dg-gitter:#3A3A00;
+  --schatten-blatt:none; --schatten-heben:0 0 0 2px #FFD600;
+}
+:root[data-thema="gb"]{
+  color-scheme:dark;
+  --grund:#0C205C; --blatt:#132E78; --blatt-2:#1C3A8C; --blatt-gehoben:#1C3A8C;
+  --tinte:#FFD600; --tinte-2:#F0C800; --tinte-auf-akzent:#0C205C;
+  --linie:#FFD600; --linie-stark:#FFD600;
+  --akzent:#FFD600; --akzent-druck:#FFEC50; --akzent-tinte:#FFD600; --akzent-hell:#284EA8;
+  --hinweis:#E8CFFF; --hinweis-hell:#3A2A80; --hinweis-linie:#E8CFFF;
+  --verlust:#FFA896; --verlust-hell:#601E30;
+  --fokus:#FFF;
+  --dg-a:#FFD600; --dg-b:#AAF078; --dg-punkt-a:rgba(255,214,0,.55); --dg-punkt-b:rgba(170,240,120,.5); --dg-achse:#FFD600; --dg-gitter:#284EA8;
+  --schatten-blatt:none; --schatten-heben:0 0 0 2px #FFD600;
+}
+
+/* Weniger Bewegung: nur der Wunsch des Geräts (Bedienungshilfen). */
+
+/* Gruppenfarben (09.10.): dezente Streifen für gegliederte Spaltenauswahl. Nur Schmuck - die Überschrift trägt die Gruppe. */
+:root{--gruppe-1:#17756A;--gruppe-2:#C4502F;--gruppe-3:#7B4F8E;--gruppe-4:#3A6EA5;--gruppe-5:#B04A78;--gruppe-6:#6B7A2E}
+:root[data-thema="dunkel"]{--gruppe-1:#5CC2B2;--gruppe-2:#F0876B;--gruppe-3:#C29AD6;--gruppe-4:#8DB3E0;--gruppe-5:#E08AB0;--gruppe-6:#B5C46A}
+@media (prefers-color-scheme:dark){:root[data-thema="auto"]{--gruppe-1:#5CC2B2;--gruppe-2:#F0876B;--gruppe-3:#C29AD6;--gruppe-4:#8DB3E0;--gruppe-5:#E08AB0;--gruppe-6:#B5C46A}}
+:root[data-thema="sw"],:root[data-thema="ws"],:root[data-thema="sg"],:root[data-thema="gs"],:root[data-thema="gb"]{--gruppe-1:var(--linie-stark);--gruppe-2:var(--linie-stark);--gruppe-3:var(--linie-stark);--gruppe-4:var(--linie-stark);--gruppe-5:var(--linie-stark);--gruppe-6:var(--linie-stark)}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Statable - Zählung</title>
+<link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+<style>
+  :root { --grund:#EFEDE8; --blatt:#FFFFFF; --tinte:#1D2530; --leise:#5A6470; --linie:#E2DED6; --akzent:#17756A; --akzent-hell:#D9EEEA; --zweit:#C4502F; --dritt:#8A7CC0; }
+  @media (prefers-color-scheme: dark) { :root { --grund:#14181D; --blatt:#1D232A; --tinte:#E8EAED; --leise:#9AA4AF; --linie:#2E3640; --akzent:#5CC2B2; --akzent-hell:#1C3834; --zweit:#E58A6C; --dritt:#B3A8E6; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--grund); color: var(--tinte); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1200px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; } h1 b { color: var(--akzent); }
+  h2 { font-size: 1.15rem; margin: 0 0 4px; }
+  .unter { color: var(--leise); margin: 0 0 20px; }
+  .leiste { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 20px; }
+  .leiste button, .schluessel button { font: inherit; border: 1px solid var(--linie); background: var(--blatt); color: var(--tinte); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+  .leiste button[aria-pressed="true"] { background: var(--akzent); border-color: var(--akzent); color: #fff; }
+  .kacheln { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .kachel, .karte { background: var(--blatt); border: 1px solid var(--linie); border-radius: 14px; padding: 14px 16px; }
+  .kachel .zahl { font-size: 1.8rem; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .kachel .was { font-weight: 600; }
+  .herkunft { color: var(--leise); font-size: .82rem; margin: 2px 0 0; }
+  .raster { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 12px; }
+  .karte { margin-bottom: 12px; min-width: 0; }
+  .karte.breit { grid-column: 1 / -1; }
+  svg { display: block; width: 100%; height: auto; }
+  .legende { display: flex; flex-wrap: wrap; gap: 14px; font-size: .85rem; color: var(--leise); margin: 6px 0 0; }
+  .legende i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: .92rem; }
+  th, td { text-align: right; padding: 5px 6px; border-bottom: 1px solid var(--linie); }
+  th:first-child, td:first-child { text-align: left; overflow-wrap: anywhere; }
+  th { cursor: pointer; user-select: none; font-weight: 600; color: var(--leise); white-space: nowrap; }
+  th[aria-sort] { color: var(--tinte); }
+  td .balken { display: inline-block; height: 8px; border-radius: 4px; background: var(--akzent); vertical-align: middle; margin-left: 6px; opacity: .7; }
+  .leer { color: var(--leise); font-style: italic; }
+  .schluessel { max-width: 520px; background: var(--blatt); border: 1px solid var(--linie); border-radius: 14px; padding: 18px; }
+  .schluessel input { font: inherit; width: 100%; padding: 8px 10px; border: 1px solid var(--linie); border-radius: 8px; background: var(--grund); color: var(--tinte); margin: 8px 0; }
+  .fehler { color: var(--zweit); }
+  .tabwrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+  <h1>stat<b>able</b> · Zählung</h1>
+  <p class="unter" id="stand">Wird geladen …</p>
+  <div id="inhalt"></div>
+</main>
+<script src="namen.js"></script>
+<script src="statistik.js"></script>
+</body>
+</html>

@@ -1,0 +1,1538 @@
+{
+  "_info": {
+    "stand": "2026-11-11",
+    "zweck": "Statable glossary (Indonesian, Anda). Explanations and messages translated from the English template; muster/original/art unchanged.",
+    "regeln": [
+      "Messages: the first matching rule wins.",
+      "Explanations address no one directly; messages use Anda. The fields 'du' and 'sie' hold the same text.",
+      "Numbers in Indonesian: decimal comma, no leading zero for p, r and alpha (,005).",
+      "pruefen: true = have a statistics expert check it before use."
+    ]
+  },
+  "erklaer": {
+    "bayes": {
+      "titel": "Faktor Bayes (BF₁₀)",
+      "kurz": "Apakah data lebih mengarah pada adanya perbedaan atau menentangnya? Faktor Bayes (BF₁₀) membandingkan keduanya. BF₁₀ = 8 berarti: data kira-kira 8 kali lebih mungkin terjadi jika ada perbedaan.",
+      "beispiel": "Daya tahan roti dari dua toko roti: BF₁₀ = 6, jadi data 6 kali lebih mungkin terjadi jika ada perbedaan. BF₁₀ = 0,25 berarti: 4 kali lebih mungkin terjadi tanpa perbedaan (1 / 0,25 = 4).",
+      "vorsicht": "Faktor Bayes tidak menyatakan seberapa mungkin adanya perbedaan, dan nilainya bergantung pada suatu asumsi yang dipilih sebelumnya. Nilai yang mendekati 1 hanya berarti tidak ada pihak yang didukung; sebutan seperti “sedang” hanyalah aturan praktis.",
+      "fachwoerter": "nilai p (seberapa sering perbedaan sebesar ini atau lebih besar akan muncul jika sebenarnya tidak ada perbedaan), H₀ dan H₁ (asumsi “tidak ada perbedaan” dan “ada perbedaan”), prior (asumsi tentang perbedaan yang mungkin, dipilih lebih dulu), BF₀₁ (perbandingan kebalikannya, BF₀₁ = 1 / BF₁₀).",
+      "pruefen": true
+    },
+    "p-wert": {
+      "titel": "Nilai p",
+      "kurz": "Apakah suatu perbedaan nyata atau hanya kebetulan? Anda tidak akan pernah tahu dengan pasti. Nilai p membantu begini: anggaplah sebenarnya tidak ada perbedaan. Seberapa sering perbedaan sebesar ini atau lebih besar tetap muncul?",
+      "beispiel": "Dua varietas tomat, p = ,03: jika kedua varietas itu sebenarnya sama, perbedaan seperti ini akan muncul pada sekitar 3 dari 100 percobaan.",
+      "vorsicht": "p bukanlah peluang bahwa hasilnya disebabkan oleh kebetulan. p juga tidak menyatakan seberapa besar atau penting perbedaannya: untuk itulah ada ukuran efek. Nilai p hanya berlaku jika asumsi lain dalam perhitungan juga terpenuhi, seperti pemilihan acak dan independensi.",
+      "pruefen": true
+    },
+    "signifikanz": {
+      "titel": "Signifikan secara statistik",
+      "kurz": "Apa arti “signifikan”? Nilai p berada di bawah batas yang ditetapkan sebelumnya, biasanya ,05. Data kemudian kurang cocok dengan asumsi “tidak ada perbedaan”. Dengan kasus yang sangat banyak, efek yang kecil pun menjadi signifikan. Dan: perbedaan antara “signifikan” dan “tidak signifikan” belum tentu signifikan dengan sendirinya.",
+      "beispiel": "p = ,03 berada di bawah ,05: signifikan. p = ,07 berada di atasnya: tidak signifikan.",
+      "vorsicht": "Signifikan tidak berarti penting atau terbukti. Tidak signifikan tidak berarti tidak ada perbedaan. Batas ,05 hanyalah kebiasaan.",
+      "pruefen": true
+    },
+    "effektstaerke": {
+      "titel": "Ukuran efek",
+      "kurz": "Seberapa besar suatu perbedaan atau hubungan? Ukuran efek memberi tahu Anda. Semakin banyak orang membuat nilai p semakin kecil; ukuran efek tidak berubah hanya karena itu.",
+      "beispiel": "d Cohen = 0,5: dua kelompok terpisah setengah standar deviasi (jarak khas nilai dari rata-rata).",
+      "vorsicht": "Sebutan kecil, sedang, besar (d = 0,2, 0,5, 0,8) adalah kebiasaan yang berasal dari Cohen. Apa yang dianggap besar bergantung pada bidang dan pertanyaannya.",
+      "pruefen": true
+    },
+    "konfidenzintervall": {
+      "titel": "Interval kepercayaan (CI)",
+      "statable": "Untuk mencobanya: di halaman mulai pilih “Buka kalkulator” (atau Ctrl+K dan “Kalkulator dan penggeser”), lalu di bawah “Cobalah: apa yang mengubah hasilnya?” klik “Buka” dan pilih “Interval: jumlah orang”. Penggeser “Jumlah orang (n)” dan “Sebaran (standar deviasi)” mengubah lebar interval; angka dan gambar batang berubah seketika. Untuk data Anda sendiri, interval kepercayaan ada di hasil analisis.",
+      "kurz": "Seberapa tepat suatu hasil? Interval kepercayaan (CI) adalah rentang di sekitar nilai yang terukur. Interval ini menunjukkan nilai sebenarnya yang mana saja yang cocok dengan data. Sempit berarti tepat, lebar berarti kurang tepat.",
+      "beispiel": "Rute perjalanan baru menghemat rata-rata 4 menit, 95% CI [1,2; 6,8]: penghematan sebenarnya sebesar 2 atau 6 menit cocok dengan data.",
+      "vorsicht": "“95%” menggambarkan metodenya: dalam banyak pengulangan, sekitar 95 dari 100 rentang seperti ini akan memuat nilai sebenarnya. Apakah rentang yang ini memuatnya, tidak diketahui. Jika rentang 95% memuat 0, “tidak ada perbedaan” juga cocok dengan data, dan uji dua sisi pada taraf ,05 tidak signifikan.",
+      "pruefen": true
+    },
+    "normalverteilung": {
+      "titel": "Distribusi normal",
+      "kurz": "Bagaimana nilai-nilai tersebar? Dalam distribusi normal, sebagian besar nilai berada di tengah dan makin jarang, secara merata, ke kedua sisi. Hasilnya berbentuk lonceng.",
+      "beispiel": "Berat kemasan pasta 500 g bervariasi berbentuk lonceng di sekitar 500 g. Waktu tunggu di layanan telepon tidak demikian: banyak yang singkat, sedikit yang sangat lama.",
+      "vorsicht": "Untuk membandingkan rata-rata, ekor panjang di satu sisi (kemencengan) dan pencilan lebih penting daripada jumlah orang yang tetap. Dengan banyak orang, bentuknya kurang berpengaruh; dengan sangat sedikit orang, bentuknya hampir tidak dapat dinilai.",
+      "fachwoerter": "uji Welch (uji-t yang tidak mensyaratkan sebaran yang sama di kelompok-kelompok), kemencengan (ekor panjang di satu sisi), pencilan (nilai yang jauh dari nilai-nilai lainnya).",
+      "pruefen": true
+    },
+    "mittelwert": {
+      "titel": "Rata-rata (M)",
+      "kurz": "Berapa nilai yang khas? Rata-rata adalah nilai tengah hitung: jumlahkan semua nilai lalu bagi dengan banyaknya nilai.",
+      "beispiel": "Lima waktu tunggu di loket: 8, 12, 9, 15, dan 11 menit. Totalnya 55, dibagi 5 menghasilkan 11 menit.",
+      "vorsicht": "Beberapa nilai yang sangat tinggi atau sangat rendah menarik rata-rata ikut bergeser. Dengan 60, bukan 11 menit, rata-ratanya menjadi 20,8; median, yaitu nilai tengah dari deret yang diurutkan, hanya naik dari 11 menjadi 12.",
+      "pruefen": false
+    },
+    "standardabweichung": {
+      "titel": "Standar deviasi (SD)",
+      "kurz": "Seberapa berbeda nilai-nilainya? Standar deviasi (SD) menyatakan seberapa jauh nilai biasanya berada dari rata-rata. Kecil berarti nilai-nilainya berdekatan.",
+      "beispiel": "Tidur: rata-rata 7 jam, SD 1 jam. Pada distribusi berbentuk lonceng, sekitar dua pertiga orang tidur antara 6 dan 8 jam.",
+      "vorsicht": "SD menggambarkan seberapa berbeda orang-orangnya. Seberapa tepat rata-ratanya diperoleh dari standar error dan interval kepercayaan.",
+      "pruefen": false
+    },
+    "freiheitsgrade": {
+      "titel": "Derajat kebebasan (df)",
+      "kurz": "Apa arti angka dalam tanda kurung, misalnya t(18)? Itu adalah derajat kebebasan (df), angka yang terutama bergantung pada banyaknya orang. Perangkat lunak membutuhkannya untuk menghitung nilai p.",
+      "beispiel": "20 orang dalam dua kelompok: 20 dikurangi 2 menghasilkan 18 derajat kebebasan, jadi t(18). Pada kelompok dengan sebaran yang tidak sama (uji Welch), angkanya sering berupa desimal, seperti t(14,3).",
+      "vorsicht": "Biasanya hanya itu yang perlu diketahui tentang derajat kebebasan. Namun, angka ini wajib ada di setiap laporan agar orang lain dapat memeriksa hasilnya.",
+      "pruefen": false
+    },
+    "korrelation": {
+      "titel": "Korelasi (r)",
+      "kurz": "Apakah dua hal saling berhubungan? Korelasi r menunjukkannya sebagai angka dari −1 sampai +1. Positif: lebih banyak yang satu disertai lebih banyak yang lain. Negatif: disertai lebih sedikit. Mendekati 0: tidak ada hubungan garis lurus.",
+      "beispiel": "Tidur dan konsentrasi: r = ,30. Orang yang tidur lebih lama cenderung berkonsentrasi lebih baik.",
+      "vorsicht": "Hubungan bukanlah sebab-akibat. r hanya melihat hubungan garis lurus, jadi lihat juga diagram pencarnya.",
+      "pruefen": true
+    },
+    "korrelationsmatrix": {
+      "titel": "Matriks korelasi",
+      "kurz": "Mana dari beberapa kolom angka yang berjalan bersama? Matriks korelasi menunjukkan semua pasangan sekaligus. Koreksi Holm membuat nilai p lebih ketat, karena pada banyak pasangan, satu di antaranya mudah tampak menonjol secara kebetulan.",
+      "beispiel": "Lima kolom menghasilkan 10 pasangan. Yang paling mencolok memiliki p = ,012; setelah koreksi Holm menjadi ,012 kali 10 = ,12 - tidak lagi di bawah ,05.",
+      "vorsicht": "Siapa pun yang menguji banyak pasangan juga akan menemukan hasil kebetulan; siapa pun yang hanya mencari-cari sebaiknya memakai nilai Holm. Hubungan bukanlah sebab-akibat.",
+      "fachwoerter": "r menurut Pearson (keterkaitan antara dua kolom angka, untuk hubungan garis lurus), rs menurut Spearman (gagasan yang sama dengan peringkat, bukan nilai), n (jumlah kasus per pasangan), interval kepercayaan 95% (rentang yang cocok dengan hubungan sebenarnya, berdasarkan data).",
+      "pruefen": true
+    },
+    "regression": {
+      "titel": "Regresi",
+      "kurz": "Dapatkah satu nilai diprediksi dari nilai-nilai lain? Regresi menggambar garis yang paling cocok dengan data. Garis itu menunjukkan seberapa besar prediksi berubah ketika nilai lain berubah.",
+      "beispiel": "Harga apartemen menurut luas lantai: setiap tambahan 1 m² disertai kenaikan rata-rata 2400 €.",
+      "vorsicht": "Prediksi bukanlah sebab-akibat. Untuk uji yang lazim, residual (jarak dari garis) yang seharusnya berdistribusi normal, bukan nilai mentahnya.",
+      "pruefen": true
+    },
+    "chi-quadrat": {
+      "titel": "Uji chi-kuadrat (χ²)",
+      "kurz": "Apakah sesuatu lebih sering terjadi pada kelompok tertentu? Uji chi-kuadrat (χ²) membandingkan jumlah kasus yang dihitung dalam tabulasi silang dengan jumlah yang diharapkan jika tidak ada hubungan.",
+      "beispiel": "Masing-masing 100 orang: 60% orang yang bangun pagi minum kopi, 40% orang yang bangun siang. χ²(1) = 8,0, p = ,005.",
+      "vorsicht": "χ² tidak menyatakan seberapa kuat hubungannya: dengan jumlah orang dua kali lipat dan proporsi yang sama, nilainya menjadi dua kali lipat. V Cramér menunjukkan kekuatannya.",
+      "fachwoerter": "uji eksak Fisher (lebih akurat daripada χ² untuk tabel 2 × 2 dengan sedikit orang), frekuensi harapan (berapa banyak kasus yang akan dimuat sebuah sel jika tidak ada hubungan).",
+      "pruefen": true
+    },
+    "streuung": {
+      "titel": "Sebaran",
+      "kurz": "Seberapa berbeda nilai-nilainya? Sebaran adalah istilah payungnya. Ukurannya adalah rentang (nilai terbesar dikurangi nilai terkecil), standar deviasi, dan rentang antarkuartil (lebar separuh nilai di bagian tengah).",
+      "beispiel": "Waktu tempuh 40 perjalanan: 12 sampai 51 menit, rentang 51 − 12 = 39, standar deviasi 8,5, rentang antarkuartil 10.",
+      "vorsicht": "Rentang hanya bergantung pada dua nilai. Satu pencilan saja membuatnya jauh lebih besar.",
+      "pruefen": false
+    },
+    "stichprobe": {
+      "titel": "Sampel",
+      "kurz": "Siapa yang sebenarnya ikut serta? Itulah sampel. Sampel dipakai untuk mengatakan sesuatu tentang kelompok yang lebih besar, yaitu populasi.",
+      "beispiel": "Sebuah perpustakaan mensurvei 150 pengunjung pada hari Selasa untuk mengatakan sesuatu tentang semua pengguna sepanjang tahun. Apakah itu berlaku bergantung pada cara 150 orang ini dipilih.",
+      "vorsicht": "Jumlah orang yang banyak tidak menebus pemilihan yang berat sebelah. Menanyai hanya pengunjung pada Selasa pagi terutama menggambarkan pengunjung tersebut.",
+      "pruefen": false
+    },
+    "voraussetzung": {
+      "titel": "Asumsi",
+      "kurz": "Bolehkah suatu metode dipakai dengan data ini? Setiap metode bertumpu pada asumsi, yaitu persyaratannya, misalnya “setiap orang termasuk tepat satu kelompok”. Jika asumsi itu tidak cocok, hasilnya bisa menyesatkan.",
+      "beispiel": "Sebelum membandingkan dua kelompok pelanggan: apakah keduanya benar-benar dua kelompok yang terpisah? Apakah nilainya berupa angka? Apakah ada nilai tunggal yang sangat mencolok?",
+      "vorsicht": "Sebuah catatan bukanlah larangan, melainkan alasan untuk memeriksa lebih saksama. Beberapa asumsi tidak dapat diperiksa oleh perangkat lunak mana pun, seperti apakah orang menjawab secara independen satu sama lain, yaitu tanpa bersepakat lebih dulu - hal itu bergantung pada cara data dikumpulkan.",
+      "pruefen": true
+    },
+    "ausreisser": {
+      "titel": "Pencilan",
+      "kurz": "Apakah ada satu nilai yang berada sangat jauh dari semua nilai lainnya? Maka itu adalah pencilan. Bisa berupa salah ketik, kesalahan pengukuran - atau jawaban yang asli dan tidak biasa. Pada boxplot, nilai yang tidak biasa tampak sebagai titik di luar kumis (garis pada kotak). Itu belum tentu berarti kesalahan.",
+      "beispiel": "Sepuluh waktu pengiriman dalam hari: sembilan di antara 2 dan 4 (jumlah 27), satu bernilai 31. Tanpa 31, rata-ratanya 27 / 9 = 3,0 hari, dengan 31 menjadi 58 / 10 = 5,8.",
+      "vorsicht": "Jangan pernah menghapus pencilan diam-diam: periksa dulu data aslinya, tampilkan perhitungan dengan dan tanpa pencilan itu, dan berikan alasan untuk keputusan Anda. Pada regresi, satu titik yang jauh menarik garis ke arahnya, bahkan jika titik itu hampir tidak menonjol.",
+      "pruefen": true,
+      "statable": "Untuk regresi, blok “Memeriksa regresi: kolinearitas dan kasus yang tidak biasa” di bawah hasil mencantumkan kasus dengan residual, leverage, atau jarak Cook yang besar, beserta nomor barisnya dalam data. Lihatlah di sana, jangan menghapus diam-diam. Nilai tunggal pada suatu kolom ditandai oleh pemeriksaan data saat membuka."
+    },
+    "reliabilitaet": {
+      "titel": "Reliabilitas skala (alpha Cronbach)",
+      "statable": "Untuk mencobanya: di halaman mulai pilih “Buka kalkulator” (atau Ctrl+K dan “Kalkulator dan penggeser”), lalu di bawah “Cobalah: apa yang mengubah hasilnya?” klik “Buka” dan pilih “Alpha: jumlah pertanyaan”. Penggeser “Jumlah pertanyaan” dan “Hubungan rata-rata antar pertanyaan (r)” menunjukkan bahwa alpha naik hanya karena pertanyaannya lebih banyak; hasilnya ditampilkan di sebelahnya sebagai “α = …”.",
+      "kurz": "Apakah beberapa pertanyaan mengukur secara andal bersama-sama? Alpha Cronbach menunjukkan seberapa kuat jawaban atas pertanyaan-pertanyaan dalam satu skala saling berkaitan. Nilainya biasanya berada antara 0 dan 1.",
+      "beispiel": "Lima pertanyaan tentang kepuasan kerja: α = ,82.",
+      "vorsicht": "Alpha yang tinggi tidak membuktikan bahwa semua pertanyaan mengukur hal yang sama, dan pertanyaan yang lebih banyak menaikkannya dengan sendirinya. ,70 sering disebut sebagai minimum; itu hanyalah kebiasaan. Jika ada beberapa subskala, alpha dihitung untuk masing-masing secara terpisah; nilainya juga bergantung pada orang-orang yang disurvei.",
+      "fachwoerter": "konsistensi internal (seberapa kuat jawaban atas pertanyaan-pertanyaan dalam satu skala saling berkaitan), unidimensionalitas (semua pertanyaan mengukur sifat yang sama), analisis faktor (menunjukkan apakah pertanyaan-pertanyaan itu mengukur satu atau beberapa sifat), daya beda aitem (seberapa cocok suatu pertanyaan dengan pertanyaan lainnya), membalik skor (membalik pertanyaan yang arahnya terbalik agar searah).",
+      "pruefen": true
+    },
+    "faktorenanalyse": {
+      "titel": "Analisis faktor",
+      "kurz": "Pertanyaan mana yang saling berkelompok? Analisis faktor mencari kelompok pertanyaan yang dijawab serupa. Muatan faktor (dari −1 sampai 1) menunjukkan seberapa kuat suatu pertanyaan termasuk dalam suatu kelompok.",
+      "beispiel": "Sembilan pertanyaan tentang kehidupan kota membentuk tiga kelompok: lalu lintas, keamanan, waktu luang.",
+      "vorsicht": "Perhitungan hanya menemukan kelompok. Manusialah yang memutuskan artinya. Muatan faktor dari ,30 sampai ,50 ke atas sering dianggap termasuk; tidak ada batas yang tetap.",
+      "fachwoerter": "analisis komponen utama (bawaan, seperti di SPSS: menggabungkan pertanyaan-pertanyaan menjadi komponen), principal axis factoring (mencari sifat bersama di balik pertanyaan-pertanyaan), Promax (rotasi yang membiarkan faktor-faktornya saling berhubungan).",
+      "pruefen": true
+    },
+    "koeffizient-b": {
+      "titel": "Koefisien regresi B dan konstanta",
+      "kurz": "Seberapa besar prediksi berubah ketika satu prediktor naik 1 dan yang lain tetap? B menyatakannya, dalam satuan data. Karena itu B berubah ketika prediktor lain masuk ke model. Konstanta adalah prediksi ketika semua prediktor bernilai 0.",
+      "beispiel": "Harga apartemen dalam ribuan €: B = 2,4 untuk luas lantai. Setiap tambahan 1 m² disertai kenaikan rata-rata 2400 €, pada lantai yang sama.",
+      "vorsicht": "B berubah mengikuti satuannya (euro atau ribuan euro). Hanya dengan satuan yang sama B dapat dibandingkan antarstudi; dengan skala atau satuan yang berbeda hanya beta yang tersisa, dan beta bergantung pada sebaran sampel. Konstanta sering tidak bermakna jika 0 tidak pernah muncul (0 m²).",
+      "fachwoerter": "beta (B yang dinyatakan dalam standar deviasi, sehingga skala menjadi sebanding), prediktor (nilai yang dipakai untuk memprediksi).",
+      "pruefen": true
+    },
+    "beta": {
+      "titel": "Koefisien terstandar beta (β)",
+      "kurz": "B tanpa satuan: beta mengubah segalanya ke dalam standar deviasi (jarak khas nilai dari rata-rata). Dengan begitu, besaran dengan satuan berbeda dapat disandingkan dalam satu studi. Dengan hanya satu prediktor, beta sama dengan r.",
+      "beispiel": "Harga apartemen: luas lantai β = ,62. Jika luas lantai naik satu standar deviasi, harga naik rata-rata 0,62 standar deviasi.",
+      "vorsicht": "Beta bergantung pada seberapa berbeda kasus-kasus dalam sampel, sehingga tidak dapat begitu saja dibandingkan antarstudi. Jika dua studi memakai skala atau satuan yang berbeda, hanya beta yang dapat disandingkan, bukan B - tetapi beta pun bergantung pada sebaran sampel. Apakah beta yang lebih besar berarti “lebih penting” masih diperdebatkan.",
+      "pruefen": true
+    },
+    "standardfehler": {
+      "titel": "Standar error",
+      "kurz": "Seberapa tepat suatu estimasi? Dengan orang-orang yang lain, nilai yang sedikit berbeda akan muncul. Standar error menyatakan seberapa besar nilai itu biasanya bervariasi. Lebih kecil berarti lebih tepat. Jumlah orang empat kali lipat kira-kira menjadikannya separuh. Standar deviasi (jarak khas nilai tunggal dari rata-rata) tetap hampir sama.",
+      "beispiel": "1,5 poin lebih banyak per jam pelatihan (B = 1,5), standar error 0,5. B dibagi standar error menghasilkan t = 3,0, yang mengarah ke p (Sig.).",
+      "vorsicht": "Semakin banyak orang, semakin kecil nilainya, meskipun hubungannya tetap. “Standar error estimasi” dalam ringkasan model adalah hal lain: jarak khas nilai dari garis.",
+      "fachwoerter": "sampel (orang-orang yang benar-benar diteliti), t (B dibagi standar error), Sig. (sebutan SPSS untuk nilai p yang bersesuaian).",
+      "pruefen": true
+    },
+    "r-quadrat": {
+      "titel": "R² (R kuadrat) dan R² yang disesuaikan",
+      "kurz": "Seberapa banyak perbedaan yang dijelaskan oleh suatu model? R² adalah proporsi dari 0 sampai 1. R² yang disesuaikan mengurangi sedikit, karena setiap besaran yang ditambahkan dapat menaikkan R² walaupun tidak menyumbang apa pun. Dengan hanya satu prediktor, R² adalah kuadrat dari korelasi r. r sendiri bukan proporsi.",
+      "beispiel": "R² = ,40: luas lantai dan lokasi menjelaskan 40% perbedaan harga dalam data ini.",
+      "vorsicht": "“Menjelaskan” dimaksudkan secara hitungan, bukan sebagai sebab-akibat. R² yang lebih tinggi saja tidak membuat model lebih baik.",
+      "fachwoerter": "varians (seberapa lebar nilai-nilai menyebar di sekitar rata-ratanya), signifikan (nilai p berada di bawah batas yang dipilih, biasanya ,05), prediktor (nilai yang dipakai untuk memprediksi).",
+      "pruefen": true
+    },
+    "eigenwert-rotation": {
+      "titel": "Nilai eigen, analisis paralel, muatan faktor, dan rotasi",
+      "kurz": "Ada berapa kelompok pertanyaan? Nilai eigen menunjukkan seberapa banyak perbedaan yang ditangkap oleh suatu kelompok. Analisis paralel hanya mempertahankan kelompok yang berada di atas nilai data acak; rotasi membuat penetapan pertanyaan menjadi lebih jelas.",
+      "beispiel": "Delapan pertanyaan tentang lingkungan sekitar: dua kelompok berada di atas nilai acak, dengan nilai eigen 3,1 dan 1,6. Bersama-sama 4,7 dari 8, jadi 59%. Pertanyaan 6 memiliki muatan faktor ,81 pada kelompok 1 (keanggotaan kuat) dan ,05 pada kelompok 2.",
+      "vorsicht": "Tidak ada aturan yang merupakan bukti: “nilai eigen di atas 1” sering menyebutkan terlalu banyak kelompok, analisis paralel dapat menyebutkan terlalu sedikit ketika kelompok pertama sangat besar, orangnya sedikit, dan kelompok-kelompoknya saling berhubungan kuat. Jumlahnya diputuskan bersama scree plot (grafik nilai eigen) dan isi pertanyaan.",
+      "fachwoerter": "komponen (salah satu kelompok yang dibentuk oleh perhitungan), kriteria Kaiser (mempertahankan komponen dengan nilai eigen di atas 1), Varimax (rotasi yang menjaga komponen-komponen tetap independen), Promax (rotasi yang membiarkan faktor-faktornya saling berhubungan).",
+      "pruefen": true
+    },
+    "trennschaerfe": {
+      "titel": "Korelasi aitem-total terkoreksi dan alpha jika aitem dihapus",
+      "kurz": "Apakah suatu pertanyaan cocok dengan pertanyaan lain dalam skala? Daya beda aitem adalah korelasi pertanyaan itu dengan jumlah pertanyaan yang lain. Tinggi berarti: orang yang menjawab tinggi di sini cenderung menjawab tinggi di tempat lain juga. Alpha jika aitem dihapus adalah alpha skala tanpa pertanyaan ini. Jika nilainya naik, pertanyaan itu menarik alpha ke bawah.",
+      "beispiel": "Daya beda ,55: cocok. Daya beda −,40: pertanyaan itu berjalan ke arah sebaliknya; mungkin skornya belum dibalik.",
+      "vorsicht": "Nilai sekitar ,40 sampai ,70 sering disebut baik dan di bawah sekitar ,30 sebagai tanda peringatan; itu semua kebiasaan. Daya beda yang tinggi tidak membuktikan bahwa semua pertanyaan mengukur hal yang sama. Isi juga ikut menentukan apakah suatu pertanyaan dibuang; setelah itu analisis faktor dijalankan lagi.",
+      "fachwoerter": "alpha Cronbach (seberapa kuat jawaban dalam satu skala saling berkaitan), aitem (satu pertanyaan tunggal dalam skala), membalik skor (membalik pertanyaan yang arahnya terbalik agar searah).",
+      "pruefen": true
+    },
+    "rangkorrelation": {
+      "titel": "Korelasi peringkat (rs, τb)",
+      "kurz": "Apakah dua peringkat berjalan bersama? Korelasi peringkat (rs menurut Spearman, τb menurut Kendall) membandingkan bukan angkanya, melainkan posisi peringkatnya, dan cocok jika hanya urutan yang penting. Nilainya berada di antara −1 dan +1.",
+      "beispiel": "Kepuasan (tingkat 1 sampai 5) dan kunjungan per bulan pada 60 orang: rs = −,22. Orang yang lebih sering datang cenderung sedikit kurang puas. Hubungannya lemah.",
+      "vorsicht": "Hubungan bukanlah sebab-akibat. Korelasi peringkat menangkap setiap hubungan yang terus naik atau terus turun, termasuk yang melengkung; diagram pencar menunjukkan bentuknya.",
+      "pruefen": true
+    },
+    "kappa": {
+      "titel": "Kappa Cohen (κ)",
+      "kurz": "Seberapa baik dua penilai sepakat setelah tebakan dikurangkan? Kappa Cohen (κ) menghilangkan kesepakatan yang akan diberikan oleh kebetulan saja. 0 berarti tidak lebih baik daripada kebetulan; 1 berarti kesepakatan sempurna.",
+      "beispiel": "Dua dokter mengelompokkan 50 foto kulit sebagai “mencolok” atau “tidak mencolok”. Mereka sepakat pada 40 foto (80%); setelah kebetulan dihilangkan, κ = ,60 (interval 95% ,38 sampai ,82).",
+      "vorsicht": "κ rendah walaupun kesepakatannya tinggi ketika satu kategori sangat jarang atau sangat umum. Sebutan seperti “sedang” atau “substansial” (Landis dan Koch 1977) hanyalah aturan praktis, bukan batas.",
+      "pruefen": true
+    },
+    "krippendorff-alpha": {
+      "titel": "Alfa Krippendorff (α)",
+      "kurz": "Apakah beberapa orang sepakat dalam mengelompokkan, walaupun tidak semua orang menilai setiap kasus? Alfa Krippendorff (α) mengukurnya dalam satu angka. Yang sering disebut: mulai ,800 andal, mulai ,667 untuk kesimpulan sementara.",
+      "beispiel": "Tiga orang mengelompokkan 60 komentar pelanggan menjadi “pujian”, “kritik”, atau “pertanyaan”: α = ,71. Itu di atas ,667 tetapi di bawah ,800: cukup untuk kesimpulan sementara, belum untuk kesimpulan yang andal.",
+      "vorsicht": "Batas ,800 dan ,667 adalah usulan Krippendorff, bukan hukum alam. Dengan kasus yang sedikit, intervalnya lebar.",
+      "pruefen": true
+    },
+    "icc": {
+      "titel": "Korelasi intrakelas (ICC)",
+      "kurz": "Seberapa banyak perbedaan antarpenilaian berasal dari kasus yang dinilai, bukan dari para penilai? ICC (korelasi intrakelas) menunjukkannya: 0 berarti tidak ada kesepakatan, 1 kesepakatan sempurna.",
+      "beispiel": "Tiga juri menilai 10 kue dengan skor 0 sampai 100: ICC(2,1) = ,82 (interval 95% ,43 sampai ,95) untuk satu penilaian, ICC(2,3) = ,93 (,70 sampai ,98) untuk rata-rata ketiga penilaian. Dengan hanya 10 kue, interval yang pertama masih lebar.",
+      "vorsicht": "Ada beberapa varian (penilaian tunggal atau rata-rata; kesepakatan penuh, atau selisih tetap antarpenilai diperbolehkan); yang sesuai dipilih sebelumnya. Dengan kasus yang sedikit, ICC tidak tepat, dan nilainya rendah ketika kasus-kasusnya nyaris tidak berbeda - bahkan dengan kesepakatan yang baik.",
+      "fachwoerter": "interval kepercayaan (rentang yang cocok dengan ICC sebenarnya, berdasarkan data), kesepakatan absolut ICC(2,·) (nilai-nilainya dimaksudkan sama), konsistensi ICC(3,·) (selisih tetap antarpenilai diperbolehkan), tunggal dan rata-rata (satu penilaian atau rata-rata semua penilaian).",
+      "pruefen": true
+    },
+    "bland-altman": {
+      "titel": "Plot Bland-Altman",
+      "kurz": "Seberapa jauh dua metode pengukuran berbeda pada kasus yang sama? Plot Bland-Altman menampilkan selisih setiap kasus terhadap rata-ratanya. Bias adalah selisih rata-rata; batasnya mencakup sekitar 95% dari semua selisih.",
+      "beispiel": "Dua termometer klinis pada 12 orang: bias = 0,16 °C (95% CI 0,05 sampai 0,27), batas kesepakatan −0,18 sampai 0,50 °C. Yang kedua rata-rata menunjukkan angka lebih tinggi (interval bias tidak memuat 0); pada satu kasus, angkanya bisa sampai 0,5 °C lebih tinggi.",
+      "vorsicht": "Apakah rentangnya cukup kecil, ditentukan oleh bidangnya, bukan oleh statistik. Dengan kasus yang sedikit, batasnya tidak tepat, dan jika selisihnya bergantung pada rata-rata, batasnya tidak berlaku sama baiknya di mana-mana.",
+      "fachwoerter": "ICC (korelasi intrakelas: menghubungkan selisih dengan perbedaan antarkasus), standar deviasi (SD, sebaran yang khas; batasnya adalah bias ± 1,96 SD).",
+      "pruefen": true
+    },
+    "sensitivitaet": {
+      "titel": "Sensitivitas",
+      "kurz": "Berapa banyak dari orang yang benar-benar terkena yang ditemukan oleh suatu tes? Sensitivitas adalah proporsi orang yang benar-benar positif yang dinyatakan positif oleh tes. Kebenaran dianggap berasal dari pemeriksaan pembanding terbaik yang tersedia.",
+      "beispiel": "Dari 40 orang dengan diagnosis yang sudah dipastikan, tes cepat mendeteksi 34: sensitivitas = 34 / 40 = 85% (95% CI 71 sampai 93%).",
+      "vorsicht": "Jika tes diatur lebih ketat atau lebih longgar, sensitivitas dan spesifisitas berubah ke arah yang berlawanan. Dengan sedikit orang yang terkena, intervalnya lebar.",
+      "fachwoerter": "standar rujukan (pemeriksaan terbaik yang tersedia, yang hasilnya dianggap sebagai kebenaran), positif benar (orang yang terkena dan terdeteksi oleh tes).",
+      "pruefen": true
+    },
+    "spezifitaet": {
+      "titel": "Spesifisitas",
+      "kurz": "Berapa banyak dari orang yang tidak terkena yang dikenali dengan benar oleh suatu tes? Spesifisitas adalah proporsi orang yang benar-benar negatif yang dinyatakan negatif oleh tes. Tinggi berarti sedikit alarm palsu.",
+      "beispiel": "Dari 120 orang tanpa diagnosis, 108 tetap tidak menunjukkan apa-apa: spesifisitas = 108 / 120 = 90% (95% CI 83 sampai 94%).",
+      "vorsicht": "Pemeriksaan pembanding dianggap sebagai kebenaran; jika pemeriksaan itu sendiri tidak pasti, sensitivitas dan spesifisitas menjadi tidak tepat. Untuk kondisi yang langka, hasil positif sering mengatakan lebih sedikit daripada yang diharapkan meskipun spesifisitasnya tinggi (lihat nilai prediktif).",
+      "fachwoerter": "standar rujukan (pemeriksaan terbaik yang tersedia, yang hasilnya dianggap sebagai kebenaran), negatif benar (orang yang tidak terkena dan dilewatkan dengan benar oleh tes).",
+      "pruefen": true
+    },
+    "vorhersagewert": {
+      "titel": "Nilai prediktif (PPV, NPV)",
+      "statable": "Untuk mencobanya: di halaman mulai pilih “Buka kalkulator” (atau Ctrl+K dan “Kalkulator dan penggeser”), lalu di bawah “Cobalah: apa yang mengubah hasilnya?” klik “Buka” dan pilih “Nilai prediktif: penyakit langka”. Penggeser “Sensitivitas”, “Spesifisitas”, dan “Seberapa umum penyakit itu” mengubah tabel empat sel untuk 1000 orang; tabel itu menunjukkan berapa banyak hasil positif yang benar dan berapa banyak yang palsu.",
+      "kurz": "Seberapa besar kemungkinan seseorang benar-benar terkena ketika tesnya positif? Nilai prediktif positif (PPV) menyatakannya: proporsi tes positif yang benar-benar terkena. Nilai prediktif negatif (NPV) mencakup tes negatif.",
+      "beispiel": "Sebuah tes dengan sensitivitas 90% dan spesifisitas 90%. Dari 1000 orang, 100 terkena: 90 terdeteksi, tetapi 90 dari 900 orang sehat juga hasilnya positif. PPV = 90 / 180 = 50%. Jika 500 yang terkena, PPV menjadi 450 / 500 = 90%.",
+      "vorsicht": "Kedua nilai berubah mengikuti seberapa umum kondisi itu, bahkan pada sensitivitas dan spesifisitas yang sama, dan hanya berlaku untuk kelompok dengan prevalensi yang serupa. Jika orang yang terkena dan yang tidak terkena dicari secara terpisah (studi kasus-kontrol), nilai-nilai itu tidak dapat diinterpretasikan.",
+      "fachwoerter": "rasio kemungkinan (LR+ = sensitivitas / (1 − spesifisitas), LR− = (1 − sensitivitas) / spesifisitas: seberapa lebih sering suatu hasil muncul pada orang yang terkena dibanding yang tidak terkena; nilai ini tidak bergantung pada prevalensi).",
+      "pruefen": true
+    },
+    "gepaarte-messung": {
+      "titel": "Pengukuran berpasangan (dz, dav)",
+      "kurz": "Apakah ada yang berubah pada orang-orang yang sama? Pada pengukuran berpasangan, “sebelum” dan “sesudah” berasal dari orang yang sama. dz dan dav adalah dua ukuran seberapa besar perubahannya. Uji-t berpasangan bekerja dengan selisih per orang. Itu menghilangkan perbedaan antarorang, dan nilai p sering menjadi lebih kecil.",
+      "beispiel": "Push-up 10 orang sebelum dan sesudah enam minggu latihan: rata-rata 2,9 lebih banyak. dz = 2,9 / 1,37 = 2,12; dav = 2,9 / 3,94 = 0,74. dz jauh lebih besar karena sebelum dan sesudah sangat berkaitan (r = ,98).",
+      "vorsicht": "dz membagi rata-rata perubahan dengan sebaran perubahan, dav dengan rata-rata sebaran sebelum dan sesudah; hanya dav yang sebanding dengan d dari perbandingan kelompok. Tanpa kelompok pembanding, pengukuran tidak menunjukkan apa penyebab perubahan; sebutan Cohen (0,2 / 0,5 / 0,8) adalah kebiasaan dan berlaku untuk dav, bukan untuk dz.",
+      "fachwoerter": "standar deviasi (sebaran khas nilai di sekitar rata-ratanya), daya statistik (peluang menemukan perbedaan yang memang ada; dz dipakai untuk menghitungnya).",
+      "pruefen": true
+    },
+    "logistische-regression": {
+      "titel": "Regresi logistik",
+      "kurz": "Dari apa bergantungnya apakah sesuatu terjadi atau tidak? Regresi logistik memprediksi hasil ya/tidak dari nilai-nilai lain. Uji model memeriksa apakah prediksinya lebih baik daripada model tanpa nilai-nilai itu.",
+      "beispiel": "Pengunduran diri (ya/tidak) dari gaji, usia, dan waktu perjalanan pada 300 orang, 36% mengundurkan diri: uji model χ²(3) = 14,2, p = ,003; R² Nagelkerke = ,06. 68% diklasifikasikan dengan benar; tanpa model, angkanya 64% (sebanyak itu termasuk kelompok yang lebih besar).",
+      "vorsicht": "R² Nagelkerke bukanlah proporsi perbedaan yang dijelaskan seperti pada regresi linier. Tingkat ketepatan yang tinggi tidak banyak berarti jika satu kelompok memang jauh lebih besar, dan biasanya hanya berlaku untuk data yang dipakai untuk menyesuaikan model.",
+      "fachwoerter": "odds (peluang dibagi peluang kebalikannya: 75% adalah odds 3 banding 1), prediktor (nilai yang dipakai untuk memprediksi), pseudo-R² (R² Nagelkerke menggantikan R² regresi linier tetapi bukan proporsi perbedaan yang dijelaskan).",
+      "statable": "Jalankan regresinya (kolom target dengan dua nilai) dan buka blok “Memeriksa regresi logistik: kasus yang tidak biasa, kecocokan, linearitas logit, blok” di bawah hasil. Blok itu menampilkan VIF, kasus yang tidak biasa (leverage, jarak Cook, residual deviance, DFBETA), uji Hosmer-Lemeshow, uji Box-Tidwell, dan χ² blok untuk blok prediktor kedua.",
+      "pruefen": true
+    },
+    "odds-ratio": {
+      "titel": "Odds ratio (OR)",
+      "kurz": "Dengan faktor berapa peluang suatu kejadian berubah ketika suatu nilai naik 1? Itulah odds ratio (OR). 1 berarti tidak ada hubungan; di atas 1 peluangnya naik; di bawah 1 peluangnya turun.",
+      "beispiel": "Peluang paket tiba terlambat, per 100 km jarak: OR = 1,35, interval 95% [1,12; 1,63]. Dengan tambahan 100 km, peluangnya naik menjadi 1,35 kali, yaitu sekitar 35%. Intervalnya tidak memuat 1.",
+      "vorsicht": "“Odds” di sini berarti perbandingan antara “terjadi” dan “tidak terjadi” (3 banding 1, bukan 75%); jadi OR bukanlah “x kali lebih mungkin” - itu hanya berlaku untuk kejadian langka. Jika 1 berada dalam interval, hubungan tidak terbukti.",
+      "fachwoerter": "odds (peluang dibagi peluang kebalikannya), prediktor (nilai yang dipakai untuk memprediksi), Wald (metode yang lazim untuk interval OR).",
+      "pruefen": true
+    },
+    "eta-quadrat": {
+      "titel": "Eta kuadrat (η²) dan omega kuadrat (ω²)",
+      "kurz": "Seberapa banyak perbedaan pada nilai terukur yang berkaitan dengan kelompok? η² (eta kuadrat) adalah proporsi itu, 0 sampai 1. ω² adalah gagasan yang sama, dihitung dengan lebih hati-hati, dan agak lebih kecil.",
+      "beispiel": "Tiga pupuk, masing-masing 20 tanaman: η² = ,25 dan ω² = ,22. Pupuk berkaitan dengan sekitar seperempat perbedaan hasil panen.",
+      "vorsicht": "Sebutan ,01 / ,06 / ,14 menurut Cohen adalah kebiasaan untuk perbandingan kelompok; pada orang yang diukur beberapa kali atau kelompok yang tidak ditetapkan secara acak, suatu varian (η² parsial) menghasilkan nilai jauh lebih besar, sehingga Statable memakai η² tergeneralisasi (ηG²) di sana. Perbandingan kelompok (analisis varians) hanya menunjukkan bahwa setidaknya dua kelompok berbeda, bukan yang mana.",
+      "fachwoerter": "populasi (semua orang yang menjadi sasaran pernyataan; sampel hanyalah sebagian darinya), interval kepercayaan (rentang yang masuk akal untuk η² dalam populasi), pengukuran berulang (orang yang sama diukur beberapa kali), η² parsial (ηp²: efek relatif terhadap efek ditambah galatnya), signifikan (nilai p berada di bawah batas yang dipilih; jika ujinya tidak signifikan, batas bawah interval adalah 0).",
+      "pruefen": true
+    },
+    "paarvergleich": {
+      "titel": "Perbandingan berpasangan (post hoc: Tukey, Games-Howell, Bonferroni)",
+      "kurz": "Kelompok mana yang berbeda jika ada lebih dari dua? Perbandingan berpasangan menguji setiap pasangan dan membuat nilai p lebih ketat, karena banyak perbandingan dengan mudah “menemukan” sesuatu secara kebetulan. Yang lazim adalah Tukey, Games-Howell, dan Bonferroni.",
+      "beispiel": "Tiga varietas menghasilkan 3 pasangan. Dengan Bonferroni setiap p dikalikan 3: ,020 menjadi ,060 - tidak lagi di bawah ,05.",
+      "vorsicht": "Pasangan yang tidak signifikan tidak berarti “sama”, hanya “tidak terbukti”. Dengan banyak kelompok, pasangannya menjadi banyak, dan setiap pasangan menjadi lebih sulit dibuktikan.",
+      "fachwoerter": "analisis varians (membandingkan rata-rata tiga kelompok atau lebih), post hoc (sesudahnya, setelah analisis varians), Games-Howell (bawaan di Statable, tidak membutuhkan sebaran yang sama), Tukey (mengasumsikan sebaran yang sama), Bonferroni (ketat dan sederhana: setiap p dikalikan jumlah pasangan).",
+      "pruefen": true
+    },
+    "welch-anova": {
+      "titel": "Analisis varians Welch",
+      "kurz": "Bagaimana membandingkan beberapa kelompok yang sebarannya tidak sama? Analisis varians klasik mensyaratkan sebaran yang sama. Analisis varians Welch tidak: analisis ini memberi bobot pada setiap kelompok menurut sebarannya.",
+      "beispiel": "Waktu pengiriman empat gudang dengan sebaran yang sangat berbeda: F Welch (3; 41,8) = 5,4, p = ,003. Gudang-gudang itu berbeda, tanpa mengasumsikan sebaran yang sama.",
+      "vorsicht": "Analisis Welch pun hanya menunjukkan bahwa setidaknya dua kelompok berbeda. Perbandingan berpasangan menunjukkan yang mana (Games-Howell cocok untuk itu).",
+      "fachwoerter": "derajat kebebasan (df: angka dalam tanda kurung di samping F; angka itu menentukan distribusi mana yang menjadi pembanding uji), sebaran (seberapa jauh nilai-nilai suatu kelompok berjauhan).",
+      "pruefen": true
+    },
+    "rangtest": {
+      "titel": "Uji peringkat (tanpa distribusi normal)",
+      "kurz": "Apa yang dilakukan ketika rata-rata kurang cocok karena pencilan atau kemencengan? Uji peringkat mengurutkan semua nilai dan bekerja dengan posisi peringkat. Uji ini tidak membutuhkan distribusi normal dan hampir tidak bereaksi terhadap pencilan tunggal.",
+      "beispiel": "Waktu tunggu dalam menit, masing-masing 6 pengukuran: layanan A 4, 5, 6, 7, 9, 13; layanan B 8, 10, 11, 12, 15, 40. Uji Mann-Whitney (dua kelompok) U = 5, p = ,041 (eksak): B cenderung lebih tinggi. Pencilan 40 hampir tidak berpengaruh.",
+      "vorsicht": "Uji peringkat menunjukkan apakah satu kelompok cenderung memiliki nilai lebih tinggi - uji ini tidak menguji median saja. Sebaran atau bentuk yang berbeda juga dapat memicunya.",
+      "fachwoerter": "Kruskal-Wallis (uji peringkat untuk tiga kelompok atau lebih), Wilcoxon (uji peringkat untuk dua pengukuran pada orang yang sama), uji Dunn dengan penyesuaian Holm (menunjukkan setelah Kruskal-Wallis pasangan mana yang berbeda), estimator Hodges-Lehmann (HL: median semua selisih antara satu orang dari masing-masing kelompok) dengan interval kepercayaan 95% (rentang yang masuk akal untuknya), ukuran efek (seberapa besar perbedaannya: r = |z| / √N, untuk Kruskal-Wallis ε² = H / (n − 1)), korelasi biserial peringkat (proporsi pasangan yang satu kelompoknya lebih tinggi, dikali 2, dikurangi 1), nilai kembar (nilai yang sama).",
+      "pruefen": true
+    },
+    "sphaerizitaet": {
+      "titel": "Sferisitas (uji Mauchly)",
+      "kurz": "Orang yang sama diukur beberapa kali: apakah selisih antara dua titik waktu mana pun bervariasi sama kuatnya? Itulah sferisitas. Jika dilanggar, hasilnya terlalu sering signifikan.",
+      "beispiel": "Waktu reaksi 20 orang pada tiga hari: uji Mauchly W = ,75, p = ,075; ε (Greenhouse-Geisser) = ,80 (1 berarti: terpenuhi). Uji tidak menunjukkan pelanggaran, tetapi ε jelas di bawah 1 - sehingga koreksi diterapkan.",
+      "vorsicht": "Uji Mauchly memeriksa sferisitas (p di atas ,05 tidak menentangnya), tetapi lemah dengan sedikit orang dan menandai bahkan penyimpangan kecil dengan banyak orang. Karena itu Statable selalu menampilkan koreksi Greenhouse-Geisser, bukan hanya ketika p di bawah ,05.",
+      "fachwoerter": "pengukuran berulang (orang yang sama diukur beberapa kali), analisis varians (membandingkan rata-rata), derajat kebebasan (df: angka dalam tanda kurung di samping F), nilai p (seberapa sering hasil sebesar ini atau lebih besar akan muncul jika asumsinya berlaku), W (statistik uji pada uji Mauchly).",
+      "pruefen": true,
+      "statable": "Di bawah hasil analisis pengukuran berulang, pilih koreksi untuk sferisitas (Greenhouse-Geisser sebagai bawaan, Huynh-Feldt, atau tanpa koreksi). Dengan satu faktor pengukuran berulang, uji Mauchly ada di tabel; dengan dua faktor, setiap efek memiliki ε sendiri."
+    },
+    "greenhouse-geisser": {
+      "titel": "Koreksi Greenhouse-Geisser dan Huynh-Feldt (ε)",
+      "kurz": "Apa yang dilakukan jika sferisitas dilanggar? Koreksi membuat hasilnya lebih hati-hati: p menjadi lebih besar. Seberapa besar ditentukan oleh ε (epsilon): 1 berarti terpenuhi, makin kecil berarti makin kuat dilanggar.",
+      "beispiel": "Dengan ε = ,80, F(2, 38) = 6,2, p = ,005 menjadi F(1,60; 30,40) = 6,2, p = ,009: kedua angka dalam tanda kurung, 2 dan 38, dikalikan ,80 dan menghasilkan 1,60 dan 30,40.",
+      "vorsicht": "Greenhouse-Geisser adalah estimasi yang lebih ketat, Huynh-Feldt yang agak lebih longgar. Angka dalam tanda kurung tidak lagi berupa bilangan bulat; itu lazim, dan dengan ε mendekati 1, koreksi hampir tidak mengubah apa pun.",
+      "fachwoerter": "derajat kebebasan (df: angka dalam tanda kurung di samping F), analisis varians (membandingkan rata-rata), sferisitas (semua selisih antara dua titik waktu mana pun bervariasi sama).",
+      "pruefen": true,
+      "statable": "Di bawah hasil analisis pengukuran berulang, pilih koreksinya: Greenhouse-Geisser (bawaan), Huynh-Feldt, atau tanpa koreksi. Derajat kebebasan dan p langsung ditampilkan terkoreksi dengan ε; dengan dua faktor pengukuran berulang, setiap efek memiliki ε sendiri."
+    },
+    "mediation": {
+      "titel": "Mediasi (efek tidak langsung)",
+      "kurz": "Apakah suatu efek berjalan melalui langkah perantara? Misalnya: kebisingan memengaruhi tidur, dan tidur memengaruhi suasana hati. Mediasi menghitung seberapa besar jalur tidak langsung ini.",
+      "beispiel": "Jalur tidak langsung melalui tidur 0,20, interval 95% [0,11; 0,30]: 0 tidak termasuk di dalamnya.",
+      "vorsicht": "Satu survei tidak menunjukkan sebab-akibat: urutannya adalah asumsi. Yang penting adalah interval jalur tidak langsung, bukan apakah langkah-langkahnya satu per satu signifikan.",
+      "fachwoerter": "mediator (variabel M yang dilalui suatu efek), jalur a (X → M), b (M → Y), c′ (X → Y langsung) dan c (X → Y total; c = c′ + a·b), bootstrap (penarikan ulang dari orang-orang yang ada sebanyak 5000 kali), interval kepercayaan (rentang yang cocok dengan nilai sebenarnya, berdasarkan data).",
+      "pruefen": true
+    },
+    "moderation": {
+      "titel": "Moderasi (interaksi, kemiringan sederhana)",
+      "kurz": "Apakah suatu hubungan sama untuk semua orang? Moderasi menguji apakah hubungan itu bergantung pada besaran ketiga.",
+      "beispiel": "Lebih banyak latihan sangat membantu pemula dan hampir tidak membantu orang yang berpengalaman: pengalaman memoderasi hubungan itu.",
+      "vorsicht": "Moderasi bukanlah mediasi: moderator mengubah kekuatan hubungan; moderator bukan langkah perantara. Moderasi saja juga tidak menunjukkan sebab-akibat.",
+      "fachwoerter": "moderator (variabel ketiga W yang menjadi tempat bergantungnya hubungan), centering (menggeser nilai-nilai di sekitar rata-ratanya), regresi (prediksi dengan hasil kali X·W sebagai suku interaksi), signifikan (nilai p berada di bawah batas yang dipilih), kemiringan sederhana (kemiringan X pada W rendah, sedang, dan tinggi), ΔR² (tambahan varians yang dijelaskan akibat interaksi), Johnson-Neyman (menyebutkan titik-titik W yang mulai membuat kemiringannya signifikan).",
+      "pruefen": true
+    },
+    "nap": {
+      "titel": "NAP (nonoverlap of all pairs)",
+      "kurz": "Apakah suatu perilaku membaik berkat intervensi? NAP membandingkan setiap nilai sebelum (A) dengan setiap nilai selama intervensi (B) dan menghasilkan proporsi pasangan yang B-nya lebih baik; nilai yang sama dihitung setengah.",
+      "beispiel": "Menit seorang anak duduk di meja makan: baseline 3, 4, 4, 5; intervensi 6, 5, 7, 8, 7. Dari 20 pasangan, B lebih baik pada 19 dan sama pada 1: NAP = (19 + 0,5) / 20 = ,975.",
+      "vorsicht": "NAP mengabaikan tren apa pun sebelum intervensi dan tidak menunjukkan seberapa besar B lebih baik; sebutan lemah, sedang, dan kuat (Parker dan Vannest) adalah aturan praktis. Uji untuk NAP mengasumsikan pengukuran yang independen, yang sering tidak dipenuhi pada deret waktu.",
+      "fachwoerter": "AUC (luas di bawah kurva ROC: peluang yang sama, NAP sama dengannya), Mann-Whitney (uji peringkat untuk dua kelompok, di sini memberikan nilai p), nilai p (seberapa sering hasil sebesar ini atau lebih besar akan muncul jika tidak ada perbedaan), interval kepercayaan menurut Newcombe (rentang yang menunjukkan seberapa tidak pasti nilai itu pada pengukuran yang sedikit).",
+      "pruefen": true
+    },
+    "pnd": {
+      "titel": "PND (percentage of non-overlapping data)",
+      "kurz": "Berapa banyak nilai pada fase intervensi (B) yang melampaui nilai terbaik sebelumnya (A)? Itulah PND: proporsi nilai B di atas nilai A yang terbaik (Scruggs dkk. 1987).",
+      "beispiel": "Dengan data yang sama (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): nilai A terbaik adalah 5. Empat dari lima nilai B berada di atasnya (6, 7, 8, 7), PND = 4 / 5 = 80%. Jika “lebih rendah = lebih baik”, nilai A terendah yang dihitung.",
+      "vorsicht": "PND bergantung pada satu nilai sebelum intervensi: pencilan di sana membuatnya tidak berguna, dan dengan pengukuran yang lebih banyak sebelumnya, nilainya turun, walaupun tidak ada hal lain yang berbeda. NAP lebih cocok; PND ada untuk perbandingan dengan karya yang lebih lama.",
+      "pruefen": true
+    },
+    "tau-u": {
+      "titel": "Tau-U dan Tau terkoreksi baseline",
+      "kurz": "Seberapa baik suatu perbaikan dapat ditunjukkan jika nilai-nilainya sudah bergerak ke satu arah sebelum intervensi? Tau-U membandingkan sebelum dan sesudah seperti NAP dan dapat menghilangkan tren itu.",
+      "beispiel": "Dengan data yang sama (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): Tau-U tanpa penghilangan tren = (19 − 0) / 20 = ,95. Bahkan sebelum intervensi, 5 dari 6 pasangan naik: dengan tren dihilangkan, Tau-U = (19 − 5) / 20 = ,70.",
+      "vorsicht": "Penghilangan tren mengasumsikan tren sebelumnya akan terus berlanjut sesudahnya - asumsi yang kuat pada fase intervensi yang panjang. Dengan kurang dari 3 pengukuran sebelumnya, tren tidak dapat diuji, dan nilai p mengasumsikan pengukuran yang independen.",
+      "fachwoerter": "Kendall (tau Kendall: hubungan yang dihitung dari urutan peringkat, dasar kedua ukuran), Tau-BC (tau terkoreksi baseline: menghilangkan tren pada A hanya jika signifikan), Theil-Sen (garis tren yang kokoh dari kemiringan median semua pasangan titik).",
+      "pruefen": true
+    },
+    "einzelfall": {
+      "titel": "Analisis kasus tunggal (desain A-B)",
+      "kurz": "Apakah suatu intervensi berhasil pada satu orang? Satu orang (atau beberapa orang) diukur berulang kali dari waktu ke waktu: pertama tanpa intervensi (fase A), lalu dengan intervensi (fase B). Kedua fase dibandingkan.",
+      "beispiel": "Seorang anak duduk di meja makan rata-rata 4 menit pada empat pengukuran baseline (3, 4, 4, 5), dan rata-rata 6,6 menit pada lima pengukuran dengan intervensi (6, 5, 7, 8, 7).",
+      "vorsicht": "Desain A-B saja tidak membuktikan sebab-akibat: orang itu mungkin juga berkembang sendiri, atau peristiwa lain ikut berperan. Replikasi lebih meyakinkan (A-B-A-B, beberapa orang dengan awal yang bertahap).",
+      "fachwoerter": "median (nilai tengah), NAP (proporsi pasangan A-B yang B-nya lebih baik), tau dan Tau-U (ukuran berbasis tau Kendall yang dapat memperhitungkan tren pada baseline), PND (proporsi nilai B di atas nilai A yang terbaik), multiple baseline (beberapa orang dengan awal intervensi yang bertahap).",
+      "pruefen": true
+    },
+    "kaplan-meier": {
+      "titel": "Kaplan-Meier (waktu hingga kejadian)",
+      "kurz": "Berapa banyak yang masih belum mengalami kejadian setelah waktu tertentu? Kurva Kaplan-Meier menunjukkannya untuk setiap titik waktu dan turun pada setiap kejadian. Kurva ini juga memakai orang yang hanya diamati sebagian waktu.",
+      "beispiel": "10 karyawan, waktu hingga pengunduran diri dalam bulan: 5 mengundurkan diri (setelah 3, 5, 5, 8, dan 12 bulan), pada 5 orang pengamatan berakhir tanpa pengunduran diri (setelah 6, 9, 10, 14, dan 15 bulan). Setelah 8 bulan, 9/10 · 7/9 · 5/6 = 58% belum mengundurkan diri.",
+      "vorsicht": "Metode ini mengasumsikan bahwa keluarnya seseorang dari pengamatan tidak ada kaitannya dengan risiko. Di ujung kanan biasanya hanya tersisa sedikit orang; di sana kurvanya tidak pasti.",
+      "fachwoerter": "tersensor (diamati hanya sampai suatu titik, kejadian belum terjadi sampai saat itu), kurva tangga (turun satu anak tangga pada setiap kejadian), berisiko (masih diamati dan belum mengalami kejadian).",
+      "pruefen": true
+    },
+    "zensierung": {
+      "titel": "Penyensoran",
+      "kurz": "Bagaimana dengan orang yang belum mengalami apa-apa sampai akhir pengamatan? Mereka disebut tersensor: yang diketahui hanyalah bahwa kejadian itu tidak terjadi lebih awal.",
+      "beispiel": "Seorang karyawan yang masih bekerja di perusahaan ketika studi berakhir setelah 14 bulan disensor pada waktu 14. Pada plot, ia tampak sebagai tanda kecil pada kurva.",
+      "vorsicht": "Jangan membuang orang yang tersensor dan jangan menghitung mereka sebagai kejadian: keduanya membiaskan kurva. Metode ini mengasumsikan bahwa orang yang tersensor memiliki risiko lanjutan yang sama dengan yang lain.",
+      "fachwoerter": "Kaplan-Meier (metode yang juga memakai orang yang tersensor), berisiko (masih diamati dan belum mengalami kejadian), penyensoran non-informatif (keluarnya seseorang tidak ada kaitannya dengan risiko).",
+      "pruefen": true
+    },
+    "ueberlebensfunktion": {
+      "titel": "Fungsi kesintasan S(t)",
+      "kurz": "Berapa banyak yang belum mengalami kejadian pada waktu t? Itu ditunjukkan oleh fungsi kesintasan S(t); fungsi ini mulai dari 1 (semua orang) dan turun pada setiap kejadian. “Kesintasan” di sini hanya berarti “belum ada kejadian”.",
+      "beispiel": "S(8) = ,58, interval 95% [,34; 1,00]: setelah 8 bulan diperkirakan 58% karyawan belum mengundurkan diri. Dengan 10 orang, intervalnya sangat lebar.",
+      "vorsicht": "Intervalnya dihitung (seperti pada survfit di R) sehingga tidak pernah turun di bawah 0; batas atasnya dipotong pada 1. Dengan sedikit orang yang masih diamati, intervalnya sangat lebar.",
+      "fachwoerter": "interval kepercayaan (rentang yang cocok dengan proporsi sebenarnya, berdasarkan data), standar error (menurut Greenwood: seberapa besar nilai itu akan bervariasi dari sampel ke sampel), skala log (intervalnya dihitung pada nilai logaritma).",
+      "pruefen": true
+    },
+    "median-ueberlebenszeit": {
+      "titel": "Median waktu hingga kejadian",
+      "kurz": "Kapan separuhnya sudah mengalami kejadian? Itulah median waktu: titik ketika kurva turun sampai 50%. Jika kurva tidak pernah turun sampai sejauh itu, mediannya “belum tercapai”.",
+      "beispiel": "Median = 12 bulan, interval 95% [5; belum tercapai]: batas bawahnya 5, ke atas intervalnya terbuka.",
+      "vorsicht": "Median di sini lebih baik daripada rata-rata, yang terdistorsi oleh data yang mencong dan oleh orang yang belum mengalami kejadian sampai akhir. Jika kurva berada tepat di 50% sepanjang suatu rentang, Statable, seperti R, mengambil titik tengahnya; dengan sedikit kejadian, median sangat tidak pasti.",
+      "pruefen": true
+    },
+    "log-rank": {
+      "titel": "Uji log-rank",
+      "kurz": "Apakah kurva beberapa kelompok berbeda? Uji log-rank membandingkan, pada setiap waktu kejadian, berapa banyak kejadian yang dialami setiap kelompok dan berapa banyak yang akan diharapkan jika semua kelompok sama.",
+      "beispiel": "Dua tim, waktu hingga pengunduran diri: χ²(1) = 5,1, p = ,024. Kurvanya berbeda.",
+      "vorsicht": "Uji ini paling kuat jika kurva tidak pernah bertukar sisi; jika kurva berpotongan, uji ini dapat melewatkan perbedaan yang nyata. Uji ini tidak mengatakan apa pun tentang besarnya perbedaan; untuk itu dipakai median dan proporsi pada titik waktu tertentu.",
+      "fachwoerter": "Mantel-Cox (nama lain untuk uji ini), Cox (jangan dikacaukan dengan regresi Cox), Holm (menyesuaikan nilai p untuk beberapa pasangan), derajat kebebasan (df: di sini jumlah kelompok dikurangi 1).",
+      "pruefen": true
+    },
+    "anzahl-unter-risiko": {
+      "titel": "Jumlah yang berisiko",
+      "kurz": "Berapa banyak orang yang mendukung kurva pada suatu titik? Jumlah yang berisiko adalah berapa banyak yang masih diamati dan belum mengalami kejadian pada waktu t. Angka ini sering diletakkan di bawah plot.",
+      "beispiel": "Pada bulan ke-10 masih ada 4 dari 10 orang yang berisiko: di sana kurva bertumpu pada 4 orang.",
+      "vorsicht": "Di tempat yang hanya sedikit yang masih berisiko, kurva melompat tajam pada setiap kejadian dan intervalnya lebar. Bagian seperti itu tidak boleh ditafsirkan berlebihan.",
+      "fachwoerter": "penyensoran (orang yang diamati hanya sampai suatu titik lalu keluar; mereka menurunkan jumlah itu sama seperti kejadian).",
+      "pruefen": true
+    },
+    "bootstrap": {
+      "titel": "Bootstrap (interval persentil)",
+      "kurz": "Seberapa tidak pasti suatu angka yang tidak punya rumus sederhana? Bootstrap menarik ulang 5000 kali dari orang-orang yang tersedia dan menghitung ulang angkanya setiap kali. 95% hasil di tengah membentuk intervalnya.",
+      "beispiel": "Median (nilai tengah) waktu tunggu 12 orang: 11,5 menit. Dari 5000 median baru, 2,5% berada di bawah 7,5 dan 2,5% di atas 16,5: interval bootstrap 95% [7,5; 16,5].",
+      "vorsicht": "Dengan sedikit orang (di bawah sekitar 50), intervalnya tidak tepat dan sering terlalu sempit. Dengan nilai awal yang tetap untuk angka acak, data yang sama selalu menghasilkan interval yang sama; nilai awal yang lain hanya menggeser batasnya sedikit.",
+      "fachwoerter": "interval kepercayaan (rentang yang cocok dengan nilai sebenarnya, berdasarkan data), persentil (batas pada 2,5% dan 97,5% dari hasil yang diurutkan), penarikan dengan pengembalian (orang yang sama dapat muncul beberapa kali), seed (menetapkan angka acak).",
+      "pruefen": true
+    },
+    "omega": {
+      "titel": "Omega McDonald (ω)",
+      "kurz": "Apakah beberapa pertanyaan bersama-sama mengukur satu hal secara andal, walaupun sumbangannya tidak sama? Omega (ω) mengukurnya seperti alpha Cronbach, tetapi memakai sumbangan sebenarnya dari setiap pertanyaan. Alpha mengasumsikan sumbangan yang sama untuk semuanya.",
+      "beispiel": "Lima pertanyaan dengan sumbangan (muatan faktor) ,5 / ,6 / ,7 / ,7 / ,8: ω = ,80. Alpha, yang mengasumsikan sumbangan yang sama, sedikit lebih rendah, yaitu ,79.",
+      "vorsicht": "Omega mengasumsikan bahwa pertanyaan-pertanyaan itu mengukur satu hal saja; jika tidak, interpretasinya tidak bermakna (analisis faktor membantu di sini). Patokan (sering ,70) hanya bersifat sementara, dan omega pun berlaku untuk kelompok orang ini, bukan untuk kuesioner itu sendiri. Alpha tepat mengenai reliabilitas hanya jika pertanyaan-pertanyaannya mengukur satu hal, menyumbang sama besar, dan galatnya tidak berkorelasi.",
+      "pruefen": true
+    },
+    "cfa": {
+      "titel": "Analisis faktor konfirmatori (CFA)",
+      "kurz": "Apakah pengelompokan pertanyaan yang sudah ditetapkan sebelumnya cocok dengan data? Analisis faktor konfirmatori (CFA) menetapkan lebih dulu pertanyaan mana yang termasuk kelompok (faktor) mana, lalu menguji seberapa baik kecocokannya.",
+      "beispiel": "Sembilan pertanyaan, tiga kelompok yang masing-masing terdiri atas tiga pertanyaan (lalu lintas, keamanan, waktu luang): CFI = ,92, RMSEA = ,07, dua ukuran kecocokan. Keduanya nyaris tidak memenuhi patokan yang lazim: CFI di bawah ,95, RMSEA di atas ,06.",
+      "vorsicht": "Kecocokan yang baik tidak menunjukkan bahwa kelompok-kelompok itu mengukur hal yang benar, dan model lain dapat cocok sama baiknya. Jika pengelompokan disesuaikan hanya setelah melihat data yang sama, uji itu tidak lagi independen.",
+      "fachwoerter": "indeks kesesuaian model (ukuran seberapa baik model cocok, di sini CFI dan RMSEA), analisis faktor eksploratori (mencari kelompok pertanyaan dalam data), muatan faktor terstandar (seberapa kuat suatu pertanyaan termasuk dalam faktornya).",
+      "pruefen": true
+    },
+    "fit-indizes": {
+      "titel": "Indeks kesesuaian model (CFI, TLI, RMSEA, SRMR)",
+      "kurz": "Apakah model cocok dengan data? Indeks kesesuaian model menyatakannya dalam angka. Untuk CFI dan TLI makin tinggi makin baik, untuk RMSEA dan SRMR makin rendah makin baik. Interval 90% RMSEA menunjukkan seberapa tepat estimasinya.",
+      "beispiel": "CFI = ,96, TLI = ,95, RMSEA = ,05, SRMR = ,04: menurut patokan yang lazim, kecocokannya berada dalam kisaran yang baik.",
+      "vorsicht": "Patokannya (CFI dan TLI mulai ,95, RMSEA sampai ,06, SRMR sampai ,08; Hu dan Bentler 1999) adalah aturan praktis, bukan uji; ,90 sering masih disebut dapat diterima untuk CFI dan TLI, dan pada model kecil atau sedikit orang, patokan itu tidak andal. Uji χ² menjadi signifikan pada sampel besar bahkan untuk penyimpangan kecil.",
+      "pruefen": true
+    },
+    "mehrebenen": {
+      "titel": "Model multilevel (model campuran)",
+      "kurz": "Bagaimana jika orang-orang bersarang dalam kelompok, seperti anak-anak dalam kelas? Orang-orang dalam satu kelompok sering mirip. Model multilevel memberi setiap kelompok tingkatnya sendiri, memisahkan perbedaan antarkelompok dari perbedaan di dalam kelompok.",
+      "beispiel": "Kepuasan 500 karyawan dari 25 perusahaan: 12% sebaran berada di antara perusahaan-perusahaan itu. Satu jam pelatihan lebih banyak per bulan disertai kepuasan 0,8 poin lebih tinggi (p < ,001), bahkan ketika perusahaan sudah diperhitungkan.",
+      "vorsicht": "Model ini membutuhkan beberapa kelompok dengan beberapa kasus di masing-masing; dengan kurang dari 10 kelompok, estimasi tingkat kelompok sangat tidak pasti. Model multilevel menunjukkan hubungan, bukan sebab-akibat.",
+      "statable": "Pada hasil di bawah “Untuk ahli”, Anda dapat memusatkan pada rata-rata keseluruhan atau rata-rata kelompok (efek di dalam dibandingkan efek antar kelompok), memilih kemiringan acak, dan menambahkan interaksi, juga lintas tingkat. Di bawahnya, “Bandingkan model” membandingkan model nol, efek tetap, interaksi, dan kemiringan acak dengan ML (AIC, BIC, −2LL, uji rasio kemungkinan). Jika datanya berupa orang menurut titik waktu, Statable menawarkan jalur “waktu dengan kemiringan acak per orang” (model pertumbuhan).",
+      "pruefen": true
+    },
+    "icc-mehrebenen": {
+      "titel": "ICC pada model multilevel (bagian kelompok)",
+      "kurz": "Seberapa berbeda kelompok-kelompok itu? ICC adalah bagian dari total sebaran yang berada di antara kelompok. ICC = ,12 berarti: 12% perbedaan berkaitan dengan kelompok.",
+      "beispiel": "ICC = ,12 dengan 20 kasus per kelompok: efek desain adalah 1 + (20 − 1) · ,12 = 3,28. Ketidakpastian suatu rata-rata (standar error) kemudian sekitar 1,8 kali (√3,28) lebih besar daripada yang dinyatakan oleh perhitungan yang mengabaikan kelompok.",
+      "vorsicht": "Jangan dikacaukan dengan ICC untuk kesepakatan antarpenilai: di sini ICC adalah bagian kelompok dalam sebaran. Mulai ,05 kecil, mulai ,10 sedang, mulai ,15 besar (Hox) hanyalah aturan praktis.",
+      "fachwoerter": "korelasi intrakelas (ICC: bagian dari total sebaran yang berada di antara kelompok), varians (seberapa lebar nilai-nilai menyebar), model nol (model tanpa kolom penjelas, tempat ICC dihitung).",
+      "pruefen": true
+    },
+    "meta-effekt": {
+      "titel": "Efek gabungan (pooled) (meta-analisis)",
+      "kurz": "Seberapa besar efek lintas beberapa studi bersama-sama? Efek gabungan adalah rata-rata terbobot dari semua studi: studi yang lebih tepat dihitung lebih berat. Jika efek sebenarnya bervariasi antarstudi, intervalnya menjadi lebih lebar.",
+      "beispiel": "Tiga studi: 0,40 (standar error, yaitu ketidaktepatan, 0,10), 0,20 (0,05), dan 0,30 (0,10). Bobot = 1 / standar error²: 100, 400, 100. Rata-rata terbobot = (40 + 80 + 30) / 600 = 0,25 - seperti pada satu efek sebenarnya yang sama.",
+      "vorsicht": "Rata-rata hanya bermakna jika studi-studi itu mengukur hal yang sama. Jika studi-studi itu sangat berbeda, lihat juga interval prediksi.",
+      "fachwoerter": "heterogenitas (seberapa kuat studi-studi itu berbeda satu sama lain), interval kepercayaan (rentang yang cocok dengan rata-rata efek sebenarnya, berdasarkan data), model efek acak (membiarkan efek sebenarnya bervariasi antarstudi, τ²), standar error (ukuran seberapa tidak tepat suatu studi).",
+      "pruefen": true
+    },
+    "i-quadrat": {
+      "titel": "I² dan Q (heterogenitas)",
+      "kurz": "Apakah studi-studi itu berbeda lebih dari yang diperkirakan akibat kebetulan? I² menyatakan, dalam persen, seberapa banyak perbedaan antarhasil berasal dari perbedaan nyata antarstudi. Uji Q menanyakan hal yang sama.",
+      "beispiel": "Dua belas studi: Q(11) = 42,0, p < ,001; I² = (42,0 − 11) / 42,0 = 74%. Sebutan yang sering dikutip: 25%, 50%, 75% (Higgins dkk. 2003).",
+      "vorsicht": "I² adalah proporsi, bukan ukuran seberapa besar perbedaannya: pada studi yang sangat tepat, I² menjadi besar walaupun efeknya berdekatan. Dengan sedikit studi, I² sangat tidak tepat, dan nilai yang kecil tidak membuktikan bahwa studi-studi itu sama; seberapa jauh efek sebenarnya menyebar ditunjukkan oleh τ dan interval prediksi.",
+      "pruefen": true,
+      "fachwoerter": "τ (sebaran efek sebenarnya antarstudi), interval prediksi (rentang tempat efek studi baru kemungkinan berada), Q (uji apakah hasil bervariasi lebih besar daripada yang dihasilkan kebetulan)."
+    },
+    "tau-quadrat": {
+      "titel": "τ² (variasi antarstudi)",
+      "kurz": "Seberapa berbeda efek sebenarnya dari studi-studi itu? τ² (tau kuadrat) mengukur sebaran ini; akar kuadratnya, τ, berada dalam satuan efek. Tidak seperti I², τ² mengabaikan seberapa tepat studi-studi itu.",
+      "beispiel": "τ² = 0,04, jadi τ = 0,20: dengan efek rata-rata 0,30, efek sebenarnya dari studi-studi itu biasanya menyebar sekitar 0,20 di sekelilingnya.",
+      "vorsicht": "Dengan kurang dari sekitar lima studi, τ² sangat tidak pasti dan intervalnya sangat lebar.",
+      "fachwoerter": "standar deviasi (τ adalah akar kuadrat dari τ²), varians (seberapa lebar efek sebenarnya menyebar), REML (metode yang dipakai untuk mengestimasi τ²).",
+      "pruefen": true
+    },
+    "praediktionsintervall": {
+      "titel": "Interval prediksi (meta-analisis)",
+      "kurz": "Di mana efek studi baru yang sebanding kemungkinan berada? Interval prediksi menunjukkannya. Interval ini lebih lebar daripada interval kepercayaan rata-rata, karena juga memasukkan perbedaan antarstudi.",
+      "beispiel": "Gabungan 0,20, 95% CI [0,12; 0,28], interval prediksi [−0,05; 0,45]: studi baru juga bisa menemukan efek yang mendekati 0.",
+      "vorsicht": "Dengan sedikit studi, intervalnya sangat tidak pasti.",
+      "pruefen": true
+    },
+    "forest-plot": {
+      "titel": "Forest plot",
+      "kurz": "Seperti apa hasil semua studi? Forest plot menampilkan setiap studi sebagai kotak (efek) dengan garis (interval 95%). Berlian adalah rata-ratanya; garis putus-putus berarti tidak ada efek.",
+      "beispiel": "Berlian di 0,20 dengan ujung-ujung di 0,12 dan 0,28, garis putus-putus di 0 (di 1 untuk rasio): berlian itu seluruhnya berada di sebelah kanannya - rata-ratanya berbeda dari “tidak ada efek”.",
+      "vorsicht": "Periksa apakah satu studi besar menentukan hasilnya (kotak besar) dan apakah intervalnya tumpang tindih.",
+      "fachwoerter": "interval prediksi (rentang tempat efek sebenarnya dari studi baru kemungkinan berada), efek gabungan (rata-rata semua studi, yaitu berlian).",
+      "pruefen": true
+    },
+    "funnel-plot": {
+      "titel": "Funnel plot dan uji Egger",
+      "kurz": "Apakah ada studi yang hilang? Funnel plot menampilkan setiap studi menurut efek dan ketepatannya: yang tepat berkumpul di atas, yang kurang tepat menyebar lebih lebar di bawah. Satu sisi yang hilang membuatnya miring; uji Egger memeriksanya.",
+      "beispiel": "Uji Egger p = ,03 dengan 14 studi: corongnya tampak miring secara mencolok - studi kecil menunjukkan efek yang rata-rata lebih besar.",
+      "vorsicht": "Di bawah 10 studi, uji ini memiliki daya statistik yang kecil (Sterne dkk. 2011). Corong juga bisa miring karena studi kecil dan besar memang berbeda.",
+      "fachwoerter": "standar error (ukuran seberapa tidak tepat suatu studi), asimetri (corongnya kosong di satu sisi), regresi (uji Egger memprediksi efek dari standar error).",
+      "pruefen": true
+    },
+    "mehrfachantworten-set": {
+      "titel": "Set jawaban ganda",
+      "kurz": "Bagaimana jika beberapa pilihan dapat dicentang untuk satu pertanyaan? Set jawaban ganda menggabungkan kolom-kolom dari pilihan tunggal menjadi satu pertanyaan. Statable menghitung, untuk setiap pilihan, berapa banyak orang yang menyebutkannya.",
+      "beispiel": "“Bagaimana Anda pergi bekerja?” dengan pilihan sepeda, bus, mobil: tiga kolom (dicentang = 1, selain itu 0), satu set. Di SPSS ini disebut MRSETS.",
+      "vorsicht": "Centang dari orang yang sama saling berkaitan. Karena itu tidak ada uji chi-kuadrat biasa untuk jawaban ganda.",
+      "pruefen": true
+    },
+    "prozent-der-faelle": {
+      "titel": "Persen dari kasus",
+      "kurz": "Berapa banyak orang yang menyebutkan suatu pilihan? Persen dari kasus adalah jumlah sebutan dibagi jumlah kasus yang valid. Karena setiap orang dapat menyebutkan beberapa pilihan, nilainya berjumlah lebih dari 100%.",
+      "beispiel": "18 dari 40 orang datang dengan sepeda: 18 / 40 = 45% dari kasus.",
+      "vorsicht": "Kasus yang valid adalah yang memiliki setidaknya satu centang (seperti di SPSS). Orang yang tidak mencentang apa pun tidak termasuk dalam dasarnya, kecuali “hitung kasus tanpa centang” diaktifkan.",
+      "pruefen": true
+    },
+    "prozent-der-antworten": {
+      "titel": "Persen dari jawaban",
+      "kurz": "Bagaimana semua centang terdistribusi? Persen dari jawaban adalah jumlah sebutan suatu pilihan dibagi jumlah semua sebutan. Nilai-nilai ini berjumlah 100%.",
+      "beispiel": "Sepeda disebut 18 kali, totalnya ada 60 sebutan: 18 / 60 = 30% dari jawaban.",
+      "vorsicht": "Nilai ini menyatakan bagaimana sebutan terdistribusi, bukan berapa banyak orang yang memilih suatu pilihan. Untuk itulah ada persen dari kasus.",
+      "pruefen": true
+    },
+    "shapiro-wilk": {
+      "titel": "Uji Shapiro-Wilk",
+      "kurz": "Apakah nilai-nilainya tampak berasal dari distribusi normal? Uji Shapiro-Wilk memeriksanya. Jika p lebih kecil dari ,05, distribusinya tampak menyimpang; jika tidak, uji ini tidak menentangnya.",
+      "beispiel": "Waktu reaksi 25 orang: W = ,73 (1 berarti kecocokan sempurna), p < ,001. Distribusinya mencong; median menggambarkan pusatnya dengan lebih baik.",
+      "vorsicht": "Dengan banyak orang, uji ini menandai bahkan penyimpangan kecil, dengan sedikit orang uji ini melewatkan penyimpangan besar. Hasil yang tidak signifikan tidak membuktikan distribusi normal; plot Q-Q melengkapinya.",
+      "pruefen": true
+    },
+    "qq-diagramm": {
+      "titel": "Plot Q-Q",
+      "kurz": "Apakah nilai-nilainya mengikuti distribusi normal? Plot Q-Q menempatkan setiap nilai terukur sebagai titik terhadap nilai yang akan diberikan distribusi normal. Jika titik-titiknya berada dekat garis, berarti cocok.",
+      "beispiel": "Untuk tinggi badan 100 orang dewasa, titik-titiknya hampir tepat berada pada garis. Untuk waktu tunggu di layanan telepon, titik-titik itu melengkung ke atas di ujung atas: beberapa waktu tunggu yang sangat lama.",
+      "vorsicht": "Kurva menunjukkan kemencengan, titik-titik tunggal yang jauh di ujung-ujung menunjukkan pencilan. Dengan sedikit nilai, titik-titik bergoyang secara acak di sekitar garis; uji Shapiro-Wilk merangkum penyimpangan dalam satu angka tetapi tidak menggantikan melihat plotnya.",
+      "pruefen": true
+    },
+    "partialkorrelation": {
+      "titel": "Korelasi parsial",
+      "kurz": "Apakah dua angka masih berjalan bersama ketika angka ketiga dijaga tetap? Korelasi parsial menunjukkan hubungan antara dua angka setelah bagian yang disebabkan oleh satu atau lebih angka lain dihilangkan dari keduanya.",
+      "beispiel": "Penjualan es krim dan sengatan matahari berhubungan kuat (r = ,62). Dengan suhu dihilangkan (r = ,80 dan ,75 dengan keduanya), nyaris tidak ada yang tersisa: pr = ,05.",
+      "vorsicht": "Hanya bagian garis lurus dari yang diukur dan dipilih yang dihilangkan. Apakah angka ketiga merupakan penyebab keduanya ditentukan oleh substansi bidangnya, bukan oleh perhitungan: menghilangkan efek bersama dari kedua angka bahkan dapat menciptakan hubungan semu.",
+      "pruefen": true
+    },
+    "roc-auc": {
+      "titel": "Kurva ROC dan luas di bawah kurva (AUC)",
+      "kurz": "Seberapa baik suatu nilai terukur memisahkan orang yang terkena dari yang tidak terkena? Kurva ROC menunjukkannya untuk setiap titik potong yang mungkin, dan luasnya (AUC) merangkumnya: ,50 berarti kebetulan, 1 pemisahan sempurna.",
+      "beispiel": "AUC = ,85: jika Anda menarik satu orang yang terkena dan satu yang tidak, orang yang terkena memiliki nilai yang lebih mencolok pada 85% kasus. Pada titik potong 20 poin, tes mendeteksi 80% dari yang terkena dan 78% dari yang lain; indeks Youden ,80 + ,78 − 1 = ,58 dipakai untuk memilih titik potong.",
+      "vorsicht": "Titik potong dipilih pada data ini persis dan biasanya berkinerja lebih buruk pada data baru. Indeks Youden tidak tahu kesalahan mana yang lebih berat.",
+      "fachwoerter": "sensitivitas (proporsi orang yang terkena yang terdeteksi oleh tes), spesifisitas (proporsi orang yang tidak terkena yang dilewatkan dengan benar oleh tes), ambang batas (mulai dari skor ini, seseorang dianggap terdeteksi), indeks Youden (J = sensitivitas + spesifisitas − 1).",
+      "pruefen": true
+    },
+    "hazard-ratio": {
+      "titel": "Rasio hazard (HR)",
+      "kurz": "Seberapa lebih cepat atau lebih lambat suatu kejadian terjadi pada satu kelompok? Rasio hazard (HR) membandingkan risiko terjadinya kejadian pada saat berikutnya antarkelompok. 1 berarti tidak ada perbedaan.",
+      "beispiel": "Waktu hingga kecelakaan kerja pertama, dengan pelatihan dibanding tanpa: HR = 0,70, interval 95% [0,52; 0,94]. Dengan pelatihan, risiko kecelakaan pada saat berikutnya adalah 0,70 kali sebesar itu pada setiap titik waktu. Intervalnya tidak memuat 1.",
+      "vorsicht": "HR bukanlah rasio risiko: HR = 1,8 tidak berarti kejadian itu 1,8 kali lebih mungkin. HR dapat berubah seiring waktu; satu nilai kemudian hanya merupakan rata-rata.",
+      "fachwoerter": "hazard (risiko mengalami kejadian pada saat berikutnya), hazard proporsional (rasionya tetap sama dari waktu ke waktu), regresi Cox (metode yang mengestimasi HR), Wald (metode yang lazim untuk intervalnya).",
+      "pruefen": true
+    },
+    "proportionale-hazards": {
+      "titel": "Hazard proporsional",
+      "kurz": "Apakah perbedaan antara dua kelompok tetap sama dari waktu ke waktu? Rasio hazard (HR) mengasumsikan bahwa rasio risiko selalu sama. Sebuah uji (cox.zph) memeriksanya; p di bawah ,05 menentangnya.",
+      "beispiel": "p = ,031 untuk kelompok itu: rasionya tidak konstan. Jika kurva berpotongan pada plot, itu tanda yang jelas.",
+      "vorsicht": "Dengan banyak orang, uji ini bereaksi bahkan terhadap penyimpangan kecil, dengan sedikit orang uji ini melewatkan penyimpangan besar.",
+      "pruefen": true
+    },
+    "risikodifferenz": {
+      "titel": "Selisih risiko (RD)",
+      "kurz": "Seberapa besar risiko lebih tinggi pada satu kelompok? Selisih risiko (RD) adalah risiko satu kelompok dikurangi risiko kelompok lain, sebagai proporsi atau dalam poin persentase. 0 berarti tidak ada perbedaan.",
+      "beispiel": "Kecelakaan kerja dalam setahun: 36 dari 400 dengan pelatihan (9%), 60 dari 400 tanpa pelatihan (15%). RD = ,09 − ,15 = −,060, interval 95% [−,105; −,015]: 6 poin persentase lebih sedikit dengan pelatihan.",
+      "vorsicht": "Selisih risiko menggambarkan suatu perbedaan; selisih ini tidak membuktikan sebab-akibat, dan pada studi kasus-kontrol (orang yang terkena dan tidak terkena dicari secara terpisah) tidak dapat diinterpretasikan. Statable menghitung intervalnya menurut Newcombe, yang lebih aman pada angka kecil daripada metode yang lebih sederhana.",
+      "fachwoerter": "interval Wald (aproksimasi sederhana untuk interval, kurang aman pada angka kecil), interval Newcombe (metode yang dipakai Statable).",
+      "pruefen": true
+    },
+    "relatives-risiko": {
+      "titel": "Risiko relatif (RR)",
+      "kurz": "Berapa kali lebih besar risiko pada satu kelompok? Risiko relatif (RR) adalah risiko satu kelompok dibagi risiko kelompok lain. 1 berarti tidak ada perbedaan; 0,5 berarti separuhnya.",
+      "beispiel": "Kecelakaan kerja yang sama: RR = 0,09 / 0,15 = 0,60, interval 95% [0,41; 0,89]. Dengan pelatihan, risikonya 0,60 kali sebesar itu. Intervalnya tidak memuat 1.",
+      "vorsicht": "Jika satu kelompok sama sekali tidak memiliki kejadian, interval RR tidak dapat dihitung; Statable tidak mengoreksi secara diam-diam. RR berlaku untuk kelompok yang diikuti dari waktu ke waktu dan untuk eksperimen, bukan untuk studi kasus-kontrol.",
+      "pruefen": true
+    },
+    "nnt": {
+      "titel": "NNT (number needed to treat)",
+      "kurz": "Pada berapa orang kita harus melakukan intervensi agar satu kejadian lebih sedikit terjadi? NNT (number needed to treat) adalah 1 dibagi selisih risiko. NNTB berarti manfaat tambahan, NNTH berarti kerugian tambahan.",
+      "beispiel": "Dengan RD = −,06, NNTB = 1 / ,06 = 16,7 (interval 95% NNTB 9,5 sampai 67,0): pada sekitar 17 orang yang dilatih, satu kecelakaan lebih sedikit terjadi.",
+      "vorsicht": "Interval NNT melewati tak hingga ketika selisih risiko juga bisa 0 (misalnya NNTH 25 sampai ∞ sampai NNTB 10) - jangan pernah membacanya sebagai interval dengan angka negatif. Apakah suatu kejadian diinginkan harus dinyatakan oleh orangnya.",
+      "pruefen": true
+    },
+    "typical-error": {
+      "titel": "Typical error (TE)",
+      "kurz": "Seberapa jauh satu pengukuran biasanya menyimpang pada pengulangan? Itulah yang dinyatakan typical error (TE), dalam satuan pengukuran. TE dihitung dari dua pengukuran pada orang yang sama.",
+      "beispiel": "Tinggi lompatan 8 orang pada dua hari: selisih antarhari memiliki standar deviasi 2,1 cm. TE = 2,1 / √2 = 1,5 cm: satu lompatan biasanya menyimpang 1,5 cm.",
+      "vorsicht": "TE hanya berlaku jika tidak ada yang berubah di antara kedua pengukuran. TE sama dengan standar error pengukuran dari pengukuran berulang, bukan yang berasal dari keterkaitan pertanyaan-pertanyaan suatu skala.",
+      "fachwoerter": "reliabilitas (seberapa dapat diandalkan suatu pengukuran jika diulang), standar deviasi (SD) selisih (sebaran khas selisih antara kedua pengukuran), standar error pengukuran (galat khas satu pengukuran).",
+      "pruefen": true
+    },
+    "lilliefors": {
+      "titel": "Uji Lilliefors",
+      "kurz": "Apakah nilai-nilainya cocok dengan distribusi normal? Uji Lilliefors memeriksanya, bahkan ketika rata-rata dan sebarannya lebih dulu diestimasi dari data. p di bawah ,05 berarti distribusinya menyimpang dari normal.",
+      "beispiel": "Lama tinggal 30 pengunjung dalam menit: D = ,17, p = ,033 (versi Lilliefors dari uji Kolmogorov-Smirnov). Distribusinya menyimpang dari distribusi normal.",
+      "vorsicht": "p di atas ,05 tidak berarti data berdistribusi normal, hanya bahwa uji ini tidak menentangnya. Dengan sedikit orang, uji ini melewatkan penyimpangan besar; plot Q-Q menunjukkan lebih banyak.",
+      "fachwoerter": "standar deviasi (sebaran khas nilai di sekitar rata-ratanya), uji Kolmogorov-Smirnov (membandingkan distribusi data dengan distribusi normal).",
+      "pruefen": true
+    },
+    "chi-quadrat-anpassung": {
+      "titel": "Uji kesesuaian chi-kuadrat (χ²)",
+      "kurz": "Apakah distribusi antarkategori cocok dengan yang diharapkan? Uji kesesuaian χ² memeriksa apakah frekuensi yang dihitung cocok dengan proporsi yang diberikan, misalnya bagian yang sama. p di bawah ,05 berarti: frekuensi itu menyimpang dari yang diharapkan.",
+      "beispiel": "Sebuah dadu, 120 lemparan, 20 diharapkan untuk setiap sisi. Teramati: 14, 22, 18, 25, 19, 22. χ²(5, N = 120) = 74 / 20 = 3,7, p = ,593: frekuensinya tidak menentang dadu yang adil.",
+      "vorsicht": "Jika kurang dari 1 diharapkan dalam suatu kategori, atau kurang dari 5 pada lebih dari seperlima kategori, p tidak pasti (kebiasaan menurut Cochran 1954). Hasil yang tidak signifikan tidak menegaskan yang diharapkan.",
+      "pruefen": true
+    },
+    "ladung": {
+      "titel": "Muatan faktor",
+      "kurz": "Seberapa kuat suatu pertanyaan (aitem) termasuk dalam suatu faktor atau komponen, yaitu sekelompok pertanyaan? Muatan faktor menunjukkannya: pada rotasi siku-siku, korelasi (−1 sampai 1) antara keduanya. Tanda minus hanya menunjukkan arah, yang ditentukan oleh cara komponen itu diorientasikan. Untuk kekuatan, yang dihitung adalah besar mutlaknya.",
+      "beispiel": "Pertanyaan A: ,70 pada komponen 1, ,10 pada komponen 2: termasuk komponen 1. Pertanyaan B: −,65 pada komponen 1: juga termasuk, hanya saja berjalan ke arah sebaliknya.",
+      "vorsicht": "Batas pemisahnya (sering ,30 sampai ,50) hanyalah kebiasaan. Berada di atasnya dua kali disebut cross-loading: periksa berdasarkan isi; lazimnya pertanyaan itu ditempatkan pada muatan yang lebih besar, sebagian aturan menghitung setiap muatan di atas batas (tugas Anda yang menentukan). Sel kosong dalam tabel adalah muatan kecil yang disembunyikan."
+    },
+    "eigenwert": {
+      "titel": "Nilai eigen dan kriteria Kaiser",
+      "kurz": "Seberapa banyak perbedaan dalam jawaban yang ditangkap oleh suatu komponen (sekelompok pertanyaan)? Nilai eigen menunjukkannya. Dibagi jumlah pertanyaan, hasilnya adalah bagian komponen itu dari varians. Kumulatif berarti beberapa komponen dijumlahkan.",
+      "beispiel": "Dengan 6 pertanyaan: komponen 1 bernilai 2,4 (40%), komponen 2 bernilai 1,2 (20%). Kumulatif 3,6 dari 6, jadi 60%.",
+      "vorsicht": "Kriteria Kaiser mempertahankan komponen dengan nilai eigen di atas 1. Dalam simulasi, kriteria ini sering menyebutkan terlalu banyak dan tidak boleh menentukan sendirian. Analisis paralel melengkapinya.",
+      "fachwoerter": "varians (seberapa lebar jawaban menyebar), analisis paralel (membandingkan nilai eigen dengan nilai eigen data acak)."
+    },
+    "kommunalitaet": {
+      "titel": "Komunalitas (h²)",
+      "kurz": "Seberapa banyak dari satu pertanyaan yang dijelaskan oleh komponen (faktor) secara bersama-sama? Itulah komunalitas (h²): bagian perbedaan jawaban atas pertanyaan ini yang ditangkap bersama oleh semua komponen. Untuk komponen yang tidak berkorelasi, nilainya adalah jumlah kuadrat muatan faktor.",
+      "beispiel": "Sebuah pertanyaan bermuatan ,6 dan ,5 pada dua komponen: h² = ,36 + ,25 = ,61, jadi sekitar 61%.",
+      "vorsicht": "Rendah dapat berarti banyak galat acak, yang tidak pernah dijelaskan oleh faktor bersama, atau bahwa pertanyaan itu secara isi tidak cocok dengan yang lain."
+    },
+    "rotation": {
+      "titel": "Rotasi (ortogonal dan oblik)",
+      "kurz": "Bagaimana penetapan pertanyaan menjadi lebih jelas? Melalui rotasi: sumbu-sumbu solusi diputar sampai setiap pertanyaan bermuatan terutama pada satu faktor. Banyak posisi cocok sama baiknya dengan korelasinya. Rotasi memilih satu yang strukturnya jelas.",
+      "beispiel": "Ortogonal (siku-siku, mis. varimax): faktor-faktornya tetap tidak berkorelasi. Oblik (miring, mis. promax): faktor-faktornya boleh berhubungan.",
+      "vorsicht": "Rotasi ortogonal mengubah muatan faktor, bukan komunalitas (seberapa banyak dari satu pertanyaan yang dijelaskan faktor secara bersama-sama). Rotasi oblik tidak memaksakan hubungan: dengan faktor yang tidak berkorelasi, hasilnya mirip dengan yang ortogonal."
+    },
+    "explorative-faktorenanalyse": {
+      "titel": "Analisis faktor eksploratori (EFA)",
+      "kurz": "Apakah ada sifat bersama di balik pertanyaan-pertanyaan itu, dan yang mana? Analisis faktor eksploratori mencarinya tanpa struktur yang ditetapkan sebelumnya. Analisis ini mengasumsikan adanya penyebab bersama. Hal itu harus masuk akal secara isi lebih dulu, sebelum statistik apa pun.",
+      "beispiel": "Sepuluh pertanyaan tentang kesejahteraan menghasilkan dua kelompok. Apakah ada dua sifat, ditentukan oleh pengetahuan bidangnya.",
+      "vorsicht": "Struktur yang ditemukan pada data yang sama dengan sendirinya cocok dengan data itu. Struktur itu hanya dapat dikonfirmasi pada data baru.",
+      "fachwoerter": "konfirmatori (menguji struktur yang ditetapkan sebelumnya)."
+    },
+    "bartlett-test": {
+      "titel": "Uji Bartlett (kelayakan untuk analisis faktor)",
+      "kurz": "Apakah pertanyaan-pertanyaan itu berhubungan sama sekali? Uji sferisitas Bartlett memeriksa apakah semua korelasi bernilai nol (matriks identitas: nol kecuali diagonalnya). Signifikan hanya berarti: tidak semuanya nol.",
+      "beispiel": "Dengan 30 orang, hubungan sedang bisa tidak terdeteksi. Dengan 5000 orang, bahkan hubungan yang sangat kecil menjadi signifikan.",
+      "vorsicht": "Statistiknya sangat bergantung pada ukuran sampel. Dengan banyak kasus, hampir selalu signifikan dan kemudian tidak banyak mengatakan tentang kelayakan. Jangan dikacaukan dengan uji sferisitas Mauchly untuk pengukuran berulang.",
+      "fachwoerter": "signifikan (nilai p berada di bawah batas yang dipilih, biasanya ,05), statistik uji (angka yang dihitung oleh suatu uji dari data)."
+    },
+    "hauptkomponenten": {
+      "titel": "Analisis komponen utama (PCA) dan analisis faktor",
+      "kurz": "Apakah pertanyaan-pertanyaan hanya diringkas, atau sedang dicari sifat bersama? Analisis komponen utama (PCA) membagi seluruh varians. Analisis faktor hanya menjelaskan bagian yang dimiliki bersama. Sisa setiap pertanyaan (keunikannya sendiri ditambah galat pengukuran) disisihkan sebagai bagian unik.",
+      "beispiel": "Dengan sedikit pertanyaan per faktor, muatan PCA biasanya lebih tinggi daripada muatan faktor, karena memasukkan sisanya.",
+      "vorsicht": "Sering mirip, tidak selalu: perbedaan terutama tampak pada komunalitas yang rendah.",
+      "fachwoerter": "varians (seberapa lebar jawaban menyebar), keunikan (bagian suatu pertanyaan yang tidak dijelaskan oleh faktor-faktor)."
+    },
+    "fallzahl-faktorenanalyse": {
+      "titel": "Ukuran sampel untuk analisis faktor",
+      "kurz": "Berapa banyak orang yang dibutuhkan analisis faktor? Itu kurang bergantung pada jumlah pertanyaan dibanding dua hal: seberapa tinggi komunalitasnya (seberapa banyak dari satu pertanyaan yang dijelaskan faktor-faktor), dan berapa banyak pertanyaan yang secara jelas menentukan setiap faktor? Makin tinggi keduanya, makin kecil sampel yang dibutuhkan.",
+      "beispiel": "Komunalitas tinggi, empat pertanyaan kuat per faktor: sedikit orang dapat sudah cukup. Komunalitas rendah, dua pertanyaan lemah per faktor: bahkan banyak orang bisa jadi terlalu sedikit.",
+      "vorsicht": "Rasio tetap seperti “sepuluh orang per pertanyaan” melewatkan hal ini."
+    },
+    "umpolen": {
+      "titel": "Membalik skor",
+      "kurz": "Apakah semua pertanyaan dihitung ke arah yang sama? Jika tidak, balik skornya: pertanyaan yang terbalik dikode ulang sehingga “tinggi” selalu berarti hal yang sama. Pada skala 1 sampai 5, angka 1 menjadi 5.",
+      "beispiel": "“Saya sering lelah” di samping “Saya punya banyak energi”: tanpa membalik skor, keduanya saling meniadakan sebagian dalam jumlah. Alpha (seberapa berkaitan pertanyaan-pertanyaan itu) turun dan bahkan dapat jatuh di bawah nol.",
+      "vorsicht": "Tanda minus pada muatan faktor hanyalah petunjuk; redaksi pertanyaan menunjukkan apakah suatu pertanyaan berjalan ke arah sebaliknya."
+    },
+    "eingeschraenkte-streuung": {
+      "titel": "Sebaran yang terbatas (pembatasan rentang)",
+      "kurz": "Mengapa suatu hubungan lebih kecil ketika semua orang mirip? Sebaran yang terbatas: dengan irisan sempit dari suatu sifat, korelasi turun, bahkan untuk hubungan yang sama. Ini juga menurunkan muatan faktor.",
+      "beispiel": "Usia dan tinggi badan berkaitan erat pada anak usia 2 sampai 16 tahun. Di antara anak usia 10 sampai 11 tahun saja, korelasinya jauh lebih kecil.",
+      "vorsicht": "r yang kecil dalam kelompok yang seragam tidak berarti hubungannya kecil di mana-mana. Reliabilitas (bagian perbedaan nyata dari semua perbedaan) juga lebih rendah di sana, karena perbedaan nyatanya sedikit."
+    },
+    "inter-item-korrelation": {
+      "titel": "Rata-rata korelasi antaraitem",
+      "kurz": "Seberapa erat pertanyaan-pertanyaan dalam satu skala berkaitan rata-rata? Rata-rata korelasi antaraitem menunjukkannya (aitem = pertanyaan): rata-rata korelasi setiap pasangan. Nilai ini tidak bergantung pada jumlah pertanyaan. Alpha juga naik dengan lebih banyak pertanyaan.",
+      "beispiel": "Dua skala dengan alpha ,80: 4 pertanyaan dengan rata-rata korelasi ,50, atau 12 pertanyaan dengan hanya ,25.",
+      "vorsicht": "Alpha yang tinggi dari banyak pertanyaan tidak membuktikan skala yang terpadu. Skala pendek dengan alpha yang rendah mengukur secara tidak tepat, walaupun pendeknya itulah penyebabnya.",
+      "fachwoerter": "alpha (seberapa kuat jawaban dalam satu skala saling berkaitan)."
+    },
+    "eindimensionalitaet": {
+      "titel": "Unidimensionalitas",
+      "kurz": "Apakah semua pertanyaan mengukur satu sifat saja? Itulah unidimensionalitas. Analisis faktor dapat memeriksanya. Alpha tidak menunjukkannya: alpha mengukur seberapa terhubung pertanyaan-pertanyaan itu, bukan berapa banyak sifat di baliknya.",
+      "beispiel": "Dua kelompok yang masing-masing terdiri atas 5 pertanyaan, korelasi ,60 di dalam kelompok, 0 antarkelompok. Alpha kesepuluhnya: sekitar ,78, walaupun yang diukur dua sifat.",
+      "vorsicht": "Jika dua kelompok memiliki nilai eigen di atas 1, itu mengisyaratkan dua sifat, bukan bukti.",
+      "fachwoerter": "alpha (seberapa kuat jawaban dalam satu skala saling berkaitan), nilai eigen (seberapa banyak sebaran yang ditangkap oleh suatu komponen)."
+    },
+    "reliabilitaet-wege": {
+      "titel": "Cara mengestimasi reliabilitas (alpha, tes ulang, belah dua)",
+      "kurz": "Mengapa metode yang berbeda memberi reliabilitas yang berbeda untuk skala yang sama? Alpha, tes ulang (mengukur dua kali), dan belah dua (membandingkan dua bagian) adalah cara yang berbeda untuk mengestimasi reliabilitas yang sama. Masing-masing mengasumsikan hal yang berbeda.",
+      "beispiel": "Alpha mengasumsikan, antara lain, bahwa semua pertanyaan mengukur satu sifat. Tes ulang mengasumsikan bahwa sifat itu tidak berubah dan ingatan tidak membantu.",
+      "vorsicht": "Hanya jika asumsinya terpenuhi, angka-angkanya seharusnya sepakat. Perbedaan menunjukkan pelanggaran atau kebetulan."
+    },
+    "validitaet": {
+      "titel": "Validitas",
+      "kurz": "Apakah skala benar-benar mengukur apa yang dimaksudkan? Itulah validitas. Reliabilitas diperlukan untuknya, tetapi tidak cukup: pita ukur mengukur panjang secara andal, tetapi tidak mengukur berat.",
+      "beispiel": "Alpha yang tinggi menunjukkan bahwa pertanyaan-pertanyaan itu berkaitan, bukan apakah pertanyaan-pertanyaan itu menangkap apa yang dimaksud. Itu membutuhkan bukti dari isinya, dari perbandingan dengan standar luar (kriteria), dan tentang sifat yang dimaksud (konstruk).",
+      "vorsicht": "Pertanyaan yang hampir identik mendorong alpha naik tetapi hanya mencakup irisan yang sempit. Validitas berkaitan dengan interpretasi skor, bukan dengan tes itu sendiri."
+    },
+    "antwortstufen": {
+      "titel": "Pilihan jawaban",
+      "kurz": "Mengapa jumlah pilihan jawaban penting? Pilihan jawaban adalah tingkatan yang ditawarkan suatu pertanyaan, mis. 1 sampai 4. Alpha dari korelasi Pearson mengasumsikan nilai yang bertingkat halus. Dengan sedikit tingkatan, hubungan menjadi terlalu kecil dan reliabilitas diremehkan.",
+      "beispiel": "Sikap yang sama pada 3 atau 7 tingkatan: dengan 3, perbedaan halus hilang, sehingga korelasi dan alpha turun.",
+      "vorsicht": "Mulai berapa tingkatan sudah cukup belum disepakati (sering lima sampai tujuh). Lebih banyak tingkatan tidak otomatis lebih baik.",
+      "fachwoerter": "korelasi Pearson (ukuran standar hubungan antara dua besaran yang bertingkat halus)."
+    },
+    "messfehler": {
+      "titel": "Galat pengukuran",
+      "kurz": "Mengapa pengukuran yang tidak tepat mendistorsi analisis? Galat pengukuran adalah simpangan acak dari nilai sebenarnya. Pada variabel penjelas (prediktor), galat ini melemahkan efek variabel itu (atenuasi). Galat acak pada hasil tidak membiaskan B dengan cara ini.",
+      "beispiel": "Seorang mediator (variabel yang dilalui suatu pengaruh) diukur secara tidak tepat. Sebagian pengaruh melewatinya dan jatuh ke jalur langsung: efek mediator terlalu kecil, efek langsung terlalu besar.",
+      "vorsicht": "Hal itu tidak mengatakan apa pun tentang jalur yang sebenarnya dilalui pengaruh itu."
+    },
+    "abhaengige-groesse": {
+      "titel": "Variabel terikat",
+      "kurz": "Apa yang diprediksi, dan dari apa? Variabel terikat (y) adalah yang diprediksi. Variabel bebas (x) adalah dasar prediksinya. “Regresi y pada x” berarti: y diprediksi dari x.",
+      "beispiel": "Biaya pemanasan diprediksi dari suhu luar ruangan. Biaya pemanasan adalah variabel terikat.",
+      "vorsicht": "“Terikat” hanya berarti: diprediksi, bukan: disebabkan oleh x. Tukar perannya dan Anda mendapatkan garis yang berbeda."
+    },
+    "kleinste-quadrate": {
+      "titel": "Kuadrat terkecil (metode kuadrat terkecil)",
+      "kurz": "Bagaimana menempatkan garis terbaik melalui titik-titik? Kuadrat terkecil memilih garis dengan jumlah kuadrat simpangan yang paling kecil. Simpangan diukur ke arah y: teramati dikurangi diprediksi. Itulah residual.",
+      "beispiel": "Titik pada y = 10, garis memprediksi 8: simpangan 2, kuadratnya 4.",
+      "vorsicht": "Yang diukur bukanlah jarak terpendek ke garis. Pengkuadratan membuat simpangan yang besar dihitung lebih berat."
+    },
+    "standardfehler-schaetzer": {
+      "titel": "Standar error estimasi",
+      "kurz": "Seberapa jauh pengamatan biasanya berada dari prediksi? Standar error estimasi menyatakannya. Nilai ini memiliki satuan variabel terikat. Lebih kecil berarti prediksi lebih tepat.",
+      "beispiel": "Waktu pengiriman dalam hari, nilai 2: waktu sebenarnya biasanya berbeda sekitar 2 hari.",
+      "vorsicht": "“Biasanya” bukanlah nilai maksimum. Jangan dikacaukan dengan standar error suatu B, yang menggambarkan seberapa tepat B diestimasi."
+    },
+    "kollinearitaet": {
+      "titel": "Kolinearitas (toleransi, VIF)",
+      "kurz": "Apakah dua prediktor mengukur hal yang hampir sama? Maka terjadi kolinearitas: keduanya saling tumpang tindih. Toleransi adalah bagian sebaran suatu prediktor yang tidak dijelaskan oleh yang lain. VIF adalah 1 dibagi toleransi. Makin besar VIF, makin besar standar error B-nya. Estimasinya tetap tidak bias.",
+      "beispiel": "Luas lantai dan jumlah ruangan: toleransi ,15 berarti luas lantai hanya menyisakan 15% sebaran jumlah ruangan yang tidak dijelaskan.",
+      "vorsicht": "Seluruh model bisa signifikan walaupun tidak ada B yang signifikan. Batas VIF (5 atau 10) adalah kebiasaan.",
+      "fachwoerter": "standar error (seberapa besar nilai yang diestimasi biasanya bervariasi), signifikan (nilai p berada di bawah batas yang dipilih, biasanya ,05).",
+      "statable": "Jalankan regresinya dan buka blok “Memeriksa regresi: kolinearitas dan kasus yang tidak biasa” di bawah hasil. Blok itu menampilkan toleransi, VIF, dan sumbangan tersendiri (sr²) untuk setiap prediktor."
+    },
+    "dummy-variable": {
+      "titel": "Variabel dummy (variabel 0/1)",
+      "kurz": "Bagaimana memasukkan suatu kelompok ke dalam regresi? Sebagai variabel dummy: 0 untuk kelompok acuan, 1 untuk kelompok lainnya. Maka konstanta adalah rata-rata acuan, B adalah selisih rata-rata. Dengan q kelompok, Anda membutuhkan q - 1 dummy.",
+      "beispiel": "Pupuk A (0), B (1): konstanta 5,0, B = 1,2. Rata-rata B: 6,2.",
+      "vorsicht": "Tanda B bergantung pada acuannya. Uji B sama dengan uji-t sampel bebas dengan sebaran yang sama."
+    },
+    "residuen": {
+      "titel": "Residual",
+      "kurz": "Seberapa jauh suatu titik dari prediksi? Itulah residualnya: teramati dikurangi diprediksi. Normalitas disyaratkan pada galat ini, bukan pada nilai mentah. Anda memeriksa residual dengan histogram atau plot Q-Q.",
+      "beispiel": "Teramati 70 kg, diprediksi 66: residual +4.",
+      "vorsicht": "Nilai mentah dari beberapa kelompok bercampur dan dapat tampak mencong walaupun residualnya baik-baik saja.",
+      "fachwoerter": "plot Q-Q (grafik: jika titik-titik berada dekat garis, nilai-nilai cocok dengan distribusi normal)."
+    },
+    "heteroskedastizitaet": {
+      "titel": "Heteroskedastisitas (sebaran galat yang tidak sama)",
+      "kurz": "Apakah simpangan menyebar sama di mana-mana? Jika tidak, itulah heteroskedastisitas. Pada plot residual, hal ini sering tampak sebagai corong. Kemiringannya tetap tidak bias tetapi kurang tepat, dan standar error yang lazim menjadi keliru. Standar error yang kokoh memperhitungkan sebaran yang tidak sama itu.",
+      "beispiel": "Diprediksi 1000: simpangan sekitar ±100. Pada 5000: ±600.",
+      "vorsicht": "Kemiringan dibiaskan oleh nonlinearitas, variabel yang terlewat, atau galat pengukuran pada x, bukan oleh hal ini.",
+      "fachwoerter": "plot residual (gambar simpangan dari prediksi), kemiringan (B: perubahan per satuan), standar error (seberapa besar suatu estimasi biasanya bervariasi), tidak bias (tepat secara rata-rata)."
+    },
+    "hebelwert": {
+      "titel": "Leverage",
+      "kurz": "Seberapa kuat satu titik dapat menarik garis? Leverage bertambah seiring jarak nilai x titik itu dari rata-rata x. Titik yang jauh menarik garis ke arahnya.",
+      "beispiel": "Sepuluh orang berlatih 20 sampai 30 jam, satu orang 90 jam: leverage tinggi.",
+      "vorsicht": "Residualnya (jarak dari garis) bisa kecil justru karena titik itu menarik garis ke arahnya. Jadi bandingkan garis dengan dan tanpa titik itu."
+    },
+    "f-test": {
+      "titel": "Uji F (analisis varians dan regresi)",
+      "kurz": "Adakah perbedaan atau efek sama sekali? Uji F memeriksanya secara keseluruhan. Regresi: apakah semua B bernilai nol sekaligus? Analisis varians: apakah semua rata-rata kelompok sama? Dalam analisis varians, F adalah sebaran (kuadrat tengah) antar kelompok dibagi sebaran dalam kelompok.",
+      "beispiel": "Tiga metode pengajaran: antar kelompok 6,0, dalam kelompok 2,0. F = 3,0.",
+      "vorsicht": "F yang signifikan berarti: setidaknya dua rata-rata berbeda. Yang mana, hanya perbandingan berpasangan yang menunjukkannya.",
+      "fachwoerter": "kuadrat tengah (jumlah kuadrat simpangan dibagi derajat kebebasan, ukuran sebaran), hipotesis nol (asumsi “tidak ada perbedaan” yang diperiksa oleh uji)."
+    },
+    "schrittweise-regression": {
+      "titel": "Regresi bertahap (pemilihan otomatis)",
+      "kurz": "Bagaimana suatu program memilih prediktor sendiri? Regresi bertahap menambah atau menghapus prediktor berdasarkan kriteria statistik, seperti nilai p. Yang sering disebut: masuk pada ,05, keluar pada ,10.",
+      "beispiel": "Dari 20 prediktor sewa yang mungkin, empat yang tersisa.",
+      "vorsicht": "Pemilihan ini tidak mengenal teori maupun penyebab dan bergantung pada data ini. Apakah prediktornya masuk akal atau merupakan penyebab tetap terbuka."
+    },
+    "extrapolation": {
+      "titel": "Ekstrapolasi (prediksi di luar data)",
+      "kurz": "Apakah prediksi berlaku jauh di luar nilai yang diamati? Memprediksi di sana disebut ekstrapolasi. Hasilnya kurang dapat diandalkan: interval kepercayaan prediksi melebar makin jauh x dari rata-rata x, dan garisnya belum tentu berlaku di sana.",
+      "beispiel": "Tanaman diukur pada minggu 1 sampai 8, 5 cm per minggu. Minggu ke-80 akan menghasilkan 400 cm.",
+      "vorsicht": "R² yang tinggi tidak mengubah hal ini."
+    },
+    "zusammenhang-ursache": {
+      "titel": "Asosiasi dan sebab (korelasi, kausalitas)",
+      "kurz": "Apakah suatu hubungan menunjukkan bahwa satu hal menyebabkan yang lain? Tidak dengan sendirinya. B menunjukkan: rata-rata, lebih banyak x disertai lebih banyak atau lebih sedikit y, pada nilai yang sama dari prediktor lain dalam model. Itu adalah asosiasi. Kausalitas tidak otomatis mengikutinya; suatu penyebab bersama juga dapat menghasilkan keduanya.",
+      "beispiel": "Penjualan es krim makin banyak, sengatan matahari makin banyak: keduanya mengikuti sinar matahari.",
+      "vorsicht": "Data untuk wilayah menunjukkan hubungan antarwilayah, bukan untuk orang-orang di dalamnya."
+    },
+    "lineares-modell": {
+      "titel": "Model linier (linier dalam parameter)",
+      "kurz": "Apakah regresi linier hanya dapat menggambarkan garis lurus? Tidak. “Linier” merujuk pada parameternya (B): setiap B hanya mengalikan satu prediktor, semuanya dijumlahkan. Dengan suku kuadrat (x dan x² sebagai prediktor), model itu menyesuaikan sebuah kurva.",
+      "beispiel": "Hasil = 2 + 3x - 0,2x²: sebuah kurva, tetapi model linier.",
+      "vorsicht": "x² hanyalah prediktor lain. Ujinya (Sig.) menunjukkan apakah suku itu diperlukan, karena R² naik pada setiap penambahan."
+    },
+    "scheinregression": {
+      "titel": "Regresi semu (tren pada deret waktu)",
+      "kurz": "Apakah R² yang tinggi antara dua deret waktu menunjukkan hubungan yang nyata? Belum tentu. Jika keduanya naik seiring waktu (tren), hasilnya adalah regresi semu. Tanda peringatan: R² yang sangat tinggi dan residual yang mirip (autokorelasi), Durbin-Watson mendekati 0.",
+      "beispiel": "Sepeda di kota A dan impor kopi negara B naik setiap tahun: R² = ,95.",
+      "vorsicht": "Dengan memakai perubahan dari tahun ke tahun, R² turun jelas jika sebelumnya hanya tren.",
+      "fachwoerter": "Durbin-Watson (nilai uji untuk autokorelasi: mendekati 2 tidak ada, mendekati 0 positif, mendekati 4 negatif)."
+    },
+    "prognoseguete": {
+      "titel": "Akurasi prakiraan (MAE, MAPE, MASE)",
+      "kurz": "Seberapa tepat suatu prakiraan mengenai sasaran? MAE: rata-rata galat absolut. MAPE: rata-rata galat persentase, dibagi dengan nilai teramati, tak hingga pada nol. MASE: dibagi dengan galat prakiraan naif (nilai terakhir) pada periode penyesuaian. Di bawah 1 lebih baik, di atas 1 lebih buruk daripada itu.",
+      "beispiel": "MASE 0,8: 80% dari galat naif.",
+      "vorsicht": "Untuk frekuensi langka dengan nilai nol, MAPE tidak berguna."
+    },
+    "preisindex": {
+      "titel": "Indeks harga (Laspeyres, efek basis)",
+      "kurz": "Seberapa mahal belanjaan yang sama sekarang? Indeks Laspeyres mempertahankan jumlah pada periode dasar tetap, sehingga hanya harga yang berubah. Efek basis: perubahan dari setahun lalu dapat turun walaupun indeksnya naik, jika setahun lalu kenaikannya lebih besar.",
+      "beispiel": "10 roti, 20 l susu. Dasar: 2 dan 1, nilai 40. Sekarang 2,4 dan 1,2: nilai 48. Indeks 1,20.",
+      "vorsicht": "Jumlah yang tetap tidak menangkap pembeli yang beralih ke barang yang lebih murah."
+    },
+    "anscombe-quartett": {
+      "titel": "Kuartet Anscombe (angka sama, data berbeda)",
+      "kurz": "Cukupkah satu angka untuk menggambarkan data? Tidak. Kuartet Anscombe: empat set data dengan r, rata-rata, dan garis yang hampir sama, tetapi sebaran titik yang berbeda (garis, lengkungan, pencilan, satu titik yang menentukan segalanya). Jadi lihatlah diagram pencarnya.",
+      "beispiel": "r = ,80 cocok untuk sebaran awan titik di sekitar garis dan untuk titik-titik pada sebuah kurva.",
+      "vorsicht": "r hanya mengukur bagian garis lurus. Satu titik saja dapat menurunkan r secara tajam: periksa titik itu, jangan dihapus."
+    },
+    "kovarianz": {
+      "titel": "Kovarians (dan korelasi r)",
+      "kurz": "Seberapa kuat dua nilai naik atau turun bersama? Kovarians mengukurnya secara tidak terstandar, sehingga nilainya bergantung pada skala. Korelasi r adalah kovarians dibagi hasil kali standar deviasi dan tetap sama ketika satuan berubah.",
+      "beispiel": "Tinggi dan berat badan: kovarians 60 dengan tinggi dalam cm, 0,6 dalam meter. r sama.",
+      "vorsicht": "Kovarians 0 hanya berarti: tidak ada hubungan garis lurus, bukan independensi.",
+      "fachwoerter": "standar deviasi (jarak khas nilai dari rata-rata)."
+    },
+    "punktbiseriale-korrelation": {
+      "titel": "Korelasi biserial titik (kelompok dan pengukuran)",
+      "kurz": "Apakah suatu kelompok (0/1) berhubungan dengan suatu pengukuran? Korelasi biserial titik adalah korelasi Pearson antara variabel 0/1 dan sebuah angka. Ujinya adalah uji-t sampel bebas (varians sama): p sama, besar t sama.",
+      "beispiel": "A = 0, B = 1, r = +,30: B rata-rata memiliki nilai lebih tinggi. Jika ditukar: -,30.",
+      "vorsicht": "Tandanya mengikuti pengkodean. Korelasi biserial adalah hal yang lain."
+    },
+    "fisher-z": {
+      "titel": "Z Fisher (transformasi Z Fisher)",
+      "kurz": "Mengapa interval di sekitar r mencong? r paling besar 1, sehingga pada r yang tinggi ruang di atasnya lebih sempit. Z Fisher membuat distribusi r kurang lebih normal. Intervalnya dibangun dalam Z lalu dikonversi kembali, sehingga tidak simetris.",
+      "beispiel": "r = ,90, n = 30: interval sekitar ,80 sampai ,95.",
+      "vorsicht": "Interval itu tidak pernah menjadi peluang nilai sebenarnya. Z Fisher bukanlah standardisasi z."
+    },
+    "fehlerarten": {
+      "titel": "Kesalahan tipe I dan tipe II (α, β)",
+      "kurz": "Dapatkah suatu uji keliru? Ya, dalam dua cara. Kesalahan tipe I: tidak ada perbedaan, tetapi hasilnya “signifikan”. Kesalahan tipe II: ada perbedaan tetapi terlewatkan. Taraf α (sering ,05) adalah laju kesalahan pertama ketika sebenarnya tidak ada apa-apa.",
+      "beispiel": "200 uji tanpa perbedaan yang nyata, α = ,05: sekitar 10 hasil signifikan secara keliru.",
+      "vorsicht": "α tidak menyatakan apakah satu temuan keliru. Kesalahan tipe II memiliki peluang β = 1 dikurangi daya statistik.",
+      "fachwoerter": "daya statistik (peluang menemukan perbedaan yang ada), taraf (batas p yang dipilih sebelumnya)."
+    },
+    "einseitig-zweiseitig": {
+      "titel": "Uji satu sisi dan dua sisi",
+      "kurz": "Apakah satu arah yang dihitung, atau kedua arah? Dua sisi bertanya: adakah perbedaan, ke arah mana pun? Satu sisi hanya bertanya: apakah A lebih besar daripada B? Data yang sama dapat signifikan pada satu sisi, tetapi tidak pada dua sisi. Jika ragu, ujilah dua sisi.",
+      "beispiel": "Metode pengajaran baru: p dua sisi = ,08, p satu sisi = ,04.",
+      "vorsicht": "Arahnya harus ditetapkan sebelum melihat data. Memilihnya sesudahnya membelah p menjadi separuh tanpa informasi baru."
+    },
+    "mehrfaches-testen": {
+      "titel": "Pengujian berganda (inflasi alfa, Bonferroni)",
+      "kurz": "Seberapa sering kebetulan menipu Anda pada banyak uji? Pada taraf ,05, setiap uji memberi alarm palsu pada 5 persen waktu ketika sebenarnya tidak ada apa-apa. Pada m uji yang independen, peluang sedikitnya satu alarm palsu adalah 1 - ,95 pangkat m (inflasi alfa). Bonferroni membagi taraf dengan m.",
+      "beispiel": "10 uji, tidak ada yang nyata: peluang sekitar 40 persen untuk satu hasil kebetulan.",
+      "vorsicht": "Sekitar m kali ,05 hasil kebetulan. Mencari-cari hanya menghasilkan hipotesis."
+    },
+    "effekt-ueberschaetzung": {
+      "titel": "Efek yang terlalu besar diestimasi (winner’s curse)",
+      "kurz": "Apakah efek yang signifikan sebesar yang terukur? Sering kali tidak. Jika hanya hasil yang signifikan yang dihitung, estimasi menjadi bias ke atas: studi kecil menjadi signifikan hanya dengan estimasi yang kebetulan besar. Inilah winner’s curse.",
+      "beispiel": "Perbedaan sebenarnya berukuran sedang. Dari banyak studi kecil, hanya yang signifikan yang muncul; rata-ratanya berada di atasnya.",
+      "vorsicht": "Makin kecil studinya, makin kuat bias. Karena itu replikasi sering menemukan efek yang lebih kecil, belum tentu nol.",
+      "fachwoerter": "signifikan (nilai p berada di bawah batas yang dipilih, biasanya ,05)."
+    },
+    "falsch-positive-befunde": {
+      "titel": "Temuan positif palsu (kesalahan tipe I, researcher degrees of freedom)",
+      "kurz": "Berapa banyak temuan signifikan yang merupakan alarm palsu? Itu bergantung pada taraf, daya statistik, dan proporsi efek yang nyata. Dengan daya statistik yang rendah, bagian yang palsu naik. Alarm palsu juga lebih banyak muncul jika Anda menguji setelah setiap kasus baru dan berhenti saat signifikan, atau mencoba banyak analisis dan hanya melaporkan yang berhasil (researcher degrees of freedom).",
+      "beispiel": "1000 efek diuji, 100 nyata, daya statistik ,5, taraf ,05: 50 temuan benar dan 45 temuan palsu.",
+      "vorsicht": "Taraf ,05 hanya berlaku untuk sampel dan analisis yang direncanakan sebelumnya. Lajunya naik bahkan tanpa niat menipu.",
+      "fachwoerter": "daya statistik (peluang menemukan efek yang nyata), taraf (batas p yang ditetapkan sebelumnya), signifikan (p berada di bawah batas ini)."
+    },
+    "fehlerbalken": {
+      "titel": "Batang galat (standar error, interval kepercayaan)",
+      "kurz": "Apa yang ditunjukkan batang pada rata-rata? Hal itu tidak tetap: standar deviasi (sebaran nilai tunggal), standar error (ketepatan rata-rata), atau interval kepercayaan. “± angka” tidak menyebutkan yang mana. Satu standar error di kedua sisi kira-kira separuh selebar interval 95 persen dan sesuai dengan sekitar 68 persen.",
+      "beispiel": "Interval 95 persen yang tumpang tindih, namun p = ,04.",
+      "vorsicht": "Tumpang tindih tidak menentukan; uji perbedaan yang menentukan. Jika interval 95 persen tidak berbagi rentang, kelompok independen berbeda secara signifikan pada taraf ,05. Untuk pengukuran berpasangan, yang dihitung adalah interval selisih per orang, bukan interval kedua rata-rata."
+    },
+    "levene-test": {
+      "titel": "Uji Levene (sebaran yang sama)",
+      "kurz": "Apakah kelompok-kelompok menyebar sama? (uji Levene) Uji ini memeriksa apakah varians, yaitu sebaran nilai, sama di antara kelompok. p yang kecil menunjukkan sebaran yang tidak sama.",
+      "beispiel": "Dua kelompok yang masing-masing terdiri atas 8 orang, p Levene = ,40: tidak ada tanda sebaran yang tidak sama.",
+      "vorsicht": "Tidak signifikan tidak berarti sebarannya sama. Dengan kelompok kecil, uji ini kurang baik mendeteksi perbedaan. Uji ini tidak membuktikan kesamaan."
+    },
+    "gepoolter-t-test": {
+      "titel": "Sebaran gabungan atau uji Welch (sebaran yang sama diasumsikan?)",
+      "kurz": "Apakah kedua kelompok menyebar sama? Uji-t dengan sebaran gabungan (pooled) mengasumsikannya. Uji Welch tidak menggabungkan dan menyesuaikan derajat kebebasan. Dengan dua kelompok, F pada analisis varians adalah kuadrat t, dengan p yang sama.",
+      "beispiel": "10 orang dengan sebaran 8, 40 orang dengan sebaran 3: penggabungan sebagian besar mencerminkan kelompok besar yang sebarannya kecil.",
+      "vorsicht": "Jika kelompok yang lebih kecil menyebar lebih lebar, uji gabungan terlalu sering menunjukkan signifikansi. Welch mengoreksi hal ini.",
+      "fachwoerter": "Derajat kebebasan (angka yang menentukan distribusi acuan t)."
+    },
+    "zentraler-grenzwertsatz": {
+      "titel": "Teorema limit pusat",
+      "kurz": "Haruskah nilai-nilai berdistribusi normal? Tidak selalu. Teorema limit pusat menyatakan: rata-rata dari banyak pengamatan kira-kira normal, bahkan ketika nilai tunggalnya mencong. Teorema ini berlaku untuk rata-rata, bukan untuk nilai tunggal.",
+      "beispiel": "Pendapatan itu mencong. Rata-rata dari masing-masing 200 orang berada hampir simetris.",
+      "vorsicht": "Berapa banyak yang cukup bergantung pada bentuknya: pada nilai yang sangat mencong, 10 tidak cukup. Dengan kelompok besar, uji-t biasanya dapat dipakai tanpa nilai yang berdistribusi normal."
+    },
+    "pseudoreplikation": {
+      "titel": "Pseudoreplikasi (pengukuran yang saling bergantung)",
+      "kurz": "Apakah setiap nilai dihitung sebagai informasi yang terpisah? Tidak, jika nilai-nilai itu saling terkait. Pseudoreplikasi: nilai yang bergantung diperlakukan sebagai independen, seperti pengukuran berulang pada satu orang atau anak-anak dari satu kelas. Standar error menjadi terlalu kecil; signifikansi muncul terlalu sering.",
+      "beispiel": "20 tanaman, 5 daun diukur pada masing-masing: itu 20 unit independen, bukan 100.",
+      "vorsicht": "Lebih banyak baris bukan berarti lebih banyak informasi. Solusinya: satu rata-rata per unit, atau model yang memperhitungkan pengelompokan.",
+      "fachwoerter": "standar error (seberapa besar suatu estimasi biasanya bervariasi), signifikan (nilai p berada di bawah batas yang dipilih, biasanya ,05)."
+    },
+    "simpson-paradox": {
+      "titel": "Paradoks Simpson (menggabungkan kelompok)",
+      "kurz": "Dapatkah suatu hubungan berbalik ketika kelompok digabung? Ya. Gambaran keseluruhan dapat menyembunyikan atau membalik apa yang ditunjukkan setiap kelompok (paradoks Simpson, juga untuk korelasi r). Penyebabnya: kelompok-kelompok itu berbeda dalam ukuran atau komposisinya.",
+      "beispiel": "A lebih membantu daripada B pada kasus ringan dan pada kasus berat. Tetapi A hampir hanya diberikan pada kasus berat. Secara keseluruhan, A tampak lebih buruk.",
+      "vorsicht": "Totalnya kemudian tidak dapat dibaca secara langsung. Sudut pandang mana yang berlaku bergantung pada situasinya."
+    },
+    "erwartete-haeufigkeit": {
+      "titel": "Frekuensi harapan (chi-kuadrat, tabulasi silang)",
+      "kurz": "Berapa banyak kasus per sel yang diharapkan jika variabel-variabelnya tidak berhubungan? Total baris dikali total kolom dibagi total keseluruhan. Uji chi-kuadrat membandingkannya dengan frekuensi yang teramati. Sel mana yang menonjol hanya tampak pada perbandingan per sel.",
+      "beispiel": "Baris 60, kolom 50, total 200: diharapkan 60 · 50 / 200 = 15.",
+      "vorsicht": "Yang lazim dikutip: semuanya minimal 5, sebuah kebiasaan. Dengan nilai yang lebih kecil pada tabel 2x2, pakailah uji eksak Fisher.",
+      "fachwoerter": "Tabulasi silang (tabel dua variabel), residual terstandar (selisih antara teramati dan diharapkan, diskalakan agar sebanding)."
+    },
+    "zeilenprozent": {
+      "titel": "Persen baris (bagian dalam baris)",
+      "kurz": "Berapa bagian dalam satu kelompok? Dalam tabulasi silang, persen baris adalah frekuensi sel dibagi total baris, dikali 100. Total baris menjadi acuannya. “Berapa persen dari A yang memiliki B?” memakai total A sebagai acuan. Persen kolom memakai total kolom.",
+      "beispiel": "80 pemilik anjing, 20 di antaranya juga memiliki kucing: 20 / 80 = 25 persen.",
+      "vorsicht": "Persen baris dan persen kolom adalah angka yang berbeda. Tanyakan dulu: bagian dari apa?",
+      "fachwoerter": "Tabulasi silang (tabel dua variabel)."
+    },
+    "likelihood-ratio": {
+      "titel": "Rasio kemungkinan (LR)",
+      "kurz": "Seberapa besar hasil tes mengubah estimasi? LR positif adalah sensitivitas dibagi (1 dikurangi spesifisitas): sebanyak itu kali lebih sering hasil positif muncul pada orang yang sakit daripada pada orang yang sehat. Di atas 1 mendukung adanya penyakit. Odds pasca-tes = odds pra-tes dikali LR.",
+      "beispiel": "Pra-tes ,20, jadi odds ,25. LR 4 menghasilkan odds 1, yaitu ,50.",
+      "vorsicht": "LR bukanlah peluang. Kembali ke p: odds dibagi (1 ditambah odds).",
+      "fachwoerter": "Sensitivitas (proporsi orang sakit yang terdeteksi oleh tes), spesifisitas (proporsi orang sehat yang dinyatakan sehat dengan benar), odds (p dibagi 1 dikurangi p)."
+    },
+    "regelkarte": {
+      "titel": "Bagan kendali (Shewhart, CUSUM, EWMA)",
+      "kurz": "Apakah prosesnya berubah? Bagan kendali memplot rata-rata kelompok secara berurutan, dengan garis tengah dan batas, sering kali ±3 standar error. Titik di luar batas adalah sinyal: kemungkinan ada yang lebih dari kebetulan. Fase 1 mengestimasi batas dari data masa lalu, fase 2 lalu memantau secara berkelanjutan. CUSUM dan EWMA menggabungkan beberapa kelompok dan mendeteksi pergeseran kecil yang bertahan lebih cepat.",
+      "beispiel": "Stabil: sekitar 3 dari 1000 titik di luar batas. Beberapa titik dalam waktu berdekatan merupakan sinyal yang jelas.",
+      "vorsicht": "Jika proses yang stabil tetap berada di dalam batas, variasinya adalah kebetulan: menyesuaikan prosesnya justru menambah sebaran. Batas dari sedikit kelompok tidak tepat.",
+      "fachwoerter": "Standar error (sebaran rata-rata kelompok), stabil (distribusinya tetap sama dari waktu ke waktu)."
+    },
+    "prozessfaehigkeit": {
+      "titel": "Kapabilitas proses (Cp, Cpk)",
+      "kurz": "Apakah proses memenuhi spesifikasi? Cp membandingkan rentang yang diizinkan dengan sebaran dan mengabaikan di mana letak rata-rata. Cpk mengukur jarak dari rata-rata ke batas yang lebih dekat, paling besar sama dengan Cp. Keduanya mengasumsikan proses yang stabil dan normal.",
+      "beispiel": "Cp = 1, terpusat: sekitar 0,27 persen di luar batas; jika bergeser, lebih banyak.",
+      "vorsicht": "Cp = 1 hanya berarti: tidak kurang dari 0,27 persen di luar batas. Jika ada sinyal pada bagan kendali, indeks ini kurang bermakna; bereskan dulu sinyal itu."
+    },
+    "messsystem": {
+      "titel": "Sistem pengukuran (repeatability, reproducibility)",
+      "kurz": "Berapa banyak sebaran yang berasal dari pengukuran itu sendiri? Repeatability: sebaran alat pada unit yang sama, operator yang sama, pengaturan yang sama. Reproducibility: sebaran antaroperator, antarpengaturan, atau antarperiode. Bagian pengukuran dari total sebaran = 1 dikurangi bagian proses. Rasio sinyal terhadap derau menunjukkan seberapa baik bagian-bagian dapat dibedakan: yang sering dikutip, 5 atau lebih baik, di bawah 2 tidak berguna.",
+      "beispiel": "Proses 80 persen dari sebaran: sistem pengukuran 20 persen.",
+      "vorsicht": "Para penulis menetapkan istilah-istilah ini secara berbeda, jadi definisi yang dipakai harus dinyatakan. Batasnya hanyalah konvensi."
+    },
+    "versuchsplanung": {
+      "titel": "Perancangan eksperimen (interaksi, titik pusat)",
+      "kurz": "Bagaimana merencanakan eksperimen yang banyak menunjukkan sesuatu? Interaksi: efek satu faktor bergantung pada tingkat faktor lain. Mengubah satu faktor setiap kali tidak dapat mengestimasinya; semua kombinasi dapat menemukannya. Titik pusat yang diulang menunjukkan kelengkungan dan mengestimasi sebaran.",
+      "beispiel": "Pupuk bekerja kuat di bawah matahari, hampir tidak di tempat teduh.",
+      "vorsicht": "Hasil pada satu tingkat tidak otomatis berlaku untuk semua tingkat. Dengan kelengkungan, dua tingkat tidak cukup; rancangan dapat diperluas.",
+      "fachwoerter": "Faktor (besaran yang Anda tetapkan dengan sengaja), tingkat (satu nilai yang ditetapkan darinya), kontinu (setiap nilai di antaranya mungkin)."
+    }
+  },
+  "meldung": [
+    {
+      "id": "engine-absturz",
+      "art": "absturz",
+      "muster": "^Statable: PSPP crashed",
+      "original": "Statable: PSPP crashed and was restarted. RuntimeError: Aborted(Assertion failed: proc.n_cells < CRS_N_CELLS, at: ../../pspp-2.1.1/src/language/commands/crosstabs.c,494,cmd_crosstabs)",
+      "titel": "Program statistik mengalami crash",
+      "text": {
+        "du": "Ini disebabkan oleh PSPP, bukan oleh data Anda. Statable memulai ulang PSPP dan memuat ulang data seperti sebelum perhitungan ini.",
+        "sie": "Ini disebabkan oleh PSPP, bukan oleh data Anda. Statable memulai ulang PSPP dan memuat ulang data seperti sebelum perhitungan ini."
+      },
+      "tun": {
+        "du": "Hitung lagi dengan opsi yang lebih sedikit. Jika Anda sebelumnya mengatur WEIGHT, FILTER, atau SPLIT FILE, atur lagi.",
+        "sie": "Hitung lagi dengan opsi yang lebih sedikit. Jika Anda sebelumnya mengatur WEIGHT, FILTER, atau SPLIT FILE, atur lagi."
+      }
+    },
+    {
+      "id": "nonpar-corr-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "NONPAR CORR is not yet implemented",
+      "original": "NONPAR CORR: NONPAR CORR is not yet implemented.",
+      "titel": "Mesin tidak dapat menjalankan perintah ini",
+      "text": {
+        "du": "PSPP tidak dapat menghitung NONPAR CORR (Spearman, Kendall).",
+        "sie": "PSPP tidak dapat menghitung NONPAR CORR (Spearman, Kendall)."
+      },
+      "tun": {
+        "du": "Statable menghitungnya dalam pertanyaan “Apakah dua hal berhubungan?”. Data Anda tidak berubah.",
+        "sie": "Statable menghitungnya dalam pertanyaan “Apakah dua hal berhubungan?”. Data Anda tidak berubah."
+      }
+    },
+    {
+      "id": "glm-with-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "GLM: [^\\n]*\\n[^\\n]*\\|[^\\n]*\\b[Ww][Ii][Tt][Hh]\\b",
+      "original": "GLM: Syntax error expecting MISSING, INTERCEPT, CRITERIA, METHOD, or DESIGN.\n   1 | GLM y BY g WITH x /DESIGN=x g.",
+      "titel": "Mesin tidak dapat menjalankan perintah ini",
+      "text": {
+        "du": "PSPP tidak dapat menghitung GLM dengan WITH (analisis kovarians).",
+        "sie": "PSPP tidak dapat menghitung GLM dengan WITH (analisis kovarians)."
+      },
+      "tun": {
+        "du": "Statable menghitungnya dalam pertanyaan “Apakah kelompok berbeda?” di bawah “Opsi lainnya” dengan variabel kontrol. Data Anda tidak berubah.",
+        "sie": "Statable menghitungnya dalam pertanyaan “Apakah kelompok berbeda?” di bawah “Opsi lainnya” dengan variabel kontrol. Data Anda tidak berubah."
+      }
+    },
+    {
+      "id": "befehl-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "Unknown command `([^']+)'",
+      "original": "Unknown command `FREQENCIES'.",
+      "titel": "Statable tidak mengenal perintah ini",
+      "text": {
+        "du": "“{1}” bukan perintah yang dikenal.",
+        "sie": "“{1}” bukan perintah yang dikenal."
+      },
+      "tun": {
+        "du": "Periksa ejaannya. Yang mirip: {vorschlag}.",
+        "sie": "Periksa ejaannya. Yang mirip: {vorschlag}."
+      }
+    },
+    {
+      "id": "spalte-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "(\\S+) is not a variable name",
+      "original": "DESCRIPTIVES: konzentration is not a variable name.",
+      "titel": "Kolom itu tidak ada",
+      "text": {
+        "du": "Data Anda tidak memiliki kolom “{1}”.",
+        "sie": "Data Anda tidak memiliki kolom “{1}”."
+      },
+      "tun": {
+        "du": "Yang mirip: {vorschlag}. Anda dapat melihat semua nama di bawah “Kolom”.",
+        "sie": "Yang mirip: {vorschlag}. Anda dapat melihat semua nama di bawah “Kolom”."
+      }
+    },
+    {
+      "id": "text-statt-zahl",
+      "art": "hinweis",
+      "muster": "(\\S+) is not a numeric variable\\.\\s+It will not be included",
+      "original": "DESCRIPTIVES: geschlecht is not a numeric variable.  It will not be included in the variable list.",
+      "titel": "Sebuah kolom dilewati",
+      "text": {
+        "du": "“{1}” berisi kelompok atau teks, bukan angka. Jadi Statable melewatinya di sini. Sisanya sudah dihitung.",
+        "sie": "“{1}” berisi kelompok atau teks, bukan angka. Jadi Statable melewatinya di sini. Sisanya sudah dihitung."
+      },
+      "tun": {
+        "du": "Untuk kelompok, cocok memakai frekuensi atau perbandingan kelompok.",
+        "sie": "Untuk kelompok, cocok memakai frekuensi atau perbandingan kelompok."
+      }
+    },
+    {
+      "id": "gruppen-fehlen",
+      "art": "nicht-verstanden",
+      "muster": "When applying GROUPS to a string variable, two values must be specified",
+      "original": "T-TEST: When applying GROUPS to a string variable, two values must be specified.",
+      "titel": "Dua kelompok yang mana?",
+      "text": {
+        "du": "Nama kedua kelompok untuk perbandingan belum ada.",
+        "sie": "Nama kedua kelompok untuk perbandingan belum ada."
+      },
+      "tun": {
+        "du": "Tulis di dalam tanda kurung setelahnya, misalnya telepon('ya' 'tidak').",
+        "sie": "Tulis di dalam tanda kurung setelahnya, misalnya telepon('ya' 'tidak')."
+      }
+    },
+    {
+      "id": "wert-zu-lang",
+      "art": "nicht-verstanden",
+      "muster": "This (\\d+)-byte string is too long for variable (\\S+) with width (\\d+)",
+      "original": "T-TEST: This 10-byte string is too long for variable handy with width 4.",
+      "titel": "Nilai ini tidak mungkin ada di kolom",
+      "text": {
+        "du": "Nilai itu lebih panjang daripada ruang yang dimiliki kolom “{2}”. Nilai seperti itu tidak muncul di sana.",
+        "sie": "Nilai itu lebih panjang daripada ruang yang dimiliki kolom “{2}”. Nilai seperti itu tidak muncul di sana."
+      },
+      "tun": {
+        "du": "Periksa di bawah “Kolom” nilai apa saja yang ada di “{2}”.",
+        "sie": "Periksa di bawah “Kolom” nilai apa saja yang ada di “{2}”."
+      }
+    },
+    {
+      "id": "anfuehrung-offen",
+      "art": "nicht-verstanden",
+      "muster": "Unterminated string constant",
+      "original": "VARIABLE LABELS: Unterminated string constant.",
+      "titel": "Ada tanda kutip yang masih terbuka",
+      "text": {
+        "du": "Sebuah teks dimulai dengan ' tetapi tidak diakhiri.",
+        "sie": "Sebuah teks dimulai dengan ' tetapi tidak diakhiri."
+      },
+      "tun": {
+        "du": "Tambahkan ' lagi di akhir teks.",
+        "sie": "Tambahkan ' lagi di akhir teks."
+      }
+    },
+    {
+      "id": "text-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting string",
+      "original": "VARIABLE LABELS: Syntax error expecting string.",
+      "titel": "Ada teks yang kurang di sini",
+      "text": {
+        "du": "Pada titik ini perintah mengharapkan teks dalam tanda kutip.",
+        "sie": "Pada titik ini perintah mengharapkan teks dalam tanda kutip."
+      },
+      "tun": {
+        "du": "Teks ditulis dalam tanda kutip, misalnya 'ya'. Label: VARIABLE LABELS konsentrasi 'Konsentrasi'. Kelompok dari teks: T-TEST GROUPS=kelompok('A' 'B').",
+        "sie": "Teks ditulis dalam tanda kutip, misalnya 'ya'. Label: VARIABLE LABELS konsentrasi 'Konsentrasi'. Kelompok dari teks: T-TEST GROUPS=kelompok('A' 'B')."
+      }
+    },
+    {
+      "id": "funktion-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "No function or vector named (\\S+)",
+      "original": "COMPUTE: No function or vector named wurzel.",
+      "titel": "Fungsi ini tidak ada",
+      "text": {
+        "du": "“{1}” bukan fungsi yang dikenal.",
+        "sie": "“{1}” bukan fungsi yang dikenal."
+      },
+      "tun": {
+        "du": "Fungsi memiliki nama bahasa Inggris, misalnya SQRT untuk akar kuadrat, MEAN untuk rata-rata.",
+        "sie": "Fungsi memiliki nama bahasa Inggris, misalnya SQRT untuk akar kuadrat, MEAN untuk rata-rata."
+      }
+    },
+    {
+      "id": "rechnen-mit-text",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must be numeric",
+      "original": "COMPUTE: Both operands of + must be numeric.",
+      "titel": "Teks tidak dapat dipakai dalam perhitungan",
+      "text": {
+        "du": "Salah satu sisi dari “{1}” adalah kolom berisi teks.",
+        "sie": "Salah satu sisi dari “{1}” adalah kolom berisi teks."
+      },
+      "tun": {
+        "du": "Anda dapat mengubah kelompok menjadi angka di bawah “Kolom” - sebagai kolom baru, yang asli tetap ada.",
+        "sie": "Anda dapat mengubah kelompok menjadi angka di bawah “Kolom” - sebagai kolom baru, yang asli tetap ada."
+      }
+    },
+    {
+      "id": "text-mit-zahl-vergleichen",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must have the same type",
+      "original": "SELECT IF: Both operands of = must have the same type.",
+      "titel": "Teks dibandingkan dengan angka",
+      "text": {
+        "du": "Kolom itu berisi teks, tetapi dibandingkan dengan angka.",
+        "sie": "Kolom itu berisi teks, tetapi dibandingkan dengan angka."
+      },
+      "tun": {
+        "du": "Letakkan nilainya dalam tanda kutip, misalnya jenis_kelamin = 'perempuan'.",
+        "sie": "Letakkan nilainya dalam tanda kutip, misalnya jenis_kelamin = 'perempuan'."
+      }
+    },
+    {
+      "id": "spalte-gibt-es-schon",
+      "art": "nicht-verstanden",
+      "muster": "There is already a variable named (\\S+)",
+      "original": "NUMERIC: There is already a variable named konz2.",
+      "titel": "Nama ini sudah dipakai",
+      "text": {
+        "du": "Kolom “{1}” sudah ada. Statable tidak menimpa apa pun.",
+        "sie": "Kolom “{1}” sudah ada. Statable tidak menimpa apa pun."
+      },
+      "tun": {
+        "du": "Pilih nama yang lain, misalnya {1}_baru.",
+        "sie": "Pilih nama yang lain, misalnya {1}_baru."
+      }
+    },
+    {
+      "id": "umbenennen-doppelt",
+      "art": "nicht-verstanden",
+      "muster": "Renaming would duplicate variable name (\\S+)",
+      "original": "RENAME VARIABLES: Renaming would duplicate variable name nr.",
+      "titel": "Nama ini sudah dipakai",
+      "text": {
+        "du": "Setelah diganti namanya, dua kolom akan memiliki nama “{1}”.",
+        "sie": "Setelah diganti namanya, dua kolom akan memiliki nama “{1}”."
+      },
+      "tun": {
+        "du": "Pilih nama yang belum ada.",
+        "sie": "Pilih nama yang belum ada."
+      }
+    },
+    {
+      "id": "datei-nicht-gefunden",
+      "art": "datei",
+      "muster": "An error occurred while opening `([^']+)': No such file",
+      "original": "An error occurred while opening `/gibt-es-nicht.sav': No such file or directory.",
+      "titel": "File tidak ditemukan",
+      "text": {
+        "du": "“{datei}” tidak lagi berada di tempat semula.",
+        "sie": "“{datei}” tidak lagi berada di tempat semula."
+      },
+      "tun": {
+        "du": "Buka lagi dengan “Buka file”.",
+        "sie": "Buka lagi dengan “Buka file”."
+      }
+    },
+    {
+      "id": "datendatei-nicht-gefunden",
+      "art": "datei",
+      "muster": "Could not open `([^']+)' for reading as a data file",
+      "original": "Could not open `/fehlt.csv' for reading as a data file: No such file or directory.",
+      "titel": "File tidak ditemukan",
+      "text": {
+        "du": "“{datei}” tidak dapat dibuka.",
+        "sie": "“{datei}” tidak dapat dibuka."
+      },
+      "tun": {
+        "du": "Buka lagi dengan “Buka file”.",
+        "sie": "Buka lagi dengan “Buka file”."
+      }
+    },
+    {
+      "id": "keine-spss-datei",
+      "art": "datei",
+      "muster": "`([^']+)' is not a system or portable file",
+      "original": "GET: `/kaputt.sav' is not a system or portable file.",
+      "titel": "File ini tidak dapat dibaca",
+      "text": {
+        "du": "“{datei}” berakhiran .sav tetapi di dalamnya bukan file SPSS. Data Anda yang lain tidak terpengaruh.",
+        "sie": "“{datei}” berakhiran .sav tetapi di dalamnya bukan file SPSS. Data Anda yang lain tidak terpengaruh."
+      },
+      "tun": {
+        "du": "Mungkinkah ini file Excel atau CSV? Jika ya, simpan lagi sebagai .sav, .xlsx, atau .csv di program Anda.",
+        "sie": "Mungkinkah ini file Excel atau CSV? Jika ya, simpan lagi sebagai .sav, .xlsx, atau .csv di program Anda."
+      }
+    },
+    {
+      "id": "speichern-unmoeglich",
+      "art": "datei",
+      "muster": "Error opening `([^']+)' for writing",
+      "original": "Error opening `/gibt/es/nicht/x.sav' for writing as a system file: No such file or directory.",
+      "titel": "File tidak dapat disimpan",
+      "text": {
+        "du": "Statable tidak dapat menulis ke lokasi yang dipilih. Data Anda tidak hilang - masih terbuka di sini.",
+        "sie": "Statable tidak dapat menulis ke lokasi yang dipilih. Data Anda tidak hilang - masih terbuka di sini."
+      },
+      "tun": {
+        "du": "Pilih folder lain, misalnya “Unduhan”.",
+        "sie": "Pilih folder lain, misalnya “Unduhan”."
+      }
+    },
+    {
+      "id": "name-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting identifier",
+      "original": "COMPUTE: Syntax error expecting identifier.",
+      "titel": "Ada nama yang kurang di sini",
+      "text": {
+        "du": "Pada titik ini perintah mengharapkan sebuah nama. Nama diawali dengan huruf.",
+        "sie": "Pada titik ini perintah mengharapkan sebuah nama. Nama diawali dengan huruf."
+      },
+      "tun": {
+        "du": "Contoh: baru1 dan bukan 1baru.",
+        "sie": "Contoh: baru1 dan bukan 1baru."
+      }
+    },
+    {
+      "id": "by-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `BY'",
+      "original": "CROSSTABS: Syntax error expecting `BY'.",
+      "titel": "Kata BY kurang di sini",
+      "text": {
+        "du": "BY tidak ada di antara kedua kolom. BY memisahkan keduanya, seperti dalam “kolom ini menurut kolom itu”.",
+        "sie": "BY tidak ada di antara kedua kolom. BY memisahkan keduanya, seperti dalam “kolom ini menurut kolom itu”."
+      },
+      "tun": {
+        "du": "Dengan CROSSTABS: /TABLES=jenis_kelamin BY telepon. Dengan ONEWAY dan GLM, BY berada di antara angka dan kelompok: ONEWAY skor BY kelompok.",
+        "sie": "Dengan CROSSTABS: /TABLES=jenis_kelamin BY telepon. Dengan ONEWAY dan GLM, BY berada di antara angka dan kelompok: ONEWAY skor BY kelompok."
+      }
+    },
+    {
+      "id": "spalte-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting variable name",
+      "original": "ONEWAY: Syntax error expecting variable name.",
+      "titel": "Ada kolom yang kurang di sini",
+      "text": {
+        "du": "Pada titik ini perintah mengharapkan nama sebuah kolom.",
+        "sie": "Pada titik ini perintah mengharapkan nama sebuah kolom."
+      },
+      "tun": {
+        "du": "Tips: di jendela perintah, Statable menyarankan kolom yang cocok saat Anda mengetik.",
+        "sie": "Tips: di jendela perintah, Statable menyarankan kolom yang cocok saat Anda mengetik."
+      }
+    },
+    {
+      "id": "klammer-auf-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\('",
+      "original": "NPAR TESTS: Syntax error expecting `('.",
+      "titel": "Ada tanda kurung yang kurang di sini",
+      "text": {
+        "du": "Pada titik ini “(” tidak ada.",
+        "sie": "Pada titik ini “(” tidak ada."
+      },
+      "tun": {
+        "du": "Contoh: /MANN-WHITNEY = konsentrasi BY telepon (0 1).",
+        "sie": "Contoh: /MANN-WHITNEY = konsentrasi BY telepon (0 1)."
+      }
+    },
+    {
+      "id": "klammer-zu-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\)'",
+      "original": "COMPUTE: Syntax error expecting `)'.",
+      "titel": "Ada tanda kurung yang masih terbuka",
+      "text": {
+        "du": "Jumlah “(” lebih banyak daripada “)”.",
+        "sie": "Jumlah “(” lebih banyak daripada “)”."
+      },
+      "tun": {
+        "du": "Letakkan “)” yang kurang di tempat yang tepat.",
+        "sie": "Letakkan “)” yang kurang di tempat yang tepat."
+      }
+    },
+    {
+      "id": "gleich-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `='",
+      "original": "COMPUTE: Syntax error expecting `='.",
+      "titel": "Tanda sama dengan kurang di sini",
+      "text": {
+        "du": "Perintah membutuhkan “=” di antara nama dan perhitungan.",
+        "sie": "Perintah membutuhkan “=” di antara nama dan perhitungan."
+      },
+      "tun": {
+        "du": "Contoh: COMPUTE baru = konsentrasi * 2.",
+        "sie": "Contoh: COMPUTE baru = konsentrasi * 2."
+      }
+    },
+    {
+      "id": "rechnung-unklar",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error parsing expression",
+      "original": "COMPUTE: Syntax error parsing expression.",
+      "titel": "Perhitungannya belum lengkap",
+      "text": {
+        "du": "Ada yang kurang setelah “=”, atau ada karakter yang tidak cocok.",
+        "sie": "Ada yang kurang setelah “=”, atau ada karakter yang tidak cocok."
+      },
+      "tun": {
+        "du": "Penandanya menunjukkan tempatnya.",
+        "sie": "Penandanya menunjukkan tempatnya."
+      }
+    },
+    {
+      "id": "noch-keine-daten",
+      "art": "daten",
+      "muster": "is allowed only after the active dataset has been defined",
+      "original": "DESCRIPTIVES: DESCRIPTIVES is allowed only after the active dataset has been defined.",
+      "titel": "Belum ada data yang terbuka",
+      "text": {
+        "du": "Untuk menghitung, Statable membutuhkan data lebih dulu.",
+        "sie": "Untuk menghitung, Statable membutuhkan data lebih dulu."
+      },
+      "tun": {
+        "du": "Buka sebuah file atau coba data contoh.",
+        "sie": "Buka sebuah file atau coba data contoh."
+      }
+    },
+    {
+      "id": "text-in-zahlenspalte",
+      "art": "daten",
+      "muster": "Data for variable (\\S+) is not valid as format F: Field contents are not numeric",
+      "original": "Data for variable a is not valid as format F: Field contents are not numeric.",
+      "titel": "Ada teks di kolom angka",
+      "text": {
+        "du": "Di “{1}”, satu tempat berisi kata, bukan angka. Sel itu tetap kosong; yang lainnya sudah dibaca.",
+        "sie": "Di “{1}”, satu tempat berisi kata, bukan angka. Sel itu tetap kosong; yang lainnya sudah dibaca."
+      },
+      "tun": {
+        "du": "Pemeriksaan data menunjukkan selnya. Jika data berisi koma desimal (70,5), DATA LIST FREE membaca koma itu sebagai pemisah dan nilai-nilainya bergeser: SET DECIMAL=COMMA. dan DATA LIST LIST(';') mengatasinya.",
+        "sie": "Pemeriksaan data menunjukkan selnya. Jika data berisi koma desimal (70,5), DATA LIST FREE membaca koma itu sebagai pemisah dan nilai-nilainya bergeser: SET DECIMAL=COMMA. dan DATA LIST LIST(';') mengatasinya."
+      }
+    },
+    {
+      "id": "beschriftung-passt-nicht",
+      "art": "daten",
+      "muster": "VALUE LABELS: Data is not valid as format F",
+      "original": "VALUE LABELS: Data is not valid as format F: Field contents are not numeric.",
+      "titel": "Label ini tidak cocok",
+      "text": {
+        "du": "Pada kolom angka, setiap label kelompok membutuhkan angka, misalnya 1 = 'ya'.",
+        "sie": "Pada kolom angka, setiap label kelompok membutuhkan angka, misalnya 1 = 'ya'."
+      },
+      "tun": {
+        "du": "Cara termudah untuk mengatur label adalah di bawah “Kolom”.",
+        "sie": "Cara termudah untuk mengatur label adalah di bawah “Kolom”."
+      }
+    },
+    {
+      "id": "keine-angabe-zu-lang",
+      "art": "hinweis",
+      "muster": "Truncating missing value to maximum acceptable length \\((\\d+) bytes\\)",
+      "original": "MISSING VALUES: Truncating missing value to maximum acceptable length (8 bytes).",
+      "titel": "Nilai untuk “tidak ada jawaban” dipersingkat",
+      "text": {
+        "du": "Nilai itu lebih panjang dari yang diizinkan ({1} karakter) dan dipotong.",
+        "sie": "Nilai itu lebih panjang dari yang diizinkan ({1} karakter) dan dipotong."
+      },
+      "tun": {
+        "du": "Periksa di bawah “Kolom” apakah “tidak ada jawaban” masih dikenali dengan benar.",
+        "sie": "Periksa di bawah “Kolom” apakah “tidak ada jawaban” masih dikenali dengan benar."
+      }
+    },
+    {
+      "id": "zu-viele-keine-angabe",
+      "art": "nicht-verstanden",
+      "muster": "Too many numeric missing values",
+      "original": "MISSING VALUES: Too many numeric missing values.  At most three individual values or one value and one range are allowed.",
+      "titel": "Paling banyak tiga nilai untuk “tidak ada jawaban”",
+      "text": {
+        "du": "Satu kolom dapat memiliki paling banyak tiga nilai untuk “tidak ada jawaban”, atau satu nilai dan satu rentang.",
+        "sie": "Satu kolom dapat memiliki paling banyak tiga nilai untuk “tidak ada jawaban”, atau satu nilai dan satu rentang."
+      },
+      "tun": {
+        "du": "Contoh: 96 sampai 99 sebagai rentang.",
+        "sie": "Contoh: 96 sampai 99 sebagai rentang."
+      }
+    },
+    {
+      "id": "gewicht-text",
+      "art": "nicht-verstanden",
+      "muster": "The weighting variable must be numeric",
+      "original": "WEIGHT: The weighting variable must be numeric.",
+      "titel": "Pembobotan hanya berfungsi dengan angka",
+      "text": {
+        "du": "Kolom yang dipilih berisi teks.",
+        "sie": "Kolom yang dipilih berisi teks."
+      },
+      "tun": {
+        "du": "Pilih kolom yang berisi angka.",
+        "sie": "Pilih kolom yang berisi angka."
+      }
+    },
+    {
+      "id": "alle-spalten-loeschen",
+      "art": "hinweis",
+      "muster": "may not be used to delete all variables",
+      "original": "DELETE VARIABLES: DELETE VARIABLES may not be used to delete all variables from the active dataset dictionary.  Use NEW FILE instead.",
+      "titel": "Menghapus semua kolom sekaligus tidak dimungkinkan",
+      "text": {
+        "du": "Setidaknya satu kolom harus tetap ada. Tidak ada yang dihapus.",
+        "sie": "Setidaknya satu kolom harus tetap ada. Tidak ada yang dihapus."
+      },
+      "tun": {
+        "du": "Untuk memulai dari kosong: “Buat studi baru”.",
+        "sie": "Untuk memulai dari kosong: “Buat studi baru”."
+      }
+    },
+    {
+      "id": "dateityp-unbekannt",
+      "art": "datei",
+      "muster": "GET DATA: Syntax error expecting TXT",
+      "original": "GET DATA: Syntax error expecting TXT, PSQL, GNM, or ODS.",
+      "titel": "Perintah tidak dapat membaca format file ini",
+      "text": {
+        "du": "Cara termudah untuk membuka file Excel adalah “Buka file”.",
+        "sie": "Cara termudah untuk membuka file Excel adalah “Buka file”."
+      },
+      "tun": {
+        "du": "Seret file itu ke dalam jendela.",
+        "sie": "Seret file itu ke dalam jendela."
+      }
+    },
+    {
+      "id": "auswahl-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting one of the following: (.+)\\.",
+      "original": "FREQUENCIES: Syntax error expecting one of the following: STATISTICS, PERCENTILES, FORMAT, NTILES, ALGORITHM, HISTOGRAM, PIECHART, BARCHART, MISSING, ORDER.",
+      "titel": "Kata ini tidak cocok di sini",
+      "text": {
+        "du": "Pada titik ini hanya satu dari kata-kata ini yang mungkin: {1}.",
+        "sie": "Pada titik ini hanya satu dari kata-kata ini yang mungkin: {1}."
+      },
+      "tun": {
+        "du": "Pilih salah satunya.",
+        "sie": "Pilih salah satunya."
+      }
+    },
+    {
+      "id": "auswahl-oder",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting ((?:\\S+, )+\\S+,? or \\S+)\\.",
+      "original": "EXAMINE: Syntax error expecting BOXPLOT, NPPLOT, HISTOGRAM, SPREADLEVEL, NONE, or ALL.",
+      "titel": "Kata ini tidak cocok di sini",
+      "text": {
+        "du": "Yang mungkin di sini: {1}.",
+        "sie": "Yang mungkin di sini: {1}."
+      },
+      "tun": {
+        "du": "Pilih salah satunya.",
+        "sie": "Pilih salah satunya."
+      }
+    }
+  ],
+  "rueckfall": {
+    "titel": "Itu tidak berhasil",
+    "text": {
+      "du": "Statable tidak menjalankan perintah itu. Tidak ada yang berubah pada data Anda.",
+      "sie": "Statable tidak menjalankan perintah itu. Tidak ada yang berubah pada data Anda."
+    },
+    "tun": {
+      "du": "Di bawah “Rincian” Anda akan menemukan pesan asli dari PSPP. Pakailah untuk mencari di bantuan atau kirim dengan “Laporkan”.",
+      "sie": "Di bawah “Rincian” Anda akan menemukan pesan asli dari PSPP. Pakailah untuk mencari di bantuan atau kirim dengan “Laporkan”."
+    }
+  }
+}

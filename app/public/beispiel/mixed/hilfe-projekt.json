@@ -1,0 +1,852 @@
+{
+ "format": "statable-qualitativ",
+ "version": 3,
+ "id": "99009472-6139-54b0-ac02-56437ddfcd77",
+ "name": "Asking for help in the first year (invented example)",
+ "kodierende": [
+  {
+   "id": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "name": "Example coder (by hand)"
+  }
+ ],
+ "dokumente": [
+  {
+   "id": "6b0b8d45-009e-56c7-adc3-535d37f95627",
+   "name": "Interview 01 (Amira)",
+   "art": "text",
+   "text": "[00:00:04] I: Thank you for taking the time. To start, could you tell me a little about yourself and why you chose this programme?\n[00:00:13] P1: Sure. I'm studying nursing. I wanted to do it since I was a teenager, because my grandmother was ill for a long time and I saw how much the nurses meant to her. I'm the first one in my family to go to university, so it's a big thing for everyone at home.\n[00:00:41] I: What was it like for you in the first weeks?\n[00:00:46] P1: Honestly, a lot. Everything was new, the building, the online system, the words people used. I did not know what a module handbook was. Everyone else seemed to know already. I walked around with this feeling that I was the only one who had missed the instructions.\n[00:01:15] I: Did you talk to anyone about that feeling?\n[00:01:19] P1: No. I thought it would pass. I told my mother on the phone that everything was fine, because she is so proud. I did not want to worry her.\n[00:01:36] I: Can you think of a situation where you needed help with something?\n[00:01:42] P1: Yes, there was one in November. We had to write a short report on a patient case, and I did not understand what the lecturer meant by \"critical appraisal\". I read the task sheet maybe ten times. I sat at my kitchen table at midnight, um, and I just stared at it.\n[00:02:12] I: What did you do?\n[00:02:15] P1: I wrote something. I guessed. I handed it in and I got a very low mark. And the comment said I had only described and not analysed. So I could have known if I had asked, but I did not ask.\n[00:02:41] I: What stopped you from asking?\n[00:02:46] P1: I was embarrassed. I felt embarrassed to ask, plain and simple. In the lecture the lecturer said, if anything is unclear, just come to my office hour. And I thought, but this is so basic. If I go there, she will see that I should not even be here.\n[00:03:15] I: Is that a feeling you know from before university?\n[00:03:20] P1: A bit. At school I was the one who helped others. I was the reliable one. So being the person who needs help feels like, like losing something about who I am. I find it hard to say it in words.\n[00:03:48] I: Whom did you ask, or not ask, in that time?\n[00:03:53] P1: I did not ask the lecturer, I did not ask the tutors, and I did not ask my classmates either. There is a group chat, forty people, and I read everything but I never wrote. When somebody asked a question there, I felt relieved and also a bit jealous that they could just do it.\n[00:04:27] I: Was there anything that made it easier at all?\n[00:04:32] P1: Once, a girl from my practical placement group, Julia, said, I also have no idea what this task wants. And I thought, oh. So it is not only me. That helped for a day or two. But I still did not go to the office hour.\n[00:05:00] I: And what made it harder?\n[00:05:04] P1: Time, too. I work on weekends in a care home, so I am tired on Mondays. Office hours are on Tuesday afternoon, when I am at the placement. But if I am honest, that is also a bit of an excuse. If I had really wanted to go, I would have found a way.\n[00:05:38] I: How do you see that now, looking back?\n[00:05:43] P1: I see it as a kind of rule I made for myself. Strong people manage on their own. I know it is not true, I tell my patients all the time that it is okay to accept help. And then I do not do it myself. That is funny and not funny.\n[00:06:15] I: If you could give advice to someone starting next year, what would you say?\n[00:06:21] P1: I would say, find one person early. Just one, so that you can say to them, I do not understand this. But I am not sure I would take that advice myself. Maybe I would tell them, you are not the only one who does not know the words.\n[00:06:50] I: Is there anything you would like to add that we have not talked about?\n[00:06:56] P1: Only that I am a little better now. This term I wrote one email to a tutor. It took me two days to write four lines. She answered in ten minutes, very friendly. I still think about how long I waited for nothing.\n[00:07:25] I: Thank you, Amira. That was very helpful.\n",
+   "sprache": "en",
+   "fall": "6eacc129-798b-5969-a2f3-40ec90366883",
+   "erstellt": 1794474000000,
+   "geaendert": 1794474000000
+  },
+  {
+   "id": "a4f4fed8-e5e5-5e0e-ae27-012d07e40f8b",
+   "name": "Interview 02 (Ben)",
+   "art": "text",
+   "text": "[00:00:03] I: Thanks for joining. Could you start by telling me a bit about yourself and why you chose this programme?\n[00:00:11] P1: Yeah, of course. I'm doing mechanical engineering. My dad is an engineer, so I grew up with drawings on the table and a garage full of half-built things. I did not feel any pressure, though. I just liked the idea of understanding how machines work.\n[00:00:38] I: How were the first weeks for you?\n[00:00:42] P1: Busy, but in a good way. The maths lectures were fast. In the second week I noticed I was already behind in linear algebra. So, um, I looked around who was sitting near me and asked if we could go through the exercises together.\n[00:01:08] I: How did that go?\n[00:01:11] P1: Really well. Three of us formed a group, and we meet every Wednesday in the library. Sometimes we argue about the solution for an hour, and then somebody finds the mistake and we all laugh. I learn more there than in the lecture.\n[00:01:36] I: Can you think of a situation where you really needed help?\n[00:01:41] P1: Yes, the mechanics exam preparation in January. There was one type of problem, free-body diagrams with friction, that I just could not get. I tried it alone for two evenings and got nowhere.\n[00:02:06] I: What did you do then?\n[00:02:09] P1: I wrote in our group chat, can someone explain the friction problem from sheet seven? Within ten minutes Tom had sent a photo of his solution and Leila called me. She explained it in a way that finally made sense. She said, forget the formula, think about what the block wants to do.\n[00:02:42] I: Did you think about asking a lecturer or tutor?\n[00:02:47] P1: Not really. I know the tutors exist, there is a tutoring centre, but it feels formal to me. You have to book a slot, you sit there with a stranger. With friends I can just say, I'm lost, and nobody makes a big deal out of it.\n[00:03:15] I: Is there anything that made asking harder for you?\n[00:03:20] P1: Only one thing. In the first lecture of electrical basics, someone asked a question and the professor said, we covered that in school. And you could feel the room go cold. After that I did not want to ask anything in the lecture hall.\n[00:03:50] I: But you still ask other students.\n[00:03:54] P1: Yes. It's a different thing. With other students it is a trade. Tomorrow I explain something to Tom that he does not get. It is not charity, it is just how the group works.\n[00:04:18] I: Does that mean you never feel embarrassed to ask?\n[00:04:23] P1: Hmm. Not with the group. With the professor, yes, a bit. I would say I feel embarrassed to ask in front of many people, but not when it is a small, safe circle.\n[00:04:48] I: What would you say makes it easier in general?\n[00:04:52] P1: Having a few people you trust. And knowing that everyone is struggling with something. In week three I realised that even the best student in our group had cried over an exam sheet. After that I stopped thinking I was the weak one.\n[00:05:22] I: Did you ever feel that you took too much from the group?\n[00:05:27] P1: Once. In December I had a lot going on at home, and I was just copying from the others. Leila said, hey, you are taking, but you are not giving at the moment. It stung, but she was right, and I fixed it.\n[00:05:57] I: That sounds like a useful correction.\n[00:06:01] P1: It was. Honestly, I think that is the main thing. Asking is easy if it goes both ways.\n[00:06:15] I: What advice would you give to somebody starting next year?\n[00:06:20] P1: Find your people in the first two weeks. Do not wait for the university to organise it. And ask in the small group first, before you make a thing out of it.\n[00:06:42] I: Anything else you would like to add?\n[00:06:46] P1: Maybe that I should use the tutoring centre once, just to know what it is like. I keep saying that. But the group works so well that I never go.\n[00:07:05] I: Thank you, Ben.\n",
+   "sprache": "en",
+   "fall": "5543695b-e415-58f9-a189-540e62a007e8",
+   "erstellt": 1794474000000,
+   "geaendert": 1794474000000
+  },
+  {
+   "id": "c99e6056-bcef-5080-ac10-79546ed819de",
+   "name": "Interview 03 (Chen)",
+   "art": "text",
+   "text": "[00:00:05] I: Welcome, and thanks for coming. Could you tell me a little about yourself and why you chose your programme?\n[00:00:13] P1: Hello. I study history. I chose it because I always liked stories about how people lived, not only kings and wars. My parents run a small restaurant, and nobody in my family has studied. They did not really understand my choice at first. They asked, what job will that be?\n[00:00:46] I: And how did the first weeks feel?\n[00:00:50] P1: Like learning a new language. In the first seminar the lecturer talked about historiography and sources and I only nodded. At home I looked up every second word. I was very quiet in the first month.\n[00:01:18] I: Can you think of a situation where you needed help?\n[00:01:23] P1: Yes, the first essay. We had to compare two sources about a trade route, and I did not know how to start. I had pages of notes, but no argument. I was scared that my essay would be a list of facts.\n[00:01:52] I: What did you do?\n[00:01:55] P1: I almost did nothing again. But a second-year student who works as a writing tutor gave a short talk in our seminar. She said she had been afraid too. After the talk I walked up to her, my heart was beating so fast, and I asked if I could book a time.\n[00:02:25] I: How was that first appointment?\n[00:02:29] P1: Better than I thought. She read my notes and asked me, what do you want to say about these two sources? And I explained it in a few sentences. She said, that is your thesis. Write it down. It was like she handed me a key.\n[00:03:00] I: Did you go back?\n[00:03:03] P1: Yes, four times now. And in November I also went to the office hour of my seminar lecturer, which I would never have imagined in September. I brought a list of three questions so that I would not waste her time.\n[00:03:30] I: Why a list?\n[00:03:34] P1: Because in my family you do not bother important people. My father never asks the bank clerk anything twice. So if I go to an office hour, I must be prepared and polite. Then it feels like I deserve the time.\n[00:04:03] I: Do you still feel hesitant before going?\n[00:04:07] P1: Every time, a little. I check my questions again and again. But afterwards I feel taller, I would say. Like I did something that was not meant for people like me, and I did it anyway.\n[00:04:38] I: What would you say made it easier?\n[00:04:42] P1: Three things. That the tutor was a student, not a professor. That the university said clearly, writing support is free and normal. And that my lecturer wrote in her welcome email, nobody is expected to know this already. I kept that sentence.\n[00:05:15] I: And what made it harder?\n[00:05:19] P1: Language, sometimes. I speak English well, but academic English is different. I am afraid to ask something that sounds stupid because of my grammar. And I am afraid that my questions show that I did not read enough.\n[00:05:50] I: Did you talk to other students too?\n[00:05:54] P1: A bit. But the history students in my year are mostly from families where books were everywhere. They talk about authors I have never heard of. With them, I feel I would have to prove myself first. The tutors do not make me feel like that.\n[00:06:25] I: What advice would you give to someone starting next year?\n[00:06:30] P1: Go to the first writing tutoring, even if you think your essay is too bad to show. Everyone shows a bad essay there. That is the point. And prepare your questions. It helps with the nerves.\n[00:06:58] I: Is there anything else you would like to add?\n[00:07:02] P1: That my mark went from a three to a two point something. But more important is that I now know I am allowed to ask. My mother said, if the teacher offers, then it is not rude. I think she is right.\n[00:07:30] I: Thank you very much, Chen.\n",
+   "sprache": "en",
+   "fall": "8dec7c6e-2c0d-5946-ac51-6573f5741039",
+   "erstellt": 1794474000000,
+   "geaendert": 1794474000000
+  },
+  {
+   "id": "4dabe087-5dbf-56a2-ad02-c05cddea50ea",
+   "name": "Interview 04 (Dana)",
+   "art": "text",
+   "text": "[00:00:04] I: Thanks for coming, Dana. Could you start by telling me about yourself and why you chose this programme?\n[00:00:11] P1: Sure. I'm studying computer science, part-time, because I also work three days a week as a support agent for a software company. My parents both went to university, so it was kind of expected, but I took a gap year and worked first. I wanted to know whether I really wanted this.\n[00:00:44] I: How were the first weeks?\n[00:00:48] P1: Exhausting, and a bit lonely. Most of the full-time students already knew each other from the orientation week, and I missed that because of work. I came to the lectures, listened, and left again to go to my job. Nobody knew my name.\n[00:01:20] I: Was there a situation where you needed help?\n[00:01:24] P1: Yes, and I want to tell you about it, because it changed something. In the programming course in the fifth week we had a project, and my code just did not run. Three evenings, nothing. I thought, I work with software every day, I should be able to do this.\n[00:01:58] I: What happened?\n[00:02:02] P1: I wrote nothing to anyone. On the fourth day I was so frustrated that I sat down in the corridor after the lecture, and the tutor, a master's student, walked past and said, you look like you are fighting your laptop. I laughed, and then I just told him everything.\n[00:02:38] I: How did he react?\n[00:02:42] P1: He sat down next to me and said, show me. In five minutes we found it, it was one wrong index, one single character. And he said, I did the same mistake last year. Honestly, I almost cried, from relief, not from shame.\n[00:03:12] I: What changed for you after that?\n[00:03:16] P1: I think I realised that asking is a skill, like debugging. You do not become better by never having bugs. After that I went to the weekly tutoring session. Now I go almost every week, I ask my questions, and I explain things to others when I can.\n[00:03:50] I: Before that moment, did you feel embarrassed to ask?\n[00:03:55] P1: Oh yes. I thought, if I ask, they will see that my job experience is not worth anything. But the funny thing is, in my job I ask my colleagues all the time. It is normal there. At the university I had made up a different rule.\n[00:04:28] I: Where do you think that rule came from?\n[00:04:32] P1: Probably from school. At school, asking meant you had not listened. At work, asking means you want to get it right. It is the same sentence with a different meaning. I only noticed this in the corridor.\n[00:05:02] I: Is there anything that is still difficult?\n[00:05:06] P1: Time. The tutoring is on Thursday at four, and sometimes I am at work. Then I miss it. The university does record the lectures, but not the tutoring. I would like an evening option for people like me.\n[00:05:36] I: And what makes it easier now?\n[00:05:40] P1: The tutor knows my name. That sounds small, but it is big. And I have two classmates from the part-time group in a chat. We send each other screenshots of errors. It is silly and it helps.\n[00:06:08] I: What advice would you give to someone starting next year?\n[00:06:13] P1: Sit in the corridor and look frustrated, haha. No, seriously, say it out loud when you are stuck. Do not wait for the fourth evening like me. And if you work, tell the tutor, they have seen it before.\n[00:06:42] I: Anything else you would like to add?\n[00:06:46] P1: That I am still not a person who asks easily. I just know now that I can. I think there is a difference between being fearless and doing it anyway.\n[00:07:10] I: Thank you, Dana.\n",
+   "sprache": "en",
+   "fall": "b39527de-3c63-5a93-a733-f3605e06f344",
+   "erstellt": 1794474000000,
+   "geaendert": 1794474000000
+  },
+  {
+   "id": "90f54f1b-25c2-5a60-aca3-50754e37eaec",
+   "name": "Interview 05 (Eli)",
+   "art": "text",
+   "text": "[00:00:04] I: Hello Eli, thanks for joining. To begin, could you tell me about yourself and why you chose your programme?\n[00:00:12] P1: Hi. I study social work. My mother is a teacher and my uncle is a doctor, so university was always on the table. I chose social work because I volunteered at a youth centre and I liked being someone people could talk to.\n[00:00:44] I: How were the first weeks?\n[00:00:48] P1: Fine, actually. I knew how a university works, more or less, from my cousins. I joined the student council event and met people quickly. What I did not expect is that the content is so emotional. We talk about real families and real problems from the second week.\n[00:01:22] I: Was there a situation where you needed help?\n[00:01:26] P1: Yes, two. One was academic, a statistics module, which I did not expect to be in social work. The other was personal. In a seminar about child protection I got a very strong reaction, because of something from my own family a long time ago. I did not know where to take that.\n[00:02:02] I: Let us take the statistics first. What did you do?\n[00:02:06] P1: I went to the tutoring a few times. It was okay. The tutor was nice, but I felt like I was the slowest, and that made me not go again. So I use it a bit, but I do not feel it is for me.\n[00:02:36] I: And the personal situation?\n[00:02:40] P1: That is harder to talk about. The university has a counselling service, and I know that, they mention it in every welcome speech. But I did not go. I told myself, I am training to help others, so I should be able to handle my own stuff.\n[00:03:12] I: Can you say more about that thought?\n[00:03:16] P1: It is a weird loop. In my training, we learn that people should ask for help early. And then I sit in the same seminar and think, but not me. I think maybe I am afraid that if I open that door, I do not know what comes out. Also, if I go, am I still professional?\n[00:03:55] I: Did you talk to anyone?\n[00:03:59] P1: To my friend Noor, from the youth centre, not from the university. She just listened. That helped a lot. But it is a bit strange that the help I use is from outside, not from the place where I study.\n[00:04:30] I: Why do you think that is?\n[00:04:34] P1: Maybe because the university feels like a place where I am being assessed. Everything I say could end up in an evaluation. Even if it is not true, that is how it feels. With Noor nobody gives me a mark.\n[00:05:02] I: What made it easier, then?\n[00:05:06] P1: One of the lecturers said in a seminar, I had a counsellor when I trained, and it made me better at this. She said it casually, as if it was normal. I thought about it for days. I have not gone yet, but I looked up the opening hours.\n[00:05:40] I: And what made it harder?\n[00:05:44] P1: The feeling that I should know better. And the waiting list. I read that it takes three weeks. I did not want to start something that I cannot finish in a panic.\n[00:06:12] I: What would you say to a new student?\n[00:06:17] P1: Honestly, I would say use whatever feels safe first. Even if it is outside the university. But also tell somebody inside, one person, that you are struggling. I am not sure I do it myself, so take it with a pinch of salt.\n[00:06:50] I: Is there anything else you would like to add?\n[00:06:54] P1: That I think the first year taught me more about asking for help than about statistics. I am somewhere in the middle. I ask for some things and not for others, and I do not know yet where the line is.\n[00:07:25] I: Thank you, Eli.\n",
+   "sprache": "en",
+   "fall": "c895d90f-80ca-503c-a07d-b5ab8fc6e91c",
+   "erstellt": 1794474000000,
+   "geaendert": 1794474000000
+  }
+ ],
+ "codes": [
+  {
+   "id": "5742d9f7-592b-5001-a091-4b6c1e7d917a",
+   "name": "A Barriers",
+   "kodierbar": false,
+   "reihenfolge": 0,
+   "definition": "What makes asking for help harder."
+  },
+  {
+   "id": "d34015fa-2fb0-5118-af03-cd42d06deff4",
+   "name": "A1 Embarrassment and fear of judgement",
+   "kodierbar": true,
+   "reihenfolge": 1,
+   "elternId": "5742d9f7-592b-5001-a091-4b6c1e7d917a",
+   "definition": "The person says they feel shame, fear of looking incapable or of being judged when asking.",
+   "regel": "Include: words like embarrassed, ashamed, afraid to look stupid; also the lecturer's reaction as a feared threat. Exclude: plain lack of time (A3); thoughts about identity without shame (D1).",
+   "anker": [
+    {
+     "segment": "f8d442a4-28a4-591a-aa44-bada1c91b0c8",
+     "text": "I felt embarrassed to ask, plain and simple."
+    }
+   ]
+  },
+  {
+   "id": "534b31dd-c90d-54e5-ae7a-7d4a664ce3ce",
+   "name": "A2 Self-image of independence",
+   "kodierbar": true,
+   "reihenfolge": 2,
+   "elternId": "5742d9f7-592b-5001-a091-4b6c1e7d917a",
+   "definition": "The person holds a rule that capable people manage alone.",
+   "regel": "Include: statements such as \"I should handle this myself\". Exclude: mere preference for working alone without a rule behind it.",
+   "anker": [
+    {
+     "segment": "f506d156-1c4e-53c5-aaa4-347032e8584b",
+     "text": "Strong people manage on their own."
+    }
+   ]
+  },
+  {
+   "id": "2b6becf0-5b57-56a3-a2e1-b265d1c44fdc",
+   "name": "A3 Practical barriers",
+   "kodierbar": true,
+   "reihenfolge": 3,
+   "elternId": "5742d9f7-592b-5001-a091-4b6c1e7d917a",
+   "definition": "Time, work, place or schedule stop the person from asking.",
+   "regel": "Include: clashes of office hours with work or placement. Exclude: excuses that the person calls an excuse (code A2 or A1 instead).",
+   "anker": [
+    {
+     "segment": "f182256b-c240-5bb0-acd1-b8c9e3451fa1",
+     "text": "Office hours are on Tuesday afternoon, when I am at the placement."
+    }
+   ]
+  },
+  {
+   "id": "00f756e9-427e-5c14-a02e-9377c8cf421c",
+   "name": "B Sources of help",
+   "kodierbar": false,
+   "reihenfolge": 4,
+   "definition": "Where help comes from."
+  },
+  {
+   "id": "8d87b4e3-8dcf-5280-a243-995fe414e996",
+   "name": "B1 Peers",
+   "kodierbar": true,
+   "reihenfolge": 5,
+   "elternId": "00f756e9-427e-5c14-a02e-9377c8cf421c",
+   "definition": "Help from other students, in groups, chats or pairs.",
+   "regel": "Include: study groups, group chats, a classmate explaining. Exclude: student tutors employed by the university (B2).",
+   "anker": [
+    {
+     "segment": "d738515c-601e-580a-abb8-22ef107a9dc4",
+     "text": "With other students it is a trade."
+    }
+   ]
+  },
+  {
+   "id": "effa5407-023e-5f7c-a2ed-8b468726193f",
+   "name": "B2 Tutors and lecturers",
+   "kodierbar": true,
+   "reihenfolge": 6,
+   "elternId": "00f756e9-427e-5c14-a02e-9377c8cf421c",
+   "definition": "Help from university staff or student tutors in an official role.",
+   "regel": "Include: tutoring, writing support, office hours. Exclude: casual chats with classmates (B1).",
+   "anker": [
+    {
+     "segment": "4effc28f-013d-5466-a041-77b3c43b3746",
+     "text": "It was like she handed me a key."
+    }
+   ]
+  },
+  {
+   "id": "0f41ab43-ac60-5c9c-a3d9-7489092ce3ef",
+   "name": "B3 Help from outside",
+   "kodierbar": true,
+   "reihenfolge": 7,
+   "elternId": "00f756e9-427e-5c14-a02e-9377c8cf421c",
+   "definition": "Help from people or places outside the university.",
+   "regel": "Include: friends, family, outside services. Exclude: help from classmates (B1).",
+   "anker": [
+    {
+     "segment": "06a34ab6-b7c9-5eff-a3cb-e8aabd7fa15c",
+     "text": "the help I use is from outside, not from the place where I study"
+    }
+   ]
+  },
+  {
+   "id": "e879d985-6e5e-5b84-ad28-13a3873fe42e",
+   "name": "C Enablers",
+   "kodierbar": false,
+   "reihenfolge": 8,
+   "definition": "What makes asking for help easier."
+  },
+  {
+   "id": "8dd2dc20-f1c5-57b4-a5bf-f6b7a18fb99c",
+   "name": "C1 Normalising signals",
+   "kodierbar": true,
+   "reihenfolge": 9,
+   "elternId": "e879d985-6e5e-5b84-ad28-13a3873fe42e",
+   "definition": "Messages that say asking is normal and expected.",
+   "regel": "Include: welcome emails, remarks of lecturers about their own struggles. Exclude: general friendliness without a message about asking.",
+   "anker": [
+    {
+     "segment": "2c5e9d0d-f8b5-5680-a489-fe41e6691db1",
+     "text": "nobody is expected to know this already"
+    }
+   ]
+  },
+  {
+   "id": "2fefe03f-77ee-5e7d-a718-c31634566779",
+   "name": "C2 Preparing to ask",
+   "kodierbar": true,
+   "reihenfolge": 10,
+   "elternId": "e879d985-6e5e-5b84-ad28-13a3873fe42e",
+   "definition": "The person prepares so that asking feels earned or safe.",
+   "regel": "Include: lists of questions, rehearsing, waiting for a small safe circle. Exclude: preparing for an exam (not for asking).",
+   "anker": [
+    {
+     "segment": "86d9c0b2-4637-547c-aa62-c4e94505455a",
+     "text": "I brought a list of three questions so that I would not waste her time."
+    }
+   ]
+  },
+  {
+   "id": "874e0f92-9053-5cf7-a665-47570bd7abff",
+   "name": "C3 Reciprocity",
+   "kodierbar": true,
+   "reihenfolge": 11,
+   "elternId": "e879d985-6e5e-5b84-ad28-13a3873fe42e",
+   "definition": "Asking is made easy because help goes both ways.",
+   "regel": "Include: taking turns, giving as well as taking. Exclude: one-sided help from a tutor.",
+   "anker": [
+    {
+     "segment": "76387c6f-b1a8-5eb5-a062-69d82ed3a048",
+     "text": "Asking is easy if it goes both ways."
+    }
+   ]
+  },
+  {
+   "id": "977ece52-970d-5ae8-aa2e-a2961ca882bd",
+   "name": "C4 Turning point",
+   "kodierbar": true,
+   "reihenfolge": 12,
+   "elternId": "e879d985-6e5e-5b84-ad28-13a3873fe42e",
+   "definition": "A single moment after which the person sees asking differently.",
+   "regel": "Include: told as a story with before and after. Exclude: slow, gradual change without a moment.",
+   "anker": [
+    {
+     "segment": "81c7d70a-ce7e-5dbc-a560-498795bfb146",
+     "text": "Honestly, I almost cried, from relief, not from shame."
+    }
+   ]
+  },
+  {
+   "id": "3260b96d-d240-50ad-a1e9-90318f63bba8",
+   "name": "D Meaning of help",
+   "kodierbar": false,
+   "reihenfolge": 13,
+   "definition": "What needing help means to the person."
+  },
+  {
+   "id": "529c55a0-b8f4-5e94-a822-b7c5b2314eb7",
+   "name": "D1 Help and identity",
+   "kodierbar": true,
+   "reihenfolge": 14,
+   "elternId": "3260b96d-d240-50ad-a1e9-90318f63bba8",
+   "definition": "Needing help is linked to who the person is or wants to be.",
+   "regel": "Include: role talk (reliable one, future professional), loss of identity. Exclude: pure rules about independence (A2).",
+   "anker": [
+    {
+     "segment": "573918c5-b159-5430-a574-1a923b2df22b",
+     "text": "being the person who needs help feels like, like losing something about who I am"
+    }
+   ]
+  }
+ ],
+ "segmente": [
+  {
+   "id": "f8d442a4-28a4-591a-aa44-bada1c91b0c8",
+   "dokument": "6b0b8d45-009e-56c7-adc3-535d37f95627",
+   "start": 1623,
+   "ende": 1667,
+   "erstellt": 1794474000000,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "f506d156-1c4e-53c5-aaa4-347032e8584b",
+   "dokument": "6b0b8d45-009e-56c7-adc3-535d37f95627",
+   "start": 3185,
+   "ende": 3219,
+   "erstellt": 1794474000001,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "f182256b-c240-5bb0-acd1-b8c9e3451fa1",
+   "dokument": "6b0b8d45-009e-56c7-adc3-535d37f95627",
+   "start": 2895,
+   "ende": 2961,
+   "erstellt": 1794474000002,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "573918c5-b159-5430-a574-1a923b2df22b",
+   "dokument": "6b0b8d45-009e-56c7-adc3-535d37f95627",
+   "start": 2009,
+   "ende": 2089,
+   "erstellt": 1794474000003,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "ac0f9009-4475-5181-ac9c-e028a1bb992f",
+   "dokument": "6b0b8d45-009e-56c7-adc3-535d37f95627",
+   "start": 2674,
+   "ende": 2695,
+   "erstellt": 1794474000004,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "34868b17-f1b0-549f-aa44-b738be4262f6",
+   "dokument": "6b0b8d45-009e-56c7-adc3-535d37f95627",
+   "start": 3840,
+   "ende": 3879,
+   "erstellt": 1794474000005,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "d738515c-601e-580a-abb8-22ef107a9dc4",
+   "dokument": "a4f4fed8-e5e5-5e0e-ae27-012d07e40f8b",
+   "start": 2275,
+   "ende": 2309,
+   "erstellt": 1794474000006,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "76387c6f-b1a8-5eb5-a062-69d82ed3a048",
+   "dokument": "a4f4fed8-e5e5-5e0e-ae27-012d07e40f8b",
+   "start": 3374,
+   "ende": 3410,
+   "erstellt": 1794474000007,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "f1609f06-5924-599a-a234-1c911aa6dc79",
+   "dokument": "a4f4fed8-e5e5-5e0e-ae27-012d07e40f8b",
+   "start": 734,
+   "ende": 805,
+   "erstellt": 1794474000008,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "a8eb9153-47d5-51f6-a2d3-dc4c1f115724",
+   "dokument": "a4f4fed8-e5e5-5e0e-ae27-012d07e40f8b",
+   "start": 2555,
+   "ende": 2658,
+   "erstellt": 1794474000009,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "66700296-7478-5d65-a164-329d15fcf7d5",
+   "dokument": "a4f4fed8-e5e5-5e0e-ae27-012d07e40f8b",
+   "start": 2852,
+   "ende": 2915,
+   "erstellt": 1794474000010,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "4effc28f-013d-5466-a041-77b3c43b3746",
+   "dokument": "c99e6056-bcef-5080-ac10-79546ed819de",
+   "start": 1499,
+   "ende": 1531,
+   "erstellt": 1794474000011,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "86d9c0b2-4637-547c-aa62-c4e94505455a",
+   "dokument": "c99e6056-bcef-5080-ac10-79546ed819de",
+   "start": 1718,
+   "ende": 1789,
+   "erstellt": 1794474000012,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "2c5e9d0d-f8b5-5680-a489-fe41e6691db1",
+   "dokument": "c99e6056-bcef-5080-ac10-79546ed819de",
+   "start": 2538,
+   "ende": 2577,
+   "erstellt": 1794474000013,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "388fe78e-e07d-580c-a886-8805ddd29f13",
+   "dokument": "c99e6056-bcef-5080-ac10-79546ed819de",
+   "start": 2733,
+   "ende": 2803,
+   "erstellt": 1794474000014,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "75385a63-4c20-5585-a83e-b545884f1855",
+   "dokument": "c99e6056-bcef-5080-ac10-79546ed819de",
+   "start": 2213,
+   "ende": 2293,
+   "erstellt": 1794474000015,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "81c7d70a-ce7e-5dbc-a560-498795bfb146",
+   "dokument": "4dabe087-5dbf-56a2-ad02-c05cddea50ea",
+   "start": 1553,
+   "ende": 1607,
+   "erstellt": 1794474000016,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "4c9e447f-471c-59ad-a620-098138891a7b",
+   "dokument": "4dabe087-5dbf-56a2-ad02-c05cddea50ea",
+   "start": 1776,
+   "ende": 1825,
+   "erstellt": 1794474000017,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "38ad1800-eca8-5401-a5e4-b5d1ba74168b",
+   "dokument": "4dabe087-5dbf-56a2-ad02-c05cddea50ea",
+   "start": 2176,
+   "ende": 2225,
+   "erstellt": 1794474000018,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "3db0cfc8-e16e-5ad6-a9ad-f69fef8d7e40",
+   "dokument": "4dabe087-5dbf-56a2-ad02-c05cddea50ea",
+   "start": 2576,
+   "ende": 2640,
+   "erstellt": 1794474000019,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "0bbab7ff-ef7b-5c75-a9c9-5fd1922a064e",
+   "dokument": "4dabe087-5dbf-56a2-ad02-c05cddea50ea",
+   "start": 2951,
+   "ende": 2992,
+   "erstellt": 1794474000020,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "06a34ab6-b7c9-5eff-a3cb-e8aabd7fa15c",
+   "dokument": "90f54f1b-25c2-5a60-aca3-50754e37eaec",
+   "start": 2104,
+   "ende": 2168,
+   "erstellt": 1794474000021,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "e1538f09-b29a-50a8-aaf1-2127f406191a",
+   "dokument": "90f54f1b-25c2-5a60-aca3-50754e37eaec",
+   "start": 1513,
+   "ende": 1586,
+   "erstellt": 1794474000022,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "db1e451a-7b81-5057-aeca-690c91515ef3",
+   "dokument": "90f54f1b-25c2-5a60-aca3-50754e37eaec",
+   "start": 1877,
+   "ende": 1916,
+   "erstellt": 1794474000023,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "2dafa4cf-4fcd-55ea-ae6f-f620fa0b7f09",
+   "dokument": "90f54f1b-25c2-5a60-aca3-50754e37eaec",
+   "start": 1107,
+   "ende": 1142,
+   "erstellt": 1794474000024,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "4601365e-2580-5308-ac70-7891b3015862",
+   "dokument": "90f54f1b-25c2-5a60-aca3-50754e37eaec",
+   "start": 2524,
+   "ende": 2589,
+   "erstellt": 1794474000025,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "1b159f5f-03a5-57be-a7d0-1efea9059385",
+   "dokument": "90f54f1b-25c2-5a60-aca3-50754e37eaec",
+   "start": 2811,
+   "ende": 2832,
+   "erstellt": 1794474000026,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  }
+ ],
+ "kodierungen": [
+  {
+   "id": "723a1969-5c9d-5f56-ae65-f188200effbd",
+   "segment": "f8d442a4-28a4-591a-aa44-bada1c91b0c8",
+   "code": "d34015fa-2fb0-5118-af03-cd42d06deff4",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000000
+  },
+  {
+   "id": "0b654017-5743-5ab6-a62a-94525b1f84da",
+   "segment": "f506d156-1c4e-53c5-aaa4-347032e8584b",
+   "code": "534b31dd-c90d-54e5-ae7a-7d4a664ce3ce",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000001
+  },
+  {
+   "id": "c8a00867-a0e1-51c2-aadb-2dafec42c9ed",
+   "segment": "f182256b-c240-5bb0-acd1-b8c9e3451fa1",
+   "code": "2b6becf0-5b57-56a3-a2e1-b265d1c44fdc",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000002
+  },
+  {
+   "id": "dbe96337-0fb6-56f9-a5a1-65b0a14596c1",
+   "segment": "573918c5-b159-5430-a574-1a923b2df22b",
+   "code": "529c55a0-b8f4-5e94-a822-b7c5b2314eb7",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000003
+  },
+  {
+   "id": "783cb5b1-a8b0-5797-a765-770488c799dc",
+   "segment": "ac0f9009-4475-5181-ac9c-e028a1bb992f",
+   "code": "8dd2dc20-f1c5-57b4-a5bf-f6b7a18fb99c",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000004
+  },
+  {
+   "id": "2e352fbc-0181-5504-a9ae-602151986625",
+   "segment": "34868b17-f1b0-549f-aa44-b738be4262f6",
+   "code": "effa5407-023e-5f7c-a2ed-8b468726193f",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000005
+  },
+  {
+   "id": "ec945a71-3108-5336-a4a1-3aa401199496",
+   "segment": "d738515c-601e-580a-abb8-22ef107a9dc4",
+   "code": "8d87b4e3-8dcf-5280-a243-995fe414e996",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000006
+  },
+  {
+   "id": "363587c2-0851-504d-a7b7-a622dc42d057",
+   "segment": "76387c6f-b1a8-5eb5-a062-69d82ed3a048",
+   "code": "874e0f92-9053-5cf7-a665-47570bd7abff",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000007
+  },
+  {
+   "id": "89cfc991-ec97-5282-a1c3-da149f3fcbef",
+   "segment": "f1609f06-5924-599a-a234-1c911aa6dc79",
+   "code": "8d87b4e3-8dcf-5280-a243-995fe414e996",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000008
+  },
+  {
+   "id": "0e0eeb31-c24b-598f-a479-93fa0ee80cb8",
+   "segment": "a8eb9153-47d5-51f6-a2d3-dc4c1f115724",
+   "code": "d34015fa-2fb0-5118-af03-cd42d06deff4",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000009
+  },
+  {
+   "id": "8e135beb-1252-58f2-a84a-80ec9ffa494f",
+   "segment": "66700296-7478-5d65-a164-329d15fcf7d5",
+   "code": "8dd2dc20-f1c5-57b4-a5bf-f6b7a18fb99c",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000010
+  },
+  {
+   "id": "a1c60831-1081-57d4-a5af-a18bdd723f28",
+   "segment": "4effc28f-013d-5466-a041-77b3c43b3746",
+   "code": "effa5407-023e-5f7c-a2ed-8b468726193f",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000011
+  },
+  {
+   "id": "3099f9bb-b59d-5991-a82d-12680e17aa0b",
+   "segment": "86d9c0b2-4637-547c-aa62-c4e94505455a",
+   "code": "2fefe03f-77ee-5e7d-a718-c31634566779",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000012
+  },
+  {
+   "id": "b01ac8e8-d61f-5889-a724-3cfa57474142",
+   "segment": "2c5e9d0d-f8b5-5680-a489-fe41e6691db1",
+   "code": "8dd2dc20-f1c5-57b4-a5bf-f6b7a18fb99c",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000013
+  },
+  {
+   "id": "c548e576-320e-5be8-a975-b0a56aafe5cf",
+   "segment": "388fe78e-e07d-580c-a886-8805ddd29f13",
+   "code": "d34015fa-2fb0-5118-af03-cd42d06deff4",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000014
+  },
+  {
+   "id": "e7d64c1c-c23c-5b21-aa6a-8255d3baef56",
+   "segment": "75385a63-4c20-5585-a83e-b545884f1855",
+   "code": "529c55a0-b8f4-5e94-a822-b7c5b2314eb7",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000015
+  },
+  {
+   "id": "182175d5-d4c8-5248-ad6c-ba01f823558b",
+   "segment": "81c7d70a-ce7e-5dbc-a560-498795bfb146",
+   "code": "977ece52-970d-5ae8-aa2e-a2961ca882bd",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000016
+  },
+  {
+   "id": "2fd4942a-535d-5cd5-a93f-16837383f928",
+   "segment": "4c9e447f-471c-59ad-a620-098138891a7b",
+   "code": "effa5407-023e-5f7c-a2ed-8b468726193f",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000017
+  },
+  {
+   "id": "8343e952-1ebe-5d8b-a3db-d615013ca901",
+   "segment": "38ad1800-eca8-5401-a5e4-b5d1ba74168b",
+   "code": "534b31dd-c90d-54e5-ae7a-7d4a664ce3ce",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000018
+  },
+  {
+   "id": "eb400dd2-4baa-5a2d-a63a-72d6418c363b",
+   "segment": "3db0cfc8-e16e-5ad6-a9ad-f69fef8d7e40",
+   "code": "2b6becf0-5b57-56a3-a2e1-b265d1c44fdc",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000019
+  },
+  {
+   "id": "4025d95e-be06-5a94-af0d-51e5969cc222",
+   "segment": "0bbab7ff-ef7b-5c75-a9c9-5fd1922a064e",
+   "code": "8d87b4e3-8dcf-5280-a243-995fe414e996",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000020
+  },
+  {
+   "id": "10ac9e70-d3c8-5b57-ae7c-ca787ded473d",
+   "segment": "06a34ab6-b7c9-5eff-a3cb-e8aabd7fa15c",
+   "code": "0f41ab43-ac60-5c9c-a3d9-7489092ce3ef",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000021
+  },
+  {
+   "id": "ca1a0df5-cbba-530a-a48c-b0e67c0ced71",
+   "segment": "e1538f09-b29a-50a8-aaf1-2127f406191a",
+   "code": "534b31dd-c90d-54e5-ae7a-7d4a664ce3ce",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000022
+  },
+  {
+   "id": "651ed283-08c4-54ea-a560-d6da6ea69c6c",
+   "segment": "db1e451a-7b81-5057-aeca-690c91515ef3",
+   "code": "529c55a0-b8f4-5e94-a822-b7c5b2314eb7",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000023
+  },
+  {
+   "id": "2ef0a287-2912-552f-adbd-bd1e805dedb0",
+   "segment": "2dafa4cf-4fcd-55ea-ae6f-f620fa0b7f09",
+   "code": "effa5407-023e-5f7c-a2ed-8b468726193f",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000024
+  },
+  {
+   "id": "1590d5be-9c3a-536a-aeb5-91f5c090a7a8",
+   "segment": "4601365e-2580-5308-ac70-7891b3015862",
+   "code": "8dd2dc20-f1c5-57b4-a5bf-f6b7a18fb99c",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000025
+  },
+  {
+   "id": "792d7cd1-8817-553c-a9bc-bec8172d9278",
+   "segment": "1b159f5f-03a5-57be-a7d0-1efea9059385",
+   "code": "2b6becf0-5b57-56a3-a2e1-b265d1c44fdc",
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+   "erstellt": 1794474000026
+  }
+ ],
+ "memos": [
+  {
+   "id": "a4aefe01-cada-543d-a8ee-41aa7181fedb",
+   "text": "Everything in this project is invented. The codes, codings and themes are example work by hand, one possible solution among others. The survey (umfrage.csv, n = 60) is linked to the five cases through the case variable survey_id.",
+   "titel": "About this example",
+   "erstellt": 1794474000000,
+   "bezug": [
+    {
+     "art": "projekt"
+    }
+   ],
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  }
+ ],
+ "faelle": [
+  {
+   "id": "6eacc129-798b-5969-a2f3-40ec90366883",
+   "name": "Amira (C01)",
+   "werte": {
+    "b53220d3-31ac-5f0c-a13d-1519fe126807": "Nursing",
+    "f21c2c58-29c3-586a-a769-077f4bb29908": "yes",
+    "88a2d72e-57e9-562b-a168-3ea314e95919": "part-time",
+    "47a82658-2459-55b1-a9c9-5d7d4ee88058": "20-24",
+    "47450d24-a301-55f8-a40c-d7379f32c642": "S07"
+   }
+  },
+  {
+   "id": "5543695b-e415-58f9-a189-540e62a007e8",
+   "name": "Ben (C02)",
+   "werte": {
+    "b53220d3-31ac-5f0c-a13d-1519fe126807": "Engineering",
+    "f21c2c58-29c3-586a-a769-077f4bb29908": "no",
+    "88a2d72e-57e9-562b-a168-3ea314e95919": "full-time",
+    "47a82658-2459-55b1-a9c9-5d7d4ee88058": "18-19",
+    "47450d24-a301-55f8-a40c-d7379f32c642": "S19"
+   }
+  },
+  {
+   "id": "8dec7c6e-2c0d-5946-ac51-6573f5741039",
+   "name": "Chen (C03)",
+   "werte": {
+    "b53220d3-31ac-5f0c-a13d-1519fe126807": "History",
+    "f21c2c58-29c3-586a-a769-077f4bb29908": "yes",
+    "88a2d72e-57e9-562b-a168-3ea314e95919": "full-time",
+    "47a82658-2459-55b1-a9c9-5d7d4ee88058": "18-19",
+    "47450d24-a301-55f8-a40c-d7379f32c642": "S31"
+   }
+  },
+  {
+   "id": "b39527de-3c63-5a93-a733-f3605e06f344",
+   "name": "Dana (C04)",
+   "werte": {
+    "b53220d3-31ac-5f0c-a13d-1519fe126807": "Computer Science",
+    "f21c2c58-29c3-586a-a769-077f4bb29908": "no",
+    "88a2d72e-57e9-562b-a168-3ea314e95919": "part-time",
+    "47a82658-2459-55b1-a9c9-5d7d4ee88058": "25-29",
+    "47450d24-a301-55f8-a40c-d7379f32c642": "S42"
+   }
+  },
+  {
+   "id": "c895d90f-80ca-503c-a07d-b5ab8fc6e91c",
+   "name": "Eli (C05)",
+   "werte": {
+    "b53220d3-31ac-5f0c-a13d-1519fe126807": "Social Work",
+    "f21c2c58-29c3-586a-a769-077f4bb29908": "no",
+    "88a2d72e-57e9-562b-a168-3ea314e95919": "full-time",
+    "47a82658-2459-55b1-a9c9-5d7d4ee88058": "20-24",
+    "47450d24-a301-55f8-a40c-d7379f32c642": "S55"
+   }
+  }
+ ],
+ "variablen": [
+  {
+   "id": "b53220d3-31ac-5f0c-a13d-1519fe126807",
+   "name": "field",
+   "typ": "text",
+   "beschreibung": "Field of study"
+  },
+  {
+   "id": "f21c2c58-29c3-586a-a769-077f4bb29908",
+   "name": "first_generation",
+   "typ": "text",
+   "beschreibung": "First in the family at university (yes/no)"
+  },
+  {
+   "id": "88a2d72e-57e9-562b-a168-3ea314e95919",
+   "name": "study_mode",
+   "typ": "text",
+   "beschreibung": "Full-time or part-time"
+  },
+  {
+   "id": "47a82658-2459-55b1-a9c9-5d7d4ee88058",
+   "name": "age_group",
+   "typ": "text",
+   "beschreibung": "Age group"
+  },
+  {
+   "id": "47450d24-a301-55f8-a40c-d7379f32c642",
+   "name": "survey_id",
+   "typ": "text",
+   "beschreibung": "Number in the survey (for linking)"
+  }
+ ],
+ "protokoll": [],
+ "themen": [
+  {
+   "id": "8858dce6-a9c2-501b-a250-aae103c84392",
+   "name": "Asking puts who I am at stake",
+   "konzept": "For several students a question is felt as a statement about their worth, not as a step in learning.",
+   "codes": [
+    "d34015fa-2fb0-5118-af03-cd42d06deff4",
+    "534b31dd-c90d-54e5-ae7a-7d4a664ce3ce",
+    "529c55a0-b8f4-5e94-a822-b7c5b2314eb7"
+   ],
+   "stand": "kandidat",
+   "verlauf": [
+    {
+     "zeit": 1794474000000,
+     "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+     "was": "angelegt",
+     "nachher": "Asking puts who I am at stake",
+     "notiz": "Example themes from muster-codebuch.md (written by hand, one possible solution)."
+    }
+   ],
+   "reihenfolge": 0,
+   "erstellt": 1794474000000,
+   "geaendert": 1794474000000,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "cb035f7b-1475-524f-ae8c-b8c274d640ca",
+   "name": "Help comes easier where it feels safe and mutual",
+   "konzept": "Students ask where they are not assessed and where giving and taking are balanced.",
+   "codes": [
+    "8d87b4e3-8dcf-5280-a243-995fe414e996",
+    "0f41ab43-ac60-5c9c-a3d9-7489092ce3ef",
+    "8dd2dc20-f1c5-57b4-a5bf-f6b7a18fb99c",
+    "874e0f92-9053-5cf7-a665-47570bd7abff"
+   ],
+   "stand": "kandidat",
+   "verlauf": [
+    {
+     "zeit": 1794474000000,
+     "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+     "was": "angelegt",
+     "nachher": "Help comes easier where it feels safe and mutual",
+     "notiz": "Example themes from muster-codebuch.md (written by hand, one possible solution)."
+    }
+   ],
+   "reihenfolge": 1,
+   "erstellt": 1794474000000,
+   "geaendert": 1794474000000,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  },
+  {
+   "id": "f5f2f091-e047-5c46-a32b-eb163f5de21f",
+   "name": "Asking is learned, one door at a time",
+   "konzept": "A first small, successful act of asking opens the next one.",
+   "codes": [
+    "effa5407-023e-5f7c-a2ed-8b468726193f",
+    "2fefe03f-77ee-5e7d-a718-c31634566779",
+    "977ece52-970d-5ae8-aa2e-a2961ca882bd",
+    "2b6becf0-5b57-56a3-a2e1-b265d1c44fdc"
+   ],
+   "stand": "kandidat",
+   "verlauf": [
+    {
+     "zeit": 1794474000000,
+     "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14",
+     "was": "angelegt",
+     "nachher": "Asking is learned, one door at a time",
+     "notiz": "Example themes from muster-codebuch.md (written by hand, one possible solution)."
+    }
+   ],
+   "reihenfolge": 2,
+   "erstellt": 1794474000000,
+   "geaendert": 1794474000000,
+   "kodierende": "13d575a5-4384-551c-ade3-bf01865f2a14"
+  }
+ ],
+ "herkunft": {
+  "art": "neu",
+  "zeit": 1794474000000
+ }
+}

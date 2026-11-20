@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeBook xmlns="urn:QDA-XML:codebook:1.0" origin="refi_qda test fixture">
+  <Codes>
+    <Code guid="20000000-0000-0000-0000-000000000001" name="Topics" isCodable="false">
+      <Code guid="20000000-0000-0000-0000-000000000002" name="Health" isCodable="true" color="#33cc33">
+        <Description>Anything about physical or mental health</Description>
+        <Code guid="20000000-0000-0000-0000-000000000003" name="Diet" isCodable="true" color="#dc0000">
+          <Description>Food and eating habits</Description>
+        </Code>
+      </Code>
+      <Code guid="20000000-0000-0000-0000-000000000004" name="Wellbeing" isCodable="true" color="#0000ff"/>
+    </Code>
+  </Codes>
+</CodeBook>

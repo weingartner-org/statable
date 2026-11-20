@@ -1,0 +1,30 @@
+{
+  "questions": {
+    "q1": {
+      "q": "Wie zufrieden sind Sie?"
+    },
+    "q2": {
+      "q": "Anmerkungen"
+    }
+  },
+  "responses": [
+    {
+      "_time": "2026-11-08T09:15:30.000Z",
+      "_name": "Gast",
+      "q1": "Zufrieden",
+      "q2": "Schön, aber laut"
+    },
+    {
+      "_time": "2026-11-08T09:40:02.000Z",
+      "_name": "Gast",
+      "q1": "Neutral",
+      "q2": ""
+    },
+    {
+      "_time": "2026-11-08T10:05:44.000Z",
+      "_name": "Gast",
+      "q1": "Zufrieden",
+      "q2": "In Ordnung"
+    }
+  ]
+}

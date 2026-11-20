@@ -1,0 +1,11 @@
+import { chromium } from '@playwright/test';
+const b = await chromium.launch(); const ctx = await b.newContext({ locale: 'de-DE', viewport: { width: 1280, height: 800 } }); const page = await ctx.newPage();
+await page.goto('http://127.0.0.1:4195/#beispiele'); await page.waitForTimeout(1500);
+await page.getByRole('button', { name: /Öffnen und üben/ }).first().click(); await page.waitForTimeout(2500);
+await page.goto('http://127.0.0.1:4195/#spalten'); await page.waitForTimeout(1500);
+for (let i = 0; i < 14; i++) await page.keyboard.press('Tab');
+const info = await page.evaluate(() => { const el = document.activeElement; const r = el.getBoundingClientRect(); const pts = [[.5,.5],[.1,.1],[.9,.9]].map(([a,b]) => { const o = document.elementFromPoint(r.left + r.width*a, r.top + r.height*b); return o ? o.tagName + '.' + o.className + ' | ' + (o.textContent||'').slice(0,40) : null; });
+  return { tag: el.tagName, cls: el.className, r: [r.x, r.y, r.width, r.height], pts, scrollY, sticky: Array.from(document.querySelectorAll('*')).filter(e => ['fixed','sticky'].includes(getComputedStyle(e).position)).map(e => e.tagName + '.' + e.className + ' ' + JSON.stringify(e.getBoundingClientRect().toJSON())) .slice(0,10) }; });
+console.log(JSON.stringify(info, null, 1));
+await page.screenshot({ path: 'e2e/ergebnisse/verdeckt-spalten.png' });
+await b.close();

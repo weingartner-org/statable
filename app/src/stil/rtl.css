@@ -1,0 +1,17 @@
+/* Schrift von rechts nach links (Arabisch, Persisch, Prüfsprache xr; Welle R, docs/RTL-UMBAU-2026-11-11.md).
+   Das Seitengerüst folgt `<html dir="rtl">` von selbst, weil überall logische Eigenschaften stehen (margin-inline-start, inset-inline-end,
+   text-align: start …). Hier stehen nur Zeichen und Pfeile, die eine Richtung meinen. In Sprachen von links nach rechts gilt davon nichts.
+   Bleiben von links nach rechts: Diagramme (Achsen, Koordinaten), Formeln und Zahlen (Isolierung in i18n/bidi.ts), Zahlenspalten (text-align: right). */
+.rand-schalter svg.gedreht{transform:rotate(180deg)}
+:dir(rtl) .ico.spiegel{transform:scaleX(-1)}
+:dir(rtl) .rand-schalter svg{transform:scaleX(-1)}
+:dir(rtl) .rand-schalter svg.gedreht{transform:scaleX(-1) rotate(180deg)}
+:dir(rtl) .schalter input:checked::after{transform:translateX(-18px)}
+:dir(rtl) details.auf>summary::before{transform:rotate(135deg)}
+:dir(rtl) details.auf[open]>summary::before{transform:rotate(45deg)}
+:dir(rtl) .kachel-mehr>summary::before{transform:scaleX(-1)}
+:dir(rtl) .kachel-mehr[open]>summary::before{transform:rotate(90deg)}
+:dir(rtl) .as-pfeil{display:inline-block;transform:scaleX(-1)}
+/* Befehle, Codezeilen und Programmtexte (R, SPSS, PSPP, TI-84, Excel) bleiben von links nach rechts, auch mitten in einem RTL-Satz */
+:dir(rtl) code,:dir(rtl) kbd,:dir(rtl) samp{direction:ltr;unicode-bidi:isolate}
+:dir(rtl) pre{direction:ltr;text-align:left;unicode-bidi:isolate}

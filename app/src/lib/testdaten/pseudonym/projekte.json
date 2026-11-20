@@ -1,0 +1,1522 @@
+{
+ "ersetzen": [
+  {
+   "name": "segmentlagen",
+   "projekt": {
+    "format": "statable-qualitativ",
+    "version": 1,
+    "id": "pA",
+    "name": "pA",
+    "kodierende": [
+     {
+      "id": "u1",
+      "name": "Kodiererin A"
+     }
+    ],
+    "dokumente": [
+     {
+      "id": "d1",
+      "name": "Interview d1",
+      "art": "text",
+      "text": "Gestern sprach Anna lange mit Herrn Berger.",
+      "erstellt": 1,
+      "geaendert": 1,
+      "transkript": {
+       "sprecher": [
+        {
+         "id": "i",
+         "name": "Interviewerin",
+         "rolle": "interview"
+        },
+        {
+         "id": "b",
+         "name": "Anna",
+         "rolle": "befragt"
+        }
+       ],
+       "abschnitte": [
+        {
+         "start": 0,
+         "ende": 15,
+         "sprecher": "i"
+        },
+        {
+         "start": 15,
+         "ende": 19,
+         "sprecher": "b"
+        },
+        {
+         "start": 20,
+         "ende": 42,
+         "sprecher": "i"
+        }
+       ]
+      }
+     }
+    ],
+    "codes": [
+     {
+      "id": "c1",
+      "name": "Code",
+      "kodierbar": true,
+      "reihenfolge": 1
+     }
+    ],
+    "segmente": [
+     {
+      "id": "sA1_vor",
+      "dokument": "d1",
+      "start": 0,
+      "ende": 7,
+      "erstellt": 1
+     },
+     {
+      "id": "sA2_hinter",
+      "dokument": "d1",
+      "start": 20,
+      "ende": 34,
+      "erstellt": 1
+     },
+     {
+      "id": "sA3_ueber",
+      "dokument": "d1",
+      "start": 8,
+      "ende": 25,
+      "erstellt": 1
+     },
+     {
+      "id": "sA4_innerhalb",
+      "dokument": "d1",
+      "start": 16,
+      "ende": 18,
+      "erstellt": 1
+     },
+     {
+      "id": "sA5_genau",
+      "dokument": "d1",
+      "start": 15,
+      "ende": 19,
+      "erstellt": 1
+     },
+     {
+      "id": "sA6_start_bei_b",
+      "dokument": "d1",
+      "start": 19,
+      "ende": 25,
+      "erstellt": 1
+     },
+     {
+      "id": "sA7_ende_bei_a",
+      "dokument": "d1",
+      "start": 8,
+      "ende": 15,
+      "erstellt": 1
+     },
+     {
+      "id": "sA8_zwei_ende_bei_b",
+      "dokument": "d1",
+      "start": 10,
+      "ende": 42,
+      "erstellt": 1
+     },
+     {
+      "id": "sA9_start_in_1_ende_in_2",
+      "dokument": "d1",
+      "start": 17,
+      "ende": 38,
+      "erstellt": 1
+     },
+     {
+      "id": "sA10_start_in_2",
+      "dokument": "d1",
+      "start": 37,
+      "ende": 42,
+      "erstellt": 1
+     }
+    ],
+    "kodierungen": [
+     {
+      "id": "k_sA1_vor",
+      "segment": "sA1_vor",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sA2_hinter",
+      "segment": "sA2_hinter",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sA3_ueber",
+      "segment": "sA3_ueber",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sA4_innerhalb",
+      "segment": "sA4_innerhalb",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sA5_genau",
+      "segment": "sA5_genau",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sA6_start_bei_b",
+      "segment": "sA6_start_bei_b",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sA7_ende_bei_a",
+      "segment": "sA7_ende_bei_a",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sA8_zwei_ende_bei_b",
+      "segment": "sA8_zwei_ende_bei_b",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sA9_start_in_1_ende_in_2",
+      "segment": "sA9_start_in_1_ende_in_2",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sA10_start_in_2",
+      "segment": "sA10_start_in_2",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     }
+    ],
+    "memos": [],
+    "faelle": [],
+    "variablen": [],
+    "protokoll": []
+   },
+   "treffer": [
+    {
+     "id": "t1",
+     "dokument": "d1",
+     "start": 15,
+     "ende": 19,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    },
+    {
+     "id": "t2",
+     "dokument": "d1",
+     "start": 36,
+     "ende": 42,
+     "text": "Berger",
+     "art": "person",
+     "ersatz": "[Person 2]",
+     "an": true
+    }
+   ],
+   "zeit": 1700000000000,
+   "erwartet": {
+    "dokumente": {
+     "d1": "Gestern sprach [Person 1] lange mit Herrn [Person 2]."
+    },
+    "segmente": {
+     "sA1_vor": {
+      "start": 0,
+      "ende": 7,
+      "text": "Gestern"
+     },
+     "sA2_hinter": {
+      "start": 26,
+      "ende": 40,
+      "text": "lange mit Herr"
+     },
+     "sA3_ueber": {
+      "start": 8,
+      "ende": 31,
+      "text": "sprach [Person 1] lange"
+     },
+     "sA4_innerhalb": {
+      "start": 15,
+      "ende": 25,
+      "text": "[Person 1]"
+     },
+     "sA5_genau": {
+      "start": 15,
+      "ende": 25,
+      "text": "[Person 1]"
+     },
+     "sA6_start_bei_b": {
+      "start": 25,
+      "ende": 31,
+      "text": " lange"
+     },
+     "sA7_ende_bei_a": {
+      "start": 8,
+      "ende": 15,
+      "text": "sprach "
+     },
+     "sA8_zwei_ende_bei_b": {
+      "start": 10,
+      "ende": 52,
+      "text": "rach [Person 1] lange mit Herrn [Person 2]"
+     },
+     "sA9_start_in_1_ende_in_2": {
+      "start": 15,
+      "ende": 52,
+      "text": "[Person 1] lange mit Herrn [Person 2]"
+     },
+     "sA10_start_in_2": {
+      "start": 42,
+      "ende": 52,
+      "text": "[Person 2]"
+     }
+    },
+    "abschnitte": {
+     "d1": [
+      {
+       "start": 0,
+       "ende": 15,
+       "sprecher": "i"
+      },
+      {
+       "start": 15,
+       "ende": 25,
+       "sprecher": "b"
+      },
+      {
+       "start": 26,
+       "ende": 52,
+       "sprecher": "i"
+      }
+     ]
+    },
+    "sprecher": {
+     "d1": {
+      "b": "[Person 1]"
+     }
+    },
+    "protokoll": {
+     "d1": 2
+    },
+    "zuordnung": [
+     {
+      "ersatz": "[Person 1]",
+      "klartext": "Anna",
+      "art": "person",
+      "stellen": 1
+     },
+     {
+      "ersatz": "[Person 2]",
+      "klartext": "Berger",
+      "art": "person",
+      "stellen": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "zwei_dokumente_gleicher_name",
+   "projekt": {
+    "format": "statable-qualitativ",
+    "version": 1,
+    "id": "pB",
+    "name": "pB",
+    "kodierende": [
+     {
+      "id": "u1",
+      "name": "Kodiererin A"
+     }
+    ],
+    "dokumente": [
+     {
+      "id": "d1",
+      "name": "Interview d1",
+      "art": "text",
+      "text": "Anna sagt hallo.",
+      "erstellt": 1,
+      "geaendert": 1,
+      "transkript": {
+       "sprecher": [
+        {
+         "id": "b",
+         "name": "Anna",
+         "rolle": "befragt"
+        }
+       ],
+       "abschnitte": [
+        {
+         "start": 0,
+         "ende": 16,
+         "sprecher": "b"
+        }
+       ]
+      }
+     },
+     {
+      "id": "d2",
+      "name": "Interview d2",
+      "art": "text",
+      "text": "Mit Anna zu Hause und mit anna.",
+      "erstellt": 1,
+      "geaendert": 1
+     },
+     {
+      "id": "d3",
+      "name": "Interview d3",
+      "art": "text",
+      "text": "Hier steht nichts.",
+      "erstellt": 1,
+      "geaendert": 1
+     }
+    ],
+    "codes": [
+     {
+      "id": "c1",
+      "name": "Code",
+      "kodierbar": true,
+      "reihenfolge": 1
+     }
+    ],
+    "segmente": [
+     {
+      "id": "sB1",
+      "dokument": "d2",
+      "start": 24,
+      "ende": 31,
+      "erstellt": 1
+     },
+     {
+      "id": "sB2",
+      "dokument": "d2",
+      "start": 0,
+      "ende": 31,
+      "erstellt": 1
+     },
+     {
+      "id": "sB3",
+      "dokument": "d3",
+      "start": 0,
+      "ende": 4,
+      "erstellt": 1
+     }
+    ],
+    "kodierungen": [
+     {
+      "id": "k_sB1",
+      "segment": "sB1",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sB2",
+      "segment": "sB2",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sB3",
+      "segment": "sB3",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     }
+    ],
+    "memos": [],
+    "faelle": [],
+    "variablen": [],
+    "protokoll": []
+   },
+   "treffer": [
+    {
+     "id": "t1",
+     "dokument": "d1",
+     "start": 0,
+     "ende": 4,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    },
+    {
+     "id": "t2",
+     "dokument": "d2",
+     "start": 4,
+     "ende": 8,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    },
+    {
+     "id": "t3",
+     "dokument": "d2",
+     "start": 26,
+     "ende": 30,
+     "text": "anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    }
+   ],
+   "zeit": 1700000000000,
+   "erwartet": {
+    "dokumente": {
+     "d1": "[Person 1] sagt hallo.",
+     "d2": "Mit [Person 1] zu Hause und mit [Person 1].",
+     "d3": "Hier steht nichts."
+    },
+    "segmente": {
+     "sB1": {
+      "start": 30,
+      "ende": 43,
+      "text": "t [Person 1]."
+     },
+     "sB2": {
+      "start": 0,
+      "ende": 43,
+      "text": "Mit [Person 1] zu Hause und mit [Person 1]."
+     },
+     "sB3": {
+      "start": 0,
+      "ende": 4,
+      "text": "Hier"
+     }
+    },
+    "abschnitte": {
+     "d1": [
+      {
+       "start": 0,
+       "ende": 22,
+       "sprecher": "b"
+      }
+     ]
+    },
+    "sprecher": {
+     "d1": {
+      "b": "[Person 1]"
+     }
+    },
+    "protokoll": {
+     "d1": 1,
+     "d2": 2
+    },
+    "zuordnung": [
+     {
+      "ersatz": "[Person 1]",
+      "klartext": "Anna",
+      "art": "person",
+      "stellen": 3
+     }
+    ]
+   }
+  },
+  {
+   "name": "emoji_und_abgewaehlt",
+   "projekt": {
+    "format": "statable-qualitativ",
+    "version": 1,
+    "id": "pC",
+    "name": "pC",
+    "kodierende": [
+     {
+      "id": "u1",
+      "name": "Kodiererin A"
+     }
+    ],
+    "dokumente": [
+     {
+      "id": "d1",
+      "name": "Interview d1",
+      "art": "text",
+      "text": "😀😀 Anna 👍 und Anna. Mail: a@b.at",
+      "erstellt": 1,
+      "geaendert": 1
+     }
+    ],
+    "codes": [
+     {
+      "id": "c1",
+      "name": "Code",
+      "kodierbar": true,
+      "reihenfolge": 1
+     }
+    ],
+    "segmente": [
+     {
+      "id": "sC1_ganz",
+      "dokument": "d1",
+      "start": 0,
+      "ende": 32,
+      "erstellt": 1
+     },
+     {
+      "id": "sC2_nach_emoji",
+      "dokument": "d1",
+      "start": 3,
+      "ende": 7,
+      "erstellt": 1
+     },
+     {
+      "id": "sC3_zwischen",
+      "dokument": "d1",
+      "start": 7,
+      "ende": 14,
+      "erstellt": 1
+     },
+     {
+      "id": "sC4_zweite_anna_nicht_ersetzt",
+      "dokument": "d1",
+      "start": 14,
+      "ende": 18,
+      "erstellt": 1
+     },
+     {
+      "id": "sC5_mail",
+      "dokument": "d1",
+      "start": 26,
+      "ende": 32,
+      "erstellt": 1
+     }
+    ],
+    "kodierungen": [
+     {
+      "id": "k_sC1_ganz",
+      "segment": "sC1_ganz",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sC2_nach_emoji",
+      "segment": "sC2_nach_emoji",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sC3_zwischen",
+      "segment": "sC3_zwischen",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sC4_zweite_anna_nicht_ersetzt",
+      "segment": "sC4_zweite_anna_nicht_ersetzt",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sC5_mail",
+      "segment": "sC5_mail",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     }
+    ],
+    "memos": [],
+    "faelle": [],
+    "variablen": [],
+    "protokoll": []
+   },
+   "treffer": [
+    {
+     "id": "t1",
+     "dokument": "d1",
+     "start": 3,
+     "ende": 7,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    },
+    {
+     "id": "t2",
+     "dokument": "d1",
+     "start": 14,
+     "ende": 18,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": false
+    },
+    {
+     "id": "t3",
+     "dokument": "d1",
+     "start": 26,
+     "ende": 32,
+     "text": "a@b.at",
+     "art": "email",
+     "ersatz": "[E-Mail]",
+     "an": true
+    }
+   ],
+   "zeit": 1700000000000,
+   "erwartet": {
+    "dokumente": {
+     "d1": "😀😀 [Person 1] 👍 und Anna. Mail: [E-Mail]"
+    },
+    "segmente": {
+     "sC1_ganz": {
+      "start": 0,
+      "ende": 40,
+      "text": "😀😀 [Person 1] 👍 und Anna. Mail: [E-Mail]"
+     },
+     "sC2_nach_emoji": {
+      "start": 3,
+      "ende": 13,
+      "text": "[Person 1]"
+     },
+     "sC3_zwischen": {
+      "start": 13,
+      "ende": 20,
+      "text": " 👍 und "
+     },
+     "sC4_zweite_anna_nicht_ersetzt": {
+      "start": 20,
+      "ende": 24,
+      "text": "Anna"
+     },
+     "sC5_mail": {
+      "start": 32,
+      "ende": 40,
+      "text": "[E-Mail]"
+     }
+    },
+    "abschnitte": {},
+    "sprecher": {},
+    "protokoll": {
+     "d1": 2
+    },
+    "zuordnung": [
+     {
+      "ersatz": "[Person 1]",
+      "klartext": "Anna",
+      "art": "person",
+      "stellen": 1
+     },
+     {
+      "ersatz": "[E-Mail]",
+      "klartext": "a@b.at",
+      "art": "email",
+      "stellen": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "alle_abgewaehlt",
+   "projekt": {
+    "format": "statable-qualitativ",
+    "version": 1,
+    "id": "pC",
+    "name": "pC",
+    "kodierende": [
+     {
+      "id": "u1",
+      "name": "Kodiererin A"
+     }
+    ],
+    "dokumente": [
+     {
+      "id": "d1",
+      "name": "Interview d1",
+      "art": "text",
+      "text": "😀😀 Anna 👍 und Anna. Mail: a@b.at",
+      "erstellt": 1,
+      "geaendert": 1
+     }
+    ],
+    "codes": [
+     {
+      "id": "c1",
+      "name": "Code",
+      "kodierbar": true,
+      "reihenfolge": 1
+     }
+    ],
+    "segmente": [
+     {
+      "id": "sC1_ganz",
+      "dokument": "d1",
+      "start": 0,
+      "ende": 32,
+      "erstellt": 1
+     },
+     {
+      "id": "sC2_nach_emoji",
+      "dokument": "d1",
+      "start": 3,
+      "ende": 7,
+      "erstellt": 1
+     },
+     {
+      "id": "sC3_zwischen",
+      "dokument": "d1",
+      "start": 7,
+      "ende": 14,
+      "erstellt": 1
+     },
+     {
+      "id": "sC4_zweite_anna_nicht_ersetzt",
+      "dokument": "d1",
+      "start": 14,
+      "ende": 18,
+      "erstellt": 1
+     },
+     {
+      "id": "sC5_mail",
+      "dokument": "d1",
+      "start": 26,
+      "ende": 32,
+      "erstellt": 1
+     }
+    ],
+    "kodierungen": [
+     {
+      "id": "k_sC1_ganz",
+      "segment": "sC1_ganz",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sC2_nach_emoji",
+      "segment": "sC2_nach_emoji",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sC3_zwischen",
+      "segment": "sC3_zwischen",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sC4_zweite_anna_nicht_ersetzt",
+      "segment": "sC4_zweite_anna_nicht_ersetzt",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sC5_mail",
+      "segment": "sC5_mail",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     }
+    ],
+    "memos": [],
+    "faelle": [],
+    "variablen": [],
+    "protokoll": []
+   },
+   "treffer": [
+    {
+     "id": "t1",
+     "dokument": "d1",
+     "start": 3,
+     "ende": 7,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": false
+    },
+    {
+     "id": "t2",
+     "dokument": "d1",
+     "start": 14,
+     "ende": 18,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": false
+    },
+    {
+     "id": "t3",
+     "dokument": "d1",
+     "start": 26,
+     "ende": 32,
+     "text": "a@b.at",
+     "art": "email",
+     "ersatz": "[E-Mail]",
+     "an": false
+    }
+   ],
+   "zeit": 1700000000000,
+   "erwartet": {
+    "dokumente": {
+     "d1": "😀😀 Anna 👍 und Anna. Mail: a@b.at"
+    },
+    "segmente": {
+     "sC1_ganz": {
+      "start": 0,
+      "ende": 32,
+      "text": "😀😀 Anna 👍 und Anna. Mail: a@b.at"
+     },
+     "sC2_nach_emoji": {
+      "start": 3,
+      "ende": 7,
+      "text": "Anna"
+     },
+     "sC3_zwischen": {
+      "start": 7,
+      "ende": 14,
+      "text": " 👍 und "
+     },
+     "sC4_zweite_anna_nicht_ersetzt": {
+      "start": 14,
+      "ende": 18,
+      "text": "Anna"
+     },
+     "sC5_mail": {
+      "start": 26,
+      "ende": 32,
+      "text": "a@b.at"
+     }
+    },
+    "abschnitte": {},
+    "sprecher": {},
+    "protokoll": {},
+    "zuordnung": []
+   }
+  },
+  {
+   "name": "ersatz_kuerzer",
+   "projekt": {
+    "format": "statable-qualitativ",
+    "version": 1,
+    "id": "pE",
+    "name": "pE",
+    "kodierende": [
+     {
+      "id": "u1",
+      "name": "Kodiererin A"
+     }
+    ],
+    "dokumente": [
+     {
+      "id": "d1",
+      "name": "Interview d1",
+      "art": "text",
+      "text": "Kontakt: anna.berger@universitaet-wien.at bitte melden.",
+      "erstellt": 1,
+      "geaendert": 1,
+      "transkript": {
+       "sprecher": [
+        {
+         "id": "i",
+         "name": "Interviewerin",
+         "rolle": "interview"
+        }
+       ],
+       "abschnitte": [
+        {
+         "start": 0,
+         "ende": 9,
+         "sprecher": "i"
+        },
+        {
+         "start": 9,
+         "ende": 55,
+         "sprecher": "i"
+        }
+       ]
+      }
+     }
+    ],
+    "codes": [
+     {
+      "id": "c1",
+      "name": "Code",
+      "kodierbar": true,
+      "reihenfolge": 1
+     }
+    ],
+    "segmente": [
+     {
+      "id": "sE1_ende_bei_b",
+      "dokument": "d1",
+      "start": 0,
+      "ende": 41,
+      "erstellt": 1
+     },
+     {
+      "id": "sE2_start_bei_b",
+      "dokument": "d1",
+      "start": 41,
+      "ende": 55,
+      "erstellt": 1
+     },
+     {
+      "id": "sE3_innerhalb",
+      "dokument": "d1",
+      "start": 14,
+      "ende": 18,
+      "erstellt": 1
+     },
+     {
+      "id": "sE4_ueber",
+      "dokument": "d1",
+      "start": 6,
+      "ende": 44,
+      "erstellt": 1
+     }
+    ],
+    "kodierungen": [
+     {
+      "id": "k_sE1_ende_bei_b",
+      "segment": "sE1_ende_bei_b",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sE2_start_bei_b",
+      "segment": "sE2_start_bei_b",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sE3_innerhalb",
+      "segment": "sE3_innerhalb",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     },
+     {
+      "id": "k_sE4_ueber",
+      "segment": "sE4_ueber",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     }
+    ],
+    "memos": [],
+    "faelle": [],
+    "variablen": [],
+    "protokoll": []
+   },
+   "treffer": [
+    {
+     "id": "t1",
+     "dokument": "d1",
+     "start": 9,
+     "ende": 41,
+     "text": "anna.berger@universitaet-wien.at",
+     "art": "email",
+     "ersatz": "[E-Mail]",
+     "an": true
+    }
+   ],
+   "zeit": 1700000000000,
+   "erwartet": {
+    "dokumente": {
+     "d1": "Kontakt: [E-Mail] bitte melden."
+    },
+    "segmente": {
+     "sE1_ende_bei_b": {
+      "start": 0,
+      "ende": 17,
+      "text": "Kontakt: [E-Mail]"
+     },
+     "sE2_start_bei_b": {
+      "start": 17,
+      "ende": 31,
+      "text": " bitte melden."
+     },
+     "sE3_innerhalb": {
+      "start": 9,
+      "ende": 17,
+      "text": "[E-Mail]"
+     },
+     "sE4_ueber": {
+      "start": 6,
+      "ende": 20,
+      "text": "t: [E-Mail] bi"
+     }
+    },
+    "abschnitte": {
+     "d1": [
+      {
+       "start": 0,
+       "ende": 9,
+       "sprecher": "i"
+      },
+      {
+       "start": 9,
+       "ende": 31,
+       "sprecher": "i"
+      }
+     ]
+    },
+    "sprecher": {
+     "d1": {}
+    },
+    "protokoll": {
+     "d1": 1
+    },
+    "zuordnung": [
+     {
+      "ersatz": "[E-Mail]",
+      "klartext": "anna.berger@universitaet-wien.at",
+      "art": "email",
+      "stellen": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "sprecher_nicht_im_text",
+   "projekt": {
+    "format": "statable-qualitativ",
+    "version": 1,
+    "id": "pG",
+    "name": "pG",
+    "kodierende": [
+     {
+      "id": "u1",
+      "name": "Kodiererin A"
+     }
+    ],
+    "dokumente": [
+     {
+      "id": "d1",
+      "name": "Interview d1",
+      "art": "text",
+      "text": "Hallo zusammen, das war es.",
+      "erstellt": 1,
+      "geaendert": 1,
+      "transkript": {
+       "sprecher": [
+        {
+         "id": "i",
+         "name": "Interviewerin",
+         "rolle": "interview"
+        },
+        {
+         "id": "b",
+         "name": "Lukas",
+         "rolle": "befragt"
+        }
+       ],
+       "abschnitte": [
+        {
+         "start": 0,
+         "ende": 27,
+         "sprecher": "b"
+        }
+       ]
+      }
+     },
+     {
+      "id": "d2",
+      "name": "Interview d2",
+      "art": "text",
+      "text": "Mit Lukas in Wien.",
+      "erstellt": 1,
+      "geaendert": 1
+     }
+    ],
+    "codes": [
+     {
+      "id": "c1",
+      "name": "Code",
+      "kodierbar": true,
+      "reihenfolge": 1
+     }
+    ],
+    "segmente": [
+     {
+      "id": "sG1",
+      "dokument": "d1",
+      "start": 0,
+      "ende": 5,
+      "erstellt": 1
+     }
+    ],
+    "kodierungen": [
+     {
+      "id": "k_sG1",
+      "segment": "sG1",
+      "code": "c1",
+      "kodierende": "u1",
+      "erstellt": 1
+     }
+    ],
+    "memos": [],
+    "faelle": [],
+    "variablen": [],
+    "protokoll": []
+   },
+   "treffer": [
+    {
+     "id": "t1",
+     "dokument": "d2",
+     "start": 4,
+     "ende": 9,
+     "text": "Lukas",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    }
+   ],
+   "zeit": 1700000000000,
+   "erwartet": {
+    "dokumente": {
+     "d1": "Hallo zusammen, das war es.",
+     "d2": "Mit [Person 1] in Wien."
+    },
+    "segmente": {
+     "sG1": {
+      "start": 0,
+      "ende": 5,
+      "text": "Hallo"
+     }
+    },
+    "abschnitte": {
+     "d1": [
+      {
+       "start": 0,
+       "ende": 27,
+       "sprecher": "b"
+      }
+     ]
+    },
+    "sprecher": {
+     "d1": {
+      "b": "[Person 1]"
+     }
+    },
+    "protokoll": {
+     "d2": 1
+    },
+    "zuordnung": [
+     {
+      "ersatz": "[Person 1]",
+      "klartext": "Lukas",
+      "art": "person",
+      "stellen": 1
+     }
+    ]
+   }
+  }
+ ],
+ "findeTreffer": {
+  "projekt": {
+   "format": "statable-qualitativ",
+   "version": 1,
+   "id": "pF",
+   "name": "pF",
+   "kodierende": [
+    {
+     "id": "u1",
+     "name": "Kodiererin A"
+    }
+   ],
+   "dokumente": [
+    {
+     "id": "d1",
+     "name": "Interview d1",
+     "art": "text",
+     "text": "Interviewerin fragt nach. Anna antwortet: Ich bin Annas Schwester und wohne in Wien. Mail: a@b.at",
+     "erstellt": 1,
+     "geaendert": 1,
+     "transkript": {
+      "sprecher": [
+       {
+        "id": "i",
+        "name": "Interviewerin",
+        "rolle": "interview"
+       },
+       {
+        "id": "b",
+        "name": "Anna",
+        "rolle": "befragt"
+       }
+      ],
+      "abschnitte": [
+       {
+        "start": 0,
+        "ende": 97,
+        "sprecher": "i"
+       }
+      ]
+     }
+    },
+    {
+     "id": "d2",
+     "name": "Interview d2",
+     "art": "text",
+     "text": "Mit Anna und Lukas in Wien am 3.4.2024.",
+     "erstellt": 1,
+     "geaendert": 1,
+     "transkript": {
+      "sprecher": [
+       {
+        "id": "i",
+        "name": "Interviewerin",
+        "rolle": "interview"
+       },
+       {
+        "id": "b1",
+        "name": "Anna",
+        "rolle": "befragt"
+       },
+       {
+        "id": "b2",
+        "name": "Lukas",
+        "rolle": "befragt"
+       }
+      ],
+      "abschnitte": [
+       {
+        "start": 0,
+        "ende": 39,
+        "sprecher": "b1"
+       }
+      ]
+     }
+    }
+   ],
+   "codes": [
+    {
+     "id": "c1",
+     "name": "Code",
+     "kodierbar": true,
+     "reihenfolge": 1
+    }
+   ],
+   "segmente": [],
+   "kodierungen": [],
+   "memos": [],
+   "faelle": [],
+   "variablen": [],
+   "protokoll": []
+  },
+  "namen": [
+   {
+    "text": "Wien",
+    "art": "ort"
+   }
+  ],
+  "regeln": [
+   "email",
+   "datum"
+  ],
+  "erwartet": {
+   "de": [
+    {
+     "dokument": "d1",
+     "start": 26,
+     "ende": 30,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    },
+    {
+     "dokument": "d1",
+     "start": 50,
+     "ende": 54,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    },
+    {
+     "dokument": "d1",
+     "start": 79,
+     "ende": 83,
+     "text": "Wien",
+     "art": "ort",
+     "ersatz": "[Ort 1]",
+     "an": true
+    },
+    {
+     "dokument": "d1",
+     "start": 91,
+     "ende": 97,
+     "text": "a@b.at",
+     "art": "email",
+     "ersatz": "[E-Mail]",
+     "an": true
+    },
+    {
+     "dokument": "d2",
+     "start": 4,
+     "ende": 8,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    },
+    {
+     "dokument": "d2",
+     "start": 13,
+     "ende": 18,
+     "text": "Lukas",
+     "art": "person",
+     "ersatz": "[Person 2]",
+     "an": true
+    },
+    {
+     "dokument": "d2",
+     "start": 22,
+     "ende": 26,
+     "text": "Wien",
+     "art": "ort",
+     "ersatz": "[Ort 1]",
+     "an": true
+    },
+    {
+     "dokument": "d2",
+     "start": 30,
+     "ende": 38,
+     "text": "3.4.2024",
+     "art": "datum",
+     "ersatz": "[Datum]",
+     "an": false
+    }
+   ],
+   "en": [
+    {
+     "dokument": "d1",
+     "start": 26,
+     "ende": 30,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    },
+    {
+     "dokument": "d1",
+     "start": 50,
+     "ende": 54,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    },
+    {
+     "dokument": "d1",
+     "start": 79,
+     "ende": 83,
+     "text": "Wien",
+     "art": "ort",
+     "ersatz": "[Place 1]",
+     "an": true
+    },
+    {
+     "dokument": "d1",
+     "start": 91,
+     "ende": 97,
+     "text": "a@b.at",
+     "art": "email",
+     "ersatz": "[Email]",
+     "an": true
+    },
+    {
+     "dokument": "d2",
+     "start": 4,
+     "ende": 8,
+     "text": "Anna",
+     "art": "person",
+     "ersatz": "[Person 1]",
+     "an": true
+    },
+    {
+     "dokument": "d2",
+     "start": 13,
+     "ende": 18,
+     "text": "Lukas",
+     "art": "person",
+     "ersatz": "[Person 2]",
+     "an": true
+    },
+    {
+     "dokument": "d2",
+     "start": 22,
+     "ende": 26,
+     "text": "Wien",
+     "art": "ort",
+     "ersatz": "[Place 1]",
+     "an": true
+    },
+    {
+     "dokument": "d2",
+     "start": 30,
+     "ende": 38,
+     "text": "3.4.2024",
+     "art": "datum",
+     "ersatz": "[Date]",
+     "an": false
+    }
+   ],
+   "ohneSprecher": [
+    {
+     "dokument": "d1",
+     "start": 79,
+     "ende": 83,
+     "text": "Wien",
+     "art": "ort",
+     "ersatz": "[Ort 1]",
+     "an": true
+    },
+    {
+     "dokument": "d1",
+     "start": 91,
+     "ende": 97,
+     "text": "a@b.at",
+     "art": "email",
+     "ersatz": "[E-Mail]",
+     "an": true
+    },
+    {
+     "dokument": "d2",
+     "start": 22,
+     "ende": 26,
+     "text": "Wien",
+     "art": "ort",
+     "ersatz": "[Ort 1]",
+     "an": true
+    },
+    {
+     "dokument": "d2",
+     "start": 30,
+     "ende": 38,
+     "text": "3.4.2024",
+     "art": "datum",
+     "ersatz": "[Datum]",
+     "an": false
+    }
+   ]
+  }
+ }
+}

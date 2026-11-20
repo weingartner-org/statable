@@ -1,0 +1,50 @@
+STATABLE OHNE NETZ (Offline-Fassung)
+====================================
+
+Stand: __STAND__
+
+Wofür: für Prüfungen und Orte ohne Netz. Statable läuft ganz auf diesem Rechner.
+Die Daten verlassen den Rechner nicht.
+
+WICHTIG: Diese Fassung wird nicht aktualisiert. Auf Dauer bitte https://statable.eu
+verwenden - dort gibt es Verbesserungen und behobene Fehler.
+
+STARTEN
+-------
+1. Die ZIP-Datei ganz entpacken (nicht nur hineinschauen).
+2. Doppelklick:
+   - Windows: "Statable starten (Windows).bat"
+     Meldet Windows "Der Computer wurde durch Windows geschützt":
+     "Weitere Informationen" → "Trotzdem ausführen".
+   - Mac: "Statable starten (Mac).command"
+     Beim ersten Mal sagt der Mac, er kann die Datei nicht prüfen.
+     Dann: Systemeinstellungen → Datenschutz & Sicherheit → unten "Trotzdem öffnen".
+     Oder im Terminal: perl start/server.pl (im entpackten Ordner).
+   - Linux: im Terminal  sh statable-starten-linux.sh
+3. Der Browser öffnet Statable. Das schwarze Fenster offen lassen.
+   Schließen beendet Statable.
+
+PROJEKTE
+--------
+Projekte liegen im Browser dieses Rechners. Am Ende im Projektmenü
+"In Datei speichern ..." wählen - dann ist die Arbeit als Datei gesichert.
+In Firefox und Safari heißt der Eintrag "Als Datei herunterladen".
+
+Für Prüfungen: Statable vorher einmal ohne Netz starten und ausprobieren.
+
+Was im Paket ist: der Ordner "statable" (das Programm), "start" (der kleine Server,
+nur für diesen Rechner erreichbar), der Quelltext (statable/statable-quelltext.tar.gz,
+GNU GPL 3 oder später).
+
+
+STATABLE WITHOUT INTERNET (offline version)
+===========================================
+
+For exams and places without internet. Statable runs entirely on this computer.
+IMPORTANT: this version is not updated. For regular use, please use https://statable.eu.
+
+Start: unzip completely, then double-click "Statable starten (Windows).bat" (Windows,
+"More info" → "Run anyway" if asked) or "Statable starten (Mac).command" (Mac; first time:
+System Settings → Privacy & Security → "Open Anyway"). Linux: sh statable-starten-linux.sh.
+Keep the black window open; closing it ends Statable. Projects are stored in this browser -
+at the end, choose "Save to file ..." in the project menu (Firefox and Safari: "Download as file").

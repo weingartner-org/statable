@@ -1,0 +1,30 @@
+{
+  "questions": {
+    "q1": {
+      "q": "How satisfied are you?"
+    },
+    "q2": {
+      "q": "Any comments?"
+    }
+  },
+  "responses": [
+    {
+      "_time": "2026-11-08T09:15:30.000Z",
+      "_name": "Guest",
+      "q1": "Satisfied",
+      "q2": "Nice, but loud"
+    },
+    {
+      "_time": "2026-11-08T09:40:02.000Z",
+      "_name": "Dora",
+      "q1": "Neutral",
+      "q2": ""
+    },
+    {
+      "_time": "2026-11-08T10:05:44.000Z",
+      "_name": "Guest",
+      "q1": "Satisfied",
+      "q2": "Fine"
+    }
+  ]
+}

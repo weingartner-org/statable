@@ -1,0 +1,1535 @@
+{
+  "_info": {
+    "stand": "2026-10-07",
+    "zweck": "Statable glossary (Dutch, je). Explanations and messages translated from the English template; muster/original/art unchanged.",
+    "regeln": [
+      "Messages: the first matching rule wins.",
+      "Explanations address no one directly; messages use je. The fields 'du' and 'sie' hold the same text.",
+      "Numbers in Dutch: decimal comma, no leading zero for p, r and alpha (,005).",
+      "pruefen: true = have a statistics expert check it before use."
+    ]
+  },
+  "erklaer": {
+    "bayes": {
+      "titel": "Bayes-factor (BF₁₀)",
+      "kurz": "Wijzen de gegevens meer naar een verschil of ertegen? De Bayes-factor (BF₁₀) vergelijkt beide. BF₁₀ = 8 betekent: de gegevens zijn ongeveer 8 keer waarschijnlijker als er een verschil is.",
+      "beispiel": "Houdbaarheid van brood van twee bakkers: BF₁₀ = 6, dus de gegevens zijn 6 keer waarschijnlijker met een verschil. BF₁₀ = 0,25 zou betekenen: 4 keer waarschijnlijker zonder verschil (1 / 0,25 = 4).",
+      "vorsicht": "De Bayes-factor zegt niet hoe waarschijnlijk een verschil is, en hangt af van een vooraf gekozen aanname. Een waarde dicht bij 1 betekent alleen dat geen van beide kanten wordt ondersteund; benamingen als “matig” zijn vuistregels.",
+      "fachwoerter": "p-waarde (hoe vaak een verschil van minstens deze grootte zou voorkomen als er werkelijk geen is), H₀ en H₁ (de aannames “geen verschil” en “een verschil”), prior (de vooraf gekozen aanname over mogelijke verschillen), BF₀₁ (de omgekeerde vergelijking, BF₀₁ = 1 / BF₁₀).",
+      "pruefen": true
+    },
+    "p-wert": {
+      "titel": "p-waarde",
+      "kurz": "Is een verschil echt of puur toeval? Dat weet je nooit zeker. De p-waarde helpt zo: stel dat er werkelijk geen verschil is. Hoe vaak zou een verschil van minstens deze grootte dan toch voorkomen?",
+      "beispiel": "Twee tomatenrassen, p = ,03: als de rassen werkelijk gelijk waren, zou een verschil als dit in ongeveer 3 van 100 proeven voorkomen.",
+      "vorsicht": "p is niet de kans dat de uitkomst aan toeval te danken is. p zegt ook niet hoe groot of belangrijk het verschil is: daarvoor dient de effectgrootte. Het geldt alleen als ook de overige aannames van de berekening kloppen, zoals aselecte trekking en onafhankelijkheid.",
+      "pruefen": true
+    },
+    "signifikanz": {
+      "titel": "Statistisch significant",
+      "kurz": "Wat betekent “significant”? De p-waarde ligt onder een vooraf gekozen grens, meestal ,05. De gegevens passen dan slecht bij de aanname “geen verschil”.",
+      "beispiel": "p = ,03 ligt onder ,05: statistisch significant. p = ,07 ligt erboven: niet significant.",
+      "vorsicht": "Significant betekent niet belangrijk of bewezen. Niet significant betekent niet geen verschil. De grens van ,05 is een gewoonte. Bij heel veel gevallen wordt al een klein effect significant. En: het verschil tussen “significant” en “niet significant” is zelf niet automatisch significant.",
+      "pruefen": true
+    },
+    "effektstaerke": {
+      "titel": "Effectgrootte",
+      "kurz": "Hoe groot is een verschil of verband? De effectgrootte (effect size) laat het zien. Meer personen maken de p-waarde kleiner; de effectgrootte verandert daardoor niet.",
+      "beispiel": "Cohens d = 0,5: twee groepen liggen een halve standaarddeviatie (de typische afstand van waarden tot het gemiddelde) uit elkaar.",
+      "vorsicht": "De woorden klein, middelgroot, groot (d = 0,2, 0,5, 0,8) zijn een gewoonte die teruggaat op Cohen. Wat veel is, hangt af van het vakgebied en de vraag.",
+      "pruefen": true
+    },
+    "konfidenzintervall": {
+      "titel": "Betrouwbaarheidsinterval (BI)",
+      "kurz": "Hoe nauwkeurig is een uitkomst? Het betrouwbaarheidsinterval (BI) is een bereik rond de gemeten waarde. Het laat zien welke ware waarden goed bij de gegevens passen. Smal betekent nauwkeurig, breed betekent onnauwkeurig.",
+      "beispiel": "Een nieuwe route naar het werk bespaart gemiddeld 4 minuten, 95%-BI [1,2; 6,8]: een werkelijke besparing van 2 of 6 minuten past goed bij de gegevens.",
+      "vorsicht": "“95%” beschrijft de methode: bij vele herhalingen zouden ongeveer 95 van 100 zulke bereiken de ware waarde bevatten. Of dit ene bereik dat doet, is onbekend. Als het bereik van 95% 0 bevat, past ook “geen verschil” bij de gegevens, en de tweezijdige toets op niveau ,05 is niet statistisch significant.",
+      "pruefen": true
+    },
+    "normalverteilung": {
+      "titel": "Normale verdeling",
+      "kurz": "Hoe zijn de waarden verdeeld? Bij een normale verdeling liggen de meeste waarden in het midden en worden ze naar beide kanten gelijkmatig zeldzamer. Zo ontstaat een klokvorm.",
+      "beispiel": "Het gewicht van verpakte zakken pasta van 500 g varieert klokvormig rond 500 g. Wachttijden bij een helpdesk niet: veel zijn kort, enkele zeer lang.",
+      "vorsicht": "Bij het vergelijken van gemiddelden tellen een lange staart aan één kant (scheefheid) en uitschieters zwaarder dan een vast aantal personen. Bij veel personen speelt de vorm een kleinere rol; bij zeer weinig is ze nauwelijks te beoordelen.",
+      "fachwoerter": "toets van Welch (een t-toets die geen gelijke spreiding in de groepen vereist), scheefheid (een lange staart aan één kant), uitschieter (een waarde ver van de andere).",
+      "pruefen": true
+    },
+    "mittelwert": {
+      "titel": "Gemiddelde (M)",
+      "kurz": "Wat is de typische waarde? Het gemiddelde is het rekenkundig gemiddelde: tel alle waarden op en deel door het aantal.",
+      "beispiel": "Vijf wachttijden bij een loket: 8, 12, 9, 15 en 11 minuten. Samen 55, gedeeld door 5 geeft 11 minuten.",
+      "vorsicht": "Enkele zeer hoge of zeer lage waarden trekken het gemiddelde mee. Met 60 in plaats van 11 minuten zou het 20,8 zijn; de mediaan, de middelste waarde van de geordende reeks, zou maar van 11 naar 12 stijgen.",
+      "pruefen": false
+    },
+    "standardabweichung": {
+      "titel": "Standaarddeviatie (SD)",
+      "kurz": "Hoe verschillend zijn de waarden? De standaarddeviatie (SD) zegt hoe ver waarden typisch van het gemiddelde liggen. Klein betekent dat de waarden dicht bij elkaar liggen.",
+      "beispiel": "Slaap: gemiddelde 7 uur, SD 1 uur. Bij een klokvormige verdeling slaapt ongeveer twee derde tussen 6 en 8 uur.",
+      "vorsicht": "De SD beschrijft hoe verschillend mensen zijn. Hoe nauwkeurig het gemiddelde is, blijkt uit de standaardfout en het betrouwbaarheidsinterval.",
+      "pruefen": false
+    },
+    "freiheitsgrade": {
+      "titel": "Vrijheidsgraden (df)",
+      "kurz": "Wat betekent het getal tussen haakjes, bijvoorbeeld t(18)? Het zijn de vrijheidsgraden (df), een getal dat vooral afhangt van hoeveel personen er zijn. De software heeft het nodig voor de p-waarde.",
+      "beispiel": "20 personen in twee groepen: 20 min 2 geeft 18 vrijheidsgraden, dus t(18). Bij groepen met ongelijke spreiding (toets van Welch) is het getal vaak een decimaal getal, zoals t(14,3).",
+      "vorsicht": "Meestal is dat alles wat je over vrijheidsgraden hoeft te weten. Ze horen wel in elk rapport, zodat anderen de uitkomst kunnen controleren.",
+      "pruefen": false
+    },
+    "korrelation": {
+      "titel": "Correlatie (r)",
+      "kurz": "Hangen twee dingen samen? De correlatie r laat dat zien als een getal van −1 tot +1. Positief: meer van het ene gaat samen met meer van het andere. Negatief: met minder. Dicht bij 0: geen rechtlijnig verband.",
+      "beispiel": "Slaap en concentratie: r = ,30. Wie meer slaapt, concentreert zich meestal beter.",
+      "vorsicht": "Een verband is geen oorzaak. r ziet alleen rechtlijnige verbanden, dus kijk ook naar het spreidingsdiagram.",
+      "pruefen": true
+    },
+    "korrelationsmatrix": {
+      "titel": "Correlatiematrix",
+      "kurz": "Welke van meerdere getalkolommen horen bij elkaar? De correlatiematrix toont alle paren tegelijk. De Holm-correctie maakt de p-waarden strenger, omdat bij veel paren er gemakkelijk toevallig een opvalt.",
+      "beispiel": "Vijf kolommen geven 10 paren. Het meest opvallende heeft p = ,012; na de Holm-correctie wordt dat ,012 maal 10 = ,12 - niet meer onder ,05.",
+      "vorsicht": "Wie veel paren toetst, vindt ook toevalstreffers; wie alleen zoekt, hoort de Holm-waarden te gebruiken. Een verband is geen oorzaak.",
+      "fachwoerter": "r volgens Pearson (het verband tussen twee getalkolommen, voor rechtlijnige verbanden), rs volgens Spearman (hetzelfde idee met rangen in plaats van waarden), n (aantal gevallen per paar), 95%-betrouwbaarheidsinterval (een bereik dat, gegeven de gegevens, goed bij het ware verband past).",
+      "pruefen": true
+    },
+    "regression": {
+      "titel": "Regressie",
+      "kurz": "Kan een waarde uit andere worden voorspeld? Regressie trekt de lijn die het best bij de gegevens past. Ze laat zien hoeveel de voorspelling verandert als een andere waarde verandert.",
+      "beispiel": "Woningprijs uit woonoppervlak: één m² meer gaat gemiddeld samen met € 2.400 meer.",
+      "vorsicht": "Een voorspelling is geen oorzaak. Voor de gebruikelijke toets moeten de residuen (de afstanden tot de lijn) normaal verdeeld zijn, niet de ruwe waarden.",
+      "pruefen": true
+    },
+    "chi-quadrat": {
+      "titel": "Chikwadraattoets (χ²)",
+      "kurz": "Komt iets in sommige groepen vaker voor? De chikwadraattoets (χ²) vergelijkt de getelde gevallen van een kruistabel met de aantallen die te verwachten zijn als er geen verband was.",
+      "beispiel": "Telkens 100 personen: 60% van de vroege vogels drinkt koffie, 40% van de nachtbrakers. χ²(1) = 8,0, p = ,005.",
+      "vorsicht": "χ² zegt niet hoe sterk het verband is: bij twee keer zoveel personen en dezelfde aandelen verdubbelt het. Cramérs V laat de sterkte zien.",
+      "fachwoerter": "exacte toets van Fisher (nauwkeuriger dan χ² bij 2 × 2-tabellen met weinig personen), verwacht aantal (hoeveel gevallen een cel zou bevatten als er geen verband was).",
+      "pruefen": true
+    },
+    "streuung": {
+      "titel": "Spreiding",
+      "kurz": "Hoe verschillend zijn de waarden? Spreiding is de overkoepelende term. Maten zijn de spreidingsbreedte (grootste min kleinste waarde), de standaarddeviatie en het interkwartielbereik (breedte van de middelste helft van de waarden).",
+      "beispiel": "Reistijd van 40 ritten: 12 tot 51 minuten, spreidingsbreedte 51 − 12 = 39, standaarddeviatie 8,5, interkwartielbereik 10.",
+      "vorsicht": "De spreidingsbreedte hangt van maar twee waarden af. Eén enkele uitschieter maakt haar veel groter.",
+      "pruefen": false
+    },
+    "stichprobe": {
+      "titel": "Steekproef",
+      "kurz": "Wie deed er eigenlijk mee? Dat is de steekproef. Ze wordt gebruikt om iets te zeggen over een grotere groep, de populatie.",
+      "beispiel": "Een bibliotheek enquêteert op een dinsdag 150 bezoekers om iets te zeggen over alle gebruikers in het hele jaar. Of dat klopt, hangt af van hoe deze 150 zijn gekozen.",
+      "vorsicht": "Veel personen maken een eenzijdige selectie niet goed. Alleen bezoekers op dinsdagochtend vragen beschrijft vooral die bezoekers.",
+      "pruefen": false
+    },
+    "voraussetzung": {
+      "titel": "Aanname",
+      "kurz": "Mag een methode met deze gegevens worden gebruikt? Elke methode berust op aannames, de voorwaarden, bijvoorbeeld “elke persoon hoort bij precies één groep”. Als ze niet kloppen, kan de uitkomst misleiden.",
+      "beispiel": "Voordat je twee klantengroepen vergelijkt: zijn het echt twee gescheiden groepen? Zijn de waarden getallen? Zijn er zeer opvallende afzonderlijke waarden?",
+      "vorsicht": "Een opmerking is geen verbod, maar een reden om nauwkeuriger te kijken. Sommige aannames kan geen software controleren, zoals of personen onafhankelijk van elkaar hebben geantwoord, dus zonder vooraf af te spreken - dat volgt uit hoe de gegevens zijn verzameld.",
+      "pruefen": true
+    },
+    "ausreisser": {
+      "titel": "Uitschieter",
+      "kurz": "Ligt één waarde opvallend ver van alle andere? Dan is het een uitschieter. Het kan een typefout zijn, een meetfout - of een echt, ongewoon antwoord.",
+      "beispiel": "Tien bezorgtijden in dagen: negen tussen 2 en 4 (som 27), één van 31. Zonder de 31 is het gemiddelde 27 / 9 = 3,0 dagen, met 58 / 10 = 5,8.",
+      "vorsicht": "Verwijder uitschieters nooit stilzwijgend: controleer eerst het origineel, toon de berekening met en zonder en geef een reden voor de beslissing. Bij regressie trekt een ver weg liggend punt de lijn naar zich toe, ook als het nauwelijks opvalt. In een boxplot staan opvallende waarden als punten buiten de whiskers (de lijnen aan de box). Dat maakt ze nog geen fouten.",
+      "pruefen": true,
+      "statable": "Bij een regressie toont het blok “De regressie controleren: collineariteit en opvallende gevallen” onder de uitkomst de gevallen met een groot residu, een grote hefboomwaarde of een grote afstand van Cook, met hun rijnummer in de gegevens. Kijk daar, verwijder nooit stilzwijgend. Afzonderlijke waarden van een kolom meldt de gegevenscontrole bij het openen."
+    },
+    "reliabilitaet": {
+      "titel": "Betrouwbaarheid van een schaal (Cronbachs alfa)",
+      "kurz": "Meten meerdere vragen samen betrouwbaar? Cronbachs alfa laat zien hoe sterk de antwoorden op de vragen van een schaal samenhangen. De waarde ligt meestal tussen 0 en 1.",
+      "beispiel": "Vijf vragen over werktevredenheid: α = ,82.",
+      "vorsicht": "Een hoge alfa bewijst niet dat alle vragen hetzelfde meten, en meer vragen verhogen haar vanzelf. ,70 wordt vaak als minimum genoemd; dat is een gewoonte.",
+      "fachwoerter": "interne consistentie (hoe sterk de antwoorden op de vragen van een schaal samenhangen), eendimensionaliteit (alle vragen meten hetzelfde kenmerk), factoranalyse (laat zien of de vragen één of meerdere kenmerken meten), item-totaalcorrelatie (hoe goed een vraag bij de andere past), omkeren (een omgekeerde vraag omdraaien zodat ze dezelfde kant op wijst).",
+      "pruefen": true
+    },
+    "faktorenanalyse": {
+      "titel": "Factoranalyse",
+      "kurz": "Welke vragen horen bij elkaar? Factoranalyse zoekt groepen vragen die op dezelfde manier worden beantwoord. De lading (van −1 tot 1) laat zien hoe sterk een vraag bij een groep hoort.",
+      "beispiel": "Negen vragen over het stadsleven vormen drie groepen: verkeer, veiligheid, vrije tijd.",
+      "vorsicht": "De berekening vindt alleen groepen. Wat ze betekenen, beslissen mensen. Ladingen vanaf ,30 tot ,50 tellen vaak mee; er is geen vaste grens.",
+      "fachwoerter": "hoofdcomponentenanalyse (de standaard, zoals in SPSS: vat de vragen samen tot componenten), hoofdasanalyse (zoekt gemeenschappelijke kenmerken achter de vragen), promax (een rotatie die de factoren laat samenhangen).",
+      "pruefen": true
+    },
+    "koeffizient-b": {
+      "titel": "Regressiecoëfficiënt B en constante",
+      "kurz": "Hoeveel verandert de voorspelling als een andere waarde met 1 stijgt en de overige gelijk blijven? B zegt het, in de eenheden van de gegevens. Daarom verandert B als er meer waarden in het model komen. De constante is de voorspelling als alle andere waarden 0 zijn.",
+      "beispiel": "Woningprijs in € 1000: B = 2,4 voor woonoppervlak. Eén m² meer gaat gemiddeld samen met € 2.400 meer, op dezelfde verdieping.",
+      "vorsicht": "B verandert met de eenheid (euro’s of duizenden euro’s). Alleen bij dezelfde eenheid kan B tussen onderzoeken worden vergeleken; bij verschillende schalen of eenheden blijft alleen bèta over, die echter afhangt van de spreiding van de steekproef. De constante betekent vaak niets als 0 nooit voorkomt (0 m²).",
+      "fachwoerter": "bèta (B uitgedrukt in standaarddeviaties, zodat schalen vergelijkbaar worden), voorspeller (een waarde die wordt gebruikt om te voorspellen).",
+      "pruefen": true
+    },
+    "beta": {
+      "titel": "Gestandaardiseerde coëfficiënt bèta (β)",
+      "kurz": "B zonder eenheden: bèta rekent alles om in standaarddeviaties (de typische afstand van waarden tot het gemiddelde). Zo komen grootheden met verschillende eenheden binnen één onderzoek naast elkaar te staan. Met slechts één voorspeller is bèta gelijk aan r.",
+      "beispiel": "Woningprijs: woonoppervlak β = ,62. Als het woonoppervlak met één standaarddeviatie stijgt, stijgt de prijs gemiddeld met 0,62 standaarddeviaties.",
+      "vorsicht": "Bèta hangt af van hoe verschillend de gevallen in een steekproef zijn, dus ze is niet zomaar tussen onderzoeken te vergelijken. Hebben twee onderzoeken verschillende schalen of eenheden, dan kan alleen bèta naast elkaar staan, B niet - maar ook bèta hangt af van de spreiding van de steekproef. Of een grotere bèta “belangrijker” betekent, is omstreden.",
+      "pruefen": true
+    },
+    "standardfehler": {
+      "titel": "Standaardfout",
+      "kurz": "Hoe nauwkeurig is een schatting? Bij andere personen zou een iets andere waarde uitkomen. De standaardfout zegt hoeveel de waarde zo typisch varieert. Kleiner betekent nauwkeuriger.",
+      "beispiel": "1,5 punten meer per uur training (B = 1,5), standaardfout 0,5. B gedeeld door de standaardfout geeft t = 3,0, wat leidt tot p (Sig.).",
+      "vorsicht": "Meer personen maken haar kleiner, ook als het verband gelijk blijft. De “standaardfout van de schatting” in de modelsamenvatting is iets anders: de typische afstand van waarden tot de lijn. Vier keer zoveel personen halveren haar ongeveer. De standaarddeviatie (de typische afstand van de afzonderlijke waarden tot het gemiddelde) blijft daarbij ongeveer gelijk.",
+      "fachwoerter": "steekproef (de personen die werkelijk zijn onderzocht), t (B gedeeld door de standaardfout), Sig. (zo noemt SPSS de bijbehorende p-waarde).",
+      "pruefen": true
+    },
+    "r-quadrat": {
+      "titel": "R² (R-kwadraat) en gecorrigeerde R²",
+      "kurz": "Hoeveel van de verschillen verklaart een model? R² is een aandeel van 0 tot 1. Gecorrigeerde R² haalt er iets af, omdat elke toegevoegde grootheid R² kan verhogen, ook als ze niets bijdraagt. Met slechts één voorspeller is R² het kwadraat van de correlatie r. r zelf is geen aandeel.",
+      "beispiel": "R² = ,40: woonoppervlak en ligging verklaren 40% van de prijsverschillen in deze gegevens.",
+      "vorsicht": "“Verklaart” is rekenkundig bedoeld, niet als oorzaak. Een hogere R² alleen maakt een model niet beter.",
+      "fachwoerter": "variantie (hoe breed de waarden rond hun gemiddelde spreiden), significant (de p-waarde ligt onder de gekozen grens, meestal ,05), voorspeller (een waarde die wordt gebruikt om te voorspellen).",
+      "pruefen": true
+    },
+    "eigenwert-rotation": {
+      "titel": "Eigenwaarde, parallelle analyse, lading en rotatie",
+      "kurz": "Hoeveel groepen vragen zijn er? De eigenwaarde laat zien hoeveel van de verschillen een groep vastlegt. Parallelanalyse houdt alleen groepen boven de waarde van toevalsgegevens; rotatie maakt de indeling van de vragen duidelijker.",
+      "beispiel": "Acht vragen over de buurt: twee groepen liggen boven de toevalswaarde, met eigenwaarden 3,1 en 1,6. Samen 4,7 van 8, dus 59%. Vraag 6 heeft een lading van ,81 op groep 1 (sterk erbij horen) en ,05 op groep 2.",
+      "vorsicht": "Geen enkele regel is bewijs: “eigenwaarde boven 1” noemt vaak te veel groepen, parallelanalyse kan te weinig noemen als de eerste groep zeer groot is, er weinig personen zijn en de groepen sterk samenhangen. Het aantal wordt samen met de screeplot (een grafiek van de eigenwaarden) en de inhoud van de vragen beslist.",
+      "fachwoerter": "component (een van de groepen die de berekening vormt), Kaiser-criterium (houdt componenten met een eigenwaarde boven 1), varimax (een rotatie die de componenten onafhankelijk houdt), promax (een rotatie die de factoren laat samenhangen).",
+      "pruefen": true
+    },
+    "trennschaerfe": {
+      "titel": "Gecorrigeerde item-totaalcorrelatie en alfa als item wordt verwijderd",
+      "kurz": "Past een vraag bij de andere vragen van een schaal? De trennschärfe (item-totaalcorrelatie) is de correlatie van de vraag met de som van de andere vragen. Hoog betekent: wie hier hoog antwoordt, antwoordt meestal ook elders hoog. Cronbachs alfa als item wordt verwijderd is de alfa van de schaal zonder deze vraag. Als die stijgt, trekt de vraag de alfa omlaag.",
+      "beispiel": "Item-totaalcorrelatie ,55: past goed. Item-totaalcorrelatie −,40: de vraag loopt de andere kant op; misschien is ze niet omgekeerd.",
+      "vorsicht": "Waarden van ongeveer ,40 tot ,70 worden vaak goed genoemd; dat is een gewoonte. Een hoge item-totaalcorrelatie bewijst niet dat alle vragen hetzelfde meten. Ook de inhoud bepaalt of een vraag wordt geschrapt.",
+      "fachwoerter": "Cronbachs alfa (hoe sterk de antwoorden op een schaal samenhangen), item (een afzonderlijke vraag van de schaal), omkeren (een omgekeerde vraag omdraaien zodat ze dezelfde kant op wijst).",
+      "pruefen": true
+    },
+    "rangkorrelation": {
+      "titel": "Rangcorrelatie (rs, τb)",
+      "kurz": "Gaan twee rangordes samen? Rangcorrelatie (rs volgens Spearman, τb volgens Kendall) vergelijkt niet de getallen maar hun rangposities, en past als alleen de volgorde telt. Ze ligt tussen −1 en +1.",
+      "beispiel": "Tevredenheid (niveaus 1 tot 5) en bezoeken per maand bij 60 personen: rs = −,22. Wie vaker komt, is meestal iets minder tevreden. Het verband is zwak.",
+      "vorsicht": "Een verband is geen oorzaak. Rangcorrelatie vangt elk verband dat blijft stijgen of blijft dalen, ook gekromde; een spreidingsdiagram toont de vorm.",
+      "pruefen": true
+    },
+    "kappa": {
+      "titel": "Cohens kappa (κ)",
+      "kurz": "Hoe goed komen twee beoordelaars overeen als het raden eraf is getrokken? Cohens kappa (κ) haalt de overeenstemming weg die toeval alleen zou geven. 0 betekent niet beter dan toeval; 1 betekent perfecte overeenstemming.",
+      "beispiel": "Twee artsen delen 50 huidfoto’s in als “opvallend” of “onopvallend”. Ze komen overeen bij 40 (80%); na het weghalen van toeval is κ = ,60 (95%-interval ,38 tot ,82).",
+      "vorsicht": "κ is laag ondanks hoge overeenstemming als één categorie zeer zeldzaam of zeer gewoon is. Benamingen als “matig” of “aanzienlijk” (Landis en Koch 1977) zijn vuistregels, geen grenzen.",
+      "pruefen": true
+    },
+    "krippendorff-alpha": {
+      "titel": "Krippendorffs alfa (α)",
+      "kurz": "Komen meerdere personen overeen bij het indelen, ook als niet iedereen elk geval beoordeelde? Krippendorffs alfa (α) meet dat in één getal. Vaak genoemd: vanaf ,800 betrouwbaar, vanaf ,667 voor voorlopige conclusies.",
+      "beispiel": "Drie personen delen 60 klantopmerkingen in als “lof”, “kritiek” of “vraag”: α = ,71. Dat ligt boven ,667 maar onder ,800: genoeg voor voorlopige conclusies, niet voor betrouwbare.",
+      "vorsicht": "De grenzen ,800 en ,667 zijn suggesties van Krippendorff, geen natuurwetten. Bij weinig gevallen is het interval breed.",
+      "pruefen": true
+    },
+    "icc": {
+      "titel": "Intraclasscorrelatie (ICC)",
+      "kurz": "Hoeveel van de verschillen tussen beoordelingen komt van de beoordeelde gevallen in plaats van van de beoordelaars? De ICC (intraklassecorrelatie) laat dat zien: 0 betekent geen overeenstemming, 1 perfecte overeenstemming.",
+      "beispiel": "Drie juryleden beoordelen 10 taarten met 0 tot 100 punten: ICC(2,1) = ,82 (95%-interval ,43 tot ,95) voor één beoordeling, ICC(2,3) = ,93 (,70 tot ,98) voor het gemiddelde van de drie beoordelingen. Met maar 10 taarten is het eerste interval nog breed.",
+      "vorsicht": "Er zijn varianten (één beoordeling of gemiddelde; volledige overeenstemming, of een vast verschil tussen beoordelaars is toegestaan); de passende wordt vooraf gekozen. Bij weinig gevallen is de ICC onnauwkeurig, en ze valt laag uit als de gevallen nauwelijks verschillen - ook bij goede overeenstemming.",
+      "fachwoerter": "betrouwbaarheidsinterval (een bereik dat, gegeven de gegevens, goed bij de ware ICC past), absolute overeenstemming ICC(2,·) (de waarden moeten gelijk zijn), consistentie ICC(3,·) (een vast verschil tussen beoordelaars is toegestaan), enkel en gemiddeld (één beoordeling of het gemiddelde van alle beoordelingen).",
+      "pruefen": true
+    },
+    "bland-altman": {
+      "titel": "Bland-Altman-grafiek",
+      "kurz": "Hoe ver liggen twee meetmethoden uit elkaar bij dezelfde gevallen? De Bland-Altman-grafiek toont het verschil van elk geval tegen zijn gemiddelde. De bias is het gemiddelde verschil; de grenzen omvatten ongeveer 95% van alle verschillen.",
+      "beispiel": "Twee klinische thermometers bij 12 personen: bias = 0,16 °C (95%-BI 0,05 tot 0,27), grenzen van overeenstemming −0,18 tot 0,50 °C. De tweede meet gemiddeld hoger (het interval van de bias bevat 0 niet); in een enkel geval meet ze tot 0,5 °C hoger.",
+      "vorsicht": "Of het bereik klein genoeg is, beslist het vakgebied, niet de statistiek. Bij weinig gevallen zijn de grenzen onnauwkeurig, en als de verschillen van het gemiddelde afhangen, gelden de grenzen niet overal even goed.",
+      "fachwoerter": "ICC (intraklassecorrelatie: relateert de verschillen aan de verschillen tussen gevallen), standaarddeviatie (SD, de typische spreiding; de grenzen zijn bias ± 1,96 SD).",
+      "pruefen": true
+    },
+    "sensitivitaet": {
+      "titel": "Sensitiviteit",
+      "kurz": "Hoeveel van de werkelijk getroffen personen vindt een test? Sensitiviteit is het aandeel van de werkelijk positieven dat de test positief noemt. De waarheid is de beste beschikbare vergelijkende controle.",
+      "beispiel": "Van 40 personen met een bevestigde diagnose herkent de sneltest er 34: sensitiviteit = 34 / 40 = 85% (95%-BI 71 tot 93%).",
+      "vorsicht": "Als de test strenger of milder wordt ingesteld, veranderen sensitiviteit en specificiteit in tegengestelde richting. Bij weinig getroffen personen is het interval breed.",
+      "fachwoerter": "referentiestandaard (de beste beschikbare controle, waarvan de uitkomst als waarheid telt), terecht-positieven (getroffen personen die de test herkent).",
+      "pruefen": true
+    },
+    "spezifitaet": {
+      "titel": "Specificiteit",
+      "kurz": "Hoeveel van de niet-getroffen personen herkent een test juist? Specificiteit is het aandeel van de werkelijk negatieven dat de test negatief noemt. Hoog betekent weinig vals alarm.",
+      "beispiel": "Van 120 personen zonder de diagnose blijven er 108 onopvallend: specificiteit = 108 / 120 = 90% (95%-BI 83 tot 94%).",
+      "vorsicht": "De vergelijkende controle geldt als waarheid; als die zelf onzeker is, zijn sensitiviteit en specificiteit onnauwkeurig. Bij zeldzame aandoeningen zegt een positieve uitkomst ondanks hoge specificiteit vaak minder dan verwacht (zie voorspellende waarden).",
+      "fachwoerter": "referentiestandaard (de beste beschikbare controle, waarvan de uitkomst als waarheid telt), terecht-negatieven (niet-getroffen personen die de test juist doorlaat).",
+      "pruefen": true
+    },
+    "vorhersagewert": {
+      "titel": "Voorspellende waarden (PPV, NPV)",
+      "kurz": "Hoe waarschijnlijk is iemand echt getroffen als de test positief is? De positief voorspellende waarde (PPV) zegt dat: het aandeel positieve testen dat werkelijk getroffen is. De negatieve (NPV) betreft negatieve testen.",
+      "beispiel": "Een test met 90% sensitiviteit en 90% specificiteit. Van 1.000 personen zijn er 100 getroffen: 90 worden herkend, maar ook 90 van de 900 gezonde personen testen positief. PPV = 90 / 180 = 50%. Als er 500 getroffen waren, zou de PPV 450 / 500 = 90% zijn.",
+      "vorsicht": "Beide waarden veranderen met hoe vaak de aandoening voorkomt, ook bij gelijke sensitiviteit en specificiteit, en gelden alleen voor groepen met een vergelijkbare prevalentie. Als getroffen en niet-getroffen personen afzonderlijk zijn gezocht (patiënt-controleonderzoek), zijn ze niet te interpreteren.",
+      "fachwoerter": "likelihood ratio’s (LR+ = sensitiviteit / (1 − specificiteit), LR− = (1 − sensitiviteit) / specificiteit: hoeveel vaker een uitkomst bij getroffen dan bij niet-getroffen personen voorkomt; ze hangen niet van de prevalentie af).",
+      "pruefen": true
+    },
+    "gepaarte-messung": {
+      "titel": "Gepaarde meting (dz, dav)",
+      "kurz": "Is er iets veranderd bij dezelfde personen? Bij een gepaarde meting komen “voor” en “na” van dezelfde personen. dz en dav zijn twee maten voor hoe groot de verandering is. De gepaarde t-toets werkt met de verschillen per persoon. Daardoor vallen de verschillen tussen personen weg, en de p-waarde wordt vaak kleiner.",
+      "beispiel": "Opdrukbewegingen van 10 personen vóór en na zes weken training: gemiddeld 2,9 meer. dz = 2,9 / 1,37 = 2,12; dav = 2,9 / 3,94 = 0,74. dz is veel groter omdat voor en na sterk samenhangen (r = ,98).",
+      "vorsicht": "dz deelt de gemiddelde verandering door de spreiding van de veranderingen, dav door de gemiddelde spreiding van voor en na; alleen dav is vergelijkbaar met d uit groepsvergelijkingen. Zonder vergelijkingsgroep laat de meting niet zien wat de verandering veroorzaakte; de benamingen van Cohen (0,2 / 0,5 / 0,8) zijn een gewoonte en gelden voor dav, niet voor dz.",
+      "fachwoerter": "standaarddeviatie (de typische spreiding van waarden rond hun gemiddelde), power (de kans een verschil te vinden dat er werkelijk is; dz wordt gebruikt om haar te berekenen).",
+      "pruefen": true
+    },
+    "logistische-regression": {
+      "titel": "Logistische regressie",
+      "kurz": "Waarvan hangt het af of iets gebeurt of niet? Logistische regressie voorspelt een ja/nee-uitkomst uit andere waarden. Een modeltoets controleert of ze beter voorspelt dan een model zonder die waarden.",
+      "beispiel": "Ontslag nemen (ja/nee) uit salaris, leeftijd en reistijd bij 300 personen, 36% neemt ontslag: modeltoets χ²(3) = 14,2, p = ,003; Nagelkerke R² = ,06. 68% wordt juist ingedeeld; zonder het model zou het 64% zijn (zoveel hoort bij de grotere groep).",
+      "vorsicht": "Nagelkerke R² is geen aandeel verklaarde verschillen zoals bij lineaire regressie. Een hoog hitpercentage is weinig waard als één groep toch al veel groter is, en het geldt meestal alleen voor de gegevens waarop het model is gepast.",
+      "fachwoerter": "odds (kans gedeeld door de kans op het tegendeel: 75% is odds van 3 tegen 1), voorspeller (een waarde die wordt gebruikt om te voorspellen), pseudo-R² (Nagelkerkes R² vervangt de R² van lineaire regressie maar is geen aandeel verklaarde verschillen).",
+      "pruefen": true,
+      "statable": "Voer de regressie uit (doelkolom met twee waarden) en klap onder de uitkomst het blok “De logistische regressie controleren: opvallende gevallen, pasvorm, lineariteit van de logit, blokken” open. Het toont de VIF, opvallende gevallen (hefboomwaarde, afstand van Cook, devianceresidu, DFBETA), de Hosmer-Lemeshow-toets, de Box-Tidwell-toets en de blok-χ² voor een tweede blok voorspellers."
+    },
+    "odds-ratio": {
+      "titel": "Odds ratio (OR)",
+      "kurz": "Met welke factor verandert de kans op een gebeurtenis als een waarde met 1 stijgt? Dat is de odds ratio (OR). 1 betekent geen verband; boven 1 stijgt de kans; onder 1 daalt ze.",
+      "beispiel": "Kans dat een pakket te laat aankomt, per 100 km afstand: OR = 1,35, 95%-interval [1,12; 1,63]. Bij 100 km meer stijgt de kans naar 1,35 keer, dat is met ongeveer 35%. Het interval bevat 1 niet.",
+      "vorsicht": "“Kans” betekent hier de verhouding van “gebeurt” tot “gebeurt niet” (3 tegen 1 in plaats van 75%); een OR is dus niet “x keer zo waarschijnlijk” - dat geldt alleen bij zeldzame gebeurtenissen. Als 1 binnen het interval ligt, is een verband niet aangetoond.",
+      "fachwoerter": "odds (kans gedeeld door de kans op het tegendeel), voorspeller (een waarde die wordt gebruikt om te voorspellen), Wald (de gebruikelijke methode voor het interval van de OR).",
+      "pruefen": true
+    },
+    "eta-quadrat": {
+      "titel": "Eta-kwadraat (η²) en omega-kwadraat (ω²)",
+      "kurz": "Hoeveel van de verschillen in de gemeten waarde gaat samen met de groep? η² (eta-kwadraat) is dat aandeel, 0 tot 1. ω² is hetzelfde idee, voorzichtiger berekend, en iets kleiner.",
+      "beispiel": "Drie meststoffen, 20 planten elk: η² = ,25 en ω² = ,22. De meststof gaat samen met ongeveer een kwart van de opbrengstverschillen.",
+      "vorsicht": "De benamingen ,01 / ,06 / ,14 naar Cohen zijn een gewoonte voor groepsvergelijkingen; bij personen die meerdere keren zijn gemeten of groepen die niet zijn toegewezen, valt een variant (partiële η²) veel groter uit, dus Statable gebruikt daar gegeneraliseerde η² (ηG²). De groepsvergelijking (variantieanalyse) laat alleen zien dat minstens twee groepen verschillen, niet welke.",
+      "fachwoerter": "populatie (iedereen over wie de uitspraak gaat; de steekproef is er maar een deel van), betrouwbaarheidsinterval (een aannemelijk bereik voor η² in de populatie), herhaalde metingen (dezelfde personen meerdere keren gemeten), partiële η² (ηp²: het effect ten opzichte van effect plus zijn fout), significant (de p-waarde ligt onder de gekozen grens; als de toets niet significant is, is de ondergrens van het interval 0).",
+      "pruefen": true
+    },
+    "paarvergleich": {
+      "titel": "Paarsgewijze vergelijkingen (post-hoc: Tukey, Games-Howell, Bonferroni)",
+      "kurz": "Welke groepen verschillen als er meer dan twee zijn? Paarsgewijze vergelijkingen toetsen elk paar en maken de p-waarden strenger, omdat veel vergelijkingen gemakkelijk toevallig iets “vinden”. Gangbaar zijn Tukey, Games-Howell en Bonferroni.",
+      "beispiel": "Drie rassen geven 3 paren. Met Bonferroni wordt elke p met 3 vermenigvuldigd: ,020 wordt ,060 - niet meer onder ,05.",
+      "vorsicht": "Een paar dat niet significant is, betekent niet “gelijk”, alleen “niet aangetoond”. Bij veel groepen worden de paren talrijk, en is elk afzonderlijk paar moeilijker aan te tonen.",
+      "fachwoerter": "variantieanalyse (vergelijkt de gemiddelden van drie of meer groepen), post hoc (achteraf, na de variantieanalyse), Games-Howell (de standaard in Statable, heeft geen gelijke spreiding nodig), Tukey (veronderstelt gelijke spreiding), Bonferroni (streng en eenvoudig: elke p maal het aantal paren).",
+      "pruefen": true
+    },
+    "welch-anova": {
+      "titel": "Variantieanalyse van Welch",
+      "kurz": "Hoe vergelijk je meerdere groepen met ongelijke spreiding? De klassieke variantieanalyse vereist gelijke spreiding. De variantieanalyse van Welch niet: ze weegt elke groep naar haar spreiding.",
+      "beispiel": "Bezorgtijden van vier magazijnen met zeer verschillende spreiding: Welch F(3; 41,8) = 5,4, p = ,003. De magazijnen verschillen, zonder gelijke spreiding aan te nemen.",
+      "vorsicht": "Ook de analyse van Welch laat alleen zien dat minstens twee groepen verschillen. De paarsgewijze vergelijkingen laten zien welke (Games-Howell past erbij).",
+      "fachwoerter": "vrijheidsgraden (df: de getallen tussen haakjes naast F; ze bepalen met welke verdeling de toets vergelijkt), spreiding (hoe ver de waarden van een groep uit elkaar liggen).",
+      "pruefen": true
+    },
+    "rangtest": {
+      "titel": "Rangtoets (geen normale verdeling)",
+      "kurz": "Wat te doen als gemiddelden slecht passen door uitschieters of scheefheid? Rangtoetsen zetten alle waarden op volgorde en werken met rangposities. Ze hebben geen normale verdeling nodig en reageren nauwelijks op afzonderlijke uitschieters.",
+      "beispiel": "Wachttijden in minuten, 6 metingen elk: dienst A 4, 5, 6, 7, 9, 13; dienst B 8, 10, 11, 12, 15, 40. Mann-Whitney-toets (twee groepen) U = 5, p = ,041 (exact): B is meestal hoger. De uitschieter 40 doet nauwelijks ertoe.",
+      "vorsicht": "Een rangtoets laat zien of één groep neigt naar hogere waarden - ze toetst niet alleen de medianen. Ook andere spreiding of vorm kan haar activeren.",
+      "fachwoerter": "Kruskal-Wallis (rangtoets voor drie of meer groepen), Wilcoxon (rangtoets voor twee metingen van dezelfde personen), Dunn-toets met Holm-correctie (laat na Kruskal-Wallis zien welke paren verschillen), Hodges-Lehmann-schatter (HL: de mediaan van alle verschillen tussen één persoon uit elke groep) met zijn 95%-betrouwbaarheidsinterval (een aannemelijk bereik ervoor), effectgrootte (hoe groot het verschil is: r = |z| / √N, bij Kruskal-Wallis ε² = H / (n − 1)), rang-biseriële correlatie (het aandeel paren waarin één groep hoger is, maal 2, min 1), ties (gelijke waarden).",
+      "pruefen": true
+    },
+    "sphaerizitaet": {
+      "titel": "Sfericiteit (toets van Mauchly)",
+      "kurz": "Dezelfde personen worden meerdere keren gemeten: variëren de verschillen tussen twee willekeurige meetmomenten even sterk? Dat is sfericiteit. Als ze wordt geschonden, is de uitkomst te vaak significant.",
+      "beispiel": "Reactietijd van 20 personen op drie dagen: toets van Mauchly W = ,75, p = ,075; ε (Greenhouse-Geisser) = ,80 (1 zou betekenen: voldaan). De toets toont geen schending, maar ε ligt duidelijk onder 1 - dus er wordt een correctie toegepast.",
+      "vorsicht": "De toets van Mauchly controleert sfericiteit (p boven ,05 pleit er niet tegen), maar ze is zwak bij weinig personen en markeert bij veel personen zelfs kleine afwijkingen. Daarom toont Statable de Greenhouse-Geisser-correctie altijd, niet alleen als p onder ,05 ligt.",
+      "fachwoerter": "herhaalde metingen (dezelfde personen meerdere keren gemeten), variantieanalyse (vergelijkt gemiddelden), vrijheidsgraden (df: de getallen tussen haakjes naast F), p-waarde (hoe vaak een uitkomst van minstens deze grootte zou voorkomen als de aanname geldt), W (de toetsingsgrootheid van de toets van Mauchly).",
+      "pruefen": true,
+      "statable": "Kies onder de uitkomst van de variantieanalyse voor herhaalde metingen de correctie voor sfericiteit (Greenhouse-Geisser als standaard, Huynh-Feldt of geen). Met één factor met herhaalde metingen staat de Mauchly-toets in de tabel; met twee factoren heeft elk effect zijn eigen ε."
+    },
+    "greenhouse-geisser": {
+      "titel": "Greenhouse-Geisser- en Huynh-Feldt-correctie (ε)",
+      "kurz": "Wat te doen als sfericiteit wordt geschonden? De correctie maakt de uitkomst voorzichtiger: p wordt groter. Hoeveel, bepaalt ε (epsilon): 1 betekent voldaan, kleiner betekent sterker geschonden.",
+      "beispiel": "Met ε = ,80 wordt F(2; 38) = 6,2, p = ,005 tot F(1,60; 30,40) = 6,2, p = ,009: de twee getallen tussen haakjes, 2 en 38, worden met ,80 vermenigvuldigd en geven 1,60 en 30,40.",
+      "vorsicht": "Greenhouse-Geisser is de strengere, Huynh-Feldt de iets ruimere schatting. De getallen tussen haakjes zijn geen gehele getallen meer; dat is gebruikelijk, en bij ε dicht bij 1 verandert de correctie nauwelijks iets.",
+      "fachwoerter": "vrijheidsgraden (df: de getallen tussen haakjes naast F), variantieanalyse (vergelijkt gemiddelden), sfericiteit (alle verschillen tussen twee willekeurige meetmomenten variëren even sterk).",
+      "pruefen": true,
+      "statable": "Kies onder de uitkomst van de variantieanalyse voor herhaalde metingen de correctie: Greenhouse-Geisser (standaard), Huynh-Feldt of geen. Vrijheidsgraden en p worden meteen met ε gecorrigeerd getoond; met twee factoren met herhaalde metingen heeft elk effect zijn eigen ε."
+    },
+    "mediation": {
+      "titel": "Mediatie (indirect effect)",
+      "kurz": "Loopt een effect via een tussenstap? Bijvoorbeeld: lawaai beïnvloedt de slaap, en slaap beïnvloedt de stemming. Mediatie berekent hoe groot dit indirecte pad is.",
+      "beispiel": "Indirect pad via slaap 0,20, 95%-interval [0,11; 0,30]: 0 zit er niet in.",
+      "vorsicht": "Eén enkele enquête toont geen oorzaak: de volgorde is een aanname. Wat telt, is het interval van het indirecte pad, niet of de afzonderlijke stappen significant zijn.",
+      "fachwoerter": "mediator (de variabele M waarlangs een effect loopt), paden a (X → M), b (M → Y), c′ (X → Y direct) en c (X → Y in totaal; c = c′ + a·b), bootstrap (5000 keer opnieuw trekken uit de bestaande personen), betrouwbaarheidsinterval (een bereik dat, gegeven de gegevens, goed bij de ware waarde past).",
+      "pruefen": true
+    },
+    "moderation": {
+      "titel": "Moderatie (interactie, simple slopes)",
+      "kurz": "Is een verband voor iedereen gelijk? Moderatie toetst of het van een derde grootheid afhangt.",
+      "beispiel": "Meer oefenen helpt beginners veel en ervaren mensen nauwelijks: ervaring modereert het verband.",
+      "vorsicht": "Moderatie is geen mediatie: de moderator verandert de sterkte van het verband; hij is geen tussenstap. Moderatie alleen toont ook geen oorzaak.",
+      "fachwoerter": "moderator (de derde variabele W waarvan het verband afhangt), centreren (waarden rond hun gemiddelde verschuiven), regressie (voorspelling met het product X·W als interactieterm), significant (de p-waarde ligt onder de gekozen grens), simple slopes (de helling van X bij lage, gemiddelde en hoge W), ΔR² (de winst in verklaarde variantie door de interactie), Johnson-Neyman (noemt de punten van W vanaf waar de helling significant wordt).",
+      "pruefen": true
+    },
+    "nap": {
+      "titel": "NAP (nonoverlap of all pairs)",
+      "kurz": "Is een gedrag verbeterd door een interventie? NAP vergelijkt elke waarde ervoor (A) met elke waarde tijdens de interventie (B) en geeft het aandeel paren waarin B beter is; een tie telt half.",
+      "beispiel": "Minuten dat een kind aan tafel blijft zitten: nulmeting 3, 4, 4, 5; interventie 6, 5, 7, 8, 7. Van 20 paren is B beter in 19 en gelijk in 1: NAP = (19 + 0,5) / 20 = ,975.",
+      "vorsicht": "NAP negeert een trend vóór de interventie en laat niet zien hoeveel B beter is; de benamingen zwak, middelmatig en sterk (Parker en Vannest) zijn een vuistregel. Een toets ervoor veronderstelt onafhankelijke metingen, die tijdreeksen vaak niet hebben.",
+      "fachwoerter": "AUC (oppervlakte onder de ROC-curve: dezelfde kans, NAP is eraan gelijk), Mann-Whitney (rangtoets voor twee groepen, geeft hier de p-waarde), p-waarde (hoe vaak een uitkomst van minstens deze grootte zou voorkomen als er geen verschil is), betrouwbaarheidsinterval volgens Newcombe (een bereik dat laat zien hoe onzeker de waarde is bij weinig metingen).",
+      "pruefen": true
+    },
+    "pnd": {
+      "titel": "PND (percentage of non-overlapping data)",
+      "kurz": "Hoeveel waarden van de interventiefase (B) overtreffen de beste waarde ervoor (A)? Dat is de PND: het aandeel B-waarden boven de beste A-waarde (Scruggs et al. 1987).",
+      "beispiel": "Met dezelfde gegevens (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): de beste A-waarde is 5. Vier van vijf B-waarden liggen erboven (6, 7, 8, 7), PND = 4 / 5 = 80%. Als “lager = beter” geldt, telt de laagste A-waarde.",
+      "vorsicht": "PND hangt af van één waarde vóór de interventie: een uitschieter daar maakt haar nutteloos, en met meer metingen ervoor daalt ze, ook als verder niets anders is. NAP is beter geschikt; PND is er ter vergelijking met ouder werk.",
+      "pruefen": true
+    },
+    "tau-u": {
+      "titel": "Tau-U en baselinegecorrigeerde Tau",
+      "kurz": "Hoe goed is een verbetering aan te tonen als de waarden al vóór de interventie één kant op gaan? Tau-U vergelijkt voor en na zoals NAP en kan die trend wegnemen.",
+      "beispiel": "Met dezelfde gegevens (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): Tau-U zonder wegnemen van de trend = (19 − 0) / 20 = ,95. Al vóór de interventie stijgen 5 van de 6 paren: met de trend weggenomen is Tau-U = (19 − 5) / 20 = ,70.",
+      "vorsicht": "Het wegnemen van de trend veronderstelt dat de eerdere trend gewoon zou doorgaan - een sterke aanname bij een lange interventiefase. Met minder dan 3 metingen ervoor kan geen trend worden getoetst, en de p-waarden veronderstellen onafhankelijke metingen.",
+      "fachwoerter": "Kendall (Kendalls tau: een verband berekend uit rangordes, de basis van beide maten), Tau-BC (nulmeting-gecorrigeerde tau: neemt een trend in A alleen weg als die significant is), Theil-Sen (een robuuste trendlijn uit de mediane helling van alle paren punten).",
+      "pruefen": true
+    },
+    "einzelfall": {
+      "titel": "Single-case-analyse (A-B-design)",
+      "kurz": "Heeft een interventie bij één persoon gewerkt? Eén persoon (of enkele) wordt herhaald gemeten in de tijd: eerst zonder interventie (fase A), dan met (fase B). De twee fasen worden vergeleken.",
+      "beispiel": "Een kind blijft bij vier nulmetingen (3, 4, 4, 5) gemiddeld 4 minuten aan tafel zitten, en bij vijf metingen met de interventie (6, 5, 7, 8, 7) gemiddeld 6,6 minuten.",
+      "vorsicht": "Een A-B-opzet alleen bewijst geen oorzaak: de persoon kan zich ook vanzelf ontwikkelen, of andere gebeurtenissen kunnen meespelen. Replicaties zijn overtuigender (A-B-A-B, meerdere personen met verschoven begin).",
+      "fachwoerter": "mediaan (de middelste waarde), NAP (het aandeel A-B-paren waarin B beter is), tau en Tau-U (maten gebaseerd op Kendalls tau die rekening kunnen houden met een trend in de nulmeting), PND (het aandeel B-waarden boven de beste A-waarde), multiple baseline (meerdere personen met verschoven begin van de interventie).",
+      "pruefen": true
+    },
+    "kaplan-meier": {
+      "titel": "Kaplan-Meier (tijd tot gebeurtenis)",
+      "kurz": "Hoeveel zijn er na een bepaalde tijd nog zonder de gebeurtenis? De Kaplan-Meier-curve laat dat zien voor elk tijdstip en daalt bij elke gebeurtenis. Ze gebruikt ook personen die maar een deel van de tijd zijn geobserveerd.",
+      "beispiel": "10 medewerkers, tijd tot ontslag in maanden: 5 nemen ontslag (na 3, 5, 5, 8 en 12 maanden), bij 5 eindigt de observatie zonder ontslag (na 6, 9, 10, 14 en 15 maanden). Na 8 maanden heeft 9/10 · 7/9 · 5/6 = 58% nog geen ontslag genomen.",
+      "vorsicht": "De methode veronderstelt dat het verlaten van de observatie niets met het risico te maken heeft. Aan het rechter einde zijn meestal nog maar weinig personen over; daar is de curve onzeker.",
+      "fachwoerter": "gecensureerd (maar tot op zeker punt geobserveerd, de gebeurtenis is dan nog niet opgetreden), trapcurve (daalt een trede bij elke gebeurtenis), met risico (nog geobserveerd en zonder gebeurtenis).",
+      "pruefen": true
+    },
+    "zensierung": {
+      "titel": "Censurering",
+      "kurz": "Wat geldt voor personen bij wie tot het einde van de observatie niets was gebeurd? Ze heten gecensureerd: men weet alleen dat de gebeurtenis niet eerder optrad.",
+      "beispiel": "Een medewerkster die nog bij het bedrijf is als de studie na 14 maanden eindigt, is gecensureerd op tijdstip 14. In de grafiek verschijnt ze als een klein streepje op de curve.",
+      "vorsicht": "Laat gecensureerde personen niet vallen en tel ze niet als gebeurtenis: beide vertekenen de curve. De methode veronderstelt dat gecensureerde personen hetzelfde verdere risico hebben als de anderen.",
+      "fachwoerter": "Kaplan-Meier (de methode die ook gecensureerde personen gebruikt), met risico (nog geobserveerd en zonder gebeurtenis), niet-informatieve censurering (uitvallen heeft niets met het risico te maken).",
+      "pruefen": true
+    },
+    "ueberlebensfunktion": {
+      "titel": "Overlevingsfunctie S(t)",
+      "kurz": "Hoeveel hebben de gebeurtenis op tijdstip t nog niet meegemaakt? Dat toont de overlevingsfunctie S(t); ze begint bij 1 (iedereen) en daalt bij gebeurtenissen. “Overleving” betekent hier alleen “nog geen gebeurtenis”.",
+      "beispiel": "S(8) = ,58, 95%-interval [,34; 1,00]: na 8 maanden heeft naar schatting 58% van de medewerkers nog geen ontslag genomen. Bij 10 personen is het interval zeer breed.",
+      "vorsicht": "Het interval wordt (zoals in R survfit) zo berekend dat het nooit onder 0 komt; de bovengrens wordt bij 1 afgekapt. Bij weinig nog geobserveerde personen is het zeer breed.",
+      "fachwoerter": "betrouwbaarheidsinterval (een bereik dat, gegeven de gegevens, goed bij het ware aandeel past), standaardfout (volgens Greenwood: hoeveel de waarde van steekproef tot steekproef zou variëren), logschaal (het interval wordt op logaritmische waarden berekend).",
+      "pruefen": true
+    },
+    "median-ueberlebenszeit": {
+      "titel": "Mediane tijd tot de gebeurtenis",
+      "kurz": "Wanneer heeft de helft de gebeurtenis meegemaakt? Dat is de mediane tijd: het punt waarop de curve tot 50% daalt. Als ze nooit zo laag komt, is de mediaan “niet bereikt”.",
+      "beispiel": "Mediaan = 12 maanden, 95%-interval [5; niet bereikt]: de ondergrens is 5, naar boven is het interval open.",
+      "vorsicht": "De mediaan is hier beter dan het gemiddelde, dat door scheve gegevens en personen zonder gebeurtenis aan het eind wordt vertekend. Als de curve over een stuk precies op 50% ligt, neemt Statable, net als R, het midden; bij weinig gebeurtenissen is de mediaan zeer onzeker.",
+      "pruefen": true
+    },
+    "log-rank": {
+      "titel": "Log-ranktoets",
+      "kurz": "Verschillen de curven van meerdere groepen? De log-ranktoets vergelijkt op elk gebeurtenistijdstip hoeveel gebeurtenissen elke groep had en hoeveel er te verwachten waren als alle groepen gelijk waren.",
+      "beispiel": "Twee teams, tijd tot ontslag: χ²(1) = 5,1, p = ,024. De curven verschillen.",
+      "vorsicht": "De toets is het sterkst als de curven nooit van kant wisselen; als ze kruisen, kan ze een echt verschil missen. Ze zegt niets over de grootte van het verschil; daarvoor dienen medianen en aandelen op vaste tijdstippen.",
+      "fachwoerter": "Mantel-Cox (een andere naam voor de toets), Cox (niet te verwarren met Cox-regressie), Holm (corrigeert de p-waarden voor meerdere paren), vrijheidsgraden (df: hier groepen min 1).",
+      "pruefen": true
+    },
+    "anzahl-unter-risiko": {
+      "titel": "Aantal onder risico",
+      "kurz": "Hoeveel personen ondersteunen de curve op een bepaald punt? Het aantal met risico is hoeveel er op tijdstip t nog worden geobserveerd en de gebeurtenis niet hebben gehad. Het staat vaak onder de grafiek.",
+      "beispiel": "Bij maand 10 zijn er nog 4 van de 10 personen met risico: daar rust de curve op 4 personen.",
+      "vorsicht": "Waar nog maar weinig personen met risico zijn, springt de curve sterk bij elke gebeurtenis en is het interval breed. Zulke plekken moeten niet te veel worden geïnterpreteerd.",
+      "fachwoerter": "censurering (personen die maar tot op zeker punt zijn geobserveerd en dan uitvallen; ze verlagen het aantal net als gebeurtenissen).",
+      "pruefen": true
+    },
+    "bootstrap": {
+      "titel": "Bootstrap (percentielinterval)",
+      "kurz": "Hoe onzeker is een getal zonder eenvoudige formule? De bootstrap trekt 5.000 keer opnieuw uit de beschikbare personen en berekent het getal telkens opnieuw. De middelste 95% van de uitkomsten vormt het interval.",
+      "beispiel": "Mediaan (middelste waarde) van de wachttijd van 12 personen: 11,5 minuten. Van de 5.000 nieuwe medianen liggen er 2,5% onder 7,5 en 2,5% boven 16,5: 95%-bootstrapinterval [7,5; 16,5].",
+      "vorsicht": "Bij weinig personen (onder ongeveer 50) is het interval onnauwkeurig en vaak te smal. Met een vaste startwaarde voor de toevalsgetallen geven dezelfde gegevens altijd hetzelfde interval; een andere startwaarde verschuift de grenzen maar een beetje.",
+      "fachwoerter": "betrouwbaarheidsinterval (een bereik dat, gegeven de gegevens, goed bij de ware waarde past), percentiel (de grenzen bij 2,5% en 97,5% van de geordende uitkomsten), trekken met teruglegging (dezelfde persoon kan meerdere keren voorkomen), startwaarde (legt de toevalsgetallen vast).",
+      "pruefen": true
+    },
+    "omega": {
+      "titel": "McDonalds omega (ω)",
+      "kurz": "Meten meerdere vragen samen betrouwbaar één ding, ook als ze niet even veel bijdragen? Omega (ω) meet dat zoals Cronbachs alfa, maar gebruikt de werkelijke bijdrage van elke vraag. Alfa veronderstelt voor alle vragen hetzelfde.",
+      "beispiel": "Vijf vragen met bijdragen (ladingen) van ,5 / ,6 / ,7 / ,7 / ,8: ω = ,80. Alfa, die gelijke bijdragen veronderstelt, is iets lager met ,79.",
+      "vorsicht": "Omega veronderstelt dat de vragen één ding meten; anders heeft interpreteren geen zin (dan helpt factoranalyse). Richtwaarden (vaak ,70) zijn maar voorlopig, en ook omega geldt voor deze groep personen, niet voor de vragenlijst als zodanig. Alfa raakt de betrouwbaarheid alleen precies als de vragen één ding meten, evenveel bijdragen en onderling ongecorreleerde fouten hebben.",
+      "pruefen": true
+    },
+    "cfa": {
+      "titel": "Confirmatieve factoranalyse (CFA)",
+      "kurz": "Past een vooraf vastgelegde indeling van vragen in groepen bij de gegevens? Confirmatieve factoranalyse (CFA) legt vooraf vast welke vragen bij welke groep (factor) horen en toetst hoe goed dat past.",
+      "beispiel": "Negen vragen, drie groepen van elk drie vragen (verkeer, veiligheid, vrije tijd): CFI = ,92, RMSEA = ,07, twee maten voor de pasvorm. Ze halen de gebruikelijke richtwaarden net niet: CFI onder ,95, RMSEA boven ,06.",
+      "vorsicht": "Een goede fit laat niet zien dat de groepen het juiste meten, en een ander model kan even goed passen. Als de indeling pas wordt aangepast na het bekijken van dezelfde gegevens, is de toets niet meer onafhankelijk.",
+      "fachwoerter": "fit-indices (maten voor hoe goed het model past, hier CFI en RMSEA), exploratieve factoranalyse (zoekt groepen vragen in de gegevens), gestandaardiseerde ladingen (hoe sterk een vraag bij zijn factor hoort).",
+      "pruefen": true
+    },
+    "fit-indizes": {
+      "titel": "Fit-indices (CFI, TLI, RMSEA, SRMR)",
+      "kurz": "Past het model bij de gegevens? Fit-indices drukken dat in getallen uit. Bij CFI en TLI is hoger beter, bij RMSEA en SRMR lager. Het 90%-interval van de RMSEA laat zien hoe nauwkeurig ze is geschat.",
+      "beispiel": "CFI = ,96, TLI = ,95, RMSEA = ,05, SRMR = ,04: volgens de gebruikelijke richtwaarden ligt de fit in het goede bereik.",
+      "vorsicht": "De richtwaarden (CFI en TLI vanaf ,95, RMSEA tot ,06, SRMR tot ,08; Hu en Bentler 1999) zijn ervaringsregels, geen toetsen; ,90 wordt voor CFI en TLI vaak nog aanvaardbaar genoemd, en bij kleine modellen of weinig personen zijn ze onbetrouwbaar. De χ²-toets wordt bij grote steekproeven ook bij kleine afwijkingen significant.",
+      "pruefen": true
+    },
+    "mehrebenen": {
+      "titel": "Multilevelmodel (gemengd model)",
+      "kurz": "Wat als personen genest zijn in groepen, zoals kinderen in klassen? Personen in een groep lijken vaak op elkaar. Het multilevelmodel geeft elke groep een eigen niveau en scheidt verschillen tussen groepen van die binnen groepen.",
+      "beispiel": "Tevredenheid van 500 medewerkers uit 25 bedrijven: 12% van de spreiding ligt tussen de bedrijven. Eén uur extra training per maand gaat samen met 0,8 punten meer tevredenheid (p < ,001), ook als het bedrijf in rekening wordt gebracht.",
+      "vorsicht": "Het vraagt meerdere groepen met elk meerdere gevallen; bij minder dan 10 groepen zijn de schattingen op groepsniveau zeer onzeker. Een multilevelmodel toont verbanden, geen oorzaken.",
+      "pruefen": true,
+      "statable": "In de uitkomst onder “Voor specialisten” kun je centreren op het algemeen gemiddelde of het groepsgemiddelde (effect binnen tegenover effect tussen de groepen), een random helling kiezen en een interactie toevoegen, ook over de niveaus heen. Daaronder vergelijkt “De modellen vergelijken” het nulmodel, vaste effecten, interacties en random helling met ML (AIC, BIC, −2LL, likelihood-ratiotoets). Als de gegevens persoon bij meetmoment zijn, biedt Statable de weg “tijd met een random helling per persoon” (groeimodel)."
+    },
+    "icc-mehrebenen": {
+      "titel": "ICC in het multilevelmodel (aandeel van de groepen)",
+      "kurz": "Hoeveel verschillen de groepen? De ICC is het aandeel van de totale spreiding dat tussen de groepen ligt. ICC = ,12 betekent: 12% van de verschillen gaat samen met de groep.",
+      "beispiel": "ICC = ,12 met 20 gevallen per groep: het ontwerpeffect is 1 + (20 − 1) · ,12 = 3,28. De onzekerheid van een gemiddelde (standaardfout) is dan ongeveer 1,8 keer (√3,28) zo groot als een berekening zonder de groepen aangeeft.",
+      "vorsicht": "Niet te verwarren met de ICC voor overeenstemming tussen beoordelaars: hier is het het aandeel van de groepen in de spreiding. Vanaf ,05 klein, vanaf ,10 middelgroot, vanaf ,15 groot (Hox) is slechts een vuistregel.",
+      "fachwoerter": "intraklassecorrelatie (ICC: het aandeel van de totale spreiding dat tussen de groepen ligt), variantie (hoe breed de waarden spreiden), nulmodel (het model zonder verklarende kolommen, waarin de ICC wordt berekend).",
+      "pruefen": true
+    },
+    "meta-effekt": {
+      "titel": "Gepoold effect (meta-analyse)",
+      "kurz": "Hoe groot is een effect over meerdere onderzoeken samen? Het gepoolde effect is het gewogen gemiddelde van alle onderzoeken: nauwkeuriger onderzoeken tellen zwaarder. Als de ware effecten tussen onderzoeken variëren, wordt het interval breder.",
+      "beispiel": "Drie onderzoeken: 0,40 (standaardfout, dus onnauwkeurigheid, 0,10), 0,20 (0,05) en 0,30 (0,10). Gewicht = 1 / standaardfout²: 100, 400, 100. Gewogen gemiddelde = (40 + 80 + 30) / 600 = 0,25 - zoals bij één gemeenschappelijk waar effect.",
+      "vorsicht": "Het gemiddelde heeft alleen zin als de onderzoeken hetzelfde meten. Als de onderzoeken sterk verschillen, kijk dan ook naar het voorspellingsinterval.",
+      "fachwoerter": "heterogeniteit (hoe sterk de onderzoeken van elkaar verschillen), betrouwbaarheidsinterval (een bereik dat, gegeven de gegevens, goed bij het gemiddelde van de ware effecten past), random-effectenmodel (laat de ware effecten tussen onderzoeken variëren, τ²), standaardfout (een maat voor hoe onnauwkeurig een onderzoek is).",
+      "pruefen": true
+    },
+    "i-quadrat": {
+      "titel": "I² en Q (heterogeniteit)",
+      "kurz": "Verschillen de onderzoeken meer dan toeval zou doen verwachten? I² zegt, in procent, hoeveel van de verschillen tussen uitkomsten voortkomt uit echte verschillen tussen onderzoeken. De Q-toets vraagt hetzelfde.",
+      "beispiel": "Twaalf onderzoeken: Q(11) = 42,0, p < ,001; I² = (42,0 − 11) / 42,0 = 74%. Vaak aangehaalde benamingen: 25%, 50%, 75% (Higgins et al. 2003).",
+      "vorsicht": "I² is een aandeel, geen maat voor hoe groot de verschillen zijn: bij zeer nauwkeurige onderzoeken wordt I² groot, ook als de effecten dicht bij elkaar liggen. Bij weinig onderzoeken is I² zeer onnauwkeurig, en een kleine waarde bewijst niet dat de onderzoeken gelijk zijn; hoe ver de ware effecten spreiden, tonen τ en het voorspellingsinterval.",
+      "pruefen": true,
+      "fachwoerter": "τ (de spreiding van de ware effecten tussen onderzoeken), voorspellingsinterval (het bereik waarin het effect van een nieuw onderzoek waarschijnlijk ligt), Q (een toets die nagaat of de uitkomsten meer uiteenlopen dan toeval zou geven)."
+    },
+    "tau-quadrat": {
+      "titel": "τ² (variatie tussen studies)",
+      "kurz": "Hoe verschillend zijn de ware effecten van de onderzoeken? τ² (tau-kwadraat) meet die spreiding; de wortel ervan, τ, staat in de eenheid van het effect. Anders dan I² negeert ze hoe nauwkeurig de onderzoeken zijn.",
+      "beispiel": "τ² = 0,04, dus τ = 0,20: bij een gemiddeld effect van 0,30 spreiden de ware effecten van de onderzoeken typisch ongeveer 0,20 eromheen.",
+      "vorsicht": "Bij minder dan ongeveer vijf onderzoeken is τ² zeer onzeker en haar interval zeer breed.",
+      "fachwoerter": "standaarddeviatie (τ is de wortel van τ²), variantie (hoe breed de ware effecten spreiden), REML (de methode waarmee τ² wordt geschat).",
+      "pruefen": true
+    },
+    "praediktionsintervall": {
+      "titel": "Voorspellingsinterval (meta-analyse)",
+      "kurz": "Waar ligt het effect van een nieuw, vergelijkbaar onderzoek waarschijnlijk? Het voorspellingsinterval laat dat zien. Het is breder dan het betrouwbaarheidsinterval van het gemiddelde, omdat het ook de verschillen tussen onderzoeken meeneemt.",
+      "beispiel": "Gepoold 0,20, 95%-BI [0,12; 0,28], voorspellingsinterval [−0,05; 0,45]: een nieuw onderzoek kan ook een effect dicht bij 0 vinden.",
+      "vorsicht": "Bij weinig onderzoeken is het interval zeer onzeker.",
+      "pruefen": true
+    },
+    "forest-plot": {
+      "titel": "Forestplot",
+      "kurz": "Hoe zien de uitkomsten van alle onderzoeken eruit? De forestplot toont elk onderzoek als een vierkant (effect) met een lijn (95%-interval). De ruit is het gemiddelde; de stippellijn betekent geen effect.",
+      "beispiel": "Ruit bij 0,20 met punten bij 0,12 en 0,28, stippellijn bij 0 (bij 1 voor verhoudingen): de ruit ligt helemaal rechts ervan - het gemiddelde verschilt van “geen effect”.",
+      "vorsicht": "Controleer of één groot onderzoek de uitkomst bepaalt (groot vierkant) en of de intervallen overlappen.",
+      "fachwoerter": "voorspellingsinterval (het bereik waarin het ware effect van een nieuw onderzoek waarschijnlijk ligt), gepoold effect (het gemiddelde van alle onderzoeken, de ruit).",
+      "pruefen": true
+    },
+    "funnel-plot": {
+      "titel": "Funnelplot en Egger-toets",
+      "kurz": "Ontbreken er onderzoeken? De funnelplot toont elk onderzoek naar effect en nauwkeurigheid: nauwkeurige clusteren bovenaan, onnauwkeurige spreiden breder eronder. Een ontbrekende kant maakt hem scheef; de Egger-toets controleert dit.",
+      "beispiel": "Egger-toets p = ,03 bij 14 onderzoeken: de trechter is opvallend scheef - kleine onderzoeken tonen gemiddeld grotere effecten.",
+      "vorsicht": "Onder 10 onderzoeken heeft de toets weinig power (Sterne et al. 2011). De trechter kan ook scheef zijn omdat kleine en grote onderzoeken werkelijk verschillen.",
+      "fachwoerter": "standaardfout (een maat voor hoe onnauwkeurig een onderzoek is), asymmetrie (de trechter is aan één kant leeg), regressie (de Egger-toets voorspelt het effect uit de standaardfout).",
+      "pruefen": true
+    },
+    "mehrfachantworten-set": {
+      "titel": "Multiple-responseset",
+      "kurz": "Wat als bij één vraag meerdere opties konden worden aangevinkt? Een multiple-responseset voegt de kolommen van de afzonderlijke opties samen tot één vraag. Statable telt voor elke optie hoeveel personen haar noemden.",
+      "beispiel": "“Hoe kom je naar je werk?” met de opties fiets, bus, auto: drie kolommen (aangevinkt = 1, anders 0), één set. In SPSS heet dit MRSETS.",
+      "vorsicht": "De vinkjes van dezelfde persoon hangen samen. Daarom is er geen gewone chikwadraattoets voor meerdere antwoorden.",
+      "pruefen": true
+    },
+    "prozent-der-faelle": {
+      "titel": "Percentage van de gevallen",
+      "kurz": "Hoeveel personen noemden een optie? Percentage van de gevallen is het aantal vermeldingen gedeeld door het aantal geldige gevallen. Omdat elke persoon meerdere opties kan noemen, tellen de waarden op tot meer dan 100%.",
+      "beispiel": "18 van 40 personen komen met de fiets: 18 / 40 = 45% van de gevallen.",
+      "vorsicht": "Geldige gevallen zijn die met minstens één vinkje (zoals in SPSS). Wie niets aanvinkte, zit niet in de basis, tenzij “gevallen zonder vinkje meetellen” aan staat.",
+      "pruefen": true
+    },
+    "prozent-der-antworten": {
+      "titel": "Percentage van de antwoorden",
+      "kurz": "Hoe zijn alle vinkjes verdeeld? Percentage van de antwoorden is het aantal vermeldingen van een optie gedeeld door de som van alle vermeldingen. Deze waarden tellen op tot 100%.",
+      "beispiel": "Fiets werd 18 keer genoemd, er waren in totaal 60 vermeldingen: 18 / 60 = 30% van de antwoorden.",
+      "vorsicht": "De waarde zegt hoe de vermeldingen zijn verdeeld, niet hoeveel personen een optie kiezen. Daarvoor dient het percentage van de gevallen.",
+      "pruefen": true
+    },
+    "shapiro-wilk": {
+      "titel": "Shapiro-Wilk-toets",
+      "kurz": "Lijken de waarden uit een normale verdeling te komen? De Shapiro-Wilk-toets controleert dat. Als p kleiner is dan ,05, wijkt de verdeling zichtbaar af; anders pleit de toets er niet tegen.",
+      "beispiel": "Reactietijden van 25 personen: W = ,73 (1 zou een perfecte overeenkomst zijn), p < ,001. De verdeling is scheef; de mediaan beschrijft het midden beter.",
+      "vorsicht": "Bij veel personen markeert de toets zelfs kleine afwijkingen, bij weinig mist ze grote. Een niet-significante uitkomst bewijst geen normale verdeling; de Q-Q-plot vult haar aan.",
+      "pruefen": true
+    },
+    "qq-diagramm": {
+      "titel": "Q-Q-plot",
+      "kurz": "Volgen de waarden een normale verdeling? De Q-Q-plot zet elke gemeten waarde als punt tegenover de waarde die een normale verdeling zou geven. Als de punten dicht bij de lijn liggen, past het.",
+      "beispiel": "Bij lichaamslengtes van 100 volwassenen liggen de punten bijna op de lijn. Bij wachttijden bij een helpdesk buigen ze aan het bovenste uiteinde omhoog: enkele zeer lange wachttijden.",
+      "vorsicht": "Bochten tonen scheefheid, afzonderlijke punten ver weg aan de uiteinden tonen uitschieters. Bij weinig waarden wiebelen de punten willekeurig rond de lijn; de Shapiro-Wilk-toets vat de afwijking in één getal samen maar vervangt het kijken niet.",
+      "pruefen": true
+    },
+    "partialkorrelation": {
+      "titel": "Partiële correlatie",
+      "kurz": "Hangen twee getallen nog samen als een derde gelijk blijft? Partiële correlatie toont het verband tussen twee getallen nadat het deel dat aan één of meer verdere getallen te danken is, uit beide is weggenomen.",
+      "beispiel": "IJsverkoop en zonnebrand hangen sterk samen (r = ,62). Met de temperatuur eruit (r = ,80 en ,75 met de twee) blijft nauwelijks iets over: pr = ,05.",
+      "vorsicht": "Alleen het rechtlijnige deel van wat is gemeten en gekozen wordt weggenomen. Of het derde getal de oorzaak van beide is, wordt door het vak beslist, niet door de berekening: het wegnemen van een gemeenschappelijk gevolg van beide getallen kan zelfs een schijnverband veroorzaken.",
+      "pruefen": true
+    },
+    "roc-auc": {
+      "titel": "ROC-curve en oppervlakte onder de curve (AUC)",
+      "kurz": "Hoe goed scheidt een gemeten waarde getroffen van niet-getroffen personen? De ROC-curve toont dat voor elk mogelijk afkappunt, en haar oppervlakte (AUC) vat het samen: ,50 betekent toeval, 1 perfecte scheiding.",
+      "beispiel": "AUC = ,85: als je één getroffen en één niet-getroffen persoon trekt, heeft de getroffene in 85% van de gevallen de opvallendere waarde. Bij het afkappunt van 20 punten herkent de test 80% van de getroffenen en 78% van de anderen; de Youden-index ,80 + ,78 − 1 = ,58 wordt gebruikt om het afkappunt te kiezen.",
+      "vorsicht": "Het afkappunt wordt op precies deze gegevens gekozen en presteert in nieuwe gegevens meestal slechter. De Youden-index weet niet welke fout zwaarder weegt.",
+      "fachwoerter": "sensitiviteit (het aandeel getroffen personen dat de test herkent), specificiteit (het aandeel niet-getroffen personen dat de test juist doorlaat), drempel (vanaf deze score telt iemand als opvallend), Youden-index (J = sensitiviteit + specificiteit − 1).",
+      "pruefen": true
+    },
+    "hazard-ratio": {
+      "titel": "Hazard ratio (HR)",
+      "kurz": "Hoeveel sneller of trager treedt een gebeurtenis op in één groep? De hazard ratio (HR) vergelijkt het risico van de groepen dat de gebeurtenis het eerstvolgende moment plaatsvindt. 1 betekent geen verschil.",
+      "beispiel": "Tijd tot het eerste arbeidsongeval, met training tegenover zonder: HR = 0,70, 95%-interval [0,52; 0,94]. Met training is het risico op een ongeval het eerstvolgende moment op elk tijdstip 0,70 keer zo groot. Het interval bevat 1 niet.",
+      "vorsicht": "Een HR is geen risicoverhouding: HR = 1,8 betekent niet dat de gebeurtenis 1,8 keer zo waarschijnlijk is. Ze kan in de tijd veranderen; één waarde is dan slechts een gemiddelde.",
+      "fachwoerter": "hazard (het risico de gebeurtenis het eerstvolgende moment te hebben), proportionele hazards (de verhouding blijft in de tijd gelijk), Cox-regressie (de methode die de HR schat), Wald (de gebruikelijke methode voor het interval).",
+      "pruefen": true
+    },
+    "proportionale-hazards": {
+      "titel": "Proportionele hazards",
+      "kurz": "Blijft het verschil tussen twee groepen in de tijd gelijk? De hazard ratio (HR) veronderstelt dat de risicoverhouding altijd dezelfde is. Een toets (cox.zph) controleert dit; een p onder ,05 pleit ertegen.",
+      "beispiel": "p = ,031 voor de groep: de verhouding is niet constant. Als de curven in de grafiek kruisen, is dat een duidelijk teken.",
+      "vorsicht": "Bij veel personen reageert de toets zelfs op kleine afwijkingen, bij weinig mist ze grote.",
+      "pruefen": true
+    },
+    "risikodifferenz": {
+      "titel": "Risicoverschil (RD)",
+      "kurz": "Met hoeveel is het risico in één groep hoger? Het risicoverschil (RD) is het risico van de ene groep min dat van de andere, als proportie of in procentpunten. 0 betekent geen verschil.",
+      "beispiel": "Arbeidsongevallen in een jaar: 36 van 400 met training (9%), 60 van 400 zonder (15%). RD = ,09 − ,15 = −,060, 95%-interval [−,105; −,015]: 6 procentpunten minder met training.",
+      "vorsicht": "Het risicoverschil beschrijft een verschil; het bewijst geen oorzaak, en bij een patiënt-controleonderzoek (getroffen en niet-getroffen personen afzonderlijk gezocht) is het niet te interpreteren. Statable berekent het interval volgens Newcombe, wat bij kleine aantallen veiliger is dan de eenvoudigere methode.",
+      "fachwoerter": "Wald-interval (een eenvoudige benadering voor het interval, minder veilig bij kleine aantallen), Newcombe-interval (de methode die Statable gebruikt).",
+      "pruefen": true
+    },
+    "relatives-risiko": {
+      "titel": "Relatief risico (RR)",
+      "kurz": "Hoeveel keer zo groot is het risico in één groep? Het relatieve risico (RR) is het risico van de ene groep gedeeld door dat van de andere. 1 betekent geen verschil; 0,5 betekent half zo groot.",
+      "beispiel": "Dezelfde arbeidsongevallen: RR = 0,09 / 0,15 = 0,60, 95%-interval [0,41; 0,89]. Met training is het risico 0,60 keer zo groot. Het interval bevat 1 niet.",
+      "vorsicht": "Als één groep helemaal geen gebeurtenis heeft, is het interval van de RR niet te berekenen; Statable corrigeert niet stilzwijgend. Het geldt voor groepen die in de tijd zijn gevolgd en voor experimenten, niet voor patiënt-controleonderzoeken.",
+      "pruefen": true
+    },
+    "nnt": {
+      "titel": "NNT (number needed to treat)",
+      "kurz": "Bij hoeveel personen moet je ingrijpen om één gebeurtenis minder te krijgen? De NNT (number needed to treat) is 1 gedeeld door het risicoverschil. NNTB betekent een extra voordeel, NNTH extra schade.",
+      "beispiel": "Met RD = −,06 is NNTB = 1 / ,06 = 16,7 (95%-interval NNTB 9,5 tot 67,0): bij ongeveer 17 getrainde personen komt één ongeval minder voor.",
+      "vorsicht": "Het NNT-interval loopt via oneindig als het risicoverschil ook 0 kan zijn (bijvoorbeeld NNTH 25 tot ∞ tot NNTB 10) - lees het nooit als een interval met negatieve getallen. Of een gebeurtenis gewenst is, moet de persoon aangeven.",
+      "pruefen": true
+    },
+    "typical-error": {
+      "titel": "Typical error (TE)",
+      "kurz": "Hoeveel wijkt één meting typisch af bij herhaling? Dat zegt de typische fout (TE), in de eenheid van de meting. Ze wordt berekend uit twee metingen van dezelfde personen.",
+      "beispiel": "Spronghoogte van 8 personen op twee dagen: de verschillen tussen de dagen hebben een standaarddeviatie van 2,1 cm. TE = 2,1 / √2 = 1,5 cm: één sprong wijkt typisch 1,5 cm af.",
+      "vorsicht": "De TE geldt alleen als er tussen de metingen niets is veranderd. Ze is gelijk aan de standaardmeetfout uit herhaalde metingen, niet aan die uit hoe de vragen van een schaal samenhangen.",
+      "fachwoerter": "betrouwbaarheid (hoe betrouwbaar een meting is bij herhaling), standaarddeviatie (SD) van de verschillen (de typische spreiding van de verschillen tussen de twee metingen), standaardmeetfout (de typische fout van één meting).",
+      "pruefen": true
+    },
+    "lilliefors": {
+      "titel": "Lilliefors-toets",
+      "kurz": "Passen de waarden bij een normale verdeling? De toets van Lilliefors controleert dat, ook als gemiddelde en spreiding eerst uit de gegevens worden geschat. Een p onder ,05 betekent dat de verdeling van een normale afwijkt.",
+      "beispiel": "Verblijfsduur van 30 bezoekers in minuten: D = ,17, p = ,033 (Lilliefors-versie van de Kolmogorov-Smirnov-toets). De verdeling wijkt af van een normale verdeling.",
+      "vorsicht": "Een p boven ,05 betekent niet dat de gegevens normaal verdeeld zijn, alleen dat de toets er niet tegen pleit. Bij weinig personen mist ze grote afwijkingen; de Q-Q-plot toont meer.",
+      "fachwoerter": "standaarddeviatie (de typische spreiding van waarden rond hun gemiddelde), Kolmogorov-Smirnov-toets (vergelijkt de verdeling van de gegevens met een normale verdeling).",
+      "pruefen": true
+    },
+    "chi-quadrat-anpassung": {
+      "titel": "χ²-goodness-of-fit-toets",
+      "kurz": "Past de verdeling over categorieën bij een verwachte? De χ²-aanpassingstoets (goodness-of-fit) controleert of getelde frequenties bij gegeven proporties passen, bijvoorbeeld gelijke aandelen. Een p onder ,05 betekent: ze wijken van de verwachting af.",
+      "beispiel": "Een dobbelsteen, 120 worpen, 20 verwacht per kant. Waargenomen: 14, 22, 18, 25, 19, 22. χ²(5, N = 120) = 74 / 20 = 3,7, p = ,593: de frequenties pleiten niet tegen een eerlijke dobbelsteen.",
+      "vorsicht": "Als in een categorie minder dan 1 wordt verwacht, of minder dan 5 in meer dan een vijfde van de categorieën, is p onzeker (een gewoonte naar Cochran 1954). Een niet-significante uitkomst bevestigt de verwachting niet.",
+      "pruefen": true
+    },
+    "ladung": {
+      "titel": "Lading (factorlading)",
+      "kurz": "Hoe sterk hoort een vraag (item) bij een factor of component, dus bij een groep vragen? De lading laat het zien: bij orthogonale (haakse) rotatie is het de correlatie (van −1 tot 1) tussen die twee. Het minteken laat alleen de richting zien, die bepaald wordt door de oriëntatie van het component. Voor de sterkte telt de absolute grootte.",
+      "beispiel": "Vraag A: ,70 op component 1, ,10 op component 2: hoort bij component 1. Vraag B: −,65 op component 1: hoort er ook bij, alleen in tegengestelde richting.",
+      "vorsicht": "De grens (vaak ,30 tot ,50) is een gewoonte. Twee keer erboven heet cross-loading: controleer op inhoud. Lege cellen in de tabel zijn kleine ladingen die verborgen zijn."
+    },
+    "eigenwert": {
+      "titel": "Eigenwaarde en Kaiser-criterium",
+      "kurz": "Hoeveel van de verschillen in de antwoorden legt een component (een groep vragen) vast? De eigenwaarde laat het zien. Gedeeld door het aantal vragen geeft ze het aandeel van het component in de variantie. Cumulatief betekent: meerdere componenten bij elkaar opgeteld.",
+      "beispiel": "Bij 6 vragen: component 1 heeft 2,4 (40%), component 2 heeft 1,2 (20%). Cumulatief 3,6 van 6, dus 60%.",
+      "vorsicht": "Het Kaiser-criterium houdt componenten met een eigenwaarde boven 1. In simulaties noemt het vaak te veel componenten en moet het niet alleen beslissen. Parallelanalyse vult het aan.",
+      "fachwoerter": "variantie (hoe breed de antwoorden spreiden), parallelanalyse (vergelijkt de eigenwaarden met die van toevalsgegevens)."
+    },
+    "kommunalitaet": {
+      "titel": "Communaliteit (h²)",
+      "kurz": "Hoeveel van één vraag verklaren de componenten (factoren) samen? Dat is de communaliteit (h²): het aandeel van de verschillen in de antwoorden op deze vraag dat alle componenten samen vastleggen. Bij ongecorreleerde componenten is het de som van de gekwadrateerde ladingen.",
+      "beispiel": "Een vraag laadt ,6 en ,5 op twee componenten: h² = ,36 + ,25 = ,61, dus ongeveer 61%.",
+      "vorsicht": "Laag kan veel toevalsfout betekenen, die gedeelde factoren nooit verklaren, of dat de vraag inhoudelijk niet bij de andere past."
+    },
+    "rotation": {
+      "titel": "Rotatie (orthogonaal en oblique)",
+      "kurz": "Hoe wordt de indeling van de vragen duidelijker? Door rotatie: de assen van de oplossing worden gedraaid tot elke vraag vooral op één factor laadt. Veel standen passen even goed bij de correlaties. Rotatie kiest er een met een duidelijke structuur.",
+      "beispiel": "Orthogonaal (haaks, bijv. varimax): de factoren blijven ongecorreleerd. Oblique (schuin, bijv. promax): de factoren mogen samenhangen.",
+      "vorsicht": "Orthogonale rotatie verandert de ladingen, niet de communaliteiten (hoeveel van een vraag de factoren samen verklaren). Oblique dwingt geen samenhang af: bij ongecorreleerde factoren lijkt het beeld op het orthogonale."
+    },
+    "explorative-faktorenanalyse": {
+      "titel": "Exploratieve factoranalyse (EFA)",
+      "kurz": "Zitten er gemeenschappelijke kenmerken achter de vragen, en welke? Exploratieve factoranalyse zoekt ze zonder vooraf vastgelegde structuur. Ze veronderstelt een gemeenschappelijke oorzaak. Dat moet eerst inhoudelijk kloppen, vóór elke statistiek.",
+      "beispiel": "Tien vragen over welzijn geven twee groepen. Of er twee kenmerken zijn, bepaalt vakkennis.",
+      "vorsicht": "Een structuur die in dezelfde gegevens is gevonden, past daar natuurlijk goed bij. Ze kan alleen met nieuwe gegevens worden bevestigd.",
+      "fachwoerter": "confirmatief (toetst een vooraf vastgelegde structuur)."
+    },
+    "bartlett-test": {
+      "titel": "Bartlett-toets (geschiktheid voor factoranalyse)",
+      "kurz": "Hangen de vragen eigenlijk wel samen? De sfericiteitstoets van Bartlett controleert of alle correlaties nul zijn (eenheidsmatrix: nul behalve de diagonaal). Statistisch significant betekent alleen: niet alle zijn nul.",
+      "beispiel": "Bij 30 personen kan een middelgroot verband onopgemerkt blijven. Bij 5000 personen worden zelfs heel kleine verbanden statistisch significant.",
+      "vorsicht": "De toetsingsgrootheid hangt sterk af van de steekproefomvang. Bij veel gevallen is ze bijna altijd significant en zegt ze dan weinig over geschiktheid. Verwar haar niet met de sfericiteitstoets van Mauchly voor herhaalde metingen.",
+      "fachwoerter": "significant (de p-waarde ligt onder de gekozen grens, meestal ,05), toetsingsgrootheid (het getal dat een toets uit de gegevens berekent)."
+    },
+    "hauptkomponenten": {
+      "titel": "Hoofdcomponentenanalyse (PCA) en factoranalyse",
+      "kurz": "Vat ik de vragen alleen samen, of zoek ik een gemeenschappelijk kenmerk? Hoofdcomponentenanalyse (PCA) verdeelt de totale variantie. Factoranalyse verklaart alleen het gedeelde deel. Ze zet de rest van elke vraag (de eigenheid plus meetfout) apart als uniek deel.",
+      "beispiel": "Bij weinig vragen per factor zijn PCA-ladingen meestal hoger dan factorladingen, omdat ze de rest meetellen.",
+      "vorsicht": "Vaak vergelijkbaar, niet altijd: verschillen vallen vooral op bij lage communaliteiten.",
+      "fachwoerter": "variantie (hoe breed de antwoorden spreiden), uniciteit (het deel van een vraag dat de factoren niet verklaren)."
+    },
+    "fallzahl-faktorenanalyse": {
+      "titel": "Steekproefomvang voor factoranalyse",
+      "kurz": "Hoeveel personen heeft een factoranalyse nodig? Dat hangt minder af van het aantal vragen dan van twee dingen: hoe hoog zijn de communaliteiten (hoeveel van een vraag de factoren verklaren), en hoeveel vragen leggen elke factor duidelijk vast? Hoe hoger beide, hoe kleiner de steekproef kan zijn.",
+      "beispiel": "Hoge communaliteiten, vier sterke vragen per factor: weinig personen kunnen genoeg zijn. Lage communaliteiten, twee zwakke vragen per factor: zelfs veel kunnen te weinig zijn.",
+      "vorsicht": "Vaste verhoudingen zoals “tien personen per vraag” missen dit."
+    },
+    "umpolen": {
+      "titel": "Omkeren (reverse-coding)",
+      "kurz": "Hoort omkeren bij de betrouwbaarheidsanalyse? Ja: voor Cronbachs alfa en de schaalscore moeten alle vragen van een schaal in dezelfde richting tellen. Een omgekeerde vraag wordt daarom zo gehercodeerd dat “hoog” altijd hetzelfde betekent. Op een schaal van 1 tot 5 wordt een 1 een 5.",
+      "beispiel": "“Ik ben vaak moe” naast “Ik heb veel energie”: zonder omkeren heffen ze elkaar in de som deels op. Alfa (hoe sterk de vragen samenhangen) daalt en kan zelfs onder nul komen.",
+      "vorsicht": "Voor de factoranalyse is omkeren niet nodig: een omgekeerde vraag laadt dan negatief, en een negatieve lading telt net zo zwaar als een positieve. De formulering laat zien of een vraag de andere kant op wijst."
+    },
+    "eingeschraenkte-streuung": {
+      "titel": "Beperkte spreidingsbreedte (range restriction)",
+      "kurz": "Waarom is een verband kleiner als iedereen op elkaar lijkt? Beperkte spreidingsbreedte: bij een smalle plak van een kenmerk daalt de correlatie, ook bij hetzelfde verband. Dat verlaagt ook ladingen.",
+      "beispiel": "Leeftijd en lengte hangen nauw samen bij kinderen van 2 tot 16. Alleen bij 10- tot 11-jarigen is de correlatie veel kleiner.",
+      "vorsicht": "Een kleine r in een uniforme groep betekent niet dat het verband overal klein is. De betrouwbaarheid (het aandeel echte verschillen in alle verschillen) is daar ook lager, omdat er weinig echte verschillen zijn."
+    },
+    "inter-item-korrelation": {
+      "titel": "Gemiddelde inter-itemcorrelatie",
+      "kurz": "Hoe nauw hangen de vragen van een schaal gemiddeld samen? De gemiddelde inter-itemcorrelatie laat het zien (item = vraag): de gemiddelde correlatie van elk paar. Ze hangt niet af van het aantal vragen. Alfa stijgt ook bij meer vragen.",
+      "beispiel": "Twee schalen met alfa ,80: 4 vragen met een gemiddelde correlatie van ,50, of 12 vragen met maar ,25.",
+      "vorsicht": "Een hoge alfa door veel vragen bewijst geen eenduidige schaal. Een korte schaal met een lage alfa meet onnauwkeurig, ook als de kortheid de reden is.",
+      "fachwoerter": "alfa (hoe sterk de antwoorden op een schaal samenhangen)."
+    },
+    "eindimensionalitaet": {
+      "titel": "Eendimensionaliteit",
+      "kurz": "Meten alle vragen één enkel kenmerk? Dat is eendimensionaliteit. Een factoranalyse kan het controleren. Alfa laat het niet zien: ze meet hoe samenhangend de vragen zijn, niet hoeveel kenmerken erachter liggen.",
+      "beispiel": "Twee groepen van 5 vragen, correlatie ,60 binnen een groep, 0 ertussen. Alfa van de tien: ongeveer ,78, hoewel twee kenmerken worden gemeten.",
+      "vorsicht": "Als twee groepen een eigenwaarde boven 1 hebben, wijst dat op twee kenmerken, het is geen bewijs.",
+      "fachwoerter": "alfa (hoe sterk de antwoorden op een schaal samenhangen), eigenwaarde (hoeveel spreiding een component vastlegt)."
+    },
+    "reliabilitaet-wege": {
+      "titel": "Manieren om betrouwbaarheid te schatten (alfa, hertest, split-half)",
+      "kurz": "Waarom geven verschillende methoden verschillende betrouwbaarheden voor dezelfde schaal? Alfa, hertest (twee keer meten) en split-half (twee helften vergelijken) zijn verschillende manieren om dezelfde betrouwbaarheid te schatten. Elke methode veronderstelt iets anders.",
+      "beispiel": "Alfa veronderstelt onder meer dat alle vragen één kenmerk meten. Hertest veronderstelt dat het kenmerk niet verandert en dat geheugen niet helpt.",
+      "vorsicht": "Alleen als de aannames kloppen, horen de getallen overeen te komen. Verschillen wijzen op schendingen of op toeval."
+    },
+    "validitaet": {
+      "titel": "Validiteit",
+      "kurz": "Meet de schaal echt wat ze moet meten? Dat is validiteit. Betrouwbaarheid is daarvoor nodig, maar niet genoeg: een meetlint meet lengte betrouwbaar, maar geen gewicht.",
+      "beispiel": "Een hoge alfa laat zien dat de vragen samenhangen, niet of ze het bedoelde vastleggen. Daarvoor is bewijs nodig uit de inhoud, uit vergelijking met een externe maatstaf (criterium) en over het bedoelde kenmerk (construct).",
+      "vorsicht": "Bijna gelijke vragen drijven alfa omhoog, maar dekken een smal stuk af. Validiteit hoort bij de interpretatie van scores, niet bij de test zelf."
+    },
+    "antwortstufen": {
+      "titel": "Antwoordopties",
+      "kurz": "Waarom telt het aantal antwoordopties? Antwoordopties zijn de keuzestappen die een vraag biedt, bijv. 1 tot 4. Alfa uit Pearson-correlaties veronderstelt fijn gegradeerde waarden. Bij weinig stappen vallen de verbanden te klein uit en wordt de betrouwbaarheid onderschat.",
+      "beispiel": "Dezelfde houding op 3 of 7 stappen: bij 3 gaan fijne verschillen verloren, dus correlaties en alfa dalen.",
+      "vorsicht": "Vanaf hoeveel stappen het genoeg is, is niet eenduidig (vaak vijf tot zeven). Meer stappen zijn niet automatisch beter.",
+      "fachwoerter": "Pearson-correlatie (de standaardmaat voor het verband tussen twee fijn gegradeerde grootheden)."
+    },
+    "messfehler": {
+      "titel": "Meetfout",
+      "kurz": "Waarom vertekent onnauwkeurig meten de analyse? Meetfout is toevallige afwijking van de ware waarde. Zit ze in een verklarende grootheid (voorspeller), dan verzwakt het effect van die grootheid (attenuatie). Toevallige fouten in de uitkomst geven op deze manier geen bias in B.",
+      "beispiel": "Een mediator (een variabele waarlangs een invloed loopt) is onnauwkeurig gemeten. Een deel van de invloed loopt eromheen en valt toe aan het directe pad: mediatie-effect te klein, direct effect te groot.",
+      "vorsicht": "Dat zegt niets over de route die de invloed werkelijk volgt."
+    },
+    "abhaengige-groesse": {
+      "titel": "Afhankelijke variabele",
+      "kurz": "Wat wordt voorspeld, en waaruit? De afhankelijke variabele (y) wordt voorspeld. De onafhankelijke variabele (x) is waaruit je voorspelt. “Regressie van y op x” betekent: y wordt uit x voorspeld.",
+      "beispiel": "Stookkosten worden voorspeld uit de buitentemperatuur. Stookkosten zijn de afhankelijke variabele.",
+      "vorsicht": "“Afhankelijk” betekent alleen: voorspeld, niet: veroorzaakt door x. Wissel je de rollen om, dan krijg je een andere lijn."
+    },
+    "kleinste-quadrate": {
+      "titel": "Kleinste kwadraten (methode van de kleinste kwadraten)",
+      "kurz": "Hoe leg je de beste lijn door punten? De kleinste kwadraten kiezen de lijn met de kleinste som van gekwadrateerde afwijkingen. Ze worden gemeten in de richting van y: waargenomen min voorspeld. Dat zijn de residuen.",
+      "beispiel": "Punt bij y = 10, lijn voorspelt 8: afwijking 2, gekwadrateerd 4.",
+      "vorsicht": "De kortste afstand tot de lijn wordt niet gemeten. Kwadrateren laat grote afwijkingen zwaarder wegen."
+    },
+    "standardfehler-schaetzer": {
+      "titel": "Standaardfout van de schatting",
+      "kurz": "Hoe ver liggen waarnemingen typisch van de voorspelling? De standaardfout van de schatting zegt het. Ze heeft de eenheid van de afhankelijke variabele. Kleiner betekent een nauwkeurigere voorspelling.",
+      "beispiel": "Levertijd in dagen, waarde 2: de werkelijke tijd wijkt typisch ongeveer 2 dagen af.",
+      "vorsicht": "“Typisch” is geen maximum. Verwar haar niet met de standaardfout van een B, die beschrijft hoe nauwkeurig B is geschat."
+    },
+    "kollinearitaet": {
+      "titel": "Collineariteit (tolerantie, VIF)",
+      "kurz": "Meten twee voorspellers bijna hetzelfde? Dan is er collineariteit: ze overlappen. Tolerantie is het deel van de spreiding van een voorspeller dat de andere niet verklaren. VIF is 1 gedeeld door de tolerantie. Hoe groter de VIF, hoe groter de standaardfout van de B. De schatting blijft vrij van bias.",
+      "beispiel": "Woonoppervlak en kamers: tolerantie ,15 betekent dat woonoppervlak slechts 15% van de spreiding in kamers onverklaard laat.",
+      "vorsicht": "Het hele model kan statistisch significant zijn, hoewel geen enkele B dat is. VIF-grenzen (5 of 10) zijn gewoonte.",
+      "fachwoerter": "standaardfout (hoeveel een geschatte waarde typisch varieert), significant (de p-waarde ligt onder de gekozen grens, meestal ,05).",
+      "statable": "Voer de regressie uit en klap onder de uitkomst het blok “De regressie controleren: collineariteit en opvallende gevallen” open. Het toont tolerantie, VIF en de eigen bijdrage (sr²) voor elke voorspeller."
+    },
+    "dummy-variable": {
+      "titel": "Dummyvariabele (0/1-variabele)",
+      "kurz": "Hoe breng je een groep in een regressie? Als dummyvariabele: 0 voor de referentiegroep, 1 voor de andere. Dan is de constante het referentiegemiddelde en B het verschil van gemiddelden. Bij q groepen heb je q - 1 dummy’s nodig.",
+      "beispiel": "Meststof A (0), B (1): constante 5,0, B = 1,2. Gemiddelde van B: 6,2.",
+      "vorsicht": "Het teken van B hangt af van de referentie. De toets van B komt overeen met de t-toets voor onafhankelijke steekproeven met gelijke spreiding."
+    },
+    "residuen": {
+      "titel": "Residuen",
+      "kurz": "Hoe ver ligt een punt van de voorspelling? Dat is zijn residu: waargenomen min voorspeld. Normaliteit wordt van deze fouten vereist, niet van de ruwe waarden. Je controleert de residuen met een histogram of Q-Q-plot.",
+      "beispiel": "Waargenomen 70 kg, voorspeld 66: residu +4.",
+      "vorsicht": "Ruwe waarden uit meerdere groepen vermengen zich en kunnen scheef lijken, hoewel de residuen in orde zijn.",
+      "fachwoerter": "Q-Q-plot (grafiek: liggen de punten dicht bij de lijn, dan passen de waarden bij een normale verdeling)."
+    },
+    "heteroskedastizitaet": {
+      "titel": "Heteroscedasticiteit (ongelijke spreiding van fouten)",
+      "kurz": "Spreiden de afwijkingen overal even sterk? Zo niet, dan is dat heteroscedasticiteit. In de residuenplot is het vaak een trechter. De helling blijft vrij van bias, maar minder nauwkeurig, en de gebruikelijke standaardfouten kloppen niet. Robuuste standaardfouten houden rekening met de ongelijke spreiding.",
+      "beispiel": "Voorspeld 1000: afwijkingen van ongeveer ±100. Bij 5000: ±600.",
+      "vorsicht": "Een helling krijgt bias door niet-lineariteit, weggelaten variabelen of meetfout in x, niet hierdoor.",
+      "fachwoerter": "residuenplot (een beeld van de afwijkingen van de voorspelling), helling (B: verandering per eenheid), standaardfout (hoeveel een schatting typisch varieert), vrij van bias (gemiddeld juist)."
+    },
+    "hebelwert": {
+      "titel": "Hefboomwaarde (leverage)",
+      "kurz": "Hoe sterk kan één punt de lijn naar zich toe trekken? De hefboomwaarde groeit met de afstand van zijn x-waarde tot het gemiddelde van x. Een ver weg liggend punt trekt de lijn naar zich toe.",
+      "beispiel": "Tien mensen trainen 20 tot 30 uur, één 90: hoge hefboomwaarde.",
+      "vorsicht": "Zijn residu (afstand tot de lijn) kan juist klein zijn omdat het de lijn naar zich toe trok. Vergelijk dus de lijn met en zonder het punt."
+    },
+    "f-test": {
+      "titel": "F-toets (variantieanalyse en regressie)",
+      "kurz": "Is er eigenlijk wel een verschil of effect? De F-toets controleert het als geheel. Regressie: zijn alle B tegelijk nul? Variantieanalyse: zijn alle groepsgemiddelden gelijk? Bij variantieanalyse is F de spreiding (gemiddelde kwadraat) tussen groepen gedeeld door die binnen groepen.",
+      "beispiel": "Drie lesmethoden: tussen 6,0, binnen 2,0. F = 3,0.",
+      "vorsicht": "Een significante F betekent: minstens twee gemiddelden verschillen. Welke, laten alleen paarsgewijze vergelijkingen zien.",
+      "fachwoerter": "gemiddelde kwadraat (som van gekwadrateerde afwijkingen gedeeld door de vrijheidsgraden, een maat voor spreiding), nulhypothese (de aanname “geen verschil” die de toets onderzoekt)."
+    },
+    "schrittweise-regression": {
+      "titel": "Stapsgewijze regressie (automatische selectie)",
+      "kurz": "Hoe kiest een programma zelf voorspellers? Stapsgewijze regressie voegt voorspellers toe of verwijdert ze volgens een statistisch criterium, zoals de p-waarde. Vaak genoemd: toelating bij ,05, verwijdering bij ,10.",
+      "beispiel": "Van 20 mogelijke voorspellers van de huur blijven er vier over.",
+      "vorsicht": "De keuze kent noch theorie noch oorzaken en hangt af van deze gegevens. Of de voorspellers zinvol zijn of oorzaken, blijft open."
+    },
+    "extrapolation": {
+      "titel": "Extrapolatie (voorspelling buiten de gegevens)",
+      "kurz": "Geldt de voorspelling ver buiten de waargenomen waarden? Daar voorspellen is extrapoleren. Dat is niet erg betrouwbaar: het betrouwbaarheidsinterval van de voorspelling wordt breder naarmate x verder van het gemiddelde van x ligt, en de lijn hoeft daar niet te gelden.",
+      "beispiel": "Planten gemeten in week 1 tot 8, 5 cm per week. Week 80 zou 400 cm geven.",
+      "vorsicht": "Een hoge R² verandert dit niet."
+    },
+    "zusammenhang-ursache": {
+      "titel": "Samenhang en oorzaak (correlatie, causaliteit)",
+      "kurz": "Laat een verband zien dat het ene het andere veroorzaakt? Niet op zichzelf. B laat zien: gemiddeld gaat meer x samen met meer of minder y, bij gelijke waarden van de andere voorspellers in het model. Dat is een samenhang. Causaliteit volgt daar niet uit; een gemeenschappelijke oorzaak kan ook beide voortbrengen.",
+      "beispiel": "Meer ijsverkoop, meer zonnebrand: beide volgen de zon.",
+      "vorsicht": "Gegevens voor gebieden laten een verband tussen gebieden zien, niet voor de afzonderlijke mensen daarbinnen."
+    },
+    "lineares-modell": {
+      "titel": "Lineair model (lineair in de parameters)",
+      "kurz": "Kan lineaire regressie alleen rechte lijnen beschrijven? Nee. “Lineair” verwijst naar de parameters (de B): elke B vermenigvuldigt alleen een voorspeller, alles wordt opgeteld. Met een kwadratische term (x en x² als voorspellers) past het model een kromme.",
+      "beispiel": "Opbrengst = 2 + 3x - 0,2x²: een kromme, maar een lineair model.",
+      "vorsicht": "x² is gewoon nog een voorspeller. De toets ervan (Sig.) laat zien of ze nodig is, omdat R² bij elke toevoeging stijgt."
+    },
+    "scheinregression": {
+      "titel": "Schijnregressie (trend in tijdreeksen)",
+      "kurz": "Laat een hoge R² tussen twee tijdreeksen een echt verband zien? Niet noodzakelijk. Als beide in de tijd stijgen (trend), is het resultaat een schijnregressie. Waarschuwingssignalen: zeer hoge R² en vergelijkbare residuen (autocorrelatie), Durbin-Watson dicht bij 0.",
+      "beispiel": "Fietsen in stad A en koffie-import van land B stijgen elk jaar: R² = ,95.",
+      "vorsicht": "Met veranderingen van jaar op jaar daalt R² duidelijk als het alleen trend was.",
+      "fachwoerter": "Durbin-Watson (toetswaarde voor autocorrelatie: dicht bij 2 geen, dicht bij 0 positief, dicht bij 4 negatief)."
+    },
+    "prognoseguete": {
+      "titel": "Nauwkeurigheid van voorspellingen (MAE, MAPE, MASE)",
+      "kurz": "Hoe goed raakt een voorspelling? MAE: gemiddelde absolute fout. MAPE: gemiddelde procentuele fout, deelt door de waargenomen waarde, oneindig bij nul. MASE: deelt door de fout van de naïeve voorspelling (laatste waarde) in de aanpassingsperiode. Onder 1 beter, boven 1 slechter dan die.",
+      "beispiel": "MASE 0,8: 80% van de naïeve fout.",
+      "vorsicht": "Bij zeldzame aantallen met nullen is MAPE onbruikbaar."
+    },
+    "preisindex": {
+      "titel": "Prijsindex (Laspeyres, basiseffect)",
+      "kurz": "Hoeveel duurder is dezelfde boodschappenmand geworden? De Laspeyres-index houdt de hoeveelheden van de basisperiode vast, zodat alleen prijzen veranderen. Basiseffect: de verandering ten opzichte van een jaar eerder kan dalen terwijl de index stijgt, als hij een jaar eerder meer steeg.",
+      "beispiel": "10 broden, 20 l melk. Basis: 2 en 1, waarde 40. Nu 2,4 en 1,2: waarde 48. Index 1,20.",
+      "vorsicht": "Vaste hoeveelheden vangen niet op dat kopers overstappen op goedkopere artikelen."
+    },
+    "anscombe-quartett": {
+      "titel": "Kwartet van Anscombe (dezelfde cijfers, andere gegevens)",
+      "kurz": "Is één kengetal genoeg om gegevens te beschrijven? Nee. Het kwartet van Anscombe: vier gegevensreeksen met bijna dezelfde r, gemiddelden en lijn, maar verschillende puntenwolken (lijn, boog, uitschieter, één punt bepaalt alles). Kijk dus naar het spreidingsdiagram.",
+      "beispiel": "r = ,80 past bij een wolk rond een lijn en bij punten op een kromme.",
+      "vorsicht": "r meet alleen het rechtlijnige deel. Eén enkel punt kan r sterk verlagen: controleer het, verwijder het niet."
+    },
+    "kovarianz": {
+      "titel": "Covariantie (en correlatie r)",
+      "kurz": "Hoe sterk stijgen of dalen twee waarden samen? Covariantie meet het ongestandaardiseerd, dus de waarde hangt af van de schaal. De correlatie r is de covariantie gedeeld door het product van de standaarddeviaties en blijft gelijk als eenheden veranderen.",
+      "beispiel": "Lengte en gewicht: covariantie 60 met lengte in cm, 0,6 in meters. r hetzelfde.",
+      "vorsicht": "Covariantie 0 betekent alleen: geen rechtlijnig verband, niet onafhankelijkheid.",
+      "fachwoerter": "standaarddeviatie (typische afstand van waarden tot het gemiddelde)."
+    },
+    "punktbiseriale-korrelation": {
+      "titel": "Puntbiseriële correlatie (groep en meting)",
+      "kurz": "Hangt een groep (0/1) samen met een meting? De puntbiseriële correlatie is de Pearson-correlatie van een 0/1-variabele met een getal. De toets ervan is de t-toets voor onafhankelijke steekproeven (gelijke varianties): dezelfde p, dezelfde grootte van t.",
+      "beispiel": "A = 0, B = 1, r = +,30: B heeft gemiddeld hogere waarden. Omgewisseld: -,30.",
+      "vorsicht": "Het teken volgt de codering. De biseriële correlatie is iets anders."
+    },
+    "fisher-z": {
+      "titel": "Fisher Z (Fisher Z-transformatie)",
+      "kurz": "Waarom is het interval scheef rond r? r kan hooguit 1 zijn, dus bij hoge r is er boven minder ruimte. Fisher Z maakt de verdeling van r ongeveer normaal. Het interval wordt in Z opgebouwd en teruggerekend, dus het is asymmetrisch.",
+      "beispiel": "r = ,90, n = 30: interval ongeveer ,80 tot ,95.",
+      "vorsicht": "Het interval is nooit de kans op de ware waarde. Fisher Z is niet de z-standaardisatie."
+    },
+    "fehlerarten": {
+      "titel": "Type I- en type II-fouten (α, β)",
+      "kurz": "Kan een toets fout zitten? Ja, op twee manieren. Type I-fout: geen verschil, toch “statistisch significant”. Type II-fout: er is wel een verschil, maar het wordt gemist. Het niveau α (vaak ,05) is het percentage van de eerste fout als er niets is.",
+      "beispiel": "200 toetsen zonder echt verschil, α = ,05: ongeveer 10 ten onrechte significant.",
+      "vorsicht": "α zegt niet of één enkele bevinding fout is. Een type II-fout heeft kans β = 1 min de power.",
+      "fachwoerter": "Power (onderscheidend vermogen: de kans een bestaand verschil te vinden), niveau (de vooraf gekozen grens voor p)."
+    },
+    "einseitig-zweiseitig": {
+      "titel": "Eenzijdige en tweezijdige toets",
+      "kurz": "Telt één richting of beide? Tweezijdig vraagt: is er een verschil, in welke richting dan ook? Eenzijdig vraagt alleen: is A groter dan B? Dezelfde gegevens kunnen eenzijdig statistisch significant zijn, tweezijdig niet. Toets bij twijfel tweezijdig.",
+      "beispiel": "Nieuwe lesmethode: tweezijdige p = ,08, eenzijdige p = ,04.",
+      "vorsicht": "De richting moet vaststaan voordat je naar de gegevens kijkt. Achteraf kiezen halveert p zonder nieuwe informatie."
+    },
+    "mehrfaches-testen": {
+      "titel": "Meervoudig toetsen (alfa-inflatie, Bonferroni)",
+      "kurz": "Hoe vaak foppt het toeval ons bij veel toetsen? Op niveau ,05 geeft elke toets in 5% van de gevallen vals alarm als er niets echt is. Bij m onafhankelijke toetsen is de kans op minstens één 1 - ,95 tot de macht m (alfa-inflatie). Bonferroni deelt het niveau door m.",
+      "beispiel": "10 toetsen, niets echt: ongeveer 40% kans op een toevalstreffer.",
+      "vorsicht": "Ongeveer m keer ,05 toevalstreffers. Zoeken levert alleen hypothesen op."
+    },
+    "effekt-ueberschaetzung": {
+      "titel": "Overschatte effecten (winner’s curse)",
+      "kurz": "Is een statistisch significant effect zo groot als gemeten? Vaak niet. Als alleen significante uitkomsten tellen, zijn schattingen naar boven vertekend: een klein onderzoek wordt alleen significant met een gelukkig grote schatting. Dit is de winner’s curse.",
+      "beispiel": "Het ware verschil is middelgroot. Van veel kleine onderzoeken verschijnen alleen de significante; hun gemiddelde ligt erboven.",
+      "vorsicht": "Hoe kleiner het onderzoek, hoe sterker de vertekening. Replicaties vinden daarom vaak kleinere effecten, niet noodzakelijk nul.",
+      "fachwoerter": "significant (de p-waarde ligt onder de gekozen grens, meestal ,05)."
+    },
+    "falsch-positive-befunde": {
+      "titel": "Fout-positieve bevindingen (type I-fout, vrijheidsgraden van de onderzoeker)",
+      "kurz": "Hoeveel significante bevindingen zijn vals alarm? Het hangt af van niveau, power en het aandeel echte effecten. Bij lage power stijgt het valse deel. Er ontstaat ook meer vals alarm als je na elk nieuw geval toetst en stopt bij significantie, of veel analyses probeert en alleen de geslaagde meldt (vrijheidsgraden van de onderzoeker).",
+      "beispiel": "1000 effecten getoetst, 100 echt, power ,5, niveau ,05: 50 terechte en 45 onterechte treffers.",
+      "vorsicht": "Het niveau ,05 geldt alleen voor een vooraf geplande steekproef en analyse. Het percentage stijgt ook zonder bedoeling om te misleiden.",
+      "fachwoerter": "power (onderscheidend vermogen: de kans een echt effect te vinden), niveau (de vooraf vastgelegde grens voor p), significant (p ligt onder deze grens)."
+    },
+    "fehlerbalken": {
+      "titel": "Foutbalken (standaardfout, betrouwbaarheidsinterval)",
+      "kurz": "Wat tonen de balken bij de gemiddelden? Dat staat niet vast: standaarddeviatie (spreiding van afzonderlijke waarden), standaardfout (nauwkeurigheid van het gemiddelde) of betrouwbaarheidsinterval. “± getal” zegt niet welke. Eén standaardfout aan elke kant is ongeveer half zo breed als het 95%-interval en komt overeen met ongeveer 68%.",
+      "beispiel": "Overlappende 95%-intervallen, toch p = ,04.",
+      "vorsicht": "Overlap beslist niet; de toets van het verschil wel. Als de 95%-intervallen geen bereik delen, verschillen onafhankelijke groepen statistisch significant op niveau ,05. Bij gepaarde metingen telt het interval van de verschillen per persoon, niet de intervallen van de twee gemiddelden."
+    },
+    "levene-test": {
+      "titel": "Levene-toets (gelijke spreiding)",
+      "kurz": "Spreiden de groepen even sterk? (Levene-toets) Ze controleert of de variantie, de spreiding van de waarden, in alle groepen gelijk is. Een kleine p wijst op ongelijke spreiding.",
+      "beispiel": "Twee groepen van elk 8 personen, Levene p = ,40: geen aanwijzing voor ongelijke spreiding.",
+      "vorsicht": "Niet significant betekent niet dat de spreiding gelijk is. Bij kleine groepen herkent de toets verschillen slecht. Ze bewijst geen gelijkheid."
+    },
+    "gepoolter-t-test": {
+      "titel": "Gepoolde spreiding of Welch-toets (gelijke spreiding verondersteld?)",
+      "kurz": "Spreiden beide groepen even sterk? De t-toets met gepoolde (samengevoegde) spreiding veronderstelt van wel. De Welch-toets voegt niet samen en past de vrijheidsgraden aan. Bij twee groepen is F van de variantieanalyse het kwadraat van t, met dezelfde p.",
+      "beispiel": "10 personen met spreiding 8, 40 met spreiding 3: poolen weerspiegelt vooral de grote groep met de kleine spreiding.",
+      "vorsicht": "Als de kleinere groep sterker spreidt, toont de gepoolde toets te vaak significantie. Welch corrigeert dit.",
+      "fachwoerter": "Vrijheidsgraden (een getal dat de referentieverdeling van t vastlegt)."
+    },
+    "zentraler-grenzwertsatz": {
+      "titel": "Centrale limietstelling",
+      "kurz": "Moeten waarden normaal verdeeld zijn? Niet altijd. De centrale limietstelling zegt: gemiddelden van veel waarnemingen zijn ongeveer normaal, ook als afzonderlijke waarden scheef zijn. Ze geldt voor gemiddelden, niet voor afzonderlijke waarden.",
+      "beispiel": "Inkomens zijn scheef. Gemiddelden van telkens 200 personen liggen bijna symmetrisch.",
+      "vorsicht": "Hoeveel genoeg is, hangt af van de vorm: bij sterk scheve waarden zijn 10 niet genoeg. Bij grote groepen zijn t-toetsen meestal bruikbaar zonder normaal verdeelde waarden."
+    },
+    "pseudoreplikation": {
+      "titel": "Pseudoreplicatie (afhankelijke metingen)",
+      "kurz": "Telt elke waarde als aparte informatie? Nee, als waarden bij elkaar horen. Pseudoreplicatie: afhankelijke waarden worden als onafhankelijk behandeld, zoals herhaalde metingen van één persoon of kinderen uit één klas. De standaardfout wordt te klein; significantie verschijnt te vaak.",
+      "beispiel": "20 planten, 5 bladeren per plant gemeten: dat zijn 20 onafhankelijke eenheden, niet 100.",
+      "vorsicht": "Meer rijen zijn niet meer informatie. Remedie: één gemiddelde per eenheid, of een model dat rekening houdt met de groepering.",
+      "fachwoerter": "standaardfout (hoeveel een schatting typisch varieert), significant (de p-waarde ligt onder de gekozen grens, meestal ,05)."
+    },
+    "simpson-paradox": {
+      "titel": "Paradox van Simpson (groepen samenvoegen)",
+      "kurz": "Kan een verband omslaan als groepen worden samengevoegd? Ja. Het totaalbeeld kan verbergen of omkeren wat elke groep laat zien (paradox van Simpson, ook voor de correlatie r). Reden: de groepen verschillen in de maten of in samenstelling.",
+      "beispiel": "A helpt meer dan B bij lichte en bij ernstige gevallen. Maar A gaat bijna alleen naar ernstige gevallen. In totaal lijkt A slechter.",
+      "vorsicht": "Het totaal kan dan niet direct worden gelezen. Welk beeld geldt, hangt van de situatie af."
+    },
+    "erwartete-haeufigkeit": {
+      "titel": "Verwacht aantal (chikwadraat, kruistabel)",
+      "kurz": "Hoeveel gevallen per cel zou je verwachten als de variabelen niet samenhingen? Rijtotaal maal kolomtotaal gedeeld door het eindtotaal. De chikwadraattoets vergelijkt ze met de waargenomen aantallen. Welke cel opvalt, blijkt alleen uit de vergelijking per cel.",
+      "beispiel": "Rij 60, kolom 50, totaal 200: verwacht 60 · 50 / 200 = 15.",
+      "vorsicht": "Vaak genoemd: alle minstens 5, een gewoonte. Bij kleinere waarden in een 2 × 2-tabel gebruik je de exacte toets van Fisher.",
+      "fachwoerter": "Kruistabel (tabel van twee variabelen), gestandaardiseerd residu (verschil tussen waargenomen en verwacht, geschaald zodat het vergelijkbaar is)."
+    },
+    "zeilenprozent": {
+      "titel": "Rijpercentage (aandeel binnen de rij)",
+      "kurz": "Welk aandeel binnen één groep? In een kruistabel is het rijpercentage het aantal in de cel gedeeld door het rijtotaal, maal 100. Het rijtotaal is de referentie. “Hoeveel procent van A heeft B?” neemt het totaal van A als referentie. Het kolompercentage gebruikt het kolomtotaal.",
+      "beispiel": "80 hondenbezitters, 20 ervan ook met een kat: 20 / 80 = 25%.",
+      "vorsicht": "Rij- en kolompercentage zijn verschillende getallen. Vraag eerst: aandeel van wat?",
+      "fachwoerter": "Kruistabel (tabel van twee variabelen)."
+    },
+    "likelihood-ratio": {
+      "titel": "Likelihood ratio (LR)",
+      "kurz": "Hoeveel verandert een testuitslag de inschatting? De positieve LR is sensitiviteit gedeeld door (1 min specificiteit): zoveel keer vaker komt een positieve uitslag voor bij de zieken dan bij de gezonden. Boven 1 spreekt voor de ziekte. Odds na de test = odds vóór de test maal LR.",
+      "beispiel": "Vóór de test ,20, dus odds ,25. LR 4 geeft odds 1, dat is ,50.",
+      "vorsicht": "LR is geen kans. Terug naar p: odds gedeeld door (1 plus odds).",
+      "fachwoerter": "Sensitiviteit (het deel van de zieken dat de test herkent), specificiteit (het deel van de gezonden dat de test terecht gezond noemt), odds (p gedeeld door 1 min p)."
+    },
+    "regelkarte": {
+      "titel": "Regelkaart (Shewhart, CUSUM, EWMA)",
+      "kurz": "Is het proces veranderd? Een regelkaart zet groepsgemiddelden op volgorde uit, met een middenlijn en grenzen, vaak ±3 standaardfouten. Een punt erbuiten is een signaal: er speelt waarschijnlijk meer dan toeval. Fase 1 schat grenzen uit eerdere gegevens, fase 2 bewaakt daarna continu. CUSUM en EWMA combineren meerdere groepen en ontdekken kleine, aanhoudende verschuivingen eerder.",
+      "beispiel": "Stabiel: ongeveer 3 op 1000 punten erbuiten. Meerdere kort na elkaar zijn een duidelijk signaal.",
+      "vorsicht": "Als een stabiel proces binnen de grenzen blijft, is de variatie toeval: bijsturen vergroot dan de spreiding. Grenzen uit weinig groepen zijn onnauwkeurig.",
+      "fachwoerter": "Standaardfout (spreiding van de groepsgemiddelden), stabiel (de verdeling blijft in de tijd gelijk)."
+    },
+    "prozessfaehigkeit": {
+      "titel": "Procesbekwaamheid (Cp, Cpk)",
+      "kurz": "Voldoet het proces aan de specificatie? Cp vergelijkt het toegestane gebied met de spreiding en negeert waar het gemiddelde ligt. Cpk meet de afstand van het gemiddelde tot de dichtstbijzijnde grens, hooguit zo groot als Cp. Beide veronderstellen een stabiel, normaal proces.",
+      "beispiel": "Cp = 1, gecentreerd: ongeveer 0,27% erbuiten; verschoven, meer.",
+      "vorsicht": "Cp = 1 betekent alleen: niet minder dan 0,27% erbuiten. Bij signalen op de regelkaart zegt de index weinig; ruim die eerst op."
+    },
+    "messsystem": {
+      "titel": "Meetsysteem (herhaalbaarheid, reproduceerbaarheid)",
+      "kurz": "Hoeveel spreiding komt van het meten zelf? Herhaalbaarheid: spreiding van het apparaat bij dezelfde eenheid, dezelfde bediener, dezelfde opstelling. Reproduceerbaarheid: spreiding tussen bedieners, opstellingen of periodes. De totale spreiding splitst in proces en meetsysteem. Meetaandeel = 1 min procesaandeel. De signaal-ruisverhouding laat zien hoe goed onderdelen te onderscheiden zijn: vaak genoemd, 5 of meer goed, onder 2 onbruikbaar.",
+      "beispiel": "Proces 80% van de spreiding: meetsysteem 20%.",
+      "vorsicht": "Auteurs wijzen de termen verschillend toe, dus de gebruikte definitie moet worden vermeld. De grenzen zijn afspraken."
+    },
+    "versuchsplanung": {
+      "titel": "Proefopzet (interactie, centrumpunt)",
+      "kurz": "Hoe plan je proeven die veel laten zien? Interactie: het effect van de ene factor hangt af van het niveau van een andere. Eén factor tegelijk veranderen kan dat niet schatten; alle combinaties vinden het. Een herhaald centrumpunt toont kromming en schat de spreiding.",
+      "beispiel": "Meststof werkt sterk in de zon, nauwelijks in de schaduw.",
+      "vorsicht": "Een uitkomst bij één niveau geldt niet automatisch voor alle. Bij kromming zijn twee niveaus niet genoeg; de opzet kan worden uitgebreid.",
+      "fachwoerter": "Factor (een grootheid die je bewust instelt), niveau (één ingestelde waarde ervan), continu (elke waarde ertussen is mogelijk)."
+    }
+  },
+  "meldung": [
+    {
+      "id": "engine-absturz",
+      "art": "absturz",
+      "muster": "^Statable: PSPP crashed",
+      "original": "Statable: PSPP crashed and was restarted. RuntimeError: Aborted(Assertion failed: proc.n_cells < CRS_N_CELLS, at: ../../pspp-2.1.1/src/language/commands/crosstabs.c,494,cmd_crosstabs)",
+      "titel": "Het statistiekprogramma is vastgelopen",
+      "text": {
+        "du": "Dat ligt aan PSPP, niet aan je gegevens. Statable heeft het opnieuw gestart en de gegevens opnieuw geladen, zoals ze vóór deze berekening waren.",
+        "sie": "Dat ligt aan PSPP, niet aan je gegevens. Statable heeft het opnieuw gestart en de gegevens opnieuw geladen, zoals ze vóór deze berekening waren."
+      },
+      "tun": {
+        "du": "Reken opnieuw met minder opties. Had je WEIGHT, FILTER of SPLIT FILE ingesteld, stel ze dan opnieuw in.",
+        "sie": "Reken opnieuw met minder opties. Had je WEIGHT, FILTER of SPLIT FILE ingesteld, stel ze dan opnieuw in."
+      }
+    },
+    {
+      "id": "nonpar-corr-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "NONPAR CORR is not yet implemented",
+      "original": "NONPAR CORR: NONPAR CORR is not yet implemented.",
+      "titel": "De engine kan deze opdracht niet uitvoeren",
+      "text": {
+        "du": "PSPP kan NONPAR CORR (Spearman, Kendall) niet berekenen.",
+        "sie": "PSPP kan NONPAR CORR (Spearman, Kendall) niet berekenen."
+      },
+      "tun": {
+        "du": "Statable berekent het bij de vraag “Hangen twee dingen samen?”. Je gegevens zijn niet veranderd.",
+        "sie": "Statable berekent het bij de vraag “Hangen twee dingen samen?”. Je gegevens zijn niet veranderd."
+      }
+    },
+    {
+      "id": "glm-with-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "GLM: [^\\n]*\\n[^\\n]*\\|[^\\n]*\\b[Ww][Ii][Tt][Hh]\\b",
+      "original": "GLM: Syntax error expecting MISSING, INTERCEPT, CRITERIA, METHOD, or DESIGN.\n   1 | GLM y BY g WITH x /DESIGN=x g.",
+      "titel": "De engine kan deze opdracht niet uitvoeren",
+      "text": {
+        "du": "PSPP kan GLM met WITH (covariantieanalyse) niet berekenen.",
+        "sie": "PSPP kan GLM met WITH (covariantieanalyse) niet berekenen."
+      },
+      "tun": {
+        "du": "Statable berekent het bij de vraag “Verschillen groepen?” onder “Meer opties” met een controlevariabele. Je gegevens zijn niet veranderd.",
+        "sie": "Statable berekent het bij de vraag “Verschillen groepen?” onder “Meer opties” met een controlevariabele. Je gegevens zijn niet veranderd."
+      }
+    },
+    {
+      "id": "befehl-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "Unknown command `([^']+)'",
+      "original": "Unknown command `FREQENCIES'.",
+      "titel": "Statable kent deze opdracht niet",
+      "text": {
+        "du": "“{1}” is geen bekende opdracht.",
+        "sie": "“{1}” is geen bekende opdracht."
+      },
+      "tun": {
+        "du": "Controleer de spelling. Vergelijkbaar: {vorschlag}.",
+        "sie": "Controleer de spelling. Vergelijkbaar: {vorschlag}."
+      }
+    },
+    {
+      "id": "spalte-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "(\\S+) is not a variable name",
+      "original": "DESCRIPTIVES: konzentration is not a variable name.",
+      "titel": "Zo’n kolom bestaat niet",
+      "text": {
+        "du": "In je gegevens staat geen kolom “{1}”.",
+        "sie": "In je gegevens staat geen kolom “{1}”."
+      },
+      "tun": {
+        "du": "Een vergelijkbare: {vorschlag}. Alle namen zie je onder “Kolommen”.",
+        "sie": "Een vergelijkbare: {vorschlag}. Alle namen zie je onder “Kolommen”."
+      }
+    },
+    {
+      "id": "text-statt-zahl",
+      "art": "hinweis",
+      "muster": "(\\S+) is not a numeric variable\\.\\s+It will not be included",
+      "original": "DESCRIPTIVES: geschlecht is not a numeric variable.  It will not be included in the variable list.",
+      "titel": "Een kolom is weggelaten",
+      "text": {
+        "du": "“{1}” bevat groepen of tekst, geen getallen. Statable heeft de kolom hier dus weggelaten. De rest is berekend.",
+        "sie": "“{1}” bevat groepen of tekst, geen getallen. Statable heeft de kolom hier dus weggelaten. De rest is berekend."
+      },
+      "tun": {
+        "du": "Voor groepen passen aantallen of een groepsvergelijking.",
+        "sie": "Voor groepen passen aantallen of een groepsvergelijking."
+      }
+    },
+    {
+      "id": "gruppen-fehlen",
+      "art": "nicht-verstanden",
+      "muster": "When applying GROUPS to a string variable, two values must be specified",
+      "original": "T-TEST: When applying GROUPS to a string variable, two values must be specified.",
+      "titel": "Welke twee groepen?",
+      "text": {
+        "du": "De namen van de twee groepen voor de vergelijking ontbreken.",
+        "sie": "De namen van de twee groepen voor de vergelijking ontbreken."
+      },
+      "tun": {
+        "du": "Schrijf ze erachter tussen haakjes, bijvoorbeeld mobiel('ja' 'nee').",
+        "sie": "Schrijf ze erachter tussen haakjes, bijvoorbeeld mobiel('ja' 'nee')."
+      }
+    },
+    {
+      "id": "wert-zu-lang",
+      "art": "nicht-verstanden",
+      "muster": "This (\\d+)-byte string is too long for variable (\\S+) with width (\\d+)",
+      "original": "T-TEST: This 10-byte string is too long for variable handy with width 4.",
+      "titel": "Deze waarde kan in de kolom niet voorkomen",
+      "text": {
+        "du": "De waarde is langer dan er in de kolom “{2}” ruimte voor is. Zo’n waarde komt daar niet voor.",
+        "sie": "De waarde is langer dan er in de kolom “{2}” ruimte voor is. Zo’n waarde komt daar niet voor."
+      },
+      "tun": {
+        "du": "Controleer onder “Kolommen” welke waarden er in “{2}” staan.",
+        "sie": "Controleer onder “Kolommen” welke waarden er in “{2}” staan."
+      }
+    },
+    {
+      "id": "anfuehrung-offen",
+      "art": "nicht-verstanden",
+      "muster": "Unterminated string constant",
+      "original": "VARIABLE LABELS: Unterminated string constant.",
+      "titel": "Een aanhalingsteken staat nog open",
+      "text": {
+        "du": "Een tekst is begonnen met ' maar niet afgesloten.",
+        "sie": "Een tekst is begonnen met ' maar niet afgesloten."
+      },
+      "tun": {
+        "du": "Zet aan het einde van de tekst nog een '.",
+        "sie": "Zet aan het einde van de tekst nog een '."
+      }
+    },
+    {
+      "id": "text-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting string",
+      "original": "VARIABLE LABELS: Syntax error expecting string.",
+      "titel": "Hier ontbreekt een tekst",
+      "text": {
+        "du": "Op deze plek verwacht de opdracht een tekst tussen aanhalingstekens.",
+        "sie": "Op deze plek verwacht de opdracht een tekst tussen aanhalingstekens."
+      },
+      "tun": {
+        "du": "Teksten staan tussen aanhalingstekens, bijvoorbeeld 'ja'. Label: VARIABLE LABELS conc 'Concentratie'. Groepen uit tekst: T-TEST GROUPS=groep('A' 'B').",
+        "sie": "Teksten staan tussen aanhalingstekens, bijvoorbeeld 'ja'. Label: VARIABLE LABELS conc 'Concentratie'. Groepen uit tekst: T-TEST GROUPS=groep('A' 'B')."
+      }
+    },
+    {
+      "id": "funktion-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "No function or vector named (\\S+)",
+      "original": "COMPUTE: No function or vector named wurzel.",
+      "titel": "Deze functie bestaat niet",
+      "text": {
+        "du": "“{1}” is geen bekende functie.",
+        "sie": "“{1}” is geen bekende functie."
+      },
+      "tun": {
+        "du": "Functies hebben Engelse namen, bijvoorbeeld SQRT voor de wortel, MEAN voor het gemiddelde.",
+        "sie": "Functies hebben Engelse namen, bijvoorbeeld SQRT voor de wortel, MEAN voor het gemiddelde."
+      }
+    },
+    {
+      "id": "rechnen-mit-text",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must be numeric",
+      "original": "COMPUTE: Both operands of + must be numeric.",
+      "titel": "Met tekst kun je niet rekenen",
+      "text": {
+        "du": "Een kant van “{1}” is een kolom met tekst.",
+        "sie": "Een kant van “{1}” is een kolom met tekst."
+      },
+      "tun": {
+        "du": "Onder “Kolommen” kun je groepen omzetten in getallen - als nieuwe kolom, de oorspronkelijke blijft behouden.",
+        "sie": "Onder “Kolommen” kun je groepen omzetten in getallen - als nieuwe kolom, de oorspronkelijke blijft behouden."
+      }
+    },
+    {
+      "id": "text-mit-zahl-vergleichen",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must have the same type",
+      "original": "SELECT IF: Both operands of = must have the same type.",
+      "titel": "Tekst wordt met een getal vergeleken",
+      "text": {
+        "du": "De kolom bevat tekst, maar wordt met een getal vergeleken.",
+        "sie": "De kolom bevat tekst, maar wordt met een getal vergeleken."
+      },
+      "tun": {
+        "du": "Zet de waarde tussen aanhalingstekens, bijvoorbeeld geslacht = 'vrouw'.",
+        "sie": "Zet de waarde tussen aanhalingstekens, bijvoorbeeld geslacht = 'vrouw'."
+      }
+    },
+    {
+      "id": "spalte-gibt-es-schon",
+      "art": "nicht-verstanden",
+      "muster": "There is already a variable named (\\S+)",
+      "original": "NUMERIC: There is already a variable named konz2.",
+      "titel": "Deze naam is al in gebruik",
+      "text": {
+        "du": "Er bestaat al een kolom “{1}”. Statable overschrijft niets.",
+        "sie": "Er bestaat al een kolom “{1}”. Statable overschrijft niets."
+      },
+      "tun": {
+        "du": "Kies een andere naam, bijvoorbeeld {1}_nieuw.",
+        "sie": "Kies een andere naam, bijvoorbeeld {1}_nieuw."
+      }
+    },
+    {
+      "id": "umbenennen-doppelt",
+      "art": "nicht-verstanden",
+      "muster": "Renaming would duplicate variable name (\\S+)",
+      "original": "RENAME VARIABLES: Renaming would duplicate variable name nr.",
+      "titel": "Deze naam is al in gebruik",
+      "text": {
+        "du": "Na het hernoemen zouden twee kolommen de naam “{1}” hebben.",
+        "sie": "Na het hernoemen zouden twee kolommen de naam “{1}” hebben."
+      },
+      "tun": {
+        "du": "Kies een naam die nog niet bestaat.",
+        "sie": "Kies een naam die nog niet bestaat."
+      }
+    },
+    {
+      "id": "datei-nicht-gefunden",
+      "art": "datei",
+      "muster": "An error occurred while opening `([^']+)': No such file",
+      "original": "An error occurred while opening `/gibt-es-nicht.sav': No such file or directory.",
+      "titel": "Het bestand is niet gevonden",
+      "text": {
+        "du": "“{datei}” staat niet meer waar het stond.",
+        "sie": "“{datei}” staat niet meer waar het stond."
+      },
+      "tun": {
+        "du": "Open het opnieuw met “Bestand openen”.",
+        "sie": "Open het opnieuw met “Bestand openen”."
+      }
+    },
+    {
+      "id": "datendatei-nicht-gefunden",
+      "art": "datei",
+      "muster": "Could not open `([^']+)' for reading as a data file",
+      "original": "Could not open `/fehlt.csv' for reading as a data file: No such file or directory.",
+      "titel": "Het bestand is niet gevonden",
+      "text": {
+        "du": "“{datei}” kon niet worden geopend.",
+        "sie": "“{datei}” kon niet worden geopend."
+      },
+      "tun": {
+        "du": "Open het opnieuw met “Bestand openen”.",
+        "sie": "Open het opnieuw met “Bestand openen”."
+      }
+    },
+    {
+      "id": "keine-spss-datei",
+      "art": "datei",
+      "muster": "`([^']+)' is not a system or portable file",
+      "original": "GET: `/kaputt.sav' is not a system or portable file.",
+      "titel": "Dit bestand kan niet worden gelezen",
+      "text": {
+        "du": "“{datei}” eindigt op .sav, maar is van binnen geen SPSS-bestand. Je andere gegevens blijven onaangetast.",
+        "sie": "“{datei}” eindigt op .sav, maar is van binnen geen SPSS-bestand. Je andere gegevens blijven onaangetast."
+      },
+      "tun": {
+        "du": "Is het misschien een Excel- of CSV-bestand? Sla het dan in je programma opnieuw op als .sav, .xlsx of .csv.",
+        "sie": "Is het misschien een Excel- of CSV-bestand? Sla het dan in je programma opnieuw op als .sav, .xlsx of .csv."
+      }
+    },
+    {
+      "id": "speichern-unmoeglich",
+      "art": "datei",
+      "muster": "Error opening `([^']+)' for writing",
+      "original": "Error opening `/gibt/es/nicht/x.sav' for writing as a system file: No such file or directory.",
+      "titel": "Het bestand kon niet worden opgeslagen",
+      "text": {
+        "du": "Statable kan niet schrijven naar de gekozen locatie. Je gegevens zijn niet verloren - ze staan hier nog open.",
+        "sie": "Statable kan niet schrijven naar de gekozen locatie. Je gegevens zijn niet verloren - ze staan hier nog open."
+      },
+      "tun": {
+        "du": "Kies een andere map, bijvoorbeeld “Downloads”.",
+        "sie": "Kies een andere map, bijvoorbeeld “Downloads”."
+      }
+    },
+    {
+      "id": "name-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting identifier",
+      "original": "COMPUTE: Syntax error expecting identifier.",
+      "titel": "Hier ontbreekt een naam",
+      "text": {
+        "du": "Op deze plek verwacht de opdracht een naam. Namen beginnen met een letter.",
+        "sie": "Op deze plek verwacht de opdracht een naam. Namen beginnen met een letter."
+      },
+      "tun": {
+        "du": "Voorbeeld: nieuw1 in plaats van 1nieuw.",
+        "sie": "Voorbeeld: nieuw1 in plaats van 1nieuw."
+      }
+    },
+    {
+      "id": "by-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `BY'",
+      "original": "CROSSTABS: Syntax error expecting `BY'.",
+      "titel": "Het woord BY ontbreekt hier",
+      "text": {
+        "du": "Tussen de twee kolommen ontbreekt BY. Het scheidt ze, zoals in “deze kolom naar die kolom”.",
+        "sie": "Tussen de twee kolommen ontbreekt BY. Het scheidt ze, zoals in “deze kolom naar die kolom”."
+      },
+      "tun": {
+        "du": "Bij CROSSTABS: /TABLES=geslacht BY mobiel. Bij ONEWAY en GLM staat BY tussen getal en groep: ONEWAY score BY groep.",
+        "sie": "Bij CROSSTABS: /TABLES=geslacht BY mobiel. Bij ONEWAY en GLM staat BY tussen getal en groep: ONEWAY score BY groep."
+      }
+    },
+    {
+      "id": "spalte-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting variable name",
+      "original": "ONEWAY: Syntax error expecting variable name.",
+      "titel": "Hier ontbreekt een kolom",
+      "text": {
+        "du": "Op deze plek verwacht de opdracht de naam van een kolom.",
+        "sie": "Op deze plek verwacht de opdracht de naam van een kolom."
+      },
+      "tun": {
+        "du": "Tip: in het opdrachtvenster stelt Statable tijdens het typen passende kolommen voor.",
+        "sie": "Tip: in het opdrachtvenster stelt Statable tijdens het typen passende kolommen voor."
+      }
+    },
+    {
+      "id": "klammer-auf-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\('",
+      "original": "NPAR TESTS: Syntax error expecting `('.",
+      "titel": "Hier ontbreekt een haakje",
+      "text": {
+        "du": "Op deze plek ontbreekt “(”.",
+        "sie": "Op deze plek ontbreekt “(”."
+      },
+      "tun": {
+        "du": "Voorbeeld: /MANN-WHITNEY = conc BY mobiel (0 1).",
+        "sie": "Voorbeeld: /MANN-WHITNEY = conc BY mobiel (0 1)."
+      }
+    },
+    {
+      "id": "klammer-zu-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\)'",
+      "original": "COMPUTE: Syntax error expecting `)'.",
+      "titel": "Een haakje staat nog open",
+      "text": {
+        "du": "Er zijn meer “(” dan “)”.",
+        "sie": "Er zijn meer “(” dan “)”."
+      },
+      "tun": {
+        "du": "Zet de ontbrekende “)” op de juiste plek.",
+        "sie": "Zet de ontbrekende “)” op de juiste plek."
+      }
+    },
+    {
+      "id": "gleich-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `='",
+      "original": "COMPUTE: Syntax error expecting `='.",
+      "titel": "Hier ontbreekt een isgelijkteken",
+      "text": {
+        "du": "De opdracht heeft een “=” nodig tussen de naam en de berekening.",
+        "sie": "De opdracht heeft een “=” nodig tussen de naam en de berekening."
+      },
+      "tun": {
+        "du": "Voorbeeld: COMPUTE nieuw = conc * 2.",
+        "sie": "Voorbeeld: COMPUTE nieuw = conc * 2."
+      }
+    },
+    {
+      "id": "rechnung-unklar",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error parsing expression",
+      "original": "COMPUTE: Syntax error parsing expression.",
+      "titel": "De berekening is onvolledig",
+      "text": {
+        "du": "Na het “=” ontbreekt iets, of een teken past niet.",
+        "sie": "Na het “=” ontbreekt iets, of een teken past niet."
+      },
+      "tun": {
+        "du": "De markering laat de plek zien.",
+        "sie": "De markering laat de plek zien."
+      }
+    },
+    {
+      "id": "noch-keine-daten",
+      "art": "daten",
+      "muster": "is allowed only after the active dataset has been defined",
+      "original": "DESCRIPTIVES: DESCRIPTIVES is allowed only after the active dataset has been defined.",
+      "titel": "Er zijn nog geen gegevens geopend",
+      "text": {
+        "du": "Om te rekenen heeft Statable eerst gegevens nodig.",
+        "sie": "Om te rekenen heeft Statable eerst gegevens nodig."
+      },
+      "tun": {
+        "du": "Open een bestand of probeer de voorbeeldgegevens.",
+        "sie": "Open een bestand of probeer de voorbeeldgegevens."
+      }
+    },
+    {
+      "id": "text-in-zahlenspalte",
+      "art": "daten",
+      "muster": "Data for variable (\\S+) is not valid as format F: Field contents are not numeric",
+      "original": "Data for variable a is not valid as format F: Field contents are not numeric.",
+      "titel": "Er staat tekst in een getallenkolom",
+      "text": {
+        "du": "In “{1}” staat op één plek een woord in plaats van een getal. Die cel blijft leeg; al het andere is ingelezen.",
+        "sie": "In “{1}” staat op één plek een woord in plaats van een getal. Die cel blijft leeg; al het andere is ingelezen."
+      },
+      "tun": {
+        "du": "De datacontrole laat je de cel zien. Staat er in de gegevens een decimaalkomma (70,5), dan leest DATA LIST FREE de komma als scheidingsteken en verschuiven de waarden: SET DECIMAL=COMMA. en DATA LIST LIST(';') lossen dat op.",
+        "sie": "De datacontrole laat je de cel zien. Staat er in de gegevens een decimaalkomma (70,5), dan leest DATA LIST FREE de komma als scheidingsteken en verschuiven de waarden: SET DECIMAL=COMMA. en DATA LIST LIST(';') lossen dat op."
+      }
+    },
+    {
+      "id": "beschriftung-passt-nicht",
+      "art": "daten",
+      "muster": "VALUE LABELS: Data is not valid as format F",
+      "original": "VALUE LABELS: Data is not valid as format F: Field contents are not numeric.",
+      "titel": "Dit label past niet",
+      "text": {
+        "du": "In een kolom met getallen heeft elk groepslabel een getal nodig, bijvoorbeeld 1 = 'ja'.",
+        "sie": "In een kolom met getallen heeft elk groepslabel een getal nodig, bijvoorbeeld 1 = 'ja'."
+      },
+      "tun": {
+        "du": "Labels stel je het gemakkelijkst in onder “Kolommen”.",
+        "sie": "Labels stel je het gemakkelijkst in onder “Kolommen”."
+      }
+    },
+    {
+      "id": "keine-angabe-zu-lang",
+      "art": "hinweis",
+      "muster": "Truncating missing value to maximum acceptable length \\((\\d+) bytes\\)",
+      "original": "MISSING VALUES: Truncating missing value to maximum acceptable length (8 bytes).",
+      "titel": "De waarde voor “geen antwoord” is ingekort",
+      "text": {
+        "du": "De waarde is langer dan toegestaan ({1} tekens) en is afgekapt.",
+        "sie": "De waarde is langer dan toegestaan ({1} tekens) en is afgekapt."
+      },
+      "tun": {
+        "du": "Controleer onder “Kolommen” of “geen antwoord” nog juist wordt herkend.",
+        "sie": "Controleer onder “Kolommen” of “geen antwoord” nog juist wordt herkend."
+      }
+    },
+    {
+      "id": "zu-viele-keine-angabe",
+      "art": "nicht-verstanden",
+      "muster": "Too many numeric missing values",
+      "original": "MISSING VALUES: Too many numeric missing values.  At most three individual values or one value and one range are allowed.",
+      "titel": "Hooguit drie waarden voor “geen antwoord”",
+      "text": {
+        "du": "Een kolom kan hooguit drie waarden voor “geen antwoord” hebben, of één waarde en één bereik.",
+        "sie": "Een kolom kan hooguit drie waarden voor “geen antwoord” hebben, of één waarde en één bereik."
+      },
+      "tun": {
+        "du": "Voorbeeld: 96 tot 99 als bereik.",
+        "sie": "Voorbeeld: 96 tot 99 als bereik."
+      }
+    },
+    {
+      "id": "gewicht-text",
+      "art": "nicht-verstanden",
+      "muster": "The weighting variable must be numeric",
+      "original": "WEIGHT: The weighting variable must be numeric.",
+      "titel": "Wegen kan alleen met getallen",
+      "text": {
+        "du": "De gekozen kolom bevat tekst.",
+        "sie": "De gekozen kolom bevat tekst."
+      },
+      "tun": {
+        "du": "Kies een kolom met getallen.",
+        "sie": "Kies een kolom met getallen."
+      }
+    },
+    {
+      "id": "alle-spalten-loeschen",
+      "art": "hinweis",
+      "muster": "may not be used to delete all variables",
+      "original": "DELETE VARIABLES: DELETE VARIABLES may not be used to delete all variables from the active dataset dictionary.  Use NEW FILE instead.",
+      "titel": "Alle kolommen tegelijk verwijderen kan niet",
+      "text": {
+        "du": "Er moet minstens één kolom blijven. Er is niets verwijderd.",
+        "sie": "Er moet minstens één kolom blijven. Er is niets verwijderd."
+      },
+      "tun": {
+        "du": "Om leeg te beginnen: “Nieuw onderzoek aanmaken”.",
+        "sie": "Om leeg te beginnen: “Nieuw onderzoek aanmaken”."
+      }
+    },
+    {
+      "id": "dateityp-unbekannt",
+      "art": "datei",
+      "muster": "GET DATA: Syntax error expecting TXT",
+      "original": "GET DATA: Syntax error expecting TXT, PSQL, GNM, or ODS.",
+      "titel": "De opdracht kan dit bestandsformaat niet lezen",
+      "text": {
+        "du": "Excel-bestanden open je het gemakkelijkst met “Bestand openen”.",
+        "sie": "Excel-bestanden open je het gemakkelijkst met “Bestand openen”."
+      },
+      "tun": {
+        "du": "Sleep het bestand het venster in.",
+        "sie": "Sleep het bestand het venster in."
+      }
+    },
+    {
+      "id": "auswahl-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting one of the following: (.+)\\.",
+      "original": "FREQUENCIES: Syntax error expecting one of the following: STATISTICS, PERCENTILES, FORMAT, NTILES, ALGORITHM, HISTOGRAM, PIECHART, BARCHART, MISSING, ORDER.",
+      "titel": "Dit woord past hier niet",
+      "text": {
+        "du": "Op deze plek is slechts een van deze woorden mogelijk: {1}.",
+        "sie": "Op deze plek is slechts een van deze woorden mogelijk: {1}."
+      },
+      "tun": {
+        "du": "Kies een ervan.",
+        "sie": "Kies een ervan."
+      }
+    },
+    {
+      "id": "auswahl-oder",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting ((?:\\S+, )+\\S+,? or \\S+)\\.",
+      "original": "EXAMINE: Syntax error expecting BOXPLOT, NPPLOT, HISTOGRAM, SPREADLEVEL, NONE, or ALL.",
+      "titel": "Dit woord past hier niet",
+      "text": {
+        "du": "Mogelijk op deze plek: {1}.",
+        "sie": "Mogelijk op deze plek: {1}."
+      },
+      "tun": {
+        "du": "Kies een ervan.",
+        "sie": "Kies een ervan."
+      }
+    }
+  ],
+  "rueckfall": {
+    "titel": "Dat is niet gelukt",
+    "text": {
+      "du": "Statable heeft de opdracht niet uitgevoerd. Er is niets veranderd in je gegevens.",
+      "sie": "Statable heeft de opdracht niet uitgevoerd. Er is niets veranderd in je gegevens."
+    },
+    "tun": {
+      "du": "Onder “Details” vind je de oorspronkelijke melding van PSPP. Daarmee kom je verder in de Help of via “Melden”.",
+      "sie": "Onder “Details” vind je de oorspronkelijke melding van PSPP. Daarmee kom je verder in de Help of via “Melden”."
+    }
+  }
+}

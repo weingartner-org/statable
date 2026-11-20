@@ -1,0 +1,98 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "nicht-gelesen.qdpx",
+ "dokumente": [
+  {
+   "art": "audio",
+   "bom": false,
+   "fall": null,
+   "laenge": 51,
+   "name": "Interview.m4a",
+   "pruefung": "ungeprueft",
+   "sha256": "43c5cd5327197525bb6f4bc59b0c1ef160d5f7229d60b4527efbf8915c635604",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "pdftext",
+   "bom": false,
+   "fall": null,
+   "laenge": 89,
+   "name": "Skript.pdf",
+   "pruefung": "geprueft",
+   "sha256": "b52aabc346256c6b7914a4298b889fc1b2f9bdf48727367147bd56a3bedcee65",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Anna Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Skript.pdf",
+   "person": "Anna Beispiel",
+   "text": "Der Zeitdruck wird hier beschrieben"
+  }
+ ],
+ "meldungen": [
+  "nicht-gelesen"
+ ],
+ "meldungenDetail": [],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {
+  "AudioSelection": 2,
+  "Graph": 1,
+  "Link": 1,
+  "PDFSelection": 2,
+  "PictureSource": 1,
+  "TranscriptSelection": 1,
+  "VideoSelection": 1,
+  "VideoSource": 1
+ },
+ "programm": "Statable Prüfdatei",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 2,
+  "faelle": 0,
+  "kodierende": 1,
+  "kodierungen": 1,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 1,
+  "variablen": 0
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "codes": [
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "hello",
+   "pfad": "hello"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "test",
+   "pfad": "test"
+  }
+ ],
+ "datei": "ornio-atlasti26-02-codes-memos.qdpx",
+ "dokumente": [],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Radamanthys  Hourdakis",
+  "ATLAS.ti"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [],
+ "meldungen": [
+  "nicht-gelesen"
+ ],
+ "meldungenDetail": [],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {
+  "VideoSelection": 8,
+  "VideoSource": 1
+ },
+ "programm": "ATLAS.ti 26.1.2 34883 , macOS Version 26.5.1 (Build 25F80)",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 2,
+  "dokumente": 0,
+  "faelle": 0,
+  "kodierende": 2,
+  "kodierungen": 0,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 0,
+  "variablen": 0
+ }
+}

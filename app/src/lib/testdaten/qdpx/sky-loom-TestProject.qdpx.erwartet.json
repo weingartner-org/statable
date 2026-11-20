@@ -1,0 +1,251 @@
+{
+ "codes": [
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "happiness",
+   "pfad": "happiness"
+  },
+  {
+   "definition": "thoughts about breakfast foods",
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "Feelings",
+   "pfad": "Feelings"
+  },
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "disgust",
+   "pfad": "disgust"
+  },
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "waste of time",
+   "pfad": "waste of time"
+  },
+  {
+   "definition": "aka regular",
+   "farbe": "#966450",
+   "kodierbar": true,
+   "name": "Coke::full-fat Coke",
+   "pfad": "Coke::full-fat Coke"
+  },
+  {
+   "definition": "non sucré",
+   "farbe": "#966450",
+   "kodierbar": true,
+   "name": "Coke::diet Coke",
+   "pfad": "Coke::diet Coke"
+  },
+  {
+   "definition": "the breakfast of champions",
+   "farbe": "#966450",
+   "kodierbar": true,
+   "name": "Coke",
+   "pfad": "Coke"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "milk",
+   "pfad": "milk"
+  },
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "serene",
+   "pfad": "serene"
+  },
+  {
+   "definition": "a plate of breakfast made by the hotel",
+   "farbe": "#463cc8",
+   "kodierbar": true,
+   "name": "bacon and eggs",
+   "pfad": "bacon and eggs"
+  },
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "sleepy",
+   "pfad": "sleepy"
+  },
+  {
+   "definition": "the foods people might eat for breakfast",
+   "farbe": "#46aa00",
+   "kodierbar": true,
+   "name": "Breakfast food",
+   "pfad": "Breakfast food"
+  },
+  {
+   "definition": "breakfast cereal made by Kellogg’s",
+   "farbe": "#dc0000",
+   "kodierbar": true,
+   "name": "cornflakes",
+   "pfad": "cornflakes"
+  },
+  {
+   "definition": null,
+   "farbe": "#f00082",
+   "kodierbar": true,
+   "name": "\"rushed\"",
+   "pfad": "\"rushed\""
+  }
+ ],
+ "datei": "sky-loom-TestProject.qdpx",
+ "dokumente": [],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "ATLAS.ti",
+  "Friedrich Markgraf",
+  "Sebastian Petrausch"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [],
+ "meldungen": [
+  "nicht-gelesen",
+  "quelle-fehlt"
+ ],
+ "meldungenDetail": [
+  {
+   "art": "quelle-fehlt",
+   "dokument": "1960s Coca Cola commercial - Audio.docx"
+  },
+  {
+   "art": "quelle-fehlt",
+   "dokument": "1960s Coca Cola commercial - Visual.docx"
+  },
+  {
+   "art": "quelle-fehlt",
+   "dokument": "1960s Coca Cola commercial.mp4"
+  },
+  {
+   "art": "quelle-fehlt",
+   "dokument": "1960s Coca Cola commercial.mp4 (Transkript 2)"
+  },
+  {
+   "art": "quelle-fehlt",
+   "dokument": "1994 Diet Coke-Diet Coke Break.docx"
+  },
+  {
+   "art": "quelle-fehlt",
+   "dokument": "1994 Diet Coke-Diet Coke Break.mp4"
+  },
+  {
+   "art": "quelle-fehlt",
+   "dokument": "Kellogg's Passion for Nutrition.pdf"
+  },
+  {
+   "art": "quelle-fehlt",
+   "dokument": "Mabel.txt"
+  },
+  {
+   "art": "quelle-fehlt",
+   "dokument": "Mabêl 2ième.txt"
+  },
+  {
+   "art": "quelle-fehlt",
+   "dokument": "Pay de Limón con Base de Granola | Kellogg's ®.pdf"
+  },
+  {
+   "art": "quelle-fehlt",
+   "dokument": "Simon.docx"
+  }
+ ],
+ "memos": [
+  {
+   "bezug": [
+    {
+     "art": "projekt",
+     "ziel": null
+    }
+   ],
+   "text": "This is a great project by a dynamic team of researcher-developers. ",
+   "titel": "Research Plan"
+  },
+  {
+   "bezug": [
+    {
+     "art": "projekt",
+     "ziel": null
+    }
+   ],
+   "text": "This version is much better than the new Director’s cut ",
+   "titel": "My favorite Coke ad"
+  }
+ ],
+ "mengen": [
+  {
+   "art": "codes",
+   "mitglieder": [
+    "\"rushed\"",
+    "disgust",
+    "happiness",
+    "serene",
+    "sleepy",
+    "waste of time"
+   ],
+   "name": "Feelings"
+  },
+  {
+   "art": "codes",
+   "mitglieder": [
+    "\"rushed\"",
+    "disgust",
+    "sleepy",
+    "waste of time"
+   ],
+   "name": "negative feelings"
+  },
+  {
+   "art": "codes",
+   "mitglieder": [
+    "Coke",
+    "Coke::diet Coke",
+    "Coke::full-fat Coke",
+    "bacon and eggs",
+    "cornflakes",
+    "milk"
+   ],
+   "name": "Breakfast food"
+  },
+  {
+   "art": "codes",
+   "mitglieder": [
+    "happiness",
+    "serene",
+    "sleepy"
+   ],
+   "name": "positive feelings"
+  }
+ ],
+ "nichtGelesen": {
+  "AudioSource": 1,
+  "Graph": 1,
+  "Link": 1,
+  "PDFSelection": 4,
+  "PictureSource": 1,
+  "VideoSelection": 2
+ },
+ "programm": "ATLAS.ti 8.4.0 573 , macOS Version 10.14.3 (Build 18D109)",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 14,
+  "dokumente": 0,
+  "faelle": 0,
+  "kodierende": 3,
+  "kodierungen": 0,
+  "memos": 2,
+  "mengen": 4,
+  "segmente": 0,
+  "variablen": 0
+ }
+}

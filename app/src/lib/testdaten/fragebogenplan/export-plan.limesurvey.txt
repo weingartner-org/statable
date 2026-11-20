@@ -1,0 +1,88 @@
+id	related_id	class	type/scale	name	relevance	text	help	language	validation	mandatory	other	default	same_default	exclude_all_others	max_num_value_n	min_num_value_n	num_value_int_only	other_replace_text
+		S		language		de												
+		S		additional_languages		en												
+		S		format		G												
+		S		showprogress		Y												
+		S		allowprev		Y												
+		SL		surveyls_title		Studierendenbefragung		de										
+		SL		surveyls_welcometext		Danke, dass Sie mitmachen.		de										
+		SL		surveyls_endtext		Vielen Dank!		de										
+		SL		surveyls_title		Student survey		en										
+		SL		surveyls_welcometext		Thank you for taking part.		en										
+		SL		surveyls_endtext		Thank you very much!		en										
+		G		Zur Person				de										
+		Q	M	einw		Ich stimme der Teilnahme zu.		de		Y								
+		SQ	0	1		Ich stimme der Teilnahme zu.		de										
+		Q	N	alter		Wie alt sind Sie?	Bitte in ganzen Jahren.	de		Y					99	16	1	
+		Q	D	geb		Wann sind Sie geboren?		de										
+		Q	L	studium		Sind Sie eingeschrieben?		de		Y								
+		A	0	1		Ja		de										
+		A	0	2		Nein		de										
+		A	0	M9		Keine Angabe		de										
+		G		Mediennutzung	studium.NAOK == '1'			de										
+		Q	M	medien		Welche Medien nutzen Sie?		de			Y			4				Anderes, und zwar:
+		SQ	0	1		Zeitung		de										
+		SQ	0	2		Radio		de										
+		SQ	0	3		Internet		de										
+		SQ	0	4		Nichts davon		de										
+		SQ	0	M8		weiß nicht		de										
+		Q	L	tvnutzung	medien_3.NAOK == 'Y'	Sehen Sie online fern?		de										
+		A	0	1		Ja		de										
+		A	0	2		Nein		de										
+		A	0	M9		Keine Angabe		de										
+		Q	N	stunden	studium.NAOK == '1' && !is_empty(alter.NAOK)	Wie viele Stunden täglich?		de							12	0	1	
+		Q	R	rang		Ordnen Sie nach Wichtigkeit.		de										
+		A	0	1		Preis		de										
+		A	0	2		Qualität		de										
+		A	0	3		Service		de										
+		G		Haltungen				de										
+		Q	F	zust	alter.NAOK >= 18	Wie sehr stimmen Sie zu?		de		Y								
+		SQ	0	z1		Ich lerne gern.		de										
+		SQ	0	z2		Ich bin oft müde.		de										
+		SQ	0	z3		Prüfungen sind fair.		de										
+		A	0	1		stimme gar nicht zu		de										
+		A	0	2		stimme eher nicht zu		de										
+		A	0	3		teils/teils		de										
+		A	0	4		stimme eher zu		de										
+		A	0	5		stimme voll zu		de										
+		A	0	M8		weiß nicht		de										
+		Q	T	kommentar		Was möchten Sie noch sagen?		de										
+		Q	X	hbild		Das ist die Mensa.<br /><img src='mensa.png' alt='Foto der Mensa mit Tischen' />		de										
+		G		About you				en										
+		Q	M	einw		I agree to take part.		en		Y								
+		SQ	0	1		I agree to take part.		en										
+		Q	N	alter		How old are you?	Please give whole years.	en		Y					99	16	1	
+		Q	D	geb		When were you born?		en										
+		Q	L	studium		Are you enrolled?		en		Y								
+		A	0	1		Yes		en										
+		A	0	2		No		en										
+		A	0	M9		No answer		en										
+		G		Media use	studium.NAOK == '1'			en										
+		Q	M	medien		Which media do you use?		en			Y			4				Other, please specify:
+		SQ	0	1		Newspaper		en										
+		SQ	0	2		Radio		en										
+		SQ	0	3		Internet		en										
+		SQ	0	4		None of these		en										
+		SQ	0	M8		don't know		en										
+		Q	L	tvnutzung	medien_3.NAOK == 'Y'	Do you watch TV online?		en										
+		A	0	1		Yes		en										
+		A	0	2		No		en										
+		A	0	M9		No answer		en										
+		Q	N	stunden	studium.NAOK == '1' && !is_empty(alter.NAOK)	How many hours per day?		en							12	0	1	
+		Q	R	rang		Rank by importance.		en										
+		A	0	1		Price		en										
+		A	0	2		Quality		en										
+		A	0	3		Service		en										
+		G		Attitudes				en										
+		Q	F	zust	alter.NAOK >= 18	How far do you agree?		en		Y								
+		SQ	0	z1		I like learning.		en										
+		SQ	0	z2		I am often tired.		en										
+		SQ	0	z3		Exams are fair.		en										
+		A	0	1		strongly disagree		en										
+		A	0	2		tend to disagree		en										
+		A	0	3		neither agree nor disagree		en										
+		A	0	4		tend to agree		en										
+		A	0	5		strongly agree		en										
+		A	0	M8		don't know		en										
+		Q	T	kommentar		Anything else?		en										
+		Q	X	hbild		This is the canteen.<br /><img src='mensa.png' alt='Photo of the canteen with tables' />		en										

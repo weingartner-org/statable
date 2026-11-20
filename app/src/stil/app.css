@@ -1,0 +1,814 @@
+/* Statable - Bausteine des Prototyps. Nur Tokens aus tokens.css, keine eigenen Farbwerte. */
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--grund);color:var(--tinte);font:90%/var(--zh) var(--schrift-ui);-webkit-text-size-adjust:100%}
+/* Grundgröße am body, nicht am html: sonst schrumpft jedes rem mit (gemessen 07.10.: 14,1 und 15 px nebeneinander). */
+body{margin:0;min-height:100vh;background:var(--grund);font-size:var(--gr-text)}
+a{color:var(--akzent-tinte);text-underline-offset:3px}
+:focus-visible{outline:var(--fokus-outline);outline-offset:2px;border-radius:var(--r-klein)}
+[hidden]{display:none!important}
+h1,h2,h3{line-height:var(--zh-eng);margin:0}
+p{margin:0}
+small{font-size:var(--gr-klein)}
+.nur-vorleser{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nur-vorleser.skip:focus{position:fixed;top:var(--a2);inset-inline-start: var(--a2);width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;z-index:100;padding:var(--a2) var(--a4);background:var(--tinte);color:var(--blatt);border-radius:var(--r-klein);box-shadow:var(--schatten-heben);font-weight:600}
+.ico{width:1.125rem;height:1.125rem;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ico.gross{width:1.75rem;height:1.75rem;stroke-width:1.5}
+.ok{color:var(--akzent-tinte)} .hw{color:var(--hinweis)}
+
+/* ---------- Kopf ---------- */
+/* Seitenrand (09.10.): Kopf und alle Blätter teilen ihn, damit das Logo in jeder Zoomstufe bündig über dem Rahmen steht. */
+:root{--seitenrand:var(--a4);--dauer-wechsel:450ms}
+/* WCAG 2.2.2 / 2.3.3: Wer weniger Bewegung wünscht, bekommt sie nirgends. Ausgenommen sind die Punkte der Lade-Animation (.p): Sie pulsieren dann nur ruhig (Rechnet.svelte), damit man sieht, dass gerechnet wird. */
+@media (prefers-reduced-motion:reduce){*:not(.p),*:not(.p)::before,*:not(.p)::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}}
+/* Zwei Zeilen (10.10., Vorschlag A): oben Programm und Projekt (.kopf-oben), unten nur die Seiten des Hefts (.reiter).
+   Rechts bündig: das Zahnrad (Einstellungen) ist der letzte Knopf; er ragt um den Rand neben seinem Zeichen hinaus, damit das Zeichen mit der Blattkante abschließt. */
+.kopf-rechts>:last-child{margin-inline-end:max(calc((1.125rem - var(--ziel)) / 2),calc(-1 * var(--seitenrand)))}   /* nie über den Seitenrand hinaus (Touch: 44-px-Ziel bei schmalem Rand ragte 1-2 px aus dem Bild) */
+.kopf{position:sticky;top:0;z-index:20;background:var(--grund);display:flex;flex-direction:column;padding:var(--a1) var(--seitenrand) 0}
+.kopf-oben{display:flex;align-items:center;gap:var(--a2);min-height:48px}
+.kopf-trenner{width:1px;height:1.5rem;background:var(--linie-stark);opacity:.45;flex:none;margin:0 var(--a1)}
+.marke{display:flex;align-items:center;gap:var(--a2);font:700 var(--gr-h2)/1 var(--schrift-ui);color:var(--tinte);text-decoration:none;letter-spacing:-.01em;min-height:var(--ziel);padding-inline-end:var(--a2)}
+.marke svg{width:28px;height:28px}
+/* Wortmarke: stat dünn, able fett in Petrol, alles klein (Entscheidung 08.10.2026). Schrift Atkinson Hyperlegible Next, @font-face in index.html. */
+.marke .wort{font:300 1.375rem/1 'Atkinson Hyperlegible Next',var(--schrift-ui);letter-spacing:-.01em}
+.marke .w-able{font-weight:800;color:var(--akzent)}
+.reiter{display:flex;gap:2px;min-width:0;margin-top:2px}
+.reiter-luecke{flex:1 1 0;min-width:var(--a4)}
+.reiter-blaetter{display:flex;gap:2px;min-width:6em;overflow-x:auto;scrollbar-width:none}
+.reiter-blaetter:empty{display:none}   /* ohne Auswertung keine leere Lücke zwischen Daten und dem Plus */
+.reiter-blaetter a{max-width:16em;flex:0 1 auto;min-width:6em}
+.reiter-blaetter a span{overflow:hidden;text-overflow:ellipsis}
+.reiter-blatt{position:relative;display:flex;flex:0 1 auto;min-width:6em;max-width:16em}
+.reiter-blaetter .reiter-blatt>a{flex:1 1 auto;min-width:0;max-width:none;padding-inline-end:calc(var(--a2) + max(1.5rem,24px))}
+/* Kleines x im Reiter (09.10.): erscheint beim Zeigen, beim Tabben und am offenen Reiter; Schließen fragt vorher (ReiterSchliessen.svelte). */
+.reiter-zu{position:absolute;inset-inline-end: 2px;top:50%;translate:0 -50%;display:flex;align-items:center;justify-content:center;width:max(1.5rem,24px);height:max(1.5rem,24px);padding:0;border:0;border-radius:50%;background:transparent;color:var(--tinte-2);cursor:pointer;opacity:0;transition:opacity var(--dauer-kurz),background var(--dauer-kurz)}
+.reiter-zu .ico{width:14px;height:14px}
+.reiter-blatt:hover .reiter-zu,.reiter-blatt.aktiv .reiter-zu,.reiter-zu:focus-visible{opacity:1}
+.reiter-zu:hover{background:var(--verlust-hell);color:var(--verlust)}
+.reiter-zu:focus-visible{outline-offset:1px}
+@media (hover:none){.reiter-zu{opacity:1}}
+.reiter>a{flex:none}
+.reiter a{display:flex;align-items:center;gap:.375rem;min-height:36px;padding:0 .625rem;border-radius:var(--r) var(--r) 0 0;color:var(--tinte-2);text-decoration:none;font-weight:600;white-space:nowrap}
+.reiter a:hover{color:var(--tinte);background:color-mix(in srgb,var(--blatt) 50%,transparent)}
+.reiter a[aria-current="page"]{background:var(--blatt);color:var(--tinte)}
+.reiter .neu{color:var(--akzent-tinte);background:var(--akzent-hell);border-radius:var(--r);min-height:32px;align-self:center;margin-inline-start:var(--a2);padding:0 .75rem}
+.reiter .neu:hover{background:color-mix(in srgb,var(--akzent-hell) 70%,var(--akzent) 30%);color:var(--akzent-tinte)}
+.reiter .neu[aria-current="page"]{background:var(--blatt);border-radius:var(--r) var(--r) 0 0;align-self:stretch;min-height:36px}
+.kopf-rechts{margin-inline-start:auto;flex:none;display:flex;align-items:center;gap:var(--a1)}
+.kopf-oben>.pm{flex:0 1 auto;min-width:3rem}   /* wird es eng (große Schrift), kürzt der Projektname mit „…“ */
+/* Slogan im Kopf (Johannes 24.10.): gibt beim Schrumpfen zuerst nach (riesiges flex-shrink). Passt er nicht mehr ganz, rutscht er in die zweite,
+   unsichtbare Zeile (Umbruch-Trick: ::before macht die erste Zeile nicht leer) - so erscheint nie ein halber Slogan. */
+.kopf-slogan{flex:0 100000 auto;min-width:0;display:flex;flex-wrap:wrap;height:1.4em;overflow:hidden;font:400 .9375rem/1.4 'Atkinson Hyperlegible Next',var(--schrift-ui);color:var(--tinte-2);margin-inline-start:calc(-1 * var(--a2))}
+.kopf-slogan::before{content:"";width:0}
+.kopf-slogan>span{white-space:nowrap;padding-inline-end:var(--a2)}
+.kopf-slogan.weg{position:absolute;visibility:hidden;pointer-events:none}   /* weg, aber messbar: App.svelte misst die Breite des Slogans auch, wenn er nicht passt */
+
+/* ---------- Knöpfe ---------- */
+.k{white-space:normal;text-align:center;overflow-wrap:anywhere;display:inline-flex;align-items:center;justify-content:center;gap:var(--a2);min-height:var(--ziel);min-width:var(--ziel);padding:var(--a1) 10px;border-radius:var(--r-klein);border:1px solid var(--linie-stark);background:var(--blatt);color:var(--tinte);font:600 var(--gr-text)/1.2 var(--schrift-ui);cursor:pointer;text-decoration:none;transition:background var(--dauer-kurz),transform var(--dauer-kurz)}
+.k:hover{background:var(--blatt-2)}
+.k:active{transform:translateY(1px)}
+.k.haupt{background:var(--akzent);border-color:var(--akzent);color:var(--tinte-auf-akzent)}
+.k.haupt:hover{background:var(--akzent-druck);border-color:var(--akzent-druck)}
+.k.leise{border-color:transparent;background:transparent;color:var(--akzent-tinte)}
+.k.leise:hover{background:var(--akzent-hell)}
+.k.gross{min-height:calc(var(--ziel) + 4px);padding:0 var(--a4)}
+.k[disabled],.k[aria-disabled="true"]{opacity:.55;cursor:not-allowed;transform:none}
+.k.nur-symbol{padding:0;width:var(--ziel)}
+/* Stufe 9: Suchknopf in der Kopfzeile - sieht aus wie ein Suchfeld (Rahmen, ruhige Schrift, Lupe links, Kürzel rechts); schmal nur die Lupe (siehe `.nur-breit` unten). */
+.kopf-suche{justify-content:flex-start;gap:var(--a2);width:13rem;max-width:40vw;padding:0 var(--a3);font-weight:400;color:var(--tinte-2)}
+.kopf-suche:hover{color:var(--tinte)}
+.kopf-suche kbd{margin-inline-start:auto;border:1px solid var(--linie-stark);border-radius:4px;padding:0 6px;color:var(--tinte-2);font:600 var(--gr-klein)/1.5 var(--schrift-ui)}
+.kopf-suche>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nur-schmal{display:none}
+.knopfzeile{display:flex;flex-wrap:wrap;gap:var(--a2);align-items:center}
+
+/* ---------- Tisch, Blatt, Rand ---------- */
+.tisch{display:grid;grid-template-columns:minmax(0,1fr) var(--rand-breite);gap:var(--a3);padding:0 var(--seitenrand) var(--a5);max-width:none;margin-inline:auto}
+.tisch.ohne-rand{grid-template-columns:minmax(0,1fr)}
+/* Alle Seiten stehen in der Mitte wie die Startseite (Prüfung 07.10.: Einstellungen und Hilfe klebten links, Start stand mittig). */
+.tisch.ohne-rand>.blatt{margin-inline:auto;width:100%}
+.blatt{background:var(--blatt);border-radius:var(--r-gross);box-shadow:var(--schatten-blatt);padding:var(--a4) var(--a5);min-width:0}
+/* Ist „Daten“ der offene Reiter, steht er bündig über der linken Kante des Blatts: die Ecke ist dann eckig, Reiter und Blatt wirken wie ein Stück (Johannes 10.10.). */
+body:has(.reiter>a:first-child[aria-current="page"]) .tisch.breit>.blatt:first-child{border-start-start-radius:0}
+.blatt-kopf{display:flex;align-items:center;gap:var(--a2) var(--a3);flex-wrap:wrap;margin-bottom:var(--a3)}
+.blatt-kopf h1{font:600 var(--gr-h1)/var(--zh-eng) var(--schrift-heft);flex:1;min-width:16ch}
+.blatt-kopf p{color:var(--tinte-2);flex-basis:100%}
+.rand{position:sticky;top:var(--kopf-h,92px);align-self:start;display:flex;flex-direction:column;gap:var(--a4)}   /* genau unter dem Kopf: Oberkante des Ausblendschalters = Oberkante des Blatts (Johannes 10.10.) */
+.notiz{background:var(--blatt);border-radius:var(--r);padding:var(--a3) var(--a4);box-shadow:var(--schatten-blatt)}
+.notiz.im-dialog{box-shadow:none;padding:0;background:none;flex:1}
+.notiz h2{font:650 var(--gr-h2)/1.3 var(--schrift-ui);margin-bottom:var(--a2)}
+.notiz p+p{margin-top:var(--a3)}
+.notiz .beispiel{background:var(--blatt-2);border-radius:var(--r-klein);padding:var(--a3)}
+.notiz .vorsicht{border-inline-start:3px solid var(--hinweis-linie);padding-inline-start:var(--a3)}
+.notiz .klein{font-size:var(--gr-klein);color:var(--tinte-2)}
+/* Beispiel-Begleiter unten rechts (BeispielBegleiter.svelte): die Seitenleiste endet darüber und rollt in sich */
+:root.begleiter-da:not(.eng-520) .rand{max-height:calc(100vh - var(--kopf-h,92px) - var(--begleiter-h,0px) - 2 * var(--a3));overflow:auto;overscroll-behavior:contain}
+/* WCAG 2.4.11: Der feste Kopf (sticky, Höhe in --kopf-h) darf fokussierte Elemente beim Scrollen zum Fokus nie überdecken (Messung 07.11.: #blatt/neu und #planen je ein teilweise verdeckter Stopp). */
+:root{scroll-padding-top:calc(var(--kopf-h,92px) + var(--a2))}
+/* WCAG 2.4.11: Der feste Begleiter unten rechts darf fokussierte Felder nie verdecken: Platz am Ende der Seite und beim Scrollen zum Fokus. */
+:root.begleiter-da{scroll-padding-bottom:calc(var(--begleiter-h,0px) + 2 * var(--a3) + 72px)}
+:root.begleiter-da main{padding-bottom:calc(var(--begleiter-h,0px) + 2 * var(--a3) + 72px)}
+.rand-leer{color:var(--tinte-2)}
+.rand-laedt{color:var(--tinte-2)}
+.rand-laedt:empty{display:none}
+/* Der Rand erklärt, was im Blatt passiert (09.10.): bleibt im Bild und rollt selbst, wenn der Text länger ist. */
+.rand-kontext{max-height:calc(100vh - 56px - 22px - 7rem);overflow:auto;overscroll-behavior:contain}
+.rand-kontext .heft-text{font-size:var(--gr-text);margin-top:var(--a2)}
+.rand-kontext :is(.zw-h){font-size:var(--gr-text);margin-top:var(--a4)}
+.rand-jetzt{font-size:var(--gr-klein);color:var(--akzent-tinte);font-weight:650;margin-top:calc(var(--a1) * -1)}
+.rand-mehr{margin-top:var(--a4);font-size:var(--gr-klein)}
+.klein-knopf{min-height:auto;padding:var(--a1) var(--a2);font-size:var(--gr-klein)}
+/* gefühlte Breite: (min-width:1700px) */
+:root:where(.weit-1700){--rand-breite:21rem}
+/* gefühlte Breite: (min-width:2400px) */
+:root:where(.weit-2400){--rand-breite:25rem}
+:root:where(.eng-860){--rand-breite:15rem}
+:root:where(.eng-640){--rand-breite:12.5rem}
+.rand-zu{display:none}
+
+/* ---------- Felder des Blattes ---------- */
+.feld{display:grid;grid-template-columns:28px minmax(0,1fr);gap:0 var(--a3);padding:var(--a3) 0;border-top:1px dashed var(--linie)}
+.feld:first-of-type{border-top:0;padding-top:var(--a2)}
+.nr{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font:700 var(--gr-klein)/1 var(--schrift-ui);background:var(--akzent-hell);color:var(--akzent-tinte);margin-top:2px}
+.nr.fertig{background:var(--akzent);color:var(--tinte-auf-akzent)}
+.nr.zu{background:var(--blatt-2);color:var(--tinte-2)}
+.feld h2{font:650 var(--gr-klein)/1.3 var(--schrift-ui);letter-spacing:.06em;text-transform:uppercase;color:var(--tinte-2);margin:var(--a1) 0 var(--a2)}
+.feld.zu h2{margin-bottom:0}
+.feld.zu .feld-inhalt{display:none}
+/* Ein Abschnitt öffnet sich: der Inhalt blendet langsam ein, während die Höhe gleitet (lib/weich.ts). */
+.feld:not(.zu) .feld-inhalt{animation:einblenden 800ms cubic-bezier(.45,.05,.25,1)}
+@keyframes einblenden{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+.feld .feld-inhalt{transition:opacity 300ms ease}
+.feld .feld-inhalt{transition:opacity 400ms var(--kurve)}
+.feld .feld-inhalt.gedimmt{opacity:.5}
+/* Spalte entfernt: Hinweis statt alter Zahlen (D12) */
+.fehlt-hinweis{margin:var(--a2) 0 var(--a3);padding:var(--a2) var(--a3);border-inline-start:3px solid var(--hinweis-linie);background:var(--hinweis-hell);color:var(--hinweis);border-radius:var(--r-klein)}
+.feld .feld-inhalt.fehlt-weg{display:none}
+.feld>div:has(>.live-hinweis){position:relative}
+.live-hinweis{position:absolute;top:var(--a1);inset-inline-end: 0;margin:0;font-size:var(--gr-klein);color:var(--tinte-2);animation:einblenden 300ms ease}
+.feld .zusammen{display:flex;gap:var(--a3);align-items:baseline;flex-wrap:wrap}
+.feld-neu{animation:aufklappen var(--dauer-lang) var(--kurve)}
+@keyframes aufklappen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.heft-text{font:400 var(--gr-text)/1.55 var(--schrift-heft);max-width:var(--breite-text)}
+.heft-text+.heft-text{margin-top:var(--a3)}
+.ergebnis-satz{font:500 var(--gr-h1)/1.4 var(--schrift-heft);max-width:40ch;margin-bottom:var(--a3)}
+
+/* Kacheln (Fragearten) */
+.kacheln{display:flex;flex-wrap:wrap;gap:var(--a3)}
+.kacheln>.kachel{flex:1 1 14rem;max-width:100%}
+.kachel{display:flex;flex-direction:column;gap:var(--a2);text-align: start;padding:var(--a3) var(--a4);border-radius:var(--r);border:1px solid var(--linie-stark);background:var(--blatt);color:var(--tinte);font:inherit;cursor:pointer;min-height:0;transition:border-color var(--dauer-kurz),background var(--dauer-kurz)}
+.kachel:hover{border-color:var(--akzent);background:var(--akzent-hell)}
+.kachel b{font:650 var(--gr-text)/1.3 var(--schrift-ui)}
+.kachel span{color:var(--tinte-2);font-size:var(--gr-klein)}
+.kachel .ico{color:var(--akzent-tinte)}
+.ordnung .k[aria-pressed=true]{background:var(--akzent);color:var(--tinte-auf-akzent);border-color:var(--akzent)}
+/* „Wie im Kurs“ (Andreas 25.10.): Stichproben × Anteil, Mittelwert, Varianz */
+.kurs-ordnung{border-collapse:separate;border-spacing:var(--a2);width:calc(100% + 2 * var(--a2));min-width:44rem;margin:0 calc(-1 * var(--a2));table-layout:fixed}
+.kurs-ordnung col.kopf{width:10rem}
+.kurs-ordnung th{font:650 var(--gr-klein)/1.3 var(--schrift-ui);color:var(--tinte-2);text-align: start;vertical-align:middle;padding:0 var(--a2)}
+.kurs-ordnung thead th{padding-bottom:0}
+.kurs-ordnung td{vertical-align:top;height:1px}
+.kurs-feld{display:flex;flex-direction:column;gap:var(--a1);width:100%;height:100%;text-align: start;padding:var(--a3);border-radius:var(--r);border:1px solid var(--linie-stark);background:var(--blatt);color:var(--tinte);font:inherit;cursor:pointer;transition:border-color var(--dauer-kurz),background var(--dauer-kurz)}
+.kurs-feld:hover{border-color:var(--akzent);background:var(--akzent-hell)}
+.kurs-feld b{font:600 var(--gr-klein)/1.35 var(--schrift-ui)}
+.kurs-feld span{color:var(--tinte-2);font-size:var(--gr-klein)}
+.kurs-leer{display:block;box-sizing:border-box;height:100%;padding:var(--a3);color:var(--tinte-2);font-size:var(--gr-klein);border:1px dashed var(--linie);border-radius:var(--r)}
+:where(:root.eng-700) .kurs-ordnung{min-width:0;width:100%;margin:0;border-spacing:0}
+:where(:root.eng-700) .kurs-ordnung :is(colgroup,thead){display:none}
+:where(:root.eng-700) .kurs-ordnung :is(tbody,tr,th,td){display:block}
+:where(:root.eng-700) .kurs-ordnung th[scope=row]{padding:var(--a4) 0 var(--a1);font-size:var(--gr-text)}
+:where(:root.eng-700) .kurs-ordnung td{height:auto;margin-bottom:var(--a2)}
+:where(:root.eng-700) .kurs-ordnung td::before{content:attr(data-spalte);display:block;font:650 var(--gr-klein)/1.3 var(--schrift-ui);color:var(--tinte-2);margin-bottom:var(--a1)}
+.kachel-gruppen{--kachel-min:15rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--kachel-min)),1fr));gap:var(--a5) var(--a3);grid-auto-flow:row dense;align-items:start}
+/* Eine Gruppe nimmt so viele Spalten, wie sie Karten hat (höchstens alle; --spann setzt Blatt.svelte aus dem Browser). Die Karten liegen im
+   Raster des Ganzen (subgrid): in jeder Zoomstufe sind alle Karten gleich breit und stehen in denselben Spalten. */
+.kachel-block{min-width:0;grid-column:span var(--spann,1);display:grid;grid-template-columns:subgrid;row-gap:var(--a2);align-content:start}
+.kachel-block>*{grid-column:1/-1}
+.kachel-block.ganz{grid-column:1/-1}
+.kachel-gruppen .kachel-gruppe{margin:0}
+.kachel-gruppen .kacheln{display:grid;grid-template-columns:subgrid;gap:var(--a3)}
+.kachel-gruppen .kacheln>.kachel{max-width:none}
+.kachel-gruppen .kachel-mehr>.kacheln{grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--kachel-min)),1fr))}
+.kachel-gruppe{font:650 var(--gr-klein)/1.3 var(--schrift-ui);color:var(--tinte-2);text-transform:none;margin:var(--a5) 0 var(--a2)}
+.kachel-gruppe:first-of-type{margin-top:0}
+.kachel-mehr>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:var(--a2);min-height:24px}
+.kachel-mehr>summary::-webkit-details-marker{display:none}
+.kachel-mehr>summary::before{content:'›';display:inline-block;transition:transform var(--dauer-kurz)}
+.kachel-mehr[open]>summary::before{transform:rotate(90deg)}
+.kachel-mehr>.kacheln{margin-top:var(--a2)}
+.karten-suche{max-width:32rem;margin-bottom:var(--a4)}
+/* Stufe 9 „Eine Suche“: gemeinsames Aussehen aller Bereichssuchen (Hilfe, Lernen, Beispiele, Verfahren): Lupe links im Feld, Eingabe 44 px hoch. Der Kopf-Suchknopf `.kopf-suche` und die Befehlspalette (`#pal-eingabe`) gleichen sich an. */
+.suchfeld{position:relative;display:flex;align-items:center}
+.suchfeld>.ico{position:absolute;inset-inline-start:var(--a3);color:var(--tinte-2);pointer-events:none}
+.suchfeld>input,.eingabe .suchfeld>input[type]{width:100%;min-height:var(--ziel);padding-block:0;padding-inline:calc(var(--a3) + 28px) var(--a6);border:1px solid var(--linie-stark);border-radius:var(--r-klein);background:var(--blatt);color:var(--tinte);font:400 var(--gr-text)/1.2 var(--schrift-ui)}
+.suchfeld>input:focus-visible,.eingabe .suchfeld>input[type]:focus-visible{border-color:var(--fokus)}
+.fach-zeile{margin-top:var(--a4);color:var(--tinte-2);display:flex;flex-wrap:wrap;gap:var(--a2);align-items:center}
+.kachel .kachel-hinweis{color:var(--tinte-2);font-size:var(--gr-klein)}
+.kachel .kachel-zusatz{font-style:normal;font-weight:600;font-size:var(--gr-klein);color:var(--akzent-tinte);margin-top:calc(var(--a1) * -1)}
+.kachel.leise{border-style:dashed;min-height:auto}
+
+/* Lückensatz */
+.lueckensatz{font:400 var(--gr-h2)/1.9 var(--schrift-heft);max-width:90ch}
+.lueckensatz.kompakt{font-size:var(--gr-text);line-height:1.5;margin:0}
+.luecke{font:600 var(--gr-text)/1.2 var(--schrift-ui);min-height:28px;padding:0 var(--a2);margin:0 2px;border:0;border-bottom:2px solid var(--akzent);border-radius:var(--r-klein) var(--r-klein) 0 0;background:var(--akzent-hell);color:var(--akzent-tinte);cursor:pointer;display:inline-flex;align-items:center;gap:6px;vertical-align:baseline}
+.luecke.leer{background:var(--blatt-2);color:var(--tinte-2);border-bottom-style:dashed;border-bottom-color:var(--linie-stark)}
+.luecke[aria-expanded="true"]{background:var(--akzent);color:var(--tinte-auf-akzent)}
+.wahl{margin-top:var(--a3);padding:var(--a4);border-radius:var(--r-gross);background:var(--blatt-2);max-width:none}
+.wahl legend{font-weight:650;padding:0;margin-bottom:var(--a2);float: inline-start;width:100%}
+.wahl fieldset{border:0;margin:0;padding:0}
+.optionen{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));gap:var(--a2);clear:both}
+.alle-zeile{clear:both;display:flex;align-items:center;gap:var(--a3);flex-wrap:wrap;margin-bottom:var(--a3)}
+.option{user-select:none;-webkit-user-select:none;display:flex;gap:var(--a3);align-items:center;min-height:52px;padding:var(--a2) var(--a3);border-radius:var(--r);border:1px solid var(--linie-stark);background:var(--blatt);cursor:pointer}
+.option:has(input:checked){border-color:var(--akzent);box-shadow:inset 0 0 0 1px var(--akzent);background:var(--akzent-hell)}
+.option:has(input:focus-visible){outline:var(--fokus-outline);outline-offset:2px;box-shadow:var(--fokus-ring)}
+.option input:focus-visible{outline-color:transparent}
+.option input{width:20px;height:20px;accent-color:var(--akzent);margin:0}
+.option small{display:block;color:var(--tinte-2);font-size:var(--gr-klein)}
+.option span>.ico{vertical-align:-.2em;margin-inline-end:.35em}
+/* Gegliederte Auswahl (Fragebogen-Blöcke FG01 …): Überschrift mit Farbpunkt, dezenter Streifen links an jeder Karte. */
+.optionen-gruppe{clear:both}
+.optionen-gruppe+.optionen-gruppe{margin-top:var(--a4)}
+.optionen-titel{display:flex;align-items:center;gap:var(--a2);font:650 var(--gr-klein)/1.3 var(--schrift-ui);color:var(--tinte-2);margin:0 0 var(--a2)}
+.optionen-titel::before{content:'';width:.6rem;height:.6rem;border-radius:50%;background:var(--gf)}
+.optionen-titel small{font-weight:400}
+.optionen-gruppe :is(.option,.option:has(input:checked)){background-image:linear-gradient(var(--gf),var(--gf));background-repeat:no-repeat;background-size:4px 100%;padding-inline-start:calc(var(--a3) + 4px)}
+
+/* Prüfliste */
+.pruefliste{list-style:none;margin:0;padding:0;display:grid;gap:var(--a3)}
+.pruefliste li{display:grid;grid-template-columns:24px 1fr;gap:var(--a3);align-items:start}
+.pruefliste .ico{margin-top:2px}
+.pruefliste small{display:block;color:var(--tinte-2)}
+.vorschlag{display:flex;gap:var(--a4);align-items:flex-start;padding:var(--a4);border-radius:var(--r-gross);background:var(--akzent-hell);margin-bottom:var(--a4)}
+.vorschlag b{display:block;font-size:var(--gr-h2)}
+
+/* Marken */
+.marken{display:flex;flex-wrap:wrap;gap:var(--a2);margin:var(--a3) 0}
+.marke-k{display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:0 var(--a2);border-radius:var(--r-klein);border:1px solid transparent;background:var(--akzent-hell);color:var(--akzent-tinte);font:600 var(--gr-text)/1.2 var(--schrift-ui);cursor:pointer}
+.marke-k:hover{border-color:var(--akzent)}
+.marke-k.hinweis{background:var(--hinweis-hell);color:var(--hinweis)}
+.marke-k.hinweis:hover{border-color:var(--hinweis)}
+.marke-k[aria-pressed="true"]{border-color:currentColor;box-shadow:inset 0 0 0 1px currentColor}
+.begriff{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline dotted var(--akzent);text-decoration-thickness:2px;text-underline-offset:4px}
+.begriff:hover{color:var(--akzent-tinte)}
+
+/* APA */
+.apa-zeile{display:flex;align-items:center;gap:var(--a3);flex-wrap:wrap;font:400 var(--gr-h2)/1.5 var(--schrift-heft);padding:var(--a3) var(--a4);background:var(--blatt-2);border-radius:var(--r);margin:var(--a3) 0}
+.apa-zeile span{flex:1;min-width:min(20ch,100%)}
+/* Andere Tabellenansicht: die Farben gehen ineinander über statt zu springen (10.10.). */
+table.apa th,table.apa td{transition:background-color var(--dauer-wechsel) var(--kurve),color var(--dauer-wechsel) var(--kurve)}
+table.apa{border-collapse:collapse;font:400 var(--gr-text)/1.4 var(--schrift-heft);margin:var(--a4) 0 var(--a2);font-variant-numeric:tabular-nums}
+table.apa caption{text-align: start;padding-bottom:var(--a2);caption-side:top}
+table.apa caption b{display:block;font-weight:700}
+table.apa caption i{display:block}
+table.apa th,table.apa td{padding-block: var(--a1); padding-inline: 0 var(--a5);text-align:right;font-weight:400}
+table.apa th:first-child,table.apa td:first-child{text-align: start}
+table.apa thead tr:first-child th{border-top:1.5px solid var(--tinte)}
+table.apa thead tr:last-child th{border-bottom:1px solid var(--tinte)}
+table.apa tbody tr:last-child td{border-bottom:1.5px solid var(--tinte)}
+/* Bildschirm: Haarlinie unter jeder Zeile, damit das Auge die Zeile hält (Johannes 07.10., Entwurf C); die Zeile unter der Maus leicht hinterlegt.
+   Die Gruppenspalte vorne bleibt frei, damit Gruppen zusammen wirken. Papier, Word, PDF und Druck bleiben reines APA. */
+table.apa th,table.apa td{padding-inline-start:var(--a2)}
+table.apa tbody td,table.apa tbody th:not(:first-child){border-bottom:1px solid color-mix(in srgb,var(--linie) 60%,var(--blatt))}
+table.apa tbody tr:last-child th{border-bottom:1.5px solid var(--tinte)}
+table.apa tbody tr:hover>td,table.apa tbody tr:hover>th:not(:first-child){background:var(--akzent-hell)}
+.papier table.apa th,.papier table.apa td{padding-inline-start:0}
+.papier table.apa tbody td,.papier table.apa tbody th:not(:first-child){border-bottom:0;background:none}
+.papier table.apa tbody tr:last-child td,.papier table.apa tbody tr:last-child th{border-bottom:1.5px solid #1D2530}
+@media print{table.apa th,table.apa td{padding-inline-start:0}table.apa tbody td,table.apa tbody th:not(:first-child){border-bottom:0;background:none}table.apa tbody tr:last-child td,table.apa tbody tr:last-child th{border-bottom:1.5px solid #000}}
+.anmerkung{font:400 var(--gr-text)/1.5 var(--schrift-heft);max-width:70ch;color:var(--tinte)}
+
+/* Aufklapper */
+details.auf{border-top:1px solid var(--linie);padding:var(--a2) 0}
+details.auf>summary{display:flex;align-items:center;gap:var(--a2);min-height:var(--ziel);cursor:pointer;font-weight:600;color:var(--akzent-tinte);list-style:none}
+details.auf>.k,details.auf>p>.k{white-space:normal;max-width:100%;text-align:start}
+details.auf>summary::-webkit-details-marker{display:none}
+details.auf>summary::before{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform var(--dauer)}
+details.auf[open]>summary::before{transform:rotate(45deg)}
+pre.befehl{font:400 var(--gr-text)/1.6 var(--schrift-befehl);background:var(--blatt-2);border-radius:var(--r);padding:var(--a3) var(--a4);overflow-x:auto;margin:var(--a2) 0;white-space:pre-wrap}
+
+/* Datenraster */
+.raster-huelle{overflow:auto;max-height:calc(100vh - 118px);border:1px solid var(--linie);border-radius:var(--r);background:var(--blatt)}
+table.raster{border-collapse:separate;border-spacing:0;font:400 var(--gr-text)/1.3 var(--schrift-ui);font-variant-numeric:tabular-nums;min-width:100%}
+table.raster th,table.raster td{padding:var(--a1) var(--a2);border-bottom:1px solid var(--linie);border-inline-end:1px solid var(--linie);white-space:nowrap;height:var(--zeile,26px)}
+table.raster.raster-klebt{position:sticky;top:0}
+table.raster thead th{position:sticky;top:0;background:var(--blatt-2);text-align: start;font-weight:650;z-index:1;vertical-align:bottom}
+table.raster thead th small{display:block;font-weight:400;color:var(--tinte-2);font-size:var(--gr-klein)}
+table.raster th[scope="row"]{position:sticky;inset-inline-start: 0;background:var(--blatt-2);color:var(--tinte-2);font-weight:500;text-align:right;min-width:40px}
+table.raster thead th:first-child{inset-inline-start: 0;z-index:2}
+/* Spaltenköpfe (Johannes 07.10.: „Überschriften breit, Daten schmal“). Wie SPSS, jamovi und JASP: kurzer Name im Kopf,
+   die volle Bezeichnung im Hinweis. Knopf in der Ecke links oben wechselt zu Bezeichnungen (umgebrochen) oder senkrecht. */
+table.raster thead th.ecke{padding:0;vertical-align:bottom}
+.ecke-k{font:inherit;display:grid;place-items:center;width:100%;min-height:30px;border:0;background:none;color:var(--akzent-tinte);cursor:pointer;border-radius:0}
+.ecke-k:hover{background:var(--akzent-hell)}
+table.raster.koepfe-lang thead th:not(.ecke){white-space:normal;min-width:6ch;line-height:1.2;height:auto;padding-top:var(--a1);padding-bottom:var(--a1)}
+table.raster.koepfe-lang{table-layout:fixed}
+/* WCAG 1.4.12: Kopftext und Untertitel wachsen mit dem Textabstand (kein Abschneiden); der Hinweis beim Darüberfahren zeigt weiterhin alles */
+table.raster.koepfe-lang .kopf-text{display:block;overflow-wrap:anywhere}
+/* Kopfinhalt mittig in der Zelle, der Text selbst bleibt linksbündig */
+table.raster .kopf-in{display:block;width:fit-content;max-width:100%;margin-inline:auto;text-align: start}
+table.raster thead th.ecke .kopf-in{display:none}
+table.raster.koepfe-senkrecht .senk{margin-inline-start:auto;margin-inline-end:auto}
+table.raster.koepfe-lang thead th small{display:block;white-space:normal;overflow-wrap:anywhere;margin-top:2px;line-height:1.15}
+/* Senkrecht und Namen: die Tabelle nicht auf volle Breite strecken - jede Spalte so schmal wie ihr Inhalt (Johannes 07.10.). */
+table.raster.koepfe-name{min-width:0;width:max-content}
+table.raster.koepfe-senkrecht{table-layout:fixed;min-width:0}
+.raster-huelle:has(.koepfe-senkrecht),.raster-huelle:has(.koepfe-name){width:fit-content;max-width:100%}
+table.raster.koepfe-senkrecht thead th:not(.ecke){padding:var(--a2) var(--a1);text-align: start}
+table.raster.koepfe-senkrecht td{padding:var(--a1) var(--a2)}
+table.raster.koepfe-senkrecht .senk{writing-mode:vertical-rl;transform:rotate(180deg);display:block;width:fit-content;white-space:normal;overflow-wrap:normal;line-height:1.25;text-align: start;overflow:hidden;max-height:16em}
+table.raster td.zahl{text-align:right}
+table.raster td.fund{background:var(--hinweis-hell);outline:2px dashed var(--hinweis);outline-offset:-3px}
+table.raster td.leer{color:var(--tinte-2)}
+table.raster td.ka{color:var(--tinte-2);text-decoration:line-through}
+table.raster tr.blitz td{animation:blitz 1.6s var(--kurve)}
+@keyframes blitz{0%,40%{background:var(--akzent-hell)}100%{background:transparent}}
+.daten-kopf{display:flex;align-items:center;gap:var(--a2);flex-wrap:wrap;margin-bottom:var(--a2)}
+/* Datenseite (Johannes 09.10.): heller Rahmen eng um Überschrift und Tabelle. */
+/* gefühlte Breite: (min-width:701px) */
+:where(:root.weit-701) .tisch.breit>.blatt{padding:var(--a3) var(--a4)}
+.k.klein{min-height:26px;padding:0 var(--a2);font-size:var(--gr-klein)}
+.daten-kopf h1{font:600 var(--gr-h1)/1.2 var(--schrift-heft);margin:0;min-width:0;overflow-wrap:anywhere}
+/* Langer Name (Meldung 01.11.): bekommt mindestens 14rem; ist daneben nicht genug Platz, rutschen die Schalter in die zweite Zeile - der Titel wird nie zur schmalen Buchstabensäule. */
+.daten-titel{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 var(--a3);flex:1 1 14rem;min-width:min(100%,14rem);margin-inline-end:auto}
+.daten-titel h1{flex:0 1 auto}
+.original{display:inline-flex;align-items:center;gap:var(--a2);font-size:var(--gr-klein);color:var(--tinte-2);background:var(--blatt-2);padding:2px var(--a2);border-radius:var(--r-rund)}
+.daten-masse{flex:none;font-size:var(--gr-klein);color:var(--tinte-2);white-space:nowrap}
+.raster td:focus,.raster th[scope=row]:focus{outline:var(--fokus-outline);outline-offset:-3px;box-shadow:inset 0 0 0 2px var(--fokus)}
+.ansicht{display:inline-flex;border:1px solid var(--linie-stark);border-radius:var(--r);overflow:hidden}
+.ansicht>*{display:inline-flex;align-items:center;min-height:var(--ziel,2.25rem);padding:0 var(--a3);font-weight:600;text-decoration:none;color:var(--tinte)}
+.ansicht-an{background:var(--akzent-hell);color:var(--akzent-tinte)}
+.ansicht a:hover{background:var(--akzent-hell)}
+.ansicht a:focus-visible{box-shadow:inset var(--fokus-ring)}
+
+/* Daten-Check */
+.check{display:flex;flex-direction:column;gap:var(--a3)}
+.check-kopf h2{font:650 var(--gr-h2)/1.25 var(--schrift-ui)}
+.check-kopf p{color:var(--tinte-2);margin-top:var(--a1)}
+.fund-karte{background:var(--blatt);border-radius:var(--r);box-shadow:var(--schatten-blatt);padding:var(--a3)}
+.fund-karte h3{display:flex;gap:var(--a2);align-items:flex-start;font:650 var(--gr-h2)/1.35 var(--schrift-ui);margin-bottom:var(--a2)}
+.fund-karte p{color:var(--tinte)}
+.fund-karte p+p{margin-top:var(--a2)}
+.fund-karte .knopfzeile{margin-top:var(--a3)}
+.fund-karte.erledigt{box-shadow:none;background:var(--blatt-2);padding:var(--a3) var(--a4)}
+.fund-karte.erledigt h3{margin:0;font-weight:600;font-size:var(--gr-text)}
+.vorher-nachher{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:var(--a2);align-items:center;margin-top:var(--a3);font-size:var(--gr-text)}
+.vorher-nachher div{background:var(--blatt-2);border-radius:var(--r-klein);padding:var(--a2) var(--a3);overflow-wrap:anywhere}   /* Stufe 10: bei schmaler Seitenleiste (520-700 px) lief die Karte sonst 21 px über */
+.vorher-nachher b{display:block;font-size:var(--gr-klein);color:var(--tinte-2);font-weight:600}
+
+/* Spalten (Variablen) */
+.spalten{display:grid;gap:var(--a3)}
+.spalte{display:grid;grid-template-columns:minmax(150px,1.1fr) minmax(200px,1.6fr) minmax(200px,1.4fr) minmax(160px,1.2fr);gap:var(--a3) var(--a4);align-items:start;padding:var(--a4);border-radius:var(--r-gross);background:var(--blatt);border:1px solid var(--linie)}
+.spalte .name{font:600 var(--gr-text) var(--schrift-ui)}
+.spalte .name small{display:block;font:400 var(--gr-klein) var(--schrift-ui);color:var(--tinte-2);margin-top:var(--a1)}
+.eingabe{display:flex;flex-direction:column;gap:var(--a1)}
+.eingabe label,.eingabe .lbl{font-size:var(--gr-klein);font-weight:600;color:var(--tinte-2)}
+.eingabe input[type=text],.eingabe select,.eingabe textarea{font:inherit;color:var(--tinte);background:var(--blatt);border:1px solid var(--linie-stark);border-radius:var(--r-klein);min-height:var(--ziel);padding:var(--a2) var(--a3);width:100%}
+.eingabe textarea{min-height:96px;resize:vertical}
+.eingabe input:focus-visible,.eingabe select:focus-visible,.eingabe textarea:focus-visible{border-color:var(--fokus)}
+.eingabe .hilfe{font-size:var(--gr-klein);color:var(--tinte-2)}
+.gruppen-liste{display:flex;flex-wrap:wrap;gap:6px}
+.gruppen-liste span{background:var(--blatt-2);border-radius:var(--r-klein);padding:2px var(--a2);font-size:var(--gr-text)}
+
+/* Start */
+.start{max-width:none;margin:0 auto;padding:var(--a5) var(--seitenrand) var(--a6)}
+.start h1{font:600 var(--gr-gross)/1.15 var(--schrift-heft);margin-bottom:var(--a3)}
+.start .unter{font-size:var(--gr-h2);color:var(--tinte-2);max-width:56ch;margin-bottom:var(--a4)}
+/* Usability Stufe 2: drei große Wege nebeneinander, darunter „Weitere Einstiege“ als ruhige Liste */
+.wege{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--a4);margin-top:var(--a4)}
+.weg-gross{display:flex;flex-direction:column;align-items:flex-start;gap:var(--a2);padding:var(--a4) var(--a5);background:var(--blatt);border:2px solid transparent;border-top:4px solid var(--akzent);border-radius:var(--r-gross);box-shadow:var(--schatten-blatt)}
+.weg-gross h2{font:650 var(--gr-h2)/1.25 var(--schrift-ui)}
+.weg-gross>p{color:var(--tinte-2)}
+.weg-datei{border:2px dashed var(--linie-stark);border-top:4px solid var(--akzent)}
+.weg-datei.ueber{border-color:var(--akzent);background:var(--akzent-hell)}
+.weg-knoepfe{margin-top:auto;padding-top:var(--a2);display:flex;flex-direction:column;align-items:flex-start;gap:var(--a2)}
+.weg-knoepfe .formate{display:flex;align-items:center;gap:4px;color:var(--tinte-2);font-size:var(--gr-klein)}
+.weg-leise{display:inline-flex;align-items:center;min-height:var(--ziel);padding:0;border:0;background:none;font:inherit;color:var(--akzent-tinte);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.weitere{margin-top:var(--a6)}
+.weitere>h2{font:650 var(--gr-h2)/1.25 var(--schrift-ui);margin-bottom:var(--a3)}
+.weitere-gruppen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--a3) var(--a6)}
+.weitere-gruppe h3{font:600 var(--gr-klein)/1.3 var(--schrift-ui);color:var(--tinte-2);text-transform:none;margin-bottom:var(--a2)}
+.einstiege{list-style:none;margin:0;padding:0}
+.einstiege li{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:var(--a3);row-gap:2px;align-items:center;padding:var(--a2) 0;border-top:1px solid var(--linie)}
+.einstiege li>.ico{grid-row:1/span 2;align-self:start;margin-top:4px;color:var(--tinte-2)}
+.einstiege li>:is(a,button,label){justify-self:start;display:inline-flex;align-items:center;min-height:1.75rem;padding:0;border:0;background:none;font:inherit;font-weight:600;color:var(--akzent-tinte);text-decoration:underline;text-underline-offset:3px;cursor:pointer;text-align:start}
+.einstiege li>label:has(input:focus-visible){outline:var(--fokus-outline);outline-offset:2px;box-shadow:var(--fokus-ring)}
+.einstiege li>span{grid-column:2;color:var(--tinte-2)}
+.fuss{margin-top:var(--a7);color:var(--tinte-2);font-size:var(--gr-klein);display:flex;flex-wrap:wrap;gap:var(--a2) var(--a4)}
+/* Startseite: Marke mit Slogan als Abschluss (18.10.2026), die Fußzeile rückt näher heran. */
+
+/* Laden */
+.laden{min-height:100vh;display:grid;place-items:center;padding:var(--a5)}
+.laden-karte{max-width:460px;width:100%;text-align: start}
+.laden-karte h1{font:600 var(--gr-h1)/1.2 var(--schrift-heft);margin:var(--a5) 0 var(--a2)}
+.balken{height:8px;border-radius:var(--r-rund);background:var(--linie);overflow:hidden;margin:var(--a5) 0 var(--a2)}
+.balken i{display:block;height:100%;width:0;background:var(--akzent);border-radius:inherit;transition:width var(--dauer-lang) linear}
+.schritte{list-style:none;padding:0;margin:var(--a4) 0 0;display:grid;gap:var(--a2)}
+.schritte li{display:flex;align-items:center;gap:var(--a3);color:var(--tinte-2)}
+.schritte li.fertig{color:var(--tinte)}
+.schritte li .punkt-ort{width:20px;display:inline-flex;justify-content:center;flex:none}   /* laufender Schritt: die kleinen Logo-Punkte (Rechnet.svelte) */
+.schritte li .punkt{width:20px;height:20px;border-radius:50%;border:2px solid var(--linie-stark);flex:none}
+
+/* Bericht */
+.bericht{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--a4);padding:0 var(--seitenrand) var(--a5);max-width:none;margin-inline:auto}
+.bericht-karte{background:var(--blatt);border-radius:var(--r-gross);box-shadow:var(--schatten-blatt);padding:var(--a4) var(--a5);display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:var(--a2) var(--a4);align-items:start;overflow-wrap:anywhere}
+.bericht-karte.aus{opacity:.7;box-shadow:none;background:var(--blatt-2)}
+.bericht-karte h3{font:650 var(--gr-h2)/1.3 var(--schrift-ui)}
+.bericht-karte .vorschau{grid-column:2/4;font:400 var(--gr-text)/1.5 var(--schrift-heft);color:var(--tinte)}
+.bericht-karte .eingabe{grid-column:2/4}
+.reihenfolge{display:flex;flex-direction:column;gap:2px}
+.schalter{display:inline-flex;align-items:center;gap:var(--a2);min-height:var(--ziel);cursor:pointer;font-weight:600}
+.schalter input{flex:none;appearance:none;width:44px;height:26px;border-radius:var(--r-rund);background:var(--linie-stark);position:relative;margin:0;cursor:pointer;transition:background var(--dauer)}
+.schalter input::after{content:"";position:absolute;top:3px;inset-inline-start: 3px;width:20px;height:20px;border-radius:50%;background:var(--blatt);transition:transform var(--dauer) var(--kurve)}
+.schalter input:checked{background:var(--akzent)}
+.schalter input:checked::after{transform:translateX(18px)}
+.schalter input:focus-visible{box-shadow:var(--fokus-ring)}
+.papier{background:#FFFFFF;color:#1D2530;border-radius:var(--r-klein);box-shadow:var(--schatten-heben);padding:40px 48px;font:400 15px/1.6 var(--schrift-papier);position:sticky;top:calc(var(--kopf-h,92px) + var(--a5));max-height:calc(100vh - var(--kopf-h,92px) - 54px);overflow:auto}
+/* Das Papier ist in jedem Thema weiß: Es bekommt die hellen Farben als eigene Werte, damit alles darin (Anmerkungen, Tabellen, Diagramme) lesbar bleibt - nicht nur, was einzeln überschrieben wurde. */
+.papier{--blatt:#FFFFFF;--blatt-2:#F7F5F0;--tinte:#1D2530;--tinte-2:#4C5661;--linie:#DDD8CF;--linie-stark:#867F74;--akzent-hell:#E2F0EC;--dg-a:#17756A;--dg-b:#C4502F;--dg-achse:#4C5661;--dg-gitter:#E6E2DA}
+.papier h2{font:700 17px/1.3 var(--schrift-papier);margin:20px 0 8px}
+.papier p{margin:0 0 10px;text-indent:1.5em}
+.papier .notiz-zitat{text-indent:0;color:#4C5661;font-style:italic}
+.papier table.apa{font-size:14px;color:#1D2530}
+.papier table.apa thead tr:first-child th,.papier table.apa thead tr:last-child th,.papier table.apa tbody tr:last-child td{border-color:#1D2530}
+
+/* Dialoge */
+dialog{border:0;border-radius:var(--r-gross);background:var(--blatt-gehoben);color:var(--tinte);box-shadow:var(--schatten-heben);padding:0;width:min(35rem,calc(100vw - 2rem));max-height:calc(100vh - 3rem)}
+dialog::backdrop{background:rgba(20,24,29,.45)}
+.dialog-innen{padding:var(--a4) var(--a5);display:flex;flex-direction:column;gap:var(--a4)}
+.dialog-kopf{display:flex;align-items:flex-start;gap:var(--a3)}
+.dialog-kopf h2{font:650 var(--gr-h2)/1.25 var(--schrift-ui);flex:1;padding-top:var(--a2)}
+.wer-sieht{display:grid;gap:var(--a2);background:var(--blatt-2);border-radius:var(--r);padding:var(--a4)}
+.wer-sieht div{display:grid;grid-template-columns:24px 1fr;gap:var(--a3)}
+.ankreuz{display:flex;gap:var(--a3);align-items:flex-start;min-height:var(--ziel);cursor:pointer;padding-top:10px}
+.ankreuz input{width:22px;height:22px;accent-color:var(--akzent);margin:0;flex:none}
+
+/* Meldungen (Toast, Banner, Fehlerkarte) */
+.toast-ort{position:fixed;left:50%;bottom:var(--a5);transform:translateX(-50%);z-index:60;display:flex;flex-direction:column;gap:var(--a2);width:min(560px,calc(100vw - 32px))}
+.toast{display:flex;align-items:center;gap:var(--a3);background:var(--tinte);color:var(--blatt);border-radius:var(--r);padding-block: var(--a2); padding-inline: var(--a4) var(--a2);box-shadow:var(--schatten-heben);animation:aufklappen var(--dauer) var(--kurve)}
+.toast span{flex:1}
+.toast .k{background:transparent;color:var(--blatt);border-color:color-mix(in srgb,var(--blatt) 45%,transparent)}
+.banner{display:flex;gap:var(--a3);align-items:flex-start;padding:var(--a3) var(--a4);border-radius:var(--r);background:var(--hinweis-hell);color:var(--tinte);border:1px solid var(--hinweis-linie)}
+.banner .ico{color:var(--hinweis);margin-top:2px}
+.banner.ruhig{background:var(--blatt-2);border-color:var(--linie)}
+.banner.ruhig .ico{color:var(--tinte-2)}
+.meldung-karte{background:var(--blatt);border-radius:var(--r-gross);box-shadow:var(--schatten-blatt);padding:var(--a5);display:grid;grid-template-columns:auto 1fr;gap:var(--a2) var(--a4);max-width:640px}
+.meldung-karte>.ico{color:var(--hinweis);margin-top:4px;width:1.5rem;height:1.5rem}
+.meldung-karte h2,.meldung-karte h3{font:650 var(--gr-h2)/1.35 var(--schrift-ui)}
+.meldung-karte .tun{color:var(--tinte)}
+.meldung-karte details pre{font:400 var(--gr-klein)/1.5 var(--schrift-befehl);background:var(--blatt-2);border-radius:var(--r-klein);padding:var(--a3);white-space:pre-wrap;margin:var(--a2) 0 0}
+.meldung-karte .knopfzeile,.meldung-karte details,.meldung-karte .ganz{grid-column:2}
+.galerie{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:var(--a5);padding:0 var(--a5) var(--a7)}
+.galerie>section>h2{font:650 var(--gr-klein)/1.3 var(--schrift-ui);letter-spacing:.06em;text-transform:uppercase;color:var(--tinte-2);margin:0 0 var(--a3)}
+.leer-zustand{background:var(--blatt);border-radius:var(--r-gross);padding:var(--a6);text-align:center;display:flex;flex-direction:column;align-items:center;gap:var(--a3);box-shadow:var(--schatten-blatt)}
+.leer-zustand .ico.gross{color:var(--akzent-tinte)}
+.leer-zustand h1,.leer-zustand h3{font:600 var(--gr-h1)/1.3 var(--schrift-heft)}
+.leer-zustand p{color:var(--tinte-2);max-width:36ch}
+.befehlsfeld{font:400 var(--gr-text)/1.7 var(--schrift-befehl);background:var(--blatt-2);border-radius:var(--r);padding:var(--a3) var(--a4)}
+.befehlsfeld mark{background:none;color:inherit;text-decoration:underline wavy var(--hinweis);text-decoration-thickness:2px;text-underline-offset:5px}
+
+/* Rundgang */
+.rundgang-schleier{position:fixed;inset:0;background:rgba(20,24,29,.35);z-index:40}
+.rundgang-blase{position:fixed;z-index:50;width:min(360px,calc(100vw - 32px));background:var(--blatt-gehoben);border-radius:var(--r-gross);box-shadow:var(--schatten-heben);padding:var(--a5)}
+.rundgang-blase h2{font:650 var(--gr-h2)/1.3 var(--schrift-heft);margin-bottom:var(--a2)}
+.rundgang-blase .zaehler{font-size:var(--gr-klein);color:var(--tinte-2);margin-bottom:var(--a2)}
+.rundgang-blase .knopfzeile{margin-top:var(--a4);justify-content:space-between}
+.rundgang-blase .rg-fach{margin-top:var(--a3)}
+.rundgang-blase .rg-weise{margin:var(--a3) 0 0;padding:0;border:0;display:grid;gap:var(--a2);min-width:0}
+.rundgang-blase .rg-weise .option{align-items:flex-start}
+.rundgang-blase .rg-weise input{flex:none;width:24px;height:24px;margin:0}
+.rundgang-ziel{position:relative;z-index:45;outline:3px solid var(--akzent);outline-offset:4px;box-shadow:0 0 0 4px var(--blatt),0 0 0 7px var(--akzent);border-radius:var(--r)}
+
+/* Einstellungen */
+.einst-gruppe{padding:var(--a3) 0;border-top:1px solid var(--linie)}
+.einst-gruppe:first-of-type{border-top:0}
+.einst-gruppe h2,.einst-gruppe h3{font:650 var(--gr-h2)/1.3 var(--schrift-ui);margin-bottom:var(--a1)}
+.einst-gruppe>p{color:var(--tinte-2);margin-bottom:var(--a3)}
+/* Vorschau der Tabellen-Ansicht (09.10.): folgt Maus und Fokus über den Wahlknöpfen. */
+.segment{display:inline-flex;flex-wrap:wrap;gap:var(--a2)}
+.segment label{display:inline-flex;align-items:center;gap:var(--a2);min-height:var(--ziel);padding:0 var(--a3);border-radius:var(--r-klein);border:1px solid var(--linie-stark);cursor:pointer;background:var(--blatt);transition:background-color var(--dauer-wechsel) var(--kurve),border-color var(--dauer-wechsel) var(--kurve),color var(--dauer-wechsel) var(--kurve),box-shadow var(--dauer-wechsel) var(--kurve)}
+.segment label:has(input:checked){border-color:var(--akzent);background:var(--akzent-hell);color:var(--akzent-tinte);font-weight:600;box-shadow:inset 0 0 0 1px var(--akzent)}
+.segment label:has(input:focus-visible){outline:var(--fokus-outline);outline-offset:2px;box-shadow:var(--fokus-ring)}
+.segment input:focus-visible{outline-color:transparent}
+.segment input{accent-color:var(--akzent);width:18px;height:18px;margin:0}
+
+/* Diagramm */
+.diagramm{width:100%;max-width:640px;height:auto;display:block}
+.diagramm text{font-family:var(--schrift-ui);fill:var(--tinte)}
+.diagramm .klein{font-size:13px;fill:var(--tinte-2)}
+/* Handy: Schrift in der Zeichnung größer, damit sie auf dem Bildschirm lesbar bleibt (lib/dgschrift.ts) */
+.diagramm.skaliert .klein{font-size:var(--dg-klein)!important}
+.diagramm.skaliert text[style*="font-size"]{font-size:var(--dg-text)!important}
+.dg-editor{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,1fr);gap:var(--a6);align-items:start}
+.dg-editor .eingabe+.eingabe,.dg-editor .einst-gruppe{margin-top:var(--a4)}
+
+/* Handy-Galerie */
+.handys{display:flex;flex-wrap:wrap;gap:var(--a6);padding:0 var(--a5) var(--a7)}
+.handys figure{margin:0}
+.handys figcaption{font-weight:600;margin-bottom:var(--a2);color:var(--tinte-2)}
+.handys iframe{width:390px;height:800px;border:0;border-radius:28px;box-shadow:0 0 0 10px #1D2530,var(--schatten-heben);background:var(--grund)}
+
+/* Entwurfsnavigation (nicht Teil des Produkts) */
+.entwurf-nav{position:fixed;inset-inline-start: 12px;bottom:12px;z-index:70}
+.entwurf-nav a{display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:var(--r-rund);background:var(--tinte);color:var(--blatt);font:600 13px var(--schrift-ui);text-decoration:none;opacity:.85}
+.entwurf-uebersicht{max-width:980px;padding:var(--a6) var(--a5) var(--a8);margin:0 auto}
+.entwurf-uebersicht h1{font:600 var(--gr-h1) var(--schrift-heft);margin-bottom:var(--a2)}
+.entwurf-uebersicht ol{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--a3);padding:0;list-style:none;margin-top:var(--a5)}
+.entwurf-uebersicht li a{display:block;background:var(--blatt);border-radius:var(--r);padding:var(--a3) var(--a4);text-decoration:none;color:var(--tinte);min-height:var(--ziel)}
+.entwurf-uebersicht li a b{display:block}
+.entwurf-uebersicht li a span{color:var(--tinte-2);font-size:var(--gr-klein)}
+
+.im-test .entwurf-hinweis{display:none}
+/* Handy-Leiste unten */
+.unten-leiste{display:none}
+
+/* ---------- Mittlere Breite ---------- */
+/* gefühlte Breite: (max-width:1100px) */
+  :where(:root.eng-520) .tisch{grid-template-columns:minmax(0,1fr)}
+  :where(:root.eng-520) .rand{position:static}
+  :where(:root.eng-1100) .bericht{grid-template-columns:minmax(0,1fr)}
+  :where(:root.eng-1100) .papier{position:static;max-height:none}
+  :where(:root.eng-1100) .dg-editor{grid-template-columns:minmax(0,1fr)}
+  :where(:root.eng-1100) .spalte{grid-template-columns:1fr 1fr}
+/* Unter 1000 px reicht die Kopfzeile nicht für die Reiter: die untere Leiste übernimmt (wie am Handy). */
+/* gefühlte Breite: (max-width:1000px) and (min-width:701px) */
+  :where(:root.eng-1000.weit-701) .kopf .reiter{display:none}
+  :where(:root.eng-1000.weit-701) .tisch,:where(:root.eng-1000.weit-701) .bericht,:where(:root.eng-1000.weit-701) .galerie{padding-bottom:96px}
+  :where(:root.eng-1000.weit-701) .unten-leiste{display:flex;position:fixed;inset-inline-start: 0;inset-inline-end: 0;bottom:0;z-index:30;background:var(--blatt-gehoben);border-top:1px solid var(--linie);padding:4px 4px calc(4px + env(safe-area-inset-bottom))}
+  :where(:root.eng-1000.weit-701) .unten-leiste a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;color:var(--tinte-2);text-decoration:none;font-size:var(--gr-klein);font-weight:600;border-radius:var(--r)}
+  :where(:root.eng-1000.weit-701) .unten-leiste a[aria-current="page"]{color:var(--akzent-tinte);background:var(--akzent-hell)}
+/* Schmales Handy: die Kopfzeile war breiter als der Bildschirm (426 px bei 375 px) und machte die ganze Seite seitlich verschiebbar.
+   Nur das Logo (der Name steht im Seitentitel), engere Abstände, quadratische Knöpfe. */
+/* gefühlte Breite: (max-width:480px) */
+  :where(:root.eng-480) .marke span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  :where(:root.eng-480) .marke{padding-inline-end:0}
+  :where(:root.eng-480) .kopf{gap:var(--a2)}
+  :where(:root.eng-480) .kopf-rechts{gap:0}
+  :where(:root.eng-480) .kopf-rechts a.k{width:var(--ziel);padding:0;justify-content:center}
+  :where(:root.eng-480) .kopf-rechts button.kopf-suche{width:var(--ziel)}
+  :where(:root.eng-480) .kopf-trenner{display:none}
+  /* Mit Projekt (Rückgängig, Wiederholen, Projektname) sind es bis zu zehn Knöpfe: die Knöpfe rücken in eine eigene Zeile und brechen bei Bedarf um (375 px: 424 px breit, Projekt-Knopf 22 px; Abnahme 31.10. S1) */
+  :where(:root.eng-480) .kopf-oben{flex-wrap:wrap;row-gap:var(--a1)}
+  :where(:root.eng-480) .kopf-rechts{flex-wrap:wrap;max-width:100%;justify-content:flex-end}
+/* Handy stark vergrößert (gefühlt unter 340 px, z. B. 390-px-Handy bei 150 %): eine Zeile reicht nicht mehr für den Kopf.
+   Die Knöpfe fließen in eine zweite Zeile weiter; der Kopf bleibt oben stehen, damit − / + immer erreichbar sind. */
+:where(:root.eng-339) .kopf-oben{flex-wrap:wrap;row-gap:var(--a1)}
+:where(:root.eng-339) .kopf-rechts{display:contents}
+/* Stufe 10 (Tablet, 768 px): mit Projekt braucht die Kopfzeile 822 px und lief zwischen 701 und 850 px über (Ansicht abgeschnitten, Zahnrad weg).
+   Bis 860 px zeigt das Suchfeld darum nur die Lupe, wie am Handy (Leitregel R4 erlaubt die Lupe ohne Text); der Name bleibt für Vorleser. */
+/* gefühlte Breite: (max-width:860px) */
+  :where(:root.eng-860) .kopf-suche{width:var(--ziel);max-width:none;padding:0;justify-content:center}
+  :where(:root.eng-860) .kopf-suche .nur-breit{display:none}
+/* ---------- Handy ---------- */
+/* gefühlte Breite: (max-width:700px) */
+  :root:where(.eng-700){--seitenrand:var(--a3)}
+  :where(:root.eng-700) .kopf{padding:var(--a2) var(--seitenrand)}
+  :where(:root.eng-700) .kopf-oben{min-height:40px}
+  :where(:root.eng-700) .kopf .reiter,:where(:root.eng-700) .kopf .nur-breit{display:none}
+  :where(:root.eng-700) .kopf-suche{width:var(--ziel);max-width:none;padding:0;justify-content:center}   /* Rückgängig bleibt auch am Handy (Prüfung E1) */
+  :where(:root.eng-700) .tisch,:where(:root.eng-700) .bericht,:where(:root.eng-700) .galerie{padding:0 0 96px}
+  :where(:root.eng-700) .blatt{border-radius:0;padding:var(--a4) var(--a4) var(--a6);box-shadow:none}
+  :where(:root.eng-700) .feld{grid-template-columns:30px minmax(0,1fr);gap:0 var(--a3)}
+  :where(:root.eng-700) .nr{width:28px;height:28px;font-size:var(--gr-klein)}
+  :where(:root.eng-700) .ergebnis-satz{font-size:var(--gr-h2)}
+  :where(:root.eng-700) .lueckensatz{font-size:var(--gr-h2);line-height:2.1}
+  :where(:root.eng-520) .rand{display:none}
+  :where(:root.eng-520) .rand-zu{display:block}
+  :where(:root.eng-700) .start{padding:var(--a5) var(--seitenrand) 96px}
+  :where(:root.eng-700) .start h1{font-size:var(--gr-h1)}
+  :where(:root.eng-700) .weg-gross{padding:var(--a4)}
+  :where(:root.eng-700) .spalte{grid-template-columns:1fr}
+  :where(:root.eng-700) .galerie{grid-template-columns:1fr}
+  :where(:root.eng-700) .unten-leiste{display:flex;position:fixed;inset-inline-start: 0;inset-inline-end: 0;bottom:0;z-index:30;background:var(--blatt-gehoben);border-top:1px solid var(--linie);padding:4px 4px calc(4px + env(safe-area-inset-bottom))}
+  :where(:root.eng-700) .unten-leiste a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;color:var(--tinte-2);text-decoration:none;font-size:var(--gr-klein);font-weight:600;border-radius:var(--r)}
+  :where(:root.eng-700) .unten-leiste a[aria-current="page"]{color:var(--akzent-tinte);background:var(--akzent-hell)}
+  :where(:root.eng-700) .toast-ort{bottom:84px}
+  :where(:root.eng-700) .papier{padding:28px 24px}
+  :where(:root.eng-700) .daten-kopf{padding:0 var(--a4)}
+  :where(:root.eng-700) .daten-titel{flex-basis:100%}
+  :where(:root.eng-700) .original{white-space:normal;overflow-wrap:anywhere;max-width:100%}   /* zweizeilig statt abgeschnitten - „wird nie verändert“ muss lesbar bleiben (E5) */
+    :where(:root.eng-700) .raster-huelle{border-radius:0;border-inline-start:0;border-inline-end:0;max-height:none}
+  :where(:root.eng-700) .entwurf-nav{bottom:76px}
+.gruppen-namen{margin-top:var(--a2)}
+.gruppen-namen summary{font-size:var(--gr-text)}
+.gruppen-namen .hilfe{display:block;margin:var(--a2) 0}
+.gruppe-zeile{display:grid;grid-template-columns:minmax(3.5em,auto) minmax(0,1fr);gap:var(--a2);align-items:center;margin-top:var(--a2)}
+.gruppe-zeile label{font:600 var(--gr-text) var(--schrift-ui);text-align:right}
+.schritte li{flex-wrap:wrap}
+.lade-balken{flex:1 1 120px;height:6px;border-radius:3px;background:var(--linie);overflow:hidden;min-width:80px}
+.lade-balken>span{display:block;height:100%;background:var(--akzent);border-radius:3px}
+.lade-zahl{font-size:var(--gr-klein);color:var(--tinte-2);font-variant-numeric:tabular-nums}
+/* Daten eingeben */
+table.raster td.ein{padding:0}
+.zelle-ein{width:100%;min-width:7em;height:29px;border:0;background:transparent;font:inherit;color:inherit;padding:0 var(--a3);border-radius:0}
+td.zahl .zelle-ein{text-align:right}
+.zelle-ein:focus{outline:var(--fokus-outline);outline-offset:-3px;background:var(--akzent-hell)}
+.zeile-weg{margin-inline-start:6px;border:0;background:none;color:var(--tinte-2);cursor:pointer;padding:2px;border-radius:var(--r-klein);vertical-align:middle;line-height:0}
+.zeile-weg:hover,.zeile-weg:focus-visible{color:var(--tinte);background:var(--blatt)}
+.zeile-weg .ico{width:14px;height:14px}
+.eingabe-leiste{display:flex;flex-wrap:wrap;gap:var(--a3);align-items:center;margin-top:var(--a3)}
+.eingabe-leiste .hilfe{flex:1 1 260px;color:var(--tinte-2);font-size:var(--gr-klein)}
+.neue-spalte{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--a3);align-items:end;margin-top:var(--a3);padding:var(--a4);border:1px solid var(--linie);border-radius:var(--r-gross);background:var(--blatt-2)}
+.neue-spalte .knopfzeile{grid-column:1/-1}
+:where(:root.eng-860) .wege,:where(:root.eng-860) .weitere-gruppen{grid-template-columns:1fr}
+.studie-form{margin-top:var(--a3);padding:var(--a5);border:1px solid var(--linie);border-radius:var(--r-gross);background:var(--blatt);display:grid;gap:var(--a4)}
+.studie-form fieldset{border:0;padding:0;margin:0;display:grid;gap:var(--a3)}
+.studie-form legend{font-weight:650;margin-bottom:var(--a2)}
+.studie-spalte{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1.2fr) minmax(0,1fr) auto;gap:var(--a3);align-items:end}
+.studie-spalte>.k{align-self:end}
+.studie-form .hilfe{color:var(--tinte-2);font-size:var(--gr-klein)}
+/* gefühlte Breite: (max-width:640px) */
+:where(:root.eng-640) .studie-spalte{grid-template-columns:1fr auto}:where(:root.eng-640) .studie-spalte .eingabe:first-child{grid-column:1/-1}
+/* Skala-Blatt: umpolen und Skalenwert (Test 07.10.) */
+.skala-weiter{border-top:1px solid var(--linie);padding-top:var(--a4)}
+.skala-weiter h3,.skala-weiter h4{font-size:var(--gr-h2);margin:0}
+.weiter-mit .nr{background:var(--blatt-2);color:var(--tinte-2)}
+.wm-satz{color:var(--tinte-2);margin:0 0 var(--a3);max-width:var(--breite-text)}
+.wm-gruppe{margin-top:var(--a4)}
+.wm-gruppe:first-of-type{margin-top:var(--a3)}
+.wm-gruppe h3{font:650 var(--gr-text)/1.3 var(--schrift-ui);margin:0 0 var(--a2);color:var(--tinte)}
+.wm-gruppe:not(:has(.wm-inhalt > *)){display:none}
+.weiter-mit:not(:has(.wm-inhalt > *)){display:none}
+.wm-liste{list-style:none;margin:var(--a3) 0 0;padding:0;display:grid;gap:var(--a2)}
+.wm-neu{margin:var(--a3) 0 0}
+.weiter-mit.kompakt .wm-gruppe{margin-top:var(--a3)}
+.weiter-mit.kompakt .wm-gruppe h3{margin-bottom:var(--a1)}
+.weiter-mit.kompakt .wm-inhalt > *{margin-top:var(--a2)}
+.weiter-mit.kompakt .wm-liste,.weiter-mit.kompakt .wm-neu{margin-top:var(--a2)}
+.sw-form{display:flex;flex-wrap:wrap;gap:var(--a3);align-items:flex-end}
+.sw-form .eingabe{flex:0 1 22ch}
+
+/* ---------- Einheitlich auf- und zuklappen (Prüfung 07.10. abends) ----------
+   Jede Ausklappliste rutscht weich nach unten: <details> über ::details-content (Chrome, Edge, Safari 18.4+, Firefox 143+),
+   in älteren Browsern rutscht wenigstens der Inhalt herein. Aufklappende Felder ohne <details> tragen die Klasse .klappt. */
+:root{interpolate-size:allow-keywords;--dauer-rutsch:700ms}
+details::details-content{block-size:0;overflow:clip;transition:block-size var(--dauer-rutsch) var(--kurve),content-visibility var(--dauer-rutsch) allow-discrete}
+details[open]::details-content{block-size:auto}
+details[open]>:not(summary){animation:herunter var(--dauer-rutsch) var(--kurve)}
+.klappt{}/* rutscht per transition:rutsch (lib/rutsch.ts) */
+/* Zuklappen ohne den Inhalt zu zerstören (Ausgaben mit Diagrammen): Gitterhöhe 1fr -> 0fr */
+.zuklapp{display:grid;grid-template-rows:1fr;transition:grid-template-rows var(--dauer-rutsch) var(--kurve)}
+.zuklapp.zu{grid-template-rows:0fr}
+.zuklapp>.zuklapp-innen{overflow:hidden;min-height:0;padding:6px;margin:-6px}   /* Rand für den Fokusring (5 px), sonst wird er abgeschnitten */
+.zuklapp.zu>.zuklapp-innen{visibility:hidden;transition:visibility 0s var(--dauer-rutsch)}
+@keyframes herunter{from{opacity:0;transform:translateY(-8px);clip-path:inset(0 0 100% 0)}to{opacity:1;transform:none;clip-path:inset(0 0 -40px 0)}}
+details>summary{transition:color var(--dauer-kurz)}
+details.auf>summary:hover{color:var(--akzent-druck)}
+details.auf>summary::before{transition:transform var(--dauer-rutsch) var(--kurve)}
+
+/* Nach dem Seitenwechsel bekommt die Überschrift den Fokus (für Vorleseprogramme) - ohne blauen Rahmen darum. */
+#inhalt h1[tabindex="-1"]:focus{box-shadow:none;outline:none}
+
+/* Zurück: auf jeder Nebenseite gleich, rechts neben der Überschrift. */
+.blatt-kopf .zurueck{flex:none}
+/* Einheitlicher Seitenkopf (SeitenKopf.svelte): Titel mit „?“ davor nicht auseinanderziehen, Aktionen rechts, Hauptaktion zuletzt. */
+.sk .sk-titel{display:flex;align-items:center;gap:var(--a2);flex:0 1 auto;min-width:0}
+.blatt-kopf.sk h1{flex:0 1 auto;min-width:0}
+.blatt-kopf.sk .sk-titel{min-width:min(100%,16ch)}   /* Stufe 10: Mindestbreite am Titelblock statt am h1 - sonst stand das „?“ bei kurzen Titeln (Einstellungen, Befehle, Bericht) weit hinter dem Titel (R5) */
+.sk.daten-kopf .sk-titel{min-width:min(100%,14rem)}   /* Stufe 10: wie bei .blatt-kopf - Mindestbreite am Titelblock, nicht am h1 (R5) */
+.sk.ohne-mitte .sk-titel{flex:1 1 0}   /* Ohne Mitte nimmt der Titel den freien Platz und bricht in sich um - sonst rutschten bei langen Titeln (Lerneinheiten, Blätter) „Zurück“ und die Aktionen in eine eigene Zeile */
+.sk .sk-aktionen{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:var(--a2);margin-inline-start:auto}
+:where(:root.eng-700) .sk.daten-kopf .sk-titel,:where(:root.eng-700) .sk.ohne-mitte .sk-titel{flex-basis:100%}   /* schmal: Titel über die ganze Zeile, Knöpfe darunter */
+/* Offene Nebenseite: ihr Knopf in der Kopfzeile sieht gedrückt aus und schließt sie wieder. */
+.kopf-rechts .k[aria-current="page"]{background:var(--akzent-hell);border-color:var(--akzent)}
+
+/* Touch-Geräte (Handy, Tablet): Finger brauchen 44 px - mit der Maus reichen 32 px (Johannes 07.10.: „die Schalter sind viel zu hoch“). */
+@media (pointer:coarse){:root{--ziel:2.75rem}.luecke,.marke-k{min-height:40px}}
+.spalte .normwerte-zeile{grid-column:1/-1}
+.normwerte-oben{margin:var(--a3) 0 var(--a4)}
+
+/* Meta-Analyse: Eingabetabelle der Studien (Zeile = Studie) */
+.meta-eingabe{border-collapse:collapse;width:100%;min-width:30rem}
+.meta-eingabe th{text-align: start;font-size:var(--s-klein,.85rem);font-weight:600;padding:var(--a1,4px) var(--a2,6px);vertical-align:bottom}
+.meta-eingabe td{padding:2px var(--a1,4px)}
+.meta-eingabe td:first-child input{min-width:11rem}
+.meta-eingabe input{width:100%;min-width:5rem;box-sizing:border-box}
+/* Handy: eine Karte je Studie (Name oben, die Zahlen in zwei Spalten mit sichtbarer Beschriftung) statt einer Tabelle, die über den Rand läuft (Abnahme 3, M3). */
+/* gefühlte Breite: (max-width:600px) */
+  :where(:root.eng-600) .meta-eingabe,:where(:root.eng-600) .meta-eingabe tbody{display:block;min-width:0}
+  :where(:root.eng-600) .meta-eingabe thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  :where(:root.eng-600) .meta-eingabe caption{display:block}
+  :where(:root.eng-600) .meta-eingabe tr{display:grid;grid-template-columns:1fr 1fr;gap:var(--a2,6px) var(--a2,6px);position:relative;border:1px solid var(--linie);border-radius:var(--r-klein,8px);padding:var(--a3,10px);margin-bottom:var(--a3,10px)}
+  :where(:root.eng-600) .meta-eingabe td{display:block;padding:0;min-width:0}
+  :where(:root.eng-600) .meta-eingabe td:first-child{grid-column:1 / -1;padding-inline-end:44px}
+  :where(:root.eng-600) .meta-eingabe td:last-child{position:absolute;top:var(--a2,6px);inset-inline-end: var(--a2,6px)}
+  :where(:root.eng-600) .meta-eingabe td[data-label]::before{content:attr(data-label);display:block;font-size:var(--s-klein,.85rem);color:var(--tinte-2);margin-bottom:2px}
+  :where(:root.eng-600) .meta-eingabe td:first-child input,:where(:root.eng-600) .meta-eingabe input{min-width:0}
+
+/* Rahmen, die waagerecht rollen (Tabellen am Handy, siehe lib/rollrahmen.ts): Schatten am Rand zeigt, dass es weitergeht. */
+.rollt{background:linear-gradient(to right,var(--blatt) 30%,transparent) left/24px 100% no-repeat local,linear-gradient(to left,var(--blatt) 30%,transparent) right/24px 100% no-repeat local,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.22),transparent) left/10px 100% no-repeat scroll,radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.22),transparent) right/10px 100% no-repeat scroll}
+.rollt:focus-visible{outline:var(--fokus-outline);outline-offset:-3px}
+
+/* Mehrfachantworten: Hinweis auf die Basis (Abnahme 4, B3) - bei mehr als einem Zehntel Nichtankreuzern hervorgehoben */
+.basis-frage{margin:0 0 var(--a2);color:var(--tinte-2)}
+.basis-frage.stark{color:var(--tinte);font-weight:600;padding:var(--a2) var(--a3);border-inline-start:3px solid var(--akzent);background:var(--akzent-hell);border-radius:var(--r-klein)}
+/* Erinnerung ans Speichern (Abnahme 4, B14): Der Text nimmt die ganze Breite, die Knöpfe stehen darunter - statt eines schmalen Streifens mit sieben Zeilen. */
+.toast.hinweis-datei{row-gap:var(--a2)}
+.toast.hinweis-datei>span{flex:1 1 100%}
+.umpol-spanne{display:flex;flex-wrap:wrap;gap:var(--a2) var(--a3);align-items:center;margin:var(--a2) 0}
+.umpol-spanne input{width:5em}
+
+.toast > span{flex:1}
+.toast .nur-symbol{color:inherit}
+
+/* Seitenleiste ein- und ausklappen: flacher Schalter oben in der Leiste (RandSchalter.svelte) */
+.rand-schalter{font:inherit;display:flex;align-items:center;justify-content:center;width:100%;height:24px;min-height:24px;flex:none;padding:0;border:0;border-radius:var(--r-klein);background:var(--blatt-2);color:var(--tinte-2);cursor:pointer;transition:background var(--dauer),color var(--dauer)}
+.rand-schalter:hover{background:var(--akzent-hell);color:var(--akzent-tinte)}
+.rand-schalter svg{transition:transform var(--dauer-rutsch) var(--kurve)}
+:root:not(.rand-eng) .rand-schalter{position:absolute;top:var(--a1);inset-inline-end:var(--a1);width:24px;z-index:1;background:transparent}   /* ausgeklappt: kleiner Knopf in der Ecke statt eigener Streifen - die Karte im Rand beginnt bündig mit dem Blatt */
+:root:not(.rand-eng) .rand-schalter:hover{background:var(--akzent-hell)}
+:root:not(.rand-eng) .rand-schalter + *{padding-inline-end:calc(var(--a3) + 20px)}
+.tisch{transition:grid-template-columns var(--dauer-rutsch) var(--kurve)}
+:root.rand-eng .tisch:not(.ohne-rand){grid-template-columns:minmax(0,1fr) 28px}
+:root.rand-eng .rand>:not(.rand-schalter){display:none}
+:root.rand-eng .rand-schalter{height:72px}
+:root.rand-eng .rand-schalter.mit-text{height:auto;min-height:72px;flex-direction:column;gap:var(--a2);padding:var(--a3) 0;color:var(--akzent-tinte)}
+.rand-schalter .rand-text{writing-mode:vertical-rl;font:650 var(--gr-klein)/1.2 var(--schrift-ui);white-space:nowrap}
+
+/* ---------- Schmal oder stark vergrößert: Daten-Check und Randerklärung als Blatt von unten ---------- */
+.check-leiste{display:none}
+/* gefühlte Breite: (max-width:1100px) */
+  :root:where(.eng-520){--unten:0px}
+  :where(:root.eng-520) dialog.blatt-unten{position:fixed;inset:auto 0 0 0;margin:0;width:100%;max-width:100%;max-height:85vh;border-radius:var(--r-gross) var(--r-gross) 0 0}
+  :where(:root.eng-520) .tisch.breit{padding-bottom:calc(var(--unten) + 4rem)}
+  :where(:root.eng-520) .rand-schalter{display:none}
+  :root:where(.eng-520).rand-eng .tisch:not(.ohne-rand){grid-template-columns:minmax(0,1fr)}
+  :root:where(.eng-520).rand-eng .rand>:not(.rand-schalter){display:revert}
+  :where(:root.eng-520) .check-leiste{display:flex;align-items:center;gap:var(--a2);position:fixed;inset-inline-start: var(--a2);inset-inline-end: var(--a2);bottom:calc(var(--unten) + var(--a2));z-index:36;min-height:var(--ziel);padding:0 var(--a3);border:1px solid var(--linie-stark);border-radius:var(--r);background:var(--blatt-gehoben);box-shadow:var(--schatten-heben);color:var(--akzent-tinte);font:650 var(--gr-text)/1 var(--schrift-ui);cursor:pointer}
+  :where(:root.eng-520) .check-leiste span{flex:1;text-align: start}
+  :where(:root.eng-520) .check-leiste svg{transition:transform var(--dauer-rutsch) var(--kurve)}
+  :where(:root.eng-520) aside.rand.check{position:fixed;inset-inline-start: var(--a2);inset-inline-end: var(--a2);bottom:calc(var(--unten) + var(--a2) + var(--ziel) + var(--a2));max-height:65vh;overflow:auto;z-index:35;padding:var(--a3);background:var(--blatt-gehoben);border-radius:var(--r-gross);box-shadow:var(--schatten-heben);transform:translateY(calc(100% + 8rem));visibility:hidden;transition:transform var(--dauer-rutsch) var(--kurve),visibility 0s var(--dauer-rutsch)}
+  :where(:root.eng-520) aside.rand.check.auf{transform:none;visibility:visible;transition:transform var(--dauer-rutsch) var(--kurve)}
+/* gefühlte Breite: (max-width:1000px) */
+:root:where(.eng-1000){--unten:calc(64px + env(safe-area-inset-bottom))}
+
+/* Ergebnis: bei breitem Fenster fließt der Inhalt in mehrere Spalten (Text links, Diagramm daneben) statt eine schmale Spalte zu füllen. */
+/* Ergebnis und „Für deine Arbeit“ (09.10.): EINE Lesespalte von oben nach unten - Überschriften und Ausklapplisten stehen immer links.
+   Keine Zeitungsspalten (columns): dort sprang beim Aufklappen alles Folgende in die nächste Spalte und ließ Löcher. Breite nutzen nur die
+   Tabellen: mehrere Tabellen stehen nebeneinander (.ausgabe-raster in Ausgabe.svelte), in Lesereihenfolge Zeile für Zeile. */
+.ergebnis-spalten{display:block}
+
+/* Spalten beschreiben: bei breitem Fenster stehen mehrere Spalten-Karten nebeneinander */
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,62rem),1fr));gap:var(--a3) var(--a4);align-items:start}
+
+/* Befehle: bei breitem Fenster Befehle links, Ausgaben rechts daneben */
+.bf-raster{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--a5)}
+.bf-links,.bf-rechts{min-width:0}
+/* gefühlte Breite: (min-width:1400px) */
+:where(:root.weit-1400) .bf-raster{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start}
+
+/* Hinweisleiste über dem Kopf (OfflineHinweis.svelte): ruhig, kein Fehlerton */
+.kopf-leiste{display:flex;flex-wrap:wrap;align-items:center;gap:var(--a2) var(--a4);padding:var(--a2) var(--seitenrand);background:var(--akzent-hell);color:var(--tinte);border-bottom:1px solid var(--linie-stark)}
+.kopf-leiste-text{flex:1 1 24em;min-width:0}
+.kopf-leiste-text p{margin:0;line-height:var(--zh)}
+.kopf-leiste-text p+p{margin-top:var(--a1)}
+.kopf-leiste-text a{color:var(--akzent-tinte);font-weight:600}
+.kopf-leiste-knoepfe{display:flex;flex-wrap:wrap;align-items:center;gap:var(--a2)}
+.kopf-leiste-knoepfe .k{background:var(--blatt)}
+
+/* Fokusring in Kästen mit overflow:hidden/auto (Einstellungen-Karten, Ecke der Datentabelle): von außen würde er abgeschnitten, darum nach innen */
+.ez-karte :focus-visible,.ez-karte label:has(input:focus-visible),.raster-huelle .ecke-k:focus-visible{outline:var(--fokus-outline);outline-offset:-3px;box-shadow:inset 0 0 0 2px var(--fokus)}
+/* Fachbegriffe im laufenden Text (lib/begriffsverlinker.ts): Knopf, der wie ein gepunktet unterstrichenes Wort aussieht und die Seitenleiste öffnet. */
+button.begriff-link{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cursor:pointer;text-align:inherit;text-decoration:underline dotted var(--akzent);text-decoration-thickness:1.5px;text-underline-offset:3px}
+button.begriff-link:hover,button.begriff-link:focus-visible{color:var(--akzent-tinte);text-decoration-style:solid}
+/* Zielgröße (WCAG 2.5.8): auch im Satz mindestens 24 px hoch (Stufe 2, B7); inline-flex, damit der Text mittig sitzt und die Zeilenhöhe kaum wächst */
+button.begriff-link{display:inline-flex;align-items:center;min-height:24px;vertical-align:baseline}
+/* Lange Spaltenlisten im Satz „Deine Frage“ (Meldung 01.11.): eingeklappt, eine Spalte je Zeile. */
+.spalten-liste{margin:var(--a2) 0}
+.spalten-liste ul{margin:var(--a2) 0 0;padding-inline-start:var(--a5);max-height:22rem;overflow:auto}
+.spalten-liste li{margin:0 0 var(--a1)}
+
+/* Mindestgröße 24x24 px (WCAG 2.5.8) für alleinstehende Bedienteile: Auswahlkreise und Schalter in Listen (axe target-size, Messung 06.11.2026). Fachwort-Knöpfe im Satz sind Ausnahme. */
+.vst-wahl label input,.segment label input,.option input{width:24px;height:24px;min-width:24px;min-height:24px;flex:none}
+.ez-klick input[type="checkbox"],.ez-klick input[type="radio"]{width:24px;height:24px;margin:0;flex:none}
+/* 1.4.10: Der Ein/Aus-Schalter (.schalter) behält seine 44 x 26 px; die 24-px-Regel darüber machte ihn 24 px breit, der Knopf ragte 17 px über die Karte (Einstellungen, 320 px). */
+.ez-klick .schalter input[type="checkbox"]{width:44px;height:26px;min-width:44px}
+
+/* Windows-Kontrastmodus (forced-colors), ein Block am Ende (Plan Barrierefreiheit 06.11.2026, Abschnitt 2). Nur Systemfarben, kein forced-color-adjust:none.
+   Zustandstabelle: Fokus Highlight 4 px durchgehend mit Abstand | gewählt Highlight 3 px durchgehend | erledigt LinkText dünn durchgehend | falsch CanvasText 3 px gestrichelt.
+   box-shadow verschwindet in diesem Modus, darum tragen outline und border jeden Zustand. Der Fokus-Block steht zuletzt und gewinnt mit !important auch gegen Stile in .svelte-Dateien und Inline-Stile.
+   Schalter (19.10.2026, Johannes): Spur und Knopf bestehen nur aus Hintergrundfarben, die Windows durch Canvas ersetzt - drei Träger ohne eigene Farbe: Fläche (leer gegen Highlight), Knopf (ButtonText gegen HighlightText), Lage (links gegen rechts). */
+@media (forced-colors: active){
+.schalter input{box-sizing:border-box;background:Canvas;border:2px solid ButtonText}
+.schalter input::after{top:1px;inset-inline-start: 1px;background:ButtonText}
+.schalter input:checked{background:Highlight;border-color:Highlight}
+.schalter input:checked::after{background:HighlightText}
+/* gewählt: Highlight, dick, durchgehend, innen (verschiebt nichts) */
+[aria-pressed="true"],[aria-selected="true"],[aria-expanded="true"],[aria-current]:not([aria-current="false"]),.option:has(input:checked),.segment label:has(input:checked),.vst-wahl label:has(input:checked),.ue-aussage:has(input:checked){outline:3px solid Highlight;outline-offset:-3px}
+/* erledigt: LinkText, dünn, durchgehend */
+.erledigt,.fund-karte.erledigt,.ue-aussage.ok{border:1px solid LinkText!important}
+/* falsch / übersprungen / Fund: CanvasText, dick, gestrichelt */
+.ue-aussage.daneben{border:3px dashed CanvasText!important}
+.lb-punkt.rot a,table.raster td.fund{outline:3px dashed CanvasText;outline-offset:-3px}
+/* Fachwort-Knöpfe: unterstrichen, nicht nur farbig */
+button.begriff-link,button.begriff{color:LinkText;text-decoration:underline dotted LinkText;text-decoration-thickness:2px}
+button.begriff-link:hover,button.begriff-link:focus-visible{text-decoration-style:solid}
+/* Fortschritt in "Lernen": Zeichen und Rand statt Füllfarbe */
+.lb-feld{fill:Canvas}
+/* Dialoge und Schwebendes hatten ihren Rand nur als box-shadow (Themen sw/ws/sg/gs/gb: Schatten = 2-px-Linie): Rand als border */
+dialog,.toast,.rundgang-blase{border:2px solid CanvasText}
+.lb-marke,.lb-ring{stroke:CanvasText}
+/* Diagramme: Texte tragen feste dunkle Füllfarben (Chromium ersetzt fill bei SVG-Text nicht); auf dem schwarzen Grund des dunklen Kontrastmodus waren Titel, Achsen und Zahlen unlesbar (Messung 08.11.2026, Nachthimmel). */
+.diagramm text,.diagramm .klein{fill:CanvasText}
+/* Fokus: zuletzt und mit !important; in Kästen mit overflow nach innen */
+:focus-visible,.zelle-ein:focus,.rollt:focus-visible{outline:4px solid Highlight!important;outline-offset:2px!important}
+.ez-karte :focus-visible,.ez-karte label:has(input:focus-visible),.raster-huelle .ecke-k:focus-visible,.zelle-ein:focus,.rollt:focus-visible,.lb-punkt a:focus-visible{outline-offset:-4px!important}
+}

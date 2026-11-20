@@ -1,0 +1,96 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "crlf-atlasti-kurze-namen.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 86,
+   "name": "Kurz",
+   "pruefung": "geprueft",
+   "sha256": "866e86beabda4057eccc2817dc4d13348481d44f7446f5b6931d80bec666c1f0",
+   "zaehlweise": "b"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Anna Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/Lärm",
+   "dokument": "Kurz",
+   "person": "Anna Beispiel",
+   "text": "Lärm"
+  },
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Kurz",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Kurz",
+   "person": "Anna Beispiel",
+   "text": "Fünfte"
+  }
+ ],
+ "meldungen": [
+  "zaehlweise-crlf"
+ ],
+ "meldungenDetail": [
+  {
+   "art": "zaehlweise-crlf",
+   "dokument": "Kurz"
+  }
+ ],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "ATLAS.ti 9",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 1,
+  "faelle": 0,
+  "kodierende": 1,
+  "kodierungen": 3,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 3,
+  "variablen": 0
+ }
+}

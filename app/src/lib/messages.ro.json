@@ -1,0 +1,1535 @@
+{
+  "_info": {
+    "stand": "2026-10-09",
+    "zweck": "Statable glossary (Romanian, polite plural without pronoun). Explanations and messages translated from the English template; muster/original/art unchanged.",
+    "regeln": [
+      "Messages: the first matching rule wins.",
+      "Explanations address no one directly; messages use the polite plural. The fields 'du' and 'sie' hold the same text.",
+      "Numbers in Romanian: decimal comma, no leading zero for p, r and alpha (,005).",
+      "pruefen: true = have a statistics expert check it before use."
+    ]
+  },
+  "erklaer": {
+    "bayes": {
+      "titel": "Factorul Bayes (BF₁₀)",
+      "kurz": "Arată datele mai mult spre o diferență sau împotriva uneia? Factorul Bayes (BF₁₀) le compară pe amândouă. BF₁₀ = 8 înseamnă: datele ar fi de aproximativ 8 ori mai probabile dacă există o diferență.",
+      "beispiel": "Durata de păstrare a pâinii de la două brutării: BF₁₀ = 6, deci datele sunt de 6 ori mai probabile cu o diferență. BF₁₀ = 0,25 ar însemna: de 4 ori mai probabile fără diferență (1 / 0,25 = 4).",
+      "vorsicht": "Factorul Bayes nu spune cât de probabilă este o diferență și depinde de o presupunere aleasă dinainte. O valoare apropiată de 1 înseamnă doar că nicio parte nu este susținută; etichete precum „moderat” sunt reguli empirice.",
+      "pruefen": true,
+      "fachwoerter": "valoarea p (cât de des ar apărea o diferență cel puțin atât de mare dacă nu există cu adevărat nicio diferență), H₀ și H₁ (presupunerile „nicio diferență” și „o diferență”), distribuția a priori (presupunerea despre diferențele posibile, aleasă dinainte), BF₀₁ (comparația inversă, BF₀₁ = 1 / BF₁₀)."
+    },
+    "p-wert": {
+      "titel": "Valoarea p",
+      "kurz": "Este o diferență reală sau doar întâmplare? Nu se poate ști niciodată sigur. Valoarea p ajută astfel: să presupunem că nu există nicio diferență. Cât de des ar apărea totuși o diferență cel puțin atât de mare?",
+      "beispiel": "Două soiuri de roșii, p = ,03: dacă soiurile ar fi cu adevărat egale, o diferență ca aceasta ar apărea în aproximativ 3 din 100 de încercări.",
+      "vorsicht": "p nu este probabilitatea ca rezultatul să se datoreze întâmplării. Nici nu spune cât de mare sau importantă este diferența: pentru aceasta există mărimea efectului. Este valabilă doar dacă sunt îndeplinite și celelalte presupuneri ale calculului, cum ar fi selecția aleatorie și independența.",
+      "pruefen": true
+    },
+    "signifikanz": {
+      "titel": "Semnificativ statistic",
+      "kurz": "Ce înseamnă „semnificativ”? Valoarea p este sub o limită stabilită dinainte, de obicei ,05. Datele se potrivesc atunci slab cu presupunerea „nicio diferență”.",
+      "beispiel": "p = ,03 este sub ,05: semnificativ statistic. p = ,07 este peste: nesemnificativ statistic.",
+      "vorsicht": "Semnificativ statistic nu înseamnă important sau dovedit. Nesemnificativ statistic nu înseamnă nicio diferență. Limita de ,05 este un obicei. La un număr foarte mare de cazuri, chiar și un efect mic devine semnificativ. Și: diferența dintre „semnificativ” și „nesemnificativ” nu este ea însăși semnificativă de la sine.",
+      "pruefen": true
+    },
+    "effektstaerke": {
+      "titel": "Mărimea efectului",
+      "kurz": "Cât de mare este o diferență sau o relație? Mărimea efectului spune. Mai multe persoane fac valoarea p mai mică; mărimea efectului nu se schimbă doar din acest motiv.",
+      "beispiel": "d Cohen = 0,5: două grupuri sunt la o jumătate de abatere standard (distanța tipică a valorilor față de medie) distanță.",
+      "vorsicht": "Cuvintele mic, mediu, mare (d = 0,2; 0,5; 0,8) sunt un obicei care vine de la Cohen. Ce contează ca mult depinde de domeniu și de întrebare.",
+      "pruefen": true
+    },
+    "konfidenzintervall": {
+      "titel": "Interval de încredere (IC)",
+      "kurz": "Cât de precis este un rezultat? Intervalul de încredere (IC) este un domeniu în jurul valorii măsurate. Arată ce valori reale se potrivesc bine cu datele. Îngust înseamnă precis, larg înseamnă imprecis.",
+      "beispiel": "Un nou traseu spre muncă economisește în medie 4 minute, IC 95% [1,2; 6,8]: o economie reală de 2 sau 6 minute se potrivește bine cu datele.",
+      "vorsicht": "„95%” descrie metoda: la multe repetări, aproximativ 95 din 100 de astfel de domenii ar conține valoarea reală. Dacă acesta o conține este necunoscut. Dacă domeniul conține 0, se potrivește cu datele și „nicio diferență”, iar testul bilateral la nivelul ,05 nu este semnificativ statistic.",
+      "pruefen": true
+    },
+    "normalverteilung": {
+      "titel": "Distribuția normală",
+      "kurz": "Cum sunt răspândite valorile? Într-o distribuție normală, cele mai multe valori se află la mijloc și devin mai rare, uniform, spre ambele părți. Rezultă o formă de clopot.",
+      "beispiel": "Greutatea pungilor de paste de 500 g variază în formă de clopot în jurul a 500 g. Timpii de așteptare la o linie de asistență nu: mulți sunt scurți, câțiva foarte lungi.",
+      "vorsicht": "Pentru compararea mediilor contează mai mult o coadă lungă pe o parte (asimetria) și valorile extreme decât un număr fix de persoane. Cu multe persoane, forma contează mai puțin; cu foarte puține, abia poate fi judecată.",
+      "pruefen": true,
+      "fachwoerter": "testul Welch (un test t care nu cere dispersie egală în grupuri), asimetria (skewness: o coadă lungă pe o parte), valoare extremă (outlier: o valoare departe de celelalte)."
+    },
+    "mittelwert": {
+      "titel": "Media (M)",
+      "kurz": "Care este valoarea tipică? Media este valoarea medie: se adună toate valorile și se împarte la câte sunt.",
+      "beispiel": "Cinci timpi de așteptare la un ghișeu: 8, 12, 9, 15 și 11 minute. Împreună 55, împărțit la 5 dă 11 minute.",
+      "vorsicht": "Câteva valori foarte mari sau foarte mici trag media după ele. Cu 60 în loc de 11 minute ar fi 20,8; mediana, valoarea din mijloc a șirului ordonat, ar crește doar de la 11 la 12.",
+      "pruefen": false
+    },
+    "standardabweichung": {
+      "titel": "Abaterea standard (SD)",
+      "kurz": "Cât de diferite sunt valorile? Abaterea standard (SD) spune cât de departe se află în mod tipic valorile de medie. Mică înseamnă că valorile sunt apropiate.",
+      "beispiel": "Somn: media 7 ore, SD 1 oră. La o distribuție în formă de clopot, aproximativ două treimi dorm între 6 și 8 ore.",
+      "vorsicht": "SD descrie cât de diferite sunt persoanele. Cât de precisă este media rezultă din eroarea standard și din intervalul de încredere.",
+      "pruefen": false
+    },
+    "freiheitsgrade": {
+      "titel": "Grade de libertate (df)",
+      "kurz": "Ce înseamnă numărul din paranteză, de exemplu t(18)? Sunt gradele de libertate (df), un număr care depinde mai ales de câte persoane sunt. Programul are nevoie de el pentru valoarea p.",
+      "beispiel": "20 de persoane în două grupuri: 20 minus 2 dă 18 grade de libertate, deci t(18). La grupuri cu dispersie inegală (testul Welch), numărul este adesea o zecimală, de exemplu t(14,3).",
+      "vorsicht": "De obicei, atât trebuie să se știe despre gradele de libertate. Ele aparțin totuși fiecărui raport, pentru ca alții să poată verifica rezultatul.",
+      "pruefen": false
+    },
+    "korrelation": {
+      "titel": "Corelația (r)",
+      "kurz": "Sunt două lucruri legate între ele? Corelația r arată acest lucru ca un număr de la −1 la +1. Pozitivă: mai mult dintr-unul merge cu mai mult din celălalt. Negativă: cu mai puțin. Aproape de 0: nicio relație în linie dreaptă.",
+      "beispiel": "Somn și concentrare: r = ,30. Persoanele care dorm mai mult tind să se concentreze mai bine.",
+      "vorsicht": "O relație nu este o cauză. r vede doar relații în linie dreaptă, deci priviți și diagrama de dispersie.",
+      "pruefen": true
+    },
+    "korrelationsmatrix": {
+      "titel": "Matricea de corelații",
+      "kurz": "Care dintre mai multe coloane de numere merg împreună? Matricea de corelații arată toate perechile odată. Corecția Holm face valorile p mai stricte, deoarece cu multe perechi una iese ușor în evidență din întâmplare.",
+      "beispiel": "Cinci coloane dau 10 perechi. Cea mai remarcabilă are p = ,012; după corecția Holm devine ,012 ori 10 = ,12 - nu mai este sub ,05.",
+      "vorsicht": "Cine testează multe perechi găsește și rezultate întâmplătoare; cine doar caută ar trebui să folosească valorile Holm. O relație nu este o cauză.",
+      "pruefen": true,
+      "fachwoerter": "r după Pearson (legătura dintre două coloane de numere, pentru relații în linie dreaptă), rs după Spearman (aceeași idee cu ranguri în loc de valori), n (numărul de cazuri pe pereche), intervalul de încredere de 95% (un domeniu care se potrivește bine cu relația reală, date fiind datele)."
+    },
+    "regression": {
+      "titel": "Regresia",
+      "kurz": "Se poate prezice o valoare din altele? Regresia trasează dreapta care se potrivește cel mai bine cu datele. Arată cât de mult se schimbă predicția când se schimbă o altă valoare.",
+      "beispiel": "Prețul unui apartament după suprafață: un m² în plus merge în medie cu 2400 € mai mult.",
+      "vorsicht": "O predicție nu este o cauză. Pentru testul obișnuit, reziduurile (distanțele de la dreaptă) ar trebui să fie distribuite normal, nu valorile brute.",
+      "pruefen": true
+    },
+    "chi-quadrat": {
+      "titel": "Testul chi-pătrat (χ²)",
+      "kurz": "Apare ceva mai des în unele grupuri? Testul chi-pătrat (χ²) compară cazurile numărate ale unui tabel încrucișat cu numerele așteptate dacă nu ar exista nicio relație.",
+      "beispiel": "Câte 100 de persoane: 60% dintre cei care se trezesc devreme beau cafea, 40% dintre cei care se trezesc târziu. χ²(1) = 8,0, p = ,005.",
+      "vorsicht": "χ² nu spune cât de puternică este relația: cu de două ori mai multe persoane și aceleași proporții, se dublează. V al lui Cramér arată intensitatea.",
+      "pruefen": true,
+      "fachwoerter": "testul exact al lui Fisher (mai exact decât χ² pentru tabele 2 × 2 cu puține persoane), frecvența așteptată (câte cazuri ar conține o celulă dacă nu ar exista nicio relație)."
+    },
+    "streuung": {
+      "titel": "Dispersia",
+      "kurz": "Cât de diferite sunt valorile? Dispersia este termenul-umbrelă. Măsurile sunt amplitudinea (cea mai mare minus cea mai mică valoare), abaterea standard și intervalul intercuartilic (lățimea jumătății din mijloc a valorilor).",
+      "beispiel": "Durata a 40 de călătorii: 12 până la 51 de minute, amplitudinea 51 − 12 = 39, abaterea standard 8,5, intervalul intercuartilic 10.",
+      "vorsicht": "Amplitudinea depinde de doar două valori. O singură valoare extremă o face mult mai mare.",
+      "pruefen": false
+    },
+    "stichprobe": {
+      "titel": "Eșantionul",
+      "kurz": "Cine a participat de fapt? Aceasta este eșantionul. El servește pentru a spune ceva despre un grup mai mare, populația.",
+      "beispiel": "O bibliotecă chestionează 150 de vizitatori într-o zi de marți pentru a spune ceva despre toți utilizatorii din timpul anului. Dacă este valabil depinde de cum au fost alese aceste 150 de persoane.",
+      "vorsicht": "Multe persoane nu compensează o selecție unilaterală. A întreba doar vizitatorii de marți dimineața descrie mai ales acei vizitatori.",
+      "pruefen": false
+    },
+    "voraussetzung": {
+      "titel": "Condiție de aplicare",
+      "kurz": "Poate fi folosită o metodă cu aceste date? Fiecare metodă se sprijină pe presupuneri, condițiile de aplicare, de exemplu „fiecare persoană aparține exact unui grup”. Dacă nu se potrivesc, rezultatul poate induce în eroare.",
+      "beispiel": "Înainte de a compara două grupuri de clienți: sunt ele într-adevăr două grupuri separate? Sunt valorile numere? Există valori singure foarte frapante?",
+      "vorsicht": "O notă nu este o interdicție, ci un motiv de a privi mai atent. Unele presupuneri nu le poate verifica niciun program, de exemplu dacă persoanele au răspuns independent una de alta, adică fără să se înțeleagă dinainte - aceasta rezultă din modul în care au fost colectate datele.",
+      "pruefen": true
+    },
+    "ausreisser": {
+      "titel": "Valoare extremă",
+      "kurz": "Se află o valoare izbitor de departe de toate celelalte? Atunci este o valoare extremă (outlier). Poate fi o greșeală de tastare, o greșeală de măsurare - sau un răspuns autentic, neobișnuit.",
+      "beispiel": "Zece timpi de livrare în zile: nouă între 2 și 4 (suma 27), unul de 31. Fără 31, media este 27 / 9 = 3,0 zile, cu el 58 / 10 = 5,8.",
+      "vorsicht": "Nu ștergeți niciodată valorile extreme în tăcere: verificați mai întâi originalul, arătați calculul cu și fără ea și dați un motiv pentru decizie. La regresie, un punct îndepărtat trage dreapta spre sine, chiar dacă abia iese în evidență. Într-o diagramă boxplot, valorile neobișnuite apar ca puncte în afara mustăților (liniile de la cutie). Asta nu le face încă erori.",
+      "pruefen": true,
+      "statable": "La o regresie, blocul „Verificarea regresiei: coliniaritate și cazuri neobișnuite” de sub rezultat listează cazurile cu reziduu mare, efect de pârghie mare sau distanță Cook mare, cu numărul rândului din date. Priviți acolo, nu ștergeți niciodată în tăcere. Valorile individuale ale unei coloane sunt semnalate de verificarea datelor la deschidere."
+    },
+    "reliabilitaet": {
+      "titel": "Fiabilitatea scalei (alfa Cronbach)",
+      "kurz": "Măsoară mai multe întrebări fiabil împreună? Alfa Cronbach arată cât de puternic sunt legate răspunsurile la întrebările unei scale. Valoarea se află de obicei între 0 și 1.",
+      "beispiel": "Cinci întrebări despre satisfacția la locul de muncă: α = ,82.",
+      "vorsicht": "Un alfa mare nu dovedește că toate întrebările măsoară același lucru, iar mai multe întrebări îl cresc de la sine. ,70 este adesea numit ca minim; acesta este un obicei.",
+      "pruefen": true,
+      "fachwoerter": "consistență internă (cât de puternic sunt legate răspunsurile la întrebările unei scale), unidimensionalitate (toate întrebările măsoară aceeași trăsătură), analiză factorială (arată dacă întrebările măsoară una sau mai multe trăsături), corelația item-total (cât de bine se potrivește o întrebare cu celelalte), inversarea codării (întoarcerea unei întrebări formulate invers, astfel încât să indice în aceeași direcție)."
+    },
+    "faktorenanalyse": {
+      "titel": "Analiza factorială",
+      "kurz": "Ce întrebări aparțin împreună? Analiza factorială caută grupuri de întrebări la care se răspunde asemănător. Încărcarea factorială (de la −1 la 1) arată cât de puternic aparține o întrebare unui grup.",
+      "beispiel": "Nouă întrebări despre viața în oraș formează trei grupuri: trafic, siguranță, timp liber.",
+      "vorsicht": "Calculul găsește doar grupuri. Ce înseamnă ele decid oamenii. Încărcările de la ,30 până la ,50 în sus sunt adesea luate în calcul; nu există o limită fixă.",
+      "pruefen": true,
+      "fachwoerter": "analiza componentelor principale (implicit, ca în SPSS: combină întrebările în componente), axe principale (principal axis factoring: caută trăsături comune în spatele întrebărilor), Promax (o rotație care permite factorilor să fie legați între ei)."
+    },
+    "koeffizient-b": {
+      "titel": "Coeficientul de regresie B și constanta",
+      "kurz": "Cât de mult se schimbă predicția când un predictor crește cu 1, iar ceilalți rămân la fel? B spune, în unitățile datelor. De aceea B se schimbă când în model intră și alți predictori. Constanta este predicția când toți predictorii sunt 0.",
+      "beispiel": "Prețul unui apartament în mii de €: B = 2,4 pentru suprafață. Un m² în plus merge în medie cu 2400 € mai mult, la același etaj.",
+      "vorsicht": "B se schimbă cu unitatea (euro sau mii de euro). Doar la aceeași unitate B poate fi comparat între studii; la scale sau unități diferite rămâne doar beta, care însă depinde de împrăștierea eșantionului. Constanta nu înseamnă adesea nimic dacă 0 nu apare niciodată (0 m²).",
+      "pruefen": true,
+      "fachwoerter": "beta (B exprimat în abateri standard, astfel încât scalele devin comparabile), predictor (o valoare care este folosită pentru a prezice)."
+    },
+    "beta": {
+      "titel": "Coeficientul standardizat beta (β)",
+      "kurz": "B fără unități: beta convertește totul în abateri standard (distanța tipică a valorilor față de medie). Astfel mărimi cu unități diferite pot fi puse alături într-un singur studiu. Cu un singur predictor, beta este egal cu r.",
+      "beispiel": "Prețul unui apartament: suprafața β = ,62. Dacă suprafața crește cu o abatere standard, prețul crește în medie cu 0,62 abateri standard.",
+      "vorsicht": "Beta depinde de cât de diferite sunt cazurile dintr-un eșantion, deci nu poate fi pur și simplu comparat între studii. Dacă două studii au scale sau unități diferite, doar beta poate fi pus alături, nu și B - dar și beta depinde de împrăștierea eșantionului. Dacă un beta mai mare înseamnă „mai important” este disputat.",
+      "pruefen": true
+    },
+    "standardfehler": {
+      "titel": "Eroarea standard",
+      "kurz": "Cât de precisă este o estimare? Cu alte persoane ar ieși o valoare ușor diferită. Eroarea standard spune cât de mult variază în mod tipic valoarea în acest fel. Mai mică înseamnă mai precisă.",
+      "beispiel": "1,5 puncte în plus pe oră de antrenament (B = 1,5), eroare standard 0,5. B împărțit la eroarea standard dă t = 3,0, care duce la p (Sig.).",
+      "vorsicht": "Mai multe persoane o fac mai mică, chiar dacă relația rămâne aceeași. „Eroarea standard a estimării” din sumarul modelului este altceva: distanța tipică a valorilor de la dreaptă. De patru ori mai multe persoane o înjumătățesc aproximativ. Abaterea standard (distanța tipică a valorilor individuale față de medie) rămâne aproximativ aceeași.",
+      "pruefen": true,
+      "fachwoerter": "eșantion (persoanele care au fost efectiv studiate), t (B împărțit la eroarea standard), Sig. (cum numește SPSS valoarea p corespunzătoare)."
+    },
+    "r-quadrat": {
+      "titel": "R² (R pătrat) și R² ajustat",
+      "kurz": "Cât din diferențe explică un model? R² este o proporție de la 0 la 1. R² ajustat scade puțin, deoarece orice mărime adăugată poate crește R² chiar dacă nu contribuie cu nimic. Cu un singur predictor, R² este pătratul corelației r. r în sine nu este o proporție.",
+      "beispiel": "R² = ,40: suprafața și amplasarea explică 40% din diferențele de preț din aceste date.",
+      "vorsicht": "„Explică” este înțeles aritmetic, nu ca o cauză. Un R² mai mare singur nu face un model mai bun.",
+      "pruefen": true,
+      "fachwoerter": "varianță (cât de larg se răspândesc valorile în jurul mediei lor), semnificativ statistic (valoarea p este sub limita aleasă, de obicei ,05), predictor (o valoare care este folosită pentru a prezice)."
+    },
+    "eigenwert-rotation": {
+      "titel": "Valoare proprie, analiză paralelă, încărcare și rotație",
+      "kurz": "Câte grupuri de întrebări există? Valoarea proprie arată cât din diferențe cuprinde un grup. Analiza paralelă păstrează doar grupurile aflate peste valoarea datelor aleatorii; rotația face atribuirea întrebărilor mai clară.",
+      "beispiel": "Opt întrebări despre cartier: două grupuri se află peste valoarea aleatorie, cu valori proprii 3,1 și 1,6. Împreună 4,7 din 8, deci 59%. Întrebarea 6 are o încărcare de ,81 pe grupul 1 (apartenență puternică) și ,05 pe grupul 2.",
+      "vorsicht": "Nicio regulă nu este o dovadă: „valoare proprie peste 1” numește adesea prea multe grupuri, analiza paralelă poate numi prea puține când primul grup este foarte mare, sunt puține persoane și grupurile sunt puternic legate. Numărul se decide împreună cu graficul scree (un grafic al valorilor proprii) și cu conținutul întrebărilor.",
+      "pruefen": true,
+      "fachwoerter": "componentă (unul dintre grupurile pe care le formează calculul), criteriul Kaiser (păstrează componentele cu o valoare proprie peste 1), Varimax (o rotație care păstrează componentele independente), Promax (o rotație care permite factorilor să fie legați între ei)."
+    },
+    "trennschaerfe": {
+      "titel": "Corelația item-total corectată și alfa dacă itemul este eliminat",
+      "kurz": "Se potrivește o întrebare cu celelalte întrebări ale unei scale? Trennschärfe (discriminarea itemului) este corelația întrebării cu suma celorlalte întrebări. Mare înseamnă: persoanele care răspund mare aici tind să răspundă mare și în altă parte. Alfa dacă itemul este eliminat este alfa scalei fără această întrebare. Dacă crește, întrebarea trage alfa în jos.",
+      "beispiel": "Discriminare ,55: se potrivește bine. Discriminare −,40: întrebarea merge în sens invers; poate nu a fost recodată invers.",
+      "vorsicht": "Valorile de aproximativ ,40 până la ,70 sunt adesea numite bune; acesta este un obicei. O discriminare mare nu dovedește că toate întrebările măsoară același lucru. Dacă o întrebare se elimină sau nu decide și conținutul.",
+      "pruefen": true,
+      "fachwoerter": "alfa Cronbach (cât de puternic sunt legate răspunsurile de pe o scală), item (o singură întrebare a scalei), inversarea codării (întoarcerea unei întrebări formulate invers, astfel încât să indice în aceeași direcție)."
+    },
+    "rangkorrelation": {
+      "titel": "Corelația rangurilor (rs, τb)",
+      "kurz": "Merg două clasamente împreună? Corelația de rang (rs după Spearman, τb după Kendall) compară nu numerele, ci pozițiile lor de rang și se potrivește când contează doar ordinea. Se află între −1 și +1.",
+      "beispiel": "Satisfacția (niveluri 1 până la 5) și vizitele pe lună la 60 de persoane: rs = −,22. Persoanele care vin mai des tind să fie ceva mai puțin mulțumite. Relația este slabă.",
+      "vorsicht": "O relație nu este o cauză. Corelația de rang surprinde orice relație care crește sau scade constant, inclusiv cele curbe; o diagramă de dispersie arată forma.",
+      "pruefen": true
+    },
+    "kappa": {
+      "titel": "Kappa Cohen (κ)",
+      "kurz": "Cât de bine concordă doi evaluatori după ce se scade ghicitul? Kappa Cohen (κ) înlătură concordanța pe care ar da-o doar întâmplarea. 0 înseamnă nu mai bine decât întâmplarea; 1 înseamnă concordanță perfectă.",
+      "beispiel": "Doi medici sortează 50 de fotografii ale pielii ca „neobișnuite” sau „neobservabile”. Concordă la 40 (80%); după înlăturarea întâmplării, κ = ,60 (interval de 95% de la ,38 la ,82).",
+      "vorsicht": "κ este mic în ciuda unei concordanțe mari când o categorie este foarte rară sau foarte frecventă. Etichete precum „moderat” sau „substanțial” (Landis și Koch 1977) sunt reguli empirice, nu limite.",
+      "pruefen": true
+    },
+    "krippendorff-alpha": {
+      "titel": "Alfa Krippendorff (α)",
+      "kurz": "Concordă mai multe persoane la sortare, chiar dacă nu toți au evaluat fiecare caz? Alfa Krippendorff (α) măsoară asta într-un singur număr. Se numesc adesea: de la ,800 fiabil, de la ,667 pentru concluzii provizorii.",
+      "beispiel": "Trei persoane sortează 60 de comentarii ale clienților în „laudă”, „critică” sau „întrebare”: α = ,71. Aceasta este peste ,667, dar sub ,800: suficient pentru concluzii provizorii, nu pentru unele fiabile.",
+      "vorsicht": "Limitele ,800 și ,667 sunt sugestii ale lui Krippendorff, nu legi ale naturii. Cu puține cazuri, intervalul este larg.",
+      "pruefen": true
+    },
+    "icc": {
+      "titel": "Corelația intraclasă (ICC)",
+      "kurz": "Cât din diferențele dintre evaluări provine din cazurile evaluate și nu de la evaluatori? ICC (corelația intraclasă) arată acest lucru: 0 înseamnă nicio concordanță, 1 concordanță perfectă.",
+      "beispiel": "Trei jurați notează 10 torturi de la 0 la 100 de puncte: ICC(2,1) = ,82 (interval de 95% de la ,43 la ,95) pentru o singură evaluare, ICC(2,3) = ,93 (,70 la ,98) pentru media celor trei evaluări. Cu doar 10 torturi, primul interval este încă larg.",
+      "vorsicht": "Există variante (o singură evaluare sau media; concordanță completă sau este permisă o diferență fixă între evaluatori); cea potrivită se alege dinainte. Cu puține cazuri, ICC este imprecis și iese mic când cazurile diferă abia - chiar și cu o concordanță bună.",
+      "pruefen": true,
+      "fachwoerter": "interval de încredere (un domeniu care se potrivește bine cu ICC real, date fiind datele), ICC cu concordanță absolută ICC(2,·) (valorile trebuie să fie egale), ICC cu consistență ICC(3,·) (este permisă o diferență fixă între evaluatori), single și average (o singură evaluare sau media tuturor evaluărilor)."
+    },
+    "bland-altman": {
+      "titel": "Diagrama Bland-Altman",
+      "kurz": "Cât de departe sunt două metode de măsurare pe aceleași cazuri? Diagrama Bland-Altman arată diferența fiecărui caz în raport cu media lui. Eroarea sistematică (bias) este diferența medie; limitele cuprind aproximativ 95% dintre toate diferențele.",
+      "beispiel": "Două termometre clinice la 12 persoane: eroare sistematică = 0,16 °C (IC 95% de la 0,05 la 0,27), limite de concordanță de la −0,18 la 0,50 °C. Al doilea arată în medie mai mult (intervalul erorii sistematice nu include 0); într-un caz singur arată până la 0,5 °C mai mult.",
+      "vorsicht": "Dacă domeniul este suficient de mic decide disciplina, nu statistica. Cu puține cazuri, limitele sunt imprecise, iar dacă diferențele depind de medie, limitele nu sunt la fel de valabile peste tot.",
+      "pruefen": true,
+      "fachwoerter": "ICC (corelația intraclasă: pune diferențele în raport cu diferențele dintre cazuri), abatere standard (SD, dispersia tipică; limitele sunt eroarea sistematică ± 1,96 SD)."
+    },
+    "sensitivitaet": {
+      "titel": "Sensibilitatea",
+      "kurz": "Câte dintre persoanele cu adevărat afectate găsește un test? Sensibilitatea este proporția celor cu adevărat pozitivi pe care testul îi numește pozitivi. Adevărul este considerat cea mai bună verificare de comparație disponibilă.",
+      "beispiel": "Din 40 de persoane cu un diagnostic confirmat, testul rapid depistează 34: sensibilitate = 34 / 40 = 85% (IC 95% de la 71 la 93%).",
+      "vorsicht": "Dacă testul este reglat mai strict sau mai blând, sensibilitatea și specificitatea se schimbă în sensuri opuse. Cu puține persoane afectate, intervalul este larg.",
+      "pruefen": true,
+      "fachwoerter": "standard de referință (cea mai bună verificare disponibilă, al cărei rezultat contează ca adevăr), adevărat pozitive (persoane afectate pe care testul le depistează)."
+    },
+    "spezifitaet": {
+      "titel": "Specificitatea",
+      "kurz": "Câte dintre persoanele neafectate recunoaște corect un test? Specificitatea este proporția celor cu adevărat negativi pe care testul îi numește negativi. Mare înseamnă puține alarme false.",
+      "beispiel": "Din 120 de persoane fără diagnostic, 108 rămân neobservabile: specificitate = 108 / 120 = 90% (IC 95% de la 83 la 94%).",
+      "vorsicht": "Verificarea de comparație este tratată ca adevăr; dacă ea însăși este nesigură, sensibilitatea și specificitatea sunt imprecise. La afecțiuni rare, un rezultat pozitiv spune adesea mai puțin decât s-ar aștepta, în ciuda unei specificități mari (vezi valorile predictive).",
+      "pruefen": true,
+      "fachwoerter": "standard de referință (cea mai bună verificare disponibilă, al cărei rezultat contează ca adevăr), adevărat negative (persoane neafectate pe care testul le lasă corect să treacă)."
+    },
+    "vorhersagewert": {
+      "titel": "Valori predictive (VPP, VPN)",
+      "kurz": "Cât de probabil este ca cineva să fie într-adevăr afectat când testul este pozitiv? Valoarea predictivă pozitivă (VPP) spune acest lucru: proporția testelor pozitive care sunt cu adevărat afectate. Cea negativă (VPN) privește testele negative.",
+      "beispiel": "Un test cu sensibilitate de 90% și specificitate de 90%. Din 1000 de persoane, 100 sunt afectate: 90 sunt depistate, dar și 90 dintre cele 900 de persoane sănătoase au un test pozitiv. VPP = 90 / 180 = 50%. Dacă ar fi 500 afectate, VPP ar fi 450 / 500 = 90%.",
+      "vorsicht": "Ambele valori se schimbă cu cât de frecventă este afecțiunea, chiar și la sensibilitate și specificitate egale, și sunt valabile doar pentru grupuri cu o prevalență asemănătoare. Dacă persoanele afectate și cele neafectate au fost căutate separat (studiu caz-control), ele nu pot fi interpretate.",
+      "pruefen": true,
+      "fachwoerter": "rapoarte de verosimilitate (LR+ = sensibilitate / (1 − specificitate), LR− = (1 − sensibilitate) / specificitate: de câte ori este mai frecvent un rezultat la persoanele afectate decât la cele neafectate; nu depind de prevalență)."
+    },
+    "gepaarte-messung": {
+      "titel": "Măsurare pe perechi (dz, dav)",
+      "kurz": "S-a schimbat ceva la aceleași persoane? La o măsurare pe perechi, „înainte” și „după” provin de la aceleași persoane. dz și dav sunt două măsuri ale cât de mare este schimbarea. Testul t pentru eșantioane perechi lucrează cu diferențele pe persoană. Astfel dispar diferențele dintre persoane, iar valoarea p devine adesea mai mică.",
+      "beispiel": "Flotări la 10 persoane înainte și după șase săptămâni de antrenament: în medie 2,9 în plus. dz = 2,9 / 1,37 = 2,12; dav = 2,9 / 3,94 = 0,74. dz este mult mai mare deoarece înainte și după sunt puternic legate (r = ,98).",
+      "vorsicht": "dz împarte schimbarea medie la dispersia schimbărilor, dav la dispersia medie dinainte și de după; doar dav este comparabil cu d din comparațiile de grupuri. Fără un grup de comparație, măsurarea nu arată ce a cauzat schimbarea; etichetele Cohen (0,2 / 0,5 / 0,8) sunt un obicei și se aplică lui dav, nu lui dz.",
+      "pruefen": true,
+      "fachwoerter": "abatere standard (dispersia tipică a valorilor în jurul mediei lor), puterea testului (șansa de a găsi o diferență care există cu adevărat; dz este folosit pentru a o calcula)."
+    },
+    "logistische-regression": {
+      "titel": "Regresia logistică",
+      "kurz": "De ce depinde dacă ceva se întâmplă sau nu? Regresia logistică prezice un rezultat da/nu din alte valori. Un test al modelului verifică dacă prezice mai bine decât un model fără acele valori.",
+      "beispiel": "Demisia (da/nu) din salariu, vârstă și timp de navetă la 300 de persoane, 36% demisionează: testul modelului χ²(3) = 14,2, p = ,003; R² Nagelkerke = ,06. 68% sunt clasificate corect; fără model ar fi 64% (atâția aparțin grupului mai mare).",
+      "vorsicht": "R² Nagelkerke nu este o proporție de diferențe explicate ca la regresia liniară. O rată mare de clasificare corectă valorează puțin dacă un grup este oricum mult mai mare și este de obicei valabilă doar pentru datele pe care a fost ajustat modelul.",
+      "pruefen": true,
+      "fachwoerter": "șanse (odds: probabilitatea împărțită la probabilitatea opusului: 75% înseamnă șanse de 3 la 1), predictor (o valoare care este folosită pentru a prezice), pseudo-R² (R² Nagelkerke ține locul lui R² de la regresia liniară, dar nu este o proporție de diferențe explicate).",
+      "statable": "Calculați regresia (coloana țintă cu două valori) și deschideți sub rezultat blocul „Verificarea regresiei logistice: cazuri neobișnuite, potrivire, liniaritatea logitului, blocuri”. Acesta arată VIF, cazurile neobișnuite (efect de pârghie, distanța Cook, reziduu devianță, DFBETA), testul Hosmer-Lemeshow, testul Box-Tidwell și blocul χ² pentru un al doilea bloc de predictori."
+    },
+    "odds-ratio": {
+      "titel": "Raportul de șanse (OR)",
+      "kurz": "Cu ce factor se schimbă șansa unui eveniment când o valoare crește cu 1? Acesta este raportul de șanse (OR). 1 înseamnă nicio relație; peste 1 șansa crește; sub 1 scade.",
+      "beispiel": "Șansa ca un colet să sosească târziu, pe 100 km de distanță: OR = 1,35, interval de 95% [1,12; 1,63]. Cu 100 km în plus, șansa crește la 1,35 ori, adică cu aproximativ 35%. Intervalul nu include 1.",
+      "vorsicht": "„Șansă” înseamnă aici raportul dintre „se întâmplă” și „nu se întâmplă” (3 la 1 mai degrabă decât 75%); deci un OR nu este „de x ori mai probabil” - aceasta este valabil doar pentru evenimente rare. Dacă 1 se află în interval, o relație nu este arătată.",
+      "pruefen": true,
+      "fachwoerter": "șanse (odds: probabilitatea împărțită la probabilitatea opusului), predictor (o valoare care este folosită pentru a prezice), Wald (metoda obișnuită pentru intervalul OR)."
+    },
+    "eta-quadrat": {
+      "titel": "Eta pătrat (η²) și omega pătrat (ω²)",
+      "kurz": "Cât din diferențele valorii măsurate merge cu grupul? η² (eta pătrat) este această proporție, de la 0 la 1. ω² este aceeași idee, calculată mai prudent, și ceva mai mică.",
+      "beispiel": "Trei îngrășăminte, câte 20 de plante: η² = ,25 și ω² = ,22. Îngrășământul merge cu aproximativ un sfert din diferențele de recoltă.",
+      "vorsicht": "Etichetele ,01 / ,06 / ,14 după Cohen sunt un obicei pentru comparațiile de grupuri; la persoane măsurate de mai multe ori sau la grupuri care nu au fost repartizate, o variantă (η² parțial) iese mult mai mare, de aceea Statable folosește acolo η² generalizat (ηG²). Compararea grupurilor (analiza de varianță) arată doar că cel puțin două grupuri diferă, nu care.",
+      "pruefen": true,
+      "fachwoerter": "populație (toți cei despre care se vorbește; eșantionul este doar o parte din ea), interval de încredere (un domeniu plauzibil pentru η² în populație), măsurători repetate (aceleași persoane măsurate de mai multe ori), η² parțial (ηp²: efectul în raport cu efectul plus eroarea lui), semnificativ statistic (valoarea p este sub limita aleasă; dacă testul nu este semnificativ statistic, limita inferioară a intervalului este 0)."
+    },
+    "paarvergleich": {
+      "titel": "Comparații pe perechi (post hoc: Tukey, Games-Howell, Bonferroni)",
+      "kurz": "Care grupuri diferă când sunt mai mult de două? Comparațiile pe perechi testează fiecare pereche și fac valorile p mai stricte, deoarece multe comparații „găsesc” ușor ceva din întâmplare. Frecvente sunt Tukey, Games-Howell și Bonferroni.",
+      "beispiel": "Trei soiuri dau 3 perechi. Cu Bonferroni, fiecare p este înmulțit cu 3: ,020 devine ,060 - nu mai este sub ,05.",
+      "vorsicht": "O pereche nesemnificativă statistic nu înseamnă „egal”, ci doar „nearătat”. Cu multe grupuri, perechile devin numeroase, iar fiecare în parte este mai greu de demonstrat.",
+      "pruefen": true,
+      "fachwoerter": "analiza de varianță (compară mediile a trei sau mai multe grupuri), post hoc (ulterior, după analiza de varianță), Games-Howell (implicit în Statable, nu cere dispersie egală), Tukey (presupune dispersie egală), Bonferroni (strict și simplu: fiecare p ori numărul de perechi)."
+    },
+    "welch-anova": {
+      "titel": "Analiza de varianță Welch",
+      "kurz": "Cum comparați mai multe grupuri cu dispersie inegală? Analiza de varianță clasică cere dispersie egală. Analiza de varianță Welch nu: ponderează fiecare grup după dispersia lui.",
+      "beispiel": "Timpii de livrare ai patru depozite cu dispersie foarte diferită: Welch F(3; 41,8) = 5,4, p = ,003. Depozitele diferă, fără a presupune dispersie egală.",
+      "vorsicht": "Și analiza Welch arată doar că cel puțin două grupuri diferă. Comparațiile pe perechi arată care (Games-Howell se potrivește).",
+      "pruefen": true,
+      "fachwoerter": "grade de libertate (df: numerele din paranteză lângă F; ele stabilesc cu ce distribuție compară testul), dispersie (cât de departe se află valorile unui grup)."
+    },
+    "rangtest": {
+      "titel": "Test bazat pe ranguri (fără distribuție normală)",
+      "kurz": "Ce se face când mediile se potrivesc slab din cauza valorilor extreme sau a asimetriei? Testele bazate pe ranguri pun toate valorile în ordine și lucrează cu pozițiile de rang. Nu au nevoie de o distribuție normală și reacționează abia la valorile extreme singure.",
+      "beispiel": "Timpi de așteptare în minute, câte 6 măsurători: serviciul A 4, 5, 6, 7, 9, 13; serviciul B 8, 10, 11, 12, 15, 40. Testul Mann-Whitney (două grupuri) U = 5, p = ,041 (exact): B tinde să fie mai mare. Valoarea extremă 40 contează abia.",
+      "vorsicht": "Un test bazat pe ranguri arată dacă un grup tinde să aibă valori mai mari - nu testează doar medianele. Îl poate declanșa și o dispersie sau o formă diferită.",
+      "pruefen": true,
+      "fachwoerter": "Kruskal-Wallis (test bazat pe ranguri pentru trei sau mai multe grupuri), Wilcoxon (test bazat pe ranguri pentru două măsurători ale acelorași persoane), testul Dunn cu ajustare Holm (arată după Kruskal-Wallis care perechi diferă), estimatorul Hodges-Lehmann (HL: mediana tuturor diferențelor dintre o persoană din fiecare grup) cu intervalul lui de încredere de 95% (un domeniu plauzibil pentru el), mărimea efectului (cât de mare este diferența: r = |z| / √N, pentru Kruskal-Wallis ε² = H / (n − 1)), corelația rang-biserială (proporția perechilor în care un grup este mai mare, înmulțită cu 2, minus 1), valori egale (ties: valori identice)."
+    },
+    "sphaerizitaet": {
+      "titel": "Sfericitatea (testul Mauchly)",
+      "kurz": "Aceleași persoane sunt măsurate de mai multe ori: variază la fel de puternic diferențele dintre oricare două momente? Aceasta este sfericitatea. Dacă este încălcată, rezultatul este semnificativ statistic prea des.",
+      "beispiel": "Timpul de reacție al 20 de persoane în trei zile: testul Mauchly W = ,75, p = ,075; ε (Greenhouse-Geisser) = ,80 (1 ar însemna: îndeplinită). Testul nu arată o încălcare, dar ε este clar sub 1 - deci se aplică o corecție.",
+      "vorsicht": "Testul Mauchly verifică sfericitatea (p peste ,05 nu vorbește împotriva ei), dar este slab cu puține persoane și semnalează chiar și abateri mici cu multe. De aceea Statable arată întotdeauna corecția Greenhouse-Geisser, nu doar când p este sub ,05.",
+      "pruefen": true,
+      "fachwoerter": "măsurători repetate (aceleași persoane măsurate de mai multe ori), analiza de varianță (compară medii), grade de libertate (df: numerele din paranteză lângă F), valoarea p (cât de des ar apărea un rezultat cel puțin atât de mare dacă presupunerea este valabilă), W (statistica testului Mauchly).",
+      "statable": "Sub rezultatul analizei cu măsurători repetate alegeți corecția pentru sfericitate (Greenhouse-Geisser ca implicit, Huynh-Feldt sau niciuna). Cu un factor cu măsurători repetate, testul Mauchly se află în tabel; cu doi factori, fiecare efect are propriul ε."
+    },
+    "greenhouse-geisser": {
+      "titel": "Corecția Greenhouse-Geisser și Huynh-Feldt (ε)",
+      "kurz": "Ce se face când sfericitatea este încălcată? Corecția face rezultatul mai prudent: p devine mai mare. Cât de mult stabilește ε (epsilon): 1 înseamnă îndeplinită, mai mic înseamnă mai puternic încălcată.",
+      "beispiel": "Cu ε = ,80, F(2; 38) = 6,2, p = ,005 devine F(1,60; 30,40) = 6,2, p = ,009: cele două numere din paranteză, 2 și 38, sunt înmulțite cu ,80 și dau 1,60 și 30,40.",
+      "vorsicht": "Greenhouse-Geisser este estimarea mai strictă, Huynh-Feldt cea ceva mai generoasă. Numerele din paranteză nu mai sunt numere întregi; este obișnuit, iar cu ε aproape de 1 corecția schimbă abia ceva.",
+      "pruefen": true,
+      "fachwoerter": "grade de libertate (df: numerele din paranteză lângă F), analiza de varianță (compară medii), sfericitate (toate diferențele dintre oricare două momente variază în mod egal).",
+      "statable": "Sub rezultatul analizei cu măsurători repetate alegeți corecția: Greenhouse-Geisser (implicit), Huynh-Feldt sau niciuna. Gradele de libertate și p sunt afișate imediat corectate cu ε; cu doi factori cu măsurători repetate, fiecare efect are propriul ε."
+    },
+    "mediation": {
+      "titel": "Medierea (efect indirect)",
+      "kurz": "Trece un efect printr-un pas intermediar? De exemplu: zgomotul afectează somnul, iar somnul afectează dispoziția. Medierea calculează cât de mare este această cale indirectă.",
+      "beispiel": "Calea indirectă prin somn 0,20, interval de 95% [0,11; 0,30]: 0 nu se află în interior.",
+      "vorsicht": "Un singur sondaj nu arată o cauză: ordinea este o presupunere. Contează intervalul căii indirecte, nu dacă pașii individuali sunt semnificativi statistic.",
+      "pruefen": true,
+      "fachwoerter": "mediator (variabila M prin care trece un efect), căile a (X → M), b (M → Y), c′ (X → Y direct) și c (X → Y în total; c = c′ + a·b), bootstrap (extragere din nou, de 5000 de ori, din persoanele existente), interval de încredere (un domeniu care se potrivește bine cu valoarea reală, date fiind datele)."
+    },
+    "moderation": {
+      "titel": "Moderarea (interacțiune, pante simple)",
+      "kurz": "Este o relație aceeași pentru toți? Moderarea testează dacă depinde de o a treia mărime.",
+      "beispiel": "Mai multă practică îi ajută mult pe începători și abia pe cei cu experiență: experiența moderează relația.",
+      "vorsicht": "Moderarea nu este mediere: moderatorul schimbă intensitatea relației; nu este un pas intermediar. Nici moderarea singură nu arată o cauză.",
+      "pruefen": true,
+      "fachwoerter": "moderator (a treia variabilă W de care depinde relația), centrare (deplasarea valorilor în jurul mediei lor), regresie (predicție cu produsul X·W ca termen de interacțiune), semnificativ statistic (valoarea p este sub limita aleasă), pante simple (panta lui X la W mic, mediu și mare), ΔR² (câștigul de varianță explicată datorat interacțiunii), Johnson-Neyman (numește punctele lui W de la care panta devine semnificativă statistic)."
+    },
+    "nap": {
+      "titel": "NAP (nesuprapunerea tuturor perechilor)",
+      "kurz": "S-a îmbunătățit un comportament prin intervenție? NAP compară fiecare valoare dinainte (A) cu fiecare din timpul intervenției (B) și dă proporția perechilor în care B este mai bună; o egalitate contează pe jumătate.",
+      "beispiel": "Minute în care un copil stă așezat la masă: perioada de bază 3, 4, 4, 5; intervenția 6, 5, 7, 8, 7. Din 20 de perechi, B este mai bună în 19 și egală în 1: NAP = (19 + 0,5) / 20 = ,975.",
+      "vorsicht": "NAP ignoră orice tendință dinaintea intervenției și nu arată cu cât este B mai bună; etichetele slab, mediu și puternic (Parker și Vannest) sunt o regulă empirică. Un test pentru el presupune măsurători independente, care lipsesc adesea la serii de timp.",
+      "pruefen": true,
+      "fachwoerter": "AUC (aria de sub curba ROC: aceeași probabilitate, NAP este egal cu ea), Mann-Whitney (test bazat pe ranguri pentru două grupuri, dă aici valoarea p), valoarea p (cât de des ar apărea un rezultat cel puțin atât de mare dacă nu există nicio diferență), interval de încredere după Newcombe (un domeniu care arată cât de nesigură este valoarea cu puține măsurători)."
+    },
+    "pnd": {
+      "titel": "PND (procentul datelor fără suprapunere)",
+      "kurz": "Câte valori ale fazei de intervenție (B) o depășesc pe cea mai bună dinainte (A)? Acesta este PND: proporția valorilor B peste cea mai bună valoare A (Scruggs et al. 1987).",
+      "beispiel": "Cu aceleași date (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): cea mai bună valoare A este 5. Patru din cinci valori B se află peste ea (6, 7, 8, 7), PND = 4 / 5 = 80%. Dacă „mai mic = mai bine”, contează cea mai mică valoare A.",
+      "vorsicht": "PND depinde de o singură valoare dinaintea intervenției: o valoare extremă acolo îl face inutilizabil, iar cu mai multe măsurători dinainte el scade, chiar dacă nimic altceva nu este diferit. NAP se potrivește mai bine; PND există pentru comparația cu lucrări mai vechi.",
+      "pruefen": true
+    },
+    "tau-u": {
+      "titel": "Tau-U și Tau corectat pentru linia de bază",
+      "kurz": "Cât de bine poate fi arătată o îmbunătățire când valorile se mișcă deja într-o direcție înaintea intervenției? Tau-U compară înainte și după ca NAP și poate înlătura acea tendință.",
+      "beispiel": "Cu aceleași date (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): Tau-U fără înlăturarea tendinței = (19 − 0) / 20 = ,95. Deja înaintea intervenției, 5 din cele 6 perechi cresc: cu tendința înlăturată, Tau-U = (19 − 5) / 20 = ,70.",
+      "vorsicht": "Înlăturarea tendinței presupune că tendința anterioară ar continua pur și simplu și după - o presupunere puternică cu o fază lungă de intervenție. Cu mai puțin de 3 măsurători dinainte nu se poate testa nicio tendință, iar valorile p presupun măsurători independente.",
+      "pruefen": true,
+      "fachwoerter": "Kendall (tau al lui Kendall: o relație calculată din ordini de rang, baza ambelor măsuri), Tau-BC (tau corectat pentru perioada de bază: înlătură o tendință din A doar dacă este semnificativă statistic), Theil-Sen (o dreaptă de tendință robustă din panta mediană a tuturor perechilor de puncte)."
+    },
+    "einzelfall": {
+      "titel": "Analiza de caz unic (design A-B)",
+      "kurz": "A funcționat o intervenție pentru o singură persoană? O persoană (sau câteva) este măsurată repetat în timp: mai întâi fără intervenție (faza A), apoi cu ea (faza B). Cele două faze sunt comparate.",
+      "beispiel": "Un copil stă așezat la masă în medie 4 minute la patru măsurători de bază (3, 4, 4, 5) și în medie 6,6 minute la cinci măsurători cu intervenția (6, 5, 7, 8, 7).",
+      "vorsicht": "Un design A-B singur nu dovedește o cauză: persoana se poate dezvolta și singură sau alte evenimente pot juca un rol. Replicările sunt mai convingătoare (A-B-A-B, mai multe persoane cu începuturi eșalonate).",
+      "pruefen": true,
+      "fachwoerter": "mediana (valoarea din mijloc), NAP (proporția perechilor A-B în care B este mai bună), tau și Tau-U (măsuri bazate pe tau al lui Kendall care pot lua în calcul o tendință din perioada de bază), PND (proporția valorilor B peste cea mai bună valoare A), multiple baseline (mai multe persoane cu începutul intervenției eșalonat)."
+    },
+    "kaplan-meier": {
+      "titel": "Kaplan-Meier (timp până la eveniment)",
+      "kurz": "Câți sunt încă fără eveniment după un anumit timp? Curba Kaplan-Meier arată acest lucru pentru fiecare moment și coboară la fiecare eveniment. Folosește și persoane observate doar o parte din timp.",
+      "beispiel": "10 angajați, timpul până la demisie în luni: 5 demisionează (după 3, 5, 5, 8 și 12 luni), pentru 5 observarea se încheie fără demisie (după 6, 9, 10, 14 și 15 luni). După 8 luni, 9/10 · 7/9 · 5/6 = 58% nu au demisionat încă.",
+      "vorsicht": "Metoda presupune că ieșirea din observare nu are legătură cu riscul. La capătul din dreapta mai rămân de obicei doar câteva persoane; acolo curba este nesigură.",
+      "pruefen": true,
+      "fachwoerter": "cenzurat (observat doar până la un anumit punct, evenimentul nu s-a produs până atunci), curbă în trepte (coboară o treaptă la fiecare eveniment), la risc (încă observat și fără eveniment)."
+    },
+    "zensierung": {
+      "titel": "Cenzurarea",
+      "kurz": "Ce se aplică persoanelor la care nu se întâmplase nimic până la sfârșitul observării? Ele se numesc cenzurate: se știe doar că evenimentul nu s-a produs mai devreme.",
+      "beispiel": "O angajată care este încă la companie când studiul se încheie după 14 luni este cenzurată la momentul 14. În grafic apare ca o mică liniuță pe curbă.",
+      "vorsicht": "Nu eliminați persoanele cenzurate și nu le numărați ca evenimente: ambele distorsionează curba. Metoda presupune că persoanele cenzurate au același risc ulterior ca ceilalți.",
+      "pruefen": true,
+      "fachwoerter": "Kaplan-Meier (metoda care le folosește și pe persoanele cenzurate), la risc (încă observat și fără eveniment), cenzurare neinformativă (ieșirea din observare nu are legătură cu riscul)."
+    },
+    "ueberlebensfunktion": {
+      "titel": "Funcția de supraviețuire S(t)",
+      "kurz": "Câți nu au trăit încă evenimentul până la momentul t? Aceasta este arătată de funcția de supraviețuire S(t); începe la 1 (toți) și coboară la evenimente. „Supraviețuire” înseamnă aici doar „încă niciun eveniment”.",
+      "beispiel": "S(8) = ,58, interval de 95% [,34; 1,00]: după 8 luni, se estimează că 58% dintre angajați nu au demisionat încă. Cu 10 persoane, intervalul este foarte larg.",
+      "vorsicht": "Intervalul este calculat (ca în survfit din R) astfel încât nu coboară niciodată sub 0; limita superioară este tăiată la 1. Cu puține persoane încă observate este foarte larg.",
+      "pruefen": true,
+      "fachwoerter": "interval de încredere (un domeniu care se potrivește bine cu proporția reală, date fiind datele), eroare standard (după Greenwood: cât ar varia valoarea de la un eșantion la altul), scală logaritmică (intervalul este calculat pe valori logaritmate)."
+    },
+    "median-ueberlebenszeit": {
+      "titel": "Timpul median până la eveniment",
+      "kurz": "Când a trăit jumătate evenimentul? Acesta este timpul median: punctul în care curba coboară la 50%. Dacă nu coboară niciodată atât de jos, mediana este „neatinsă”.",
+      "beispiel": "Mediana = 12 luni, interval de 95% [5, neatinsă]: limita inferioară este 5, în sus intervalul este deschis.",
+      "vorsicht": "Mediana este aici mai bună decât media, pe care o distorsionează datele asimetrice și persoanele fără eveniment până la sfârșit. Dacă curba se află exact la 50% pe o porțiune, Statable, ca R, ia punctul de mijloc; cu puține evenimente, mediana este foarte nesigură.",
+      "pruefen": true
+    },
+    "log-rank": {
+      "titel": "Testul log-rank",
+      "kurz": "Diferă curbele mai multor grupuri? Testul log-rank compară, la fiecare moment de eveniment, câte evenimente a avut fiecare grup și câte ar fi de așteptat dacă toate grupurile ar fi la fel.",
+      "beispiel": "Două echipe, timpul până la demisie: χ²(1) = 5,1, p = ,024. Curbele diferă.",
+      "vorsicht": "Testul este cel mai puternic când curbele nu trec niciodată de pe o parte pe alta; dacă se încrucișează, poate rata o diferență reală. Nu spune nimic despre mărimea diferenței; pentru aceasta servesc medianele și proporțiile la momente fixe.",
+      "pruefen": true,
+      "fachwoerter": "Mantel-Cox (alt nume pentru test), Cox (a nu se confunda cu regresia Cox), Holm (ajustează valorile p pentru mai multe perechi), grade de libertate (df: aici grupuri minus 1)."
+    },
+    "anzahl-unter-risiko": {
+      "titel": "Numărul de persoane la risc",
+      "kurz": "Câte persoane susțin curba într-un anumit punct? Numărul de persoane la risc este câte sunt încă observate și nu au avut evenimentul la momentul t. Se află adesea sub grafic.",
+      "beispiel": "La luna 10 mai sunt la risc 4 din cele 10 persoane: acolo curba se sprijină pe 4 persoane.",
+      "vorsicht": "Acolo unde mai sunt la risc doar puține, curba sare puternic la fiecare eveniment, iar intervalul este larg. Astfel de locuri nu trebuie interpretate în exces.",
+      "pruefen": true,
+      "fachwoerter": "cenzurare (persoane observate doar până la un anumit punct, care apoi ies; ele scad numărul la fel ca evenimentele)."
+    },
+    "bootstrap": {
+      "titel": "Bootstrap (interval percentilă)",
+      "kurz": "Cât de nesigură este o valoare care nu are o formulă simplă? Bootstrap extrage din nou de 5000 de ori din persoanele disponibile și recalculează valoarea de fiecare dată. Cele 95% din mijloc dintre rezultate formează intervalul.",
+      "beispiel": "Mediana (valoarea din mijloc) timpului de așteptare a 12 persoane: 11,5 minute. Din cele 5000 de mediane noi, 2,5% se află sub 7,5 și 2,5% peste 16,5: interval bootstrap de 95% [7,5; 16,5].",
+      "vorsicht": "Cu puține persoane (sub aproximativ 50), intervalul este imprecis și adesea prea îngust. Cu o valoare de start fixă pentru numerele aleatorii, aceleași date dau întotdeauna același interval; o altă valoare de start deplasează limitele doar puțin.",
+      "pruefen": true,
+      "fachwoerter": "interval de încredere (un domeniu care se potrivește bine cu valoarea reală, date fiind datele), percentilă (limitele la 2,5% și 97,5% dintre rezultatele ordonate), extragere cu repunere (aceeași persoană poate apărea de mai multe ori), seed (valoarea de start: fixează numerele aleatorii)."
+    },
+    "omega": {
+      "titel": "Omega McDonald (ω)",
+      "kurz": "Măsoară mai multe întrebări împreună un singur lucru în mod fiabil, chiar dacă nu contribuie în mod egal? Omega (ω) măsoară acest lucru ca alfa Cronbach, dar folosește contribuția reală a fiecărei întrebări. Alfa presupune același lucru pentru toate.",
+      "beispiel": "Cinci întrebări cu contribuții (încărcări factoriale) de ,5 / ,6 / ,7 / ,7 / ,8: ω = ,80. Alfa, care presupune contribuții egale, este ceva mai mic, ,79.",
+      "vorsicht": "Omega presupune că întrebările măsoară un singur lucru; altfel nu are sens să fie interpretat (atunci ajută o analiză factorială). Reperele (adesea ,70) sunt doar provizorii, iar omega este valabil tot pentru acest grup de persoane, nu pentru chestionar ca atare. Alfa surprinde exact fiabilitatea doar dacă întrebările măsoară un singur lucru, contribuie în mod egal și au erori necorelate.",
+      "pruefen": true
+    },
+    "cfa": {
+      "titel": "Analiza factorială confirmatorie (CFA)",
+      "kurz": "Se potrivește cu datele o sortare dinainte definită a întrebărilor în grupuri? Analiza factorială confirmatorie (AFC, CFA) stabilește dinainte ce întrebări aparțin cărui grup (factor) și testează cât de bine se potrivește.",
+      "beispiel": "Nouă întrebări, trei grupuri a câte trei întrebări (trafic, siguranță, timp liber): CFI = ,92, RMSEA = ,07, două măsuri de potrivire. Ratează la limită reperele obișnuite: CFI sub ,95, RMSEA peste ,06.",
+      "vorsicht": "O potrivire bună nu arată că grupurile măsoară ceea ce trebuie, iar un alt model se poate potrivi la fel de bine. Dacă sortarea este ajustată abia după ce s-au privit aceleași date, testul nu mai este independent.",
+      "pruefen": true,
+      "fachwoerter": "indici de ajustare (măsuri ale cât de bine se potrivește modelul, aici CFI și RMSEA), analiza factorială exploratorie (caută grupuri de întrebări în date), încărcări factoriale standardizate (cât de puternic aparține o întrebare factorului ei)."
+    },
+    "fit-indizes": {
+      "titel": "Indici de ajustare (CFI, TLI, RMSEA, SRMR)",
+      "kurz": "Se potrivește modelul cu datele? Indicii de ajustare pun acest lucru în numere. Pentru CFI și TLI mai mare este mai bine, pentru RMSEA și SRMR mai mic. Intervalul de 90% al lui RMSEA arată cât de precis este estimat.",
+      "beispiel": "CFI = ,96, TLI = ,95, RMSEA = ,05, SRMR = ,04: după reperele obișnuite, potrivirea se află în domeniul bun.",
+      "vorsicht": "Reperele (CFI și TLI de la ,95, RMSEA până la ,06, SRMR până la ,08; Hu și Bentler 1999) sunt reguli de experiență, nu teste; ,90 este adesea numit încă acceptabil pentru CFI și TLI, iar cu modele mici sau puține persoane sunt nefiabile. Testul χ² devine semnificativ statistic cu eșantioane mari chiar și pentru abateri mici.",
+      "pruefen": true
+    },
+    "mehrebenen": {
+      "titel": "Model multinivel (model mixt)",
+      "kurz": "Ce se întâmplă dacă persoanele sunt imbricate în grupuri, de exemplu copiii în clase? Persoanele dintr-un grup se aseamănă adesea. Modelul multinivel dă fiecărui grup propriul nivel, separând diferențele dintre grupuri de cele din interior.",
+      "beispiel": "Satisfacția a 500 de angajați din 25 de companii: 12% din dispersie se află între companii. O oră în plus de instruire pe lună merge cu 0,8 puncte mai multă satisfacție (p < ,001), chiar și când se ține seama de companie.",
+      "vorsicht": "Are nevoie de mai multe grupuri cu mai multe cazuri fiecare; cu mai puțin de 10 grupuri, estimările la nivel de grup sunt foarte nesigure. Un model multinivel arată relații, nu cauze.",
+      "pruefen": true,
+      "statable": "În rezultat, la „Pentru specialiști”, se poate centra pe media generală sau pe media grupului (efect intra-grup față de efect inter-grup), se poate alege o pantă aleatoare și se poate adăuga o interacțiune, și între niveluri. Mai jos, „Compară modelele” compară modelul nul, efectele fixe, interacțiunile și panta aleatoare cu ML (AIC, BIC, −2LL, testul raportului de verosimilitate). Dacă datele sunt persoană pe moment de timp, Statable oferă calea „timp cu pantă aleatoare pe persoană” (model de creștere)."
+    },
+    "icc-mehrebenen": {
+      "titel": "ICC în modelul multinivel (partea grupurilor)",
+      "kurz": "Cât de mult diferă grupurile? ICC este proporția din dispersia totală care se află între grupuri. ICC = ,12 înseamnă: 12% din diferențe merg cu grupul.",
+      "beispiel": "ICC = ,12 cu 20 de cazuri pe grup: efectul de design este 1 + (20 − 1) · ,12 = 3,28. Incertitudinea unei medii (eroarea standard) este atunci de aproximativ 1,8 ori (√3,28) mai mare decât indică un calcul care ignoră grupurile.",
+      "vorsicht": "A nu se confunda cu ICC pentru concordanța dintre evaluatori: aici este proporția grupurilor în dispersie. De la ,05 mic, de la ,10 mediu, de la ,15 mare (Hox) este doar o regulă empirică.",
+      "pruefen": true,
+      "fachwoerter": "corelația intraclasă (ICC: proporția din dispersia totală care se află între grupuri), varianță (cât de larg se răspândesc valorile), modelul nul (modelul fără coloane explicative, în care se calculează ICC)."
+    },
+    "meta-effekt": {
+      "titel": "Efectul combinat (metaanaliză)",
+      "kurz": "Cât de mare este un efect peste mai multe studii împreună? Efectul combinat este media ponderată a tuturor studiilor: studiile mai precise contează mai mult. Dacă efectele reale variază între studii, intervalul devine mai larg.",
+      "beispiel": "Trei studii: 0,40 (eroare standard, adică imprecizie, 0,10), 0,20 (0,05) și 0,30 (0,10). Pondere = 1 / eroare standard²: 100, 400, 100. Media ponderată = (40 + 80 + 30) / 600 = 0,25 - ca și cum ar exista un singur efect real comun.",
+      "vorsicht": "Media are sens doar dacă studiile măsoară același lucru. Dacă studiile diferă puternic, priviți și intervalul de predicție.",
+      "pruefen": true,
+      "fachwoerter": "eterogenitate (cât de puternic diferă studiile între ele), interval de încredere (un domeniu care se potrivește bine cu media efectelor reale, date fiind datele), modelul cu efecte aleatorii (permite efectelor reale să varieze între studii, τ²), eroare standard (o măsură a cât de imprecis este un studiu)."
+    },
+    "i-quadrat": {
+      "titel": "I² și Q (heterogenitate)",
+      "kurz": "Diferă studiile mai mult decât ne-ar face să ne așteptăm întâmplarea? I² spune, în procente, cât din diferențele dintre rezultate provine din diferențe reale între studii. Testul Q întreabă același lucru.",
+      "beispiel": "Douăsprezece studii: Q(11) = 42,0, p < ,001; I² = (42,0 − 11) / 42,0 = 74%. Etichete citate adesea: 25%, 50%, 75% (Higgins et al. 2003).",
+      "vorsicht": "I² este o proporție, nu o măsură a cât de mari sunt diferențele: cu studii foarte precise, I² devine mare chiar dacă efectele se află apropiate. Cu puține studii, I² este foarte imprecis, iar o valoare mică nu dovedește că studiile sunt egale; cât de departe se răspândesc efectele reale arată τ și intervalul de predicție.",
+      "pruefen": true,
+      "fachwoerter": "τ (răspândirea efectelor reale între studii), interval de predicție (intervalul în care probabil se află efectul unui studiu nou), Q (un test care arată dacă rezultatele variază mai mult decât ar produce întâmplarea)."
+    },
+    "tau-quadrat": {
+      "titel": "τ² (variația dintre studii)",
+      "kurz": "Cât de diferite sunt efectele reale ale studiilor? τ² (tau pătrat) măsoară această dispersie; rădăcina lui pătrată τ este în unitatea efectului. Spre deosebire de I², ignoră cât de precise sunt studiile.",
+      "beispiel": "τ² = 0,04, deci τ = 0,20: cu un efect mediu de 0,30, efectele reale ale studiilor se răspândesc în mod tipic cu aproximativ 0,20 în jurul lui.",
+      "vorsicht": "Cu mai puțin de aproximativ cinci studii, τ² este foarte nesigur, iar intervalul lui foarte larg.",
+      "pruefen": true,
+      "fachwoerter": "abatere standard (τ este rădăcina pătrată a lui τ²), varianță (cât de larg se răspândesc efectele reale), REML (metoda folosită pentru a estima τ²)."
+    },
+    "praediktionsintervall": {
+      "titel": "Interval de predicție (metaanaliză)",
+      "kurz": "Unde probabil se află efectul unui studiu nou, comparabil? Intervalul de predicție arată acest lucru. Este mai larg decât intervalul de încredere al mediei, deoarece include și diferențele dintre studii.",
+      "beispiel": "Combinat 0,20, IC 95% [0,12; 0,28], interval de predicție [−0,05; 0,45]: un studiu nou ar putea găsi și un efect aproape de 0.",
+      "vorsicht": "Cu puține studii, intervalul este foarte nesigur.",
+      "pruefen": true
+    },
+    "forest-plot": {
+      "titel": "Graficul forest plot",
+      "kurz": "Cum arată rezultatele tuturor studiilor? Forest plot arată fiecare studiu ca un pătrat (efect) cu o linie (interval de 95%). Rombul este media; linia punctată înseamnă niciun efect.",
+      "beispiel": "Romb la 0,20 cu vârfuri la 0,12 și 0,28, linie punctată la 0 (la 1 pentru rapoarte): rombul se află în întregime la dreapta ei - media diferă de „niciun efect”.",
+      "vorsicht": "Verificați dacă un singur studiu mare determină rezultatul (pătrat mare) și dacă intervalele se suprapun.",
+      "pruefen": true,
+      "fachwoerter": "interval de predicție (domeniul în care probabil s-ar afla efectul real al unui studiu nou), efect combinat (media tuturor studiilor, rombul)."
+    },
+    "funnel-plot": {
+      "titel": "Graficul pâlnie (funnel plot) și testul Egger",
+      "kurz": "Lipsesc studii? Funnel plot arată fiecare studiu după efect și precizie: cele precise se adună sus, cele imprecise se răspândesc mai larg jos. O parte lipsă îl face asimetric; testul Egger verifică acest lucru.",
+      "beispiel": "Testul Egger p = ,03 cu 14 studii: pâlnia este izbitor de asimetrică - studiile mici arată în medie efecte mai mari.",
+      "vorsicht": "Sub 10 studii, testul are puțină putere (Sterne et al. 2011). Pâlnia poate fi asimetrică și pentru că studiile mici și cele mari diferă cu adevărat.",
+      "pruefen": true,
+      "fachwoerter": "eroare standard (o măsură a cât de imprecis este un studiu), asimetrie (pâlnia este goală pe o parte), regresie (testul Egger prezice efectul din eroarea standard)."
+    },
+    "mehrfachantworten-set": {
+      "titel": "Set de răspunsuri multiple",
+      "kurz": "Ce se întâmplă dacă pentru o întrebare puteau fi bifate mai multe opțiuni? Un set de răspunsuri multiple combină coloanele opțiunilor individuale într-o singură întrebare. Statable numără, pentru fiecare opțiune, câte persoane au numit-o.",
+      "beispiel": "„Cum ajungeți la serviciu?” cu opțiunile bicicletă, autobuz, mașină: trei coloane (bifat = 1, altfel 0), un set. În SPSS aceasta se numește MRSETS.",
+      "vorsicht": "Bifările aceleiași persoane sunt legate între ele. De aceea nu există un test chi-pătrat obișnuit pentru răspunsuri multiple.",
+      "pruefen": true
+    },
+    "prozent-der-faelle": {
+      "titel": "Procent din cazuri",
+      "kurz": "Câte persoane au numit o opțiune? Procentul din cazuri este numărul de mențiuni împărțit la numărul de cazuri valide. Deoarece fiecare persoană poate numi mai multe opțiuni, valorile însumează mai mult de 100%.",
+      "beispiel": "18 din 40 de persoane vin cu bicicleta: 18 / 40 = 45% din cazuri.",
+      "vorsicht": "Cazurile valide sunt cele cu cel puțin o bifare (ca în SPSS). Cine nu a bifat nimic nu face parte din bază, dacă nu este activat „numărați cazurile fără bifare”.",
+      "pruefen": true
+    },
+    "prozent-der-antworten": {
+      "titel": "Procent din răspunsuri",
+      "kurz": "Cum sunt distribuite toate bifările? Procentul din răspunsuri este numărul de mențiuni ale unei opțiuni împărțit la suma tuturor mențiunilor. Aceste valori însumează 100%.",
+      "beispiel": "Bicicleta a fost numită de 18 ori, au fost 60 de mențiuni în total: 18 / 60 = 30% din răspunsuri.",
+      "vorsicht": "Valoarea spune cum sunt distribuite mențiunile, nu câte persoane aleg o opțiune. Pentru aceasta servește procentul din cazuri.",
+      "pruefen": true
+    },
+    "shapiro-wilk": {
+      "titel": "Testul Shapiro-Wilk",
+      "kurz": "Arată valorile ca și cum ar proveni dintr-o distribuție normală? Testul Shapiro-Wilk verifică acest lucru. Dacă p este mai mic decât ,05, distribuția se abate vizibil; altfel testul nu vorbește împotrivă.",
+      "beispiel": "Timpi de reacție ai 25 de persoane: W = ,73 (1 ar fi o potrivire perfectă), p < ,001. Distribuția este asimetrică; mediana descrie mai bine centrul.",
+      "vorsicht": "Cu multe persoane, testul semnalează chiar și abateri mici, cu puține le ratează pe cele mari. Un rezultat nesemnificativ statistic nu dovedește o distribuție normală; diagrama Q-Q o completează.",
+      "pruefen": true
+    },
+    "qq-diagramm": {
+      "titel": "Diagrama Q-Q",
+      "kurz": "Urmează valorile o distribuție normală? Diagrama Q-Q pune fiecare valoare măsurată ca un punct față de valoarea pe care ar da-o o distribuție normală. Dacă punctele se află aproape de dreaptă, se potrivește.",
+      "beispiel": "Pentru înălțimile a 100 de adulți, punctele se află aproape pe dreaptă. Pentru timpii de așteptare la o linie de asistență, ele se curbează în sus la capătul de sus: câteva așteptări foarte lungi.",
+      "vorsicht": "Curbele arată asimetrie, punctele singure departe la capete arată valori extreme. Cu puține valori, punctele oscilează aleatoriu în jurul dreptei; testul Shapiro-Wilk rezumă abaterea într-un număr, dar nu înlocuiește privirea.",
+      "pruefen": true
+    },
+    "partialkorrelation": {
+      "titel": "Corelația parțială",
+      "kurz": "Merg două numere totuși împreună când un al treilea rămâne la fel? Corelația parțială arată relația dintre două numere după ce partea datorată unuia sau mai multor alte numere a fost înlăturată din ambele.",
+      "beispiel": "Vânzările de înghețată și arsurile solare sunt puternic legate (r = ,62). Cu temperatura înlăturată (r = ,80 și ,75 cu cele două), rămâne abia ceva: pr = ,05.",
+      "vorsicht": "Se înlătură doar partea în linie dreaptă din ce a fost măsurat și ales. Dacă al treilea număr este cauza ambelor se decide după domeniul de studiu, nu prin calcul: înlăturarea unui efect comun al ambelor numere poate chiar crea o relație falsă.",
+      "pruefen": true
+    },
+    "roc-auc": {
+      "titel": "Curba ROC și aria de sub curbă (AUC)",
+      "kurz": "Cât de bine separă o valoare măsurată persoanele afectate de cele neafectate? Curba ROC arată acest lucru pentru fiecare prag posibil, iar aria ei (AUC) îl rezumă: ,50 înseamnă întâmplare, 1 separare perfectă.",
+      "beispiel": "AUC = ,85: dacă extrageți o persoană afectată și una neafectată, cea afectată are valoarea mai vizibilă în 85% dintre cazuri. La pragul de 20 de puncte, testul depistează 80% dintre cei afectați și 78% dintre ceilalți; indicele Youden ,80 + ,78 − 1 = ,58 servește la alegerea pragului.",
+      "vorsicht": "Pragul este ales exact pe aceste date și de obicei se comportă mai rău în date noi. Indicele Youden nu știe care eroare cântărește mai mult.",
+      "pruefen": true,
+      "fachwoerter": "sensibilitate (proporția persoanelor afectate pe care testul le depistează), specificitate (proporția persoanelor neafectate pe care testul le lasă corect să treacă), prag (de la acest scor în sus, cineva contează ca marcat), indicele Youden (J = sensibilitate + specificitate − 1)."
+    },
+    "hazard-ratio": {
+      "titel": "Raport de hazard (HR)",
+      "kurz": "De câte ori mai repede sau mai încet apare un eveniment într-un grup? Hazard ratio (HR) compară riscul grupurilor ca evenimentul să se producă în momentul următor. 1 înseamnă nicio diferență.",
+      "beispiel": "Timpul până la primul accident de muncă, cu instruire față de fără: HR = 0,70, interval de 95% [0,52; 0,94]. Cu instruire, riscul unui accident în momentul următor este la orice moment de 0,70 ori mai mare. Intervalul nu include 1.",
+      "vorsicht": "HR nu este un risk ratio: HR = 1,8 nu înseamnă că evenimentul este de 1,8 ori mai probabil. Se poate schimba în timp; o singură valoare este atunci doar o medie.",
+      "pruefen": true,
+      "fachwoerter": "hazard (riscul de a avea evenimentul în momentul următor), hazarduri proporționale (raportul rămâne același în timp), regresia Cox (metoda care estimează HR), Wald (metoda obișnuită pentru interval)."
+    },
+    "proportionale-hazards": {
+      "titel": "Hazarduri proporționale",
+      "kurz": "Rămâne diferența dintre două grupuri aceeași în timp? Hazard ratio (HR) presupune că raportul riscurilor este întotdeauna același. Un test (cox.zph) verifică acest lucru; un p sub ,05 vorbește împotrivă.",
+      "beispiel": "p = ,031 pentru grup: raportul nu este constant. Dacă curbele se încrucișează în grafic, este un semn clar.",
+      "vorsicht": "Cu multe persoane, testul reacționează chiar și la abateri mici, cu puține le ratează pe cele mari.",
+      "pruefen": true
+    },
+    "risikodifferenz": {
+      "titel": "Diferența de riscuri (RD)",
+      "kurz": "Cu cât este riscul mai mare într-un grup? Diferența de riscuri (RD) este riscul unui grup minus al celuilalt, ca proporție sau în puncte procentuale. 0 înseamnă nicio diferență.",
+      "beispiel": "Accidente de muncă într-un an: 36 din 400 cu instruire (9%), 60 din 400 fără (15%). RD = ,09 − ,15 = −,060, interval de 95% [−,105; −,015]: cu 6 puncte procentuale mai puține cu instruire.",
+      "vorsicht": "Diferența de riscuri descrie o diferență; nu dovedește o cauză, iar într-un studiu caz-control (persoane afectate și neafectate căutate separat) nu poate fi interpretată. Statable calculează intervalul după Newcombe, care este mai sigur cu numere mici decât metoda mai simplă.",
+      "pruefen": true,
+      "fachwoerter": "interval Wald (o aproximare simplă pentru interval, mai puțin sigură cu numere mici), interval Newcombe (metoda folosită de Statable)."
+    },
+    "relatives-risiko": {
+      "titel": "Risc relativ (RR)",
+      "kurz": "De câte ori este mai mare riscul într-un grup? Riscul relativ (RR) este riscul unui grup împărțit la al celuilalt. 1 înseamnă nicio diferență; 0,5 înseamnă pe jumătate.",
+      "beispiel": "Aceleași accidente de muncă: RR = 0,09 / 0,15 = 0,60, interval de 95% [0,41; 0,89]. Cu instruire, riscul este de 0,60 ori mai mare. Intervalul nu include 1.",
+      "vorsicht": "Dacă un grup nu are niciun eveniment, intervalul RR nu poate fi calculat; Statable nu corectează în tăcere. Se aplică grupurilor urmărite în timp și experimentelor, nu studiilor caz-control.",
+      "pruefen": true
+    },
+    "nnt": {
+      "titel": "NNT (numărul necesar de tratat)",
+      "kurz": "La câte persoane trebuie intervenit pentru ca să apară un eveniment mai puțin? NNT (number needed to treat) este 1 împărțit la diferența de risc. NNTB înseamnă un beneficiu suplimentar, NNTH un prejudiciu suplimentar.",
+      "beispiel": "Cu RD = −,06, NNTB = 1 / ,06 = 16,7 (interval de 95% NNTB de la 9,5 la 67,0): la aproximativ 17 persoane instruite apare un accident mai puțin.",
+      "vorsicht": "Intervalul NNT trece prin infinit când diferența de risc poate fi și 0 (de exemplu NNTH 25 to ∞ to NNTB 10) - nu îl citiți niciodată ca pe un interval cu numere negative. Dacă un eveniment este dorit trebuie să indice persoana.",
+      "pruefen": true
+    },
+    "typical-error": {
+      "titel": "Typical error (TE)",
+      "kurz": "Cât de mult se abate în mod tipic o singură măsurătoare la repetare? Aceasta spune eroarea tipică (TE), în unitatea măsurătorii. Se calculează din două măsurători ale acelorași persoane.",
+      "beispiel": "Înălțimea săriturii a 8 persoane în două zile: diferențele dintre zile au o abatere standard de 2,1 cm. TE = 2,1 / √2 = 1,5 cm: o singură săritură se abate în mod tipic cu 1,5 cm.",
+      "vorsicht": "TE este valabilă doar dacă nimic nu s-a schimbat între măsurători. Este egală cu eroarea standard de măsurare din măsurători repetate, nu cu cea din modul în care întrebările unei scale se leagă între ele.",
+      "pruefen": true,
+      "fachwoerter": "fiabilitate (cât de sigură este o măsurătoare la repetare), abaterea standard (SD) a diferențelor (dispersia tipică a diferențelor dintre cele două măsurători), eroarea standard de măsurare (eroarea tipică a unei singure măsurători)."
+    },
+    "lilliefors": {
+      "titel": "Testul Lilliefors",
+      "kurz": "Se potrivesc valorile cu o distribuție normală? Testul Lilliefors verifică acest lucru, chiar și când media și dispersia sunt estimate mai întâi din date. Un p sub ,05 înseamnă că distribuția se abate de la normală.",
+      "beispiel": "Timpul de staționare al 30 de vizitatori în minute: D = ,17, p = ,033 (varianta Lilliefors a testului Kolmogorov-Smirnov). Distribuția se abate de la o distribuție normală.",
+      "vorsicht": "Un p peste ,05 nu înseamnă că datele sunt distribuite normal, ci doar că testul nu vorbește împotrivă. Cu puține persoane ratează abaterile mari; diagrama Q-Q arată mai mult.",
+      "pruefen": true,
+      "fachwoerter": "abatere standard (dispersia tipică a valorilor în jurul mediei lor), testul Kolmogorov-Smirnov (compară distribuția datelor cu o distribuție normală)."
+    },
+    "chi-quadrat-anpassung": {
+      "titel": "Testul χ² de potrivire",
+      "kurz": "Se potrivește distribuția pe categorii cu una așteptată? Testul χ² de potrivire verifică dacă frecvențele numărate se potrivesc cu proporții date, de exemplu proporții egale. Un p sub ,05 înseamnă: se abat de la așteptare.",
+      "beispiel": "Un zar, 120 de aruncări, 20 așteptate pe față. Observat: 14, 22, 18, 25, 19, 22. χ²(5, N = 120) = 74 / 20 = 3,7, p = ,593: frecvențele nu vorbesc împotriva unui zar corect.",
+      "vorsicht": "Dacă în vreo categorie se așteaptă mai puțin de 1, sau mai puțin de 5 în mai mult de o cincime dintre categorii, p este nesigur (un obicei după Cochran 1954). Un rezultat nesemnificativ statistic nu confirmă așteptarea.",
+      "pruefen": true
+    },
+    "ladung": {
+      "titel": "Încărcare factorială",
+      "kurz": "Cât de puternic aparține o întrebare (item) unui factor sau unei componente, adică unui grup de întrebări? Încărcarea factorială arată acest lucru: la rotația ortogonală, corelația (de la −1 la 1) dintre cele două. Semnul minus arată doar direcția, stabilită de orientarea componentei. Pentru putere contează mărimea absolută.",
+      "beispiel": "Întrebarea A: ,70 pe componenta 1, ,10 pe componenta 2: aparține componentei 1. Întrebarea B: −,65 pe componenta 1: aparține și ea, doar în sens invers.",
+      "vorsicht": "Pragul (adesea ,30 până la ,50) este un obicei. Dacă o întrebare îl depășește de două ori, se numește încărcare încrucișată (cross-loading): verificați după conținut. Celulele goale din tabel sunt încărcări mici care au fost ascunse."
+    },
+    "eigenwert": {
+      "titel": "Valoare proprie și criteriul Kaiser",
+      "kurz": "Cât din diferențele dintre răspunsuri cuprinde o componentă (un grup de întrebări)? Valoarea proprie arată acest lucru. Împărțită la numărul de întrebări, dă ponderea componentei în varianță. Cumulat înseamnă că se adună mai multe componente.",
+      "beispiel": "Cu 6 întrebări: componenta 1 are 2,4 (40%), componenta 2 are 1,2 (20%). Cumulat 3,6 din 6, deci 60%.",
+      "vorsicht": "Criteriul Kaiser păstrează componentele cu o valoare proprie peste 1. În simulări, el numește adesea prea multe și nu ar trebui să decidă singur. Analiza paralelă îl completează.",
+      "fachwoerter": "varianță (cât de larg se răspândesc răspunsurile), analiză paralelă (compară valorile proprii cu cele ale unor date aleatorii)."
+    },
+    "kommunalitaet": {
+      "titel": "Comunalitate (h²)",
+      "kurz": "Cât dintr-o întrebare explică împreună componentele (factorii)? Aceasta este comunalitatea (h²): ponderea diferențelor dintre răspunsurile la această întrebare pe care toate componentele o cuprind împreună. Pentru componente necorelate este suma pătratelor încărcărilor factoriale.",
+      "beispiel": "O întrebare are încărcări de ,6 și ,5 pe două componente: h² = ,36 + ,25 = ,61, deci aproximativ 61%.",
+      "vorsicht": "O valoare mică poate însemna multă eroare aleatorie, pe care factorii comuni nu o explică niciodată, sau că întrebarea nu se potrivește din punct de vedere al conținutului cu celelalte."
+    },
+    "rotation": {
+      "titel": "Rotație (ortogonală și oblică)",
+      "kurz": "Cum devine mai clară atribuirea întrebărilor? Prin rotație: axele soluției se rotesc până când fiecare întrebare se încarcă în principal pe un factor. Multe poziții se potrivesc la fel de bine cu corelațiile. Rotația alege una cu o structură clară.",
+      "beispiel": "Ortogonală (în unghi drept, de exemplu varimax): factorii rămân necorelați. Oblică (înclinată, de exemplu promax): factorii pot fi legați între ei.",
+      "vorsicht": "Rotația ortogonală schimbă încărcările, nu comunalitățile (cât dintr-o întrebare explică împreună factorii). Cea oblică nu forțează o relație: cu factori necorelați, imaginea seamănă cu cea ortogonală."
+    },
+    "explorative-faktorenanalyse": {
+      "titel": "Analiza factorială exploratorie (EFA)",
+      "kurz": "Există trăsături comune în spatele întrebărilor și care sunt ele? Analiza factorială exploratorie le caută fără o structură stabilită dinainte. Ea presupune o cauză comună. Aceasta trebuie mai întâi să aibă sens din punct de vedere al conținutului, înainte de orice statistică.",
+      "beispiel": "Zece întrebări despre bunăstare dau două grupuri. Dacă există două trăsături se decide prin cunoașterea domeniului.",
+      "vorsicht": "O structură găsită în aceleași date se potrivește firește bine cu ele. Poate fi confirmată doar pe date noi.",
+      "fachwoerter": "confirmatorie (testează o structură stabilită dinainte)."
+    },
+    "bartlett-test": {
+      "titel": "Testul Bartlett (potrivire pentru analiza factorială)",
+      "kurz": "Sunt întrebările legate între ele în vreun fel? Testul de sfericitate Bartlett verifică dacă toate corelațiile sunt zero (matrice identitate: zero în afara diagonalei). Semnificativ înseamnă doar: nu toate sunt zero.",
+      "beispiel": "Cu 30 de persoane, o relație medie poate rămâne nedetectată. Cu 5000 de persoane, chiar și relații foarte mici devin semnificative.",
+      "vorsicht": "Statistica depinde puternic de mărimea eșantionului. Cu multe cazuri este aproape întotdeauna semnificativă și atunci spune puțin despre potrivire. Nu o confundați cu testul de sfericitate Mauchly pentru măsurători repetate.",
+      "fachwoerter": "semnificativ (valoarea p este sub limita aleasă, de obicei ,05), statistica testului (numărul pe care un test îl calculează din date)."
+    },
+    "hauptkomponenten": {
+      "titel": "Analiza componentelor principale (PCA) și analiza factorială",
+      "kurz": "Doar condensez întrebările sau caut o trăsătură comună? Analiza componentelor principale (PCA) împarte varianța totală. Analiza factorială explică doar partea comună. Restul fiecărei întrebări (particularitatea ei plus eroarea de măsurare) îl pune deoparte ca parte unică.",
+      "beispiel": "Cu puține întrebări pe factor, încărcările din PCA sunt de obicei mai mari decât cele din analiza factorială, pentru că includ restul.",
+      "vorsicht": "Adesea asemănătoare, nu întotdeauna: diferențele apar mai ales la comunalități mici.",
+      "fachwoerter": "varianță (cât de larg se răspândesc răspunsurile), unicitate (partea unei întrebări pe care factorii nu o explică)."
+    },
+    "fallzahl-faktorenanalyse": {
+      "titel": "Mărimea eșantionului pentru analiza factorială",
+      "kurz": "Câte persoane are nevoie o analiză factorială? Depinde mai puțin de numărul de întrebări și mai mult de două lucruri: cât de mari sunt comunalitățile (cât dintr-o întrebare explică factorii) și câte întrebări definesc clar fiecare factor? Cu cât sunt mai mari ambele, cu atât eșantionul poate fi mai mic.",
+      "beispiel": "Comunalități mari, patru întrebări puternice pe factor: pot fi suficiente puține persoane. Comunalități mici, două întrebări slabe pe factor: chiar și multe pot fi prea puține.",
+      "vorsicht": "Rapoartele fixe, precum „zece persoane pe întrebare”, scapă acest lucru."
+    },
+    "umpolen": {
+      "titel": "Recodificare inversă (reverse-coding)",
+      "kurz": "Ține recodificarea inversă de analiza fidelității? Da: pentru alfa Cronbach și scorul scalei, toate întrebările unei scale trebuie să conteze în aceeași direcție. De aceea, o întrebare formulată invers este recodificată astfel încât „mare” să însemne mereu același lucru. Pe o scală de la 1 la 5, un 1 devine 5.",
+      "beispiel": "„Sunt adesea obosit(ă)” alături de „Am multă energie”: fără recodificare inversă, ele se anulează parțial în sumă. Alfa (cât de legate sunt întrebările) scade și poate cădea chiar sub zero.",
+      "vorsicht": "Pentru analiza factorială recodificarea inversă nu este necesară: o întrebare inversă are atunci o încărcare negativă, iar o încărcare negativă contează la fel ca una pozitivă. Formularea arată dacă o întrebare merge în sens invers."
+    },
+    "eingeschraenkte-streuung": {
+      "titel": "Amplitudine restrânsă (range restriction)",
+      "kurz": "De ce este o relație mai mică atunci când toți sunt asemănători? Amplitudine restrânsă: cu o felie îngustă dintr-o trăsătură, corelația scade, chiar și pentru aceeași relație. Aceasta scade și încărcările.",
+      "beispiel": "Vârsta și înălțimea sunt strâns legate la copiii de la 2 la 16 ani. Doar între copiii de 10 până la 11 ani corelația este mult mai mică.",
+      "vorsicht": "Un r mic într-un grup uniform nu înseamnă că relația este mică peste tot. Fiabilitatea (ponderea diferențelor reale în totalul diferențelor) este și ea mai mică acolo, pentru că sunt puține diferențe reale."
+    },
+    "inter-item-korrelation": {
+      "titel": "Corelația medie dintre iteme (inter-item)",
+      "kurz": "Cât de strâns sunt legate în medie întrebările unei scale? Corelația medie dintre iteme arată acest lucru (item = întrebare): corelația medie a fiecărei perechi. Nu depinde de numărul de întrebări. Alfa crește și ea cu mai multe întrebări.",
+      "beispiel": "Două scale cu alfa ,80: 4 întrebări cu o corelație medie de ,50, sau 12 întrebări cu doar ,25.",
+      "vorsicht": "Un alfa mare obținut din multe întrebări nu dovedește o scală unitară. O scală scurtă cu alfa mic măsoară imprecis, chiar dacă motivul este scurtimea ei.",
+      "fachwoerter": "alfa (cât de puternic sunt legate răspunsurile la întrebările unei scale)."
+    },
+    "eindimensionalitaet": {
+      "titel": "Unidimensionalitate",
+      "kurz": "Măsoară toate întrebările o singură trăsătură? Aceasta este unidimensionalitatea. O analiză factorială o poate verifica. Alfa nu o arată: măsoară cât de legate sunt întrebările, nu câte trăsături se află în spatele lor.",
+      "beispiel": "Două grupuri de câte 5 întrebări, corelația ,60 în interiorul grupurilor, 0 între ele. Alfa celor zece: aproximativ ,78, deși se măsoară două trăsături.",
+      "vorsicht": "Dacă două grupuri au o valoare proprie peste 1, aceasta sugerează două trăsături, nu o dovedește.",
+      "fachwoerter": "alfa (cât de puternic sunt legate răspunsurile la întrebările unei scale), valoare proprie (cât din răspândire cuprinde o componentă)."
+    },
+    "reliabilitaet-wege": {
+      "titel": "Modalități de estimare a fiabilității (alfa, retest, split-half)",
+      "kurz": "De ce metode diferite dau fiabilități diferite pentru aceeași scală? Alfa, retestul (măsurare de două ori) și split-half (compararea a două jumătăți) sunt moduri diferite de a estima aceeași fiabilitate. Fiecare presupune altceva.",
+      "beispiel": "Alfa presupune, printre altele, că toate întrebările măsoară o trăsătură. Retestul presupune că trăsătura nu se schimbă și că memoria nu ajută.",
+      "vorsicht": "Doar când presupunerile sunt îndeplinite ar trebui ca numerele să concorde. Diferențele indică încălcări sau întâmplare."
+    },
+    "validitaet": {
+      "titel": "Validitate",
+      "kurz": "Măsoară scala într-adevăr ceea ce trebuie să măsoare? Aceasta este validitatea. Fiabilitatea este necesară pentru ea, dar nu suficientă: o ruletă măsoară fiabil lungimea, dar nu greutatea.",
+      "beispiel": "Un alfa mare arată că întrebările sunt legate între ele, nu dacă surprind ceea ce se intenționează. Pentru aceasta sunt necesare dovezi din conținut, din compararea cu un etalon extern (criteriu) și despre trăsătura intenționată (construct).",
+      "vorsicht": "Întrebările aproape identice ridică alfa, dar acoperă o felie îngustă. Validitatea ține de interpretarea scorurilor, nu de test în sine."
+    },
+    "antwortstufen": {
+      "titel": "Opțiuni de răspuns",
+      "kurz": "De ce contează numărul de opțiuni de răspuns? Opțiunile de răspuns sunt treptele pe care le oferă o întrebare, de exemplu de la 1 la 4. Alfa calculat din corelații Pearson presupune valori fin gradate. Cu puține trepte, relațiile ies prea mici, iar fiabilitatea este subestimată.",
+      "beispiel": "Aceeași atitudine pe 3 sau pe 7 trepte: cu 3, diferențele fine se pierd, așa că scad corelațiile și alfa.",
+      "vorsicht": "De la câte trepte în sus este suficient nu este stabilit (adesea cinci până la șapte). Mai multe trepte nu sunt automat mai bune.",
+      "fachwoerter": "corelația Pearson (măsura obișnuită a relației dintre două mărimi fin gradate)."
+    },
+    "messfehler": {
+      "titel": "Eroare de măsurare",
+      "kurz": "De ce deformează o măsurare imprecisă analiza? Eroarea de măsurare este o abatere aleatorie de la valoarea reală. Într-o variabilă explicativă (predictor), ea slăbește efectul acelei variabile (atenuare, attenuation). Eroarea aleatorie din rezultat nu deformează B în acest mod.",
+      "beispiel": "Un mediator (o variabilă prin care trece o influență) este măsurat imprecis. O parte din influență îl ocolește și cade pe calea directă: efectul mediatorului iese prea mic, efectul direct prea mare.",
+      "vorsicht": "Aceasta nu spune nimic despre calea pe care o urmează cu adevărat influența."
+    },
+    "abhaengige-groesse": {
+      "titel": "Variabila dependentă",
+      "kurz": "Ce se prezice și din ce? Variabila dependentă (y) este cea care se prezice. Variabila independentă (x) este cea din care se prezice. „Regresia lui y pe x” înseamnă: y este prezis din x.",
+      "beispiel": "Costurile de încălzire sunt prezise din temperatura de afară. Costurile de încălzire sunt variabila dependentă.",
+      "vorsicht": "„Dependentă” înseamnă doar: prezisă, nu: cauzată de x. Dacă schimbați rolurile, obțineți o altă dreaptă."
+    },
+    "kleinste-quadrate": {
+      "titel": "Metoda celor mai mici pătrate",
+      "kurz": "Cum se așază cea mai bună dreaptă printre puncte? Metoda celor mai mici pătrate alege dreapta cu cea mai mică sumă a abaterilor la pătrat. Ele se măsoară pe direcția y: observat minus prezis. Acestea sunt reziduurile.",
+      "beispiel": "Punct la y = 10, dreapta prezice 8: abatere 2, la pătrat 4.",
+      "vorsicht": "Nu se măsoară cea mai scurtă distanță până la dreaptă. Ridicarea la pătrat face ca abaterile mari să conteze mai mult."
+    },
+    "standardfehler-schaetzer": {
+      "titel": "Eroarea standard a estimării",
+      "kurz": "Cât de departe se află de obicei observațiile de predicție? Eroarea standard a estimării arată acest lucru. Are unitatea variabilei dependente. Mai mică înseamnă o predicție mai precisă.",
+      "beispiel": "Timp de livrare în zile, valoarea 2: timpul real diferă de obicei cu aproximativ 2 zile.",
+      "vorsicht": "„De obicei” nu este un maxim. Nu o confundați cu eroarea standard a unui B, care descrie cât de precis este estimat B."
+    },
+    "kollinearitaet": {
+      "titel": "Coliniaritate (toleranță, VIF)",
+      "kurz": "Măsoară doi predictori aproape același lucru? Atunci există coliniaritate: se suprapun. Toleranța (tolerance) este ponderea din răspândirea unui predictor pe care ceilalți nu o explică. VIF este 1 împărțit la toleranță. Cu cât VIF este mai mare, cu atât eroarea standard a lui B este mai mare. Estimarea rămâne nedeplasată.",
+      "beispiel": "Suprafață și camere: toleranța ,15 înseamnă că suprafața lasă neexplicată doar 15% din răspândirea numărului de camere.",
+      "vorsicht": "Întregul model poate fi semnificativ, deși niciun B nu este. Limitele VIF (5 sau 10) sunt un obicei.",
+      "fachwoerter": "eroare standard (cât variază de obicei o valoare estimată), semnificativ (valoarea p este sub limita aleasă, de obicei ,05).",
+      "statable": "Calculați regresia și deschideți sub rezultat blocul „Verificarea regresiei: coliniaritate și cazuri neobișnuite”. Acesta arată toleranța, VIF și contribuția proprie (sr²) pentru fiecare predictor."
+    },
+    "dummy-variable": {
+      "titel": "Variabilă dummy (variabilă 0/1)",
+      "kurz": "Cum se introduce un grup într-o regresie? Ca variabilă dummy: 0 pentru grupul de referință, 1 pentru celălalt. Atunci constanta este media de referință, iar B diferența mediilor. Cu q grupuri sunt necesare q - 1 variabile dummy.",
+      "beispiel": "Îngrășământul A (0), B (1): constanta 5,0, B = 1,2. Media lui B: 6,2.",
+      "vorsicht": "Semnul lui B depinde de referință. Testul lui B coincide cu testul t pentru eșantioane independente cu dispersii egale."
+    },
+    "residuen": {
+      "titel": "Reziduuri",
+      "kurz": "Cât de departe este un punct de predicție? Aceasta este reziduul lui: observat minus prezis. Normalitatea se cere acestor erori, nu valorilor brute. Reziduurile se verifică cu o histogramă sau cu o diagramă Q-Q.",
+      "beispiel": "Observat 70 kg, prezis 66: reziduu +4.",
+      "vorsicht": "Valorile brute din mai multe grupuri se amestecă și pot părea asimetrice, deși reziduurile sunt în regulă.",
+      "fachwoerter": "diagramă Q-Q (grafic: dacă punctele se află aproape de dreaptă, valorile se potrivesc cu o distribuție normală)."
+    },
+    "heteroskedastizitaet": {
+      "titel": "Heteroscedasticitate (răspândire inegală a erorilor)",
+      "kurz": "Se răspândesc abaterile la fel peste tot? Dacă nu, aceasta este heteroscedasticitate. În diagrama reziduurilor apare adesea ca o pâlnie. Panta rămâne nedeplasată, dar mai puțin precisă, iar erorile standard obișnuite sunt greșite. Erorile standard robuste țin seama de răspândirea inegală.",
+      "beispiel": "Prezis 1000: abateri de aproximativ ±100. La 5000: ±600.",
+      "vorsicht": "O pantă este deplasată de neliniaritate, de variabile omise sau de eroarea de măsurare din x, nu de aceasta.",
+      "fachwoerter": "diagrama reziduurilor (o imagine a abaterilor de la predicție), pantă (B: schimbarea pe unitate), eroare standard (cât variază de obicei o estimare), nedeplasat (corect în medie)."
+    },
+    "hebelwert": {
+      "titel": "Pârghie (leverage)",
+      "kurz": "Cât de puternic poate un singur punct să tragă dreapta? Pârghia crește cu distanța valorii x a punctului față de media lui x. Un punct îndepărtat trage dreapta spre sine.",
+      "beispiel": "Zece persoane se antrenează 20 până la 30 de ore, una 90: pârghie mare.",
+      "vorsicht": "Reziduul lui (distanța de la dreaptă) poate fi mic tocmai pentru că a tras dreapta spre sine. De aceea comparați dreapta cu și fără punct."
+    },
+    "f-test": {
+      "titel": "Testul F (analiza de varianță și regresia)",
+      "kurz": "Există vreo diferență sau vreun efect? Testul F verifică în ansamblu. Regresie: sunt toți B zero în același timp? Analiza de varianță: sunt toate mediile grupurilor egale? În analiza de varianță, F este răspândirea (media pătratelor) dintre grupuri împărțită la cea din interiorul grupurilor.",
+      "beispiel": "Trei metode de predare: între grupuri 6,0, în interior 2,0. F = 3,0.",
+      "vorsicht": "Un F semnificativ înseamnă: cel puțin două medii diferă. Care anume, arată doar comparațiile pe perechi.",
+      "fachwoerter": "media pătratelor (suma abaterilor la pătrat împărțită la gradele de libertate, o măsură a răspândirii), ipoteza nulă (presupunerea „nicio diferență” pe care o examinează testul)."
+    },
+    "schrittweise-regression": {
+      "titel": "Regresie pas cu pas (selecție automată)",
+      "kurz": "Cum alege un program singur predictorii? Regresia pas cu pas adaugă sau elimină predictori după un criteriu statistic, precum valoarea p. Adesea se citează: intrare la ,05, eliminare la ,10.",
+      "beispiel": "Din 20 de predictori posibili ai chiriei, rămân patru.",
+      "vorsicht": "Alegerea nu cunoaște nici teorie, nici cauze și depinde de aceste date. Dacă predictorii au sens sau sunt cauze rămâne deschis."
+    },
+    "extrapolation": {
+      "titel": "Extrapolare (predicție în afara datelor)",
+      "kurz": "Este predicția valabilă departe în afara valorilor observate? Predicția de acolo este extrapolare. Nu este foarte fiabilă: intervalul de încredere al predicției se lărgește cu cât x este mai departe de media lui x, iar dreapta nu trebuie să fie valabilă acolo.",
+      "beispiel": "Plante măsurate în săptămânile 1 până la 8, 5 cm pe săptămână. Săptămâna 80 ar da 400 cm.",
+      "vorsicht": "Un R² mare nu schimbă acest lucru."
+    },
+    "zusammenhang-ursache": {
+      "titel": "Asociere și cauză (corelație, cauzalitate)",
+      "kurz": "Arată o relație că un lucru îl provoacă pe celălalt? Nu prin ea însăși. B arată: în medie, mai mult x merge cu mai mult sau mai puțin y, la valori egale ale celorlalți predictori din model. Aceasta este o asociere. Cauzalitatea nu rezultă; o cauză comună le poate produce pe amândouă.",
+      "beispiel": "Mai multe vânzări de înghețată, mai multe arsuri solare: ambele urmează soarele.",
+      "vorsicht": "Datele pentru zone arată o relație între zone, nu pentru persoanele individuale din ele."
+    },
+    "lineares-modell": {
+      "titel": "Model liniar (liniar în parametri)",
+      "kurz": "Poate regresia liniară să descrie doar drepte? Nu. „Liniar” se referă la parametri (B): fiecare B doar înmulțește un predictor, totul se adună. Cu un termen pătratic (x și x² ca predictori), modelul potrivește o curbă.",
+      "beispiel": "Randament = 2 + 3x - 0,2x²: o curbă, dar un model liniar.",
+      "vorsicht": "x² este doar încă un predictor. Testul lui (Sig.) arată dacă este necesar, pentru că R² crește cu fiecare adaos."
+    },
+    "scheinregression": {
+      "titel": "Regresie falsă (tendință în serii de timp)",
+      "kurz": "Arată un R² mare între două serii de timp o relație reală? Nu neapărat. Dacă ambele cresc în timp (tendință), rezultatul este regresie falsă. Semne de avertizare: R² foarte mare și reziduuri asemănătoare (autocorelație), Durbin-Watson aproape de 0.",
+      "beispiel": "Bicicletele din orașul A și importurile de cafea ale țării B cresc în fiecare an: R² = ,95.",
+      "vorsicht": "Cu modificările de la un an la altul, R² scade clar dacă era doar tendință.",
+      "fachwoerter": "Durbin-Watson (valoare de test pentru autocorelație: aproape de 2 niciuna, aproape de 0 pozitivă, aproape de 4 negativă)."
+    },
+    "prognoseguete": {
+      "titel": "Acuratețea prognozei (MAE, MAPE, MASE)",
+      "kurz": "Cât de bine nimerește o prognoză? MAE: eroarea absolută medie. MAPE: eroarea procentuală medie, împarte la valoarea observată, infinită la zero. MASE: împarte la eroarea prognozei naive (ultima valoare) din perioada de ajustare. Sub 1 mai bine, peste 1 mai rău decât aceasta.",
+      "beispiel": "MASE 0,8: 80% din eroarea naivă.",
+      "vorsicht": "Pentru numărări rare cu zerouri, MAPE este inutil."
+    },
+    "preisindex": {
+      "titel": "Indice de prețuri (Laspeyres, efect de bază)",
+      "kurz": "Cu cât au devenit mai scumpe aceleași cumpărături? Indicele Laspeyres ține fixe cantitățile perioadei de bază, deci se schimbă doar prețurile. Efect de bază: schimbarea față de acum un an poate scădea deși indicele crește, dacă acum un an a crescut mai mult.",
+      "beispiel": "10 pâini, 20 l lapte. Bază: 2 și 1, valoare 40. Acum 2,4 și 1,2: valoare 48. Indice 1,20.",
+      "vorsicht": "Cantitățile fixe nu surprind faptul că cumpărătorii trec la bunuri mai ieftine."
+    },
+    "anscombe-quartett": {
+      "titel": "Cvartetul Anscombe (aceleași cifre, date diferite)",
+      "kurz": "Este suficientă o singură cifră pentru a descrie datele? Nu. Cvartetul Anscombe: patru seturi de date cu aproape același r, aceleași medii și aceeași dreaptă, dar nori de puncte diferiți (dreaptă, arc, valoare extremă, un punct decide totul). Deci priviți diagrama de dispersie.",
+      "beispiel": "r = ,80 se potrivește unui nor în jurul unei drepte și unor puncte de pe o curbă.",
+      "vorsicht": "r măsoară doar partea în linie dreaptă. Un singur punct poate scădea puternic r: verificați-l, nu-l ștergeți."
+    },
+    "kovarianz": {
+      "titel": "Covarianța (și corelația r)",
+      "kurz": "Cât de puternic cresc sau scad împreună două valori? Covarianța o măsoară nestandardizat, deci valoarea ei depinde de scală. Corelația r este covarianța împărțită la produsul abaterilor standard și rămâne aceeași când se schimbă unitățile.",
+      "beispiel": "Înălțime și greutate: covarianța 60 cu înălțimea în cm, 0,6 în metri. r este același.",
+      "vorsicht": "Covarianța 0 înseamnă doar: nicio relație în linie dreaptă, nu independență.",
+      "fachwoerter": "abatere standard (distanța tipică a valorilor față de medie)."
+    },
+    "punktbiseriale-korrelation": {
+      "titel": "Corelația punct-biserială (grup și măsurare)",
+      "kurz": "Este un grup (0/1) legat de o măsurare? Corelația punct-biserială este corelația Pearson dintre o variabilă 0/1 și un număr. Testul ei este testul t pentru eșantioane independente (dispersii egale): același p, aceeași mărime a lui t.",
+      "beispiel": "A = 0, B = 1, r = +,30: B are în medie valori mai mari. Inversat: −,30.",
+      "vorsicht": "Semnul urmează codificarea. Corelația biserială este altceva."
+    },
+    "fisher-z": {
+      "titel": "Fisher Z (transformarea Fisher Z)",
+      "kurz": "De ce este intervalul din jurul lui r asimetric? r poate fi cel mult 1, deci la r mare este mai puțin loc deasupra. Fisher Z face distribuția lui r aproximativ normală. Intervalul se construiește în Z și se convertește înapoi, deci este asimetric.",
+      "beispiel": "r = ,90, n = 30: interval de aproximativ ,80 până la ,95.",
+      "vorsicht": "Intervalul nu este niciodată probabilitatea valorii reale. Fisher Z nu este standardizarea z."
+    },
+    "fehlerarten": {
+      "titel": "Eroare de tip I și eroare de tip II (α, β)",
+      "kurz": "Poate greși un test? Da, în două feluri. Eroare de tip I: nicio diferență, și totuși „semnificativ”. Eroare de tip II: există o diferență, dar este ratată. Nivelul α (adesea ,05) este rata primei erori când nu există nimic.",
+      "beispiel": "200 de teste fără diferență reală, α = ,05: aproximativ 10 semnificative în mod fals.",
+      "vorsicht": "α nu spune dacă o constatare izolată este greșită. O eroare de tip II are probabilitatea β = 1 minus puterea.",
+      "fachwoerter": "puterea (șansa de a găsi o diferență care există), nivel (limita pentru p aleasă dinainte)."
+    },
+    "einseitig-zweiseitig": {
+      "titel": "Test unilateral și bilateral",
+      "kurz": "Contează o direcție sau ambele? Bilateral întreabă: există o diferență, în oricare direcție? Unilateral întreabă doar: este A mai mare decât B? Aceleași date pot fi semnificative unilateral, nu bilateral. La îndoială, testați bilateral.",
+      "beispiel": "Metodă nouă de predare: p bilateral = ,08, p unilateral = ,04.",
+      "vorsicht": "Direcția trebuie stabilită înainte de a vedea datele. Dacă este aleasă după aceea, înjumătățește p fără informație nouă."
+    },
+    "mehrfaches-testen": {
+      "titel": "Testări multiple (inflația alfa, Bonferroni)",
+      "kurz": "Cât de des vă păcălește întâmplarea la multe teste? La nivelul ,05, fiecare test dă o alarmă falsă în 5% din cazuri când nu există nimic real. La m teste independente, șansa a cel puțin unei alarme este 1 - ,95 la puterea m (inflația alfa). Bonferroni împarte nivelul la m.",
+      "beispiel": "10 teste, nimic real: aproximativ 40% șanse de o potrivire.",
+      "vorsicht": "Se așteaptă aproximativ m ori ,05 potriviri întâmplătoare. Căutarea dă doar ipoteze."
+    },
+    "effekt-ueberschaetzung": {
+      "titel": "Efecte supraestimate (blestemul câștigătorului)",
+      "kurz": "Este un efect semnificativ la fel de mare cum a fost măsurat? Adesea nu. Dacă contează doar rezultatele semnificative, estimările sunt deplasate în sus: un studiu mic devine semnificativ doar cu o estimare norocos de mare. Acesta este blestemul câștigătorului (winner's curse).",
+      "beispiel": "Diferența reală este medie. Din multe studii mici apar doar cele semnificative; media lor se află deasupra ei.",
+      "vorsicht": "Cu cât studiul este mai mic, cu atât deplasarea este mai puternică. Replicările găsesc de aceea adesea efecte mai mici, nu neapărat zero.",
+      "fachwoerter": "semnificativ (valoarea p este sub limita aleasă, de obicei ,05)."
+    },
+    "falsch-positive-befunde": {
+      "titel": "Constatări fals pozitive (eroare de tip I, grade de libertate ale cercetătorului)",
+      "kurz": "Câte constatări semnificative sunt alarme false? Depinde de nivel, de putere și de ponderea efectelor reale. Cu putere mică, ponderea falsă crește. Mai multe alarme false apar și atunci când se testează după fiecare caz nou și se oprește la semnificație, sau se încearcă multe analize și se raportează doar cea reușită (grade de libertate ale cercetătorului).",
+      "beispiel": "1000 de efecte testate, 100 reale, putere ,5, nivel ,05: 50 de constatări adevărate și 45 false.",
+      "vorsicht": "Nivelul ,05 este valabil doar pentru un eșantion și o analiză planificate dinainte. Rata crește chiar și fără intenția de a înșela.",
+      "fachwoerter": "putere (șansa de a găsi un efect real), nivel (limita pentru p stabilită dinainte), semnificativ (p este sub această limită)."
+    },
+    "fehlerbalken": {
+      "titel": "Bare de eroare (eroare standard, interval de încredere)",
+      "kurz": "Ce arată barele de la medii? Aceasta nu este stabilit: abatere standard (răspândirea valorilor individuale), eroare standard (precizia mediei) sau interval de încredere. „± număr” nu spune care. O eroare standard în ambele părți are aproximativ jumătate din lățimea intervalului de 95% și corespunde aproximativ la 68%.",
+      "beispiel": "Intervale de 95% care se suprapun, și totuși p = ,04.",
+      "vorsicht": "Suprapunerea nu decide; decide testul diferenței. Dacă intervalele de 95% nu au nicio parte comună, grupurile independente diferă semnificativ la nivelul ,05. Pentru măsurători perechi contează intervalul diferențelor pe persoană, nu intervalele celor două medii."
+    },
+    "levene-test": {
+      "titel": "Testul Levene (răspândire egală)",
+      "kurz": "Se răspândesc grupurile la fel? (testul Levene) Verifică dacă varianța, răspândirea valorilor, este aceeași în toate grupurile. Un p mic indică răspândire inegală.",
+      "beispiel": "Două grupuri de câte 8 persoane, Levene p = ,40: niciun semn de răspândire inegală.",
+      "vorsicht": "Nesemnificativ nu înseamnă că răspândirea este egală. La grupuri mici, testul detectează slab diferențele. Nu dovedește egalitatea."
+    },
+    "gepoolter-t-test": {
+      "titel": "Dispersie comună (pooled) sau testul Welch (dispersii egale presupuse?)",
+      "kurz": "Se răspândesc ambele grupuri la fel? Testul t cu dispersie comună (pooled) presupune acest lucru. Testul Welch nu o combină și ajustează gradele de libertate. Cu două grupuri, F din analiza de varianță este pătratul lui t, cu același p.",
+      "beispiel": "10 persoane cu dispersia 8, 40 cu dispersia 3: combinarea reflectă mai ales grupul mare cu dispersia mică.",
+      "vorsicht": "Dacă grupul mai mic se răspândește mai mult, testul cu dispersie comună arată prea des semnificație. Welch corectează acest lucru.",
+      "fachwoerter": "grade de libertate (un număr care fixează distribuția de referință a lui t)."
+    },
+    "zentraler-grenzwertsatz": {
+      "titel": "Teorema limită centrală",
+      "kurz": "Trebuie ca valorile să fie distribuite normal? Nu întotdeauna. Teorema limită centrală spune: mediile multor observații sunt aproximativ normale, chiar și când valorile individuale sunt asimetrice. Se aplică mediilor, nu valorilor individuale.",
+      "beispiel": "Veniturile sunt asimetrice. Mediile câte 200 de persoane se află aproape simetric.",
+      "vorsicht": "Câte sunt suficiente depinde de formă: cu valori puternic asimetrice, 10 nu ajunge. Cu grupuri mari, testele t sunt de obicei utilizabile fără valori distribuite normal."
+    },
+    "pseudoreplikation": {
+      "titel": "Pseudoreplicare (măsurători dependente)",
+      "kurz": "Contează fiecare valoare ca informație separată? Nu, dacă valorile aparțin împreună. Pseudoreplicare: valorile dependente sunt tratate ca independente, de exemplu măsurătorile repetate ale unei persoane sau copiii unei clase. Eroarea standard devine prea mică; semnificația apare prea des.",
+      "beispiel": "20 de plante, 5 frunze măsurate pe fiecare: sunt 20 de unități independente, nu 100.",
+      "vorsicht": "Mai multe rânduri nu înseamnă mai multă informație. Remediu: o medie pe unitate sau un model care ține seama de grupare.",
+      "fachwoerter": "eroare standard (cât variază de obicei o estimare), semnificativ (valoarea p este sub limita aleasă, de obicei ,05)."
+    },
+    "simpson-paradox": {
+      "titel": "Paradoxul Simpson (reunirea grupurilor)",
+      "kurz": "Se poate întoarce o relație când grupurile sunt reunite? Da. Imaginea de ansamblu poate ascunde sau inversa ceea ce arată fiecare grup (paradoxul Simpson, și la corelația r). Motiv: grupurile diferă prin caracteristici sau prin compoziție.",
+      "beispiel": "A ajută mai mult decât B în cazurile ușoare și în cele grave. Dar A ajunge aproape doar la cazuri grave. În total, A pare mai rău.",
+      "vorsicht": "Totalul nu poate fi atunci citit direct. Care perspectivă este valabilă depinde de situație."
+    },
+    "erwartete-haeufigkeit": {
+      "titel": "Frecvență așteptată (chi-pătrat, tabel de contingență)",
+      "kurz": "Câte cazuri pe celulă s-ar aștepta dacă variabilele nu ar fi legate? Totalul rândului înmulțit cu totalul coloanei, împărțit la totalul general. Testul chi-pătrat le compară cu frecvențele observate. Care celulă iese în evidență se vede doar în compararea pe celule.",
+      "beispiel": "Rând 60, coloană 50, total 200: așteptat 60 · 50 / 200 = 15.",
+      "vorsicht": "Se citează adesea: toate cel puțin 5, un obicei. La valori mai mici într-un tabel 2x2, folosiți testul exact Fisher.",
+      "fachwoerter": "tabel de contingență (tabel cu două variabile), reziduu standardizat (diferența dintre observat și așteptat, scalată pentru a fi comparabilă)."
+    },
+    "zeilenprozent": {
+      "titel": "Procent pe rând (ponderea în interiorul rândului)",
+      "kurz": "Ce pondere în cadrul unui grup? Într-un tabel de contingență, procentul pe rând este numărul din celulă împărțit la totalul rândului, înmulțit cu 100. Totalul rândului este referința. „Ce procent dintre A au B?” ia ca referință totalul lui A. Procentul pe coloană folosește totalul coloanei.",
+      "beispiel": "80 de proprietari de câini, 20 dintre ei au și o pisică: 20 / 80 = 25%.",
+      "vorsicht": "Procentul pe rând și procentul pe coloană sunt numere diferite. Întrebați mai întâi: pondere din ce?",
+      "fachwoerter": "tabel de contingență (tabel cu două variabile)."
+    },
+    "likelihood-ratio": {
+      "titel": "Raport de verosimilitate (LR)",
+      "kurz": "Cât de mult schimbă un rezultat de test estimarea? LR pozitiv este sensibilitatea împărțită la (1 minus specificitatea): de atâtea ori mai des apare un rezultat pozitiv la bolnavi decât la sănătoși. Peste 1 pledează pentru boală. Șansele (odds) după test = șansele (odds) dinaintea testului înmulțite cu LR.",
+      "beispiel": "Înainte de test ,20, deci odds ,25. LR 4 dă odds 1, adică ,50.",
+      "vorsicht": "LR nu este o probabilitate. Înapoi la p: odds împărțit la (1 plus odds).",
+      "fachwoerter": "sensibilitate (ponderea bolnavilor pe care testul îi depistează), specificitate (ponderea sănătoșilor pe care testul îi numește corect sănătoși), șanse (odds: p împărțit la 1 minus p)."
+    },
+    "regelkarte": {
+      "titel": "Diagramă de control (Shewhart, CUSUM, EWMA)",
+      "kurz": "S-a schimbat procesul? O diagramă de control afișează în ordine mediile grupurilor, cu o linie centrală și limite, adesea ±3 erori standard. Un punct în afara limitelor este un semnal: probabil acționează mai mult decât întâmplarea. Faza 1 estimează limitele din date anterioare, faza 2 monitorizează apoi continuu. CUSUM și EWMA combină mai multe grupuri și detectează mai devreme schimbări mici și durabile.",
+      "beispiel": "Stabil: aproximativ 3 din 1000 de puncte în afară. Mai multe într-un timp scurt sunt un semnal clar.",
+      "vorsicht": "Dacă un proces stabil rămâne în limite, variația este întâmplare: ajustarea crește atunci răspândirea. Limitele din puține grupuri sunt imprecise.",
+      "fachwoerter": "eroare standard (răspândirea mediilor grupurilor), stabil (distribuția rămâne aceeași în timp)."
+    },
+    "prozessfaehigkeit": {
+      "titel": "Capabilitatea procesului (Cp, Cpk)",
+      "kurz": "Respectă procesul specificația? Cp compară intervalul permis cu răspândirea și ignoră poziția mediei. Cpk măsoară distanța de la medie până la limita mai apropiată, cel mult cât Cp. Ambele presupun un proces stabil, distribuit normal.",
+      "beispiel": "Cp = 1, centrat: aproximativ 0,27% în afară; deplasat, mai mult.",
+      "vorsicht": "Cp = 1 înseamnă doar: nu mai puțin de 0,27% în afară. Cu semnale în diagrama de control, indicele spune puțin; clarificați-le mai întâi."
+    },
+    "messsystem": {
+      "titel": "Sistem de măsurare (repetabilitate, reproductibilitate)",
+      "kurz": "Cât din răspândire provine din măsurarea în sine? Repetabilitate: răspândirea aparatului pe aceeași unitate, același operator, aceeași configurație. Reproductibilitate: răspândirea între operatori, configurații sau perioade. Răspândirea totală se împarte în proces și sistem de măsurare. Ponderea măsurării = 1 minus ponderea procesului. Raportul semnal-zgomot arată cât de bine pot fi distinse piesele: se citează adesea, 5 sau mai mult bun, sub 2 inutil.",
+      "beispiel": "Procesul 80% din răspândire: sistemul de măsurare 20%.",
+      "vorsicht": "Autorii atribuie termenii diferit, de aceea trebuie indicată definiția folosită. Limitele sunt convenții."
+    },
+    "versuchsplanung": {
+      "titel": "Proiectarea experimentelor (interacțiune, punct central)",
+      "kurz": "Cum se planifică experimente care arată mult? Interacțiune: efectul unui factor depinde de nivelul altuia. Schimbarea unui singur factor odată nu o poate estima; toate combinațiile o găsesc. Un punct central repetat arată curbura și estimează răspândirea.",
+      "beispiel": "Îngrășământul acționează puternic la soare, abia la umbră.",
+      "vorsicht": "Un rezultat la un nivel nu este valabil automat pentru toate. La curbură, două niveluri nu sunt suficiente; designul poate fi extins.",
+      "fachwoerter": "factor (o mărime pe care o stabiliți intenționat), nivel (o valoare fixată a lui), continuu (orice valoare intermediară este posibilă)."
+    }
+  },
+  "meldung": [
+    {
+      "id": "engine-absturz",
+      "art": "absturz",
+      "muster": "^Statable: PSPP crashed",
+      "original": "Statable: PSPP crashed and was restarted. RuntimeError: Aborted(Assertion failed: proc.n_cells < CRS_N_CELLS, at: ../../pspp-2.1.1/src/language/commands/crosstabs.c,494,cmd_crosstabs)",
+      "titel": "Programul statistic s-a blocat",
+      "text": {
+        "du": "Cauza este PSPP, nu datele dumneavoastră. Statable l-a repornit și a reîncărcat datele așa cum erau înainte de acest calcul.",
+        "sie": "Cauza este PSPP, nu datele dumneavoastră. Statable l-a repornit și a reîncărcat datele așa cum erau înainte de acest calcul."
+      },
+      "tun": {
+        "du": "Calculați din nou cu mai puține opțiuni. Dacă ați setat WEIGHT, FILTER sau SPLIT FILE, setați-le din nou.",
+        "sie": "Calculați din nou cu mai puține opțiuni. Dacă ați setat WEIGHT, FILTER sau SPLIT FILE, setați-le din nou."
+      }
+    },
+    {
+      "id": "nonpar-corr-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "NONPAR CORR is not yet implemented",
+      "original": "NONPAR CORR: NONPAR CORR is not yet implemented.",
+      "titel": "Motorul nu poate executa această comandă",
+      "text": {
+        "du": "PSPP nu poate calcula NONPAR CORR (Spearman, Kendall).",
+        "sie": "PSPP nu poate calcula NONPAR CORR (Spearman, Kendall)."
+      },
+      "tun": {
+        "du": "Statable o calculează la întrebarea „Sunt două lucruri legate între ele?”. Datele dumneavoastră nu s-au schimbat.",
+        "sie": "Statable o calculează la întrebarea „Sunt două lucruri legate între ele?”. Datele dumneavoastră nu s-au schimbat."
+      }
+    },
+    {
+      "id": "glm-with-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "GLM: [^\\n]*\\n[^\\n]*\\|[^\\n]*\\b[Ww][Ii][Tt][Hh]\\b",
+      "original": "GLM: Syntax error expecting MISSING, INTERCEPT, CRITERIA, METHOD, or DESIGN.\n   1 | GLM y BY g WITH x /DESIGN=x g.",
+      "titel": "Motorul nu poate executa această comandă",
+      "text": {
+        "du": "PSPP nu poate calcula GLM cu WITH (analiză de covarianță).",
+        "sie": "PSPP nu poate calcula GLM cu WITH (analiză de covarianță)."
+      },
+      "tun": {
+        "du": "Statable o calculează la întrebarea „Diferă grupurile?”, la „Mai multe opțiuni”, cu o variabilă de control. Datele dumneavoastră nu s-au schimbat.",
+        "sie": "Statable o calculează la întrebarea „Diferă grupurile?”, la „Mai multe opțiuni”, cu o variabilă de control. Datele dumneavoastră nu s-au schimbat."
+      }
+    },
+    {
+      "id": "befehl-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "Unknown command `([^']+)'",
+      "original": "Unknown command `FREQENCIES'.",
+      "titel": "Statable nu cunoaște această comandă",
+      "text": {
+        "du": "„{1}” nu este o comandă cunoscută.",
+        "sie": "„{1}” nu este o comandă cunoscută."
+      },
+      "tun": {
+        "du": "Verificați ortografia. Asemănătoare: {vorschlag}.",
+        "sie": "Verificați ortografia. Asemănătoare: {vorschlag}."
+      }
+    },
+    {
+      "id": "spalte-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "(\\S+) is not a variable name",
+      "original": "DESCRIPTIVES: konzentration is not a variable name.",
+      "titel": "Nu există o astfel de coloană",
+      "text": {
+        "du": "Datele nu au nicio coloană „{1}”.",
+        "sie": "Datele nu au nicio coloană „{1}”."
+      },
+      "tun": {
+        "du": "O coloană asemănătoare: {vorschlag}. Toate numele se văd la „Coloane”.",
+        "sie": "O coloană asemănătoare: {vorschlag}. Toate numele se văd la „Coloane”."
+      }
+    },
+    {
+      "id": "text-statt-zahl",
+      "art": "hinweis",
+      "muster": "(\\S+) is not a numeric variable\\.\\s+It will not be included",
+      "original": "DESCRIPTIVES: geschlecht is not a numeric variable.  It will not be included in the variable list.",
+      "titel": "O coloană a fost lăsată deoparte",
+      "text": {
+        "du": "„{1}” conține grupuri sau text, nu numere. De aceea Statable a lăsat-o deoparte aici. Restul a fost calculat.",
+        "sie": "„{1}” conține grupuri sau text, nu numere. De aceea Statable a lăsat-o deoparte aici. Restul a fost calculat."
+      },
+      "tun": {
+        "du": "Pentru grupuri se potrivesc frecvențele sau o comparație de grupuri.",
+        "sie": "Pentru grupuri se potrivesc frecvențele sau o comparație de grupuri."
+      }
+    },
+    {
+      "id": "gruppen-fehlen",
+      "art": "nicht-verstanden",
+      "muster": "When applying GROUPS to a string variable, two values must be specified",
+      "original": "T-TEST: When applying GROUPS to a string variable, two values must be specified.",
+      "titel": "Care sunt cele două grupuri?",
+      "text": {
+        "du": "Lipsesc numele celor două grupuri pentru comparație.",
+        "sie": "Lipsesc numele celor două grupuri pentru comparație."
+      },
+      "tun": {
+        "du": "Scrieți-le între paranteze după coloană, de exemplu telefon('da' 'nu').",
+        "sie": "Scrieți-le între paranteze după coloană, de exemplu telefon('da' 'nu')."
+      }
+    },
+    {
+      "id": "wert-zu-lang",
+      "art": "nicht-verstanden",
+      "muster": "This (\\d+)-byte string is too long for variable (\\S+) with width (\\d+)",
+      "original": "T-TEST: This 10-byte string is too long for variable handy with width 4.",
+      "titel": "Această valoare nu poate exista în coloană",
+      "text": {
+        "du": "Valoarea este mai lungă decât are loc în coloana „{2}”. O astfel de valoare nu apare acolo.",
+        "sie": "Valoarea este mai lungă decât are loc în coloana „{2}”. O astfel de valoare nu apare acolo."
+      },
+      "tun": {
+        "du": "Verificați la „Coloane” ce valori se află în „{2}”.",
+        "sie": "Verificați la „Coloane” ce valori se află în „{2}”."
+      }
+    },
+    {
+      "id": "anfuehrung-offen",
+      "art": "nicht-verstanden",
+      "muster": "Unterminated string constant",
+      "original": "VARIABLE LABELS: Unterminated string constant.",
+      "titel": "Un semn de citare a rămas deschis",
+      "text": {
+        "du": "Un text a fost început cu ', dar nu a fost încheiat.",
+        "sie": "Un text a fost început cu ', dar nu a fost încheiat."
+      },
+      "tun": {
+        "du": "Adăugați încă un ' la sfârșitul textului.",
+        "sie": "Adăugați încă un ' la sfârșitul textului."
+      }
+    },
+    {
+      "id": "text-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting string",
+      "original": "VARIABLE LABELS: Syntax error expecting string.",
+      "titel": "Aici lipsește un text",
+      "text": {
+        "du": "În acest loc, comanda așteaptă un text între ghilimele.",
+        "sie": "În acest loc, comanda așteaptă un text între ghilimele."
+      },
+      "tun": {
+        "du": "Textele se pun între ghilimele, de exemplu 'da'. Etichetă: VARIABLE LABELS conc 'Concentrare'. Grupuri din text: T-TEST GROUPS=grup('A' 'B').",
+        "sie": "Textele se pun între ghilimele, de exemplu 'da'. Etichetă: VARIABLE LABELS conc 'Concentrare'. Grupuri din text: T-TEST GROUPS=grup('A' 'B')."
+      }
+    },
+    {
+      "id": "funktion-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "No function or vector named (\\S+)",
+      "original": "COMPUTE: No function or vector named wurzel.",
+      "titel": "Această funcție nu există",
+      "text": {
+        "du": "„{1}” nu este o funcție cunoscută.",
+        "sie": "„{1}” nu este o funcție cunoscută."
+      },
+      "tun": {
+        "du": "Funcțiile au nume englezești, de exemplu SQRT pentru rădăcina pătrată, MEAN pentru medie.",
+        "sie": "Funcțiile au nume englezești, de exemplu SQRT pentru rădăcina pătrată, MEAN pentru medie."
+      }
+    },
+    {
+      "id": "rechnen-mit-text",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must be numeric",
+      "original": "COMPUTE: Both operands of + must be numeric.",
+      "titel": "Textul nu poate fi folosit într-un calcul",
+      "text": {
+        "du": "O parte a lui „{1}” este o coloană cu text.",
+        "sie": "O parte a lui „{1}” este o coloană cu text."
+      },
+      "tun": {
+        "du": "La „Coloane” puteți transforma grupurile în numere - ca o coloană nouă, originalul rămâne.",
+        "sie": "La „Coloane” puteți transforma grupurile în numere - ca o coloană nouă, originalul rămâne."
+      }
+    },
+    {
+      "id": "text-mit-zahl-vergleichen",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must have the same type",
+      "original": "SELECT IF: Both operands of = must have the same type.",
+      "titel": "Un text este comparat cu un număr",
+      "text": {
+        "du": "Coloana conține text, dar este comparată cu un număr.",
+        "sie": "Coloana conține text, dar este comparată cu un număr."
+      },
+      "tun": {
+        "du": "Puneți valoarea între ghilimele, de exemplu gen = 'feminin'.",
+        "sie": "Puneți valoarea între ghilimele, de exemplu gen = 'feminin'."
+      }
+    },
+    {
+      "id": "spalte-gibt-es-schon",
+      "art": "nicht-verstanden",
+      "muster": "There is already a variable named (\\S+)",
+      "original": "NUMERIC: There is already a variable named konz2.",
+      "titel": "Acest nume este deja folosit",
+      "text": {
+        "du": "O coloană „{1}” există deja. Statable nu suprascrie nimic.",
+        "sie": "O coloană „{1}” există deja. Statable nu suprascrie nimic."
+      },
+      "tun": {
+        "du": "Alegeți un alt nume, de exemplu {1}_nou.",
+        "sie": "Alegeți un alt nume, de exemplu {1}_nou."
+      }
+    },
+    {
+      "id": "umbenennen-doppelt",
+      "art": "nicht-verstanden",
+      "muster": "Renaming would duplicate variable name (\\S+)",
+      "original": "RENAME VARIABLES: Renaming would duplicate variable name nr.",
+      "titel": "Acest nume este deja folosit",
+      "text": {
+        "du": "După redenumire, două coloane ar avea numele „{1}”.",
+        "sie": "După redenumire, două coloane ar avea numele „{1}”."
+      },
+      "tun": {
+        "du": "Alegeți un nume care nu există încă.",
+        "sie": "Alegeți un nume care nu există încă."
+      }
+    },
+    {
+      "id": "datei-nicht-gefunden",
+      "art": "datei",
+      "muster": "An error occurred while opening `([^']+)': No such file",
+      "original": "An error occurred while opening `/gibt-es-nicht.sav': No such file or directory.",
+      "titel": "Fișierul nu a fost găsit",
+      "text": {
+        "du": "„{datei}” nu se mai află unde era.",
+        "sie": "„{datei}” nu se mai află unde era."
+      },
+      "tun": {
+        "du": "Deschideți-l din nou cu „Deschideți fișierul”.",
+        "sie": "Deschideți-l din nou cu „Deschideți fișierul”."
+      }
+    },
+    {
+      "id": "datendatei-nicht-gefunden",
+      "art": "datei",
+      "muster": "Could not open `([^']+)' for reading as a data file",
+      "original": "Could not open `/fehlt.csv' for reading as a data file: No such file or directory.",
+      "titel": "Fișierul nu a fost găsit",
+      "text": {
+        "du": "„{datei}” nu a putut fi deschis.",
+        "sie": "„{datei}” nu a putut fi deschis."
+      },
+      "tun": {
+        "du": "Deschideți-l din nou cu „Deschideți fișierul”.",
+        "sie": "Deschideți-l din nou cu „Deschideți fișierul”."
+      }
+    },
+    {
+      "id": "keine-spss-datei",
+      "art": "datei",
+      "muster": "`([^']+)' is not a system or portable file",
+      "original": "GET: `/kaputt.sav' is not a system or portable file.",
+      "titel": "Acest fișier nu poate fi citit",
+      "text": {
+        "du": "„{datei}” se termină cu .sav, dar în interior nu este un fișier SPSS. Celelalte date nu sunt afectate.",
+        "sie": "„{datei}” se termină cu .sav, dar în interior nu este un fișier SPSS. Celelalte date nu sunt afectate."
+      },
+      "tun": {
+        "du": "Poate este un fișier Excel sau CSV? Atunci salvați-l din nou ca .sav, .xlsx sau .csv în programul dumneavoastră.",
+        "sie": "Poate este un fișier Excel sau CSV? Atunci salvați-l din nou ca .sav, .xlsx sau .csv în programul dumneavoastră."
+      }
+    },
+    {
+      "id": "speichern-unmoeglich",
+      "art": "datei",
+      "muster": "Error opening `([^']+)' for writing",
+      "original": "Error opening `/gibt/es/nicht/x.sav' for writing as a system file: No such file or directory.",
+      "titel": "Fișierul nu a putut fi salvat",
+      "text": {
+        "du": "Statable nu poate scrie în locul ales. Datele nu sunt pierdute - sunt încă deschise aici.",
+        "sie": "Statable nu poate scrie în locul ales. Datele nu sunt pierdute - sunt încă deschise aici."
+      },
+      "tun": {
+        "du": "Alegeți un alt dosar, de exemplu „Descărcări”.",
+        "sie": "Alegeți un alt dosar, de exemplu „Descărcări”."
+      }
+    },
+    {
+      "id": "name-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting identifier",
+      "original": "COMPUTE: Syntax error expecting identifier.",
+      "titel": "Aici lipsește un nume",
+      "text": {
+        "du": "În acest loc, comanda așteaptă un nume. Numele încep cu o literă.",
+        "sie": "În acest loc, comanda așteaptă un nume. Numele încep cu o literă."
+      },
+      "tun": {
+        "du": "Exemplu: nou1 în loc de 1nou.",
+        "sie": "Exemplu: nou1 în loc de 1nou."
+      }
+    },
+    {
+      "id": "by-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `BY'",
+      "original": "CROSSTABS: Syntax error expecting `BY'.",
+      "titel": "Aici lipsește cuvântul BY",
+      "text": {
+        "du": "Între cele două coloane lipsește BY. El le separă, ca în „această coloană după acea coloană”.",
+        "sie": "Între cele două coloane lipsește BY. El le separă, ca în „această coloană după acea coloană”."
+      },
+      "tun": {
+        "du": "La CROSSTABS: /TABLES=gen BY telefon. La ONEWAY și GLM, BY se află între număr și grup: ONEWAY scor BY grup.",
+        "sie": "La CROSSTABS: /TABLES=gen BY telefon. La ONEWAY și GLM, BY se află între număr și grup: ONEWAY scor BY grup."
+      }
+    },
+    {
+      "id": "spalte-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting variable name",
+      "original": "ONEWAY: Syntax error expecting variable name.",
+      "titel": "Aici lipsește o coloană",
+      "text": {
+        "du": "În acest loc, comanda așteaptă numele unei coloane.",
+        "sie": "În acest loc, comanda așteaptă numele unei coloane."
+      },
+      "tun": {
+        "du": "Sfat: în fereastra de comenzi, Statable sugerează coloane potrivite în timp ce se scrie.",
+        "sie": "Sfat: în fereastra de comenzi, Statable sugerează coloane potrivite în timp ce se scrie."
+      }
+    },
+    {
+      "id": "klammer-auf-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\('",
+      "original": "NPAR TESTS: Syntax error expecting `('.",
+      "titel": "Aici lipsește o paranteză",
+      "text": {
+        "du": "În acest loc lipsește „(”.",
+        "sie": "În acest loc lipsește „(”."
+      },
+      "tun": {
+        "du": "Exemplu: /MANN-WHITNEY = conc BY telefon (0 1).",
+        "sie": "Exemplu: /MANN-WHITNEY = conc BY telefon (0 1)."
+      }
+    },
+    {
+      "id": "klammer-zu-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\)'",
+      "original": "COMPUTE: Syntax error expecting `)'.",
+      "titel": "O paranteză a rămas deschisă",
+      "text": {
+        "du": "Sunt mai multe „(” decât „)”.",
+        "sie": "Sunt mai multe „(” decât „)”."
+      },
+      "tun": {
+        "du": "Puneți „)” care lipsește la locul potrivit.",
+        "sie": "Puneți „)” care lipsește la locul potrivit."
+      }
+    },
+    {
+      "id": "gleich-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `='",
+      "original": "COMPUTE: Syntax error expecting `='.",
+      "titel": "Aici lipsește semnul egal",
+      "text": {
+        "du": "Comanda are nevoie de un „=” între nume și calcul.",
+        "sie": "Comanda are nevoie de un „=” între nume și calcul."
+      },
+      "tun": {
+        "du": "Exemplu: COMPUTE nou = conc * 2.",
+        "sie": "Exemplu: COMPUTE nou = conc * 2."
+      }
+    },
+    {
+      "id": "rechnung-unklar",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error parsing expression",
+      "original": "COMPUTE: Syntax error parsing expression.",
+      "titel": "Calculul este incomplet",
+      "text": {
+        "du": "După „=” lipsește ceva sau un caracter nu se potrivește.",
+        "sie": "După „=” lipsește ceva sau un caracter nu se potrivește."
+      },
+      "tun": {
+        "du": "Marcajul arată locul.",
+        "sie": "Marcajul arată locul."
+      }
+    },
+    {
+      "id": "noch-keine-daten",
+      "art": "daten",
+      "muster": "is allowed only after the active dataset has been defined",
+      "original": "DESCRIPTIVES: DESCRIPTIVES is allowed only after the active dataset has been defined.",
+      "titel": "Încă nu sunt deschise date",
+      "text": {
+        "du": "Pentru a calcula, Statable are nevoie mai întâi de date.",
+        "sie": "Pentru a calcula, Statable are nevoie mai întâi de date."
+      },
+      "tun": {
+        "du": "Deschideți un fișier sau încercați datele de exemplu.",
+        "sie": "Deschideți un fișier sau încercați datele de exemplu."
+      }
+    },
+    {
+      "id": "text-in-zahlenspalte",
+      "art": "daten",
+      "muster": "Data for variable (\\S+) is not valid as format F: Field contents are not numeric",
+      "original": "Data for variable a is not valid as format F: Field contents are not numeric.",
+      "titel": "Există text într-o coloană de numere",
+      "text": {
+        "du": "În „{1}”, un loc are un cuvânt în loc de un număr. Acea celulă rămâne goală; tot restul a fost citit.",
+        "sie": "În „{1}”, un loc are un cuvânt în loc de un număr. Acea celulă rămâne goală; tot restul a fost citit."
+      },
+      "tun": {
+        "du": "Verificarea datelor arată celula. Dacă datele conțin o virgulă zecimală (70,5), DATA LIST FREE citește virgula ca separator și valorile se deplasează: SET DECIMAL=COMMA. și DATA LIST LIST(';') rezolvă problema.",
+        "sie": "Verificarea datelor arată celula. Dacă datele conțin o virgulă zecimală (70,5), DATA LIST FREE citește virgula ca separator și valorile se deplasează: SET DECIMAL=COMMA. și DATA LIST LIST(';') rezolvă problema."
+      }
+    },
+    {
+      "id": "beschriftung-passt-nicht",
+      "art": "daten",
+      "muster": "VALUE LABELS: Data is not valid as format F",
+      "original": "VALUE LABELS: Data is not valid as format F: Field contents are not numeric.",
+      "titel": "Această etichetă nu se potrivește",
+      "text": {
+        "du": "Într-o coloană de numere, fiecare etichetă de grup are nevoie de un număr, de exemplu 1 = 'da'.",
+        "sie": "Într-o coloană de numere, fiecare etichetă de grup are nevoie de un număr, de exemplu 1 = 'da'."
+      },
+      "tun": {
+        "du": "Cel mai simplu se setează etichetele la „Coloane”.",
+        "sie": "Cel mai simplu se setează etichetele la „Coloane”."
+      }
+    },
+    {
+      "id": "keine-angabe-zu-lang",
+      "art": "hinweis",
+      "muster": "Truncating missing value to maximum acceptable length \\((\\d+) bytes\\)",
+      "original": "MISSING VALUES: Truncating missing value to maximum acceptable length (8 bytes).",
+      "titel": "Valoarea pentru „fără răspuns” a fost scurtată",
+      "text": {
+        "du": "Valoarea este mai lungă decât este permis ({1} caractere) și a fost tăiată.",
+        "sie": "Valoarea este mai lungă decât este permis ({1} caractere) și a fost tăiată."
+      },
+      "tun": {
+        "du": "Verificați la „Coloane” dacă „fără răspuns” este în continuare recunoscut corect.",
+        "sie": "Verificați la „Coloane” dacă „fără răspuns” este în continuare recunoscut corect."
+      }
+    },
+    {
+      "id": "zu-viele-keine-angabe",
+      "art": "nicht-verstanden",
+      "muster": "Too many numeric missing values",
+      "original": "MISSING VALUES: Too many numeric missing values.  At most three individual values or one value and one range are allowed.",
+      "titel": "Cel mult trei valori pentru „fără răspuns”",
+      "text": {
+        "du": "O coloană poate avea cel mult trei valori pentru „fără răspuns” sau o valoare și un interval.",
+        "sie": "O coloană poate avea cel mult trei valori pentru „fără răspuns” sau o valoare și un interval."
+      },
+      "tun": {
+        "du": "Exemplu: 96 până la 99 ca interval.",
+        "sie": "Exemplu: 96 până la 99 ca interval."
+      }
+    },
+    {
+      "id": "gewicht-text",
+      "art": "nicht-verstanden",
+      "muster": "The weighting variable must be numeric",
+      "original": "WEIGHT: The weighting variable must be numeric.",
+      "titel": "Ponderarea funcționează doar cu numere",
+      "text": {
+        "du": "Coloana aleasă conține text.",
+        "sie": "Coloana aleasă conține text."
+      },
+      "tun": {
+        "du": "Alegeți o coloană cu numere.",
+        "sie": "Alegeți o coloană cu numere."
+      }
+    },
+    {
+      "id": "alle-spalten-loeschen",
+      "art": "hinweis",
+      "muster": "may not be used to delete all variables",
+      "original": "DELETE VARIABLES: DELETE VARIABLES may not be used to delete all variables from the active dataset dictionary.  Use NEW FILE instead.",
+      "titel": "Eliminarea tuturor coloanelor deodată nu este posibilă",
+      "text": {
+        "du": "Cel puțin o coloană trebuie să rămână. Nu s-a șters nimic.",
+        "sie": "Cel puțin o coloană trebuie să rămână. Nu s-a șters nimic."
+      },
+      "tun": {
+        "du": "Pentru un început gol: „Creați un studiu nou”.",
+        "sie": "Pentru un început gol: „Creați un studiu nou”."
+      }
+    },
+    {
+      "id": "dateityp-unbekannt",
+      "art": "datei",
+      "muster": "GET DATA: Syntax error expecting TXT",
+      "original": "GET DATA: Syntax error expecting TXT, PSQL, GNM, or ODS.",
+      "titel": "Comanda nu poate citi acest format de fișier",
+      "text": {
+        "du": "Cel mai simplu se deschid fișierele Excel cu „Deschideți fișierul”.",
+        "sie": "Cel mai simplu se deschid fișierele Excel cu „Deschideți fișierul”."
+      },
+      "tun": {
+        "du": "Trageți fișierul în fereastră.",
+        "sie": "Trageți fișierul în fereastră."
+      }
+    },
+    {
+      "id": "auswahl-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting one of the following: (.+)\\.",
+      "original": "FREQUENCIES: Syntax error expecting one of the following: STATISTICS, PERCENTILES, FORMAT, NTILES, ALGORITHM, HISTOGRAM, PIECHART, BARCHART, MISSING, ORDER.",
+      "titel": "Acest cuvânt nu se potrivește aici",
+      "text": {
+        "du": "În acest loc este posibil doar unul dintre aceste cuvinte: {1}.",
+        "sie": "În acest loc este posibil doar unul dintre aceste cuvinte: {1}."
+      },
+      "tun": {
+        "du": "Alegeți unul dintre ele.",
+        "sie": "Alegeți unul dintre ele."
+      }
+    },
+    {
+      "id": "auswahl-oder",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting ((?:\\S+, )+\\S+,? or \\S+)\\.",
+      "original": "EXAMINE: Syntax error expecting BOXPLOT, NPPLOT, HISTOGRAM, SPREADLEVEL, NONE, or ALL.",
+      "titel": "Acest cuvânt nu se potrivește aici",
+      "text": {
+        "du": "Posibile aici: {1}.",
+        "sie": "Posibile aici: {1}."
+      },
+      "tun": {
+        "du": "Alegeți unul dintre ele.",
+        "sie": "Alegeți unul dintre ele."
+      }
+    }
+  ],
+  "rueckfall": {
+    "titel": "Nu a funcționat",
+    "text": {
+      "du": "Statable nu a executat comanda. Nimic nu s-a schimbat în datele dumneavoastră.",
+      "sie": "Statable nu a executat comanda. Nimic nu s-a schimbat în datele dumneavoastră."
+    },
+    "tun": {
+      "du": "La „Detalii” găsiți mesajul original de la PSPP. Cu el puteți căuta în ajutor sau îl puteți trimite prin „Raportează”.",
+      "sie": "La „Detalii” găsiți mesajul original de la PSPP. Cu el puteți căuta în ajutor sau îl puteți trimite prin „Raportează”."
+    }
+  }
+}

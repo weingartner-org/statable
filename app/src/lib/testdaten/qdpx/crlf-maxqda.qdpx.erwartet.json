@@ -1,0 +1,101 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "crlf-maxqda.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 399,
+   "name": "Interview 1",
+   "pruefung": "geprueft",
+   "sha256": "fd7336f42f643382e442a251bf0227d4b81323303026ebd98e5ea5931ec256ce",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Anna Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Der Lärm im Wohnheim stört"
+  },
+  {
+   "code": "Belastung/Lärm",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Der Lärm im Wohnheim stört"
+  },
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Meine Lerngruppe hilft mir sehr"
+  },
+  {
+   "code": "Hilfe",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "spreche mit meiner Schwester"
+  }
+ ],
+ "meldungen": [],
+ "meldungenDetail": [],
+ "memos": [],
+ "mengen": [],
+ "nichtGelesen": {},
+ "programm": "MAXQDA 24 (Prüfdatei)",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 1,
+  "faelle": 0,
+  "kodierende": 1,
+  "kodierungen": 5,
+  "memos": 0,
+  "mengen": 0,
+  "segmente": 4,
+  "variablen": 0
+ }
+}

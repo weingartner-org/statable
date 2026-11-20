@@ -1,0 +1,1535 @@
+{
+  "_info": {
+    "stand": "2026-10-09",
+    "zweck": "Statable glossary (Czech, vykání). Explanations and messages translated from the English template; muster/original/art unchanged.",
+    "regeln": [
+      "Messages: the first matching rule wins.",
+      "Explanations address no one directly; messages use vykání (polite plural imperative) without gender. The fields 'du' and 'sie' hold the same text.",
+      "Numbers in Czech: decimal comma, no leading zero for p, r and alpha (,005); non-breaking space before the percent sign.",
+      "pruefen: true = have a statistics expert check it before use."
+    ]
+  },
+  "erklaer": {
+    "bayes": {
+      "titel": "Bayesův faktor (BF₁₀)",
+      "kurz": "Ukazují data spíš na rozdíl, nebo proti němu? Bayesův faktor (BF₁₀) obojí porovnává. BF₁₀ = 8 znamená: data by byla asi 8krát pravděpodobnější, pokud rozdíl existuje.",
+      "beispiel": "Trvanlivost chleba ze dvou pekáren: BF₁₀ = 6, data jsou tedy 6krát pravděpodobnější při rozdílu. BF₁₀ = 0,25 by znamenalo: 4krát pravděpodobnější bez rozdílu (1 / 0,25 = 4).",
+      "vorsicht": "Bayesův faktor neříká, jak pravděpodobný je rozdíl, a závisí na předpokladu zvoleném předem. Hodnota blízká 1 znamená jen to, že není podporována ani jedna strana; označení jako „střední“ jsou orientační pravidla.",
+      "fachwoerter": "p-hodnota (jak často by se vyskytl rozdíl aspoň tak velký, kdyby skutečně žádný nebyl), H₀ a H₁ (předpoklady „žádný rozdíl“ a „rozdíl existuje“), apriorní rozdělení (předem zvolený předpoklad o možných rozdílech), BF₀₁ (opačné srovnání, BF₀₁ = 1 / BF₁₀).",
+      "pruefen": true
+    },
+    "p-wert": {
+      "titel": "p-hodnota",
+      "kurz": "Je rozdíl skutečný, nebo jen náhoda? Jistě to nikdy nevíte. P-hodnota pomáhá takto: předpokládejte, že žádný rozdíl skutečně není. Jak často by se přesto objevil rozdíl aspoň tak velký?",
+      "beispiel": "Dvě odrůdy rajčat, p = ,03: kdyby byly odrůdy skutečně stejné, objevil by se takový rozdíl asi ve 3 pokusech ze 100.",
+      "vorsicht": "p není pravděpodobnost, že je výsledek dílem náhody. P také neříká, jak velký nebo důležitý rozdíl je: k tomu slouží velikost efektu. Výsledek platí jen tehdy, jsou-li splněny i ostatní předpoklady výpočtu, například náhodný výběr a nezávislost.",
+      "pruefen": true
+    },
+    "signifikanz": {
+      "titel": "Statisticky významný",
+      "kurz": "Co znamená „statisticky významný“? P-hodnota je pod předem stanovenou mezí, obvykle ,05. Data pak špatně odpovídají předpokladu „žádný rozdíl“.",
+      "beispiel": "p = ,03 je pod ,05: statisticky významné. p = ,07 je nad ní: statisticky nevýznamné.",
+      "vorsicht": "Statisticky významné neznamená důležité ani dokázané. Statisticky nevýznamné neznamená žádný rozdíl. Mez ,05 je zvyk. Při velmi mnoha případech se statisticky významným stane i malý efekt. A také: rozdíl mezi „statisticky významné“ a „statisticky nevýznamné“ sám není automaticky statisticky významný.",
+      "pruefen": true
+    },
+    "effektstaerke": {
+      "titel": "Velikost efektu",
+      "kurz": "Jak velký je rozdíl nebo vztah? Říká to velikost efektu. S více lidmi se p-hodnota zmenšuje; velikost efektu se jen kvůli tomu nemění.",
+      "beispiel": "Cohenovo d = 0,5: dvě skupiny jsou od sebe vzdáleny o půl směrodatné odchylky (typické vzdálenosti hodnot od průměru).",
+      "vorsicht": "Slova malý, střední, velký (d = 0,2; 0,5; 0,8) jsou zvyk sahající k Cohenovi. Co je hodně, závisí na oboru a na otázce.",
+      "pruefen": true
+    },
+    "konfidenzintervall": {
+      "titel": "Interval spolehlivosti (CI)",
+      "kurz": "Jak přesný je výsledek? Interval spolehlivosti (CI) je rozsah kolem naměřené hodnoty. Ukazuje, které skutečné hodnoty s daty dobře souhlasí. Úzký znamená přesný, široký nepřesný.",
+      "beispiel": "Nová cesta do práce ušetří v průměru 4 minuty, 95% CI [1,2; 6,8]: skutečná úspora 2 nebo 6 minut s daty dobře souhlasí.",
+      "vorsicht": "„95 %“ popisuje metodu: při mnoha opakováních by asi 95 ze 100 takových rozsahů obsahovalo skutečnou hodnotu. Zda ji obsahuje tento, není známo. Obsahuje-li rozsah 0, s daty souhlasí i „žádný rozdíl“ a oboustranný test na hladině ,05 není statisticky významný.",
+      "pruefen": true
+    },
+    "normalverteilung": {
+      "titel": "Normální rozdělení",
+      "kurz": "Jak jsou hodnoty rozloženy? V normálním rozdělení leží většina hodnot uprostřed a směrem na obě strany jich rovnoměrně ubývá. Vzniká tvar zvonu.",
+      "beispiel": "Hmotnost balených sáčků těstovin po 500 g kolísá zvonovitě kolem 500 g. Čekací doby na horké lince ne: mnoho jich je krátkých, několik velmi dlouhých.",
+      "vorsicht": "Při porovnávání průměrů záleží na dlouhém chvostu na jedné straně (šikmost) a na odlehlých hodnotách víc než na pevném počtu osob. S mnoha osobami tvar tolik nevadí; s velmi málo osobami ho lze těžko posoudit.",
+      "fachwoerter": "Welchův test (t-test, který nevyžaduje stejný rozptyl ve skupinách), šikmost (dlouhý chvost na jedné straně), odlehlá hodnota (hodnota daleko od ostatních).",
+      "pruefen": true
+    },
+    "mittelwert": {
+      "titel": "Průměr (M)",
+      "kurz": "Jaká je typická hodnota? Průměr je střední hodnota: sečtěte všechny hodnoty a vydělte jejich počtem.",
+      "beispiel": "Pět čekacích dob u přepážky: 8, 12, 9, 15 a 11 minut. Dohromady 55, děleno 5 dává 11 minut.",
+      "vorsicht": "Několik velmi vysokých nebo velmi nízkých hodnot průměr strhne s sebou. S 60 místo 11 minut by to bylo 20,8; medián, prostřední hodnota seřazené řady, by vzrostl jen z 11 na 12.",
+      "pruefen": false
+    },
+    "standardabweichung": {
+      "titel": "Směrodatná odchylka (SD)",
+      "kurz": "Jak různé jsou hodnoty? Směrodatná odchylka (SD) říká, jak daleko od průměru hodnoty typicky leží. Malá znamená, že hodnoty jsou blízko sebe.",
+      "beispiel": "Spánek: průměr 7 hodin, SD 1 hodina. Při zvonovitém rozdělení spí asi dvě třetiny osob mezi 6 a 8 hodinami.",
+      "vorsicht": "SD popisuje, jak se lidé liší. Jak přesný je průměr, plyne ze standardní chyby a intervalu spolehlivosti.",
+      "pruefen": false
+    },
+    "freiheitsgrade": {
+      "titel": "Stupně volnosti (df)",
+      "kurz": "Co znamená číslo v závorce, například t(18)? Jsou to stupně volnosti (df), číslo, které závisí hlavně na tom, kolik je osob. Software ho potřebuje pro p-hodnotu.",
+      "beispiel": "20 osob ve dvou skupinách: 20 minus 2 dává 18 stupňů volnosti, tedy t(18). U skupin s nestejným rozptylem (Welchův test) je číslo často desetinné, například t(14,3).",
+      "vorsicht": "Obvykle to je vše, co je o stupních volnosti třeba vědět. Patří však do každé zprávy, aby si výsledek mohli ověřit i jiní.",
+      "pruefen": false
+    },
+    "korrelation": {
+      "titel": "Korelace (r)",
+      "kurz": "Souvisí dvě věci? Korelace r to ukazuje jako číslo od −1 do +1. Kladná: více jednoho jde s více druhého. Záporná: s méně. Blízko 0: žádný přímkový vztah.",
+      "beispiel": "Spánek a koncentrace: r = ,30. Lidé, kteří spí více, se mají tendenci lépe soustředit.",
+      "vorsicht": "Vztah není příčina. r vidí jen přímkové vztahy, podívejte se proto i na bodový graf.",
+      "pruefen": true
+    },
+    "korrelationsmatrix": {
+      "titel": "Korelační matice",
+      "kurz": "Které z několika sloupců s čísly spolu souvisejí? Korelační matice ukazuje všechny dvojice najednou. Holmova korekce zpřísňuje p-hodnoty, protože při mnoha dvojicích snadno nějaká náhodou vyčnívá.",
+      "beispiel": "Pět sloupců dává 10 dvojic. Nejnápadnější má p = ,012; po Holmově korekci je to ,012 krát 10 = ,12 - už ne pod ,05.",
+      "vorsicht": "Kdo testuje mnoho dvojic, najde i náhodné zásahy; kdo jen hledá, měl by používat Holmovy hodnoty. Vztah není příčina.",
+      "fachwoerter": "r podle Pearsona (spojení mezi dvěma sloupci s čísly, pro přímkové vztahy), rs podle Spearmana (stejná myšlenka s pořadími místo hodnot), n (počet případů na dvojici), 95% interval spolehlivosti (rozsah, který se podle dat dobře shoduje se skutečným vztahem).",
+      "pruefen": true
+    },
+    "regression": {
+      "titel": "Regrese",
+      "kurz": "Lze jednu hodnotu předpovědět z jiných? Regrese vede přímku, která data nejlépe vystihuje. Ukazuje, o kolik se předpověď změní, když se změní jiná hodnota.",
+      "beispiel": "Cena bytu podle podlahové plochy: každý další m² jde v průměru s o 2400 € vyšší cenou.",
+      "vorsicht": "Předpověď není příčina. U obvyklého testu by měla být normálně rozdělena rezidua (vzdálenosti od přímky), ne surové hodnoty.",
+      "pruefen": true
+    },
+    "chi-quadrat": {
+      "titel": "Chí-kvadrát test (χ²)",
+      "kurz": "Vyskytuje se něco častěji v některých skupinách? Chí-kvadrát test (χ²) porovnává spočtené případy kontingenční tabulky s čísly, která by se očekávala, kdyby vztah neexistoval.",
+      "beispiel": "Vždy 100 osob: 60 % ranních ptáčat pije kávu, 40 % nočních sov. χ²(1) = 8,0, p = ,005.",
+      "vorsicht": "χ² neříká, jak silný vztah je: s dvojnásobným počtem osob a stejnými podíly se zdvojnásobí. Sílu ukazuje Cramérovo V.",
+      "fachwoerter": "Fisherův exaktní test (přesnější než χ² u tabulek 2 × 2 s málo osobami), očekávaná četnost (kolik případů by buňka obsahovala, kdyby vztah neexistoval).",
+      "pruefen": true
+    },
+    "streuung": {
+      "titel": "Variabilita",
+      "kurz": "Jak různé jsou hodnoty? Variabilita je zastřešující pojem. Mírami jsou variační rozpětí (největší minus nejmenší hodnota), směrodatná odchylka a mezikvartilové rozpětí (šířka prostřední poloviny hodnot).",
+      "beispiel": "Doba cesty u 40 jízd: 12 až 51 minut, rozpětí 51 − 12 = 39, směrodatná odchylka 8,5, mezikvartilové rozpětí 10.",
+      "vorsicht": "Rozpětí závisí jen na dvou hodnotách. Jediná odlehlá hodnota ho výrazně zvětší.",
+      "pruefen": false
+    },
+    "stichprobe": {
+      "titel": "Výběr",
+      "kurz": "Kdo se skutečně zúčastnil? To je výběr. Slouží k tomu, aby se řeklo něco o větší skupině, základním souboru.",
+      "beispiel": "Knihovna se v úterý zeptá 150 návštěvníků, aby zjistila něco o všech uživatelích za rok. Zda to platí, závisí na tom, jak bylo těchto 150 vybráno.",
+      "vorsicht": "Mnoho osob jednostranný výběr nevyrovná. Zeptáte-li se jen návštěvníků v úterý dopoledne, popisujete hlavně tyto návštěvníky.",
+      "pruefen": false
+    },
+    "voraussetzung": {
+      "titel": "Předpoklad",
+      "kurz": "Smí se metoda s těmito daty použít? Každá metoda stojí na předpokladech, požadavcích, například „každá osoba patří přesně do jedné skupiny“. Nesedí-li, může výsledek klamat.",
+      "beispiel": "Před porovnáním dvou skupin zákazníků: jsou to opravdu dvě oddělené skupiny? Jsou hodnoty čísla? Jsou tam velmi nápadné jednotlivé hodnoty?",
+      "vorsicht": "Poznámka není zákaz, ale důvod podívat se pozorněji. Některé předpoklady žádný software nezkontroluje, například zda osoby odpovídaly nezávisle na sobě, tedy bez předchozí dohody - to plyne ze způsobu sběru dat.",
+      "pruefen": true
+    },
+    "ausreisser": {
+      "titel": "Odlehlá hodnota",
+      "kurz": "Leží jedna hodnota nápadně daleko od všech ostatních? Pak je to odlehlá hodnota. Může jít o překlep, chybu měření - nebo o skutečnou, neobvyklou odpověď.",
+      "beispiel": "Deset dodacích lhůt ve dnech: devět mezi 2 a 4 (součet 27), jedna 31. Bez 31 je průměr 27 / 9 = 3,0 dne, s ní 58 / 10 = 5,8.",
+      "vorsicht": "Odlehlé hodnoty nikdy tiše nemažte: nejdřív zkontrolujte originál, ukažte výpočet s ní i bez ní a rozhodnutí zdůvodněte. V regresi vzdálený bod táhne přímku k sobě, i když téměř nevyčnívá. V krabicovém grafu se nápadné hodnoty zobrazují jako body mimo vousy (čáry u krabice). To z nich ještě nedělá chyby.",
+      "pruefen": true,
+      "statable": "U regrese blok „Kontrola regrese: kolinearita a nápadné případy“ pod výsledkem uvádí případy s velkým reziduem, pákou nebo Cookovou vzdáleností spolu s jejich číslem řádku v datech. Podívejte se tam a nikdy nemažte potichu. Jednotlivé hodnoty sloupce hlásí kontrola dat při otevření."
+    },
+    "reliabilitaet": {
+      "titel": "Reliabilita škály (Cronbachovo alfa)",
+      "kurz": "Měří několik otázek spolehlivě společně? Cronbachovo alfa ukazuje, jak silně spolu odpovědi na otázky škály souvisejí. Hodnota obvykle leží mezi 0 a 1.",
+      "beispiel": "Pět otázek o spokojenosti v práci: α = ,82.",
+      "vorsicht": "Vysoké alfa nedokazuje, že všechny otázky měří totéž, a více otázek ho zvyšuje samo. Jako minimum se často uvádí ,70; je to zvyk.",
+      "fachwoerter": "vnitřní konzistence (jak silně spolu odpovědi na otázky škály souvisejí), jednodimenzionalita (všechny otázky měří stejnou vlastnost), faktorová analýza (ukazuje, zda otázky měří jednu, nebo několik vlastností), korelace položky s celkem (jak dobře otázka pasuje k ostatním), obrácení kódování (otočení opačně formulované otázky, aby mířila stejným směrem).",
+      "pruefen": true
+    },
+    "faktorenanalyse": {
+      "titel": "Faktorová analýza",
+      "kurz": "Které otázky patří k sobě? Faktorová analýza hledá skupiny otázek, na které se odpovídá podobně. Zátěž (od −1 do 1) ukazuje, jak silně otázka ke skupině patří.",
+      "beispiel": "Devět otázek o životě ve městě tvoří tři skupiny: doprava, bezpečnost, volný čas.",
+      "vorsicht": "Výpočet skupiny jen najde. Co znamenají, rozhodují lidé. Zátěže od ,30 až ,50 výše se často započítávají; pevná mez neexistuje.",
+      "fachwoerter": "analýza hlavních komponent (výchozí, jako v SPSS: spojuje otázky do komponent), metoda hlavních os (hledá společné vlastnosti za otázkami), Promax (rotace, která připouští vztah mezi faktory).",
+      "pruefen": true
+    },
+    "koeffizient-b": {
+      "titel": "Regresní koeficient B a konstanta",
+      "kurz": "O kolik se předpověď změní, když jeden prediktor vzroste o 1 a ostatní zůstanou stejné? Říká to B, v jednotkách dat. Proto se B mění, když do modelu vstoupí další prediktory. Konstanta je předpověď, když jsou všechny prediktory 0.",
+      "beispiel": "Cena bytu v tisících €: B = 2,4 u podlahové plochy. Jeden m² navíc jde v průměru s o 2400 € vyšší cenou, na stejném podlaží.",
+      "vorsicht": "B se mění s jednotkou (eura, nebo tisíce eur). Jen při stejné jednotce lze B srovnávat mezi studiemi; při různých škálách nebo jednotkách zůstává jen beta, ta však závisí na variabilitě vzorku. Konstanta často nic neznamená, pokud 0 nikdy nenastává (0 m²).",
+      "fachwoerter": "beta (B vyjádřené ve směrodatných odchylkách, aby byla měřítka srovnatelná), prediktor (hodnota, která se používá k předpovědi).",
+      "pruefen": true
+    },
+    "beta": {
+      "titel": "Standardizovaný koeficient beta (β)",
+      "kurz": "B bez jednotek: beta převádí vše na směrodatné odchylky (typická vzdálenost hodnot od průměru). Tím lze v jedné studii postavit vedle sebe veličiny s různými jednotkami. Při jediném prediktoru je beta rovna r.",
+      "beispiel": "Cena bytu: podlahová plocha β = ,62. Vzroste-li podlahová plocha o jednu směrodatnou odchylku, cena v průměru vzroste o 0,62 směrodatné odchylky.",
+      "vorsicht": "Beta závisí na tom, jak se případy ve výběru liší, a nelze ji proto jednoduše srovnávat mezi studiemi. Mají-li dvě studie různé škály nebo jednotky, vedle sebe lze postavit jen beta, nikoli B - ale i beta závisí na variabilitě vzorku. Zda větší beta znamená „důležitější“, je sporné.",
+      "pruefen": true
+    },
+    "standardfehler": {
+      "titel": "Standardní chyba",
+      "kurz": "Jak přesný je odhad? S jinými osobami by vyšla trochu jiná hodnota. Standardní chyba říká, jak moc hodnota takto typicky kolísá. Menší znamená přesnější.",
+      "beispiel": "O 1,5 bodu více za hodinu tréninku (B = 1,5), standardní chyba 0,5. B dělené standardní chybou dává t = 3,0, z čehož plyne p (Sig.).",
+      "vorsicht": "S více osobami se zmenšuje, i když vztah zůstává stejný. „Standardní chyba odhadu“ v souhrnu modelu je něco jiného: typická vzdálenost hodnot od přímky. Čtyřikrát více osob ji zmenší zhruba na polovinu. Směrodatná odchylka (typická vzdálenost jednotlivých hodnot od průměru) zůstává přibližně stejná.",
+      "fachwoerter": "výběr (osoby, které byly skutečně zkoumány), t (B dělené standardní chybou), Sig. (jak SPSS nazývá odpovídající p-hodnotu).",
+      "pruefen": true
+    },
+    "r-quadrat": {
+      "titel": "R² (R na druhou) a upravené R²",
+      "kurz": "Kolik z rozdílů model vysvětluje? R² je podíl od 0 do 1. Upravené R² trochu ubírá, protože každá přidaná veličina může R² zvýšit, i když nic nepřispívá. Při jediném prediktoru je R² druhou mocninou korelace r. Samotné r není podíl.",
+      "beispiel": "R² = ,40: podlahová plocha a poloha vysvětlují v těchto datech 40 % rozdílů v ceně.",
+      "vorsicht": "„Vysvětluje“ se myslí početně, ne jako příčina. Vyšší R² samo model nezlepšuje.",
+      "fachwoerter": "rozptyl (jak široce se hodnoty rozkládají kolem průměru), statisticky významný (p-hodnota je pod zvolenou mezí, obvykle ,05), prediktor (hodnota, která se používá k předpovědi).",
+      "pruefen": true
+    },
+    "eigenwert-rotation": {
+      "titel": "Vlastní číslo, paralelní analýza, zátěž a rotace",
+      "kurz": "Kolik je skupin otázek? Vlastní číslo ukazuje, kolik z rozdílů skupina zachycuje. Paralelní analýza ponechá jen skupiny nad hodnotou z náhodných dat; rotace činí zařazení otázek zřetelnější.",
+      "beispiel": "Osm otázek o čtvrti: dvě skupiny leží nad náhodnou hodnotou, s vlastními čísly 3,1 a 1,6. Dohromady 4,7 z 8, tedy 59 %. Otázka 6 má zátěž ,81 na skupině 1 (silná příslušnost) a ,05 na skupině 2.",
+      "vorsicht": "Žádné pravidlo není důkaz: „vlastní číslo nad 1“ často uvádí příliš mnoho skupin, paralelní analýza může uvést příliš málo, je-li první skupina velmi velká, osob je málo a skupiny spolu silně souvisejí. Počet se rozhoduje společně se sutinovým grafem (graf vlastních čísel) a obsahem otázek.",
+      "fachwoerter": "komponenta (jedna ze skupin, které výpočet tvoří), Kaiserovo kritérium (ponechá komponenty s vlastním číslem nad 1), Varimax (rotace, která drží komponenty nezávislé), Promax (rotace, která připouští vztah mezi faktory).",
+      "pruefen": true
+    },
+    "trennschaerfe": {
+      "titel": "Korigovaná korelace položky s celkem a alfa po vynechání položky",
+      "kurz": "Hodí se otázka k ostatním otázkám škály? Diskriminační síla položky (korelace položky s celkem) je korelace otázky se součtem ostatních otázek. Vysoká znamená: kdo zde odpovídá vysoko, odpovídá vysoko obvykle i jinde. Alfa po vypuštění položky je alfa škály bez této otázky. Pokud vzroste, otázka alfa stahuje dolů.",
+      "beispiel": "Korelace položky s celkem ,55: sedí dobře. Korelace −,40: otázka běží opačně; možná nebyla obrácena.",
+      "vorsicht": "Hodnoty asi ,40 až ,70 se často označují za dobré; je to zvyk. Vysoká korelace položky s celkem nedokazuje, že všechny otázky měří totéž. O vypuštění otázky rozhoduje i obsah.",
+      "fachwoerter": "Cronbachovo alfa (jak silně spolu odpovědi na škále souvisejí), položka (jedna otázka škály), obrácení kódování (otočení opačně formulované otázky, aby mířila stejným směrem).",
+      "pruefen": true
+    },
+    "rangkorrelation": {
+      "titel": "Pořadová korelace (rs, τb)",
+      "kurz": "Jdou dvě pořadí ruku v ruce? Pořadová korelace (rs podle Spearmana, τb podle Kendalla) neporovnává čísla, ale jejich pořadí, a hodí se, když záleží jen na pořadí. Leží mezi −1 a +1.",
+      "beispiel": "Spokojenost (úrovně 1 až 5) a návštěvy za měsíc u 60 osob: rs = −,22. Lidé, kteří chodí častěji, bývají o něco méně spokojeni. Vztah je slabý.",
+      "vorsicht": "Vztah není příčina. Pořadová korelace zachytí každý vztah, který stále roste nebo stále klesá, i zakřivený; tvar ukáže bodový graf.",
+      "pruefen": true
+    },
+    "kappa": {
+      "titel": "Cohenovo kappa (κ)",
+      "kurz": "Jak dobře se dva hodnotitelé shodují po odečtení hádání? Cohenovo kappa (κ) odstraňuje shodu, kterou by dala sama náhoda. 0 znamená nic lepšího než náhoda; 1 dokonalou shodu.",
+      "beispiel": "Dva lékaři třídí 50 fotografií kůže na „nápadné“ a „nenápadné“. Shodnou se u 40 (80 %); po odstranění náhody je κ = ,60 (95% interval ,38 až ,82).",
+      "vorsicht": "κ je nízké i při vysoké shodě, je-li jedna kategorie velmi vzácná nebo velmi častá. Označení jako „střední“ nebo „podstatná“ (Landis a Koch 1977) jsou orientační pravidla, ne meze.",
+      "pruefen": true
+    },
+    "krippendorff-alpha": {
+      "titel": "Krippendorffovo alfa (α)",
+      "kurz": "Shodují se více osob při třídění, i když nehodnotil každý každý případ? Krippendorffovo alfa (α) to měří jedním číslem. Často se uvádí: od ,800 spolehlivé, od ,667 pro předběžné závěry.",
+      "beispiel": "Tři osoby třídí 60 komentářů zákazníků na „pochvalu“, „kritiku“ nebo „otázku“: α = ,71. To je nad ,667, ale pod ,800: stačí na předběžné závěry, ne na spolehlivé.",
+      "vorsicht": "Meze ,800 a ,667 jsou návrhy Krippendorffa, ne přírodní zákony. S málo případy je interval široký.",
+      "pruefen": true
+    },
+    "icc": {
+      "titel": "Intraklasová korelace (ICC)",
+      "kurz": "Kolik z rozdílů mezi hodnoceními pochází spíš z hodnocených případů než z hodnotitelů? Ukazuje to ICC (vnitrotřídní korelace): 0 znamená žádnou shodu, 1 dokonalou shodu.",
+      "beispiel": "Tři porotci hodnotí 10 dortů od 0 do 100 bodů: ICC(2,1) = ,82 (95% interval ,43 až ,95) pro jedno hodnocení, ICC(2,3) = ,93 (,70 až ,98) pro průměr tří hodnocení. U pouhých 10 dortů je první interval stále široký.",
+      "vorsicht": "Existují varianty (jedno hodnocení nebo průměr; úplná shoda, nebo se připouští pevný posun mezi hodnotiteli); vhodná se volí předem. S málo případy je ICC nepřesné a vychází nízké, když se případy sotva liší - i při dobré shodě.",
+      "fachwoerter": "interval spolehlivosti (rozsah, který se podle dat dobře shoduje se skutečným ICC), absolutní shoda ICC(2,·) (hodnoty mají být stejné), konzistence ICC(3,·) (pevný posun mezi hodnotiteli je povolen), jedno a průměr (jedno hodnocení, nebo průměr všech hodnocení).",
+      "pruefen": true
+    },
+    "bland-altman": {
+      "titel": "Blandův-Altmanův graf",
+      "kurz": "Jak daleko od sebe jsou dvě metody měření na stejných případech? Bland-Altmanův graf ukazuje rozdíl každého případu proti jeho průměru. Systematická chyba (bias) je průměrný rozdíl; meze zahrnují asi 95 % všech rozdílů.",
+      "beispiel": "Dva klinické teploměry u 12 osob: bias = 0,16 °C (95% CI 0,05 až 0,27), meze shody −0,18 až 0,50 °C. Druhý ukazuje v průměru výše (interval biasu neobsahuje 0); v jednotlivém případě ukazuje až o 0,5 °C výše.",
+      "vorsicht": "Zda je rozsah dostatečně malý, rozhoduje obor, ne statistika. S málo případy jsou meze nepřesné a závisí-li rozdíly na průměru, meze neplatí všude stejně dobře.",
+      "fachwoerter": "ICC (vnitrotřídní korelace: vztahuje rozdíly k rozdílům mezi případy), směrodatná odchylka (SD, typický rozptyl; meze jsou bias ± 1,96 SD).",
+      "pruefen": true
+    },
+    "sensitivitaet": {
+      "titel": "Senzitivita",
+      "kurz": "Kolik skutečně postižených osob test najde? Senzitivita je podíl skutečně pozitivních, které test označí za pozitivní. Za pravdu se bere nejlepší dostupná srovnávací kontrola.",
+      "beispiel": "Ze 40 osob s potvrzenou diagnózou rychlý test odhalí 34: senzitivita = 34 / 40 = 85 % (95% CI 71 až 93 %).",
+      "vorsicht": "Nastaví-li se test přísněji nebo mírněji, senzitivita a specificita se mění opačným směrem. U málo postižených osob je interval široký.",
+      "fachwoerter": "referenční standard (nejlepší dostupná kontrola, jejíž výsledek platí za pravdu), skutečně pozitivní (postižené osoby, které test odhalí).",
+      "pruefen": true
+    },
+    "spezifitaet": {
+      "titel": "Specificita",
+      "kurz": "Kolik nepostižených osob test správně pozná? Specificita je podíl skutečně negativních, které test označí za negativní. Vysoká znamená málo falešných poplachů.",
+      "beispiel": "Ze 120 osob bez diagnózy zůstane 108 bez nálezu: specificita = 108 / 120 = 90 % (95% CI 83 až 94 %).",
+      "vorsicht": "Srovnávací kontrola se bere jako pravda; je-li sama nejistá, jsou senzitivita a specificita nepřesné. U vzácných stavů říká pozitivní výsledek často méně, než se čeká, i při vysoké specificitě (viz prediktivní hodnoty).",
+      "fachwoerter": "referenční standard (nejlepší dostupná kontrola, jejíž výsledek platí za pravdu), skutečně negativní (nepostižené osoby, které test správně propustí).",
+      "pruefen": true
+    },
+    "vorhersagewert": {
+      "titel": "Prediktivní hodnoty (PPV, NPV)",
+      "kurz": "Jak pravděpodobné je, že je někdo skutečně postižen, je-li test pozitivní? Říká to pozitivní prediktivní hodnota (PPV): podíl pozitivních testů, které patří skutečně postiženým. Negativní (NPV) se týká negativních testů.",
+      "beispiel": "Test se senzitivitou 90 % a specificitou 90 %. Z 1000 osob je 100 postižených: 90 se odhalí, ale pozitivní test má i 90 z 900 zdravých. PPV = 90 / 180 = 50 %. Kdyby bylo postižených 500, bylo by PPV 450 / 500 = 90 %.",
+      "vorsicht": "Obě hodnoty se mění podle toho, jak častý stav je, i při stejné senzitivitě a specificitě, a platí jen pro skupiny s podobnou prevalencí. Pokud se postižené a nepostižené osoby hledaly zvlášť (studie případů a kontrol), nelze je interpretovat.",
+      "fachwoerter": "poměry věrohodností (LR+ = senzitivita / (1 − specificita), LR− = (1 − senzitivita) / specificita: kolikrát je výsledek častější u postižených než u nepostižených; na prevalenci nezávisejí).",
+      "pruefen": true
+    },
+    "gepaarte-messung": {
+      "titel": "Párové měření (dz, dav)",
+      "kurz": "Změnilo se něco u týchž osob? U párového měření pocházejí „před“ a „po“ od týchž osob. dz a dav jsou dvě míry toho, jak velká změna je. Párový t-test pracuje s rozdíly u každé osoby. Tím odpadnou rozdíly mezi osobami a p-hodnota se často zmenší.",
+      "beispiel": "Kliky 10 osob před šestitýdenním tréninkem a po něm: v průměru o 2,9 více. dz = 2,9 / 1,37 = 2,12; dav = 2,9 / 3,94 = 0,74. dz je mnohem větší, protože před a po spolu silně souvisejí (r = ,98).",
+      "vorsicht": "dz dělí průměrnou změnu variabilitou změn, dav průměrnou variabilitou před a po; srovnatelné s d ze srovnání skupin je jen dav. Bez srovnávací skupiny měření neukazuje, co změnu způsobilo; Cohenova označení (0,2 / 0,5 / 0,8) jsou zvyk a platí pro dav, ne pro dz.",
+      "fachwoerter": "směrodatná odchylka (typický rozptyl hodnot kolem průměru), síla testu (šance zjistit rozdíl, který skutečně existuje; k jejímu výpočtu se používá dz).",
+      "pruefen": true
+    },
+    "logistische-regression": {
+      "titel": "Logistická regrese",
+      "kurz": "Na čem závisí, zda se něco stane, nebo ne? Logistická regrese předpovídá výsledek ano/ne z jiných hodnot. Test modelu ověřuje, zda předpovídá lépe než model bez těchto hodnot.",
+      "beispiel": "Výpověď (ano/ne) podle platu, věku a doby dojíždění u 300 osob, 36 % dává výpověď: test modelu χ²(3) = 14,2, p = ,003; Nagelkerkeho R² = ,06. 68 % je zařazeno správně; bez modelu by to bylo 64 % (tolik patří k větší skupině).",
+      "vorsicht": "Nagelkerkeho R² není podíl vysvětlených rozdílů jako v lineární regresi. Vysoká míra zásahů má malou cenu, je-li jedna skupina stejně mnohem větší, a obvykle platí jen pro data, na nichž byl model přizpůsoben.",
+      "fachwoerter": "šance (pravděpodobnost dělená pravděpodobností opaku: 75 % jsou šance 3 ku 1), prediktor (hodnota, která se používá k předpovědi), pseudo-R² (Nagelkerkeho R² zastupuje R² lineární regrese, ale není to podíl vysvětlených rozdílů).",
+      "pruefen": true,
+      "statable": "Spočítejte regresi (cílový sloupec se dvěma hodnotami) a pod výsledkem rozbalte blok „Kontrola logistické regrese: nápadné případy, přizpůsobení, linearita logitu, bloky“. Ukazuje VIF, nápadné případy (páka, Cookova vzdálenost, devianční reziduum, DFBETA), Hosmer-Lemeshowův test, Box-Tidwellův test a blok χ² pro druhý blok prediktorů."
+    },
+    "odds-ratio": {
+      "titel": "Poměr šancí (OR)",
+      "kurz": "Kolikrát se změní šance události, když hodnota vzroste o 1? To je poměr šancí (OR). 1 znamená žádný vztah; nad 1 šance roste; pod 1 klesá.",
+      "beispiel": "Šance, že balík dorazí pozdě, na 100 km vzdálenosti: OR = 1,35, 95% interval [1,12; 1,63]. O 100 km více šance roste na 1,35násobek, tedy asi o 35 %. Interval neobsahuje 1.",
+      "vorsicht": "„Šance“ zde znamená poměr „stane se“ ku „nestane se“ (3 ku 1 spíše než 75 %); OR proto není „x-krát pravděpodobnější“ - to platí jen u vzácných událostí. Leží-li 1 uvnitř intervalu, vztah se neukazuje.",
+      "fachwoerter": "šance (pravděpodobnost dělená pravděpodobností opaku), prediktor (hodnota, která se používá k předpovědi), Wald (obvyklá metoda pro interval OR).",
+      "pruefen": true
+    },
+    "eta-quadrat": {
+      "titel": "Eta na druhou (η²) a omega na druhou (ω²)",
+      "kurz": "Kolik z rozdílů v naměřené hodnotě jde se skupinou? η² (eta na druhou) je tento podíl, 0 až 1. ω² je stejná myšlenka, počítaná opatrněji, a o něco menší.",
+      "beispiel": "Tři hnojiva, vždy 20 rostlin: η² = ,25 a ω² = ,22. S hnojivem jde asi čtvrtina rozdílů ve výnosu.",
+      "vorsicht": "Označení ,01 / ,06 / ,14 podle Cohena jsou zvyk pro srovnání skupin; u osob měřených opakovaně nebo u skupin, které nebyly přiděleny, vychází varianta (parciální η²) mnohem větší, proto tam Statable používá zobecněné η² (ηG²). Srovnání skupin (analýza rozptylu) ukazuje jen to, že se liší alespoň dvě skupiny, ne které.",
+      "fachwoerter": "základní soubor (všichni, o nichž se tvrzení vyslovuje; výběr je jen jeho část), interval spolehlivosti (věrohodný rozsah pro η² v základním souboru), opakovaná měření (tytéž osoby měřené několikrát), parciální η² (ηp²: efekt vztažený k efektu plus jeho chybě), statisticky významný (p-hodnota je pod zvolenou mezí; je-li test nevýznamný, dolní mez intervalu je 0).",
+      "pruefen": true
+    },
+    "paarvergleich": {
+      "titel": "Párová srovnání (post hoc: Tukey, Games-Howell, Bonferroni)",
+      "kurz": "Které skupiny se liší, je-li jich víc než dvě? Párová srovnání testují každou dvojici a zpřísňují p-hodnoty, protože mnoho srovnání snadno náhodou něco „najde“. Běžné jsou Tukey, Games-Howell a Bonferroni.",
+      "beispiel": "Tři odrůdy dávají 3 dvojice. U Bonferroniho se každé p násobí třemi: ,020 se stane ,060 - už ne pod ,05.",
+      "vorsicht": "Dvojice, která není statisticky významná, neznamená „stejné“, jen „neprokázáno“. S mnoha skupinami dvojic přibývá a každou jednotlivou je těžší prokázat.",
+      "fachwoerter": "analýza rozptylu (porovnává průměry tří a více skupin), post hoc (dodatečně, po analýze rozptylu), Games-Howell (ve Statable výchozí, nepotřebuje stejný rozptyl), Tukey (předpokládá stejný rozptyl), Bonferroni (přísné a jednoduché: každé p krát počet dvojic).",
+      "pruefen": true
+    },
+    "welch-anova": {
+      "titel": "Welchova analýza rozptylu",
+      "kurz": "Jak porovnat několik skupin s nestejným rozptylem? Klasická analýza rozptylu vyžaduje stejný rozptyl. Welchova analýza rozptylu ne: váží každou skupinu jejím rozptylem.",
+      "beispiel": "Dodací lhůty čtyř skladů s velmi odlišným rozptylem: Welch F(3; 41,8) = 5,4, p = ,003. Sklady se liší, bez předpokladu stejného rozptylu.",
+      "vorsicht": "I Welchova analýza ukazuje jen to, že se liší alespoň dvě skupiny. Které, ukážou párová srovnání (hodí se Games-Howell).",
+      "fachwoerter": "stupně volnosti (df: čísla v závorce vedle F; určují, s jakým rozdělením test porovnává), rozptyl (jak daleko od sebe leží hodnoty skupiny).",
+      "pruefen": true
+    },
+    "rangtest": {
+      "titel": "Pořadový test (bez normálního rozdělení)",
+      "kurz": "Co dělat, když průměry kvůli odlehlým hodnotám nebo šikmosti nesedí? Pořadové testy seřadí všechny hodnoty a pracují s pořadím. Nepotřebují normální rozdělení a na jednotlivé odlehlé hodnoty téměř nereagují.",
+      "beispiel": "Čekací doby v minutách, vždy 6 měření: služba A 4, 5, 6, 7, 9, 13; služba B 8, 10, 11, 12, 15, 40. Mannův–Whitneyho test (dvě skupiny) U = 5, p = ,041 (exaktní): B má tendenci být vyšší. Odlehlá hodnota 40 téměř nehraje roli.",
+      "vorsicht": "Pořadový test ukazuje, zda jedna skupina má tendenci k vyšším hodnotám - netestuje samotné mediány. Spustit ho může i jiný rozptyl nebo tvar.",
+      "fachwoerter": "Kruskalův–Wallisův test (pořadový test pro tři a více skupin), Wilcoxonův test (pořadový test pro dvě měření týchž osob), Dunnův test s úpravou podle Holma (po Kruskalově–Wallisově testu ukáže, které dvojice se liší), Hodges-Lehmannův odhad (HL: medián všech rozdílů mezi jednou osobou z každé skupiny) s 95% intervalem spolehlivosti (věrohodným rozsahem pro něj), velikost efektu (jak velký rozdíl je: r = |z| / √N, u Kruskalova–Wallisova testu ε² = H / (n − 1)), pořadová biseriální korelace (podíl dvojic, v nichž je jedna skupina vyšší, krát 2, minus 1), shodná pořadí (stejné hodnoty).",
+      "pruefen": true
+    },
+    "sphaerizitaet": {
+      "titel": "Sféricita (Mauchlyho test)",
+      "kurz": "Tytéž osoby se měří několikrát: kolísají rozdíly mezi libovolnými dvěma časovými body stejně silně? To je sféricita. Je-li porušena, vychází výsledek příliš často statisticky významný.",
+      "beispiel": "Reakční doba 20 osob ve tři dny: Mauchlyho test W = ,75, p = ,075; ε (Greenhouse-Geisser) = ,80 (1 by znamenalo: splněno). Test porušení neukazuje, ale ε je zřetelně pod 1 - proto se použije korekce.",
+      "vorsicht": "Mauchlyho test ověřuje sféricitu (p nad ,05 nemluví proti ní), ale je slabý u málo osob a u mnoha označí i malé odchylky. Proto Statable vždy ukazuje korekci Greenhouse-Geisser, ne jen když je p pod ,05.",
+      "fachwoerter": "opakovaná měření (tytéž osoby měřené několikrát), analýza rozptylu (porovnává průměry), stupně volnosti (df: čísla v závorce vedle F), p-hodnota (jak často by se vyskytl výsledek aspoň tak velký, kdyby předpoklad platil), W (testová statistika Mauchlyho testu).",
+      "pruefen": true,
+      "statable": "Pod výsledkem analýzy s opakovanými měřeními zvolte korekci sféricity (Greenhouse-Geisser jako výchozí, Huynh-Feldt nebo žádnou). S jedním faktorem s opakovaným měřením je Mauchlyho test v tabulce; se dvěma faktory má každý efekt vlastní ε."
+    },
+    "greenhouse-geisser": {
+      "titel": "Greenhouseova-Geisserova a Huynhova-Feldtova korekce (ε)",
+      "kurz": "Co dělat, když je sféricita porušena? Korekce činí výsledek opatrnějším: p roste. O kolik, určuje ε (epsilon): 1 znamená splněno, menší znamená silnější porušení.",
+      "beispiel": "Při ε = ,80 se F(2; 38) = 6,2, p = ,005 stane F(1,60; 30,40) = 6,2, p = ,009: obě čísla v závorce, 2 a 38, se vynásobí ,80 a dají 1,60 a 30,40.",
+      "vorsicht": "Greenhouse-Geisser je přísnější, Huynh-Feldt o něco shovívavější odhad. Čísla v závorce už nejsou celá; to je obvyklé a při ε blízko 1 korekce téměř nic nemění.",
+      "fachwoerter": "stupně volnosti (df: čísla v závorce vedle F), analýza rozptylu (porovnává průměry), sféricita (všechny rozdíly mezi libovolnými dvěma časovými body kolísají stejně).",
+      "pruefen": true,
+      "statable": "Pod výsledkem analýzy s opakovanými měřeními zvolte korekci: Greenhouse-Geisser (výchozí), Huynh-Feldt nebo žádnou. Stupně volnosti a p se hned zobrazí korigované pomocí ε; se dvěma faktory s opakovaným měřením má každý efekt vlastní ε."
+    },
+    "mediation": {
+      "titel": "Mediace (nepřímý efekt)",
+      "kurz": "Vede efekt přes mezikrok? Například: hluk ovlivňuje spánek a spánek ovlivňuje náladu. Mediace počítá, jak velká je tato nepřímá cesta.",
+      "beispiel": "Nepřímá cesta přes spánek 0,20, 95% interval [0,11; 0,30]: 0 v něm není.",
+      "vorsicht": "Jedno šetření příčinu neukazuje: pořadí je předpoklad. Rozhoduje interval nepřímé cesty, ne to, zda jsou jednotlivé kroky statisticky významné.",
+      "fachwoerter": "mediátor (proměnná M, přes niž efekt vede), cesty a (X → M), b (M → Y), c′ (X → Y přímo) a c (X → Y celkem; c = c′ + a·b), bootstrap (5000násobné nové losování ze stávajících osob), interval spolehlivosti (rozsah, který se podle dat dobře shoduje se skutečnou hodnotou).",
+      "pruefen": true
+    },
+    "moderation": {
+      "titel": "Moderace (interakce, jednoduché sklony)",
+      "kurz": "Je vztah pro všechny stejný? Moderace testuje, zda závisí na třetí veličině.",
+      "beispiel": "Více cvičení hodně pomáhá začátečníkům a zkušeným téměř vůbec: zkušenost vztah moderuje.",
+      "vorsicht": "Moderace není mediace: moderátor mění sílu vztahu; není to mezikrok. Samotná moderace také neukazuje příčinu.",
+      "fachwoerter": "moderátor (třetí proměnná W, na níž vztah závisí), centrování (posunutí hodnot kolem jejich průměru), regrese (předpověď se součinem X·W jako členem interakce), statisticky významný (p-hodnota je pod zvolenou mezí), jednoduché sklony (sklon X při nízkém, středním a vysokém W), ΔR² (zisk vysvětleného rozptylu způsobený interakcí), Johnson-Neyman (uvádí body W, od nichž se sklon stává statisticky významným).",
+      "pruefen": true
+    },
+    "nap": {
+      "titel": "NAP (nonoverlap of all pairs - nepřekrývání všech dvojic)",
+      "kurz": "Zlepšilo se chování díky intervenci? NAP porovnává každou hodnotu před (A) s každou během intervence (B) a udává podíl dvojic, v nichž je B lepší; shoda se počítá za polovinu.",
+      "beispiel": "Minuty, které dítě zůstane sedět u stolu: výchozí 3, 4, 4, 5; intervence 6, 5, 7, 8, 7. Z 20 dvojic je B lepší v 19 a stejné v 1: NAP = (19 + 0,5) / 20 = ,975.",
+      "vorsicht": "NAP ignoruje případný trend před intervencí a neukazuje, o kolik je B lepší; označení slabé, střední a silné (Parker a Vannest) jsou orientační pravidlo. Test k tomu předpokládá nezávislá měření, která časovým řadám často chybějí.",
+      "fachwoerter": "AUC (plocha pod křivkou ROC: tatáž pravděpodobnost, NAP se jí rovná), Mannův–Whitneyho test (pořadový test pro dvě skupiny, dává zde p-hodnotu), p-hodnota (jak často by se vyskytl výsledek aspoň tak velký, kdyby rozdíl neexistoval), interval spolehlivosti podle Newcomba (rozsah, který ukazuje, jak nejistá je hodnota při málo měřeních).",
+      "pruefen": true
+    },
+    "pnd": {
+      "titel": "PND (podíl nepřekrývajících se dat)",
+      "kurz": "Kolik hodnot fáze intervence (B) překoná nejlepší hodnotu před ní (A)? To je PND: podíl hodnot B nad nejlepší hodnotou A (Scruggs et al. 1987).",
+      "beispiel": "Se stejnými daty (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): nejlepší hodnota A je 5. Čtyři z pěti hodnot B leží nad ní (6, 7, 8, 7), PND = 4 / 5 = 80 %. Platí-li „nižší = lepší“, počítá se nejnižší hodnota A.",
+      "vorsicht": "PND závisí na jediné hodnotě před intervencí: odlehlá hodnota ji činí k ničemu a s více měřeními před ní klesá, i když se nic jiného neliší. Lépe se hodí NAP; PND je tu pro srovnání se starší prací.",
+      "pruefen": true
+    },
+    "tau-u": {
+      "titel": "Tau-U a Tau korigované o základní fázi",
+      "kurz": "Jak dobře lze ukázat zlepšení, když se hodnoty hýbou jedním směrem už před intervencí? Tau-U porovnává před a po jako NAP a umí tento trend odstranit.",
+      "beispiel": "Se stejnými daty (A: 3, 4, 4, 5; B: 6, 5, 7, 8, 7): Tau-U bez odstranění trendu = (19 − 0) / 20 = ,95. Už před intervencí roste 5 ze 6 dvojic: s odstraněným trendem je Tau-U = (19 − 5) / 20 = ,70.",
+      "vorsicht": "Odstranění trendu předpokládá, že by dřívější trend prostě pokračoval i potom - silný předpoklad při dlouhé fázi intervence. Při méně než 3 měřeních před nelze trend testovat a p-hodnoty předpokládají nezávislá měření.",
+      "fachwoerter": "Kendall (Kendallovo tau: vztah počítaný z pořadí, základ obou měr), Tau-BC (tau korigované na výchozí úroveň: odstraní trend v A jen tehdy, je-li statisticky významný), Theil-Sen (robustní přímka trendu z mediánu sklonů všech dvojic bodů).",
+      "pruefen": true
+    },
+    "einzelfall": {
+      "titel": "Analýza jednoho případu (plán A-B)",
+      "kurz": "Fungovala intervence u jedné osoby? Jedna osoba (nebo několik) se měří opakovaně v čase: nejdřív bez intervence (fáze A), potom s ní (fáze B). Obě fáze se porovnají.",
+      "beispiel": "Dítě zůstane sedět u stolu v průměru 4 minuty ve čtyřech výchozích měřeních (3, 4, 4, 5) a v průměru 6,6 minuty v pěti měřeních s intervencí (6, 5, 7, 8, 7).",
+      "vorsicht": "Samotný plán A-B neprokazuje příčinu: osoba se může vyvíjet sama nebo mohou hrát roli jiné události. Přesvědčivější jsou replikace (A-B-A-B, několik osob s posunutým začátkem).",
+      "fachwoerter": "medián (prostřední hodnota), NAP (podíl dvojic A-B, v nichž je B lepší), tau a Tau-U (míry založené na Kendallově tau, které umějí zohlednit trend ve výchozí fázi), PND (podíl hodnot B nad nejlepší hodnotou A), vícenásobný výchozí stav (několik osob s posunutým začátkem intervence).",
+      "pruefen": true
+    },
+    "kaplan-meier": {
+      "titel": "Kaplan-Meier (čas do události)",
+      "kurz": "Kolik jich je po určité době ještě bez události? Kaplanova–Meierova křivka to ukazuje pro každý časový bod a klesá při každé události. Využívá i osoby, které byly pozorovány jen část doby.",
+      "beispiel": "10 zaměstnanců, doba do odchodu v měsících: 5 odejde (po 3, 5, 5, 8 a 12 měsících), u 5 pozorování skončí bez odchodu (po 6, 9, 10, 14 a 15 měsících). Po 8 měsících 9/10 · 7/9 · 5/6 = 58 % ještě neodešlo.",
+      "vorsicht": "Metoda předpokládá, že opuštění pozorování nemá s rizikem nic společného. Na pravém konci obvykle zbývá jen málo osob; tam je křivka nejistá.",
+      "fachwoerter": "cenzorovaný (pozorován jen do určitého bodu, událost do té doby nenastala), schodová křivka (klesne o schod při každé události), ohrožený (ještě pozorován a bez události).",
+      "pruefen": true
+    },
+    "zensierung": {
+      "titel": "Cenzorování",
+      "kurz": "Co platí pro osoby, u nichž se do konce pozorování nic nestalo? Říká se jim cenzorované: ví se jen, že událost nenastala dříve.",
+      "beispiel": "Zaměstnankyně, která je stále ve firmě, když studie po 14 měsících končí, je cenzorována v čase 14. V grafu se objeví jako malá značka na křivce.",
+      "vorsicht": "Cenzorované osoby nevypouštějte a nepočítejte je jako události: obojí křivku zkresluje. Metoda předpokládá, že cenzorované osoby mají stejné další riziko jako ostatní.",
+      "fachwoerter": "Kaplanův–Meierův odhad (metoda, která využívá i cenzorované osoby), ohrožený (ještě pozorován a bez události), neinformativní cenzorování (vypadnutí nemá s rizikem nic společného).",
+      "pruefen": true
+    },
+    "ueberlebensfunktion": {
+      "titel": "Funkce přežití S(t)",
+      "kurz": "Kolik jich do času t událost ještě nezažilo? To ukazuje funkce přežití S(t); začíná na 1 (všichni) a při událostech klesá. „Přežití“ zde znamená jen „zatím žádná událost“.",
+      "beispiel": "S(8) = ,58, 95% interval [,34; 1,00]: po 8 měsících asi 58 % zaměstnanců ještě neodešlo. Při 10 osobách je interval velmi široký.",
+      "vorsicht": "Interval se počítá (jako v R survfit) tak, aby nikdy neklesl pod 0; horní mez je zkrácena na 1. Při málo stále pozorovaných osobách je velmi široký.",
+      "fachwoerter": "interval spolehlivosti (rozsah, který se podle dat dobře shoduje se skutečným podílem), standardní chyba (podle Greenwooda: jak moc by hodnota kolísala od výběru k výběru), logaritmická škála (interval se počítá z logaritmovaných hodnot).",
+      "pruefen": true
+    },
+    "median-ueberlebenszeit": {
+      "titel": "Medián času do události",
+      "kurz": "Kdy událost zažila polovina? To je medián času: bod, v němž křivka klesne na 50 %. Pokud nikdy tak nízko neklesne, medián je „nedosažen“.",
+      "beispiel": "Medián = 12 měsíců, 95% interval [5, nedosaženo]: dolní mez je 5, nahoru je interval otevřený.",
+      "vorsicht": "Medián je zde lepší než průměr, který zešikmená data a osoby bez události do konce zkreslují. Leží-li křivka na určitém úseku přesně na 50 %, Statable jako R vezme střed; při málo událostech je medián velmi nejistý.",
+      "pruefen": true
+    },
+    "log-rank": {
+      "titel": "Log-rank test",
+      "kurz": "Liší se křivky několika skupin? Log-rank test porovnává v každém čase události, kolik událostí měla každá skupina a kolik by se očekávalo, kdyby byly všechny skupiny stejné.",
+      "beispiel": "Dva týmy, doba do odchodu: χ²(1) = 5,1, p = ,024. Křivky se liší.",
+      "vorsicht": "Test je nejsilnější, když křivky nikdy nepřecházejí na druhou stranu; kříží-li se, může skutečný rozdíl přehlédnout. Nic neříká o velikosti rozdílu; k tomu slouží mediány a podíly v pevných časových bodech.",
+      "fachwoerter": "Mantel-Cox (jiný název testu), Cox (nezaměňovat s Coxovou regresí), Holm (upravuje p-hodnoty pro několik dvojic), stupně volnosti (df: zde skupiny minus 1).",
+      "pruefen": true
+    },
+    "anzahl-unter-risiko": {
+      "titel": "Počet ohrožených",
+      "kurz": "Kolik osob křivku v daném bodě podpírá? Počet ohrožených je, kolik jich je v čase t ještě pozorováno a nemělo událost. Často stojí pod grafem.",
+      "beispiel": "V měsíci 10 jsou z 10 osob ještě 4 ohroženy: tam křivka spočívá na 4 osobách.",
+      "vorsicht": "Kde je ohroženo už jen málo osob, křivka při každé události silně skáče a interval je široký. Taková místa by se neměla přeinterpretovat.",
+      "fachwoerter": "cenzorování (osoby pozorované jen do určitého bodu, které potom vypadnou; počet snižují stejně jako události).",
+      "pruefen": true
+    },
+    "bootstrap": {
+      "titel": "Bootstrap (percentilový interval)",
+      "kurz": "Jak nejisté je číslo bez jednoduchého vzorce? Bootstrap 5000krát znovu losuje z dostupných osob a pokaždé číslo přepočítá. Prostředních 95 % výsledků tvoří interval.",
+      "beispiel": "Medián (prostřední hodnota) čekací doby 12 osob: 11,5 minuty. Z 5000 nových mediánů leží 2,5 % pod 7,5 a 2,5 % nad 16,5: 95% bootstrapový interval [7,5; 16,5].",
+      "vorsicht": "U málo osob (pod asi 50) je interval nepřesný a často příliš úzký. S pevnou počáteční hodnotou náhodných čísel dávají stejná data vždy stejný interval; jiná počáteční hodnota meze posune jen málo.",
+      "fachwoerter": "interval spolehlivosti (rozsah, který se podle dat dobře shoduje se skutečnou hodnotou), percentil (meze na 2,5 % a 97,5 % seřazených výsledků), losování s vracením (táž osoba se může objevit vícekrát), počáteční hodnota (seed: zafixuje náhodná čísla).",
+      "pruefen": true
+    },
+    "omega": {
+      "titel": "McDonaldovo omega (ω)",
+      "kurz": "Měří několik otázek společně spolehlivě jednu věc, i když nepřispívají stejně? Omega (ω) to měří jako Cronbachovo alfa, ale používá skutečný příspěvek každé otázky. Alfa předpokládá totéž u všech.",
+      "beispiel": "Pět otázek s příspěvky (zátěžemi) ,5 / ,6 / ,7 / ,7 / ,8: ω = ,80. Alfa, které předpokládá stejné příspěvky, je o něco nižší, ,79.",
+      "vorsicht": "Omega předpokládá, že otázky měří jedinou věc; jinak nemá smysl ho interpretovat (pomůže pak faktorová analýza). Orientační hodnoty (často ,70) jsou jen provizorní a omega také platí pro tuto skupinu osob, ne pro dotazník jako takový. Alfa trefí reliabilitu přesně jen tehdy, když otázky měří jednu věc, přispívají stejně a mají nekorelované chyby.",
+      "pruefen": true
+    },
+    "cfa": {
+      "titel": "Konfirmační faktorová analýza (CFA)",
+      "kurz": "Odpovídá předem dané zařazení otázek do skupin datům? Konfirmační faktorová analýza (CFA) předem stanoví, které otázky patří do které skupiny (faktoru), a testuje, jak dobře to sedí.",
+      "beispiel": "Devět otázek, tři skupiny po třech otázkách (doprava, bezpečnost, volný čas): CFI = ,92, RMSEA = ,07, dvě míry shody. O vlásek míjejí obvyklé orientační hodnoty: CFI pod ,95, RMSEA nad ,06.",
+      "vorsicht": "Dobrá shoda neukazuje, že skupiny měří správnou věc, a jiný model může sedět stejně dobře. Upravuje-li se zařazení až po pohledu na tatáž data, test už není nezávislý.",
+      "fachwoerter": "indexy shody (míry toho, jak dobře model sedí, zde CFI a RMSEA), exploratorní faktorová analýza (hledá v datech skupiny otázek), standardizované zátěže (jak silně otázka patří ke svému faktoru).",
+      "pruefen": true
+    },
+    "fit-indizes": {
+      "titel": "Indexy shody (CFI, TLI, RMSEA, SRMR)",
+      "kurz": "Odpovídá model datům? Indexy shody to vyjadřují čísly. U CFI a TLI je lepší vyšší, u RMSEA a SRMR nižší. 90% interval RMSEA ukazuje, jak přesně je odhadnut.",
+      "beispiel": "CFI = ,96, TLI = ,95, RMSEA = ,05, SRMR = ,04: podle obvyklých orientačních hodnot je shoda v dobrém rozmezí.",
+      "vorsicht": "Orientační hodnoty (CFI a TLI od ,95, RMSEA do ,06, SRMR do ,08; Hu a Bentler 1999) jsou pravidla zkušenosti, ne testy; ,90 se u CFI a TLI často ještě označuje za přijatelné a u malých modelů nebo málo osob jsou nespolehlivé. Test χ² se u velkých výběrů stává statisticky významným i při malých odchylkách.",
+      "pruefen": true
+    },
+    "mehrebenen": {
+      "titel": "Víceúrovňový model (smíšený model)",
+      "kurz": "Co když jsou osoby vnořeny ve skupinách, například děti ve třídách? Osoby ve skupině si bývají podobné. Víceúrovňový model dává každé skupině vlastní úroveň a odděluje rozdíly mezi skupinami od rozdílů uvnitř.",
+      "beispiel": "Spokojenost 500 zaměstnanců z 25 firem: 12 % variability leží mezi firmami. Jedna hodina školení měsíčně navíc jde s o 0,8 bodu vyšší spokojeností (p < ,001), i při zohlednění firmy.",
+      "vorsicht": "Potřebuje několik skupin s několika případy v každé; při méně než 10 skupinách jsou odhady na úrovni skupin velmi nejisté. Víceúrovňový model ukazuje vztahy, ne příčiny.",
+      "pruefen": true,
+      "statable": "Ve výsledku v části „Pro odborníky“ lze centrovat na celkový nebo skupinový průměr (efekt uvnitř skupin proti efektu mezi skupinami), zvolit náhodný sklon a přidat interakci, i napříč úrovněmi. Níže „Porovnat modely“ porovnává nulový model, pevné efekty, interakce a náhodný sklon pomocí ML (AIC, BIC, −2LL, test poměru věrohodností). Jsou-li data osoba krát časový bod, nabídne Statable cestu „čas s náhodným sklonem pro každou osobu“ (růstový model)."
+    },
+    "icc-mehrebenen": {
+      "titel": "ICC ve víceúrovňovém modelu (podíl skupin)",
+      "kurz": "Jak moc se skupiny liší? ICC je podíl celkové variability, který leží mezi skupinami. ICC = ,12 znamená: 12 % rozdílů jde se skupinou.",
+      "beispiel": "ICC = ,12 při 20 případech na skupinu: designový efekt je 1 + (20 − 1) · ,12 = 3,28. Nejistota průměru (standardní chyba) je pak asi 1,8krát (√3,28) větší, než uvádí výpočet, který skupiny ignoruje.",
+      "vorsicht": "Nezaměňovat s ICC pro shodu mezi hodnotiteli: zde jde o podíl skupin na variabilitě. Od ,05 malé, od ,10 střední, od ,15 velké (Hox) je jen orientační pravidlo.",
+      "fachwoerter": "vnitrotřídní korelace (ICC: podíl celkové variability, který leží mezi skupinami), rozptyl (jak široce se hodnoty rozkládají), nulový model (model bez vysvětlujících sloupců, v němž se ICC počítá).",
+      "pruefen": true
+    },
+    "meta-effekt": {
+      "titel": "Souhrnný efekt (metaanalýza)",
+      "kurz": "Jak velký je efekt napříč několika studiemi dohromady? Souhrnný efekt je vážený průměr všech studií: přesnější studie se počítají více. Liší-li se skutečné efekty mezi studiemi, interval se rozšíří.",
+      "beispiel": "Tři studie: 0,40 (standardní chyba, tedy nepřesnost, 0,10), 0,20 (0,05) a 0,30 (0,10). Váha = 1 / standardní chyba²: 100, 400, 100. Vážený průměr = (40 + 80 + 30) / 600 = 0,25 - jako při jednom společném skutečném efektu.",
+      "vorsicht": "Průměr má smysl, jen když studie měří totéž. Liší-li se studie silně, podívejte se i na predikční interval.",
+      "fachwoerter": "heterogenita (jak silně se studie navzájem liší), interval spolehlivosti (rozsah, který se podle dat dobře shoduje s průměrem skutečných efektů), model s náhodnými efekty (připouští, že se skutečné efekty mezi studiemi liší, τ²), standardní chyba (míra toho, jak nepřesná studie je).",
+      "pruefen": true
+    },
+    "i-quadrat": {
+      "titel": "I² a Q (heterogenita)",
+      "kurz": "Liší se studie víc, než bychom čekali od náhody? I² říká v procentech, kolik z rozdílů mezi výsledky pochází ze skutečných rozdílů mezi studiemi. Totéž se ptá test Q.",
+      "beispiel": "Dvanáct studií: Q(11) = 42,0, p < ,001; I² = (42,0 − 11) / 42,0 = 74 %. Často citovaná označení: 25 %, 50 %, 75 % (Higgins et al. 2003).",
+      "vorsicht": "I² je podíl, ne míra toho, jak velké rozdíly jsou: u velmi přesných studií vychází I² velké, i když efekty leží těsně u sebe. U málo studií je I² velmi nepřesné a malá hodnota nedokazuje, že jsou studie stejné; jak daleko se skutečné efekty rozkládají, ukazuje τ a predikční interval.",
+      "pruefen": true,
+      "fachwoerter": "τ (rozptyl skutečných efektů mezi studiemi), predikční interval (rozsah, v němž pravděpodobně leží efekt nové studie), Q (test, zda se výsledky liší víc, než by způsobila náhoda)."
+    },
+    "tau-quadrat": {
+      "titel": "τ² (variabilita mezi studiemi)",
+      "kurz": "Jak odlišné jsou skutečné efekty studií? τ² (tau na druhou) tento rozptyl měří; jeho druhá odmocnina τ je v jednotce efektu. Na rozdíl od I² ignoruje, jak jsou studie přesné.",
+      "beispiel": "τ² = 0,04, tedy τ = 0,20: při průměrném efektu 0,30 se skutečné efekty studií kolem něj typicky rozkládají asi o 0,20.",
+      "vorsicht": "U méně než asi pěti studií je τ² velmi nejisté a jeho interval velmi široký.",
+      "fachwoerter": "směrodatná odchylka (τ je druhá odmocnina z τ²), rozptyl (jak široce se skutečné efekty rozkládají), REML (metoda použitá k odhadu τ²).",
+      "pruefen": true
+    },
+    "praediktionsintervall": {
+      "titel": "Predikční interval (metaanalýza)",
+      "kurz": "Kde pravděpodobně leží efekt nové, srovnatelné studie? Ukazuje to predikční interval. Je širší než interval spolehlivosti průměru, protože zahrnuje i rozdíly mezi studiemi.",
+      "beispiel": "Souhrnný 0,20, 95% CI [0,12; 0,28], predikční interval [−0,05; 0,45]: nová studie by mohla najít i efekt blízký 0.",
+      "vorsicht": "U málo studií je interval velmi nejistý.",
+      "pruefen": true
+    },
+    "forest-plot": {
+      "titel": "Forest plot",
+      "kurz": "Jak vypadají výsledky všech studií? Forest plot ukazuje každou studii jako čtverec (efekt) s úsečkou (95% interval). Kosočtverec je průměr; čárkovaná čára znamená žádný efekt.",
+      "beispiel": "Kosočtverec na 0,20 s hroty na 0,12 a 0,28, čárkovaná čára na 0 (u poměrů na 1): kosočtverec leží celý napravo od ní - průměr se liší od „žádného efektu“.",
+      "vorsicht": "Zkontrolujte, zda výsledek neurčuje jediná velká studie (velký čtverec) a zda se intervaly překrývají.",
+      "fachwoerter": "predikční interval (rozsah, v němž by pravděpodobně ležel skutečný efekt nové studie), souhrnný efekt (průměr všech studií, kosočtverec).",
+      "pruefen": true
+    },
+    "funnel-plot": {
+      "titel": "Trychtýřový graf a Eggerův test",
+      "kurz": "Chybějí studie? Trychtýřový graf (funnel plot) ukazuje každou studii podle efektu a přesnosti: přesné se shlukují nahoře, nepřesné se dole rozkládají šířeji. Chybějící strana dělá graf nakloněným; Eggerův test to ověřuje.",
+      "beispiel": "Eggerův test p = ,03 při 14 studiích: trychtýř je nápadně nakloněný - malé studie ukazují v průměru větší efekty.",
+      "vorsicht": "Pod 10 studií má test malou sílu (Sterne et al. 2011). Trychtýř může být nakloněný i proto, že se malé a velké studie skutečně liší.",
+      "fachwoerter": "standardní chyba (míra toho, jak nepřesná studie je), asymetrie (trychtýř je na jedné straně prázdný), regrese (Eggerův test předpovídá efekt ze standardní chyby).",
+      "pruefen": true
+    },
+    "mehrfachantworten-set": {
+      "titel": "Sada vícenásobných odpovědí",
+      "kurz": "Co když šlo u jedné otázky zaškrtnout několik možností? Sada vícenásobných odpovědí spojí sloupce jednotlivých možností do jedné otázky. Statable pro každou možnost spočítá, kolik osob ji uvedlo.",
+      "beispiel": "„Jak se dostáváte do práce?“ s možnostmi kolo, autobus, auto: tři sloupce (zaškrtnuto = 1, jinak 0), jedna sada. V SPSS se tomu říká MRSETS.",
+      "vorsicht": "Zaškrtnutí téže osoby spolu souvisejí. Proto pro vícenásobné odpovědi neexistuje běžný chí-kvadrát test.",
+      "pruefen": true
+    },
+    "prozent-der-faelle": {
+      "titel": "Procenta případů",
+      "kurz": "Kolik osob uvedlo možnost? Procento případů je počet zmínek dělený počtem platných případů. Protože každá osoba může uvést několik možností, součet hodnot překračuje 100 %.",
+      "beispiel": "18 ze 40 osob přichází na kole: 18 / 40 = 45 % případů.",
+      "vorsicht": "Platné případy jsou ty s alespoň jedním zaškrtnutím (jako v SPSS). Kdo nezaškrtl nic, není v základu, pokud není zapnuto „počítat případy bez zaškrtnutí“.",
+      "pruefen": true
+    },
+    "prozent-der-antworten": {
+      "titel": "Procenta odpovědí",
+      "kurz": "Jak jsou rozdělena všechna zaškrtnutí? Procento odpovědí je počet zmínek možnosti dělený součtem všech zmínek. Tyto hodnoty dávají dohromady 100 %.",
+      "beispiel": "Kolo bylo uvedeno 18krát, zmínek bylo celkem 60: 18 / 60 = 30 % odpovědí.",
+      "vorsicht": "Hodnota říká, jak jsou zmínky rozděleny, ne kolik osob možnost volí. K tomu slouží procento případů.",
+      "pruefen": true
+    },
+    "shapiro-wilk": {
+      "titel": "Shapirův-Wilkův test",
+      "kurz": "Vypadají hodnoty, jako by pocházely z normálního rozdělení? Shapiro-Wilkův test to ověřuje. Je-li p menší než ,05, rozdělení viditelně vybočuje; jinak test proti němu nemluví.",
+      "beispiel": "Reakční doby 25 osob: W = ,73 (1 by byla dokonalá shoda), p < ,001. Rozdělení je zešikmené; střed lépe popisuje medián.",
+      "vorsicht": "U mnoha osob test označí i malé odchylky, u málo osob přehlédne velké. Statisticky nevýznamný výsledek normální rozdělení nedokazuje; doplňuje ho graf Q-Q.",
+      "pruefen": true
+    },
+    "qq-diagramm": {
+      "titel": "Graf Q-Q",
+      "kurz": "Řídí se hodnoty normálním rozdělením? Graf Q-Q vynáší každou naměřenou hodnotu jako bod proti hodnotě, kterou by dalo normální rozdělení. Leží-li body blízko přímky, sedí to.",
+      "beispiel": "U tělesné výšky 100 dospělých leží body téměř na přímce. U čekacích dob na horké lince se nahoře ohýbají nahoru: několik velmi dlouhých čekání.",
+      "vorsicht": "Křivky ukazují šikmost, jednotlivé body daleko na koncích ukazují odlehlé hodnoty. U málo hodnot body náhodně kolísají kolem přímky; Shapiro-Wilkův test odchylku shrnuje jedním číslem, ale pohled nenahrazuje.",
+      "pruefen": true
+    },
+    "partialkorrelation": {
+      "titel": "Parciální korelace",
+      "kurz": "Souvisejí dvě čísla stále, když třetí zůstává stejné? Parciální korelace ukazuje vztah dvou čísel poté, co se z obou odstranila část způsobená jedním nebo více dalšími čísly.",
+      "beispiel": "Prodej zmrzliny a spáleniny od slunce spolu silně souvisejí (r = ,62). Po odstranění teploty (r = ,80 a ,75 s oběma) téměř nic nezbývá: pr = ,05.",
+      "vorsicht": "Odstraní se jen přímková část toho, co bylo změřeno a zvoleno. Zda je třetí číslo příčinou obou, rozhoduje věcné zadání, ne výpočet: odstranění společného důsledku obou čísel může dokonce vytvořit zdánlivý vztah.",
+      "pruefen": true
+    },
+    "roc-auc": {
+      "titel": "ROC křivka a plocha pod křivkou (AUC)",
+      "kurz": "Jak dobře naměřená hodnota odděluje postižené od nepostižených? ROC křivka to ukazuje pro každou možnou prahovou hodnotu a její plocha (AUC) to shrnuje: ,50 znamená náhodu, 1 dokonalé oddělení.",
+      "beispiel": "AUC = ,85: vylosujete-li jednu postiženou a jednu nepostiženou osobu, má postižená nápadnější hodnotu v 85 % případů. Při prahové hodnotě 20 bodů test odhalí 80 % postižených a 78 % ostatních; Youdenův index ,80 + ,78 − 1 = ,58 slouží k volbě prahové hodnoty.",
+      "vorsicht": "Prahová hodnota se volí právě na těchto datech a v nových datech obvykle dopadá hůř. Youdenův index neví, která chyba váží více.",
+      "fachwoerter": "senzitivita (podíl postižených osob, které test odhalí), specificita (podíl nepostižených osob, které test správně propustí), prahová hodnota (od tohoto skóre výše se někdo počítá za označeného), Youdenův index (J = senzitivita + specificita − 1).",
+      "pruefen": true
+    },
+    "hazard-ratio": {
+      "titel": "Poměr hazardů (HR)",
+      "kurz": "O kolik rychleji nebo pomaleji nastává událost v jedné skupině? Poměr hazardů (HR) srovnává riziko skupin, že se událost stane v nejbližším okamžiku. 1 znamená žádný rozdíl.",
+      "beispiel": "Doba do první pracovní nehody, se školením oproti bez něj: HR = 0,70, 95% interval [0,52; 0,94]. Se školením je riziko nehody v nejbližším okamžiku v každém časovém bodě 0,70krát tak velké. Interval neobsahuje 1.",
+      "vorsicht": "HR není poměr rizik: HR = 1,8 neznamená, že je událost 1,8krát pravděpodobnější. V čase se může měnit; jediná hodnota je pak jen průměr.",
+      "fachwoerter": "hazard (riziko, že událost nastane v nejbližším okamžiku), proporcionální hazardy (poměr zůstává v čase stejný), Coxova regrese (metoda, která HR odhaduje), Wald (obvyklá metoda pro interval).",
+      "pruefen": true
+    },
+    "proportionale-hazards": {
+      "titel": "Proporcionální hazardy",
+      "kurz": "Zůstává rozdíl mezi dvěma skupinami v čase stejný? Poměr hazardů (HR) předpokládá, že poměr rizik je pořád stejný. Test (cox.zph) to ověřuje; p pod ,05 mluví proti.",
+      "beispiel": "p = ,031 pro skupinu: poměr není konstantní. Kříží-li se křivky v grafu, je to zřetelné znamení.",
+      "vorsicht": "U mnoha osob test reaguje i na malé odchylky, u málo osob přehlédne velké.",
+      "pruefen": true
+    },
+    "risikodifferenz": {
+      "titel": "Rozdíl rizik (RD)",
+      "kurz": "O kolik je riziko v jedné skupině vyšší? Rozdíl rizik (RD) je riziko jedné skupiny minus riziko druhé, jako podíl nebo v procentních bodech. 0 znamená žádný rozdíl.",
+      "beispiel": "Pracovní nehody za rok: 36 ze 400 se školením (9 %), 60 ze 400 bez něj (15 %). RD = ,09 − ,15 = −,060, 95% interval [−,105; −,015]: o 6 procentních bodů méně se školením.",
+      "vorsicht": "Rozdíl rizik popisuje rozdíl; neprokazuje příčinu a ve studii případů a kontrol (postižené a nepostižené osoby se hledaly zvlášť) ho nelze interpretovat. Statable počítá interval podle Newcomba, což je při malých počtech bezpečnější než jednodušší metoda.",
+      "fachwoerter": "Waldův interval (jednoduchá aproximace intervalu, při malých počtech méně bezpečná), Newcombeův interval (metoda, kterou Statable používá).",
+      "pruefen": true
+    },
+    "relatives-risiko": {
+      "titel": "Relativní riziko (RR)",
+      "kurz": "Kolikrát větší je riziko v jedné skupině? Relativní riziko (RR) je riziko jedné skupiny dělené rizikem druhé. 1 znamená žádný rozdíl; 0,5 znamená poloviční.",
+      "beispiel": "Tytéž pracovní nehody: RR = 0,09 / 0,15 = 0,60, 95% interval [0,41; 0,89]. Se školením je riziko 0,60krát tak velké. Interval neobsahuje 1.",
+      "vorsicht": "Nemá-li jedna skupina vůbec žádnou událost, interval RR nelze spočítat; Statable tiše neopravuje. Platí pro skupiny sledované v čase a pro experimenty, ne pro studie případů a kontrol.",
+      "pruefen": true
+    },
+    "nnt": {
+      "titel": "NNT (počet pacientů, které je třeba léčit)",
+      "kurz": "U kolika osob je třeba zasáhnout, aby nastala o jednu událost méně? NNT (number needed to treat, počet pacientů, které je třeba léčit) je 1 dělená rozdílem rizik. NNTB znamená dodatečný prospěch, NNTH dodatečnou újmu.",
+      "beispiel": "Při RD = −,06 je NNTB = 1 / ,06 = 16,7 (95% interval NNTB 9,5 až 67,0): u asi 17 vyškolených osob nastane o jednu nehodu méně.",
+      "vorsicht": "Interval NNT prochází nekonečnem, když rozdíl rizik může být i 0 (například NNTH 25 až ∞ až NNTB 10) - nikdy jej nečtěte jako interval se zápornými čísly. Zda je událost žádoucí, musí uvést člověk.",
+      "pruefen": true
+    },
+    "typical-error": {
+      "titel": "Typical error (TE)",
+      "kurz": "O kolik se jedno měření při opakování typicky odchyluje? To říká typical error (TE), v jednotce měření. Počítá se ze dvou měření týchž osob.",
+      "beispiel": "Výška výskoku 8 osob ve dva dny: rozdíly mezi dny mají směrodatnou odchylku 2,1 cm. TE = 2,1 / √2 = 1,5 cm: jeden výskok se typicky odchyluje o 1,5 cm.",
+      "vorsicht": "TE platí, jen pokud se mezi měřeními nic nezměnilo. Rovná se standardní chybě měření z opakovaných měření, ne té, která vychází z toho, jak spolu otázky škály souvisejí.",
+      "fachwoerter": "reliabilita (jak spolehlivé je měření při opakování), směrodatná odchylka (SD) rozdílů (typický rozptyl rozdílů mezi oběma měřeními), standardní chyba měření (typická chyba jednoho měření).",
+      "pruefen": true
+    },
+    "lilliefors": {
+      "titel": "Lillieforsův test",
+      "kurz": "Odpovídají hodnoty normálnímu rozdělení? Lillieforsův test to ověřuje, i když se průměr a rozptyl nejdřív odhadují z dat. P pod ,05 znamená, že se rozdělení od normálního odchyluje.",
+      "beispiel": "Doba pobytu 30 návštěvníků v minutách: D = ,17, p = ,033 (Lillieforsova verze Kolmogorovova–Smirnovova testu). Rozdělení se od normálního rozdělení odchyluje.",
+      "vorsicht": "P nad ,05 neznamená, že jsou data normálně rozdělena, jen že test proti tomu nemluví. U málo osob velké odchylky přehlédne; víc ukáže graf Q-Q.",
+      "fachwoerter": "směrodatná odchylka (typický rozptyl hodnot kolem průměru), Kolmogorovův–Smirnovův test (porovnává rozdělení dat s normálním rozdělením).",
+      "pruefen": true
+    },
+    "chi-quadrat-anpassung": {
+      "titel": "χ² test dobré shody",
+      "kurz": "Odpovídá rozdělení do kategorií očekávanému? χ² test dobré shody ověřuje, zda spočtené četnosti odpovídají daným podílům, například stejným. P pod ,05 znamená: odchylují se od očekávání.",
+      "beispiel": "Kostka, 120 hodů, očekává se 20 na stranu. Pozorováno: 14, 22, 18, 25, 19, 22. χ²(5, N = 120) = 74 / 20 = 3,7, p = ,593: četnosti nemluví proti spravedlivé kostce.",
+      "vorsicht": "Očekává-li se v kategorii méně než 1 nebo méně než 5 ve více než pětině kategorií, je p nejisté (zvyk podle Cochrana 1954). Statisticky nevýznamný výsledek očekávání nepotvrzuje.",
+      "pruefen": true
+    },
+    "ladung": {
+      "titel": "Zátěž (faktorová zátěž)",
+      "kurz": "Jak silně patří otázka (položka) k faktoru nebo komponentě, tedy ke skupině otázek? Ukazuje to zátěž: při pravoúhlé rotaci korelace (od −1 do 1) mezi nimi. Znaménko mínus ukazuje jen směr, který určuje natočení komponenty. Pro sílu se počítá absolutní velikost.",
+      "beispiel": "Otázka A: ,70 na komponentě 1, ,10 na komponentě 2: patří ke komponentě 1. Otázka B: −,65 na komponentě 1: také patří, jen jde opačným směrem.",
+      "vorsicht": "Hranice (často ,30 až ,50) je zvyk. Dvakrát nad ní se říká dvojitá zátěž (cross-loading): posuďte podle obsahu. Prázdná pole v tabulce jsou skryté malé zátěže."
+    },
+    "eigenwert": {
+      "titel": "Vlastní číslo a Kaiserovo kritérium",
+      "kurz": "Kolik z rozdílů v odpovědích zachytává komponenta (skupina otázek)? Ukazuje to vlastní číslo. Vydělené počtem otázek dává její podíl na rozptylu. Kumulativní znamená: několik komponent sečtených dohromady.",
+      "beispiel": "Při 6 otázkách: komponenta 1 má 2,4 (40 %), komponenta 2 má 1,2 (20 %). Kumulativně 3,6 ze 6, tedy 60 %.",
+      "vorsicht": "Kaiserovo kritérium ponechá komponenty s vlastním číslem nad 1. V simulacích jich často uvádí příliš mnoho a nemělo by rozhodovat samo. Doplňuje ho paralelní analýza.",
+      "fachwoerter": "rozptyl (míra toho, jak moc se odpovědi rozptylují), paralelní analýza (porovnává vlastní čísla s čísly z náhodných dat)."
+    },
+    "kommunalitaet": {
+      "titel": "Komunalita (h²)",
+      "kurz": "Kolik z jedné otázky vysvětlují komponenty (faktory) dohromady? To je komunalita (h²): podíl rozdílů v odpovědích na tuto otázku, který všechny komponenty zachytí společně. U nekorelovaných komponent je to součet druhých mocnin zátěží.",
+      "beispiel": "Otázka má zátěž ,6 a ,5 na dvou komponentách: h² = ,36 + ,25 = ,61, tedy asi 61 %.",
+      "vorsicht": "Nízká může znamenat: hodně náhodné chyby, kterou společné faktory nikdy nevysvětlí, nebo otázka obsahově nezapadá k ostatním."
+    },
+    "rotation": {
+      "titel": "Rotace (ortogonální a šikmá)",
+      "kurz": "Jak se zařazení otázek stane zřetelnějším? Rotací: osy řešení se otáčejí, dokud každá otázka nemá zátěž hlavně na jednom faktoru. Mnoho poloh vyhovuje korelacím stejně dobře. Rotace vybere tu s jasnou strukturou.",
+      "beispiel": "Ortogonální (pravoúhlá, např. Varimax): faktory zůstávají nekorelované. Šikmá (oblique, např. Promax): faktory mohou spolu souviset.",
+      "vorsicht": "Při ortogonální rotaci se mění zátěže, ne komunality (kolik z otázky faktory vysvětlují dohromady). Šikmá rotace vztah nevynucuje: u nekorelovaných faktorů se obraz podobá ortogonálnímu."
+    },
+    "explorative-faktorenanalyse": {
+      "titel": "Exploratorní faktorová analýza (EFA)",
+      "kurz": "Skrývají se za otázkami společné vlastnosti, a které? Exploratorní faktorová analýza je hledá bez předem stanovené struktury. Předpokládá společnou příčinu. To musí dávat smysl obsahově, ještě před jakoukoli statistikou.",
+      "beispiel": "Deset otázek o pohodě dává dvě skupiny. Zda existují dvě vlastnosti, rozhoduje odborná znalost.",
+      "vorsicht": "Struktura nalezená na týchž datech se k nim přirozeně dobře hodí. Potvrdit ji lze až na nových datech.",
+      "fachwoerter": "konfirmační (ověřuje předem stanovenou strukturu)."
+    },
+    "bartlett-test": {
+      "titel": "Bartlettův test (vhodnost pro faktorovou analýzu)",
+      "kurz": "Souvisejí otázky vůbec spolu? Bartlettův test sféricity zjišťuje, zda jsou všechny korelace nulové (jednotková matice: nula všude kromě diagonály). Statisticky významný znamená jen: ne všechny jsou nulové.",
+      "beispiel": "Při 30 osobách může střední vztah zůstat neodhalen. Při 5000 osobách se statisticky významnými stávají i velmi malé vztahy.",
+      "vorsicht": "Testová statistika silně závisí na počtu případů. Při mnoha případech je test téměř vždy statisticky významný a o vhodnosti dat pak říká málo. Nezaměňujte ho s Mauchlyho testem sféricity u opakovaných měření.",
+      "fachwoerter": "statisticky významný (p-hodnota je pod zvolenou mezí, obvykle ,05), testová statistika (číslo, které test vypočítá z dat)."
+    },
+    "hauptkomponenten": {
+      "titel": "Analýza hlavních komponent (PCA) a faktorová analýza",
+      "kurz": "Jen shrnuji otázky, nebo hledám společnou vlastnost? Analýza hlavních komponent (PCA) rozkládá celkový rozptyl. Faktorová analýza vysvětluje jen společnou část. Zbytek každé otázky (její vlastní zvláštnost plus chyba měření) odděluje jako jedinečný podíl.",
+      "beispiel": "Při málo otázkách na faktor jsou zátěže PCA obvykle vyšší než faktorové zátěže, protože zahrnují zbytek.",
+      "vorsicht": "Často podobné, ne vždy: rozdíly se projevují hlavně při nízkých komunalitách.",
+      "fachwoerter": "rozptyl (míra toho, jak moc se odpovědi rozptylují), jedinečný podíl (uniqueness; část otázky, kterou faktory nevysvětlují)."
+    },
+    "fallzahl-faktorenanalyse": {
+      "titel": "Velikost výběru u faktorové analýzy",
+      "kurz": "Kolik osob faktorová analýza potřebuje? Závisí to méně na počtu otázek než na dvou věcech: jak vysoké jsou komunality (kolik z otázky faktory vysvětlují) a kolik otázek zřetelně určuje každý faktor? Čím vyšší obojí, tím menší smí být výběr.",
+      "beispiel": "Vysoké komunality, čtyři silné otázky na faktor: může stačit málo osob. Nízké komunality, dvě slabé otázky na faktor: i mnoho osob může být málo.",
+      "vorsicht": "Pevné poměry, například „deset osob na otázku“, to nezachytí."
+    },
+    "umpolen": {
+      "titel": "Obrácení kódování (reverse-coding)",
+      "kurz": "Patří obrácení kódování k analýze reliability? Ano: pro Cronbachovo alfa a skóre škály se musí všechny otázky škály počítat ve stejném směru. Obráceně položená otázka se proto překóduje tak, aby „vysoký“ vždy znamenalo totéž. Na škále od 1 do 5 se z 1 stane 5.",
+      "beispiel": "„Jsem často unavený“ vedle „Mám spoustu energie“: bez obrácení kódování se obě v součtu částečně vyruší. Alfa (míra souvislosti otázek) klesne a může dokonce spadnout pod nulu.",
+      "vorsicht": "Pro faktorovou analýzu obrácení není nutné: obrácená otázka pak má zápornou zátěž a záporná zátěž se počítá stejně jako kladná. Zda otázka míří opačným směrem, ukazuje její znění."
+    },
+    "eingeschraenkte-streuung": {
+      "titel": "Omezená variabilita (omezení rozsahu)",
+      "kurz": "Proč je vztah menší, když si jsou všichni podobní? Omezená variabilita (omezení rozsahu): při úzkém výseku vlastnosti korelace klesá, i při stejném vztahu. To snižuje i zátěže.",
+      "beispiel": "Věk a výška spolu u dětí od 2 do 16 let úzce souvisejí. Jen u 10- až 11letých je korelace mnohem menší.",
+      "vorsicht": "Malé r v jednotné skupině neznamená, že je vztah malý všude. Také reliabilita (podíl skutečných rozdílů na všech rozdílech) je tam nižší, protože je málo skutečných rozdílů."
+    },
+    "inter-item-korrelation": {
+      "titel": "Průměrná korelace mezi položkami",
+      "kurz": "Jak těsně spolu otázky škály v průměru souvisejí? Ukazuje to průměrná korelace mezi položkami (položka = otázka): průměr korelací každé dvojice otázek. Nezávisí na počtu otázek. Alfa roste také s více otázkami.",
+      "beispiel": "Dvě škály s alfa ,80: 4 otázky s průměrnou korelací ,50, nebo 12 otázek jen s ,25.",
+      "vorsicht": "Vysoké alfa díky mnoha otázkám nedokazuje jednotnou škálu. Krátká škála s nízkým alfa měří nepřesně, i když je důvodem její krátkost.",
+      "fachwoerter": "alfa (míra toho, jak silně spolu souvisejí odpovědi na otázky škály)."
+    },
+    "eindimensionalitaet": {
+      "titel": "Jednodimenzionalita",
+      "kurz": "Měří všechny otázky jedinou vlastnost? To je jednodimenzionalita. Může ji ověřit faktorová analýza. Alfa ji neukazuje: měří, jak jsou otázky propojené, ne kolik vlastností za nimi stojí.",
+      "beispiel": "Dvě skupiny po 5 otázkách, korelace uvnitř ,60, mezi skupinami 0. Alfa deseti otázek: asi ,78, ačkoli se měří dvě vlastnosti.",
+      "vorsicht": "Mají-li dvě skupiny vlastní číslo nad 1, je to nápověda na dvě vlastnosti, ne důkaz.",
+      "fachwoerter": "alfa (míra toho, jak silně spolu souvisejí odpovědi na otázky škály), vlastní číslo (kolik variability komponenta zachytává)."
+    },
+    "reliabilitaet-wege": {
+      "titel": "Způsoby odhadu reliability (alfa, retest, půlení)",
+      "kurz": "Proč různé postupy dávají pro stejnou škálu různé reliability? Alfa, retest (měření dvakrát) a půlení (porovnání dvou polovin škály) jsou různé cesty k odhadu téže reliability. Každý předpokládá něco jiného.",
+      "beispiel": "Alfa předpokládá mimo jiné, že všechny otázky měří jednu vlastnost. Retest předpokládá, že se vlastnost nemění a paměť nepomáhá.",
+      "vorsicht": "Jen při splněných předpokladech by se čísla měla shodovat. Rozdíly ukazují na porušení nebo náhodu."
+    },
+    "validitaet": {
+      "titel": "Validita (platnost)",
+      "kurz": "Měří škála skutečně to, co měřit má? To je validita (platnost). Reliabilita je k ní nutná, ale nestačí: metr měří spolehlivě délku, ale ne hmotnost.",
+      "beispiel": "Vysoké alfa ukazuje, že otázky spolu souvisejí. Zda zachycují to, co se myslí, neukazuje. K tomu jsou třeba důkazy z obsahu, ze srovnání s vnějším měřítkem (kriterium) a o zamýšlené vlastnosti (konstrukt).",
+      "vorsicht": "Téměř stejné otázky táhnou alfa nahoru, ale pokrývají jen úzký výsek. Validita patří k výkladu hodnot, ne k testu samotnému."
+    },
+    "antwortstufen": {
+      "titel": "Odpovědní možnosti",
+      "kurz": "Proč záleží na počtu možných odpovědí? Odpovědní možnosti jsou stupně, které otázka nabízí, např. 1 až 4. Alfa z Pearsonových korelací předpokládá jemně odstupňované hodnoty. Při málo stupních vycházejí vztahy příliš malé a reliabilita se podceňuje.",
+      "beispiel": "Stejný postoj na 3 nebo 7 stupních: se 3 se ztrácejí jemné rozdíly, takže korelace i alfa klesají.",
+      "vorsicht": "Od kolika stupňů to stačí, není ustáleno (často pět až sedm). Více stupňů není automaticky lepší.",
+      "fachwoerter": "Pearsonova korelace (standardní míra vztahu dvou jemně odstupňovaných veličin)."
+    },
+    "messfehler": {
+      "titel": "Chyba měření",
+      "kurz": "Proč nepřesné měření zkresluje analýzu? Chyba měření je náhodná odchylka od skutečné hodnoty. Je-li ve vysvětlující veličině (prediktoru), zeslabuje efekt této veličiny (atenuace). Náhodná chyba ve výsledné veličině B takto neovlivňuje.",
+      "beispiel": "Mediátor (proměnná, přes kterou vede vliv) je změřen nepřesně. Část vlivu ho obejde a připadne přímé cestě: efekt mediátoru příliš malý, přímý efekt příliš velký.",
+      "vorsicht": "To nic neříká o tom, kudy vliv skutečně vede."
+    },
+    "abhaengige-groesse": {
+      "titel": "Závislá proměnná",
+      "kurz": "Co se předpovídá a z čeho? Závislá proměnná (y) se předpovídá. Nezávislá proměnná (x) je to, z čeho se předpovídá. „Regrese y na x“ znamená: y se předpovídá z x.",
+      "beispiel": "Náklady na topení se předpovídají z venkovní teploty. Náklady na topení jsou závislá proměnná.",
+      "vorsicht": "„Závislá“ znamená jen: předpovídá se, ne: způsobeno x. Kdo role prohodí, dostane jinou přímku."
+    },
+    "kleinste-quadrate": {
+      "titel": "Metoda nejmenších čtverců",
+      "kurz": "Jak proložit body nejlepší přímku? Metoda nejmenších čtverců vybere přímku, u které je součet čtverců odchylek nejmenší. Měří se ve směru y: pozorováno minus předpovězeno. To jsou rezidua.",
+      "beispiel": "Bod při y = 10, přímka předpovídá 8: odchylka 2, na druhou 4.",
+      "vorsicht": "Neměří se nejkratší vzdálenost od přímky. Umocnění na druhou způsobí, že velké odchylky se počítají víc."
+    },
+    "standardfehler-schaetzer": {
+      "titel": "Standardní chyba odhadu",
+      "kurz": "Jak daleko typicky leží pozorování od předpovědi? Říká to standardní chyba odhadu. Má jednotku závislé proměnné. Menší znamená přesnější předpověď.",
+      "beispiel": "Doba dodání ve dnech, hodnota 2: skutečná doba se typicky liší asi o 2 dny.",
+      "vorsicht": "„Typicky“ není maximum. Nezaměňujte ji se standardní chybou B: ta popisuje, jak přesně je B odhadnuto."
+    },
+    "kollinearitaet": {
+      "titel": "Kolinearita (tolerance, VIF)",
+      "kurz": "Měří dva prediktory téměř totéž? Pak jde o kolinearitu: překrývají se. Tolerance je podíl variability prediktoru, který ostatní nevysvětlují. VIF je 1 děleno tolerancí. Čím větší VIF, tím větší standardní chyba jeho B. Odhad zůstává nezkreslený.",
+      "beispiel": "Plocha a počet pokojů: tolerance ,15 znamená, že plocha nechává nevysvětleno jen 15 % variability počtu pokojů.",
+      "vorsicht": "Celý model může být statisticky významný, i když žádné B není. Meze VIF (5 nebo 10) jsou zvyk.",
+      "fachwoerter": "standardní chyba (jak moc typicky kolísá odhadnutá hodnota), statisticky významný (p-hodnota je pod zvolenou mezí, obvykle ,05).",
+      "statable": "Spočítejte regresi a pod výsledkem rozbalte blok „Kontrola regrese: kolinearita a nápadné případy“. Ukazuje toleranci, VIF a vlastní příspěvek (sr²) pro každý prediktor."
+    },
+    "dummy-variable": {
+      "titel": "Dummy proměnná (proměnná 0/1)",
+      "kurz": "Jak dostat skupinu do regrese? Jako dummy proměnnou: 0 pro referenční skupinu, 1 pro druhou. Pak je konstanta průměr referenční skupiny a B rozdíl průměrů. Při q skupinách je třeba q - 1 dummy proměnných.",
+      "beispiel": "Hnojivo A (0), B (1): konstanta 5,0, B = 1,2. Průměr B: 6,2.",
+      "vorsicht": "Znaménko B závisí na referenční skupině. Test B odpovídá t-testu pro nezávislé výběry se shodnými rozptyly."
+    },
+    "residuen": {
+      "titel": "Rezidua",
+      "kurz": "Jak daleko leží bod od předpovědi? To je jeho reziduum: pozorováno minus předpovězeno. Normalita se požaduje od těchto chyb, ne od původních hodnot. Rezidua se kontrolují histogramem nebo grafem Q-Q.",
+      "beispiel": "Pozorováno 70 kg, předpovězeno 66: reziduum +4.",
+      "vorsicht": "Původní hodnoty z více skupin se mísí a mohou vypadat zešikmeně, i když jsou rezidua v pořádku.",
+      "fachwoerter": "graf Q-Q (graf: leží-li body blízko přímky, hodnoty odpovídají normálnímu rozdělení)."
+    },
+    "heteroskedastizitaet": {
+      "titel": "Heteroskedasticita (nestejná variabilita chyb)",
+      "kurz": "Rozptylují se odchylky všude stejně? Pokud ne, jde o heteroskedasticitu. V grafu reziduí se často projeví jako trychtýř. Sklon zůstává nezkreslený, ale méně přesný a obvyklé standardní chyby jsou chybné. Robustní standardní chyby nestejnou variabilitu zohledňují.",
+      "beispiel": "Předpovězeno 1000: odchylky kolem ±100. Při 5000: ±600.",
+      "vorsicht": "Sklon zkresluje nelinearita, chybějící proměnné nebo chyba měření v x, ne toto.",
+      "fachwoerter": "graf reziduí (obraz odchylek od předpovědi), sklon (B: změna na jednotku), standardní chyba (jak moc typicky kolísá odhad), nezkreslený (v průměru správný)."
+    },
+    "hebelwert": {
+      "titel": "Páka (leverage)",
+      "kurz": "Jak silně může jeden bod táhnout přímku? Páka roste se vzdáleností hodnoty x od průměru x. Bod daleko od ostatních táhne přímku k sobě.",
+      "beispiel": "Deset osob trénuje 20 až 30 hodin, jedna 90: velká páka.",
+      "vorsicht": "Jeho reziduum (vzdálenost od přímky) může být malé právě proto, že přímku přitáhl k sobě. Proto porovnejte přímku s bodem i bez něj."
+    },
+    "f-test": {
+      "titel": "F-test (analýza rozptylu a regrese)",
+      "kurz": "Existuje vůbec rozdíl nebo vliv? F-test to ověřuje jako celek. Regrese: jsou všechna B zároveň nulová? Analýza rozptylu: jsou všechny průměry skupin stejné? F je v analýze rozptylu variabilita (průměrný čtverec) mezi skupinami dělená variabilitou uvnitř.",
+      "beispiel": "Tři výukové metody: mezi 6,0, uvnitř 2,0. F = 3,0.",
+      "vorsicht": "Statisticky významné F znamená: aspoň dva průměry se liší. Které, ukážou až párová srovnání.",
+      "fachwoerter": "průměrný čtverec (součet čtverců odchylek dělený stupni volnosti, míra variability), nulová hypotéza (předpoklad „žádný rozdíl“, který test ověřuje)."
+    },
+    "schrittweise-regression": {
+      "titel": "Postupná regrese (automatický výběr)",
+      "kurz": "Jak si program sám vybírá prediktory? Postupná regrese prediktory přidává nebo odebírá podle statistického kritéria, například p-hodnoty. Často uváděno: zařazení při ,05, vyřazení při ,10.",
+      "beispiel": "Z 20 možných prediktorů nájemného zůstanou čtyři.",
+      "vorsicht": "Výběr nezná ani teorii, ani příčiny a závisí na těchto datech. Zda mají prediktory smysl nebo jsou příčinami, zůstává otevřené."
+    },
+    "extrapolation": {
+      "titel": "Extrapolace (předpověď mimo data)",
+      "kurz": "Platí předpověď i daleko mimo pozorované hodnoty? Předpovídat tam se říká extrapolace. Je málo spolehlivá: interval spolehlivosti předpovědi se rozšiřuje, čím dál je x od průměru x, a přímka tam platit nemusí.",
+      "beispiel": "Rostliny měřené v týdnech 1 až 8, 5 cm za týden. Týden 80 by dal 400 cm.",
+      "vorsicht": "Vysoké R² na tom nic nemění."
+    },
+    "zusammenhang-ursache": {
+      "titel": "Souvislost a příčina (korelace, kauzalita)",
+      "kurz": "Ukazuje souvislost, že jedno způsobuje druhé? Sama o sobě ne. B ukazuje: v průměru patří více x k více nebo méně y, při stejných hodnotách ostatních prediktorů v modelu. To je asociace. Kauzalita z toho neplyne; obojí může vyvolat i společná příčina.",
+      "beispiel": "Víc prodané zmrzliny, víc spálenin od slunce: obojí sleduje sluneční svit.",
+      "vorsicht": "Data za oblasti ukazují souvislost mezi oblastmi, ne u jednotlivých lidí v nich."
+    },
+    "lineares-modell": {
+      "titel": "Lineární model (lineární v parametrech)",
+      "kurz": "Umí lineární regrese popsat jen přímky? Ne. „Lineární“ se týká parametrů (B): každé B stojí jen jako činitel u prediktoru, všechno se sčítá. S kvadratickým členem (x a x² jako prediktory) model proloží křivku.",
+      "beispiel": "Výnos = 2 + 3x - 0,2x²: křivka, ale lineární model.",
+      "vorsicht": "x² je jen další prediktor. Zda je potřeba, ukáže jeho test (Sig.), protože R² roste s každým přidáním."
+    },
+    "scheinregression": {
+      "titel": "Zdánlivá regrese (trend v časových řadách)",
+      "kurz": "Ukazuje vysoké R² mezi dvěma časovými řadami skutečný vztah? Ne nutně. Pokud obě s časem rostou (trend), vzniká zdánlivá regrese. Varovné znaky: velmi vysoké R² a navzájem podobná rezidua (autokorelace), Durbin-Watson blízko 0.",
+      "beispiel": "Jízdní kola ve městě A a dovoz kávy státu B rostou každý rok: R² = ,95.",
+      "vorsicht": "Počítá-li se se změnami z roku na rok, R² výrazně klesne, pokud šlo jen o trend.",
+      "fachwoerter": "Durbin-Watson (testová hodnota autokorelace: blízko 2 žádná, blízko 0 kladná, blízko 4 záporná)."
+    },
+    "prognoseguete": {
+      "titel": "Přesnost předpovědi (MAE, MAPE, MASE)",
+      "kurz": "Jak dobře předpověď trefuje? MAE: střední absolutní chyba. MAPE: střední procentní chyba, dělí pozorovanou hodnotou, při nule nekonečná. MASE: dělí chybou naivní předpovědi (poslední hodnota) v období přizpůsobení. Pod 1 lepší, nad 1 horší než tato předpověď.",
+      "beispiel": "MASE 0,8: 80 % naivní chyby.",
+      "vorsicht": "U vzácných četností s nulami je MAPE nepoužitelné."
+    },
+    "preisindex": {
+      "titel": "Cenový index (Laspeyres, bazický efekt)",
+      "kurz": "O kolik dražší se stal tentýž nákup? Laspeyresův index drží množství základního období pevné, mění se jen ceny. Bazický efekt: změna proti loňsku může klesnout, i když index roste, pokud loni rostl víc.",
+      "beispiel": "10 bochníků, 20 l mléka. Základ: 2 a 1, hodnota 40. Nyní 2,4 a 1,2: hodnota 48. Index 1,20.",
+      "vorsicht": "Pevná množství nezachytí, že kupující přecházejí na levnější zboží."
+    },
+    "anscombe-quartett": {
+      "titel": "Anscombeho kvartet (stejná čísla, jiná data)",
+      "kurz": "Stačí jedno číslo k popisu dat? Ne. Anscombeho kvartet: čtyři datové soubory s téměř stejným r, stejnými průměry a stejnou přímkou, ale jiným mračnem bodů (přímka, oblouk, odlehlá hodnota, jeden bod určuje vše). Proto se dívejte na bodový graf.",
+      "beispiel": "r = ,80 sedí na mračno kolem přímky i na body na křivce.",
+      "vorsicht": "r měří jen přímkovou část. Jediný bod může r silně snížit: zkontrolujte ho, nemažte ho."
+    },
+    "kovarianz": {
+      "titel": "Kovariance (a korelace r)",
+      "kurz": "Jak silně spolu dvě hodnoty rostou nebo klesají? Kovariance to měří nestandardizovaně, její hodnota proto závisí na měřítku. Korelace r je kovariance dělená součinem směrodatných odchylek a při přepočtu jednotek zůstává stejná.",
+      "beispiel": "Výška a hmotnost: kovariance 60 při výšce v cm, 0,6 v metrech. r stejné.",
+      "vorsicht": "Kovariance 0 znamená jen: žádný přímkový vztah, ne nezávislost.",
+      "fachwoerter": "směrodatná odchylka (typická vzdálenost hodnot od průměru)."
+    },
+    "punktbiseriale-korrelation": {
+      "titel": "Bodově biseriální korelace (skupina a naměřená hodnota)",
+      "kurz": "Souvisí skupina (0/1) s naměřenou hodnotou? Bodově biseriální korelace je Pearsonova korelace proměnné 0/1 s číslem. Jejím testem je t-test pro nezávislé výběry (shodné rozptyly): stejné p, stejná absolutní hodnota t.",
+      "beispiel": "A = 0, B = 1, r = +,30: B má v průměru vyšší hodnoty. Po záměně: -,30.",
+      "vorsicht": "Znaménko vyplývá z kódování. Biseriální korelace je něco jiného."
+    },
+    "fisher-z": {
+      "titel": "Fisherovo Z (Fisherova Z-transformace)",
+      "kurz": "Proč je interval kolem r šikmý? r může být nejvýš 1, takže při vysokém r je nahoře méně místa. Fisherovo Z činí rozdělení r přibližně normální. Interval se tvoří v Z a přepočítá zpět, proto je asymetrický. Také pro průměrování korelací.",
+      "beispiel": "r = ,90, n = 30: interval asi ,80 až ,95.",
+      "vorsicht": "Interval není nikdy pravděpodobností skutečné hodnoty. Fisherovo Z není standardizace z."
+    },
+    "fehlerarten": {
+      "titel": "Chyba I. a II. druhu (α, β)",
+      "kurz": "Může se test mýlit? Ano, dvojím způsobem. Chyba I. druhu: žádný rozdíl, a přesto „statisticky významné“. Chyba II. druhu: rozdíl existuje, ale je přehlédnut. Hladina α (často ,05) je míra první chyby, když nic neexistuje.",
+      "beispiel": "200 testů bez skutečného rozdílu, α = ,05: asi 10 falešně statisticky významných.",
+      "vorsicht": "α neříká, zda je jednotlivý nález chybný. Chyba II. druhu má pravděpodobnost β = 1 minus síla testu.",
+      "fachwoerter": "Síla testu (šance najít rozdíl, který existuje), hladina (předem zvolená mez pro p)."
+    },
+    "einseitig-zweiseitig": {
+      "titel": "Jednostranný a oboustranný test",
+      "kurz": "Počítá se jen jeden směr, nebo oba? Oboustranný se ptá: existuje rozdíl, kterýmkoli směrem? Jednostranný se ptá jen: je A větší než B? Tatáž data mohou být jednostranně statisticky významná, oboustranně ne. V případě pochybností se testuje oboustranně.",
+      "beispiel": "Nová výuková metoda: oboustranně p = ,08, jednostranně p = ,04.",
+      "vorsicht": "Směr musí být stanoven dřív, než se podíváte na data. Kdo ho zvolí potom, p zpolovičí bez nové informace."
+    },
+    "mehrfaches-testen": {
+      "titel": "Vícenásobné testování (inflace alfa, Bonferroni)",
+      "kurz": "Jak často nás při mnoha testech klame náhoda? Každý test s hladinou ,05 dává bez skutečného rozdílu v 5 procentech falešný poplach. Při m nezávislých testech je šance na aspoň jeden poplach 1 - ,95 na m-tou (inflace alfa). Bonferroniho korekce dělí hladinu číslem m.",
+      "beispiel": "10 testů, nikde rozdíl: asi 40 procent šance na zásah.",
+      "vorsicht": "Očekává se zhruba m krát ,05 náhodných zásahů. Kdo prohledává mnoho souvislostí, najde nanejvýš hypotézy pro nová data."
+    },
+    "effekt-ueberschaetzung": {
+      "titel": "Nadhodnocené efekty (prokletí vítěze)",
+      "kurz": "Je statisticky významný efekt tak velký, jak byl naměřen? Často ne. Počítají-li se jen statisticky významné výsledky, jsou odhady zkresleny nahoru: malá studie se stane statisticky významnou jen při náhodou velkém odhadu. To je prokletí vítěze (winner’s curse).",
+      "beispiel": "Skutečný rozdíl je středně velký. Z mnoha malých studií vyjdou jen ty statisticky významné, jejich průměr leží nad ním.",
+      "vorsicht": "Čím menší studie, tím silnější zkreslení. Zopakování proto často najdou menší efekty, ne nutně nulové.",
+      "fachwoerter": "statisticky významný (p-hodnota je pod zvolenou mezí, obvykle ,05)."
+    },
+    "falsch-positive-befunde": {
+      "titel": "Falešně pozitivní nálezy (chyba I. druhu, stupně volnosti výzkumníka)",
+      "kurz": "Kolik statisticky významných nálezů je falešný poplach? Závisí to na hladině, síle testu a podílu skutečných efektů. Při nízké síle testu podíl falešných roste. Více falešných poplachů vzniká také tehdy, když se testuje po každém novém případu a přestane se při významnosti, nebo se zkusí mnoho cest analýzy a ohlásí se jen ta úspěšná (stupně volnosti výzkumníka).",
+      "beispiel": "1000 prověřených efektů, 100 skutečných, síla testu ,5, hladina ,05: 50 skutečných a 45 falešných zásahů.",
+      "vorsicht": "Hladina ,05 platí jen při předem plánovaném výběru a analýze. Míra roste i bez úmyslu klamat.",
+      "fachwoerter": "síla testu (šance najít skutečný efekt), hladina (předem stanovená mez pro p), statisticky významný (p je pod touto mezí)."
+    },
+    "fehlerbalken": {
+      "titel": "Chybové úsečky (standardní chyba, interval spolehlivosti)",
+      "kurz": "Co ukazují úsečky u průměrů? Není to pevně dáno: směrodatná odchylka (variabilita jednotlivých hodnot), standardní chyba (přesnost průměru) nebo interval spolehlivosti. „± číslo“ to neprozradí. Jedna standardní chyba na obě strany je asi poloviční oproti 95procentnímu intervalu a odpovídá asi 68 procentům.",
+      "beispiel": "Překrývající se 95procentní intervaly, přesto p = ,04.",
+      "vorsicht": "Překryv nerozhoduje, rozhoduje test rozdílu. Nemají-li 95procentní intervaly společný rozsah, liší se nezávislé skupiny statisticky významně na hladině ,05. U párových měření se počítá interval rozdílů u každé osoby, ne intervaly obou průměrů."
+    },
+    "levene-test": {
+      "titel": "Leveneův test (stejná variabilita)",
+      "kurz": "Rozptylují se skupiny stejně silně? (Leveneův test) Zjišťuje, zda je rozptyl, tedy variabilita hodnot, ve skupinách stejný. Malé p ukazuje na nestejnou variabilitu.",
+      "beispiel": "Dvě skupiny po 8 osobách, Levene p = ,40: žádná známka nestejné variability.",
+      "vorsicht": "Statisticky nevýznamné neznamená, že je variabilita stejná. U malých skupin test rozdíly odhaluje špatně. Rovnost nedokazuje."
+    },
+    "gepoolter-t-test": {
+      "titel": "Sdružená variabilita nebo Welchův test (předpokládá se stejná variabilita?)",
+      "kurz": "Rozptylují se obě skupiny stejně? t-test se sdruženou (sloučenou) variabilitou to předpokládá. Welchův test nesdružuje a upravuje stupně volnosti. U dvou skupin je F analýzy rozptylu druhou mocninou t, se stejným p.",
+      "beispiel": "10 osob s variabilitou 8, 40 s variabilitou 3: sdružení odráží hlavně velkou skupinu s malou variabilitou.",
+      "vorsicht": "Pokud se menší skupina rozptyluje víc, ukazuje sdružený test statistickou významnost příliš často. Welch to opravuje.",
+      "fachwoerter": "Stupně volnosti (číslo, které určuje srovnávací rozdělení t)."
+    },
+    "zentraler-grenzwertsatz": {
+      "titel": "Centrální limitní věta",
+      "kurz": "Musí být hodnoty normálně rozdělené? Ne vždy. Centrální limitní věta říká: průměry z mnoha pozorování jsou přibližně normálně rozdělené, i když jsou jednotlivé hodnoty zešikmené. Platí pro průměry, ne pro jednotlivé hodnoty.",
+      "beispiel": "Příjmy jsou zešikmené. Průměry z vždy 200 osob leží téměř symetricky.",
+      "vorsicht": "Kolik stačí, závisí na tvaru: u silně zešikmených hodnot 10 nestačí. U velkých skupin jsou t-testy obvykle použitelné i bez normálně rozdělených hodnot."
+    },
+    "pseudoreplikation": {
+      "titel": "Pseudoreplikace (závislá měření)",
+      "kurz": "Počítá se každá hodnota jako samostatná informace? Ne, pokud k sobě hodnoty patří. Pseudoreplikace: s závislými hodnotami se zachází jako s nezávislými, například opakovaná měření téže osoby nebo děti jedné třídy. Standardní chyba vychází příliš malá, test ukazuje statistickou významnost příliš často.",
+      "beispiel": "20 rostlin, na každé změřeno 5 listů: to je 20 nezávislých jednotek, ne 100.",
+      "vorsicht": "Více řádků neznamená více informace. Náprava: jeden průměr na jednotku nebo model, který zohlední sounáležitost.",
+      "fachwoerter": "standardní chyba (jak moc typicky kolísá odhad), statisticky významný (p-hodnota je pod zvolenou mezí, obvykle ,05)."
+    },
+    "simpson-paradox": {
+      "titel": "Simpsonův paradox (slučování skupin)",
+      "kurz": "Může se vztah obrátit, když se skupiny sloučí? Ano. Celkový obraz může zakrýt nebo obrátit to, co ukazuje každá skupina (Simpsonův paradox, také u korelace r). Důvod: skupiny se liší ve vlastnostech nebo ve složení.",
+      "beispiel": "A pomáhá víc než B u lehkých i u těžkých případů. Ale A dostávají téměř jen těžké případy. Celkově vypadá A hůř.",
+      "vorsicht": "Celkový výsledek pak nelze vykládat přímo. Který pohled platí, rozhoduje situace."
+    },
+    "erwartete-haeufigkeit": {
+      "titel": "Očekávaná četnost (chí-kvadrát, kontingenční tabulka)",
+      "kurz": "Kolik případů v buňce by se očekávalo, kdyby spolu proměnné nesouvisely? Součet řádku krát součet sloupce děleno celkovým počtem. Chí-kvadrát test je porovnává s pozorovanými. Která buňka vyčnívá, ukáže až srovnání po buňkách.",
+      "beispiel": "Řádek 60, sloupec 50, celkem 200: očekáváno 60 · 50 / 200 = 15.",
+      "vorsicht": "Často se uvádí: všechny aspoň 5, je to zvyk. Při menších hodnotách v tabulce 2x2 se používá Fisherův exaktní test.",
+      "fachwoerter": "Kontingenční tabulka (tabulka dvou proměnných), standardizované reziduum (rozdíl mezi pozorovaným a očekávaným, převedený na srovnatelnou velikost)."
+    },
+    "zeilenprozent": {
+      "titel": "Řádková procenta (podíl v řádku)",
+      "kurz": "Jaký podíl v rámci jedné skupiny? V kontingenční tabulce platí pro řádková procenta: hodnota buňky dělená součtem řádku, krát 100. Součet řádku je základ. „Kolik procent A má B?“ bere za základ součet A. Sloupcová procenta používají součet sloupce.",
+      "beispiel": "80 majitelů psa, 20 z nich také s kočkou: 20 / 80 = 25 procent.",
+      "vorsicht": "Řádková a sloupcová procenta jsou různá čísla. Nejdřív ujasněte: podíl čeho?",
+      "fachwoerter": "Kontingenční tabulka (tabulka dvou proměnných)."
+    },
+    "likelihood-ratio": {
+      "titel": "Poměr věrohodností (LR)",
+      "kurz": "Jak silně výsledek testu mění odhad? Kladný LR je senzitivita dělená (1 minus specificita): tolikrát častěji se pozitivní výsledek vyskytne u nemocných než u zdravých. Nad 1 svědčí pro nemoc. Šance po testu = šance před testem krát LR.",
+      "beispiel": "Před testem ,20, tedy šance ,25. LR 4 dá šanci 1, což je ,50.",
+      "vorsicht": "LR není pravděpodobnost. Zpět k p: šance děleno (1 plus šance).",
+      "fachwoerter": "Senzitivita (podíl nemocných, které test odhalí), specificita (podíl zdravých, které správně označí za zdravé), šance (odds; p děleno 1 minus p)."
+    },
+    "regelkarte": {
+      "titel": "Regulační diagram (Shewhart, CUSUM, EWMA)",
+      "kurz": "Změnil se proces? Regulační diagram ukazuje průměry skupin popořadě, se střední čarou a mezemi, často ±3 standardní chyby. Bod mimo je signál: pravděpodobně působí víc než náhoda. Fáze 1 odhaduje meze zpětně, fáze 2 pak sleduje průběžně. CUSUM a EWMA spojují několik skupin a dřív odhalí malé, trvalé posuny.",
+      "beispiel": "Stabilní: asi 3 z 1000 bodů mimo. Několik v krátkém sledu je jasný signál.",
+      "vorsicht": "Pokud stabilní proces zůstává uvnitř mezí, je kolísání náhoda: seřizování pak variabilitu zvětšuje. Meze z málo skupin jsou nepřesné.",
+      "fachwoerter": "Standardní chyba (variabilita průměrů skupin), stabilní (rozdělení zůstává v čase stejné)."
+    },
+    "prozessfaehigkeit": {
+      "titel": "Způsobilost procesu (Cp, Cpk)",
+      "kurz": "Dodržuje proces zadání? Cp porovnává dovolené rozpětí s variabilitou a ignoruje polohu průměru. Cpk měří vzdálenost průměru od bližší meze, nejvýš tak velkou jako Cp. Oba předpokládají stabilní, normálně rozdělený proces.",
+      "beispiel": "Cp = 1, vystředěno: asi 0,27 procenta mimo; posunuto, více.",
+      "vorsicht": "Cp = 1 znamená jen: ne méně než 0,27 procenta mimo. Při signálech regulačního diagramu index říká málo; nejdřív vyjasněte signály."
+    },
+    "messsystem": {
+      "titel": "Systém měření (opakovatelnost, reprodukovatelnost)",
+      "kurz": "Kolik variability pochází z měření samotného? Opakovatelnost (repeatability): variabilita přístroje u téže jednotky, téhož pracovníka, téhož uspořádání. Reprodukovatelnost (reproducibility): variabilita mezi pracovníky, uspořádáními nebo obdobími. Celková variabilita se dělí na proces a systém měření. Podíl systému měření = 1 minus podíl procesu. Poměr signál-šum ukazuje, jak dobře lze díly rozlišit: často uváděno, 5 a více dobré, pod 2 nepoužitelné.",
+      "beispiel": "Proces 80 procent variability: systém měření 20 procent.",
+      "vorsicht": "Autoři pojmy přiřazují různě, proto musí být použitá definice uvedena. Meze jsou konvence."
+    },
+    "versuchsplanung": {
+      "titel": "Plánování experimentů (interakce, střední bod)",
+      "kurz": "Jak plánovat pokusy, které toho hodně ukážou? Interakce: účinek jednoho faktoru závisí na úrovni jiného. Mění-li se v pokusu jen jeden faktor, nelze ji odhadnout; všechny kombinace ji najdou. Opakovaně měřený střední bod ukazuje zakřivení a odhaduje variabilitu.",
+      "beispiel": "Hnojivo působí silně na slunci, ve stínu sotva.",
+      "vorsicht": "Nález při jedné úrovni neplatí automaticky pro všechny. Při zakřivení nestačí dvě úrovně; plán lze rozšířit.",
+      "fachwoerter": "Faktor (veličina, kterou záměrně nastavujeme), úroveň (jedna nastavená hodnota faktoru), spojitý (možná je každá hodnota mezi tím)."
+    }
+  },
+  "meldung": [
+    {
+      "id": "engine-absturz",
+      "art": "absturz",
+      "muster": "^Statable: PSPP crashed",
+      "original": "Statable: PSPP crashed and was restarted. RuntimeError: Aborted(Assertion failed: proc.n_cells < CRS_N_CELLS, at: ../../pspp-2.1.1/src/language/commands/crosstabs.c,494,cmd_crosstabs)",
+      "titel": "Statistický program spadl",
+      "text": {
+        "du": "Příčinou je PSPP, ne vaše data. Statable ho znovu spustil a data znovu načetl ve stavu před tímto výpočtem.",
+        "sie": "Příčinou je PSPP, ne vaše data. Statable ho znovu spustil a data znovu načetl ve stavu před tímto výpočtem."
+      },
+      "tun": {
+        "du": "Spusťte výpočet znovu s méně volbami. Pokud jste nastavili WEIGHT, FILTER nebo SPLIT FILE, nastavte je znovu.",
+        "sie": "Spusťte výpočet znovu s méně volbami. Pokud jste nastavili WEIGHT, FILTER nebo SPLIT FILE, nastavte je znovu."
+      }
+    },
+    {
+      "id": "nonpar-corr-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "NONPAR CORR is not yet implemented",
+      "original": "NONPAR CORR: NONPAR CORR is not yet implemented.",
+      "titel": "Program tento příkaz nedokáže provést",
+      "text": {
+        "du": "PSPP neumí spočítat NONPAR CORR (Spearman, Kendall).",
+        "sie": "PSPP neumí spočítat NONPAR CORR (Spearman, Kendall)."
+      },
+      "tun": {
+        "du": "Statable to počítá v otázce „Jsou dvě věci spolu provázané?“. Vaše data se nezměnila.",
+        "sie": "Statable to počítá v otázce „Jsou dvě věci spolu provázané?“. Vaše data se nezměnila."
+      }
+    },
+    {
+      "id": "glm-with-nicht-moeglich",
+      "art": "nicht-verstanden",
+      "muster": "GLM: [^\\n]*\\n[^\\n]*\\|[^\\n]*\\b[Ww][Ii][Tt][Hh]\\b",
+      "original": "GLM: Syntax error expecting MISSING, INTERCEPT, CRITERIA, METHOD, or DESIGN.\n   1 | GLM y BY g WITH x /DESIGN=x g.",
+      "titel": "Program tento příkaz nedokáže provést",
+      "text": {
+        "du": "PSPP neumí spočítat GLM s WITH (analýza kovariance).",
+        "sie": "PSPP neumí spočítat GLM s WITH (analýza kovariance)."
+      },
+      "tun": {
+        "du": "Statable to počítá v otázce „Liší se skupiny?“ v části „Další volby“ s kontrolní proměnnou. Vaše data se nezměnila.",
+        "sie": "Statable to počítá v otázce „Liší se skupiny?“ v části „Další volby“ s kontrolní proměnnou. Vaše data se nezměnila."
+      }
+    },
+    {
+      "id": "befehl-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "Unknown command `([^']+)'",
+      "original": "Unknown command `FREQENCIES'.",
+      "titel": "Statable tento příkaz nezná",
+      "text": {
+        "du": "„{1}“ není známý příkaz.",
+        "sie": "„{1}“ není známý příkaz."
+      },
+      "tun": {
+        "du": "Zkontrolujte pravopis. Podobné: {vorschlag}.",
+        "sie": "Zkontrolujte pravopis. Podobné: {vorschlag}."
+      }
+    },
+    {
+      "id": "spalte-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "(\\S+) is not a variable name",
+      "original": "DESCRIPTIVES: konzentration is not a variable name.",
+      "titel": "Takový sloupec neexistuje",
+      "text": {
+        "du": "Vaše data nemají sloupec „{1}“.",
+        "sie": "Vaše data nemají sloupec „{1}“."
+      },
+      "tun": {
+        "du": "Podobný: {vorschlag}. Všechny názvy najdete v části „Sloupce“.",
+        "sie": "Podobný: {vorschlag}. Všechny názvy najdete v části „Sloupce“."
+      }
+    },
+    {
+      "id": "text-statt-zahl",
+      "art": "hinweis",
+      "muster": "(\\S+) is not a numeric variable\\.\\s+It will not be included",
+      "original": "DESCRIPTIVES: geschlecht is not a numeric variable.  It will not be included in the variable list.",
+      "titel": "Jeden sloupec byl vynechán",
+      "text": {
+        "du": "„{1}“ obsahuje skupiny nebo text, ne čísla. Statable ho proto zde vynechal. Zbytek byl spočítán.",
+        "sie": "„{1}“ obsahuje skupiny nebo text, ne čísla. Statable ho proto zde vynechal. Zbytek byl spočítán."
+      },
+      "tun": {
+        "du": "Pro skupiny se hodí četnosti nebo porovnání skupin.",
+        "sie": "Pro skupiny se hodí četnosti nebo porovnání skupin."
+      }
+    },
+    {
+      "id": "gruppen-fehlen",
+      "art": "nicht-verstanden",
+      "muster": "When applying GROUPS to a string variable, two values must be specified",
+      "original": "T-TEST: When applying GROUPS to a string variable, two values must be specified.",
+      "titel": "Které dvě skupiny?",
+      "text": {
+        "du": "Pro porovnání chybějí názvy obou skupin.",
+        "sie": "Pro porovnání chybějí názvy obou skupin."
+      },
+      "tun": {
+        "du": "Napište je do závorky za název, například telefon('ano' 'ne').",
+        "sie": "Napište je do závorky za název, například telefon('ano' 'ne')."
+      }
+    },
+    {
+      "id": "wert-zu-lang",
+      "art": "nicht-verstanden",
+      "muster": "This (\\d+)-byte string is too long for variable (\\S+) with width (\\d+)",
+      "original": "T-TEST: This 10-byte string is too long for variable handy with width 4.",
+      "titel": "Tato hodnota se ve sloupci nemůže vyskytovat",
+      "text": {
+        "du": "Hodnota je delší, než kolik místa má sloupec „{2}“. Taková hodnota tam nevzniká.",
+        "sie": "Hodnota je delší, než kolik místa má sloupec „{2}“. Taková hodnota tam nevzniká."
+      },
+      "tun": {
+        "du": "V části „Sloupce“ zkontrolujte, které hodnoty ve sloupci „{2}“ jsou.",
+        "sie": "V části „Sloupce“ zkontrolujte, které hodnoty ve sloupci „{2}“ jsou."
+      }
+    },
+    {
+      "id": "anfuehrung-offen",
+      "art": "nicht-verstanden",
+      "muster": "Unterminated string constant",
+      "original": "VARIABLE LABELS: Unterminated string constant.",
+      "titel": "Uvozovka zůstala otevřená",
+      "text": {
+        "du": "Text byl zahájen znakem ', ale není ukončen.",
+        "sie": "Text byl zahájen znakem ', ale není ukončen."
+      },
+      "tun": {
+        "du": "Na konec textu přidejte další '.",
+        "sie": "Na konec textu přidejte další '."
+      }
+    },
+    {
+      "id": "text-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting string",
+      "original": "VARIABLE LABELS: Syntax error expecting string.",
+      "titel": "Zde chybí text",
+      "text": {
+        "du": "Na tomto místě příkaz očekává text v uvozovkách.",
+        "sie": "Na tomto místě příkaz očekává text v uvozovkách."
+      },
+      "tun": {
+        "du": "Texty se píší do uvozovek, například 'ano'. Popisek: VARIABLE LABELS konc 'Koncentrace'. Skupiny z textu: T-TEST GROUPS=skupina('A' 'B').",
+        "sie": "Texty se píší do uvozovek, například 'ano'. Popisek: VARIABLE LABELS konc 'Koncentrace'. Skupiny z textu: T-TEST GROUPS=skupina('A' 'B')."
+      }
+    },
+    {
+      "id": "funktion-unbekannt",
+      "art": "nicht-verstanden",
+      "muster": "No function or vector named (\\S+)",
+      "original": "COMPUTE: No function or vector named wurzel.",
+      "titel": "Tato funkce neexistuje",
+      "text": {
+        "du": "„{1}“ není známá funkce.",
+        "sie": "„{1}“ není známá funkce."
+      },
+      "tun": {
+        "du": "Funkce mají anglické názvy, například SQRT pro druhou odmocninu, MEAN pro průměr.",
+        "sie": "Funkce mají anglické názvy, například SQRT pro druhou odmocninu, MEAN pro průměr."
+      }
+    },
+    {
+      "id": "rechnen-mit-text",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must be numeric",
+      "original": "COMPUTE: Both operands of + must be numeric.",
+      "titel": "S textem nelze počítat",
+      "text": {
+        "du": "Jedna strana výrazu „{1}“ je sloupec s textem.",
+        "sie": "Jedna strana výrazu „{1}“ je sloupec s textem."
+      },
+      "tun": {
+        "du": "Skupiny můžete převést na čísla v části „Sloupce“ - jako nový sloupec, původní zůstane.",
+        "sie": "Skupiny můžete převést na čísla v části „Sloupce“ - jako nový sloupec, původní zůstane."
+      }
+    },
+    {
+      "id": "text-mit-zahl-vergleichen",
+      "art": "nicht-verstanden",
+      "muster": "Both operands of (\\S+) must have the same type",
+      "original": "SELECT IF: Both operands of = must have the same type.",
+      "titel": "Text se porovnává s číslem",
+      "text": {
+        "du": "Sloupec obsahuje text, ale porovnává se s číslem.",
+        "sie": "Sloupec obsahuje text, ale porovnává se s číslem."
+      },
+      "tun": {
+        "du": "Hodnotu uveďte v uvozovkách, například pohlavi = 'žena'.",
+        "sie": "Hodnotu uveďte v uvozovkách, například pohlavi = 'žena'."
+      }
+    },
+    {
+      "id": "spalte-gibt-es-schon",
+      "art": "nicht-verstanden",
+      "muster": "There is already a variable named (\\S+)",
+      "original": "NUMERIC: There is already a variable named konz2.",
+      "titel": "Tento název už existuje",
+      "text": {
+        "du": "Sloupec „{1}“ již existuje. Statable nic nepřepisuje.",
+        "sie": "Sloupec „{1}“ již existuje. Statable nic nepřepisuje."
+      },
+      "tun": {
+        "du": "Zvolte jiný název, například {1}_novy.",
+        "sie": "Zvolte jiný název, například {1}_novy."
+      }
+    },
+    {
+      "id": "umbenennen-doppelt",
+      "art": "nicht-verstanden",
+      "muster": "Renaming would duplicate variable name (\\S+)",
+      "original": "RENAME VARIABLES: Renaming would duplicate variable name nr.",
+      "titel": "Tento název už existuje",
+      "text": {
+        "du": "Po přejmenování by dva sloupce měly název „{1}“.",
+        "sie": "Po přejmenování by dva sloupce měly název „{1}“."
+      },
+      "tun": {
+        "du": "Zvolte název, který ještě neexistuje.",
+        "sie": "Zvolte název, který ještě neexistuje."
+      }
+    },
+    {
+      "id": "datei-nicht-gefunden",
+      "art": "datei",
+      "muster": "An error occurred while opening `([^']+)': No such file",
+      "original": "An error occurred while opening `/gibt-es-nicht.sav': No such file or directory.",
+      "titel": "Soubor nebyl nalezen",
+      "text": {
+        "du": "„{datei}“ už není tam, kde byl.",
+        "sie": "„{datei}“ už není tam, kde byl."
+      },
+      "tun": {
+        "du": "Otevřete ho znovu pomocí „Otevřít soubor“.",
+        "sie": "Otevřete ho znovu pomocí „Otevřít soubor“."
+      }
+    },
+    {
+      "id": "datendatei-nicht-gefunden",
+      "art": "datei",
+      "muster": "Could not open `([^']+)' for reading as a data file",
+      "original": "Could not open `/fehlt.csv' for reading as a data file: No such file or directory.",
+      "titel": "Soubor nebyl nalezen",
+      "text": {
+        "du": "„{datei}“ se nepodařilo otevřít.",
+        "sie": "„{datei}“ se nepodařilo otevřít."
+      },
+      "tun": {
+        "du": "Otevřete ho znovu pomocí „Otevřít soubor“.",
+        "sie": "Otevřete ho znovu pomocí „Otevřít soubor“."
+      }
+    },
+    {
+      "id": "keine-spss-datei",
+      "art": "datei",
+      "muster": "`([^']+)' is not a system or portable file",
+      "original": "GET: `/kaputt.sav' is not a system or portable file.",
+      "titel": "Tento soubor nelze přečíst",
+      "text": {
+        "du": "„{datei}“ končí na .sav, ale uvnitř není soubor SPSS. Vaše ostatní data to neovlivní.",
+        "sie": "„{datei}“ končí na .sav, ale uvnitř není soubor SPSS. Vaše ostatní data to neovlivní."
+      },
+      "tun": {
+        "du": "Nejde například o soubor Excel nebo CSV? Pak ho ve svém programu uložte znovu jako .sav, .xlsx nebo .csv.",
+        "sie": "Nejde například o soubor Excel nebo CSV? Pak ho ve svém programu uložte znovu jako .sav, .xlsx nebo .csv."
+      }
+    },
+    {
+      "id": "speichern-unmoeglich",
+      "art": "datei",
+      "muster": "Error opening `([^']+)' for writing",
+      "original": "Error opening `/gibt/es/nicht/x.sav' for writing as a system file: No such file or directory.",
+      "titel": "Soubor se nepodařilo uložit",
+      "text": {
+        "du": "Statable nemůže zapisovat na zvolené místo. Vaše data se neztratila - jsou tu stále otevřená.",
+        "sie": "Statable nemůže zapisovat na zvolené místo. Vaše data se neztratila - jsou tu stále otevřená."
+      },
+      "tun": {
+        "du": "Zvolte jinou složku, například „Stažené soubory“.",
+        "sie": "Zvolte jinou složku, například „Stažené soubory“."
+      }
+    },
+    {
+      "id": "name-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting identifier",
+      "original": "COMPUTE: Syntax error expecting identifier.",
+      "titel": "Zde chybí název",
+      "text": {
+        "du": "Na tomto místě příkaz očekává název. Názvy začínají písmenem.",
+        "sie": "Na tomto místě příkaz očekává název. Názvy začínají písmenem."
+      },
+      "tun": {
+        "du": "Příklad: nova1 místo 1nova.",
+        "sie": "Příklad: nova1 místo 1nova."
+      }
+    },
+    {
+      "id": "by-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `BY'",
+      "original": "CROSSTABS: Syntax error expecting `BY'.",
+      "titel": "Zde chybí slovo BY",
+      "text": {
+        "du": "Mezi oběma sloupci chybí BY. Odděluje je, jako ve významu „tento sloupec podle tamtoho“.",
+        "sie": "Mezi oběma sloupci chybí BY. Odděluje je, jako ve významu „tento sloupec podle tamtoho“."
+      },
+      "tun": {
+        "du": "U CROSSTABS: /TABLES=pohlavi BY telefon. U ONEWAY a GLM stojí BY mezi číslem a skupinou: ONEWAY body BY skupina.",
+        "sie": "U CROSSTABS: /TABLES=pohlavi BY telefon. U ONEWAY a GLM stojí BY mezi číslem a skupinou: ONEWAY body BY skupina."
+      }
+    },
+    {
+      "id": "spalte-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting variable name",
+      "original": "ONEWAY: Syntax error expecting variable name.",
+      "titel": "Zde chybí sloupec",
+      "text": {
+        "du": "Na tomto místě příkaz očekává název sloupce.",
+        "sie": "Na tomto místě příkaz očekává název sloupce."
+      },
+      "tun": {
+        "du": "Tip: V okně příkazů Statable při psaní nabízí vhodné sloupce.",
+        "sie": "Tip: V okně příkazů Statable při psaní nabízí vhodné sloupce."
+      }
+    },
+    {
+      "id": "klammer-auf-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\('",
+      "original": "NPAR TESTS: Syntax error expecting `('.",
+      "titel": "Zde chybí závorka",
+      "text": {
+        "du": "Na tomto místě chybí „(“.",
+        "sie": "Na tomto místě chybí „(“."
+      },
+      "tun": {
+        "du": "Příklad: /MANN-WHITNEY = konc BY telefon (0 1).",
+        "sie": "Příklad: /MANN-WHITNEY = konc BY telefon (0 1)."
+      }
+    },
+    {
+      "id": "klammer-zu-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `\\)'",
+      "original": "COMPUTE: Syntax error expecting `)'.",
+      "titel": "Závorka zůstala otevřená",
+      "text": {
+        "du": "Znaků „(“ je víc než znaků „)“.",
+        "sie": "Znaků „(“ je víc než znaků „)“."
+      },
+      "tun": {
+        "du": "Doplňte chybějící „)“ na správné místo.",
+        "sie": "Doplňte chybějící „)“ na správné místo."
+      }
+    },
+    {
+      "id": "gleich-fehlt",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting `='",
+      "original": "COMPUTE: Syntax error expecting `='.",
+      "titel": "Zde chybí rovnítko",
+      "text": {
+        "du": "Příkaz potřebuje mezi názvem a výpočtem znak „=“.",
+        "sie": "Příkaz potřebuje mezi názvem a výpočtem znak „=“."
+      },
+      "tun": {
+        "du": "Příklad: COMPUTE nova = konc * 2.",
+        "sie": "Příklad: COMPUTE nova = konc * 2."
+      }
+    },
+    {
+      "id": "rechnung-unklar",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error parsing expression",
+      "original": "COMPUTE: Syntax error parsing expression.",
+      "titel": "Výpočet je neúplný",
+      "text": {
+        "du": "Za znakem „=“ něco chybí, nebo některý znak nesedí.",
+        "sie": "Za znakem „=“ něco chybí, nebo některý znak nesedí."
+      },
+      "tun": {
+        "du": "Značka ukazuje místo.",
+        "sie": "Značka ukazuje místo."
+      }
+    },
+    {
+      "id": "noch-keine-daten",
+      "art": "daten",
+      "muster": "is allowed only after the active dataset has been defined",
+      "original": "DESCRIPTIVES: DESCRIPTIVES is allowed only after the active dataset has been defined.",
+      "titel": "Zatím nejsou otevřena žádná data",
+      "text": {
+        "du": "K výpočtu Statable nejdřív potřebuje data.",
+        "sie": "K výpočtu Statable nejdřív potřebuje data."
+      },
+      "tun": {
+        "du": "Otevřete soubor nebo vyzkoušejte ukázková data.",
+        "sie": "Otevřete soubor nebo vyzkoušejte ukázková data."
+      }
+    },
+    {
+      "id": "text-in-zahlenspalte",
+      "art": "daten",
+      "muster": "Data for variable (\\S+) is not valid as format F: Field contents are not numeric",
+      "original": "Data for variable a is not valid as format F: Field contents are not numeric.",
+      "titel": "V číselném sloupci je text",
+      "text": {
+        "du": "Ve sloupci „{1}“ je na jednom místě slovo místo čísla. Tato buňka zůstane prázdná; vše ostatní bylo přečteno.",
+        "sie": "Ve sloupci „{1}“ je na jednom místě slovo místo čísla. Tato buňka zůstane prázdná; vše ostatní bylo přečteno."
+      },
+      "tun": {
+        "du": "Kontrola dat vám ukáže, o kterou buňku jde. Pokud jsou v datech desetinné čárky (70,5), DATA LIST FREE čte čárku jako oddělovač a hodnoty se posunou: vyřeší to SET DECIMAL=COMMA. a DATA LIST LIST(';').",
+        "sie": "Kontrola dat vám ukáže, o kterou buňku jde. Pokud jsou v datech desetinné čárky (70,5), DATA LIST FREE čte čárku jako oddělovač a hodnoty se posunou: vyřeší to SET DECIMAL=COMMA. a DATA LIST LIST(';')."
+      }
+    },
+    {
+      "id": "beschriftung-passt-nicht",
+      "art": "daten",
+      "muster": "VALUE LABELS: Data is not valid as format F",
+      "original": "VALUE LABELS: Data is not valid as format F: Field contents are not numeric.",
+      "titel": "Tento popisek nesedí",
+      "text": {
+        "du": "V číselném sloupci musí mít každý popisek skupiny číslo, například 1 = 'ano'.",
+        "sie": "V číselném sloupci musí mít každý popisek skupiny číslo, například 1 = 'ano'."
+      },
+      "tun": {
+        "du": "Popisky nejsnáze nastavíte v části „Sloupce“.",
+        "sie": "Popisky nejsnáze nastavíte v části „Sloupce“."
+      }
+    },
+    {
+      "id": "keine-angabe-zu-lang",
+      "art": "hinweis",
+      "muster": "Truncating missing value to maximum acceptable length \\((\\d+) bytes\\)",
+      "original": "MISSING VALUES: Truncating missing value to maximum acceptable length (8 bytes).",
+      "titel": "Hodnota pro „bez odpovědi“ byla zkrácena",
+      "text": {
+        "du": "Hodnota je delší, než je povoleno (znaků: {1}), a byla ořezána.",
+        "sie": "Hodnota je delší, než je povoleno (znaků: {1}), a byla ořezána."
+      },
+      "tun": {
+        "du": "V části „Sloupce“ zkontrolujte, zda se „bez odpovědi“ stále rozpoznává správně.",
+        "sie": "V části „Sloupce“ zkontrolujte, zda se „bez odpovědi“ stále rozpoznává správně."
+      }
+    },
+    {
+      "id": "zu-viele-keine-angabe",
+      "art": "nicht-verstanden",
+      "muster": "Too many numeric missing values",
+      "original": "MISSING VALUES: Too many numeric missing values.  At most three individual values or one value and one range are allowed.",
+      "titel": "Nejvýše tři hodnoty pro „bez odpovědi“",
+      "text": {
+        "du": "Sloupec může mít nejvýše tři hodnoty pro „bez odpovědi“, nebo jednu hodnotu a jeden rozsah.",
+        "sie": "Sloupec může mít nejvýše tři hodnoty pro „bez odpovědi“, nebo jednu hodnotu a jeden rozsah."
+      },
+      "tun": {
+        "du": "Příklad: 96 až 99 jako rozsah.",
+        "sie": "Příklad: 96 až 99 jako rozsah."
+      }
+    },
+    {
+      "id": "gewicht-text",
+      "art": "nicht-verstanden",
+      "muster": "The weighting variable must be numeric",
+      "original": "WEIGHT: The weighting variable must be numeric.",
+      "titel": "Vážení funguje jen s čísly",
+      "text": {
+        "du": "Zvolený sloupec obsahuje text.",
+        "sie": "Zvolený sloupec obsahuje text."
+      },
+      "tun": {
+        "du": "Zvolte sloupec s čísly.",
+        "sie": "Zvolte sloupec s čísly."
+      }
+    },
+    {
+      "id": "alle-spalten-loeschen",
+      "art": "hinweis",
+      "muster": "may not be used to delete all variables",
+      "original": "DELETE VARIABLES: DELETE VARIABLES may not be used to delete all variables from the active dataset dictionary.  Use NEW FILE instead.",
+      "titel": "Odebrat všechny sloupce najednou nelze",
+      "text": {
+        "du": "Alespoň jeden sloupec musí zůstat. Nic nebylo smazáno.",
+        "sie": "Alespoň jeden sloupec musí zůstat. Nic nebylo smazáno."
+      },
+      "tun": {
+        "du": "Chcete-li začít od prázdné tabulky: „Vytvořit novou studii“.",
+        "sie": "Chcete-li začít od prázdné tabulky: „Vytvořit novou studii“."
+      }
+    },
+    {
+      "id": "dateityp-unbekannt",
+      "art": "datei",
+      "muster": "GET DATA: Syntax error expecting TXT",
+      "original": "GET DATA: Syntax error expecting TXT, PSQL, GNM, or ODS.",
+      "titel": "Příkaz tento formát souboru nepřečte",
+      "text": {
+        "du": "Soubory Excel nejsnáze otevřete pomocí „Otevřít soubor“.",
+        "sie": "Soubory Excel nejsnáze otevřete pomocí „Otevřít soubor“."
+      },
+      "tun": {
+        "du": "Přetáhněte soubor do okna.",
+        "sie": "Přetáhněte soubor do okna."
+      }
+    },
+    {
+      "id": "auswahl-erwartet",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting one of the following: (.+)\\.",
+      "original": "FREQUENCIES: Syntax error expecting one of the following: STATISTICS, PERCENTILES, FORMAT, NTILES, ALGORITHM, HISTOGRAM, PIECHART, BARCHART, MISSING, ORDER.",
+      "titel": "Toto slovo sem nepatří",
+      "text": {
+        "du": "Na tomto místě je možné jen jedno z těchto slov: {1}.",
+        "sie": "Na tomto místě je možné jen jedno z těchto slov: {1}."
+      },
+      "tun": {
+        "du": "Zvolte jedno z nich.",
+        "sie": "Zvolte jedno z nich."
+      }
+    },
+    {
+      "id": "auswahl-oder",
+      "art": "nicht-verstanden",
+      "muster": "Syntax error expecting ((?:\\S+, )+\\S+,? or \\S+)\\.",
+      "original": "EXAMINE: Syntax error expecting BOXPLOT, NPPLOT, HISTOGRAM, SPREADLEVEL, NONE, or ALL.",
+      "titel": "Toto slovo sem nepatří",
+      "text": {
+        "du": "Zde je možné: {1}.",
+        "sie": "Zde je možné: {1}."
+      },
+      "tun": {
+        "du": "Zvolte jedno z nich.",
+        "sie": "Zvolte jedno z nich."
+      }
+    }
+  ],
+  "rueckfall": {
+    "titel": "Nepodařilo se",
+    "text": {
+      "du": "Statable příkaz nespustil. Ve vašich datech se nic nezměnilo.",
+      "sie": "Statable příkaz nespustil. Ve vašich datech se nic nezměnilo."
+    },
+    "tun": {
+      "du": "V části „Podrobnosti“ najdete původní zprávu z PSPP. S ní si poradíte v nápovědě nebo přes „Nahlásit“.",
+      "sie": "V části „Podrobnosti“ najdete původní zprávu z PSPP. S ní si poradíte v nápovědě nebo přes „Nahlásit“."
+    }
+  }
+}

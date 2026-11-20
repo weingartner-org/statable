@@ -1,0 +1,22 @@
+{
+  "quelle": "atrain",
+  "beitraege": [
+    {
+      "sprecher": "SPEAKER_00",
+      "text": "Guten Morgen, wollen wir die Semesterplanung besprechen? Ich habe die Termine für Oktober schon vorbereitet."
+    },
+    {
+      "sprecher": "SPEAKER_01",
+      "text": "Gern, aber ich brauche noch die Raumliste. Außerdem muss der Übungstermin am Freitag verschoben werden."
+    },
+    {
+      "sprecher": "SPEAKER_00",
+      "text": "Das klingt gut, ich schreibe es auf."
+    },
+    {
+      "sprecher": "SPEAKER_01",
+      "text": "Danke, dann schicke ich die Liste bis Mittwoch."
+    }
+  ],
+  "meldungsArten": []
+}

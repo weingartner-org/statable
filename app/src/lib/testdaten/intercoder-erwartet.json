@@ -1,0 +1,1790 @@
+{
+  "r_version": "R version 4.6.1 (2026-06-24)",
+  "irrCAC_version": "1.4",
+  "irr_version": "0.85",
+  "abweichungen": ["B_diagnoses alpha nominal: irr::kripp.alpha 0.430878, irrCAC/Referenz 0.433410 (irr falsch bei vollständigen Daten mit 6 Kodierenden)", "C_seltene_kategorie alpha nominal: irr::kripp.alpha 0.219477, irrCAC/Referenz 0.223837 (irr falsch bei vollständigen Daten mit 3 Kodierenden)", "H_text_ja_nein alpha nominal: irr::kripp.alpha 0.586806, irrCAC/Referenz 0.590278 (irr falsch bei vollständigen Daten mit 3 Kodierenden)", "I_kategorie_fehlt_bei_einer_person alpha nominal: irr::kripp.alpha 0.374601, irrCAC/Referenz 0.380446 (irr falsch bei vollständigen Daten mit 3 Kodierenden)", "I_kategorie_fehlt_bei_einer_person alpha ordinal: irr::kripp.alpha 0.651793, irrCAC/Referenz 0.655047 (irr falsch bei vollständigen Daten mit 3 Kodierenden)", "I_kategorie_fehlt_bei_einer_person alpha interval: irr::kripp.alpha 0.633105, irrCAC/Referenz 0.636534 (irr falsch bei vollständigen Daten mit 3 Kodierenden)", "J_zwei_einheiten alpha nominal: irr::kripp.alpha 0.312500, irrCAC/Referenz 0.375000 (irr falsch bei vollständigen Daten mit 3 Kodierenden)", "J_zwei_einheiten alpha ordinal: irr::kripp.alpha 0.312500, irrCAC/Referenz 0.375000 (irr falsch bei vollständigen Daten mit 3 Kodierenden)", "J_zwei_einheiten alpha interval: irr::kripp.alpha 0.312500, irrCAC/Referenz 0.375000 (irr falsch bei vollständigen Daten mit 3 Kodierenden)"],
+  "faelle": [
+    {
+      "name": "A_krippendorff_beispiel",
+      "beschreibung": "Krippendorff (2011): 4 Kodierende, 12 Einheiten, Lücken (Anker .743 / .815 / .849)",
+      "daten": [
+        [
+          1,
+          1,
+          null,
+          1
+        ],
+        [
+          2,
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          null,
+          5,
+          5,
+          5
+        ],
+        [
+          null,
+          null,
+          1,
+          1
+        ],
+        [
+          null,
+          null,
+          3,
+          null
+        ]
+      ],
+      "text": false,
+      "n_zeilen": 12,
+      "n_kodierende": 4,
+      "n_einheiten": 11,
+      "n_nur_eine": 1,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 5,
+      "alles_gleich": false,
+      "skalen": [
+        "nominal",
+        "ordinal",
+        "interval"
+      ],
+      "skala_genutzt": null,
+      "pa": {
+        "wert": 0.818181818181818,
+        "se": 0.125608959946865,
+        "unten": 0.541718361364223,
+        "oben": 1,
+        "p_einseitig": 2.17268631199641e-05
+      },
+      "fleiss": {
+        "wert": 0.761169275422411,
+        "se": 0.153019203469492,
+        "unten": 0.424376279377015,
+        "oben": 1,
+        "p_einseitig": 0.000209586519265281,
+        "pa": 0.818181818181818,
+        "pe": 0.238715277777778
+      },
+      "bp": {
+        "wert": 0.772727272727273,
+        "se": 0.144716619899483,
+        "unten": 0.454208139909888,
+        "oben": 1,
+        "p_einseitig": 0.000118780434812171
+      },
+      "alpha": {
+        "nominal": {
+          "wert": 0.743421052631579,
+          "se": 0.145478717222199,
+          "unten": 0.419274270651672,
+          "oben": 1,
+          "p_einseitig": 0.000228596382075175,
+          "wert_ref": 0.743421052631579,
+          "wert_irr_roh": 0.743421052631579,
+          "wert_irr_korrigiert": 0.743421052631579,
+          "irr_roh_richtig": true
+        },
+        "ordinal": {
+          "wert": 0.815387503754882,
+          "se": 0.142254353842663,
+          "unten": 0.498425051093841,
+          "oben": 1,
+          "p_einseitig": 9.49067424280692e-05,
+          "wert_ref": 0.815387503754881,
+          "wert_irr_roh": 0.815387503754881,
+          "wert_irr_korrigiert": 0.815387503754881,
+          "irr_roh_richtig": true
+        },
+        "interval": {
+          "wert": 0.849107142857144,
+          "se": 0.129051199944227,
+          "unten": 0.561563150365963,
+          "oben": 1,
+          "p_einseitig": 3.11794241569796e-05,
+          "wert_ref": 0.849107142857143,
+          "wert_irr_roh": 0.849107142857143,
+          "wert_irr_korrigiert": 0.849107142857143,
+          "irr_roh_richtig": true
+        }
+      },
+      "hauptwert": "fleiss",
+      "hauptwert_wert": 0.761169275422411,
+      "paradox": false
+    },
+    {
+      "name": "B_diagnoses",
+      "beschreibung": "Fleiss (1971): irr::diagnoses, 30 Fälle, 6 Kodierende, Codes 1-5 (Anker Fleiss .430)",
+      "daten": [
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          2,
+          2,
+          2,
+          5,
+          5,
+          5
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3,
+          5
+        ],
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          2,
+          2,
+          2,
+          4,
+          4,
+          4
+        ],
+        [
+          1,
+          1,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          5,
+          5
+        ],
+        [
+          1,
+          1,
+          3,
+          3,
+          3,
+          4
+        ],
+        [
+          1,
+          1,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          1,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          1,
+          2,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3
+        ],
+        [
+          1,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          2,
+          2,
+          4,
+          4,
+          4,
+          5
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          5
+        ],
+        [
+          1,
+          1,
+          1,
+          4,
+          5,
+          5
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          1,
+          3,
+          3,
+          5,
+          5,
+          5
+        ],
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          2,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          2,
+          2,
+          4,
+          5,
+          5,
+          5
+        ],
+        [
+          1,
+          1,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          1,
+          4,
+          4,
+          4,
+          4,
+          5
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          4
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          5,
+          5
+        ],
+        [
+          2,
+          2,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          1,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "text": false,
+      "n_zeilen": 30,
+      "n_kodierende": 6,
+      "n_einheiten": 30,
+      "n_nur_eine": 0,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 5,
+      "alles_gleich": false,
+      "skalen": [
+        "nominal"
+      ],
+      "skala_genutzt": null,
+      "wert_fleiss_irr": 0.430244520060141,
+      "pa": {
+        "wert": 0.555555555555556,
+        "se": 0.0440982686845996,
+        "unten": 0.46536446927508,
+        "oben": 0.645746641836031,
+        "p_einseitig": 1.37667655053519e-13
+      },
+      "fleiss": {
+        "wert": 0.430244520060141,
+        "se": 0.0541989355153328,
+        "unten": 0.319395250572143,
+        "oben": 0.541093789548138,
+        "p_einseitig": 4.68494820715648e-09,
+        "pa": 0.555555555555556,
+        "pe": 0.219938271604938
+      },
+      "bp": {
+        "wert": 0.444444444444444,
+        "se": 0.0551228358557495,
+        "unten": 0.33170558659385,
+        "oben": 0.557183302295039,
+        "p_einseitig": 3.41856321028899e-09
+      },
+      "alpha": {
+        "nominal": {
+          "wert": 0.433409828282029,
+          "se": 0.0541989355153328,
+          "unten": 0.322560558794032,
+          "oben": 0.544259097770027,
+          "p_einseitig": 4.04040956247798e-09,
+          "wert_ref": 0.433409828282029,
+          "wert_irr_roh": 0.430877581704519,
+          "wert_irr_korrigiert": 0.433409828282029,
+          "irr_roh_richtig": false
+        }
+      },
+      "fleiss_irr_gleich": true,
+      "hauptwert": "fleiss",
+      "hauptwert_wert": 0.430244520060141,
+      "paradox": false
+    },
+    {
+      "name": "C_seltene_kategorie",
+      "beschreibung": "3 Kodierende, 30 Einheiten, Kategorie 2 selten: hohe Übereinstimmung, niedriges Kappa (Paradox)",
+      "daten": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "text": false,
+      "n_zeilen": 30,
+      "n_kodierende": 3,
+      "n_einheiten": 30,
+      "n_nur_eine": 0,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 2,
+      "alles_gleich": false,
+      "skalen": [
+        "nominal"
+      ],
+      "skala_genutzt": null,
+      "wert_fleiss_irr": 0.215116279069765,
+      "pa": {
+        "wert": 0.933333333333333,
+        "se": 0.0371390676354104,
+        "unten": 0.857375411324221,
+        "oben": 1,
+        "p_einseitig": 0
+      },
+      "fleiss": {
+        "wert": 0.215116279069768,
+        "se": 0.156698749227396,
+        "unten": -0.105368647735221,
+        "oben": 0.535601205874756,
+        "p_einseitig": 0.090168851228571,
+        "pa": 0.933333333333333,
+        "pe": 0.915061728395062
+      },
+      "bp": {
+        "wert": 0.866666666666667,
+        "se": 0.0742781352708208,
+        "unten": 0.714750822648441,
+        "oben": 1,
+        "p_einseitig": 8.93063401008476e-13
+      },
+      "alpha": {
+        "nominal": {
+          "wert": 0.223837209302325,
+          "se": 0.156698749227396,
+          "unten": -0.096647717502663,
+          "oben": 0.544322136107314,
+          "p_einseitig": 0.0819216754430696,
+          "wert_ref": 0.223837209302326,
+          "wert_irr_roh": 0.219476744186046,
+          "wert_irr_korrigiert": 0.223837209302326,
+          "irr_roh_richtig": false
+        }
+      },
+      "fleiss_irr_gleich": true,
+      "hauptwert": "fleiss",
+      "hauptwert_wert": 0.215116279069768,
+      "paradox": true
+    },
+    {
+      "name": "D_zwei_kodierende",
+      "beschreibung": "2 Kodierende, 20 Einheiten, Kategorien 1-3 (Cohen ist Hauptwert, Fleiss wird nicht angezeigt)",
+      "daten": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "text": false,
+      "n_zeilen": 20,
+      "n_kodierende": 2,
+      "n_einheiten": 20,
+      "n_nur_eine": 0,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 3,
+      "alles_gleich": false,
+      "skalen": [
+        "nominal",
+        "ordinal",
+        "interval"
+      ],
+      "skala_genutzt": null,
+      "wert_fleiss_irr": 0.619047619047619,
+      "cohen": 0.619771863117871,
+      "pa": {
+        "wert": 0.75,
+        "se": 0.0993399267798783,
+        "unten": 0.542079143686555,
+        "oben": 0.957920856313445,
+        "p_einseitig": 1.95910554223744e-07
+      },
+      "fleiss": {
+        "wert": 0.619047619047619,
+        "se": 0.152923295630883,
+        "unten": 0.298975482812787,
+        "oben": 0.939119755282451,
+        "p_einseitig": 0.00034324228978333,
+        "pa": 0.75,
+        "pe": 0.34375
+      },
+      "bp": {
+        "wert": 0.625,
+        "se": 0.149009890169817,
+        "unten": 0.313118715529832,
+        "oben": 0.936881284470168,
+        "p_einseitig": 0.000245804920093518
+      },
+      "alpha": {
+        "nominal": {
+          "wert": 0.628571428571429,
+          "se": 0.152923295630883,
+          "unten": 0.308499292336597,
+          "oben": 0.94864356480626,
+          "p_einseitig": 0.000297738904040501,
+          "wert_ref": 0.628571428571429,
+          "wert_irr_roh": 0.628571428571429,
+          "wert_irr_korrigiert": 0.628571428571429,
+          "irr_roh_richtig": true
+        },
+        "ordinal": {
+          "wert": 0.7946,
+          "se": 0.0964765336736432,
+          "unten": 0.592672294335132,
+          "oben": 0.996527705664868,
+          "p_einseitig": 5.42466536135322e-08,
+          "wert_ref": 0.7946,
+          "wert_irr_roh": 0.7946,
+          "wert_irr_korrigiert": 0.7946,
+          "irr_roh_richtig": true
+        },
+        "interval": {
+          "wert": 0.8,
+          "se": 0.0929157521788628,
+          "unten": 0.605525095656199,
+          "oben": 0.994474904343801,
+          "p_einseitig": 2.76668103982303e-08,
+          "wert_ref": 0.8,
+          "wert_irr_roh": 0.8,
+          "wert_irr_korrigiert": 0.8,
+          "irr_roh_richtig": true
+        }
+      },
+      "fleiss_irr_gleich": true,
+      "hauptwert": "cohen",
+      "hauptwert_wert": 0.619771863117871,
+      "paradox": false
+    },
+    {
+      "name": "E_ordinal_luecken",
+      "beschreibung": "ordinal 1-5, 4 Kodierende, 15 Einheiten, einige Lücken",
+      "daten": [
+        [
+          1,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          5,
+          4
+        ],
+        [
+          5,
+          5,
+          5,
+          4
+        ],
+        [
+          2,
+          1,
+          2,
+          null
+        ],
+        [
+          3,
+          3,
+          null,
+          3
+        ],
+        [
+          1,
+          1,
+          1,
+          2
+        ],
+        [
+          4,
+          5,
+          4,
+          4
+        ],
+        [
+          5,
+          4,
+          5,
+          5
+        ],
+        [
+          3,
+          2,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          4,
+          null
+        ],
+        [
+          1,
+          2,
+          2,
+          1
+        ],
+        [
+          null,
+          5,
+          5,
+          5
+        ]
+      ],
+      "text": false,
+      "n_zeilen": 15,
+      "n_kodierende": 4,
+      "n_einheiten": 15,
+      "n_nur_eine": 0,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 5,
+      "alles_gleich": false,
+      "skalen": [
+        "nominal",
+        "ordinal",
+        "interval"
+      ],
+      "skala_genutzt": null,
+      "pa": {
+        "wert": 0.533333333333333,
+        "se": 0.051946248164932,
+        "unten": 0.421919711781913,
+        "oben": 0.644746954884754,
+        "p_einseitig": 3.36667086431319e-08
+      },
+      "fleiss": {
+        "wert": 0.414271325637251,
+        "se": 0.0642134076602491,
+        "unten": 0.27654726370171,
+        "oben": 0.551995387572793,
+        "p_einseitig": 7.59467926414459e-06,
+        "pa": 0.533333333333333,
+        "pe": 0.203271604938272
+      },
+      "bp": {
+        "wert": 0.416666666666667,
+        "se": 0.064932810206165,
+        "unten": 0.277399639727391,
+        "oben": 0.555933693605943,
+        "p_einseitig": 8.04328271919452e-06
+      },
+      "alpha": {
+        "nominal": {
+          "wert": 0.413333333333333,
+          "se": 0.0538609468570954,
+          "unten": 0.297813091515587,
+          "oben": 0.52885357515108,
+          "p_einseitig": 1.10741380621171e-06,
+          "wert_ref": 0.413333333333333,
+          "wert_irr_roh": 0.413333333333333,
+          "wert_irr_korrigiert": 0.413333333333333,
+          "irr_roh_richtig": true
+        },
+        "ordinal": {
+          "wert": 0.878040382819795,
+          "se": 0.0269336605279881,
+          "unten": 0.820273426262469,
+          "oben": 0.935807339377121,
+          "p_einseitig": 6.66133814775094e-15,
+          "wert_ref": 0.878040382819795,
+          "wert_irr_roh": 0.878040382819795,
+          "wert_irr_korrigiert": 0.878040382819795,
+          "irr_roh_richtig": true
+        },
+        "interval": {
+          "wert": 0.873997709049256,
+          "se": 0.0261164074324945,
+          "unten": 0.817983586051804,
+          "oben": 0.930011832046708,
+          "p_einseitig": 4.66293670342566e-15,
+          "wert_ref": 0.873997709049255,
+          "wert_irr_roh": 0.873997709049255,
+          "wert_irr_korrigiert": 0.873997709049255,
+          "irr_roh_richtig": true
+        }
+      },
+      "hauptwert": "fleiss",
+      "hauptwert_wert": 0.414271325637251,
+      "paradox": false
+    },
+    {
+      "name": "F_alles_gleich",
+      "beschreibung": "alle Kodierungen gleich (5 Einheiten, 3 Kodierende): Kennwerte nicht bestimmt, Übereinstimmung 100 %",
+      "daten": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "text": false,
+      "n_zeilen": 5,
+      "n_kodierende": 3,
+      "n_einheiten": 5,
+      "n_nur_eine": 0,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 1,
+      "alles_gleich": true,
+      "skalen": [
+        "nominal"
+      ],
+      "skala_genutzt": null,
+      "wert_fleiss_irr": null,
+      "pa": {
+        "wert": 1,
+        "se": null,
+        "unten": null,
+        "oben": null,
+        "p_einseitig": null
+      },
+      "fleiss": {
+        "wert": null,
+        "se": null,
+        "unten": null,
+        "oben": null,
+        "p_einseitig": null
+      },
+      "bp": {
+        "wert": null,
+        "se": null,
+        "unten": null,
+        "oben": null,
+        "p_einseitig": null
+      },
+      "alpha": {
+        "nominal": {
+          "wert": null,
+          "se": null,
+          "unten": null,
+          "oben": null,
+          "p_einseitig": null
+        }
+      },
+      "irrCAC_roh": {
+        "fleiss": 1,
+        "bp": 1
+      },
+      "irr_roh": {
+        "alpha": 1,
+        "fleiss": null
+      },
+      "hauptwert": "fleiss",
+      "hauptwert_wert": null,
+      "paradox": false
+    },
+    {
+      "name": "G_einheit_mit_einer_kodierung",
+      "beschreibung": "Fall A plus eine weitere Einheit mit nur einer Kodierung (A hat selbst schon eine): gehen nicht ein, werden gezählt (2)",
+      "daten": [
+        [
+          1,
+          1,
+          null,
+          1
+        ],
+        [
+          2,
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          null,
+          5,
+          5,
+          5
+        ],
+        [
+          null,
+          null,
+          1,
+          1
+        ],
+        [
+          null,
+          null,
+          3,
+          null
+        ],
+        [
+          null,
+          null,
+          2,
+          null
+        ]
+      ],
+      "text": false,
+      "n_zeilen": 13,
+      "n_kodierende": 4,
+      "n_einheiten": 11,
+      "n_nur_eine": 2,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 5,
+      "alles_gleich": false,
+      "skalen": [
+        "nominal",
+        "ordinal",
+        "interval"
+      ],
+      "skala_genutzt": null,
+      "pa": {
+        "wert": 0.818181818181818,
+        "se": 0.142537028198688,
+        "unten": 0.507620312439878,
+        "oben": 1,
+        "p_einseitig": 4.6532032787594e-05
+      },
+      "fleiss": {
+        "wert": 0.758290873335121,
+        "se": 0.167694841780262,
+        "unten": 0.392915200595271,
+        "oben": 1,
+        "p_einseitig": 0.000349775224364413,
+        "pa": 0.818181818181818,
+        "pe": 0.247781065088757
+      },
+      "bp": {
+        "wert": 0.772727272727273,
+        "se": 0.15793683135901,
+        "unten": 0.428612478285271,
+        "oben": 1,
+        "p_einseitig": 0.00018526184608314
+      },
+      "alpha": {
+        "nominal": {
+          "wert": 0.743421052631579,
+          "se": 0.145478717222199,
+          "unten": 0.419274270651672,
+          "oben": 1,
+          "p_einseitig": 0.000228596382075175,
+          "wert_ref": 0.743421052631579,
+          "wert_irr_roh": 0.743421052631579,
+          "wert_irr_korrigiert": 0.743421052631579,
+          "irr_roh_richtig": true
+        },
+        "ordinal": {
+          "wert": 0.815387503754882,
+          "se": 0.142254353842663,
+          "unten": 0.498425051093841,
+          "oben": 1,
+          "p_einseitig": 9.49067424280692e-05,
+          "wert_ref": 0.815387503754881,
+          "wert_irr_roh": 0.815387503754881,
+          "wert_irr_korrigiert": 0.815387503754881,
+          "irr_roh_richtig": true
+        },
+        "interval": {
+          "wert": 0.849107142857144,
+          "se": 0.129051199944227,
+          "unten": 0.561563150365963,
+          "oben": 1,
+          "p_einseitig": 3.11794241569796e-05,
+          "wert_ref": 0.849107142857143,
+          "wert_irr_roh": 0.849107142857143,
+          "wert_irr_korrigiert": 0.849107142857143,
+          "irr_roh_richtig": true
+        }
+      },
+      "hauptwert": "fleiss",
+      "hauptwert_wert": 0.758290873335121,
+      "paradox": false
+    },
+    {
+      "name": "H_text_ja_nein",
+      "beschreibung": "Kategorien als Text (ja/nein), 3 Kodierende, 20 Einheiten: Alpha immer nominal",
+      "daten": [
+        [
+          "ja",
+          "ja",
+          "ja"
+        ],
+        [
+          "ja",
+          "ja",
+          "nein"
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          "ja",
+          "nein",
+          "ja"
+        ],
+        [
+          "nein",
+          "nein",
+          "ja"
+        ],
+        [
+          "ja",
+          "ja",
+          "ja"
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          "nein",
+          "ja",
+          "nein"
+        ],
+        [
+          "ja",
+          "ja",
+          "ja"
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          "ja",
+          "ja",
+          "nein"
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          "ja",
+          "ja",
+          "ja"
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          "ja",
+          "nein",
+          "nein"
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          "ja",
+          "ja",
+          "ja"
+        ]
+      ],
+      "text": true,
+      "n_zeilen": 20,
+      "n_kodierende": 3,
+      "n_einheiten": 20,
+      "n_nur_eine": 0,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 2,
+      "alles_gleich": false,
+      "skalen": [
+        "nominal"
+      ],
+      "skala_genutzt": "nominal",
+      "wert_fleiss_irr": 0.583333333333334,
+      "pa": {
+        "wert": 0.8,
+        "se": 0.0700876644050463,
+        "unten": 0.653304832482941,
+        "oben": 0.946695167517059,
+        "p_einseitig": 3.00190983182347e-10
+      },
+      "fleiss": {
+        "wert": 0.583333333333333,
+        "se": 0.144560138851815,
+        "unten": 0.28076548540788,
+        "oben": 0.885901181258787,
+        "p_einseitig": 0.000353476001736963,
+        "pa": 0.8,
+        "pe": 0.52
+      },
+      "bp": {
+        "wert": 0.6,
+        "se": 0.140175328810093,
+        "unten": 0.306609664965882,
+        "oben": 0.893390335034118,
+        "p_einseitig": 0.000202033567805016
+      },
+      "alpha": {
+        "nominal": {
+          "wert": 0.590277777777778,
+          "se": 0.144560138851815,
+          "unten": 0.287709929852324,
+          "oben": 0.892845625703231,
+          "p_einseitig": 0.000316746913876509,
+          "wert_ref": 0.590277777777778,
+          "wert_irr_roh": 0.586805555555556,
+          "wert_irr_korrigiert": 0.590277777777778,
+          "irr_roh_richtig": false
+        }
+      },
+      "fleiss_irr_gleich": true,
+      "hauptwert": "fleiss",
+      "hauptwert_wert": 0.583333333333333,
+      "paradox": false
+    },
+    {
+      "name": "I_kategorie_fehlt_bei_einer_person",
+      "beschreibung": "Kategorie 3 wird von Kodierender 3 nie vergeben (Codes 1-3, 18 Einheiten)",
+      "daten": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "text": false,
+      "n_zeilen": 18,
+      "n_kodierende": 3,
+      "n_einheiten": 18,
+      "n_nur_eine": 0,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 3,
+      "alles_gleich": false,
+      "skalen": [
+        "nominal",
+        "ordinal",
+        "interval"
+      ],
+      "skala_genutzt": null,
+      "wert_fleiss_irr": 0.36875664187035,
+      "pa": {
+        "wert": 0.592592592592593,
+        "se": 0.0788237582358412,
+        "unten": 0.426288999563248,
+        "oben": 0.758896185621937,
+        "p_einseitig": 4.20873631723495e-07
+      },
+      "fleiss": {
+        "wert": 0.368756641870351,
+        "se": 0.118394286243295,
+        "unten": 0.118966532427791,
+        "oben": 0.61854675131291,
+        "p_einseitig": 0.00315173535676294,
+        "pa": 0.592592592592593,
+        "pe": 0.354595336076818
+      },
+      "bp": {
+        "wert": 0.388888888888889,
+        "se": 0.118235637353762,
+        "unten": 0.139433499344872,
+        "oben": 0.638344278432906,
+        "p_einseitig": 0.00216539740946642
+      },
+      "alpha": {
+        "nominal": {
+          "wert": 0.380446333687566,
+          "se": 0.118394286243295,
+          "unten": 0.130656224245007,
+          "oben": 0.630236443130126,
+          "p_einseitig": 0.00254927703733454,
+          "wert_ref": 0.380446333687566,
+          "wert_irr_roh": 0.374601487778959,
+          "wert_irr_korrigiert": 0.380446333687566,
+          "irr_roh_richtig": false
+        },
+        "ordinal": {
+          "wert": 0.655047323746511,
+          "se": 0.08055908689895,
+          "unten": 0.485082507271078,
+          "oben": 0.825012140221943,
+          "p_einseitig": 1.46120628374824e-07,
+          "wert_ref": 0.655047323746511,
+          "wert_irr_roh": 0.651793053215817,
+          "wert_irr_korrigiert": 0.655047323746511,
+          "irr_roh_richtig": false
+        },
+        "interval": {
+          "wert": 0.636533665835412,
+          "se": 0.0806947199690907,
+          "unten": 0.466282688595728,
+          "oben": 0.806784643075097,
+          "p_einseitig": 2.2093540963386e-07,
+          "wert_ref": 0.636533665835411,
+          "wert_irr_roh": 0.633104738154614,
+          "wert_irr_korrigiert": 0.636533665835411,
+          "irr_roh_richtig": false
+        }
+      },
+      "fleiss_irr_gleich": true,
+      "hauptwert": "fleiss",
+      "hauptwert_wert": 0.368756641870351,
+      "paradox": false
+    },
+    {
+      "name": "J_zwei_einheiten",
+      "beschreibung": "nur 2 Einheiten, 3 Kodierende (1 Freiheitsgrad im KI)",
+      "daten": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "text": false,
+      "n_zeilen": 2,
+      "n_kodierende": 3,
+      "n_einheiten": 2,
+      "n_nur_eine": 0,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 2,
+      "alles_gleich": false,
+      "skalen": [
+        "nominal",
+        "ordinal",
+        "interval"
+      ],
+      "skala_genutzt": null,
+      "wert_fleiss_irr": 0.25,
+      "pa": {
+        "wert": 0.666666666666667,
+        "se": 0.333333333333333,
+        "unten": -3.56873491205823,
+        "oben": 1,
+        "p_einseitig": 0.147583617650433
+      },
+      "fleiss": {
+        "wert": 0.25,
+        "se": 0.375,
+        "unten": -4.51482677606551,
+        "oben": 1,
+        "p_einseitig": 0.312832958189001,
+        "pa": 0.666666666666667,
+        "pe": 0.555555555555556
+      },
+      "bp": {
+        "wert": 0.333333333333333,
+        "se": 0.666666666666667,
+        "unten": -8.13746982411646,
+        "oben": 1,
+        "p_einseitig": 0.352416382349567
+      },
+      "alpha": {
+        "nominal": {
+          "wert": 0.375,
+          "se": 0.375,
+          "unten": -4.38982677606551,
+          "oben": 1,
+          "p_einseitig": 0.25,
+          "wert_ref": 0.375,
+          "wert_irr_roh": 0.3125,
+          "wert_irr_korrigiert": 0.375,
+          "irr_roh_richtig": false
+        },
+        "ordinal": {
+          "wert": 0.375,
+          "se": 0.375,
+          "unten": -4.38982677606551,
+          "oben": 1,
+          "p_einseitig": 0.25,
+          "wert_ref": 0.375,
+          "wert_irr_roh": 0.3125,
+          "wert_irr_korrigiert": 0.375,
+          "irr_roh_richtig": false
+        },
+        "interval": {
+          "wert": 0.375,
+          "se": 0.375,
+          "unten": -4.38982677606551,
+          "oben": 1,
+          "p_einseitig": 0.25,
+          "wert_ref": 0.375,
+          "wert_irr_roh": 0.3125,
+          "wert_irr_korrigiert": 0.375,
+          "irr_roh_richtig": false
+        }
+      },
+      "fleiss_irr_gleich": true,
+      "hauptwert": "fleiss",
+      "hauptwert_wert": 0.25,
+      "paradox": false
+    },
+    {
+      "name": "K_text_drei_kategorien_luecken",
+      "beschreibung": "Text ja/nein/unklar, 'unklar' bei Kodierender 3 nie, 12 Einheiten mit Lücken",
+      "daten": [
+        [
+          "ja",
+          "ja",
+          "ja"
+        ],
+        [
+          "nein",
+          "unklar",
+          "nein"
+        ],
+        [
+          "unklar",
+          "unklar",
+          "nein"
+        ],
+        [
+          "ja",
+          "ja",
+          null
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          "ja",
+          "nein",
+          "ja"
+        ],
+        [
+          "unklar",
+          "ja",
+          "ja"
+        ],
+        [
+          "nein",
+          "nein",
+          "nein"
+        ],
+        [
+          null,
+          "ja",
+          "ja"
+        ],
+        [
+          "ja",
+          "ja",
+          "ja"
+        ],
+        [
+          "nein",
+          "unklar",
+          "nein"
+        ],
+        [
+          "ja",
+          "ja",
+          "nein"
+        ]
+      ],
+      "text": true,
+      "n_zeilen": 12,
+      "n_kodierende": 3,
+      "n_einheiten": 12,
+      "n_nur_eine": 0,
+      "n_ohne_kodierung": 0,
+      "n_kategorien": 3,
+      "alles_gleich": false,
+      "skalen": [
+        "nominal"
+      ],
+      "skala_genutzt": "nominal",
+      "pa": {
+        "wert": 0.666666666666667,
+        "se": 0.100503781525921,
+        "unten": 0.445459334995022,
+        "oben": 0.887873998338311,
+        "p_einseitig": 1.84688804745203e-05
+      },
+      "fleiss": {
+        "wert": 0.444730077120823,
+        "se": 0.144174194266025,
+        "unten": 0.127404815073132,
+        "oben": 0.762055339168514,
+        "p_einseitig": 0.00519217401383987,
+        "pa": 0.666666666666667,
+        "pe": 0.399691358024691
+      },
+      "bp": {
+        "wert": 0.5,
+        "se": 0.150755672288882,
+        "unten": 0.168189002492533,
+        "oben": 0.831810997507467,
+        "p_einseitig": 0.00343615165446054
+      },
+      "alpha": {
+        "nominal": {
+          "wert": 0.439093484419263,
+          "se": 0.144874217892416,
+          "unten": 0.120227480758174,
+          "oben": 0.757959488080353,
+          "p_einseitig": 0.00571586662030787,
+          "wert_ref": 0.439093484419263,
+          "wert_irr_roh": 0.439093484419263,
+          "wert_irr_korrigiert": 0.439093484419263,
+          "irr_roh_richtig": true
+        }
+      },
+      "hauptwert": "fleiss",
+      "hauptwert_wert": 0.444730077120823,
+      "paradox": false
+    }
+  ]
+}

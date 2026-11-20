@@ -1,0 +1,140 @@
+{
+ "codes": [
+  {
+   "definition": "Alles, was die Person belastet.",
+   "farbe": "#ff0000",
+   "kodierbar": false,
+   "name": "Belastung",
+   "pfad": "Belastung"
+  },
+  {
+   "definition": "Zeitliche Enge",
+   "farbe": "#ff8800",
+   "kodierbar": true,
+   "name": "Zeitdruck",
+   "pfad": "Belastung/Zeitdruck"
+  },
+  {
+   "definition": null,
+   "farbe": null,
+   "kodierbar": true,
+   "name": "Lärm",
+   "pfad": "Belastung/Lärm"
+  },
+  {
+   "definition": null,
+   "farbe": "#00aa00",
+   "kodierbar": true,
+   "name": "Hilfe",
+   "pfad": "Hilfe"
+  }
+ ],
+ "datei": "mengen.qdpx",
+ "dokumente": [
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 393,
+   "name": "Interview 1",
+   "pruefung": "geprueft",
+   "sha256": "0821f3089b5764ca900cb0c43f5f9d40cb7069edaff00995786a39d661009d16",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 393,
+   "name": "Interview 2",
+   "pruefung": "geprueft",
+   "sha256": "0821f3089b5764ca900cb0c43f5f9d40cb7069edaff00995786a39d661009d16",
+   "zaehlweise": "a"
+  },
+  {
+   "art": "text",
+   "bom": false,
+   "fall": null,
+   "laenge": 393,
+   "name": "Interview 3",
+   "pruefung": "geprueft",
+   "sha256": "0821f3089b5764ca900cb0c43f5f9d40cb7069edaff00995786a39d661009d16",
+   "zaehlweise": "a"
+  }
+ ],
+ "faelle": [],
+ "fehler": null,
+ "kodierende": [
+  "Anna Beispiel"
+ ],
+ "kodierendeUnbekanntAnzahl": 0,
+ "kodierungen": [
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview 1",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  },
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview 2",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  },
+  {
+   "code": "Belastung/Zeitdruck",
+   "dokument": "Interview 3",
+   "person": "Anna Beispiel",
+   "text": "Zeitdruck das Schlimmste"
+  }
+ ],
+ "meldungen": [],
+ "meldungenDetail": [],
+ "memos": [],
+ "mengen": [
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "Interview 1",
+    "Interview 2"
+   ],
+   "name": "Erste Welle"
+  },
+  {
+   "art": "codes",
+   "mitglieder": [
+    "Belastung/Lärm",
+    "Belastung/Zeitdruck"
+   ],
+   "name": "Belastungscodes"
+  },
+  {
+   "art": "dokumente",
+   "mitglieder": [
+    "Interview 3"
+   ],
+   "name": "Gemischt"
+  },
+  {
+   "art": "codes",
+   "mitglieder": [
+    "Hilfe"
+   ],
+   "name": "Gemischt"
+  }
+ ],
+ "nichtGelesen": {},
+ "programm": "Statable Prüfdatei",
+ "variablen": [],
+ "zaehlung": {
+  "codes": 4,
+  "dokumente": 3,
+  "faelle": 0,
+  "kodierende": 1,
+  "kodierungen": 3,
+  "memos": 0,
+  "mengen": 4,
+  "segmente": 3,
+  "variablen": 0
+ }
+}

@@ -1,0 +1,18 @@
+{
+  "quelle": "vtt",
+  "beitraege": [
+    {
+      "zeitMs": 0,
+      "bisMs": 2000,
+      "text": "Eins."
+    },
+    {
+      "zeitMs": 4500,
+      "bisMs": 6000,
+      "text": "Zwei."
+    }
+  ],
+  "meldungsArten": [
+    "leer"
+  ]
+}

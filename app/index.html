@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="de" data-thema="hell">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Statable - kostenlose Statistik im Browser</title>
+<meta name="description" content="Kostenlose Statistik für Studium und Forschung im Browser: t-Test, Regression, Varianzanalyse und mehr. Rechnet mit GNU PSPP und R, liest Excel, SPSS, Stata und SAS. Die Daten bleiben auf dem Gerät.">
+<link rel="icon" href="./favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="./favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="./icon-32.png?v=2" type="image/png" sizes="32x32">
+<!-- Eigene Symbole für „App installieren“ / „Zum Dock hinzufügen“: ohne sie nimmt der Browser das Logo der Domain (Lernplattform). -->
+<link rel="icon" href="./icon-192.png?v=2" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png?v=2">
+<link rel="manifest" href="./manifest.json">
+<!-- Dauerhafte Adresse: statable.eu. Die Suche soll sie als Hauptadresse führen (auch für die Kopie unter weingartner.org/programme/statable/). -->
+<link rel="canonical" href="https://statable.eu/">
+<!-- Farbe der Browserleiste = Hintergrund des Kopfs (--grund); die App setzt sie nach dem Start auf das gewählte Farbschema (browserleiste in sitzung.svelte.ts). -->
+<meta name="theme-color" content="#EFEDE8">
+<meta name="theme-color" content="#14181D" media="(prefers-color-scheme: dark)">
+<meta name="application-name" content="statable">
+<meta name="apple-mobile-web-app-title" content="statable">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<!-- Link-Vorschau (Mail, Messenger, Suche): Bild und Adresse müssen absolut sein, Vorschau-Roboter lösen keine relativen Pfade auf. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Statable">
+<meta property="og:title" content="Statable - Statistik im Browser">
+<meta property="og:description" content="Kostenlose Statistik im Browser: Frage wählen, Ergebnis als Satz lesen, Bericht als Word, PDF oder Excel. Mit Lernen und Hilfe. Die Daten bleiben auf dem Gerät.">
+<meta property="og:url" content="https://statable.eu/">
+<meta property="og:image" content="https://statable.eu/vorschau.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Statable: Zeichen aus Messpunkten mit Trendlinie und Wortmarke, darunter „Statistik im Browser - Schritt für Schritt“">
+<meta property="og:locale" content="de_AT">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Statable - Statistik im Browser">
+<meta name="twitter:description" content="Kostenlose Statistik im Browser: Frage wählen, Ergebnis als Satz lesen, Bericht als Word, PDF oder Excel. Mit Lernen und Hilfe. Die Daten bleiben auf dem Gerät.">
+<meta name="twitter:image" content="https://statable.eu/vorschau.png">
+<meta name="twitter:image:alt" content="Statable: Zeichen aus Messpunkten mit Trendlinie und Wortmarke">
+<!-- Programm-Beschreibung für Suchmaschinen (schema.org). Kein Skript, das läuft: die CSP lässt es zu. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Statable","url":"https://statable.eu/","description":"Kostenlose Statistik für Studium und Forschung im Browser: t-Test, Regression, Varianzanalyse und mehr. Rechnet mit GNU PSPP und R, liest Excel, SPSS, Stata und SAS. Die Daten bleiben auf dem Gerät.","applicationCategory":"EducationalApplication","applicationSubCategory":"Statistik","operatingSystem":"Web browser","browserRequirements":"Aktueller Browser mit WebAssembly","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"license":"https://www.gnu.org/licenses/gpl-3.0.html","image":"https://statable.eu/vorschau.png","inLanguage":["de","en","fr","es","it","pt","nl","el","hu","sv","pl","uk","cs","ro","bg"],"softwareHelp":{"@type":"CreativeWork","url":"https://statable.eu/de/hilfe/"}}</script>
+<style>
+/* Wortmarke: Atkinson Hyperlegible Next (Braille Institute, SIL OFL), 300 und 800; 400 nur für den Slogan. */
+@font-face{font-family:'Atkinson Hyperlegible Next';src:url(./fonts/atkinson-next-300.woff2) format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Atkinson Hyperlegible Next';src:url(./fonts/atkinson-next-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Atkinson Hyperlegible Next';src:url(./fonts/atkinson-next-800.woff2) format('woff2');font-weight:800;font-display:swap}
+/* Ladebildschirm (Entwurf „D hell“, 08.10.2026) - steht im HTML, damit er sofort da ist, bevor ein Skript läuft. */
+#lade{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;background:#F7F5F0 url(./laden-hintergrund.svg) center/cover no-repeat;font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;color:#1D2530;transition:opacity .35s ease}
+#lade.weg{opacity:0;pointer-events:none}
+.start-karte{box-sizing:border-box;width:min(640px,100%);padding:clamp(28px,5vw,44px) clamp(20px,5vw,56px);background:rgba(255,254,251,.94);border:1px solid #DDD8CF;border-radius:28px;box-shadow:0 1px 2px rgba(29,37,48,.06),0 24px 60px rgba(29,37,48,.10);display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+/* Marke mit Slogan (18.10.2026, Johannes): alles in em der Wortmarke, aus den Schriftmaßen gerechnet (Atkinson Next: Oberlänge 0,708, Grundlinie bei line-height 1 auf 0,834).
+   Slogan genau so breit wie „statable“ (0,3177 em). Logo von der Oberkante von „able“ bis zur Grundlinie des Slogans, je 1 % Überstand für die runden Ecken. */
+.start-marke{display:flex;align-items:flex-start;gap:.35em;font-size:clamp(40px,8vw,72px)}
+.start-marke svg{width:1.302em;height:1.302em;margin-top:.112em;flex:none}
+.start-text{display:flex;flex-direction:column;align-items:flex-start;gap:.135em;text-align:left}
+.start-wort{font-size:1em;line-height:1;letter-spacing:-.02em;font-weight:300}
+.start-wort b{font-weight:800;color:#17756A}
+.start-slogan{font-size:.3177em;line-height:1;font-weight:400;color:#4C5661;white-space:nowrap}
+.start-z{display:inline-block}
+.start-karte p{margin:0;font-size:18px;color:#4C5661}
+/* Ladeanimation „B - Linie zieht sich“ (08.10.2026): Punkte ploppen nacheinander auf, die Trendlinie zeichnet sich, der letzte Punkt wird Koralle (09.10.: Logo hell, Variante B). Ersetzt den Ladebalken. */
+.start-marke svg{overflow:visible}
+.start-linie{stroke-dasharray:54;animation:start-zieh 3.2s ease-in-out infinite both}
+.start-p{transform-box:fill-box;transform-origin:center;animation-duration:3.2s;animation-iteration-count:infinite;animation-fill-mode:both;animation-timing-function:cubic-bezier(.3,1.4,.5,1)}
+.start-p1{animation-name:start-auf1}.start-p2{animation-name:start-auf2}.start-p3{animation-name:start-auf3}.start-p4{animation-name:start-auf4}
+@keyframes start-zieh{0%{stroke-dashoffset:54;opacity:1}40%,84%{stroke-dashoffset:0;opacity:1}96%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes start-auf1{0%,6%{transform:scale(0)}16%,84%{transform:scale(1);opacity:1}96%,100%{transform:scale(1);opacity:0}}
+@keyframes start-auf2{0%,14%{transform:scale(0)}24%,84%{transform:scale(1);opacity:1}96%,100%{transform:scale(1);opacity:0}}
+@keyframes start-auf3{0%,22%{transform:scale(0)}32%,84%{transform:scale(1);opacity:1}96%,100%{transform:scale(1);opacity:0}}
+@keyframes start-auf4{0%,32%{transform:scale(0);fill:#17756A}42%{transform:scale(1.25);fill:#17756A}50%{transform:scale(1);fill:#C4502F}84%{transform:scale(1);fill:#C4502F;opacity:1}96%,100%{transform:scale(1);fill:#C4502F;opacity:0}}
+@media (prefers-reduced-motion:reduce){.start-linie,.start-p{animation:none}#lade{transition:none}}
+</style>
+</head>
+<body>
+<div id="lade" role="status" aria-label="Statable lädt">
+  <div class="start-karte">
+    <div class="start-marke">
+      <svg width="80" height="80" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="ladef" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF6F3"/><stop offset="1" stop-color="#D3E7E1"/></linearGradient><linearGradient id="ladeg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".7"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ladet" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#17756A" stop-opacity=".25"/><stop offset="1" stop-color="#17756A" stop-opacity=".55"/></linearGradient><filter id="lades" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.6" flood-color="#0E3A34" flood-opacity=".22"/></filter></defs><rect width="64" height="64" rx="16" fill="url(#ladef)" filter="url(#lades)"/><rect x="1.5" y="1.5" width="61" height="61" rx="14.5" fill="url(#ladeg)"/><line class="start-linie" x1="12" y1="50" x2="52" y2="14" stroke="url(#ladet)" stroke-width="3" stroke-linecap="round"/><circle class="start-p start-p1" cx="15" cy="45" r="4.5" fill="#2E8F82"/><circle class="start-p start-p2" cx="26" cy="40" r="5.5" fill="#22857A"/><circle class="start-p start-p3" cx="36" cy="28" r="6.5" fill="#17756A"/><circle class="start-p start-p4" cx="48" cy="19" r="8" fill="#C4502F"/></svg>
+      <span class="start-text"><span class="start-wort"><span>stat</span><b>able</b></span><span class="start-slogan" lang="en">turn numbers into insight</span></span>
+    </div>
+    <p>Statistik für Studium und Forschung</p>
+  </div>
+</div>
+<script src="./lade-sprache.js"></script>
+<script src="./lade-tippen.js"></script>
+<noscript><p>Statable braucht JavaScript. Die Hilfe gibt es auch als Webseiten: <a href="./de/hilfe/">Hilfe</a> · <a href="./en/hilfe/">Help</a></p></noscript>
+<div id="app"></div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

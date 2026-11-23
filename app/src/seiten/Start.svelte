@@ -1,6 +1,7 @@
 <script lang="ts">
   import { rutsch } from '../lib/rutsch';
   import { tick } from 'svelte';
+  import { spendeMoeglich } from '../lib/spende';
   import { metaDirekt } from '../lib/metaentwurf.svelte';
   import { zitat, ort } from '../i18n/profil';
   import { zm } from '../lib/zeitmarke';
@@ -257,6 +258,6 @@
 
   <div class="banner ruhig" style="margin-top:var(--a5)"><Icon n="geraet" />
     <p>{d('Deine Daten bleiben in diesem Browser auf diesem Gerät und gehen an keinen Server. An einem fremden oder gemeinsam genutzten Rechner speichere das Projekt am Ende in eine Datei (Strg+S), zum Beispiel in dein OneDrive, und öffne sie später auf jedem Gerät hier wieder.', 'Ihre Daten bleiben in diesem Browser auf diesem Gerät und gehen an keinen Server. An einem fremden oder gemeinsam genutzten Rechner speichern Sie das Projekt am Ende in eine Datei (Strg+S), zum Beispiel in Ihr OneDrive, und öffnen sie später auf jedem Gerät hier wieder.', 'Your data stays in this browser on this device and goes to no server. On a shared or someone else\'s computer, save the project to a file when you finish (Ctrl+S), for example to your OneDrive, and open it here again later on any device.')} <a href="#hilfe/datenschutz-projekt">{L('Mehr dazu', 'More')}</a></p></div>
-  <p class="fuss"><a href="#impressum">{L('Impressum', 'Legal notice')}</a><a href="#datenschutz">{L('Datenschutz', 'Privacy')}</a><a href="#behoerden">{L('Für Behörden', 'For public bodies')}</a><a href="#barrierefreiheit">{L('Barrierefreiheit', 'Accessibility')}</a><span>{L('Freie Software (GPL)', 'Free software (GPL)')}</span></p>
+  <p class="fuss"><a href="#impressum">{L('Impressum', 'Legal notice')}</a><a href="#datenschutz">{L('Datenschutz', 'Privacy')}</a><a href="#behoerden">{L('Für Behörden', 'For public bodies')}</a><a href="#barrierefreiheit">{L('Barrierefreiheit', 'Accessibility')}</a>{#if spendeMoeglich()}<a href="#unterstuetzen">{L('Unterstützen', 'Support')}</a>{/if}<span>{L('Freie Software (GPL)', 'Free software (GPL)')}</span></p>
 </div>
 {/if}

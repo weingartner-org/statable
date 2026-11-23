@@ -125,7 +125,7 @@
       {:else}
         <div class="tabelle-rahmen" role="region" tabindex="0" aria-label={L('Änderungsprotokoll', 'Change log')}>
           <table class="tab">
-            <caption>{L('Änderungen am Codebuch, neueste zuerst', 'Changes to the codebook, newest first')}</caption>
+            <caption data-nolink>{L('Änderungen am Codebuch, neueste zuerst', 'Changes to the codebook, newest first')}</caption>
             <thead>
               <tr>
                 <th scope="col">{L('Zeit', 'Time')}</th>

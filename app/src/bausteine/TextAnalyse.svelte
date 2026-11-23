@@ -200,8 +200,9 @@
   textarea { font: inherit; width: 100%; max-width: 100%; box-sizing: border-box; }
   .hilfe { margin: 0; font-size: var(--gr-klein); color: var(--tinte-2); }
   .auswahl { display: flex; flex-direction: column; gap: var(--a1); border: 1px solid var(--linie); padding: var(--a2) var(--a3); min-width: 0; }
-  .kaestchen, .radio { display: flex; gap: var(--a2); align-items: flex-start; }
-  .stopp summary { cursor: pointer; }
+  .kaestchen, .radio { display: flex; gap: var(--a2); align-items: center; min-height: var(--ziel); }
+  .kaestchen input, .radio input { width: 1.4rem; height: 1.4rem; flex: none; margin: 0; }
+  .stopp summary { cursor: pointer; min-height: var(--ziel); display: flex; align-items: center; }
   .knopfzeile { display: flex; flex-wrap: wrap; gap: var(--a2); }
   .rahmen { overflow-x: auto; }
   .rahmen:focus-visible { box-shadow: var(--fokus-ring); }

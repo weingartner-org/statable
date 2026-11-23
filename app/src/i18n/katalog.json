@@ -1237,6 +1237,13 @@
    "bausteine/BlattZufall.svelte"
   ]
  },
+ "k0112b89e": {
+  "de": "Spenden: Die Seite „Unterstützen“ verlinkt Zahlungsseiten von Stripe (neuer Tab, erst beim Klick geladen). Es wird keine Anfrage an Stripe gestellt, solange niemand klickt; die Content-Security-Policy ändert sich nicht. Nach 10 Stunden aktiver Nutzung (lokaler Zähler, kein Server) erscheint ein Hinweis; abschaltbar.",
+  "en": "Donations: the page \"Support\" links to payment pages of Stripe (new tab, loaded only on click). No request goes to Stripe unless someone clicks; the Content-Security-Policy does not change. After 10 hours of active use (local counter, no server) a notice appears; it can be switched off.",
+  "orte": [
+   "seiten/Rechtliches.svelte"
+  ]
+ },
  "k01149938": {
   "de": "Freiheitsgrade sind keine Stichprobengröße und kein Effekt. Sie sagen, wie viele Informationen übrig sind, um den Fehler zu schätzen.",
   "en": "Degrees of freedom are neither a sample size nor an effect. They say how much information is left to estimate the error.",
@@ -18427,6 +18434,13 @@
    "bausteine/LernlaborBaumrechner.svelte"
   ]
  },
+ "k10276a58": {
+  "de": "Bisher: {0} Stunden.",
+  "en": "So far: {0} hours.",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
+  ]
+ },
  "k1028eb8d": {
   "de": "region",
   "en": "world_region",
@@ -20831,6 +20845,13 @@
    "bausteine/PapierbogenEinlesen.svelte"
   ]
  },
+ "k12453c06": {
+  "de": "Tabelle der Aussagen und Gruppen",
+  "en": "Table of statements and groups",
+  "orte": [
+   "bausteine/ConceptBlock.svelte"
+  ]
+ },
  "k12453dcb": {
   "de": "Der Wert der Daten und die Zustimmung der Hochschule ersetzen die Zustimmung der Person nicht.",
   "en": "The value of the data and the university’s agreement do not replace the person’s agreement.",
@@ -21901,6 +21922,13 @@
   "en": "\"Draw again\" takes a new seed and shows how much the numbers depend on chance. The seed is shown in the result; with it everything can be repeated.",
   "orte": [
    "bausteine/BlattZufall.svelte"
+  ]
+ },
+ "k133cc89c": {
+  "de": "Auf der Seite <a href=\"#unterstuetzen\">Unterstützen</a> stehen Links zu Zahlungsseiten von Stripe. Sie öffnen in einem neuen Tab und werden erst beim Klick geladen; vorher geht nichts an Stripe. Bezahlt wird bei Stripe: Statable erfährt nicht, wer zahlt, und erhält keine Zahlungsdaten. Für die Zahlung gilt die Datenschutzerklärung von Stripe.",
+  "en": "The page <a href=\"#unterstuetzen\">Support</a> has links to payment pages of Stripe. They open in a new tab and are loaded only when clicked; nothing goes to Stripe before. Payment is made at Stripe: Statable does not learn who pays and receives no payment data. Stripe's privacy policy applies to the payment.",
+  "orte": [
+   "seiten/Rechtliches.svelte"
   ]
  },
  "k133df055": {
@@ -23903,6 +23931,13 @@
   "en": "a",
   "orte": [
    "lernen/rechenaufgaben-nutzen.ts"
+  ]
+ },
+ "k1540359e": {
+  "de": "Nicht jetzt",
+  "en": "Not now",
+  "orte": [
+   "App.svelte"
   ]
  },
  "k1540a561": {
@@ -48433,6 +48468,13 @@
    "hilfe/artikel.ts"
   ]
  },
+ "k2b3b947f": {
+  "de": "Bewertungen je Aussage, Tabelle",
+  "en": "Ratings per statement, table",
+  "orte": [
+   "bausteine/DelphiBlock.svelte"
+  ]
+ },
  "k2b3cd8d7": {
   "de": "Schätzt für jede Person mit allen Antworten ihre Fähigkeit aus dem Antwortmuster (Erwartungswert nach den Antworten, EAP) und legt sie als Spalte an. Der Standardfehler sagt, wie unsicher der Wert ist. Personen mit lauter gleichen Antworten werden zur Mitte gezogen; Personen mit fehlenden Antworten bekommen keinen Wert.",
   "en": "Estimates the ability of every person with all answers from the answer pattern (expected value after the answers, EAP) and adds it as a column. The standard error tells how uncertain the value is. People with all answers the same are pulled towards the middle; people with missing answers get no value.",
@@ -50209,6 +50251,14 @@
   "en": "Meta-analysis, heterogeneity (I squared), forest plot",
   "orte": [
    "lernen/lernplan.ts"
+  ]
+ },
+ "k2cd5888b": {
+  "de": "Du hast Statable jetzt rund {0} Stunden benutzt. Eine kleine Spende ist willkommen; der Hinweis steht unten im Bild.",
+  "en": "You have now used Statable for about {0} hours. A small donation is welcome; the notice is at the bottom of the screen.",
+  "sie": "Sie haben Statable jetzt rund {0} Stunden benutzt. Eine kleine Spende ist willkommen; der Hinweis steht unten im Bild.",
+  "orte": [
+   "App.svelte"
   ]
  },
  "k2cd5d0fc": {
@@ -79192,6 +79242,13 @@
    "lib/ausreisserzeit.ts"
   ]
  },
+ "k47249146": {
+  "de": "{0} Euro",
+  "en": "€{0}",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
+  ]
+ },
  "k4724f868": {
   "de": "Sehr ähnliche Rangfolgen der Fachleute; die Höhe der Zustimmung zeigt W nicht (Kendalls W, Delphi-Befragung)",
   "en": "Very similar orders; W does not show the level of approval (Kendall's W, Delphi survey)",
@@ -88957,6 +89014,13 @@
    "bausteine/FragebogenKodebuch.svelte"
   ]
  },
+ "k4fcfb283": {
+  "de": "Die Erinnerung ist abgeschaltet.",
+  "en": "The reminder is switched off.",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
+  ]
+ },
  "k4fd19903": {
   "de": "Neue Variable",
   "en": "New variable",
@@ -93801,6 +93865,13 @@
   "en": "A significant test for alpha, because only a p below 0.05 documents validity.",
   "orte": [
    "lernen/fragen-psychologie-2-b.ts"
+  ]
+ },
+ "k54692464": {
+  "de": " spenden - öffnet die Bezahlseite von Stripe in einem neuen Tab",
+  "en": " donation - opens Stripe's payment page in a new tab",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
   ]
  },
  "k546b4398": {
@@ -128262,6 +128333,14 @@
    "lib/rsaetze.ts"
   ]
  },
+ "k72eb8caf": {
+  "de": "Du hast Statable jetzt rund {0} Stunden benutzt. Statable ist und bleibt kostenlos und werbefrei. Wenn es dir nützt, ist eine kleine Spende willkommen.",
+  "en": "You have now used Statable for about {0} hours. Statable is and stays free and without adverts. If it is useful to you, a small donation is welcome.",
+  "sie": "Sie haben Statable jetzt rund {0} Stunden benutzt. Statable ist und bleibt kostenlos und werbefrei. Wenn es Ihnen nützt, ist eine kleine Spende willkommen.",
+  "orte": [
+   "App.svelte"
+  ]
+ },
  "k72ebe9b5": {
   "de": "Ljung-Box prüft, ob die Fehler des Modells noch zusammenhängen. Die Freiheitsgrade sind Verzögerungen minus geschätzte ARMA-Parameter; Stufe und Impuls zählen nicht mit.",
   "en": "Ljung-Box checks whether the errors of the model are still related. The degrees of freedom are lags minus estimated ARMA parameters; step and pulse do not count.",
@@ -131259,6 +131338,13 @@
   "en": "No link in usual application: F compares spreads of continuous quantities, the hypergeometric counts hits when drawing without replacement.",
   "orte": [
    "lib/verteilungrand.ts"
+  ]
+ },
+ "k759dad67": {
+  "de": "Nach jeweils 10 Stunden aktiver Nutzung zeigt Statable einen Hinweis auf diese Seite. Dafür zählt Statable die aktive Zeit im lokalen Speicher des Browsers (Tab sichtbar, in den letzten 5 Minuten eine Eingabe). Diese Zahl geht an keinen Server, ist von der Besucherzählung unabhängig und lässt sich auf der Seite Unterstützen abschalten. Sie verschwindet, wenn die Websitedaten gelöscht werden.",
+  "en": "After every 10 hours of active use, Statable shows a notice pointing to that page. For this, Statable counts the active time in the browser's local storage (tab visible, an input within the last 5 minutes). This number goes to no server, is independent of the visitor counting and can be switched off on the Support page. It disappears when the site data is deleted.",
+  "orte": [
+   "seiten/Rechtliches.svelte"
   ]
  },
  "k759e25ac": {
@@ -149500,7 +149586,7 @@
  "k8606cf13": {
   "de": "Nichts zum Wiederholen - hier käme zurück, was du gerade rückgängig gemacht hast.",
   "en": "Nothing to redo - this would bring back what you just undid.",
-  "sie": "Nichts zum Wiederholen - hier käme zurück, was Sie gerade rückgängig gemacht hast.",
+  "sie": "Nichts zum Wiederholen - hier käme zurück, was Sie gerade rückgängig gemacht haben.",
   "orte": [
    "App.svelte"
   ]
@@ -158940,6 +159026,14 @@
    "hilfe/artikel-regression-pruefen.ts"
   ]
  },
+ "k8e28f9bd": {
+  "de": "Unterstützen",
+  "en": "Support",
+  "orte": [
+   "App.svelte",
+   "seiten/Start.svelte"
+  ]
+ },
  "k8e2e1229": {
   "de": [
    "Die Vorlage wurde angewendet: {0} Schritt wurde ausgeführt.",
@@ -161220,6 +161314,14 @@
   "en": "Mean {0}.",
   "orte": [
    "lib/bildtext/histogramm.ts"
+  ]
+ },
+ "k8ffe0672": {
+  "de": "Wenn Statable dir nützt, ist eine kleine Spende willkommen. Sie geht in Serverkosten und Wartung.",
+  "en": "If Statable is useful to you, a small donation is welcome. It goes towards server costs and upkeep.",
+  "sie": "Wenn Statable Ihnen nützt, ist eine kleine Spende willkommen. Sie geht in Serverkosten und Wartung.",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
   ]
  },
  "k8ffeb1ee": {
@@ -164281,6 +164383,14 @@
   "en": "AAPOR gives the 80 percent only as an example next to other standards. The standard does not prescribe a fixed threshold.",
   "orte": [
    "lernen/fragen-erheben.ts"
+  ]
+ },
+ "k92aba9b5": {
+  "de": " - öffnet die Bezahlseite von Stripe in einem neuen Tab; dort stellst du bei „Menge“ ein, wie viele Euro du geben möchtest",
+  "en": " - opens Stripe's payment page in a new tab; there, set \"Quantity\" to the number of euros you would like to give",
+  "sie": " - öffnet die Bezahlseite von Stripe in einem neuen Tab; dort stellen Sie bei „Menge“ ein, wie viele Euro Sie geben möchten",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
   ]
  },
  "k92acca3d": {
@@ -167933,6 +168043,13 @@
    "lib/berichtshilfe.ts"
   ]
  },
+ "k95d1baf6": {
+  "de": "Bezahlt wird bei Stripe in einem neuen Tab. Statable erfährt nicht, wer zahlt, und erhält keine Zahlungsdaten.",
+  "en": "Payment is made at Stripe in a new tab. Statable does not learn who pays and receives no payment data.",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
+  ]
+ },
  "k95d2327d": {
   "de": "Die Kovarianzanalyse nimmt eine gemeinsame Steigung an. Unterscheiden sich die Steigungen, hängt der Gruppenunterschied vom Ausgangsgewicht ab.",
   "en": "The analysis of covariance assumes a common slope. If the slopes differ, the group difference depends on the starting weight.",
@@ -170516,7 +170633,8 @@
   "de": "Abschalten",
   "en": "Switch off",
   "orte": [
-   "seiten/Rechtliches.svelte"
+   "seiten/Rechtliches.svelte",
+   "seiten/Unterstuetzen.svelte"
   ]
  },
  "k98793993": {
@@ -178901,6 +179019,13 @@
    "lib/leitfaden-texte.ts"
   ]
  },
+ "ka00efd75": {
+  "de": "Statable unterstützen",
+  "en": "Support Statable",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
+  ]
+ },
  "ka010459b": {
   "de": "Für diesen Fall hat der TI-84 keinen fertigen Befehl; mit binomcdf lassen sich die Wahrscheinlichkeiten von Hand zusammensetzen.",
   "en": "For this case the TI-84 has no ready-made command; with binomcdf the probabilities can be put together by hand.",
@@ -183205,6 +183330,13 @@
    "lernen/fragen-wirtschaft.ts"
   ]
  },
+ "ka3caceb2": {
+  "de": "Betrag selbst wählen",
+  "en": "Choose your own amount",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
+  ]
+ },
  "ka3cc1a45": {
   "de": "Das beschreibt die abhängige Größe. Die unabhängige Variable ist die Größe, die verglichen oder verändert wird.",
   "en": "That describes the dependent variable. The independent variable is the quantity that is compared or changed.",
@@ -183519,6 +183651,13 @@
   "en": "Statable includes the boundaries of the countries of the world and the top-level division of many countries. There are four ways:",
   "orte": [
    "hilfe/artikel.ts"
+  ]
+ },
+ "ka40c7528": {
+  "de": "Statable ist und bleibt kostenlos und werbefrei - für alle.",
+  "en": "Statable is and stays free and without adverts - for everyone.",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
   ]
  },
  "ka40d5669": {
@@ -185376,6 +185515,13 @@
   "en": "The laboratory value of a person lies outside the reference range. What does that mean?",
   "orte": [
    "lernen/fragen-nutzen-b.ts"
+  ]
+ },
+ "ka5b1950c": {
+  "de": "Nach jeweils {0} Stunden aktiver Nutzung erscheint ein kleiner Hinweis auf diese Seite. Die Zeit wird nur in diesem Browser gezählt und geht an keinen Server.",
+  "en": "After every {0} hours of active use, a small notice points to this page. The time is counted in this browser only and goes to no server.",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
   ]
  },
  "ka5b35155": {
@@ -188378,7 +188524,8 @@
    "hilfe/seiten.ts",
    "seiten/Hilfe.svelte",
    "seiten/Rechtliches.svelte",
-   "seiten/Start.svelte"
+   "seiten/Start.svelte",
+   "seiten/Unterstuetzen.svelte"
   ]
  },
  "ka860b324": {
@@ -222429,6 +222576,13 @@
    "hilfe/artikel.ts"
   ]
  },
+ "kc66e593d": {
+  "de": "Unterstützen (Spenden)",
+  "en": "Supporting Statable (donations)",
+  "orte": [
+   "seiten/Rechtliches.svelte"
+  ]
+ },
  "kc6717968": {
   "de": "Zufallsanordnungen",
   "en": "Random arrangements",
@@ -240475,6 +240629,13 @@
    "lib/spssbefehle.ts"
   ]
  },
+ "kd6c549b8": {
+  "de": "Die Erinnerung ist eingeschaltet.",
+  "en": "The reminder is switched on.",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
+  ]
+ },
  "kd6c553f7": {
   "de": "Die Verfahren für Messwiederholung erwarten je Zeitpunkt eine Spalte, Mehrebenen-Modelle eine Zeile je Messung mit Kennung und Zeitpunkt.",
   "en": "The procedures for repeated measures expect one column per time point, multilevel models one row per measurement with ID and time point.",
@@ -245040,6 +245201,13 @@
    "lernen/fragen-regression-pruefen.ts"
   ]
  },
+ "kda9775f5": {
+  "de": "Erinnerung",
+  "en": "Reminder",
+  "orte": [
+   "seiten/Unterstuetzen.svelte"
+  ]
+ },
  "kda9d5f22": {
   "de": "Fragebogen planen (Eingabemaske mit Doppeleingabe, Abgleich und Protokoll)",
   "en": "Plan a questionnaire (input mask with double entry, comparison and protocol)",
@@ -246425,7 +246593,8 @@
   "de": "Wieder einschalten",
   "en": "Switch on again",
   "orte": [
-   "seiten/Rechtliches.svelte"
+   "seiten/Rechtliches.svelte",
+   "seiten/Unterstuetzen.svelte"
   ]
  },
  "kdbc4da02": {

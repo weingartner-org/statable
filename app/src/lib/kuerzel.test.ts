@@ -45,6 +45,7 @@ export const GLOBAL_AUSNAHMEN: Record<string, string> = {
   'bausteine/DatenSuchen.svelte': 'Strg+Bild ab/auf und F3 (Umschalt+F3) gehen zum nächsten oder vorigen Treffer, wirken nur, solange gesucht wird und es Treffer gibt (Strg ist dabei, F3 ist keine Zeichentaste).',
   'seiten/Daten.svelte': 'Esc schließt den Daten-Check, wirkt nur, solange er offen ist.',
   'lib/zaehlen.ts': 'Zählt nur „Mensch ist aktiv“ (passiv, ohne Wirkung auf die Seite).',
+  'lib/spendenerinnerung.svelte.ts': 'Zählt nur „Mensch ist aktiv“ für die Spendenerinnerung nach 10 Stunden (passiv, ohne Wirkung auf die Seite, nichts geht an einen Server).',
   'bausteine/TranskriptAnsicht.svelte': 'F4, F8, F9, Umschalt+F8/F9 und Umschalt+F4 steuern die Aufnahme (stehen als extern in der Liste); wirken nur, solange ein Transkript geöffnet ist, auch im Textfeld, und nur mit geladener Aufnahme (sonst bleibt die Taste frei).',
   'seiten/Fragebogen.svelte': 'Strg+Z macht auf der Seite „Fragebogen planen“ die letzte Planänderung rückgängig (eigener Verlauf des Plans); wirkt nicht in Feldern und nicht bei offenem Dialog (Erheben 2C, Opus 08.11.).',
 };

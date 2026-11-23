@@ -5,6 +5,8 @@
    * Speichern über `aendere()` (Rückgängig), Ansagen über `sage()`, kein modales Fenster, Löschen mit Bestätigung im Text.
    */
   import { tick } from 'svelte';
+  /** Sichere id-Teile: nur Buchstaben, Ziffern, - und _; andere Zeichen als _<hex>_ (eindeutig, NVDA-Befund N3). */
+  const idt = (t: string | number): string => String(t).replace(/[^A-Za-z0-9-]/g, (ch) => `_${ch.codePointAt(0)!.toString(16)}_`);
   import { L, Lp } from '../lib/sitzung.svelte';
   import { sage } from '../lib/ansage';
   import { herunterladen } from '../lib/export';
@@ -338,11 +340,11 @@
                   {@const kopf = aufbau.kopf[ci]?.name ?? ''}
                   <td>
                     {#if jd.art === 'seite-an-seite' && ci === 0}
-                      <label class="klein" for="ko-mm-jd-z-{jd.id}-{z.schluessel}">{L(`Ergebnis aus den Zahlen für ${z.name}`, `Result from the numbers for ${z.name}`)}</label>
-                      <textarea id="ko-mm-jd-z-{jd.id}-{z.schluessel}" rows="4" value={z.zahlen ?? ''} onchange={e => speichereZahlen(jd, z, e.currentTarget.value)}></textarea>
+                      <label class="klein" for="ko-mm-jd-z-{idt(jd.id)}-{idt(z.schluessel)}">{L(`Ergebnis aus den Zahlen für ${z.name}`, `Result from the numbers for ${z.name}`)}</label>
+                      <textarea id="ko-mm-jd-z-{idt(jd.id)}-{idt(z.schluessel)}" rows="4" value={z.zahlen ?? ''} onchange={e => speichereZahlen(jd, z, e.currentTarget.value)}></textarea>
                       {#if daten.spalten.length}
-                        <label class="klein" for="ko-mm-jd-sp-{jd.id}-{z.schluessel}">{L(`Spalte für ${z.name}`, `Column for ${z.name}`)}</label>
-                        <select id="ko-mm-jd-sp-{jd.id}-{z.schluessel}" value={spaltenWahl[z.schluessel] ?? daten.spalten[0]?.name ?? ''} onchange={e => (spaltenWahl[z.schluessel] = e.currentTarget.value)}>
+                        <label class="klein" for="ko-mm-jd-sp-{idt(jd.id)}-{idt(z.schluessel)}">{L(`Spalte für ${z.name}`, `Column for ${z.name}`)}</label>
+                        <select id="ko-mm-jd-sp-{idt(jd.id)}-{idt(z.schluessel)}" value={spaltenWahl[z.schluessel] ?? daten.spalten[0]?.name ?? ''} onchange={e => (spaltenWahl[z.schluessel] = e.currentTarget.value)}>
                           {#each daten.spalten as sp (sp.name)}<option value={sp.name}>{spaltenLabel(sp.name)}</option>{/each}
                         </select>
                         <button class="k" type="button" aria-label={L(`Aus einer Spalte übernehmen, Zeile ${z.name}`, `Take from a column, row ${z.name}`)} onclick={() => uebernimmSpalte(jd, z)}>{L('Aus einer Spalte übernehmen', 'Take from a column')}</button>
@@ -356,8 +358,8 @@
                       {/if}
                       {#if istQualZelle(c)}
                         {@const wahl = c.beleg?.segment ?? ''}
-                        <label class="klein" for="ko-mm-jd-b-{jd.id}-{z.schluessel}-{c.gruppe}">{L('Belegstelle wählen', 'Choose passage')}</label>
-                        <select id="ko-mm-jd-b-{jd.id}-{z.schluessel}-{c.gruppe}" value={wahl} aria-label={L(`Belegstelle wählen für ${z.name}, ${kopf} (${c.text})`, `Choose passage for ${z.name}, ${kopf} (${c.text})`)} onchange={e => waehleBeleg(jd, z, c, kopf, e.currentTarget.value)}>
+                        <label class="klein" for="ko-mm-jd-b-{idt(jd.id)}-{idt(z.schluessel)}-{idt(c.gruppe)}">{L('Belegstelle wählen', 'Choose passage')}</label>
+                        <select id="ko-mm-jd-b-{idt(jd.id)}-{idt(z.schluessel)}-{idt(c.gruppe)}" value={wahl} aria-label={L(`Belegstelle wählen für ${z.name}, ${kopf} (${c.text})`, `Choose passage for ${z.name}, ${kopf} (${c.text})`)} onchange={e => waehleBeleg(jd, z, c, kopf, e.currentTarget.value)}>
                           <option value="">{L('keine', 'none')}</option>
                           {#each c.kandidaten ?? [] as seg (seg)}
                             {@const bt = belegText(q, seg)}

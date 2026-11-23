@@ -123,7 +123,7 @@
    "titel": "Pressuposto",
    "kurz": "Pode usar-se um método com estes dados? Todo o método assenta em pressupostos, os requisitos, por exemplo “cada pessoa pertence a exatamente um grupo”. Se não se verificam, o resultado pode induzir em erro.",
    "beispiel": "Antes de comparar dois grupos de clientes: são mesmo dois grupos separados? Os valores são números? Há valores individuais muito notórios?",
-   "vorsicht": "Uma nota não é uma proibição, mas um motivo para olhar mais de perto. Alguns pressupostos nenhum software os pode verificar, como se as pessoas responderam de forma independente umas das outras, isto é, sem combinar antes - isso vem da forma como os dados foram coletados.",
+   "vorsicht": "Uma nota não é uma proibição, mas um motivo para olhar mais de perto. Alguns pressupostos nenhum software os pode verificar, como se as pessoas responderam de forma independente umas das outras, isto é, sem combinar antes - isso vem da forma como os dados foram recolhidos.",
    "pruefen": true
   },
   "ausreisser": {
@@ -684,9 +684,9 @@
   },
   "umpolen": {
    "titel": "Inversão da codificação",
-   "kurz": "Todas as perguntas contam no mesmo sentido? Se não, inverta a codificação: uma pergunta invertida é recodificada para que “alto” signifique sempre o mesmo. Em uma escala de 1 a 5, um 1 passa a 5.",
+   "kurz": "A inversão da codificação faz parte da análise de confiabilidade? Sim: para o alfa de Cronbach e a pontuação da escala, todas as perguntas de uma escala têm que contar no mesmo sentido. Por isso, uma pergunta invertida é recodificada para que “alto” signifique sempre o mesmo. Em uma escala de 1 a 5, um 1 passa a 5.",
    "beispiel": "“Sinto frequentemente cansaço” ao lado de “Tenho muita energia”: sem inversão da codificação, anulam-se em parte na soma. O alfa (quão relacionadas estão as perguntas) desce e pode até ficar abaixo de zero.",
-   "vorsicht": "Um sinal de menos em uma carga fatorial é apenas uma pista; a formulação mostra se uma pergunta vai no sentido contrário."
+   "vorsicht": "Para a análise fatorial a inversão não é necessária: uma pergunta invertida tem então uma carga negativa, e uma carga negativa conta tanto como uma positiva. A formulação mostra se uma pergunta vai no sentido contrário."
   },
   "eingeschraenkte-streuung": {
    "titel": "Amplitude restringida (restrição de amplitude)",

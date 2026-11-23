@@ -11,7 +11,7 @@
 </script>
 
 <!-- Der eine Hinweistext, auf den jeder Fachwort-Knopf zeigt (aria-describedby); der Verlinker lässt `.nur-vorleser` aus. -->
-<p id={FACHWORT_HINWEIS_ID} class="nur-vorleser">{L('Fachbegriff, Eingabe zeigt die Erklärung', 'Technical term, press Enter to show the explanation')}</p>
+<p id={FACHWORT_HINWEIS_ID} class="nur-vorleser" aria-hidden="true">{L('Fachbegriff, Eingabe zeigt die Erklärung', 'Technical term, press Enter to show the explanation')}</p>
 
 <dialog bind:this={dlg} class="begriff-popup" aria-label={L('Rand: Erklärungen', 'Margin: explanations')} onclose={beendeBegriffe} oncancel={(e) => { if (begriffe.stapel.length > 1) { e.preventDefault(); zurueckBegriff(); } }}>
   <div class="dialog-innen"><div class="dialog-kopf"><div class="notiz im-dialog rand-kontext">{#if an}<BegriffsInhalt basis={false} />{/if}</div>

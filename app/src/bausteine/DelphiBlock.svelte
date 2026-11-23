@@ -76,7 +76,7 @@
     {#if fehler}<p class="heft-text" style="color:var(--fehler, #b3261e)">{fehlerText(fehler)}</p>
     {:else if ok}
       <p class="heft-text">{L(`${ok.bew.length} Fachleute, ${spalten.length} Aussagen${ok.weg ? ` (${ok.weg} Zeilen ganz ohne Bewertung bleiben außen vor)` : ''}. ${regelGesetzt ? `Nach Ihrer Regel erreichen ${nKons} von ${spalten.length} Aussagen Konsens.` : 'Noch keine Regel gesetzt: Es wird kein Konsens ermittelt.'}`, `${ok.bew.length} experts, ${spalten.length} statements${ok.weg ? ` (${ok.weg} rows without any rating are left out)` : ''}. ${regelGesetzt ? `By your rule ${nKons} of ${spalten.length} statements reach consensus.` : 'No rule set yet: no consensus is determined.'}`)}</p>
-      <div style="overflow-x:auto"><table class="apa" style="margin:var(--a2) 0">
+      <div style="overflow-x:auto" role="region" tabindex="0" aria-label={L('Bewertungen je Aussage, Tabelle', 'Ratings per statement, table')}><table class="apa" style="margin:var(--a2) 0">
         <caption><b>{L('Bewertungen je Aussage', 'Ratings per statement')}</b></caption>
         <thead><tr><th scope="col" style="text-align: start">{L('Aussage', 'Statement')}</th><th scope="col">n</th><th scope="col">Median</th><th scope="col">Q1</th><th scope="col">Q3</th><th scope="col">IQR</th><th scope="col">{L('Mittelwert', 'Mean')}</th><th scope="col">SD</th><th scope="col">{L('Anteil im Bereich', 'Share in range')}</th><th scope="col">{L('Konsens', 'Consensus')}</th></tr></thead>
         <tbody>{#each zeilen as r, j (j)}<tr><th scope="row" style="text-align: start">{nm(spalten[j]!)}</th><td style="text-align:end">{r.n}</td><td style="text-align:end">{z(r.median)}</td><td style="text-align:end">{z(r.q1)}</td><td style="text-align:end">{z(r.q3)}</td><td style="text-align:end">{z(r.iqr)}</td><td style="text-align:end">{z(r.mittel)}</td><td style="text-align:end">{z(r.sd)}</td><td style="text-align:end">{pr(r.anteil)}</td><td>{regelGesetzt ? (r.konsens ? L('ja', 'yes') : L('nein', 'no')) : '-'}</td></tr>{/each}</tbody>
@@ -93,5 +93,6 @@
 <style>
   .delphi-zeile { display: flex; flex-wrap: wrap; gap: var(--a2) var(--a4); align-items: end; }
   .delphi-zeile .eingabe { max-width: 220px; margin: 0; }
+  .delphi-zeile .eingabe input { min-height: var(--ziel); box-sizing: border-box; }
   .delphi .auswahl { border: 1px solid var(--linie); padding: var(--a2) var(--a3); min-width: 0; margin: 0; }
 </style>

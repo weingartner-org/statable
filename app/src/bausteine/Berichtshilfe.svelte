@@ -120,7 +120,7 @@
             {#each zeilen as p, i (p.kennung)}
               {@const st = punktStand(q, liste, p.kennung)}
               {#if i === 0 || zeilen[i - 1]!.bereich() !== p.bereich()}
-                <tr class="bereich"><th scope="colgroup" colspan="6">{p.bereich()}</th></tr>
+                <tr class="bereich"><td colspan="6">{p.bereich()}</td></tr>
               {/if}
               <tr id="ko-bh-{p.kennung}">
                 <th scope="row">{p.nummer}</th>
@@ -171,7 +171,7 @@
   .tab caption { text-align: start; font-weight: 600; padding-bottom: var(--a2); }
   .tab th, .tab td { text-align: start; padding: var(--a2) var(--a3); border-bottom: 1px solid var(--linie); vertical-align: top; overflow-wrap: break-word; }
   .tab td input, .tab td textarea { width: 100%; min-width: 8rem; box-sizing: border-box; font: inherit; min-height: 24px; }
-  .bereich th { font-weight: 650; padding-top: var(--a3); }
+  .bereich td { font-weight: 650; padding-top: var(--a3); }
   .begriff { color: var(--tinte-2); }
   .tipp { color: var(--tinte-2); }
   .tipp + .tipp { margin-top: var(--a1); }

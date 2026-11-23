@@ -10,3 +10,14 @@ describe('Doppelpunkt nach Beschriftungen', () => {
     for (const sp of ['de', 'en', 'uk', 'el'] as const) { s.einst.sprache = sp; expect(dp()).toBe(':'); }
   });
 });
+
+/** 23.11. Meldung Statable (Polen): „Dalej:: …“ - der Knopf „Weiter mit“ hängt selbst einen Doppelpunkt an, die Übersetzung darf keinen haben (cs, hu, pl, uk hatten ihn). */
+describe('Beschriftung „Weiter mit“ ohne eigenen Doppelpunkt', () => {
+  it('in keiner Sprache endet die Übersetzung auf einen Doppelpunkt', () => {
+    const dateien = import.meta.glob('./sprachen/??.json', { eager: true, import: 'default' }) as Record<string, Record<string, string>>;
+    for (const [datei, tabelle] of Object.entries(dateien)) {
+      const t = tabelle['k2bde8d01'];
+      if (t) expect(t.trim().endsWith(':') || t.trim().endsWith('：'), datei).toBe(false);
+    }
+  });
+});

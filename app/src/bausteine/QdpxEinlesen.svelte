@@ -149,7 +149,7 @@
   </div>
   <div class="knopfzeile"><button class="k" id="iv-qdpx-beispiel" type="button" aria-disabled={lade.aktiv ? 'true' : undefined} onclick={() => { if (!lade.aktiv) void beispielLaden(); }}>{L('Beispielprojekt mit zwei Kodierenden laden (erfunden)', 'Load example project with two coders (invented)')}</button></div>
   <p class="hilfe">{L('Erfundenes Beispiel für die Übung: drei Interviews, drei Fälle, zwei Kodierende. Personen und Aussagen sind ausgedacht.', 'Invented example for practice: three interviews, three cases, two coders. People and statements are made up.')}</p>
-  <div class="knopfzeile"><button class="k" id="iv-qdpx-speichern" type="button" aria-disabled={hatInhalt ? undefined : 'true'} aria-describedby="iv-qdpx-speichern-hilfe" onclick={alsQdpx}>{L('Als REFI-QDA-Projekt speichern (.qdpx)', 'Save as REFI-QDA project (.qdpx)')}</button></div>
+  <div class="knopfzeile"><button class="k" id="iv-qdpx-speichern" type="button" aria-disabled={hatInhalt ? undefined : 'true'} onclick={alsQdpx}>{L('Als REFI-QDA-Projekt speichern (.qdpx)', 'Save as REFI-QDA project (.qdpx)')}</button></div>
   <div id="iv-qdpx-speichern-hilfe" class="hilfe">
     <p>{L('Diese Teile bleiben nur in der Projektdatei:', 'These parts stay only in the project file:')}</p>
     <ul>{#each NICHT_IN_QDPX[sprache() === 'de' ? 'de' : 'en'] as t (t)}<li>{t}</li>{/each}</ul>

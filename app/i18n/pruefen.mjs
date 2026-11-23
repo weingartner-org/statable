@@ -57,7 +57,9 @@ const sperrDatei = join(DOCS, `sperrliste-${code}.txt`);
 const sperre = existsSync(sperrDatei) ? readFileSync(sperrDatei, 'utf8').split('\n').map(z => z.replace(/#.*/, '').trim()).filter(Boolean) : [];
 
 const platz = t => [...t.matchAll(/\{(\d+)\}/g)].map(m => m[1]).sort().join(',');
-const tags = t => [...t.matchAll(/<\/?([a-z][a-z0-9]*)\b/gi)].map(m => m[0].toLowerCase()).sort().join(' ');
+// Nur echte HTML-Tags: Transkript-Klammern wie „<School A>“ oder „<name>“ sind Text und dürfen übersetzt werden.
+const HTML_TAGS = new Set(['a', 'b', 'br', 'code', 'em', 'i', 'kbd', 'li', 'ol', 'p', 'small', 'span', 'strong', 'sub', 'sup', 'ul']);
+const tags = t => [...t.matchAll(/<\/?([a-z][a-z0-9]*)\b/gi)].filter(m => HTML_TAGS.has(m[1].toLowerCase())).map(m => m[0].toLowerCase()).sort().join(' ');
 const ZEICHEN = /(?<![\p{L}\d])(?:SD|SE|Mdn|df|M|p|N|n|F|R²|t|r|d)(?=\s*[(=<>≤≥])/gu;
 const zeichen = t => [...new Set(t.match(ZEICHEN) ?? [])];
 const kyrill = /\p{Script=Cyrillic}/u, griech = /\p{Script=Greek}/u, latein = /[A-Za-z]/;

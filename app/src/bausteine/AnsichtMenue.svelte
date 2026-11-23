@@ -39,7 +39,7 @@
 <div class="ansicht-menue" bind:this={ort}>
   <button class="k leise" type="button" bind:this={knopf} aria-expanded={offen} aria-controls="am-feld" aria-keyshortcuts="Alt+K"
     aria-label={L('Aa Ansicht', 'Aa View')} {...{ 'aria-description': L('Ansicht: Schriftgröße, Farben und Sprache', 'View: text size, colors and language') }} data-tipp={offen ? undefined : L('Ansicht: Schriftgröße, Farben und Kontrast, Sprache (Alt+K für Farben)', 'View: text size, colors and contrast, language (Alt+K for colors)')}
-    onclick={() => (offen = !offen)}><span class="am-aa" aria-hidden="true">Aa</span><span class="nur-breit" aria-hidden="true">{L('Ansicht', 'View')}</span><Icon n="winkel" k="am-winkel" /></button>
+    onclick={() => (offen = !offen)}><span class="am-aa">Aa</span>{" "}<span class="nur-breit">{L('Ansicht', 'View')}</span><Icon n="winkel" k="am-winkel" /></button>
   {#if offen}
     <div class="am-feld klappt" transition:rutsch id="am-feld" role="group" aria-label={L('Ansicht', 'View')}>
       <section class="am-gruppe am-groesse" aria-labelledby="am-t-groesse"><h2 class="am-titel" id="am-t-groesse">{L('Schriftgröße', 'Text size')}</h2><Groesse flach /></section>

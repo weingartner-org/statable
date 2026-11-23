@@ -24,6 +24,8 @@
   import Bericht from './seiten/Bericht.svelte';
   import Einstellungen from './seiten/Einstellungen.svelte';
   import Hilfe from './seiten/Hilfe.svelte';
+  import Unterstuetzen from './seiten/Unterstuetzen.svelte';
+  import { spendenHinweis, schliesseSpendenHinweis } from './lib/spendenerinnerung.svelte';
   import Planen from './seiten/Planen.svelte';
   import FragebogenPlanen from './seiten/Fragebogen.svelte';
   import InterviewsSeite from './seiten/Interviews.svelte';
@@ -99,6 +101,7 @@
   /** Karten ohne Live-Region: Ansage genau einmal beim Erscheinen. Wechsel auf einen anderen Tab mit Konflikt oder Datenverlust-Gefahr ist dringend. */
   $effect(() => { if (zweiterTab) sage(textZweiterTab(), 'dringend'); });
   $effect(() => { if (s.konflikt) sage(textKonflikt(), 'dringend'); });
+  $effect(() => { if (spendenHinweis.offen) sage(d(`Du hast Statable jetzt rund ${spendenHinweis.stunden} Stunden benutzt. Eine kleine Spende ist willkommen; der Hinweis steht unten im Bild.`, `Sie haben Statable jetzt rund ${spendenHinweis.stunden} Stunden benutzt. Eine kleine Spende ist willkommen; der Hinweis steht unten im Bild.`, `You have now used Statable for about ${spendenHinweis.stunden} hours. A small donation is welcome; the notice is at the bottom of the screen.`), 'hoeflich'); });
   $effect(() => { if (hinweis.offen) sage(textDateiHinweis()); });
   $effect(() => ladeBegriffsIndex(aktuelleSprache()));
   onMount(() => {
@@ -229,7 +232,7 @@
       {#if s.projekt}
         <button class="k leise nur-symbol" id="rueck" type="button" aria-label={L('Rückgängig', 'Undo')} data-tipp={s.verlauf.length ? L(`Rückgängig: ${s.verlauf.at(-1)!.text}`, `Undo: ${s.verlauf.at(-1)!.text}`) : L('Noch nichts zum Rückgängigmachen - nur Änderungen an den Daten lassen sich zurücknehmen.', 'Nothing to undo yet - only changes to the data can be undone.')} aria-disabled={s.verlauf.length ? undefined : 'true'}
           onclick={() => (s.verlauf.length ? rueckgaengig() : melde(L('Noch nichts zum Rückgängigmachen.', 'Nothing to undo yet.')))}><Icon n="rueck" /></button>
-        <button class="k leise nur-symbol" id="wieder" type="button" aria-label={L('Wiederholen', 'Redo')} data-tipp={s.wieder.length ? L(`Wiederholen: ${s.wieder.at(-1)!.text}`, `Redo: ${s.wieder.at(-1)!.text}`) : d('Nichts zum Wiederholen - hier käme zurück, was du gerade rückgängig gemacht hast.', 'Nichts zum Wiederholen - hier käme zurück, was Sie gerade rückgängig gemacht hast.', 'Nothing to redo - this would bring back what you just undid.')} aria-disabled={s.wieder.length ? undefined : 'true'}
+        <button class="k leise nur-symbol" id="wieder" type="button" aria-label={L('Wiederholen', 'Redo')} data-tipp={s.wieder.length ? L(`Wiederholen: ${s.wieder.at(-1)!.text}`, `Redo: ${s.wieder.at(-1)!.text}`) : d('Nichts zum Wiederholen - hier käme zurück, was du gerade rückgängig gemacht hast.', 'Nichts zum Wiederholen - hier käme zurück, was Sie gerade rückgängig gemacht haben.', 'Nothing to redo - this would bring back what you just undid.')} aria-disabled={s.wieder.length ? undefined : 'true'}
           onclick={() => (s.wieder.length ? wiederholen() : melde(L('Nichts zum Wiederholen.', 'Nothing to redo.')))}><Icon n="wieder" /></button>
         <span class="kopf-trenner" aria-hidden="true"></span>
       {/if}
@@ -277,6 +280,7 @@
   {:else if seite === 'bericht' && datenDa && !oeffnet}<Bericht />   <!-- erst nach dem Laden: sonst hielt er alle Blätter für veraltet (Prüfung G11) -->
   {:else if seite === 'einstellungen'}<Einstellungen />
   {:else if seite === 'hilfe'}<Hilfe id={teil} />
+  {:else if seite === 'unterstuetzen'}<Unterstuetzen />
   {:else if seite === 'planen'}<Planen />
   {:else if seite === 'fragebogen'}<FragebogenPlanen />
   {:else if seite === 'interviews'}<InterviewsSeite />
@@ -324,6 +328,12 @@
       <button class="k" type="button" onclick={hinweisSpeichern}>{L('Jetzt speichern', 'Save now')}</button>
       <button class="k" type="button" onclick={nichtMehrErinnern}>{L('Nicht mehr erinnern', "Don't remind me")}</button>
       <button class="k nur-symbol" type="button" aria-label={L('Hinweis schließen', 'Dismiss')} onclick={schliesseHinweis}><Icon n="x" /></button></div>
+  {/if}
+  {#if spendenHinweis.offen}
+    <div class="toast" role="group" aria-label={L('Unterstützen', 'Support')} style="flex-wrap:wrap"><span style="flex-basis:18em">{d(`Du hast Statable jetzt rund ${spendenHinweis.stunden} Stunden benutzt. Statable ist und bleibt kostenlos und werbefrei. Wenn es dir nützt, ist eine kleine Spende willkommen.`, `Sie haben Statable jetzt rund ${spendenHinweis.stunden} Stunden benutzt. Statable ist und bleibt kostenlos und werbefrei. Wenn es Ihnen nützt, ist eine kleine Spende willkommen.`, `You have now used Statable for about ${spendenHinweis.stunden} hours. Statable is and stays free and without adverts. If it is useful to you, a small donation is welcome.`)}</span>
+      <a class="k" href="#unterstuetzen" onclick={schliesseSpendenHinweis}>{L('Unterstützen', 'Support')}</a>
+      <button class="k" type="button" onclick={schliesseSpendenHinweis}>{L('Nicht jetzt', 'Not now')}</button>
+      <button class="k nur-symbol" type="button" aria-label={L('Hinweis schließen', 'Dismiss')} onclick={schliesseSpendenHinweis}><Icon n="x" /></button></div>
   {/if}
   {#if zweiterTab}
     <div class="toast"><span>{textZweiterTab()}</span><button class="k nur-symbol" type="button" aria-label={L('Hinweis schließen', 'Dismiss')} onclick={() => (zweiterTab = false)}><Icon n="x" /></button></div>

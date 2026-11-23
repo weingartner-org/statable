@@ -8,12 +8,15 @@ import { ladeSprache } from './i18n/laufzeit';
 import { ladeTexte } from './lib/texte';
 import { OFFLINE } from './lib/offline';
 import { zaehleStart } from './lib/zaehlen';
+import { starteSpendenzaehler } from './lib/spendenerinnerung.svelte';
 
 // Eine Sprache außer Deutsch und Englisch steht in einer eigenen Datei: vor dem Start laden (der Ladebildschirm steht schon). Geht das nicht, Englisch.
 try { await Promise.all([ladeSprache(s.einst.sprache), ladeTexte(s.einst.sprache)]); } catch { s.einst.sprache = 'en'; }
 mount(App, { target: document.getElementById('app')! });
 // Besucherzählung (nur statable.eu, abschaltbar auf der Datenschutzseite; lib/zaehlen.ts)
 zaehleStart(() => s.einst.sprache);
+// Zeit für die Spendenerinnerung (nur am Gerät, lib/spende.ts)
+starteSpendenzaehler();
 
 // Ladebildschirm aus index.html: bleibt, bis die Ladeanimation fertig ist (korallener Punkt bei 1,6 s ihres 3,2-s-Takts),
 // und dann noch 0,5 s. Gemessen an der Uhr der Animation selbst, nicht ab dem Seitenaufruf - sie startet erst, wenn das Bild steht.

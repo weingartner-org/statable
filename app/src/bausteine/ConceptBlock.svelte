@@ -94,7 +94,7 @@
         <figcaption>{L('Jeder Punkt ist eine Aussage (Nummer = Reihenfolge der Spalten). Nahe Punkte wurden oft zusammengelegt. Form und Linienart (Kreis, Quadrat, Dreieck, Raute, dann wieder von vorn) unterscheiden die Gruppen; die Zahlen der Gruppen stehen in der Tabelle.', 'Each point is a statement (number = order of the columns). Close points were often put together. Shape tells the groups apart (circle, square, triangle, diamond, then again from the start); the group numbers are in the table.')}</figcaption>
       </figure>
       {#if bt}<BildBeschreibung {...bt} />{/if}
-      <div style="overflow-x:auto"><table class="apa" style="margin:var(--a2) 0">
+      <div style="overflow-x:auto" role="region" tabindex="0" aria-label={L('Tabelle der Aussagen und Gruppen', 'Table of statements and groups')}><table class="apa" style="margin:var(--a2) 0">
         <caption><b>{L('Aussagen, Gruppe und Lage auf der Karte', 'Statements, group and position on the map')}</b></caption>
         <thead><tr><th scope="col" style="text-align: start">{L('Aussage', 'Statement')}</th><th scope="col">{L('Gruppe', 'Group')}</th><th scope="col">{L('Karte waagerecht', 'Map horizontal')}</th><th scope="col">{L('Karte senkrecht', 'Map vertical')}</th></tr></thead>
         <tbody>{#each e.gruppe as g, a (a)}<tr><th scope="row" style="text-align: start">{a + 1}. {nm(spalten[a]!)}</th><td style="text-align:end">{g}</td><td style="text-align:end">{z(e.koord[a]![0]!)}</td><td style="text-align:end">{z(e.koord[a]![1]!)}</td></tr>{/each}</tbody>

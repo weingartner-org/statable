@@ -71,13 +71,14 @@ export function exportWarnungen(q: QualProjekt, weg: ExportWeg, faelle: string[]
   const de = sprache === 'de';
   const aus: ExportWarnung[] = [];
   const gewaehlt = new Set(faelle);
+  const fallWort = (n: string, w: string) => (new RegExp('^' + w + '\b', 'i').test(n.trim()) ? n : `${w} ${n}`);
   for (const f of q.faelle) {
     if (!gewaehlt.has(f.id)) continue;
     const e = aktuelleEinwilligung(q, f.id);
     if (!e) {
       aus.push({
         art: 'keine-einwilligung', fall: f.id, stand: 'fehlt',
-        satz: de ? `Für Fall ${f.name} ist keine Einwilligung eingetragen. Trotzdem exportieren?` : `No consent is entered for case ${f.name}. Export anyway?`
+        satz: de ? `Für ${fallWort(f.name, 'Fall')} ist keine Einwilligung eingetragen. Trotzdem exportieren?` : `No consent is entered for ${fallWort(f.name, 'case')}. Export anyway?`
       });
       continue;
     }
@@ -89,7 +90,7 @@ export function exportWarnungen(q: QualProjekt, weg: ExportWeg, faelle: string[]
     };
     const tn = standVon(e, 'teilnahme');
     if (tn === 'widerrufen' || tn === 'abgelehnt') {
-      aus.push(mach('teilnahme', 'teilnahme', tn, de ? `Der Export enthält Text von Fall ${f.name}. Die Teilnahme ist nicht mehr zugestimmt` : `The export contains text from case ${f.name}. Participation is no longer agreed`));
+      aus.push(mach('teilnahme', 'teilnahme', tn, de ? `Der Export enthält Text von ${fallWort(f.name, 'Fall')}. Die Teilnahme ist nicht mehr zugestimmt` : `The export contains text from ${fallWort(f.name, 'case')}. Participation is no longer agreed`));
     }
     if (weg === 'archiv') {
       const ar = standVon(e, 'archivierung');

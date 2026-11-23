@@ -85,6 +85,35 @@ routerAdd("POST", "/api/statable/melden", (e) => {
     }
   }
 
+  // Teamraum: dieselbe Meldung zusätzlich in die Lernplattform legen (Sammlung tt_meldungen, Herkunft „Statable“), damit sie dort
+  // wie die Meldungen der anderen Apps erscheint (Johannes 23.11.2026). Beide Server laufen auf demselben Rechner; die Route ist die
+  // öffentliche Melde-Route der Lernplattform (nimmt Text, Bild und Technik). Fällt das aus, bleibt die Meldung hier und in der Mail.
+  // ⚠️ Das Bild kommt aus dem gespeicherten Datensatz (Dateiname), nicht aus dem Upload - der ist hier nicht noch einmal lesbar.
+  let imTeamraum = false;
+  const teamUrl = $os.getenv("STATABLE_TEAM_URL") || (nichtMailen && $os.getenv("STATABLE_MELDEN_OHNE_MAIL") === "1" ? "" : "http://127.0.0.1:8090");
+  if (abgelegt && teamUrl) {
+    try {
+      const rec = e.app.findRecordById("meldungen", recId);
+      const form = new FormData();
+      form.append("text", (art === "barriere" ? "[Barriere] " : "") + text);
+      form.append("art", art === "wunsch" ? "wunsch" : "fehler");
+      form.append("seite", seite);
+      form.append("herkunft", "Statable");
+      form.append("technik", technik);
+      if (antwort) form.append("adresse", antwort);
+      const datei = rec.getString("bild");
+      if (datei) {
+        const bytes = $os.readFile(e.app.dataDir() + "/storage/" + rec.baseFilesPath() + "/" + datei);
+        form.append("bild", $filesystem.fileFromBytes(bytes, datei));
+      }
+      const r = $http.send({ url: teamUrl + "/api/sensorik/rueckmeldung", method: "POST", body: form, timeout: 20 });
+      imTeamraum = r.statusCode >= 200 && r.statusCode < 300;
+      if (!imTeamraum) e.app.logger().warn("[melden] Teamraum lehnt ab", "status", String(r.statusCode));
+    } catch (err) {
+      e.app.logger().warn("[melden] Teamraum nicht erreichbar", "error", String(err));
+    }
+  }
+
   if (!abgelegt && !gemailt) return e.json(500, { error: "nicht-angekommen" });
   return e.json(200, { ok: true });
 });

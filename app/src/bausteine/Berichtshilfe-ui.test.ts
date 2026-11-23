@@ -17,7 +17,9 @@ describe('Berichtshilfe', () => {
     expect(h).toMatch(/<table[^>]*>\s*<caption>COREQ: Punkt, Stand, Fundstelle, Notiz und was Statable weiß<\/caption>/);
     expect((h.match(/<th scope="col">/g) ?? []).length).toBe(6);
     expect((h.match(/<th scope="row">/g) ?? []).length).toBe(32);
-    expect((h.match(/<th scope="colgroup" colspan="6">/g) ?? []).length).toBe(3);
+    // NVDA-Befund M1 (15.11.): Bereichszeilen als schlichte Zelle, nicht scope="colgroup" (NVDA hängte alle Bereichsnamen an jeden Spaltenkopf).
+    expect((h.match(/<tr class="bereich"><td colspan="6">/g) ?? []).length).toBe(3);
+    expect(h).not.toContain('scope="colgroup"');
     expect((h.match(/<fieldset class="stand">/g) ?? []).length).toBe(32);
     expect(h).toContain('<legend class="nur-sr">Stand zu Punkt 23: Bekamen Teilnehmende ihr Transkript zum Ansehen oder Berichtigen?</legend>');
     expect(h).toMatch(/<label class="nur-sr" for="ko-bh-f-coreq-01">Fundstelle zu Punkt 1<\/label>/);

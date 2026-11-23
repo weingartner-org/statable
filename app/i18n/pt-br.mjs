@@ -25,7 +25,7 @@ const sortiert = o => Object.fromEntries(Object.entries(o).sort(([a], [b]) => (a
 const WENDUNGEN = [
   ['o ecrã', 'a tela'], ['no ecrã', 'na tela'], ['do ecrã', 'da tela'], ['ao ecrã', 'à tela'], ['pelo ecrã', 'pela tela'],
   ['este ecrã', 'esta tela'], ['esse ecrã', 'essa tela'], ['um ecrã', 'uma tela'], ['os ecrãs', 'as telas'], ['nos ecrãs', 'nas telas'],
-  ['ecrã inteiro', 'tela cheia'], ['ecrãs pequenos', 'telas pequenas'], ['ecrã pequeno', 'tela pequena'], ['leitor de ecrã', 'leitor de tela'], ['leitores de ecrã', 'leitores de tela'],
+  ['ecrã inteiro', 'tela cheia'], ['ecrã estreito', 'tela estreita'], ['ecrãs estreitos', 'telas estreitas'], ['ecrãs pequenos', 'telas pequenas'], ['ecrã pequeno', 'tela pequena'], ['leitor de ecrã', 'leitor de tela'], ['leitores de ecrã', 'leitores de tela'],
   ['o rácio', 'a razão'], ['do rácio', 'da razão'], ['um rácio', 'uma razão'], ['rácio de chances', 'razão de chances'], ['rácio de verosimilhança', 'razão de verossimilhança'],
   ['grupo de controlo', 'grupo de controle'], ['valores omissos', 'valores ausentes'], ['Valores omissos', 'Valores ausentes'], ['valor omisso', 'valor ausente'],
   ['dados em falta', 'dados ausentes'], ['valores em falta', 'valores ausentes'], ['valor em falta', 'valor ausente'],
@@ -68,7 +68,7 @@ const WOERTER = [
   ['acontecimento', 'evento'], ['acontecimentos', 'eventos'], ['desfasamento', 'defasagem'], ['desfasamentos', 'defasagens'], ['truncagem', 'truncamento'], ['alisamento', 'suavização'], ['predefinição', 'padrão'], ['predefinições', 'padrões'], ['predefinido', 'padrão'], ['predefinida', 'padrão'],
   ['detetar', 'detectar'], ['deteta', 'detecta'], ['detetam', 'detectam'], ['detetado', 'detectado'], ['detetada', 'detectada'], ['detetados', 'detectados'], ['detetadas', 'detectadas'], ['deteção', 'detecção'], ['deteções', 'detecções'],
   ['grelha', 'grade'], ['grelhas', 'grades'], ['centragem', 'centralização'], ['emparelhado', 'pareado'], ['emparelhada', 'pareada'], ['emparelhados', 'pareados'], ['emparelhadas', 'pareadas'], ['emparelhar', 'parear'], ['emparelhamento', 'pareamento'],
-  ['sobredispersão', 'superdispersão'], ['recolha', 'coleta'], ['recolhas', 'coletas'], ['recolhido', 'coletado'], ['recolhida', 'coletada'], ['recolhidos', 'coletados'], ['recolhidas', 'coletadas'], ['recolher', 'coletar'],
+  ['sobredispersão', 'superdispersão'], ['recolha', 'coleta'], ['recolhas', 'coletas'], ['recolher', 'coletar'],
   ['cinzento', 'cinza'], ['cinzenta', 'cinza'], ['desligado', 'desativado'], ['desligada', 'desativada'], ['premido', 'pressionado'], ['premida', 'pressionada'], ['artefacto', 'artefato'], ['artefactos', 'artefatos'], ['ronda', 'rodada'], ['rondas', 'rodadas'], ['porquê', 'por quê'],
   ['carateres', 'caracteres'], ['caráter', 'caractere'], ['píxeis', 'pixels'], ['telefónica', 'telefônica'], ['telefónico', 'telefônico'], ['incómodo', 'incômodo'], ['enviesamento', 'viés'], ['enviesado', 'viesado'], ['enviesada', 'viesada'],
   ['comboio', 'trem'], ['comboios', 'trens'], ['autocarro', 'ônibus'], ['autocarros', 'ônibus'], ['pára', 'para'],
@@ -99,7 +99,7 @@ const WOERTER = [
   ['elevado ao poder', 'elevado à potência'], ['elevada ao poder', 'elevada à potência'], ['cursores', 'controles deslizantes'],
 ];
 // Wörter, die das Skript nicht anfasst, aber zur Durchsicht vormerkt (Bedeutung hängt am Satz)
-const VORMERKEN = /\b(guarda|guardam|transferir|Transferir|transferência|ligação|ligações|sítio|carregar|carregue|definições|eliminar|apagar|anular|Anular|propina|licenciatura|cadeira|unidade curricular|autocarro|equipamento|ecrã|rácio|razão|tela|telas)\b/u;
+const VORMERKEN = /\b(guarda|guardam|transferir|Transferir|transferência|ligação|ligações|sítio|carregar|carregue|definições|eliminar|apagar|anular|Anular|propina|licenciatura|cadeira|unidade curricular|autocarro|equipamento|ecrã|rácio|razão|tela|telas|recolhido|recolhida|recolhidos|recolhidas)\b/u;
 
 const grossAnfang = (wort, ersatz) => (wort[0] === wort[0].toUpperCase() && wort[0] !== wort[0].toLowerCase() ? ersatz[0].toUpperCase() + ersatz.slice(1) : ersatz);
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -120,13 +120,28 @@ const ANFANG = /^(\s*)A (\p{Ll}+?)(ar|er|ir)(?=[\s…])/u;
 const gerund = t => t.replace(GERUND, (m, e, stamm, end) => (NICHT_INF.has(stamm + end) ? m : `${e} ${gerForm(stamm, end)}`))
   .replace(ANFANG, (m, ws, stamm, end) => (NICHT_INF.has(stamm + end) ? m : ws + gerForm(stamm, end)[0].toUpperCase() + gerForm(stamm, end).slice(1)));
 
+// geschützt: Dezimal-/Tausender-/Feldtrenner, Trennzeichen in Anführung („separador “;”“, „separador “{0}”“), „ela própria o separador“
+const SEP_SCHUTZ = /ela própria o separador|(?:caracteres? )?[Ss]eparador(?:es)?(?= (?:decimal|decimais|de milhares|de casas|de campos|de colunas|de valores|de listas|de texto)|\s*[“"«]\s*(?:[^\p{L}”"»]{1,3}|\{\d+\})\s*[”"»]|\s*[“"«]\s*$)|como separador(?=\s*[.;]|\s*$)/gu;
+// Geschlecht nach „separador“ → „aba“ (die Regel ändert nur das Wort): o aba → a aba, aba aberto → aba aberta
+const ABA_GESCHLECHT = [
+  ['um dos nove abas', 'uma das nove abas'], ['dos nove abas', 'das nove abas'], ['os outros abas', 'as outras abas'], ['outros abas', 'outras abas'],
+  ['os abas', 'as abas'], ['dos abas', 'das abas'], ['nos abas', 'nas abas'], ['aos abas', 'às abas'], ['pelos abas', 'pelas abas'], ['estes abas', 'estas abas'],
+  ['o aba', 'a aba'], ['do aba', 'da aba'], ['no aba', 'na aba'], ['ao aba', 'à aba'], ['um aba', 'uma aba'], ['este aba', 'esta aba'], ['esse aba', 'essa aba'],
+  ['do outro aba', 'da outra aba'], ['deste aba', 'desta aba'], ['neste aba', 'nesta aba'], ['desse aba', 'dessa aba'], ['nesse aba', 'nessa aba'], ['outro aba', 'outra aba'], ['pelo aba', 'pela aba'],
+  ['aba aberto', 'aba aberta'], ['aba próprio', 'aba própria'], ['aba ativo', 'aba ativa'], ['abas abertos', 'abas abertas'], ['abas próprios', 'abas próprias'],
+].map(([a, b]) => [new RegExp(B + `[${a[0]}${a[0].toUpperCase()}]${esc(a.slice(1))}` + E, 'gu'), b]);
+
 export function zuBr(t) {
   if (typeof t !== 'string') return Object.fromEntries(Object.entries(t).map(([f, x]) => [f, zuBr(x)]));
   // Platzhalter, Tags und Code nicht anfassen: nur Textteile außerhalb von <…> und {n}
   return t.split(/(<[^>]+>|\{\d+\})/).map((teil, i) => {
     if (i % 2) return teil;
-    let x = gerund(teil);
+    // „separador“ als Trennzeichen (Dezimal-, Tausender-, Feld-, Zeichen) bleibt; nur der Reiter wird „aba“
+    const schutz = [];
+    let x = gerund(teil).replace(SEP_SCHUTZ, m => `\u0001${schutz.push(m) - 1}\u0002`);
     for (const [re, b] of REGELN) x = x.replace(re, w => grossAnfang(w, b));
+    x = x.replace(/\u0001(\d+)\u0002/g, (m, n) => schutz[Number(n)]);
+    for (const [re, b] of ABA_GESCHLECHT) x = x.replace(re, w => grossAnfang(w, b));
     return x.replace(/«\s?/g, '“').replace(/\s?»/g, '”');
   }).join('');
 }

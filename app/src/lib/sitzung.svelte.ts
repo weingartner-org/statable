@@ -96,6 +96,8 @@ export type KursZiel = 'ftest' | 'anteil' | 'varianz' | 'regelkarte' | 'zaehlkar
 export interface Blatt {
   id: string; titel: string; art: string; l1: string | null; l2: string | null; l3?: string[];
   syntax: string; items: OutputItem[]; ergebnis: unknown; imBericht: boolean; notiz: string; zeit: number;
+  /** Reiter aus einem REGRESSION-Befehl: Punkte fürs Streudiagramm zur Zeit des Laufs (lib/regstreu.ts); fehlt bei älteren Reitern, dann aus den aktuellen Daten */
+  regstreu?: { x: string; y: string; punkte: [number, number][] }[];
   /** Feld aus „Wie im Kurs“, mit dem das Blatt angelegt wurde (F-Test, Binomialtest, χ²-Test für eine Varianz); fehlt = über die Karte gewählt. */
   kursZiel?: KursZiel;
   /** Diagramm-Einstellungen (nur Gruppenvergleich); fehlt = wie vorgeschlagen */

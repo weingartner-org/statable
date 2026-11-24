@@ -53,6 +53,7 @@
   import StreuErweitert from '../bausteine/StreuErweitert.svelte';
   import Streumatrix from '../bausteine/Streumatrix.svelte';
   import FehlerbalkenWiederholt from '../bausteine/FehlerbalkenWiederholt.svelte';
+  import { regressionZuLauf } from '../lib/regstreu';
   import SpaghettiBlock from '../bausteine/SpaghettiBlock.svelte';
   import Praepostdiagramm from '../bausteine/Praepostdiagramm.svelte';
   import Kappatabelle from '../bausteine/Kappatabelle.svelte';
@@ -3076,6 +3077,9 @@
       <p class="heft-text" style="margin-bottom:var(--a3)">{d('Hier stehen die Ergebnisse von PSPP als Tabellen. Eine Erklärung in Worten gibt es für dieses Verfahren noch nicht - siehe „Warum dieses Verfahren?“ oder die Hilfe.', 'Hier stehen die Ergebnisse von PSPP als Tabellen. Eine Erklärung in Worten gibt es für dieses Verfahren noch nicht - siehe „Warum dieses Verfahren?“ oder die Hilfe.', 'The PSPP results are shown here as tables. There is no explanation in words for this method yet - see "Why this method?" or the help page.')}</p>
       <div class="marken"><button class="marke-k" type="button" onclick={() => (randKey = 'test-warum')}>{L('Warum dieses Verfahren?', 'Why this method?')}</button></div>
       <Ausgabe items={hauptTabellen} />
+      {#each blatt.art === 'befehle' ? (blatt.regstreu ?? regressionZuLauf(blatt.syntax)) : [] as r (r.x + '|' + r.y)}
+        <DiagrammExport titel={L(`${r.y} und ${r.x} - Regressionsgerade`, `${r.y} and ${r.x} - regression line`)}><Streudiagramm punkte={r.punkte} xText={r.x} yText={r.y} /></DiagrammExport>
+      {/each}
     {/if}
   </div></div></section>
 

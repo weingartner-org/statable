@@ -21,6 +21,9 @@
   import Ausgabe from '../bausteine/Ausgabe.svelte';
   import BalkenBlock from '../bausteine/BalkenBlock.svelte';
   import { balkenQuelle } from '../lib/balkenquelle';
+  import { regressionZuLauf, type RegStreu } from '../lib/regstreu';
+  import Streudiagramm from '../bausteine/Streudiagramm.svelte';
+  import DiagrammExport from '../bausteine/DiagrammExport.svelte';
   import { EngineAbbruch, EngineAbgebrochen } from '../engine/wasm-engine';
   import Abbrechen from '../bausteine/Abbrechen.svelte';
   import { zaehle } from '../lib/zaehlen';
@@ -37,6 +40,11 @@
     const quelle = balkenQuelle(m[1]!, m[2]!);
     return quelle.ok ? { balken: { y: m[1]!, g: m[2]!, quelle } } : {};
   }
+  /** PSPP zeichnet in REGRESSION kein Diagramm: bei einem x Streudiagramm mit Regressionsgerade aus denselben Daten (lib/regstreu.ts). */
+  function regZuLauf(text: string): { regstreu?: RegStreu[] } {
+    const r = regressionZuLauf(text);
+    return r.length ? { regstreu: r } : {};
+  }
   /** zeilen[k]: Zeile im ganzen Text, aus der Zeile k des Laufs stammt - damit Fehlermeldungen auf die richtige Stelle zeigen. */
   async function ausfuehren(text = befehle.text, zeilen = text.split('\n').map((_, k) => k)) {
     if (!text.trim() || laeuft) return;
@@ -52,7 +60,7 @@
       const von = (xs: string[]) => xs.map(text => ({ type: 'message' as const, severity: 'warning' as const, text }));
       const items = [...von(a.meldungen.vorher), ...r.items, ...von(a.meldungen.nachher)];
       geloescht = [];
-      const neu = { id: Date.now(), syntax: a.syntax, zeilen: a.zeilen, items, ms: Math.round(performance.now() - t0), zeit: Date.now(), ...(a.aenderungen.length ? { angeglichen: a.aenderungen } : {}), ...balkenZuLauf(a.syntax) } as (typeof befehle.laeufe)[number];
+      const neu = { id: Date.now(), syntax: a.syntax, zeilen: a.zeilen, items, ms: Math.round(performance.now() - t0), zeit: Date.now(), ...(a.aenderungen.length ? { angeglichen: a.aenderungen } : {}), ...balkenZuLauf(a.syntax), ...(regZuLauf(a.syntax)) } as (typeof befehle.laeufe)[number];
       // Jeder Lauf mit Ergebnis wird sofort ein eigener Reiter mit sprechendem Namen (Johannes 03.11.); Fehlerläufe und reine Datenänderungen bleiben nur hier.
       const reiter = reiterAus(neu);
       if (reiter) neu.blattId = reiter;
@@ -129,7 +137,7 @@
     const schluessel = JSON.stringify(l.items), gleich = s.blaetter.find(b => b.art === 'befehle' && b.syntax === l.syntax && JSON.stringify(b.items) === schluessel);
     if (gleich) { melde(L(`Diese Auswertung gibt es schon im Reiter „${gleich.titel}“.`, `This analysis already exists in the tab "${gleich.titel}".`)); return gleich.id; }
     const titel = befehlsTitel(l.syntax, s.blaetter.filter(b => b.art === 'befehle').map(b => b.titel), L);
-    const b: Blatt = { id: Math.random().toString(36).slice(2, 8), titel, art: 'befehle', l1: null, l2: null, syntax: l.syntax, items: l.items, ergebnis: null, imBericht: true, notiz: '', zeit: Date.now() };
+    const b: Blatt = { id: Math.random().toString(36).slice(2, 8), titel, art: 'befehle', l1: null, l2: null, syntax: l.syntax, items: l.items, ergebnis: null, imBericht: true, notiz: '', zeit: Date.now(), ...(l.regstreu ? { regstreu: l.regstreu } : {}) };
     s.blaetter = [...s.blaetter, b]; zaehle('verfahren', 'befehle'); sichern();
     melde(L(`Neuer Reiter: ${titel}`, `New tab: ${titel}`));
     return b.id;
@@ -273,6 +281,9 @@
       {/if}
       <Ausgabe items={l.items} stelle={(m) => stelle(l, m)} />
       {#if l.balken}<BalkenBlock yName={l.balken.y} gName={l.balken.g} name={(n) => n} fest={l.balken.quelle} />{/if}
+      {#each l.regstreu ?? [] as r (r.x + '|' + r.y)}
+        <DiagrammExport titel={L(`${r.y} und ${r.x} - Regressionsgerade`, `${r.y} and ${r.x} - regression line`)}><Streudiagramm punkte={r.punkte} xText={r.x} yText={r.y} /></DiagrammExport>
+      {/each}
       {#if !l.items.some(i => i.type === 'table' || i.type === 'message')}<p style="color:var(--tinte-2)">{L('Ausgeführt. Dieser Befehl erzeugt keine Tabelle.', 'Done. This command produces no table.')}</p>{/if}
       </div></div>
     </section>

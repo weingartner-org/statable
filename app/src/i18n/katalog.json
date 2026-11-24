@@ -172173,6 +172173,14 @@
    "seiten/Blatt.svelte"
   ]
  },
+ "k99dcead1": {
+  "de": "{0} und {1} - Regressionsgerade",
+  "en": "{0} and {1} - regression line",
+  "orte": [
+   "seiten/Befehle.svelte",
+   "seiten/Blatt.svelte"
+  ]
+ },
  "k99df2b4c": {
   "de": "Die Steigung ist nicht von 0 verschieden, weil sie kleiner als 1 ist",
   "en": "The slope does not differ from 0 because it is smaller than 1",
